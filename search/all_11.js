@@ -3,7 +3,7 @@ var searchData=
   ['packet_5floss_5fperc_617',['packet_loss_perc',['../structaudio__tools_1_1_opus_encoder_settings.html#a56381d5e2c16a04fd6d0490b29135539',1,'audio_tools::OpusEncoderSettings']]],
   ['parameter_618',['Parameter',['../classaudio__tools_1_1_parameter.html',1,'audio_tools']]],
   ['parsestatus_619',['ParseStatus',['../group__metadata-id3.html#ga1857f5fa1f018989102d5a5e3c5cf182',1,'audio_tools']]],
-  ['peek_620',['peek',['../classaudio__tools_1_1_buffered_stream.html#a9bb6daa18ee5d207a6f2e1899eaadcf3',1,'audio_tools::BufferedStream::peek()'],['../classaudio__tools_1_1_i2_s_stream.html#aec8a730e59c6c81c5e920234ff50da07',1,'audio_tools::I2SStream::peek()'],['../classaudio__tools_1_1_buffered_task_stream.html#a9bb6daa18ee5d207a6f2e1899eaadcf3',1,'audio_tools::BufferedTaskStream::peek()'],['../classaudio__tools_1_1_i_c_y_stream.html#a9bb6daa18ee5d207a6f2e1899eaadcf3',1,'audio_tools::ICYStream::peek()']]],
+  ['peek_620',['peek',['../classaudio__tools_1_1_buffered_stream.html#a9bb6daa18ee5d207a6f2e1899eaadcf3',1,'audio_tools::BufferedStream::peek()'],['../classaudio__tools_1_1_buffered_task_stream.html#a9bb6daa18ee5d207a6f2e1899eaadcf3',1,'audio_tools::BufferedTaskStream::peek()'],['../classaudio__tools_1_1_i_c_y_stream.html#a9bb6daa18ee5d207a6f2e1899eaadcf3',1,'audio_tools::ICYStream::peek()']]],
   ['picochannelout_621',['PicoChannelOut',['../structaudio__tools_1_1_pico_channel_out.html',1,'audio_tools']]],
   ['pinadcdetect_622',['pinAdcDetect',['../classaudio__tools_1_1_audio_kit_stream.html#ab39eefdad7f586cd474a3d2b09216939',1,'audio_tools::AudioKitStream']]],
   ['pinauxin_623',['pinAuxin',['../classaudio__tools_1_1_audio_kit_stream.html#af7a84eb3e214370dec7d0767c96aa7b0',1,'audio_tools::AudioKitStream']]],

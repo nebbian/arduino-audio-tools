@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['peek_1840',['peek',['../classaudio__tools_1_1_buffered_task_stream.html#a9bb6daa18ee5d207a6f2e1899eaadcf3',1,'audio_tools::BufferedTaskStream::peek()'],['../classaudio__tools_1_1_i_c_y_stream.html#a9bb6daa18ee5d207a6f2e1899eaadcf3',1,'audio_tools::ICYStream::peek()'],['../classaudio__tools_1_1_buffered_stream.html#a9bb6daa18ee5d207a6f2e1899eaadcf3',1,'audio_tools::BufferedStream::peek()'],['../classaudio__tools_1_1_i2_s_stream.html#aec8a730e59c6c81c5e920234ff50da07',1,'audio_tools::I2SStream::peek()']]],
+  ['peek_1840',['peek',['../classaudio__tools_1_1_buffered_task_stream.html#a9bb6daa18ee5d207a6f2e1899eaadcf3',1,'audio_tools::BufferedTaskStream::peek()'],['../classaudio__tools_1_1_i_c_y_stream.html#a9bb6daa18ee5d207a6f2e1899eaadcf3',1,'audio_tools::ICYStream::peek()'],['../classaudio__tools_1_1_buffered_stream.html#a9bb6daa18ee5d207a6f2e1899eaadcf3',1,'audio_tools::BufferedStream::peek()']]],
   ['pinadcdetect_1841',['pinAdcDetect',['../classaudio__tools_1_1_audio_kit_stream.html#ab39eefdad7f586cd474a3d2b09216939',1,'audio_tools::AudioKitStream']]],
   ['pinauxin_1842',['pinAuxin',['../classaudio__tools_1_1_audio_kit_stream.html#af7a84eb3e214370dec7d0767c96aa7b0',1,'audio_tools::AudioKitStream']]],
   ['pinblueled_1843',['pinBlueLed',['../classaudio__tools_1_1_audio_kit_stream.html#a4b55501189a7e8e0f7e05f8ab775a2df',1,'audio_tools::AudioKitStream']]],
