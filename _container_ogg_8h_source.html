@@ -181,7 +181,7 @@ $(function() {
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  AudioDecoder *p_codec = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  RingBuffer&lt;uint8_t&gt; buffer{OGG_DEFAULT_BUFFER_SIZE};</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <a class="code" href="class_print.html">Print</a> *p_print = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  Print *p_print = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  OGGZ *p_oggz = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  AudioBaseInfoDependent *bid = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  AudioBaseInfo cfg;</div>
@@ -359,8 +359,8 @@ $(function() {
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordtype">bool</span> isOpen() { <span class="keywordflow">return</span> is_open; }</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <a class="code" href="class_print.html">Print</a> *p_print = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <a class="code" href="class_print.html">Print</a> *p_encoded_audio_stream = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  Print *p_print = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  Print *p_encoded_audio_stream = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  SingleBuffer&lt;uint8_t&gt; buffer{1024};</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  QueueStream&lt;uint8_t&gt; codec_buffer{buffer};</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  AudioEncoder* p_codec = <span class="keyword">nullptr</span>;</div>
@@ -425,7 +425,6 @@ $(function() {
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;};</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
-<div class="ttc" id="aclass_print_html"><div class="ttname"><a href="class_print.html">Print</a></div><div class="ttdef"><b>Definition:</b> Print.h:34</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_base_info_dependent_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_base_info_dependent.html">audio_tools::AudioBaseInfoDependent</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:71</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:16</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_encoder.html">audio_tools::AudioEncoder</a></div><div class="ttdoc">Encoding of PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:47</div></div>
@@ -443,8 +442,8 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a86ce681ae22c0345c20e583a8a1f298f"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a86ce681ae22c0345c20e583a8a1f298f">audio_tools::OggContainerEncoder::setOutputStream</a></div><div class="ttdeci">void setOutputStream(Print &amp;out_stream) override</div><div class="ttdoc">Defines the output Stream.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:217</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_abff6eaabd9829e911a1dbf8850192f05"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#abff6eaabd9829e911a1dbf8850192f05">audio_tools::OggContainerEncoder::begin</a></div><div class="ttdeci">void begin(Print &amp;out)</div><div class="ttdoc">starts the processing</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:258</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:33</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_queue_stream_html_a4d2a8f208d69989c8676b0c632c9ea5c"><div class="ttname"><a href="classaudio__tools_1_1_queue_stream.html#a4d2a8f208d69989c8676b0c632c9ea5c">audio_tools::QueueStream::begin</a></div><div class="ttdeci">virtual bool begin() override</div><div class="ttdoc">Activates the output.</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:840</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_queue_stream_html_a4d2a8f208d69989c8676b0c632c9ea5c"><div class="ttname"><a href="classaudio__tools_1_1_queue_stream.html#a4d2a8f208d69989c8676b0c632c9ea5c">audio_tools::QueueStream::begin</a></div><div class="ttdeci">virtual bool begin() override</div><div class="ttdoc">Activates the output.</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:846</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> BitVector.h:5</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html_a3961afb9c2a414e91d5687346be60285"><div class="ttname"><a href="namespaceaudio__tools.html#a3961afb9c2a414e91d5687346be60285">audio_tools::mime_pcm</a></div><div class="ttdeci">static const char * mime_pcm</div><div class="ttdoc">Mime type for PCM.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:228</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->

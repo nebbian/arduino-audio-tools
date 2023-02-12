@@ -83,25 +83,25 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceaudio__tools.html">audio_tools</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_p_w_m_audio_stream.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_p_w_m_audio_stream.html">PWMAudioStream</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span>PWMAudioStream : <span class="keyword">public</span> AudioPrint {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        ~<a class="code" href="classaudio__tools_1_1_p_w_m_audio_stream.html">PWMAudioStream</a>(){</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        ~PWMAudioStream(){</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">if</span> (driver.isTimerStarted()){</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                end();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="structaudio__tools_1_1_p_w_m_config.html">PWMConfig</a> defaultConfig() {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">virtual</span> PWMConfig defaultConfig() {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">return</span> default_config;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="structaudio__tools_1_1_p_w_m_config.html">PWMConfig</a> config() {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        PWMConfig config() {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">return</span> audio_config;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_p_w_m_audio_stream.html#ad1f412532ae3278dd0af127c218b096e">   37</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_p_w_m_audio_stream.html#ad1f412532ae3278dd0af127c218b096e">setAudioInfo</a>(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAudioInfo(AudioBaseInfo info) {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            TRACEI();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="structaudio__tools_1_1_p_w_m_config.html">PWMConfig</a> cfg = audio_config;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            PWMConfig cfg = audio_config;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span> (cfg.sample_rate != info.sample_rate</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                || cfg.channels != info.channels</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                || cfg.bits_per_sample != info.bits_per_sample) {</div>
@@ -124,7 +124,7 @@ $(function() {
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_p_w_m_audio_stream.html#ab90844720b1d1eb48de817b0a49f3b30">   63</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_p_w_m_audio_stream.html#ab90844720b1d1eb48de817b0a49f3b30">begin</a>(<a class="code" href="structaudio__tools_1_1_p_w_m_config.html">PWMConfig</a> config ) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">bool</span> begin(PWMConfig config ) {</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            TRACED();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            this-&gt;audio_config = config;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> driver.begin(audio_config);</div>
@@ -166,13 +166,7 @@ $(function() {
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_print_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_print.html">audio_tools::AudioPrint</a></div><div class="ttdoc">Abstract Audio Ouptut class.</div><div class="ttdef"><b>Definition:</b> AudioPrint.h:25</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_p_w_m_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_p_w_m_audio_stream.html">audio_tools::PWMAudioStream</a></div><div class="ttdoc">Common functionality for PWM output. Please use the PWMAudioStream typedef instead which references t...</div><div class="ttdef"><b>Definition:</b> AudioPWM.h:20</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_p_w_m_audio_stream_html_ab90844720b1d1eb48de817b0a49f3b30"><div class="ttname"><a href="classaudio__tools_1_1_p_w_m_audio_stream.html#ab90844720b1d1eb48de817b0a49f3b30">audio_tools::PWMAudioStream::begin</a></div><div class="ttdeci">bool begin(PWMConfig config)</div><div class="ttdoc">starts the processing using Streams</div><div class="ttdef"><b>Definition:</b> AudioPWM.h:63</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_p_w_m_audio_stream_html_ad1f412532ae3278dd0af127c218b096e"><div class="ttname"><a href="classaudio__tools_1_1_p_w_m_audio_stream.html#ad1f412532ae3278dd0af127c218b096e">audio_tools::PWMAudioStream::setAudioInfo</a></div><div class="ttdeci">virtual void setAudioInfo(AudioBaseInfo info)</div><div class="ttdoc">updates the sample rate dynamically</div><div class="ttdef"><b>Definition:</b> AudioPWM.h:37</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:31</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_p_w_m_config_html"><div class="ttname"><a href="structaudio__tools_1_1_p_w_m_config.html">audio_tools::PWMConfig</a></div><div class="ttdoc">Configuration data for PWM audio output.</div><div class="ttdef"><b>Definition:</b> PWMAudioBase.h:30</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> BitVector.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

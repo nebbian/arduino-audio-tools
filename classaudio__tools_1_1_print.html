@@ -92,9 +92,8 @@ Inheritance diagram for Print:</div>
 <area href="classaudio__tools_1_1_memory_print.html" title="Prints to a preallocated memory." alt="MemoryPrint" shape="rect" coords="212,504,414,528"/>
 <area href="classaudio__tools_1_1_meta_data_print.html" title="ID3 and Icecast/Shoutcast metadata output support. Just write the audio data to an object of this cla..." alt="MetaDataPrint" shape="rect" coords="212,560,414,584"/>
 <area href="classaudio__tools_1_1_multi_output.html" title="Replicates the output to multiple destinations." alt="MultiOutput" shape="rect" coords="212,616,414,640"/>
-<area href="classaudio__tools_1_1_p_w_m_audio_stream.html" title="Common functionality for PWM output. Please use the PWMAudioStream typedef instead which references t..." alt="PWMAudioStream" shape="rect" coords="212,672,414,696"/>
-<area href="classaudio__tools_1_1_pitch_shift_stream.html" title="Pitch Shift: Shifts the frequency up or down w/o impacting the length! We reduce the channels to 1 to..." alt="PitchShiftStream&lt; T, BufferT &gt;" shape="rect" coords="212,728,414,752"/>
-<area href="classaudio__tools_1_1_volume_print.html" title="A simple class to determine the volume." alt="VolumePrint" shape="rect" coords="212,784,414,808"/>
+<area href="classaudio__tools_1_1_pitch_shift_stream.html" title="Pitch Shift: Shifts the frequency up or down w/o impacting the length! We reduce the channels to 1 to..." alt="PitchShiftStream&lt; T, BufferT &gt;" shape="rect" coords="212,672,414,696"/>
+<area href="classaudio__tools_1_1_volume_print.html" title="A simple class to determine the volume." alt="VolumePrint" shape="rect" coords="212,728,414,752"/>
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="848,112,1050,136"/>
 <area href="classaudio__tools_1_1_client.html" alt="Client" shape="rect" coords="848,168,1050,192"/>
 <area href="classaudio__tools_1_1_file.html" title="Arduino File support using std::fstream." alt="File" shape="rect" coords="848,224,1050,248"/>
@@ -110,30 +109,9 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWr
 <tr class="memitem:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memItemLeft" align="right" valign="top"><a id="ad3aed50bc3b4459454ccb8c64f5ced5a"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()</td></tr>
 <tr class="separator:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8ba365f0ed39c8e804b64cc2b83b46c"><td class="memItemLeft" align="right" valign="top"><a id="ab8ba365f0ed39c8e804b64cc2b83b46c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (char c, PrintCharFmt spec)</td></tr>
-<tr class="separator:ab8ba365f0ed39c8e804b64cc2b83b46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3432b32284bf3efd4284d5e4f537823c"><td class="memItemLeft" align="right" valign="top"><a id="a3432b32284bf3efd4284d5e4f537823c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (const char *msg)</td></tr>
-<tr class="separator:a3432b32284bf3efd4284d5e4f537823c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add75a16f89ba1ce195aff531576b3c07"><td class="memItemLeft" align="right" valign="top"><a id="add75a16f89ba1ce195aff531576b3c07"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (int number)</td></tr>
-<tr class="separator:add75a16f89ba1ce195aff531576b3c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada4c953b90ba86d027382e3e33d11d8b"><td class="memItemLeft" align="right" valign="top"><a id="ada4c953b90ba86d027382e3e33d11d8b"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>println</b> (const char *msg=&quot;&quot;)</td></tr>
-<tr class="separator:ada4c953b90ba86d027382e3e33d11d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af790e3174844d5a2ef0586304ee024b9"><td class="memItemLeft" align="right" valign="top"><a id="af790e3174844d5a2ef0586304ee024b9"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const char *buffer, size_t size)</td></tr>
-<tr class="separator:af790e3174844d5a2ef0586304ee024b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81093c8333cc7b6c682b36e06a7ec3b2"><td class="memItemLeft" align="right" valign="top"><a id="a81093c8333cc7b6c682b36e06a7ec3b2"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const char *str)</td></tr>
-<tr class="separator:a81093c8333cc7b6c682b36e06a7ec3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ea68b231c423a554ea84d14f88e271e"><td class="memItemLeft" align="right" valign="top"><a id="a2ea68b231c423a554ea84d14f88e271e"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t size)</td></tr>
 <tr class="separator:a2ea68b231c423a554ea84d14f88e271e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a196447ea43c53c485b4f8cd4f828f093"><td class="memItemLeft" align="right" valign="top"><a id="a196447ea43c53c485b4f8cd4f828f093"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch)</td></tr>
-<tr class="separator:a196447ea43c53c485b4f8cd4f828f093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioLibs/<a class="el" href="_no_arduino_8h_source.html">NoArduino.h</a></li>

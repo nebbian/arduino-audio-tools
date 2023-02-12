@@ -149,11 +149,11 @@ $(function() {
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        onStartCallback = callback;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span> setCallbackNextStream(<a class="code" href="class_stream.html">Stream</a>* (*callback)(<span class="keywordtype">int</span> offset)) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span> setCallbackNextStream(Stream* (*callback)(<span class="keywordtype">int</span> offset)) {</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        nextStreamCallback = callback;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> setCallbackSelectStream(<a class="code" href="class_stream.html">Stream</a>* (*callback)(<span class="keywordtype">int</span> idx)) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> setCallbackSelectStream(Stream* (*callback)(<span class="keywordtype">int</span> idx)) {</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        indexStreamCallback = callback;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
@@ -173,17 +173,17 @@ $(function() {
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    void (*onStartCallback)() = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">bool</span> auto_next = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="class_stream.html">Stream</a>* (*nextStreamCallback)(<span class="keywordtype">int</span> offset) = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="class_stream.html">Stream</a>* (*indexStreamCallback)(<span class="keywordtype">int</span> index) = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    Stream* (*nextStreamCallback)(<span class="keywordtype">int</span> offset) = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    Stream* (*indexStreamCallback)(<span class="keywordtype">int</span> index) = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>*path=<span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;};</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#if defined(USE_URL_ARDUINO) &amp;&amp; ( defined(ESP32) || defined(ESP8266) )</span></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_source_u_r_l.html">  145</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_audio_source_u_r_l.html">AudioSourceURL</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_source.html">AudioSource</a> {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">class </span>AudioSourceURL : <span class="keyword">public</span> AudioSource {</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keywordtype">size_t</span> N&gt;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="classaudio__tools_1_1_audio_source_u_r_l.html">AudioSourceURL</a>(<a class="code" href="classaudio__tools_1_1_abstract_u_r_l_stream.html">AbstractURLStream</a>&amp; urlStream, T(&amp;urlArray)[N], <span class="keyword">const</span> <span class="keywordtype">char</span>* mime, <span class="keywordtype">int</span> startPos = 0) {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    AudioSourceURL(AbstractURLStream&amp; urlStream, T(&amp;urlArray)[N], <span class="keyword">const</span> <span class="keywordtype">char</span>* mime, <span class="keywordtype">int</span> startPos = 0) {</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        TRACED();</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        this-&gt;actual_stream = &amp;urlStream;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        this-&gt;mime = mime;</div>
@@ -193,12 +193,12 @@ $(function() {
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        this-&gt;timeout_auto_next_value = 20000;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_source_u_r_l.html#a862ecf2b78cdb7877f997db8393c9825">  159</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_audio_source_u_r_l.html#a862ecf2b78cdb7877f997db8393c9825">begin</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> begin()<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        TRACED();</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        this-&gt;pos = 0;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_source_u_r_l.html#a663b4fd7999e3a675d39321e612c08af">  165</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a>* <a class="code" href="classaudio__tools_1_1_audio_source_u_r_l.html#a663b4fd7999e3a675d39321e612c08af">selectStream</a>(<span class="keywordtype">int</span> idx)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    Stream* selectStream(<span class="keywordtype">int</span> idx)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        pos = idx;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">if</span> (pos &lt; 0) {</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            pos = 0;</div>
@@ -215,25 +215,25 @@ $(function() {
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">return</span> actual_stream;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_source_u_r_l.html#adaac79168e5713d01e950aa1409fef4d">  183</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a>* <a class="code" href="classaudio__tools_1_1_audio_source_u_r_l.html#adaac79168e5713d01e950aa1409fef4d">nextStream</a>(<span class="keywordtype">int</span> offset)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    Stream* nextStream(<span class="keywordtype">int</span> offset)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        pos += offset;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">if</span> (pos &lt; 0 || pos &gt;= max) {</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            pos = 0;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        LOGI(<span class="stringliteral">&quot;nextStream: %d/%d -&gt; %s&quot;</span>, pos, max-1, urlArray[pos]);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_audio_source_u_r_l.html#a663b4fd7999e3a675d39321e612c08af">selectStream</a>(pos);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> selectStream(pos);</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_source_u_r_l.html#a54138fbf62e79ec041305abebd24814b">  193</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a>* <a class="code" href="classaudio__tools_1_1_audio_source_u_r_l.html#a54138fbf62e79ec041305abebd24814b">previousStream</a>(<span class="keywordtype">int</span> offset)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    Stream* previousStream(<span class="keywordtype">int</span> offset)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        pos -= offset;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">if</span> (pos &lt; 0 || pos &gt;= max) {</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            pos = max-1;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        }</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        LOGI(<span class="stringliteral">&quot;previousStream: %d/%d -&gt; %s&quot;</span>, pos, max-1, urlArray[pos]);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_audio_source_u_r_l.html#a663b4fd7999e3a675d39321e612c08af">selectStream</a>(pos);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">return</span> selectStream(pos);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_source_u_r_l.html#aa72bd2cf2bfac1b1733a6f24f9d0d6d8">  203</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a>* <a class="code" href="classaudio__tools_1_1_audio_source_u_r_l.html#aa72bd2cf2bfac1b1733a6f24f9d0d6d8">selectStream</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    Stream* selectStream(<span class="keyword">const</span> <span class="keywordtype">char</span>* path)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        LOGI(<span class="stringliteral">&quot;selectStream: %s&quot;</span>, path);</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">if</span> (started) actual_stream-&gt;end();</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        actual_stream-&gt;begin(path, mime);</div>
@@ -245,16 +245,16 @@ $(function() {
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">return</span> pos;</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *toStr() {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="group__metadata.html#gae06c56511c8bb5a3a7649c4821660886">toStr</a>() {</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">return</span> urlArray[pos];</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_source_u_r_l.html#ab86ded0a4395c59e8c1774e05e4c65e3">  220</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_audio_source_u_r_l.html#ab86ded0a4395c59e8c1774e05e4c65e3">setTimeout</a>(<span class="keywordtype">int</span> millisec){</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordtype">void</span> setTimeout(<span class="keywordtype">int</span> millisec){</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        actual_stream-&gt;setTimeout(millisec);</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="comment">// provides go not to the next on error</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_source_u_r_l.html#aa1a2ebc04c10e3b7c5704943dc22b1cb">  225</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_audio_source_u_r_l.html#aa1a2ebc04c10e3b7c5704943dc22b1cb">isAutoNext</a>() {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isAutoNext() {</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    };</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
@@ -277,8 +277,6 @@ $(function() {
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
-<div class="ttc" id="aclass_stream_html"><div class="ttname"><a href="class_stream.html">Stream</a></div><div class="ttdef"><b>Definition:</b> Stream.h:49</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_abstract_u_r_l_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_abstract_u_r_l_stream.html">audio_tools::AbstractURLStream</a></div><div class="ttdoc">Abstract Base class for all URLStream implementations.</div><div class="ttdef"><b>Definition:</b> AbstractURLStream.h:11</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_source_callback_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_source_callback.html">audio_tools::AudioSourceCallback</a></div><div class="ttdoc">Callback Audio Data Source which is used by the Audio Players.</div><div class="ttdef"><b>Definition:</b> AudioSource.h:71</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_source_callback_html_a862ecf2b78cdb7877f997db8393c9825"><div class="ttname"><a href="classaudio__tools_1_1_audio_source_callback.html#a862ecf2b78cdb7877f997db8393c9825">audio_tools::AudioSourceCallback::begin</a></div><div class="ttdeci">virtual void begin() override</div><div class="ttdoc">Reset actual stream and move to root.</div><div class="ttdef"><b>Definition:</b> AudioSource.h:83</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_source_callback_html_af14984986d0c86ebe1717f8ba8ee00bc"><div class="ttname"><a href="classaudio__tools_1_1_audio_source_callback.html#af14984986d0c86ebe1717f8ba8ee00bc">audio_tools::AudioSourceCallback::isAutoNext</a></div><div class="ttdeci">virtual bool isAutoNext() override</div><div class="ttdoc">Returns default setting go to the next.</div><div class="ttdef"><b>Definition:</b> AudioSource.h:116</div></div>
@@ -296,18 +294,11 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_audio_source_html_ac628e03bdd1bcc6b8ed89b8465b0aca0"><div class="ttname"><a href="classaudio__tools_1_1_audio_source.html#ac628e03bdd1bcc6b8ed89b8465b0aca0">audio_tools::AudioSource::setIndex</a></div><div class="ttdeci">virtual Stream * setIndex(int index)</div><div class="ttdoc">same as selectStream - I just prefer this name</div><div class="ttdef"><b>Definition:</b> AudioSource.h:32</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_source_html_ad63a998d632bdac03e94d3aeb4256ccc"><div class="ttname"><a href="classaudio__tools_1_1_audio_source.html#ad63a998d632bdac03e94d3aeb4256ccc">audio_tools::AudioSource::nextStream</a></div><div class="ttdeci">virtual Stream * nextStream(int offset)=0</div><div class="ttdoc">Returns next audio stream.</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_source_html_ad8b400914f4e89544a6cc95e051abbe8"><div class="ttname"><a href="classaudio__tools_1_1_audio_source.html#ad8b400914f4e89544a6cc95e051abbe8">audio_tools::AudioSource::previousStream</a></div><div class="ttdeci">virtual Stream * previousStream(int offset)</div><div class="ttdoc">Returns previous audio stream.</div><div class="ttdef"><b>Definition:</b> AudioSource.h:21</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_source_u_r_l_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_source_u_r_l.html">audio_tools::AudioSourceURL</a></div><div class="ttdoc">Audio Source which provides the data via the network from an URL.</div><div class="ttdef"><b>Definition:</b> AudioSource.h:145</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_source_u_r_l_html_a54138fbf62e79ec041305abebd24814b"><div class="ttname"><a href="classaudio__tools_1_1_audio_source_u_r_l.html#a54138fbf62e79ec041305abebd24814b">audio_tools::AudioSourceURL::previousStream</a></div><div class="ttdeci">Stream * previousStream(int offset) override</div><div class="ttdoc">Opens the Previous url from the array.</div><div class="ttdef"><b>Definition:</b> AudioSource.h:193</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_source_u_r_l_html_a663b4fd7999e3a675d39321e612c08af"><div class="ttname"><a href="classaudio__tools_1_1_audio_source_u_r_l.html#a663b4fd7999e3a675d39321e612c08af">audio_tools::AudioSourceURL::selectStream</a></div><div class="ttdeci">Stream * selectStream(int idx) override</div><div class="ttdoc">Opens the selected url from the array.</div><div class="ttdef"><b>Definition:</b> AudioSource.h:165</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_source_u_r_l_html_a862ecf2b78cdb7877f997db8393c9825"><div class="ttname"><a href="classaudio__tools_1_1_audio_source_u_r_l.html#a862ecf2b78cdb7877f997db8393c9825">audio_tools::AudioSourceURL::begin</a></div><div class="ttdeci">virtual void begin() override</div><div class="ttdoc">Setup Wifi URL.</div><div class="ttdef"><b>Definition:</b> AudioSource.h:159</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_source_u_r_l_html_aa1a2ebc04c10e3b7c5704943dc22b1cb"><div class="ttname"><a href="classaudio__tools_1_1_audio_source_u_r_l.html#aa1a2ebc04c10e3b7c5704943dc22b1cb">audio_tools::AudioSourceURL::isAutoNext</a></div><div class="ttdeci">virtual bool isAutoNext()</div><div class="ttdoc">Returns default setting go to the next.</div><div class="ttdef"><b>Definition:</b> AudioSource.h:225</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_source_u_r_l_html_aa72bd2cf2bfac1b1733a6f24f9d0d6d8"><div class="ttname"><a href="classaudio__tools_1_1_audio_source_u_r_l.html#aa72bd2cf2bfac1b1733a6f24f9d0d6d8">audio_tools::AudioSourceURL::selectStream</a></div><div class="ttdeci">Stream * selectStream(const char *path) override</div><div class="ttdoc">Opens the selected url.</div><div class="ttdef"><b>Definition:</b> AudioSource.h:203</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_source_u_r_l_html_ab86ded0a4395c59e8c1774e05e4c65e3"><div class="ttname"><a href="classaudio__tools_1_1_audio_source_u_r_l.html#ab86ded0a4395c59e8c1774e05e4c65e3">audio_tools::AudioSourceURL::setTimeout</a></div><div class="ttdeci">void setTimeout(int millisec)</div><div class="ttdoc">Sets the timeout of the URL Stream in milliseconds.</div><div class="ttdef"><b>Definition:</b> AudioSource.h:220</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_source_u_r_l_html_adaac79168e5713d01e950aa1409fef4d"><div class="ttname"><a href="classaudio__tools_1_1_audio_source_u_r_l.html#adaac79168e5713d01e950aa1409fef4d">audio_tools::AudioSourceURL::nextStream</a></div><div class="ttdeci">Stream * nextStream(int offset) override</div><div class="ttdoc">Opens the next url from the array.</div><div class="ttdef"><b>Definition:</b> AudioSource.h:183</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_stream.html">audio_tools::Stream</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:91</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_stream.html">audio_tools::Stream</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:96</div></div>
 <div class="ttc" id="agroup__metadata_html_ga27477aa4d162c65da12c7ffd964f5779"><div class="ttname"><a href="group__metadata.html#ga27477aa4d162c65da12c7ffd964f5779">audio_tools::ID3TypeSelection</a></div><div class="ttdeci">ID3TypeSelection</div><div class="ttdoc">Enum to filter by type of metadata.</div><div class="ttdef"><b>Definition:</b> AbstractMetaData.h:8</div></div>
 <div class="ttc" id="agroup__metadata_html_ga6760f423085f8a63374b1e2db102a6d1"><div class="ttname"><a href="group__metadata.html#ga6760f423085f8a63374b1e2db102a6d1">audio_tools::MetaDataType</a></div><div class="ttdeci">MetaDataType</div><div class="ttdoc">Type of meta info.</div><div class="ttdef"><b>Definition:</b> AbstractMetaData.h:11</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
+<div class="ttc" id="agroup__metadata_html_gae06c56511c8bb5a3a7649c4821660886"><div class="ttname"><a href="group__metadata.html#gae06c56511c8bb5a3a7649c4821660886">audio_tools::toStr</a></div><div class="ttdeci">INLINE_VAR const char * toStr(MetaDataType t)</div><div class="ttdoc">Converts the MetaDataType to a string.</div><div class="ttdef"><b>Definition:</b> AbstractMetaData.h:17</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> BitVector.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

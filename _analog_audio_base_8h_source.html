@@ -80,7 +80,7 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceaudio__tools.html">audio_tools</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a> : <span class="keyword">public</span> <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span>AnalogConfig : <span class="keyword">public</span> AudioBaseInfo {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> buffer_count = I2S_BUFFER_COUNT;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> buffer_size = I2S_BUFFER_SIZE;</div>
@@ -88,7 +88,7 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#if defined(ESP32) &amp;&amp; defined(USE_I2S_ANALOG) </span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// allow ADC to access the protected methods</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_analog_driver_e_s_p32.html">AnalogDriverESP32</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>AnalogDriverESP32;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// public config parameters</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> port_no = I2S_NUM_0; <span class="comment">// Analog input and output only supports 0!</span></div>
@@ -96,7 +96,7 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> uninstall_driver_on_end = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> mode_internal; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a>() {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    AnalogConfig() {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        sample_rate = 44100;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        bits_per_sample = 16;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        channels = 2;</div>
@@ -105,14 +105,14 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        mode_internal = (I2S_MODE_MASTER | I2S_MODE_TX | I2S_MODE_DAC_BUILT_IN);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config.html#ab9efe85aff2b169662e47765da2f2a16">   45</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_config.html#ab9efe85aff2b169662e47765da2f2a16">AnalogConfig</a>(<a class="code" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> rxtxMode) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    AnalogConfig(<a class="code" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> rxtxMode) {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      sample_rate = 44100;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      bits_per_sample = 16;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      channels = 2;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      rx_tx_mode = rxtxMode;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">if</span> (rx_tx_mode == RX_MODE) {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        mode_internal = (I2S_MODE_MASTER | I2S_MODE_RX | I2S_MODE_ADC_BUILT_IN);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="classaudio__tools_1_1_analog_config.html#ab9b751c07cc8c56b58650c8d7476f99c">setInputPin1</a>(PIN_ADC1);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        setInputPin1(PIN_ADC1);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//        setInputPin2(PIN_ADC2);</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        LOGI(<span class="stringliteral">&quot;I2S_MODE_ADC_BUILT_IN&quot;</span>);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      } <span class="keywordflow">else</span> {</div>
@@ -121,10 +121,10 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config.html#aef4a1d7610a07cead9d0c37fce985fc5">   62</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_config.html#aef4a1d7610a07cead9d0c37fce985fc5">AnalogConfig</a>(<span class="keyword">const</span> <a class="code" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a> &amp;cfg) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    AnalogConfig(<span class="keyword">const</span> AnalogConfig &amp;cfg) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config.html#ab9b751c07cc8c56b58650c8d7476f99c">   65</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_analog_config.html#ab9b751c07cc8c56b58650c8d7476f99c">setInputPin1</a>(<span class="keywordtype">int</span> pin=PIN_ADC1){</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <a class="code" href="classaudio__tools_1_1_analog_config.html#ab9b751c07cc8c56b58650c8d7476f99c">setInputPin1</a>(pin,0);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> setInputPin1(<span class="keywordtype">int</span> pin=PIN_ADC1){</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      setInputPin1(pin,0);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> logInfo() {</div>
@@ -146,7 +146,7 @@ $(function() {
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    adc_unit_t adc_unit[2];</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    adc1_channel_t adc_channel[2];</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config.html#a841f1fb376492c764a2ef8d71879a67a">   89</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_analog_config.html#a841f1fb376492c764a2ef8d71879a67a">setInputPin1</a>(<span class="keywordtype">int</span> gpio, <span class="keywordtype">int</span> channelIdx){</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> setInputPin1(<span class="keywordtype">int</span> gpio, <span class="keywordtype">int</span> channelIdx){</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      this-&gt;adc_pin[channelIdx] = gpio;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">switch</span>(gpio){</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">case</span> 32:</div>
@@ -187,7 +187,7 @@ $(function() {
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      }</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }  </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#else </span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a>() {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    AnalogConfig() {</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        sample_rate = 10000;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        bits_per_sample = 16;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        channels = 2;</div>
@@ -195,7 +195,7 @@ $(function() {
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        buffer_count = ADC_BUFFERS;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        rx_tx_mode = RX_MODE;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
-<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config.html#ab9efe85aff2b169662e47765da2f2a16">  139</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_config.html#ab9efe85aff2b169662e47765da2f2a16">AnalogConfig</a>(<a class="code" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> rxtxMode) : <a class="code" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a>() {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    AnalogConfig(<a class="code" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> rxtxMode) : AnalogConfig() {</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      rx_tx_mode = rxtxMode;</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      <span class="keywordflow">if</span> (rxtxMode != RX_MODE) {</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        LOGE(<span class="stringliteral">&quot;Only RX_MODE supported&quot;</span>);</div>
@@ -207,9 +207,9 @@ $(function() {
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;};</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_driver_base.html">  151</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_analog_driver_base.html">AnalogDriverBase</a> {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">class </span>AnalogDriverBase {</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> begin(<a class="code" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a> cfg);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> begin(AnalogConfig cfg);</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> end();</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setMaxSampleRate() {}</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> uint8_t *src, <span class="keywordtype">size_t</span> size_bytes) { <span class="keywordflow">return</span> 0;}</div>
@@ -219,16 +219,8 @@ $(function() {
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;} <span class="comment">// ns</span></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassaudio__tools_1_1_analog_config_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_config.html">audio_tools::AnalogConfig</a></div><div class="ttdoc">ESP32 specific configuration for i2s input via adc. The default input pin is GPIO34....</div><div class="ttdef"><b>Definition:</b> AnalogAudioBase.h:19</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_analog_config_html_a841f1fb376492c764a2ef8d71879a67a"><div class="ttname"><a href="classaudio__tools_1_1_analog_config.html#a841f1fb376492c764a2ef8d71879a67a">audio_tools::AnalogConfig::setInputPin1</a></div><div class="ttdeci">void setInputPin1(int gpio, int channelIdx)</div><div class="ttdoc">Defines the current ADC pin. The following GPIO pins are supported: GPIO32-GPIO39.</div><div class="ttdef"><b>Definition:</b> AnalogAudioBase.h:89</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_analog_config_html_ab9b751c07cc8c56b58650c8d7476f99c"><div class="ttname"><a href="classaudio__tools_1_1_analog_config.html#ab9b751c07cc8c56b58650c8d7476f99c">audio_tools::AnalogConfig::setInputPin1</a></div><div class="ttdeci">void setInputPin1(int pin=PIN_ADC1)</div><div class="ttdoc">Defines an alternative input pin (for the left channel)</div><div class="ttdef"><b>Definition:</b> AnalogAudioBase.h:65</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_analog_config_html_ab9efe85aff2b169662e47765da2f2a16"><div class="ttname"><a href="classaudio__tools_1_1_analog_config.html#ab9efe85aff2b169662e47765da2f2a16">audio_tools::AnalogConfig::AnalogConfig</a></div><div class="ttdeci">AnalogConfig(RxTxMode rxtxMode)</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> AnalogAudioBase.h:45</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_analog_config_html_aef4a1d7610a07cead9d0c37fce985fc5"><div class="ttname"><a href="classaudio__tools_1_1_analog_config.html#aef4a1d7610a07cead9d0c37fce985fc5">audio_tools::AnalogConfig::AnalogConfig</a></div><div class="ttdeci">AnalogConfig(const AnalogConfig &amp;cfg)=default</div><div class="ttdoc">Copy constructor.</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_base_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_base.html">audio_tools::AnalogDriverBase</a></div><div class="ttdef"><b>Definition:</b> AnalogAudioBase.h:151</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_e_s_p32_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_e_s_p32.html">audio_tools::AnalogDriverESP32</a></div><div class="ttdoc">Please use AnalogAudioStream: A very fast ADC and DAC using the ESP32 I2S interface.</div><div class="ttdef"><b>Definition:</b> AnalogAudioESP32.h:35</div></div>
 <div class="ttc" id="agroup__basic_html_ga8cbd91a8bac9b5ab425112be1620eb49"><div class="ttname"><a href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">audio_tools::RxTxMode</a></div><div class="ttdeci">RxTxMode</div><div class="ttdoc">Audio Source (TX_MODE) or Audio Sink (RX_MODE). RXTX_MODE is Source and Sink at the same time!</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:15</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:31</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> BitVector.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

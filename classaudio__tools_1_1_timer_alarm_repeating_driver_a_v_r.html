@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Repeating Timer functions for repeated execution: Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>.  
+<p>Repeating Timer functions for repeated execution: Plaease use the typedef TimerAlarmRepeating.  
  <a href="classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_audio_timer_a_v_r_8h_source.html">AudioTimerAVR.h</a>&gt;</code></p>
@@ -84,31 +84,16 @@ $(function() {
 Inheritance diagram for TimerAlarmRepeatingDriverAVR:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.png" usemap="#TimerAlarmRepeatingDriverAVR_map" alt=""/>
-  <map id="TimerAlarmRepeatingDriverAVR_map" name="TimerAlarmRepeatingDriverAVR_map">
-<area href="classaudio__tools_1_1_timer_alarm_repeating_driver_base.html" alt="TimerAlarmRepeatingDriverBase" shape="rect" coords="0,0,196,24"/>
-  </map>
-</div></div>
+  <img src="classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aef983045eff2dc8f8ea76f40aa095cca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.html#aef983045eff2dc8f8ea76f40aa095cca">begin</a> (repeating_timer_callback_t callback_f, uint32_t time, <a class="el" href="group__basic.html#gadd9fe45e09605eee3e4a39c8a5c4476d">TimeUnit</a> unit=MS) override</td></tr>
 <tr class="separator:aef983045eff2dc8f8ea76f40aa095cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a102f2cbffafb79eaa4d846faabdd225b"><td class="memItemLeft" align="right" valign="top"><a id="a102f2cbffafb79eaa4d846faabdd225b"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>callbackParameter</b> ()</td></tr>
-<tr class="separator:a102f2cbffafb79eaa4d846faabdd225b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3d8911013b1bab653ee2d819ce44bb3"><td class="memItemLeft" align="right" valign="top"><a id="ae3d8911013b1bab653ee2d819ce44bb3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
 <tr class="separator:ae3d8911013b1bab653ee2d819ce44bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac13ace18be01a25c51391d37fb24b736"><td class="memItemLeft" align="right" valign="top"><a id="ac13ace18be01a25c51391d37fb24b736"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCallbackParameter</b> (void *obj)</td></tr>
-<tr class="separator:ac13ace18be01a25c51391d37fb24b736"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ae41242f5a8f9a94fd1e2f7770636c7"><td class="memItemLeft" align="right" valign="top"><a id="a4ae41242f5a8f9a94fd1e2f7770636c7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimer</b> (int timer)</td></tr>
-<tr class="separator:a4ae41242f5a8f9a94fd1e2f7770636c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76cc8f0d84952989d6c65a8e027ab60e"><td class="memItemLeft" align="right" valign="top"><a id="a76cc8f0d84952989d6c65a8e027ab60e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimerFunction</b> (TimerFunction function=DirectTimerCallback)</td></tr>
-<tr class="separator:a76cc8f0d84952989d6c65a8e027ab60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -127,12 +112,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:af058d9723f5ccfa308b2d173079aa7ed"><td class="memItemLeft" align="right" valign="top"><a id="af058d9723f5ccfa308b2d173079aa7ed"></a>
 repeating_timer_callback_t&#160;</td><td class="memItemRight" valign="bottom"><b>callback</b> = nullptr</td></tr>
 <tr class="separator:af058d9723f5ccfa308b2d173079aa7ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a077376d12464f945e2414d5499c79b3f"><td class="memItemLeft" align="right" valign="top"><a id="a077376d12464f945e2414d5499c79b3f"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>object</b> =nullptr</td></tr>
-<tr class="separator:a077376d12464f945e2414d5499c79b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Repeating Timer functions for repeated execution: Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>. </p>
+<div class="textblock"><p>Repeating Timer functions for repeated execution: Plaease use the typedef TimerAlarmRepeating. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
@@ -171,13 +153,11 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><b>object</b> =nullptr
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Starts the alarm timer </p>
-
-<p>Implements <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_base.html">TimerAlarmRepeatingDriverBase</a>.</p>
 
 </div>
 </div>

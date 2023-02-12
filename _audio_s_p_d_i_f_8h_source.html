@@ -182,7 +182,7 @@ $(function() {
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (i2sOn) {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      i2s.<a class="code" href="classaudio__tools_1_1_i2_s_stream.html#aaf81d3fdaf258088d7692fa70cece087">end</a>();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      i2s.end();</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">// initialize S/PDIF buffer</span></div>
@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">int</span> bclk = sample_rate * I2S_BITS_PER_SAMPLE * I2S_CHANNELS;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">int</span> mclk = (I2S_BUG_MAGIC / bclk) * bclk;  <span class="comment">// use mclk for avoiding I2S bug</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="classaudio__tools_1_1_i2_s_config.html">I2SConfig</a> i2s_cfg;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    I2SConfig i2s_cfg;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    i2s_cfg.sample_rate = sample_rate;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    i2s_cfg.channels = cfg.channels;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    i2s_cfg.i2s_format = I2S_STD_FORMAT;</div>
@@ -213,7 +213,7 @@ $(function() {
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordtype">void</span> end() {</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    i2s.<a class="code" href="classaudio__tools_1_1_i2_s_stream.html#aaf81d3fdaf258088d7692fa70cece087">end</a>();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    i2s.end();</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    i2sOn = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  }</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
@@ -258,7 +258,7 @@ $(function() {
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="comment">// set block start preamble</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        ((uint8_t *)spdif_buf)[SYNC_OFFSET] ^= SYNC_FLIP;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        i2s.<a class="code" href="classaudio__tools_1_1_i2_s_stream.html#a2ea68b231c423a554ea84d14f88e271e">write</a>((uint8_t *)spdif_buf, <span class="keyword">sizeof</span>(spdif_buf));</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        i2s.write((uint8_t *)spdif_buf, <span class="keyword">sizeof</span>(spdif_buf));</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        spdif_ptr = spdif_buf;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      }</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
@@ -269,7 +269,7 @@ $(function() {
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="keywordtype">bool</span> i2sOn = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <a class="code" href="structaudio__tools_1_1_s_p_d_i_f_config.html">SPDIFConfig</a> cfg;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <a class="code" href="classaudio__tools_1_1_i2_s_stream.html">I2SStream</a> i2s;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  I2SStream i2s;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="comment">// initialize S/PDIF buffer</span></div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keywordtype">void</span> spdif_buf_init(<span class="keywordtype">void</span>) {</div>
@@ -284,11 +284,7 @@ $(function() {
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;};</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_stream_x_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream_x.html">audio_tools::AudioStreamX</a></div><div class="ttdoc">Same as AudioStream - but we do not have any abstract methods.</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:105</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_html"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config.html">audio_tools::I2SConfig</a></div><div class="ttdoc">configuration for all common i2s settings</div><div class="ttdef"><b>Definition:</b> I2SConfig.h:38</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_i2_s_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_stream.html">audio_tools::I2SStream</a></div><div class="ttdoc">We support the Stream interface for the I2S access. In addition we allow a separate mute pin which mi...</div><div class="ttdef"><b>Definition:</b> I2SStream.h:30</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_i2_s_stream_html_a2ea68b231c423a554ea84d14f88e271e"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_stream.html#a2ea68b231c423a554ea84d14f88e271e">audio_tools::I2SStream::write</a></div><div class="ttdeci">virtual size_t write(const uint8_t *buffer, size_t size)</div><div class="ttdoc">Writes the audio data to I2S.</div><div class="ttdef"><b>Definition:</b> I2SStream.h:85</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_i2_s_stream_html_aaf81d3fdaf258088d7692fa70cece087"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_stream.html#aaf81d3fdaf258088d7692fa70cece087">audio_tools::I2SStream::end</a></div><div class="ttdeci">void end()</div><div class="ttdoc">Stops the I2S interface.</div><div class="ttdef"><b>Definition:</b> I2SStream.h:60</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_stream_x_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream_x.html">audio_tools::AudioStreamX</a></div><div class="ttdoc">Same as AudioStream - but we do not have any abstract methods.</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:110</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_p_d_i_f_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_s_p_d_i_f_stream.html">audio_tools::SPDIFStream</a></div><div class="ttdoc">Output as 16 bit stereo SPDIF on the I2S data output pin.</div><div class="ttdef"><b>Definition:</b> AudioSPDIF.h:120</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_p_d_i_f_stream_html_a2e2a472cb318ddfe1aa3665116e58ca3"><div class="ttname"><a href="classaudio__tools_1_1_s_p_d_i_f_stream.html#a2e2a472cb318ddfe1aa3665116e58ca3">audio_tools::SPDIFStream::setAudioInfo</a></div><div class="ttdeci">void setAudioInfo(AudioBaseInfo info)</div><div class="ttdoc">Change the audio parameters.</div><div class="ttdef"><b>Definition:</b> AudioSPDIF.h:182</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_p_d_i_f_stream_html_a37c6fbeae4e2103905a9eb78b6305914"><div class="ttname"><a href="classaudio__tools_1_1_s_p_d_i_f_stream.html#a37c6fbeae4e2103905a9eb78b6305914">audio_tools::SPDIFStream::~SPDIFStream</a></div><div class="ttdeci">virtual ~SPDIFStream()</div><div class="ttdoc">destructor</div><div class="ttdef"><b>Definition:</b> AudioSPDIF.h:126</div></div>
@@ -297,7 +293,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_s_p_d_i_f_stream_html_a6213e48dd38b3c11575c8bc15bf92c5e"><div class="ttname"><a href="classaudio__tools_1_1_s_p_d_i_f_stream.html#a6213e48dd38b3c11575c8bc15bf92c5e">audio_tools::SPDIFStream::begin</a></div><div class="ttdeci">bool begin(SPDIFConfig cfg)</div><div class="ttdoc">Start with the provided parameters.</div><div class="ttdef"><b>Definition:</b> AudioSPDIF.h:132</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_p_d_i_f_stream_html_ac2b8b03ece84865865c2e918dfcafe12"><div class="ttname"><a href="classaudio__tools_1_1_s_p_d_i_f_stream.html#ac2b8b03ece84865865c2e918dfcafe12">audio_tools::SPDIFStream::write</a></div><div class="ttdeci">size_t write(const uint8_t *src, size_t size)</div><div class="ttdoc">Writes the audio data as SPDIF to the defined output pin.</div><div class="ttdef"><b>Definition:</b> AudioSPDIF.h:201</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_p_d_i_f_stream_html_acafc84a57f059903a79b9306f3f79334"><div class="ttname"><a href="classaudio__tools_1_1_s_p_d_i_f_stream.html#acafc84a57f059903a79b9306f3f79334">audio_tools::SPDIFStream::SPDIFStream</a></div><div class="ttdeci">SPDIFStream()=default</div><div class="ttdoc">default constructor</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> BitVector.h:5</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:31</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_s_p_d_i_f_config_html"><div class="ttname"><a href="structaudio__tools_1_1_s_p_d_i_f_config.html">audio_tools::SPDIFConfig</a></div><div class="ttdoc">SPDIF configuration.</div><div class="ttdef"><b>Definition:</b> AudioSPDIF.h:103</div></div>
 </div><!-- fragment --></div><!-- contents -->

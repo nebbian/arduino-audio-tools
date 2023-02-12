@@ -83,12 +83,12 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">static</span> PWMDriverAVR *accessAudioPWM = <span class="keyword">nullptr</span>; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html">PWMDriverAVR</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_driver_p_w_m_base.html">DriverPWMBase</a> {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html#ac74c69e5f370226829182a11466619eb">defaultPWMAudioOutputCallback</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span>PWMDriverAVR : <span class="keyword">public</span> DriverPWMBase {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">defaultPWMAudioOutputCallback</a>();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html">PWMDriverAVR</a>(){</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        PWMDriverAVR(){</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            LOGD(<span class="stringliteral">&quot;PWMDriverAVR&quot;</span>);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            accessAudioPWM = <span class="keyword">this</span>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
@@ -134,7 +134,7 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            interrupts(); <span class="comment">// enable all interrupts</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        } </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html#a9aab38b961e7af7f2385e1553532cfdb">   74</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html#a9aab38b961e7af7f2385e1553532cfdb">setupPWM</a>(){</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span> setupPWM(){</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            TRACED();</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> (audio_config.channels&gt;2) {</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                LOGW(<span class="stringliteral">&quot;Max 2 channels supported - you requested %d&quot;</span>, audio_config.channels);</div>
@@ -192,13 +192,13 @@ $(function() {
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;};</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html#ac74c69e5f370226829182a11466619eb">  133</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">defaultPWMAudioOutputCallback</a>(){</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">defaultPWMAudioOutputCallback</a>(){</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">if</span> (accessAudioPWM!=<span class="keyword">nullptr</span> &amp;&amp; accessAudioPWM-&gt;is_timer_started){</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        accessAudioPWM-&gt;playNextFrame();</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#aa2e2ed9bbfc3a6778916dff5c270980c">  140</a></span>&#160;<a class="code" href="namespaceaudio__tools.html#aa2e2ed9bbfc3a6778916dff5c270980c">ISR</a>(TIMER1_COMPA_vect){</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;ISR(TIMER1_COMPA_vect){</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">defaultPWMAudioOutputCallback</a>();</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    TimerAlarmRepeatingDriverAVR::tickerCallback();</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
@@ -210,13 +210,8 @@ $(function() {
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="ttc" id="aclassaudio__tools_1_1_driver_p_w_m_base_html"><div class="ttname"><a href="classaudio__tools_1_1_driver_p_w_m_base.html">audio_tools::DriverPWMBase</a></div><div class="ttdoc">Base Class for all PWM drivers.</div><div class="ttdef"><b>Definition:</b> PWMAudioBase.h:91</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_p_w_m_driver_a_v_r_html"><div class="ttname"><a href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html">audio_tools::PWMDriverAVR</a></div><div class="ttdoc">Experimental: Audio output to PWM pins for the AVR. The AVR supports only up to 2 channels.</div><div class="ttdef"><b>Definition:</b> PWMAudioAVR.h:22</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_p_w_m_driver_a_v_r_html_a9aab38b961e7af7f2385e1553532cfdb"><div class="ttname"><a href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html#a9aab38b961e7af7f2385e1553532cfdb">audio_tools::PWMDriverAVR::setupPWM</a></div><div class="ttdeci">void setupPWM()</div><div class="ttdoc">Setup LED PWM.</div><div class="ttdef"><b>Definition:</b> PWMAudioAVR.h:74</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_p_w_m_driver_a_v_r_html_ac74c69e5f370226829182a11466619eb"><div class="ttname"><a href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html#ac74c69e5f370226829182a11466619eb">audio_tools::PWMDriverAVR::defaultPWMAudioOutputCallback</a></div><div class="ttdeci">friend void defaultPWMAudioOutputCallback()</div><div class="ttdoc">separate method that can be defined as friend so that we can access protected information</div><div class="ttdef"><b>Definition:</b> PWMAudioAVR.h:133</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_aa2e2ed9bbfc3a6778916dff5c270980c"><div class="ttname"><a href="namespaceaudio__tools.html#aa2e2ed9bbfc3a6778916dff5c270980c">audio_tools::ISR</a></div><div class="ttdeci">ISR(TIMER1_COMPA_vect)</div><div class="ttdoc">timer callback: write the next frame to the pins</div><div class="ttdef"><b>Definition:</b> PWMAudioAVR.h:140</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_af49370a6bf784826df0683c0d5a1bf15"><div class="ttname"><a href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">audio_tools::defaultPWMAudioOutputCallback</a></div><div class="ttdeci">void defaultPWMAudioOutputCallback()</div><div class="ttdoc">separate method that can be defined as friend so that we can access protected information</div><div class="ttdef"><b>Definition:</b> PWMAudioAVR.h:133</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> BitVector.h:5</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_af49370a6bf784826df0683c0d5a1bf15"><div class="ttname"><a href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">audio_tools::defaultPWMAudioOutputCallback</a></div><div class="ttdeci">void IRAM_ATTR defaultPWMAudioOutputCallback()</div><div class="ttdoc">timer callback: write the next frame to the pins</div><div class="ttdef"><b>Definition:</b> PWMAudioESP32.h:151</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

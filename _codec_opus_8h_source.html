@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keyword">operator</span> bool()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> active; }</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <a class="code" href="class_print.html">Print</a> *p_print = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  Print *p_print = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  AudioBaseInfoDependent *bid = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  OpusSettings cfg;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  OpusDecoder *dec;</div>
@@ -266,7 +266,7 @@ $(function() {
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keywordtype">bool</span> isOpen() { <span class="keywordflow">return</span> is_open; }</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <a class="code" href="class_print.html">Print</a> *p_print = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  Print *p_print = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  OpusEncoder *enc = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  OpusEncoderSettings cfg;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keywordtype">bool</span> is_open = <span class="keyword">false</span>;</div>
@@ -407,7 +407,6 @@ $(function() {
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;};</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
-<div class="ttc" id="aclass_print_html"><div class="ttname"><a href="class_print.html">Print</a></div><div class="ttdef"><b>Definition:</b> Print.h:34</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_base_info_dependent_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_base_info_dependent.html">audio_tools::AudioBaseInfoDependent</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:71</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:16</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_encoder.html">audio_tools::AudioEncoder</a></div><div class="ttdoc">Encoding of PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:47</div></div>
@@ -426,7 +425,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_opus_audio_encoder_html_a86ce681ae22c0345c20e583a8a1f298f"><div class="ttname"><a href="classaudio__tools_1_1_opus_audio_encoder.html#a86ce681ae22c0345c20e583a8a1f298f">audio_tools::OpusAudioEncoder::setOutputStream</a></div><div class="ttdeci">void setOutputStream(Print &amp;out_stream) override</div><div class="ttdoc">Defines the output Stream.</div><div class="ttdef"><b>Definition:</b> CodecOpus.h:231</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_opus_audio_encoder_html_af8b98e7acf889f0c2d1c7406059db717"><div class="ttname"><a href="classaudio__tools_1_1_opus_audio_encoder.html#af8b98e7acf889f0c2d1c7406059db717">audio_tools::OpusAudioEncoder::getFrameSizeSamples</a></div><div class="ttdeci">int getFrameSizeSamples(int sampling_rate)</div><div class="ttdoc">Returns the frame size in samples.</div><div class="ttdef"><b>Definition:</b> CodecOpus.h:333</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:33</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> BitVector.h:5</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:31</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_opus_encoder_settings_html"><div class="ttname"><a href="structaudio__tools_1_1_opus_encoder_settings.html">audio_tools::OpusEncoderSettings</a></div><div class="ttdoc">Setting for Opus Encoder where the following values are valid: -1 indicates that the default value sh...</div><div class="ttdef"><b>Definition:</b> CodecOpus.h:72</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_opus_encoder_settings_html_a0384c7ae67dce93dfaf33f8fd40bd4e6"><div class="ttname"><a href="structaudio__tools_1_1_opus_encoder_settings.html#a0384c7ae67dce93dfaf33f8fd40bd4e6">audio_tools::OpusEncoderSettings::vbr</a></div><div class="ttdeci">int vbr</div><div class="ttdoc">0, 1</div><div class="ttdef"><b>Definition:</b> CodecOpus.h:86</div></div>

@@ -97,7 +97,7 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifdef USE_STD_CONCURRENCY</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_std_mutex.html">   48</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_std_mutex.html">StdMutex</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_mutex_base.html">MutexBase</a> {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">class </span>StdMutex : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_mutex_base.html">MutexBase</a> {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> lock()<span class="keyword"> override </span>{ std_mutex.lock(); }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> unlock()<span class="keyword"> override </span>{ std_mutex.unlock(); }</div>
@@ -346,15 +346,15 @@ $(function() {
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor">#if ESP_IDF_VERSION_MAJOR &gt;= 4 </span></div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; </div>
-<div class="line"><a name="l00333"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_synchronized_buffer_r_t_o_s.html">  333</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_synchronized_buffer_r_t_o_s.html">SynchronizedBufferRTOS</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt;T&gt; {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="keyword">class </span>SynchronizedBufferRTOS : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt;T&gt; {</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <a class="code" href="classaudio__tools_1_1_synchronized_buffer_r_t_o_s.html">SynchronizedBufferRTOS</a>(<span class="keywordtype">size_t</span> xStreamBufferSizeBytes, <span class="keywordtype">size_t</span> xTriggerLevel=256, <span class="keywordtype">int</span> writeMaxWait=portMAX_DELAY, <span class="keywordtype">int</span> readMaxWait=portMAX_DELAY)</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      : <a class="code" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer&lt;T&gt;</a>() {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  SynchronizedBufferRTOS(<span class="keywordtype">size_t</span> xStreamBufferSizeBytes, <span class="keywordtype">size_t</span> xTriggerLevel=256, <span class="keywordtype">int</span> writeMaxWait=portMAX_DELAY, <span class="keywordtype">int</span> readMaxWait=portMAX_DELAY)</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      : <a class="code" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt;T&gt;() {</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    xStreamBuffer = xStreamBufferCreate(xStreamBufferSizeBytes, xTriggerLevel);</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    readWait = readMaxWait;</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    writeWait = writeMaxWait;</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  }</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  ~<a class="code" href="classaudio__tools_1_1_synchronized_buffer_r_t_o_s.html">SynchronizedBufferRTOS</a>() { vStreamBufferDelete(xStreamBuffer); }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  ~SynchronizedBufferRTOS() { vStreamBufferDelete(xStreamBuffer); }</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  <span class="keywordtype">void</span> setReadMaxWait(TickType_t ticks){</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    readWait = ticks;</div>
@@ -469,11 +469,9 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_n_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_n_buffer.html">audio_tools::NBuffer</a></div><div class="ttdoc">A lock free N buffer. If count=2 we create a DoubleBuffer, if count=3 a TripleBuffer etc.</div><div class="ttdef"><b>Definition:</b> Buffers.h:322</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_queue_free_r_t_o_s_html"><div class="ttname"><a href="classaudio__tools_1_1_queue_free_r_t_o_s.html">audio_tools::QueueFreeRTOS</a></div><div class="ttdoc">FIFO Queue which is based on a List.</div><div class="ttdef"><b>Definition:</b> QueueFreeRTOS.h:15</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_single_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_single_buffer.html">audio_tools::SingleBuffer</a></div><div class="ttdoc">A simple Buffer implementation which just uses a (dynamically sized) array.</div><div class="ttdef"><b>Definition:</b> Buffers.h:131</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_std_mutex_html"><div class="ttname"><a href="classaudio__tools_1_1_std_mutex.html">audio_tools::StdMutex</a></div><div class="ttdoc">Mutex implemntation based on std::mutex.</div><div class="ttdef"><b>Definition:</b> SynchronizedBuffers.h:48</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_synchronized_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_synchronized_buffer.html">audio_tools::SynchronizedBuffer</a></div><div class="ttdoc">Wrapper class that can turn any Buffer into a thread save implementation.</div><div class="ttdef"><b>Definition:</b> SynchronizedBuffers.h:163</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_synchronized_buffer_r_t_o_s_html"><div class="ttname"><a href="classaudio__tools_1_1_synchronized_buffer_r_t_o_s.html">audio_tools::SynchronizedBufferRTOS</a></div><div class="ttdoc">Buffer implementation which is using a FreeRTOS StreamBuffer.</div><div class="ttdef"><b>Definition:</b> SynchronizedBuffers.h:333</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_synchronized_n_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_synchronized_n_buffer.html">audio_tools::SynchronizedNBuffer</a></div><div class="ttdoc">NBuffer which uses some RTOS queues to manage the available and filled buffers.</div><div class="ttdef"><b>Definition:</b> SynchronizedBuffers.h:260</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> BitVector.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

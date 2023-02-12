@@ -67,7 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">CodecFLAC.h File Reference</div>  </div>
 </div><!--header-->
@@ -75,7 +76,10 @@ $(function() {
 
 <p>FLAC Codec using <a href="https://github.com/pschatzmann/arduino-libflac">https://github.com/pschatzmann/arduino-libflac</a>.  
 <a href="#details">More...</a></p>
-
+<div class="textblock"><code>#include &quot;AudioCodecs/AudioEncoded.h&quot;</code><br />
+<code>#include &quot;AudioTools/Buffers.h&quot;</code><br />
+<code>#include &quot;flac.h&quot;</code><br />
+</div>
 <p><a href="_codec_f_l_a_c_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -92,6 +96,15 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceaudio__tools"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></td></tr>
 <tr class="memdesc:namespaceaudio__tools"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic Implementation of sound input and output for desktop environments using portaudio. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ab1146011e0eb0a6f3aaa60e7abad9c26"><td class="memItemLeft" align="right" valign="top"><a id="ab1146011e0eb0a6f3aaa60e7abad9c26"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FLAC_BUFFER_SIZE</b>&#160;&#160;&#160;(8 * 1024)</td></tr>
+<tr class="separator:ab1146011e0eb0a6f3aaa60e7abad9c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9186f06603eaa02c07530821d3fadc1"><td class="memItemLeft" align="right" valign="top"><a id="ad9186f06603eaa02c07530821d3fadc1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FLAC_READ_TIMEOUT_MS</b>&#160;&#160;&#160;10000</td></tr>
+<tr class="separator:ad9186f06603eaa02c07530821d3fadc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>FLAC Codec using <a href="https://github.com/pschatzmann/arduino-libflac">https://github.com/pschatzmann/arduino-libflac</a>. </p>

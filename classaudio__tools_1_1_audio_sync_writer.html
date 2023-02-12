@@ -113,21 +113,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:aaf81d3fdaf258088d7692fa70cece087"><td class="memItemLeft" align="right" valign="top"><a id="aaf81d3fdaf258088d7692fa70cece087"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:aaf81d3fdaf258088d7692fa70cece087"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0cd4fecac9530f097fd7efd52410f9f"><td class="memItemLeft" align="right" valign="top"><a id="ae0cd4fecac9530f097fd7efd52410f9f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () FLUSH_OVERRIDE</td></tr>
-<tr class="separator:ae0cd4fecac9530f097fd7efd52410f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8ba365f0ed39c8e804b64cc2b83b46c"><td class="memItemLeft" align="right" valign="top"><a id="ab8ba365f0ed39c8e804b64cc2b83b46c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (char c, PrintCharFmt spec)</td></tr>
-<tr class="separator:ab8ba365f0ed39c8e804b64cc2b83b46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3432b32284bf3efd4284d5e4f537823c"><td class="memItemLeft" align="right" valign="top"><a id="a3432b32284bf3efd4284d5e4f537823c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (const char *msg)</td></tr>
-<tr class="separator:a3432b32284bf3efd4284d5e4f537823c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add75a16f89ba1ce195aff531576b3c07"><td class="memItemLeft" align="right" valign="top"><a id="add75a16f89ba1ce195aff531576b3c07"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (int number)</td></tr>
-<tr class="separator:add75a16f89ba1ce195aff531576b3c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada4c953b90ba86d027382e3e33d11d8b"><td class="memItemLeft" align="right" valign="top"><a id="ada4c953b90ba86d027382e3e33d11d8b"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>println</b> (const char *msg=&quot;&quot;)</td></tr>
-<tr class="separator:ada4c953b90ba86d027382e3e33d11d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memItemLeft" align="right" valign="top"><a id="af654b48544c195ab99fe27e7bc3ed5fe"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
+<tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7887161ce1f9436b161f6f6842a5116"><td class="memItemLeft" align="right" valign="top"><a id="ab7887161ce1f9436b161f6f6842a5116"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info) override</td></tr>
 <tr class="separator:ab7887161ce1f9436b161f6f6842a5116"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,12 +125,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudi
 <tr class="memitem:a02d13ce67979fd03ea213f793e44d834"><td class="memItemLeft" align="right" valign="top"><a id="a02d13ce67979fd03ea213f793e44d834"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> &amp;info)</td></tr>
 <tr class="separator:a02d13ce67979fd03ea213f793e44d834"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af790e3174844d5a2ef0586304ee024b9"><td class="memItemLeft" align="right" valign="top"><a id="af790e3174844d5a2ef0586304ee024b9"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const char *buffer, size_t size)</td></tr>
-<tr class="separator:af790e3174844d5a2ef0586304ee024b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81093c8333cc7b6c682b36e06a7ec3b2"><td class="memItemLeft" align="right" valign="top"><a id="a81093c8333cc7b6c682b36e06a7ec3b2"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const char *str)</td></tr>
-<tr class="separator:a81093c8333cc7b6c682b36e06a7ec3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7597ef706dd1aa590903ce9e095db20a"><td class="memItemLeft" align="right" valign="top"><a id="a7597ef706dd1aa590903ce9e095db20a"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *data, size_t len) override</td></tr>
 <tr class="separator:a7597ef706dd1aa590903ce9e095db20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,9 +161,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_sync</b></td></tr>
 <tr class="memitem:a55593fb098b50040bc63f28fa32e995a"><td class="memItemLeft" align="right" valign="top"><a id="a55593fb098b50040bc63f28fa32e995a"></a>
 <a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a55593fb098b50040bc63f28fa32e995a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b5d88e2c39a305668863917a9b84760"><td class="memItemLeft" align="right" valign="top"><a id="a2b5d88e2c39a305668863917a9b84760"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> [MAX_SINGLE_CHARS]</td></tr>
-<tr class="separator:a2b5d88e2c39a305668863917a9b84760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9a986282b2908caa6e018751ead8ade"><td class="memItemLeft" align="right" valign="top"><a id="ae9a986282b2908caa6e018751ead8ade"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> [8]</td></tr>
+<tr class="separator:ae9a986282b2908caa6e018751ead8ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c8bfed099f70e8b41e7ddcd5578fedb"><td class="memItemLeft" align="right" valign="top"><a id="a5c8bfed099f70e8b41e7ddcd5578fedb"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>tmpPos</b> =0</td></tr>
 <tr class="separator:a5c8bfed099f70e8b41e7ddcd5578fedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
