@@ -165,6 +165,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> 
 <tr class="memitem:a183cb7a3c6dce3202f9a4c205bd09e11"><td class="memItemLeft" align="right" valign="top"><a id="a183cb7a3c6dce3202f9a4c205bd09e11"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t size) override</td></tr>
 <tr class="separator:a183cb7a3c6dce3202f9a4c205bd09e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
+<tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4123f7d64364729cae287a4929237c6f"><td class="memItemLeft" align="right" valign="top"><a id="a4123f7d64364729cae287a4929237c6f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeEnd</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;print, int steps=200)</td></tr>
 <tr class="separator:a4123f7d64364729cae287a4929237c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,6 +206,9 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>error_msg</b>
 <tr class="memitem:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memItemLeft" align="right" valign="top"><a id="aa42c30e02e51ec7cc38ea4ab215e0db4"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_out</b> = nullptr</td></tr>
 <tr class="separator:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
+<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
+<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> which can be used to manage fade in and fade out. Before you read or write data you need to call setAudioInfo() to provide the bits_per_sample and channels. </p>

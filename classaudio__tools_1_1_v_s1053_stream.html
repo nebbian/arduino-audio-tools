@@ -177,6 +177,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_v_s1053_stream.html#ae74e483484f1f059fc9ee780b1a7cc29">write</a> (const uint8_t *buffer, size_t size) override</td></tr>
 <tr class="memdesc:ae74e483484f1f059fc9ee780b1a7cc29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write audio data. <br /></td></tr>
 <tr class="separator:ae74e483484f1f059fc9ee780b1a7cc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
+<tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad89418aeb557f65a8f1a0aed755633b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1">writeSilence</a> (size_t len)</td></tr>
 <tr class="separator:ad89418aeb557f65a8f1a0aed755633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -218,6 +221,9 @@ VS1053 *&#160;</td><td class="memItemRight" valign="bottom"><b>p_vs1053</b> = nu
 <tr class="memitem:a1c9a462284f0a5d2c2059b7799ce1820"><td class="memItemLeft" align="right" valign="top"><a id="a1c9a462284f0a5d2c2059b7799ce1820"></a>
 VS1053StreamOut *&#160;</td><td class="memItemRight" valign="bottom"><b>p_vs1053_out</b> = nullptr</td></tr>
 <tr class="separator:a1c9a462284f0a5d2c2059b7799ce1820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
+<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
+<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>VS1053 Output Interface which processes PCM data by default. If you want to write encoded data set is_encoded_data = true in the configuration;. </p>

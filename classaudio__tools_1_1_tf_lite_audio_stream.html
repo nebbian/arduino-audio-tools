@@ -169,6 +169,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> 
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_tf_lite_audio_stream.html#a8c9b62168557af21ef8ded031747ddd5">write</a> (const uint8_t *audio, size_t bytes) override</td></tr>
 <tr class="memdesc:a8c9b62168557af21ef8ded031747ddd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">process the data in batches of max kMaxAudioSampleSize. <br /></td></tr>
 <tr class="separator:a8c9b62168557af21ef8ded031747ddd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
+<tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad89418aeb557f65a8f1a0aed755633b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1">writeSilence</a> (size_t len)</td></tr>
 <tr class="separator:ad89418aeb557f65a8f1a0aed755633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -216,6 +219,9 @@ uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>p_tensor_arena</
 <tr class="memitem:a89341e0556f315551906b53d51e0b1c6"><td class="memItemLeft" align="right" valign="top"><a id="a89341e0556f315551906b53d51e0b1c6"></a>
 int8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>p_tensor_buffer</b> = nullptr</td></tr>
 <tr class="separator:a89341e0556f315551906b53d51e0b1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
+<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
+<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classaudio__tools_1_1_tf_lite_audio_stream.html" title="TfLiteAudioStream which uses Tensorflow Light to analyze the data. If it is used as a generator (wher...">TfLiteAudioStream</a> which uses Tensorflow Light to analyze the data. If it is used as a generator (where we read audio data) </p>

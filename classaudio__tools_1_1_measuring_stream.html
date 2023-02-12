@@ -161,6 +161,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> 
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_measuring_stream.html#ae74e483484f1f059fc9ee780b1a7cc29">write</a> (const uint8_t *buffer, size_t size) override</td></tr>
 <tr class="memdesc:ae74e483484f1f059fc9ee780b1a7cc29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes raw PCM audio data, which will be the input for the volume control. <br /></td></tr>
 <tr class="separator:ae74e483484f1f059fc9ee780b1a7cc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
+<tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad89418aeb557f65a8f1a0aed755633b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1">writeSilence</a> (size_t len)</td></tr>
 <tr class="separator:ad89418aeb557f65a8f1a0aed755633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -211,6 +214,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>sample_div</b> = 0</td
 <tr class="memitem:a5b11efea935978e9f1913e964a5e5396"><td class="memItemLeft" align="right" valign="top"><a id="a5b11efea935978e9f1913e964a5e5396"></a>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>start_time</b></td></tr>
 <tr class="separator:a5b11efea935978e9f1913e964a5e5396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
+<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
+<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87cb5031d88ae6cb3955a54e60243fb9"><td class="memItemLeft" align="right" valign="top"><a id="a87cb5031d88ae6cb3955a54e60243fb9"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>total_bytes</b> = 0</td></tr>
 <tr class="separator:a87cb5031d88ae6cb3955a54e60243fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
