@@ -81,19 +81,19 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="classaudio__tools_1_1_i_c_y_stream_buffered.html">ICYStreamBuffered</a>(<span class="keywordtype">int</span> readBufferSize=DEFAULT_BUFFER_SIZE){</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            TRACEI();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            p_urlStream = <span class="keyword">new</span> ICYStream(readBufferSize);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            p_urlStream = <span class="keyword">new</span> <a class="code" href="classaudio__tools_1_1_i_c_y_stream.html">ICYStream</a>(readBufferSize);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            taskStream.setInput(*p_urlStream);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classaudio__tools_1_1_i_c_y_stream_buffered.html">ICYStreamBuffered</a>(<a class="code" href="classaudio__tools_1_1_client.html">Client</a> &amp;clientPar, <span class="keywordtype">int</span> readBufferSize=DEFAULT_BUFFER_SIZE){</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            TRACEI();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            p_urlStream = <span class="keyword">new</span> ICYStream(clientPar, readBufferSize);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            p_urlStream = <span class="keyword">new</span> <a class="code" href="classaudio__tools_1_1_i_c_y_stream.html">ICYStream</a>(clientPar, readBufferSize);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            taskStream.setInput(*p_urlStream);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="classaudio__tools_1_1_i_c_y_stream_buffered.html">ICYStreamBuffered</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* network, <span class="keyword">const</span> <span class="keywordtype">char</span> *password, <span class="keywordtype">int</span> readBufferSize=DEFAULT_BUFFER_SIZE) {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            TRACEI();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            p_urlStream = <span class="keyword">new</span> ICYStream(network, password, readBufferSize);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            p_urlStream = <span class="keyword">new</span> <a class="code" href="classaudio__tools_1_1_i_c_y_stream.html">ICYStream</a>(network, password, readBufferSize);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            taskStream.setInput(*p_urlStream);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
@@ -104,7 +104,7 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> setMetadataCallback(<span class="keywordtype">void</span> (*fn)(<a class="code" href="group__metadata.html#ga6760f423085f8a63374b1e2db102a6d1">MetaDataType</a> info, <span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keywordtype">int</span> len))<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            TRACED();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">return</span> p_urlStream-&gt;setMetadataCallback(fn);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">return</span> p_urlStream-&gt;<a class="code" href="classaudio__tools_1_1_i_c_y_stream.html#ad95873c68a776ff93a5a4e35c1fe4eb0">setMetadataCallback</a>(fn);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> begin(<span class="keyword">const</span> <span class="keywordtype">char</span>* urlStr, <span class="keyword">const</span> <span class="keywordtype">char</span>* acceptMime=<span class="keyword">nullptr</span>, MethodID action=GET,  <span class="keyword">const</span> <span class="keywordtype">char</span>* reqMime=<span class="stringliteral">&quot;&quot;</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>*reqData=<span class="stringliteral">&quot;&quot;</span>)<span class="keyword"> override </span>{</div>
@@ -119,7 +119,7 @@ $(function() {
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> end()<span class="keyword"> override</span>{</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            TRACED();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            taskStream.end();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            p_urlStream-&gt;end();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            p_urlStream-&gt;<a class="code" href="classaudio__tools_1_1_i_c_y_stream.html#ae827632720ddd6f3037ef1ee69aa3f41">end</a>();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">int</span> available()<span class="keyword"> override </span>{</div>
@@ -154,12 +154,12 @@ $(function() {
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_i_c_y_stream_buffered.html#a2ca90ceac0e248318ea6535bd8105569">   99</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classaudio__tools_1_1_http_request.html">HttpRequest</a> &amp;<a class="code" href="classaudio__tools_1_1_i_c_y_stream_buffered.html#a2ca90ceac0e248318ea6535bd8105569">httpRequest</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">return</span> p_urlStream-&gt;httpRequest();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">return</span> p_urlStream-&gt;<a class="code" href="classaudio__tools_1_1_i_c_y_stream.html#a2ca90ceac0e248318ea6535bd8105569">httpRequest</a>();</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="classaudio__tools_1_1_buffered_task_stream.html">BufferedTaskStream</a> taskStream;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        ICYStream* p_urlStream=<span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="classaudio__tools_1_1_i_c_y_stream.html">ICYStream</a>* p_urlStream=<span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;};</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
@@ -178,6 +178,10 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_i_c_y_stream_buffered_html_a2ca90ceac0e248318ea6535bd8105569"><div class="ttname"><a href="classaudio__tools_1_1_i_c_y_stream_buffered.html#a2ca90ceac0e248318ea6535bd8105569">audio_tools::ICYStreamBuffered::httpRequest</a></div><div class="ttdeci">virtual HttpRequest &amp; httpRequest() override</div><div class="ttdoc">provides access to the HttpRequest</div><div class="ttdef"><b>Definition:</b> ICYStreamBuffered.h:99</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i_c_y_stream_buffered_html_aaf33c44b7e9ab693bc5e2f5f501f4747"><div class="ttname"><a href="classaudio__tools_1_1_i_c_y_stream_buffered.html#aaf33c44b7e9ab693bc5e2f5f501f4747">audio_tools::ICYStreamBuffered::write</a></div><div class="ttdeci">virtual size_t write(uint8_t c) override</div><div class="ttdoc">Not implemented.</div><div class="ttdef"><b>Definition:</b> ICYStreamBuffered.h:88</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i_c_y_stream_buffered_html_af654b48544c195ab99fe27e7bc3ed5fe"><div class="ttname"><a href="classaudio__tools_1_1_i_c_y_stream_buffered.html#af654b48544c195ab99fe27e7bc3ed5fe">audio_tools::ICYStreamBuffered::flush</a></div><div class="ttdeci">virtual void flush() override</div><div class="ttdoc">Not implemented.</div><div class="ttdef"><b>Definition:</b> ICYStreamBuffered.h:84</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_i_c_y_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_i_c_y_stream.html">audio_tools::ICYStream</a></div><div class="ttdoc">Icecast/Shoutcast Audio Stream which splits the data into metadata and audio data....</div><div class="ttdef"><b>Definition:</b> ICYStream.h:21</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_i_c_y_stream_html_a2ca90ceac0e248318ea6535bd8105569"><div class="ttname"><a href="classaudio__tools_1_1_i_c_y_stream.html#a2ca90ceac0e248318ea6535bd8105569">audio_tools::ICYStream::httpRequest</a></div><div class="ttdeci">virtual HttpRequest &amp; httpRequest() override</div><div class="ttdoc">provides access to the HttpRequest</div><div class="ttdef"><b>Definition:</b> ICYStream.h:159</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_i_c_y_stream_html_ad95873c68a776ff93a5a4e35c1fe4eb0"><div class="ttname"><a href="classaudio__tools_1_1_i_c_y_stream.html#ad95873c68a776ff93a5a4e35c1fe4eb0">audio_tools::ICYStream::setMetadataCallback</a></div><div class="ttdeci">virtual bool setMetadataCallback(void(*fn)(MetaDataType info, const char *str, int len)) override</div><div class="ttdoc">Defines the meta data callback function.</div><div class="ttdef"><b>Definition:</b> ICYStream.h:49</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_i_c_y_stream_html_ae827632720ddd6f3037ef1ee69aa3f41"><div class="ttname"><a href="classaudio__tools_1_1_i_c_y_stream.html#ae827632720ddd6f3037ef1ee69aa3f41">audio_tools::ICYStream::end</a></div><div class="ttdeci">virtual void end() override</div><div class="ttdoc">Ends the processing.</div><div class="ttdef"><b>Definition:</b> ICYStream.h:80</div></div>
 <div class="ttc" id="agroup__metadata_html_ga6760f423085f8a63374b1e2db102a6d1"><div class="ttname"><a href="group__metadata.html#ga6760f423085f8a63374b1e2db102a6d1">audio_tools::MetaDataType</a></div><div class="ttdeci">MetaDataType</div><div class="ttdoc">Type of meta info.</div><div class="ttdef"><b>Definition:</b> AbstractMetaData.h:11</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->

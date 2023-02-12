@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jupyteraudiot_475',['JupyterAudioT',['../classaudio__tools_1_1_jupyter_audio_t.html',1,'audio_tools']]]
+  ['jupyteraudiot_478',['JupyterAudioT',['../classaudio__tools_1_1_jupyter_audio_t.html',1,'audio_tools']]]
 ];
