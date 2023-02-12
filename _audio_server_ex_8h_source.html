@@ -197,31 +197,30 @@ $(function() {
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="comment">// wav files start with a 44 bytes header</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">virtual</span> tinyhttp::Str* getReplyHeader() {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            header.allocate(44);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            MemoryPrint mp{(uint8_t*)header.c_str(), 44};</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            WAVEncoder enc;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            WAVAudioInfo wi;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            wi.format = WAV_FORMAT_PCM;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            wi.sample_rate = info.sample_rate;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            wi.bits_per_sample = info.bits_per_sample;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            wi.channels = info.channels;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            enc.setAudioInfo(wi);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="comment">// fill header with data</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            enc.writeHeader(&amp;mp);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="comment">// make sure that the length is 44</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            assert(header.length() == 44);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">return</span> &amp;header;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="comment">// Dynamic memory</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        tinyhttp::StrExt header;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="comment">// wav files start with a 44 bytes header</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keyword">virtual</span> tinyhttp::Str* getReplyHeader() {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            header.allocate(44);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            MemoryPrint mp{(uint8_t*)header.c_str(), 44};</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            WAVEncoder enc;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            WAVAudioInfo wi;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            wi.format = WAV_FORMAT_PCM;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            wi.sample_rate = info.sample_rate;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            wi.bits_per_sample = info.bits_per_sample;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            wi.channels = info.channels;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            enc.setAudioInfo(wi);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="comment">// fill header with data</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            enc.writeHeader(&amp;mp);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="comment">// make sure that the length is 44</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            assert(header.length() == 44);</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="comment">// Dynamic memory</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            tinyhttp::StrExt header;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;};</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">return</span> &amp;header;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;};</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_print_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_print.html">audio_tools::AudioPrint</a></div><div class="ttdoc">Abstract Audio Ouptut class.</div><div class="ttdef"><b>Definition:</b> AudioPrint.h:23</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_server_ex_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_server_ex.html">audio_tools::AudioServerEx</a></div><div class="ttdoc">A powerfull Web server which is based on https://github.com/pschatzmann/TinyHttp. It supports multipl...</div><div class="ttdef"><b>Definition:</b> AudioServerEx.h:37</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_server_ex_html_a72c4ecea0edfb6a9f9c05edc57b35c19"><div class="ttname"><a href="classaudio__tools_1_1_audio_server_ex.html#a72c4ecea0edfb6a9f9c05edc57b35c19">audio_tools::AudioServerEx::copy</a></div><div class="ttdeci">virtual void copy()</div><div class="ttdoc">Needs to be called if the data was provided as input Stream in the AudioServerExConfig.</div><div class="ttdef"><b>Definition:</b> AudioServerEx.h:103</div></div>
