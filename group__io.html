@@ -76,6 +76,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html">A2DPStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> support for A2DP: begin(TX_MODE) uses a2dp_source - begin(RX_MODE) a a2dp_sink The data is in int16_t with 2 channels at 44100 hertz. We support only one instance of the class!  <a href="classaudio__tools_1_1_a2_d_p_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html">AnalogAudioStream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support reading of audio only using analog input with a timer.  <a href="classaudio__tools_1_1_analog_audio_stream.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_kit_stream.html">AudioKitStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">AudioKit <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> which uses the <a href="https://github.com/pschatzmann/arduino-audiokit">https://github.com/pschatzmann/arduino-audiokit</a> library.  <a href="classaudio__tools_1_1_audio_kit_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,6 +97,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_hex_dump_stream.html">HexDumpStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Hex Dump.  <a href="classaudio__tools_1_1_hex_dump_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_stream.html">I2SStream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">We support the <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> interface for the I2S access. In addition we allow a separate mute pin which might also be used to drive a LED...  <a href="classaudio__tools_1_1_i2_s_stream.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html">LEDOutput</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_measuring_stream.html">MeasuringStream</a></td></tr>
@@ -110,6 +116,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_port_audio_stream.html">PortAudioStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arduino Audio <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> using PortAudio.  <a href="classaudio__tools_1_1_port_audio_stream.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_audio_stream.html">PWMAudioStream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common functionality for PWM output. Please use the <a class="el" href="classaudio__tools_1_1_p_w_m_audio_stream.html" title="Common functionality for PWM output. Please use the PWMAudioStream typedef instead which references t...">PWMAudioStream</a> typedef instead which references the implementation.  <a href="classaudio__tools_1_1_p_w_m_audio_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue_stream.html">QueueStream&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">AudioOutput class which stores the data in a temporary queue buffer. The queue can be consumed e.g. by a callback function by calling readBytes();.  <a href="classaudio__tools_1_1_queue_stream.html#details">More...</a><br /></td></tr>
