@@ -70,13 +70,13 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 201703L </span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#  include &lt;variant&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;AudioBasic/Collections.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;AudioEffects/SoundGenerator.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;AudioEffects/AudioEffect.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;AudioTools/AudioStreams.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;AudioBasic/Collections.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;AudioEffects/SoundGenerator.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;AudioEffects/AudioEffect.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;AudioTools/AudioStreams.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 201703L </span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#  include &lt;variant&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceaudio__tools.html">audio_tools</a> {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
@@ -353,7 +353,7 @@ $(function() {
 <div class="line"><a name="l00350"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_effect_stream_t.html#a76977e2ce53e1e0cb66e2dc76eb34500">  350</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_audio_effect_stream_t.html#a76977e2ce53e1e0cb66e2dc76eb34500">addEffect</a>(<a class="code" href="classaudio__tools_1_1_audio_effect.html">AudioEffect</a> *effect){</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        TRACED();</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        effects.<a class="code" href="classaudio__tools_1_1_audio_effect_common.html#a8c1b8bfcd46d399503e45d49c32ce087">addEffect</a>(effect);</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        LOGI(<span class="stringliteral">&quot;addEffect -&gt; Number of effects: %d&quot;</span>, <a class="code" href="classaudio__tools_1_1_audio_effect_stream_t.html#a0b6b70701c46e22849f0f363861351cd">size</a>());</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        LOGI(<span class="stringliteral">&quot;addEffect -&gt; Number of effects: %d&quot;</span>, (<span class="keywordtype">int</span>) <a class="code" href="classaudio__tools_1_1_audio_effect_stream_t.html#a0b6b70701c46e22849f0f363861351cd">size</a>());</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    }</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
 <div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_effect_stream_t.html#ac8bb3912a3ce86b15842e79d0b421204">  357</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_audio_effect_stream_t.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>() {</div>
@@ -524,7 +524,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_audio_effects_html_ac8bb3912a3ce86b15842e79d0b421204"><div class="ttname"><a href="classaudio__tools_1_1_audio_effects.html#ac8bb3912a3ce86b15842e79d0b421204">audio_tools::AudioEffects::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">deletes all defined effects</div><div class="ttdef"><b>Definition:</b> AudioEffects.h:164</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_effects_html_acdb7c37a7d376b32348861f4a2cd8ee0"><div class="ttname"><a href="classaudio__tools_1_1_audio_effects.html#acdb7c37a7d376b32348861f4a2cd8ee0">audio_tools::AudioEffects::AudioEffects</a></div><div class="ttdeci">AudioEffects(Stream &amp;input, int channels=2, float volume=1.0)</div><div class="ttdef"><b>Definition:</b> AudioEffects.h:110</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_effects_html_ad2f617dbd463a6174cdaf6e12b13a214"><div class="ttname"><a href="classaudio__tools_1_1_audio_effects.html#ad2f617dbd463a6174cdaf6e12b13a214">audio_tools::AudioEffects::AudioEffects</a></div><div class="ttdeci">AudioEffects()=default</div><div class="ttdoc">Default constructor.</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream.html">audio_tools::AudioStream</a></div><div class="ttdoc">Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:34</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream.html">audio_tools::AudioStream</a></div><div class="ttdoc">Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:40</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:33</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_sound_generator_html"><div class="ttname"><a href="classaudio__tools_1_1_sound_generator.html">audio_tools::SoundGenerator</a></div><div class="ttdoc">Base class to define the abstract interface for the sound generating classes.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:25</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_stream.html">audio_tools::Stream</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:96</div></div>
