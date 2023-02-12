@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['effects_2263',['Effects',['../group__effects.html',1,'']]],
-  ['equilizer_2264',['Equilizer',['../group__equilizer.html',1,'']]],
-  ['esp32_2ddsp_2265',['esp32-dsp',['../group__fft-dsp.html',1,'']]],
-  ['esp32_2dfft_2266',['esp32-fft',['../group__fft-esp32.html',1,'']]]
+  ['effects_2265',['Effects',['../group__effects.html',1,'']]],
+  ['equilizer_2266',['Equilizer',['../group__equilizer.html',1,'']]],
+  ['esp32_2ddsp_2267',['esp32-dsp',['../group__fft-dsp.html',1,'']]],
+  ['esp32_2dfft_2268',['esp32-fft',['../group__fft-esp32.html',1,'']]]
 ];
