@@ -104,12 +104,18 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_faust_stream.html#a82221113a708cd20234ac05c1dcd8e0d">FaustStream</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out, bool useSeparateOutputBuffer=true)</td></tr>
 <tr class="memdesc:a82221113a708cd20234ac05c1dcd8e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for Faust as Singal Processor - changing an input signal and sending it to out. <br /></td></tr>
 <tr class="separator:a82221113a708cd20234ac05c1dcd8e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d69e9eb602f9fc58dcee84007813554"><td class="memItemLeft" align="right" valign="top"><a id="a2d69e9eb602f9fc58dcee84007813554"></a>
+virtual <a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
+<tr class="separator:a2d69e9eb602f9fc58dcee84007813554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="memItemLeft" align="right" valign="top"><a id="a692e2b18b3c2452e38e3f558ad87e9a5"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> () override</td></tr>
 <tr class="separator:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87b51853b7bf1bc90d9efa9f3b8d4fea"><td class="memItemLeft" align="right" valign="top"><a id="a87b51853b7bf1bc90d9efa9f3b8d4fea"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> () override</td></tr>
 <tr class="separator:a87b51853b7bf1bc90d9efa9f3b8d4fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
+<tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb664b027a7c621d67f6a1783f8665af"><td class="memItemLeft" align="right" valign="top"><a id="aeb664b027a7c621d67f6a1783f8665af"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_faust_stream.html#aeb664b027a7c621d67f6a1783f8665af">begin</a> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> cfg)</td></tr>
 <tr class="memdesc:aeb664b027a7c621d67f6a1783f8665af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the parameters and starts the processing. <br /></td></tr>
@@ -124,6 +130,9 @@ virtual FAUSTFLOAT&#160;</td><td class="memItemRight" valign="bottom"><b>bend</b
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_faust_stream.html#aaf81d3fdaf258088d7692fa70cece087">end</a> ()</td></tr>
 <tr class="memdesc:aaf81d3fdaf258088d7692fa70cece087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the processing. <br /></td></tr>
 <tr class="separator:aaf81d3fdaf258088d7692fa70cece087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memItemLeft" align="right" valign="top"><a id="af654b48544c195ab99fe27e7bc3ed5fe"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
+<tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a556175c8971168dbbb33d49dea7e115a"><td class="memItemLeft" align="right" valign="top"><a id="a556175c8971168dbbb33d49dea7e115a"></a>
 virtual FAUSTFLOAT&#160;</td><td class="memItemRight" valign="bottom"><b>frequency</b> ()</td></tr>
 <tr class="separator:a556175c8971168dbbb33d49dea7e115a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,10 +153,37 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>midiOff</b> (
 <tr class="memitem:abb67fe6ffa82baaf009da9b0da82f4a6"><td class="memItemLeft" align="right" valign="top"><a id="abb67fe6ffa82baaf009da9b0da82f4a6"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>midiOn</b> (int note, FAUSTFLOAT gain)</td></tr>
 <tr class="separator:abb67fe6ffa82baaf009da9b0da82f4a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
+<tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bb6daa18ee5d207a6f2e1899eaadcf3"><td class="memItemLeft" align="right" valign="top"><a id="a9bb6daa18ee5d207a6f2e1899eaadcf3"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>peek</b> () override</td></tr>
+<tr class="separator:a9bb6daa18ee5d207a6f2e1899eaadcf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8ba365f0ed39c8e804b64cc2b83b46c"><td class="memItemLeft" align="right" valign="top"><a id="ab8ba365f0ed39c8e804b64cc2b83b46c"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (char c, PrintCharFmt spec)</td></tr>
+<tr class="separator:ab8ba365f0ed39c8e804b64cc2b83b46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3432b32284bf3efd4284d5e4f537823c"><td class="memItemLeft" align="right" valign="top"><a id="a3432b32284bf3efd4284d5e4f537823c"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (const char *msg)</td></tr>
+<tr class="separator:a3432b32284bf3efd4284d5e4f537823c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add75a16f89ba1ce195aff531576b3c07"><td class="memItemLeft" align="right" valign="top"><a id="add75a16f89ba1ce195aff531576b3c07"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (int number)</td></tr>
+<tr class="separator:add75a16f89ba1ce195aff531576b3c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4c953b90ba86d027382e3e33d11d8b"><td class="memItemLeft" align="right" valign="top"><a id="ada4c953b90ba86d027382e3e33d11d8b"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>println</b> (const char *msg=&quot;&quot;)</td></tr>
+<tr class="separator:ada4c953b90ba86d027382e3e33d11d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e8f8111a9c57b7a2be72337ab07e0e"><td class="memItemLeft" align="right" valign="top"><a id="a31e8f8111a9c57b7a2be72337ab07e0e"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> () override</td></tr>
+<tr class="separator:a31e8f8111a9c57b7a2be72337ab07e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e505c15cb6743a60271a6ffec98de60"><td class="memItemLeft" align="right" valign="top"><a id="a1e505c15cb6743a60271a6ffec98de60"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (char *buffer, size_t length)</td></tr>
+<tr class="separator:a1e505c15cb6743a60271a6ffec98de60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c5c6275ddee80eb02839356b6185c0b"><td class="memItemLeft" align="right" valign="top"><a id="a4c5c6275ddee80eb02839356b6185c0b"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_faust_stream.html#a4c5c6275ddee80eb02839356b6185c0b">readBytes</a> (uint8_t *data, size_t len) override</td></tr>
 <tr class="memdesc:a4c5c6275ddee80eb02839356b6185c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used if <a class="el" href="classaudio__tools_1_1_faust_stream.html" title="Integration into Faust DSP see https://faust.grame.fr/ To generate code from faust,...">FaustStream</a> is used as audio source. <br /></td></tr>
 <tr class="separator:a4c5c6275ddee80eb02839356b6185c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7887161ce1f9436b161f6f6842a5116"><td class="memItemLeft" align="right" valign="top"><a id="ab7887161ce1f9436b161f6f6842a5116"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info) override</td></tr>
+<tr class="separator:ab7887161ce1f9436b161f6f6842a5116"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad05787cfe7149613016d13b507131b1"><td class="memItemLeft" align="right" valign="top"><a id="aad05787cfe7149613016d13b507131b1"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>setBend</b> (FAUSTFLOAT bend)</td></tr>
 <tr class="separator:aad05787cfe7149613016d13b507131b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,89 +200,33 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:aa28abac7112fb6176b7d46056f18916a"><td class="memItemLeft" align="right" valign="top"><a id="aa28abac7112fb6176b7d46056f18916a"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>setMidiNote</b> (int note)</td></tr>
 <tr class="separator:aa28abac7112fb6176b7d46056f18916a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26271bd0c9c22550dccdf5b8a3fa4ef0"><td class="memItemLeft" align="right" valign="top"><a id="a26271bd0c9c22550dccdf5b8a3fa4ef0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi) override</td></tr>
+<tr class="separator:a26271bd0c9c22550dccdf5b8a3fa4ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c4119f2699ad8672d1e765cc1bdc363"><td class="memItemLeft" align="right" valign="top"><a id="a7c4119f2699ad8672d1e765cc1bdc363"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeout</b> (size_t t)</td></tr>
+<tr class="separator:a7c4119f2699ad8672d1e765cc1bdc363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1001f4f79752392b3775ced33b1175c"><td class="memItemLeft" align="right" valign="top"><a id="aa1001f4f79752392b3775ced33b1175c"></a>
+virtual <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>toStreamPointer</b> ()</td></tr>
+<tr class="separator:aa1001f4f79752392b3775ced33b1175c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d13ce67979fd03ea213f793e44d834"><td class="memItemLeft" align="right" valign="top"><a id="a02d13ce67979fd03ea213f793e44d834"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> &amp;info)</td></tr>
+<tr class="separator:a02d13ce67979fd03ea213f793e44d834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af790e3174844d5a2ef0586304ee024b9"><td class="memItemLeft" align="right" valign="top"><a id="af790e3174844d5a2ef0586304ee024b9"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const char *buffer, size_t size)</td></tr>
+<tr class="separator:af790e3174844d5a2ef0586304ee024b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81093c8333cc7b6c682b36e06a7ec3b2"><td class="memItemLeft" align="right" valign="top"><a id="a81093c8333cc7b6c682b36e06a7ec3b2"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const char *str)</td></tr>
+<tr class="separator:a81093c8333cc7b6c682b36e06a7ec3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb17c26f4788c43eaeaea97bc935343d"><td class="memItemLeft" align="right" valign="top"><a id="afb17c26f4788c43eaeaea97bc935343d"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_faust_stream.html#afb17c26f4788c43eaeaea97bc935343d">write</a> (const uint8_t *write_data, size_t len) override</td></tr>
 <tr class="memdesc:afb17c26f4788c43eaeaea97bc935343d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used if <a class="el" href="classaudio__tools_1_1_faust_stream.html" title="Integration into Faust DSP see https://faust.grame.fr/ To generate code from faust,...">FaustStream</a> is used as audio sink or filter. <br /></td></tr>
 <tr class="separator:afb17c26f4788c43eaeaea97bc935343d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classaudio__tools_1_1_audio_stream_x"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classaudio__tools_1_1_audio_stream_x')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classaudio__tools_1_1_audio_stream_x.html">AudioStreamX</a></td></tr>
-<tr class="memitem:a0917b967d9e670d10f0e5ca3680a79ae inherit pub_methods_classaudio__tools_1_1_audio_stream_x"><td class="memItemLeft" align="right" valign="top"><a id="a0917b967d9e670d10f0e5ca3680a79ae"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AudioStreamX</b> (<a class="el" href="classaudio__tools_1_1_audio_stream_x.html">AudioStreamX</a> const &amp;)=delete</td></tr>
-<tr class="separator:a0917b967d9e670d10f0e5ca3680a79ae inherit pub_methods_classaudio__tools_1_1_audio_stream_x"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47d023c2cebf404ace42185d2c63567c inherit pub_methods_classaudio__tools_1_1_audio_stream_x"><td class="memItemLeft" align="right" valign="top"><a id="a47d023c2cebf404ace42185d2c63567c"></a>
-<a class="el" href="classaudio__tools_1_1_audio_stream_x.html">AudioStreamX</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classaudio__tools_1_1_audio_stream_x.html">AudioStreamX</a> const &amp;)=delete</td></tr>
-<tr class="separator:a47d023c2cebf404ace42185d2c63567c inherit pub_methods_classaudio__tools_1_1_audio_stream_x"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bb6daa18ee5d207a6f2e1899eaadcf3 inherit pub_methods_classaudio__tools_1_1_audio_stream_x"><td class="memItemLeft" align="right" valign="top"><a id="a9bb6daa18ee5d207a6f2e1899eaadcf3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>peek</b> () override</td></tr>
-<tr class="separator:a9bb6daa18ee5d207a6f2e1899eaadcf3 inherit pub_methods_classaudio__tools_1_1_audio_stream_x"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31e8f8111a9c57b7a2be72337ab07e0e inherit pub_methods_classaudio__tools_1_1_audio_stream_x"><td class="memItemLeft" align="right" valign="top"><a id="a31e8f8111a9c57b7a2be72337ab07e0e"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> () override</td></tr>
-<tr class="separator:a31e8f8111a9c57b7a2be72337ab07e0e inherit pub_methods_classaudio__tools_1_1_audio_stream_x"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8007709ed3cffd9dd02b019ede903111 inherit pub_methods_classaudio__tools_1_1_audio_stream_x"><td class="memItemLeft" align="right" valign="top"><a id="a8007709ed3cffd9dd02b019ede903111"></a>
+<tr class="memitem:a8007709ed3cffd9dd02b019ede903111"><td class="memItemLeft" align="right" valign="top"><a id="a8007709ed3cffd9dd02b019ede903111"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t) override</td></tr>
-<tr class="separator:a8007709ed3cffd9dd02b019ede903111 inherit pub_methods_classaudio__tools_1_1_audio_stream_x"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classaudio__tools_1_1_audio_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classaudio__tools_1_1_audio_stream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a></td></tr>
-<tr class="memitem:aa809637bb4d773c7bfc1d408283e42bc inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="aa809637bb4d773c7bfc1d408283e42bc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AudioStream</b> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> const &amp;)=delete</td></tr>
-<tr class="separator:aa809637bb4d773c7bfc1d408283e42bc inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d69e9eb602f9fc58dcee84007813554 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="a2d69e9eb602f9fc58dcee84007813554"></a>
-virtual <a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
-<tr class="separator:a2d69e9eb602f9fc58dcee84007813554 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="separator:a50f45551c10ca30a0bc7f447e70188b1 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af654b48544c195ab99fe27e7bc3ed5fe inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="af654b48544c195ab99fe27e7bc3ed5fe"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
-<tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
-<tr class="separator:a9b3baad8c612d81b96e46f84d7e97580 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b33821c012632d0fce6ae7210d549b5 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="a3b33821c012632d0fce6ae7210d549b5"></a>
-<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> const &amp;)=delete</td></tr>
-<tr class="separator:a3b33821c012632d0fce6ae7210d549b5 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e505c15cb6743a60271a6ffec98de60 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="a1e505c15cb6743a60271a6ffec98de60"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (char *buffer, size_t length)</td></tr>
-<tr class="separator:a1e505c15cb6743a60271a6ffec98de60 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7887161ce1f9436b161f6f6842a5116 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="ab7887161ce1f9436b161f6f6842a5116"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info) override</td></tr>
-<tr class="separator:ab7887161ce1f9436b161f6f6842a5116 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26271bd0c9c22550dccdf5b8a3fa4ef0 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="a26271bd0c9c22550dccdf5b8a3fa4ef0"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi) override</td></tr>
-<tr class="separator:a26271bd0c9c22550dccdf5b8a3fa4ef0 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1001f4f79752392b3775ced33b1175c inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="aa1001f4f79752392b3775ced33b1175c"></a>
-virtual <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>toStreamPointer</b> ()</td></tr>
-<tr class="separator:aa1001f4f79752392b3775ced33b1175c inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad89418aeb557f65a8f1a0aed755633b1 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1">writeSilence</a> (size_t len)</td></tr>
-<tr class="separator:ad89418aeb557f65a8f1a0aed755633b1 inherit pub_methods_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classaudio__tools_1_1_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classaudio__tools_1_1_stream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a></td></tr>
-<tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580 inherit pub_methods_classaudio__tools_1_1_stream"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
-<tr class="separator:a9b3baad8c612d81b96e46f84d7e97580 inherit pub_methods_classaudio__tools_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c4119f2699ad8672d1e765cc1bdc363 inherit pub_methods_classaudio__tools_1_1_stream"><td class="memItemLeft" align="right" valign="top"><a id="a7c4119f2699ad8672d1e765cc1bdc363"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeout</b> (size_t t)</td></tr>
-<tr class="separator:a7c4119f2699ad8672d1e765cc1bdc363 inherit pub_methods_classaudio__tools_1_1_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classaudio__tools_1_1_print"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classaudio__tools_1_1_print')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classaudio__tools_1_1_print.html">Print</a></td></tr>
-<tr class="memitem:ab8ba365f0ed39c8e804b64cc2b83b46c inherit pub_methods_classaudio__tools_1_1_print"><td class="memItemLeft" align="right" valign="top"><a id="ab8ba365f0ed39c8e804b64cc2b83b46c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (char c, PrintCharFmt spec)</td></tr>
-<tr class="separator:ab8ba365f0ed39c8e804b64cc2b83b46c inherit pub_methods_classaudio__tools_1_1_print"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3432b32284bf3efd4284d5e4f537823c inherit pub_methods_classaudio__tools_1_1_print"><td class="memItemLeft" align="right" valign="top"><a id="a3432b32284bf3efd4284d5e4f537823c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (const char *msg)</td></tr>
-<tr class="separator:a3432b32284bf3efd4284d5e4f537823c inherit pub_methods_classaudio__tools_1_1_print"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add75a16f89ba1ce195aff531576b3c07 inherit pub_methods_classaudio__tools_1_1_print"><td class="memItemLeft" align="right" valign="top"><a id="add75a16f89ba1ce195aff531576b3c07"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (int number)</td></tr>
-<tr class="separator:add75a16f89ba1ce195aff531576b3c07 inherit pub_methods_classaudio__tools_1_1_print"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada4c953b90ba86d027382e3e33d11d8b inherit pub_methods_classaudio__tools_1_1_print"><td class="memItemLeft" align="right" valign="top"><a id="ada4c953b90ba86d027382e3e33d11d8b"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>println</b> (const char *msg=&quot;&quot;)</td></tr>
-<tr class="separator:ada4c953b90ba86d027382e3e33d11d8b inherit pub_methods_classaudio__tools_1_1_print"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af790e3174844d5a2ef0586304ee024b9 inherit pub_methods_classaudio__tools_1_1_print"><td class="memItemLeft" align="right" valign="top"><a id="af790e3174844d5a2ef0586304ee024b9"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const char *buffer, size_t size)</td></tr>
-<tr class="separator:af790e3174844d5a2ef0586304ee024b9 inherit pub_methods_classaudio__tools_1_1_print"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81093c8333cc7b6c682b36e06a7ec3b2 inherit pub_methods_classaudio__tools_1_1_print"><td class="memItemLeft" align="right" valign="top"><a id="a81093c8333cc7b6c682b36e06a7ec3b2"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const char *str)</td></tr>
-<tr class="separator:a81093c8333cc7b6c682b36e06a7ec3b2 inherit pub_methods_classaudio__tools_1_1_print"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classaudio__tools_1_1_audio_base_info_dependent"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classaudio__tools_1_1_audio_base_info_dependent')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a></td></tr>
-<tr class="memitem:a02d13ce67979fd03ea213f793e44d834 inherit pub_methods_classaudio__tools_1_1_audio_base_info_dependent"><td class="memItemLeft" align="right" valign="top"><a id="a02d13ce67979fd03ea213f793e44d834"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> &amp;info)</td></tr>
-<tr class="separator:a02d13ce67979fd03ea213f793e44d834 inherit pub_methods_classaudio__tools_1_1_audio_base_info_dependent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a8007709ed3cffd9dd02b019ede903111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad89418aeb557f65a8f1a0aed755633b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1">writeSilence</a> (size_t len)</td></tr>
+<tr class="separator:ad89418aeb557f65a8f1a0aed755633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -265,13 +245,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a9933c36af7028a7f6c90c19cc91e96ab"><td class="memItemLeft" align="right" valign="top"><a id="a9933c36af7028a7f6c90c19cc91e96ab"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteFloatBuffer</b> ()</td></tr>
 <tr class="separator:a9933c36af7028a7f6c90c19cc91e96ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memItemLeft" align="right" valign="top"><a id="ae8b36f594a1e3aaaf9737aabb7c95ba3"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out)</td></tr>
+<tr class="separator:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade3ee993ba3998d6541c7ed369940ef7"><td class="memItemLeft" align="right" valign="top"><a id="ade3ee993ba3998d6541c7ed369940ef7"></a>
 FAUSTFLOAT&#160;</td><td class="memItemRight" valign="bottom"><b>noteToFrequency</b> (uint8_t x)</td></tr>
 <tr class="separator:ade3ee993ba3998d6541c7ed369940ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classaudio__tools_1_1_audio_stream"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classaudio__tools_1_1_audio_stream')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a></td></tr>
-<tr class="memitem:ae8b36f594a1e3aaaf9737aabb7c95ba3 inherit pro_methods_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="ae8b36f594a1e3aaaf9737aabb7c95ba3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out)</td></tr>
-<tr class="separator:ae8b36f594a1e3aaaf9737aabb7c95ba3 inherit pro_methods_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -287,6 +266,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>bytes_per_sample</b></
 <tr class="memitem:a855eba1834e1665f145fd03420a66254"><td class="memItemLeft" align="right" valign="top"><a id="a855eba1834e1665f145fd03420a66254"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>gate_exists</b> = false</td></tr>
 <tr class="separator:a855eba1834e1665f145fd03420a66254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"><td class="memItemLeft" align="right" valign="top"><a id="abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"></a>
+<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94b04c980e7c75e9d03c8882477f6ca6"><td class="memItemLeft" align="right" valign="top"><a id="a94b04c980e7c75e9d03c8882477f6ca6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_init</b> = false</td></tr>
 <tr class="separator:a94b04c980e7c75e9d03c8882477f6ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -305,6 +287,9 @@ FAUSTFLOAT **&#160;</td><td class="memItemRight" valign="bottom"><b>p_buffer_out
 <tr class="memitem:aa9a8247361b3e0d90450b421ea8198cf"><td class="memItemLeft" align="right" valign="top"><a id="aa9a8247361b3e0d90450b421ea8198cf"></a>
 DSP *&#160;</td><td class="memItemRight" valign="bottom"><b>p_dsp</b> = nullptr</td></tr>
 <tr class="separator:aa9a8247361b3e0d90450b421ea8198cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55593fb098b50040bc63f28fa32e995a"><td class="memItemLeft" align="right" valign="top"><a id="a55593fb098b50040bc63f28fa32e995a"></a>
+<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
+<tr class="separator:a55593fb098b50040bc63f28fa32e995a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memItemLeft" align="right" valign="top"><a id="aa42c30e02e51ec7cc38ea4ab215e0db4"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_out</b> =nullptr</td></tr>
 <tr class="separator:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -314,13 +299,6 @@ DSP *&#160;</td><td class="memItemRight" valign="bottom"><b>p_dsp</b> = nullptr<
 <tr class="memitem:ab3edf0d7b9d897bdc087de47a4b2c0aa"><td class="memItemLeft" align="right" valign="top"><a id="ab3edf0d7b9d897bdc087de47a4b2c0aa"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>with_output_buffer</b></td></tr>
 <tr class="separator:ab3edf0d7b9d897bdc087de47a4b2c0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classaudio__tools_1_1_audio_stream"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classaudio__tools_1_1_audio_stream')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a></td></tr>
-<tr class="memitem:abb8fb5d79ecf45e01fdf3ad5e4d1fa2f inherit pro_attribs_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"></a>
-<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
-<tr class="separator:abb8fb5d79ecf45e01fdf3ad5e4d1fa2f inherit pro_attribs_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55593fb098b50040bc63f28fa32e995a inherit pro_attribs_classaudio__tools_1_1_audio_stream"><td class="memItemLeft" align="right" valign="top"><a id="a55593fb098b50040bc63f28fa32e995a"></a>
-<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
-<tr class="separator:a55593fb098b50040bc63f28fa32e995a inherit pro_attribs_classaudio__tools_1_1_audio_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class DSP&gt;<br />
@@ -329,7 +307,41 @@ class audio_tools::FaustStream&lt; DSP &gt;</h3>
 <p>Integration into Faust DSP see <a href="https://faust.grame.fr/">https://faust.grame.fr/</a> To generate code from faust, select src and cpp. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad89418aeb557f65a8f1a0aed755633b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad89418aeb557f65a8f1a0aed755633b1">&#9670;&nbsp;</a></span>writeSilence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void writeSilence </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Writes n 0 values (= silence) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td><br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioLibs/<a class="el" href="_audio_faust_8h_source.html">AudioFaust.h</a></li>
 </ul>
 </div><!-- contents -->

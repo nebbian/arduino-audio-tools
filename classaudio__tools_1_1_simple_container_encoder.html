@@ -71,7 +71,7 @@ $(function() {
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_simple_container_encoder-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">SimpleContainerEncoder Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__codecs.html">Codecs</a></div></div>  </div>
+<div class="title">SimpleContainerEncoder Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__codecs.html">Codecs</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -111,6 +111,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="memitem:adac116554b543b7c4228c018a85882f5"><td class="memItemLeft" align="right" valign="top"><a id="adac116554b543b7c4228c018a85882f5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()</td></tr>
 <tr class="separator:adac116554b543b7c4228c018a85882f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3eead7aeacc082287eabd2282dff0e1"><td class="memItemLeft" align="right" valign="top"><a id="ac3eead7aeacc082287eabd2282dff0e1"></a>
+virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mime</b> ()=0</td></tr>
+<tr class="separator:ac3eead7aeacc082287eabd2282dff0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac496133545cba767b45c6ce8df3587e7"><td class="memItemLeft" align="right" valign="top"><a id="ac496133545cba767b45c6ce8df3587e7"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()=0</td></tr>
+<tr class="separator:ac496133545cba767b45c6ce8df3587e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e2a472cb318ddfe1aa3665116e58ca3"><td class="memItemLeft" align="right" valign="top"><a id="a2e2a472cb318ddfe1aa3665116e58ca3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info)</td></tr>
 <tr class="separator:a2e2a472cb318ddfe1aa3665116e58ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,20 +126,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (
 <tr class="memitem:a2685d88d9d964c749bce462858634b6e"><td class="memItemLeft" align="right" valign="top"><a id="a2685d88d9d964c749bce462858634b6e"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *data, size_t len)</td></tr>
 <tr class="separator:a2685d88d9d964c749bce462858634b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classaudio__tools_1_1_audio_encoder"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classaudio__tools_1_1_audio_encoder')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a></td></tr>
-<tr class="memitem:a9c558ffa97c6b2d712d255ffc5e54e86 inherit pub_methods_classaudio__tools_1_1_audio_encoder"><td class="memItemLeft" align="right" valign="top"><a id="a9c558ffa97c6b2d712d255ffc5e54e86"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AudioEncoder</b> (<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> const &amp;)=delete</td></tr>
-<tr class="separator:a9c558ffa97c6b2d712d255ffc5e54e86 inherit pub_methods_classaudio__tools_1_1_audio_encoder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3eead7aeacc082287eabd2282dff0e1 inherit pub_methods_classaudio__tools_1_1_audio_encoder"><td class="memItemLeft" align="right" valign="top"><a id="ac3eead7aeacc082287eabd2282dff0e1"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mime</b> ()=0</td></tr>
-<tr class="separator:ac3eead7aeacc082287eabd2282dff0e1 inherit pub_methods_classaudio__tools_1_1_audio_encoder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a430677f0f16ed22d58b71ded148455dc inherit pub_methods_classaudio__tools_1_1_audio_encoder"><td class="memItemLeft" align="right" valign="top"><a id="a430677f0f16ed22d58b71ded148455dc"></a>
-<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> const &amp;)=delete</td></tr>
-<tr class="separator:a430677f0f16ed22d58b71ded148455dc inherit pub_methods_classaudio__tools_1_1_audio_encoder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classaudio__tools_1_1_audio_writer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classaudio__tools_1_1_audio_writer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classaudio__tools_1_1_audio_writer.html">AudioWriter</a></td></tr>
-<tr class="memitem:ac496133545cba767b45c6ce8df3587e7 inherit pub_methods_classaudio__tools_1_1_audio_writer"><td class="memItemLeft" align="right" valign="top"><a id="ac496133545cba767b45c6ce8df3587e7"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()=0</td></tr>
-<tr class="separator:ac496133545cba767b45c6ce8df3587e7 inherit pub_methods_classaudio__tools_1_1_audio_writer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>

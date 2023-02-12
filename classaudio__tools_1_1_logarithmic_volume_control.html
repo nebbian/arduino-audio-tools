@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_logarithmic_volume_control-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -98,19 +99,18 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memdesc:acdf623d845bd8cda68be2aa6da5896a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">determines a multiplication factor (0.0 to 1.0) from an input value (0.0 to 1.0). <br /></td></tr>
 <tr class="separator:acdf623d845bd8cda68be2aa6da5896a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ace0e1dc6943007f979f702e7b074b60e"><td class="memItemLeft" align="right" valign="top"><a id="ace0e1dc6943007f979f702e7b074b60e"></a>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_control.html#ace0e1dc6943007f979f702e7b074b60e">limit</a> (float in)</td></tr>
+<tr class="memdesc:ace0e1dc6943007f979f702e7b074b60e"><td class="mdescLeft">&#160;</td><td class="mdescRight">limits the output to the range of 0 to 1.0 <br /></td></tr>
+<tr class="separator:ace0e1dc6943007f979f702e7b074b60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a5a6beb9ca2904e494863187b0026004c"><td class="memItemLeft" align="right" valign="top"><a id="a5a6beb9ca2904e494863187b0026004c"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>ym</b></td></tr>
 <tr class="separator:a5a6beb9ca2904e494863187b0026004c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classaudio__tools_1_1_volume_control"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classaudio__tools_1_1_volume_control')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classaudio__tools_1_1_volume_control.html">VolumeControl</a></td></tr>
-<tr class="memitem:ace0e1dc6943007f979f702e7b074b60e inherit pro_methods_classaudio__tools_1_1_volume_control"><td class="memItemLeft" align="right" valign="top"><a id="ace0e1dc6943007f979f702e7b074b60e"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_control.html#ace0e1dc6943007f979f702e7b074b60e">limit</a> (float in)</td></tr>
-<tr class="memdesc:ace0e1dc6943007f979f702e7b074b60e inherit pro_methods_classaudio__tools_1_1_volume_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">limits the output to the range of 0 to 1.0 <br /></td></tr>
-<tr class="separator:ace0e1dc6943007f979f702e7b074b60e inherit pro_methods_classaudio__tools_1_1_volume_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Parametric Logarithmic volume control. Using the formula pow(b,input) * a - a, where b is b = pow(((1/ym)-1), 2) and a is a = 1.0 / (b - 1.0). The parameter ym is determining the steepness. See <a href="https://electronics.stackexchange.com/questions/304692/formula-for-logarithmic-audio-taper-pot">https://electronics.stackexchange.com/questions/304692/formula-for-logarithmic-audio-taper-pot</a>. </p>

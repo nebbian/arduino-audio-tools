@@ -131,13 +131,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setSustainLevel</b> (
 <tr class="memitem:ae959d7d0ef42b0e9f5845fee63cee69b"><td class="memItemLeft" align="right" valign="top"><a id="ae959d7d0ef42b0e9f5845fee63cee69b"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>sustainLevel</b> ()</td></tr>
 <tr class="separator:ae959d7d0ef42b0e9f5845fee63cee69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classaudio__tools_1_1_abstract_parameter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classaudio__tools_1_1_abstract_parameter')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classaudio__tools_1_1_abstract_parameter.html">AbstractParameter</a></td></tr>
-<tr class="memitem:a02e618df61e77fbeb6cfac4d54290569 inherit pub_methods_classaudio__tools_1_1_abstract_parameter"><td class="memItemLeft" align="right" valign="top"><a id="a02e618df61e77fbeb6cfac4d54290569"></a>
+<tr class="memitem:a02e618df61e77fbeb6cfac4d54290569"><td class="memItemLeft" align="right" valign="top"><a id="a02e618df61e77fbeb6cfac4d54290569"></a>
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>tick</b> ()</td></tr>
-<tr class="separator:a02e618df61e77fbeb6cfac4d54290569 inherit pub_methods_classaudio__tools_1_1_abstract_parameter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0120a81604dda4d36449fcf47ce5d9c inherit pub_methods_classaudio__tools_1_1_abstract_parameter"><td class="memItemLeft" align="right" valign="top"><a id="af0120a81604dda4d36449fcf47ce5d9c"></a>
+<tr class="separator:a02e618df61e77fbeb6cfac4d54290569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0120a81604dda4d36449fcf47ce5d9c"><td class="memItemLeft" align="right" valign="top"><a id="af0120a81604dda4d36449fcf47ce5d9c"></a>
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> ()</td></tr>
-<tr class="separator:af0120a81604dda4d36449fcf47ce5d9c inherit pub_methods_classaudio__tools_1_1_abstract_parameter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:af0120a81604dda4d36449fcf47ce5d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
@@ -160,6 +159,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a7e8fc2a2b54f556c0897cce2f1269f60"><td class="memItemLeft" align="right" valign="top"><a id="a7e8fc2a2b54f556c0897cce2f1269f60"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>act_value</b> = 0</td></tr>
+<tr class="separator:a7e8fc2a2b54f556c0897cce2f1269f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16f5266e87e6767443bf3874c4498b87"><td class="memItemLeft" align="right" valign="top"><a id="a16f5266e87e6767443bf3874c4498b87"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>adsrNames</b> [5] = {&quot;Idle&quot;, &quot;Attack&quot;, &quot;Decay&quot;, &quot;Sustain&quot;, &quot;Release&quot;}</td></tr>
 <tr class="separator:a16f5266e87e6767443bf3874c4498b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,10 +186,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>target</b> = 0</td><
 <tr class="memitem:a13cb33a0f9319ab34cd56185bfdc0589"><td class="memItemLeft" align="right" valign="top"><a id="a13cb33a0f9319ab34cd56185bfdc0589"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>zeroCount</b> = 0</td></tr>
 <tr class="separator:a13cb33a0f9319ab34cd56185bfdc0589"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classaudio__tools_1_1_abstract_parameter"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classaudio__tools_1_1_abstract_parameter')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classaudio__tools_1_1_abstract_parameter.html">AbstractParameter</a></td></tr>
-<tr class="memitem:a7e8fc2a2b54f556c0897cce2f1269f60 inherit pro_attribs_classaudio__tools_1_1_abstract_parameter"><td class="memItemLeft" align="right" valign="top"><a id="a7e8fc2a2b54f556c0897cce2f1269f60"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>act_value</b> = 0</td></tr>
-<tr class="separator:a7e8fc2a2b54f556c0897cce2f1269f60 inherit pro_attribs_classaudio__tools_1_1_abstract_parameter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generates <a class="el" href="classaudio__tools_1_1_a_d_s_r.html" title="Generates ADSR values between 0.0 and 1.0.">ADSR</a> values between 0.0 and 1.0. </p>

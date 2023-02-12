@@ -124,6 +124,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a17be49aa378f9d31c18d5bcd616d4997">isFilterMetaData</a> ()</td></tr>
 <tr class="memdesc:a17be49aa378f9d31c18d5bcd616d4997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the metadata filter is active. <br /></td></tr>
 <tr class="separator:a17be49aa378f9d31c18d5bcd616d4997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b485ba5b9d96f94384f4a3840f84314"><td class="memItemLeft" align="right" valign="top"><a id="a2b485ba5b9d96f94384f4a3840f84314"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isResultPCM</b> ()</td></tr>
+<tr class="separator:a2b485ba5b9d96f94384f4a3840f84314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ba1da222275563947259cd118ad0052"><td class="memItemLeft" align="right" valign="top"><a id="a6ba1da222275563947259cd118ad0052"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a6ba1da222275563947259cd118ad0052">maxFrameSize</a> ()</td></tr>
 <tr class="memdesc:a6ba1da222275563947259cd118ad0052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the maximum frame size - this is allocated on the heap and you can reduce the heap size my minimizing this value. <br /></td></tr>
@@ -136,6 +139,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a9b3baad8c612d81b96e46f84d7e97580">operator bool</a> ()</td></tr>
 <tr class="memdesc:a9b3baad8c612d81b96e46f84d7e97580"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if the class is active <br /></td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c9ea752da0924b395c3a49f1f9c460"><td class="memItemLeft" align="right" valign="top"><a id="a64c9ea752da0924b395c3a49f1f9c460"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> from) override</td></tr>
+<tr class="separator:a64c9ea752da0924b395c3a49f1f9c460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8532db8250b1047a70318a6d80b91ec"><td class="memItemLeft" align="right" valign="top"><a id="ac8532db8250b1047a70318a6d80b91ec"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#ac8532db8250b1047a70318a6d80b91ec">setFilterMetaData</a> (bool filter)</td></tr>
 <tr class="memdesc:ac8532db8250b1047a70318a6d80b91ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates a filter that makes sure that helix does not get any metadata segments. <br /></td></tr>
@@ -152,6 +158,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#ad0e17a58e9f221999b796c48c6dcc907">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi)</td></tr>
 <tr class="memdesc:ad0e17a58e9f221999b796c48c6dcc907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the callback object to which the Audio information change is provided. <br /></td></tr>
 <tr class="separator:ad0e17a58e9f221999b796c48c6dcc907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c50884a025e7c2049b71fe0b8d0045"><td class="memItemLeft" align="right" valign="top"><a id="a33c50884a025e7c2049b71fe0b8d0045"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;out_stream)</td></tr>
+<tr class="separator:a33c50884a025e7c2049b71fe0b8d0045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac994dd0f0452da1aadec3ad99bcad7"><td class="memItemLeft" align="right" valign="top"><a id="acac994dd0f0452da1aadec3ad99bcad7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;out_stream)</td></tr>
+<tr class="separator:acac994dd0f0452da1aadec3ad99bcad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c4cd3a298c3a028528af24afaccd1e3"><td class="memItemLeft" align="right" valign="top"><a id="a7c4cd3a298c3a028528af24afaccd1e3"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a7c4cd3a298c3a028528af24afaccd1e3">setOutputStream</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;outStream)</td></tr>
 <tr class="memdesc:a7c4cd3a298c3a028528af24afaccd1e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the output <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a>. <br /></td></tr>
@@ -160,25 +172,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#ac4a3ffc04adff8a2d008116bbd5150a4">write</a> (const void *mp3Data, size_t len)</td></tr>
 <tr class="memdesc:ac4a3ffc04adff8a2d008116bbd5150a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write mp3 data to decoder. <br /></td></tr>
 <tr class="separator:ac4a3ffc04adff8a2d008116bbd5150a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classaudio__tools_1_1_audio_decoder"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classaudio__tools_1_1_audio_decoder')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a></td></tr>
-<tr class="memitem:a7f65770392748aa8243566406ed6d13f inherit pub_methods_classaudio__tools_1_1_audio_decoder"><td class="memItemLeft" align="right" valign="top"><a id="a7f65770392748aa8243566406ed6d13f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AudioDecoder</b> (<a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> const &amp;)=delete</td></tr>
-<tr class="separator:a7f65770392748aa8243566406ed6d13f inherit pub_methods_classaudio__tools_1_1_audio_decoder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b485ba5b9d96f94384f4a3840f84314 inherit pub_methods_classaudio__tools_1_1_audio_decoder"><td class="memItemLeft" align="right" valign="top"><a id="a2b485ba5b9d96f94384f4a3840f84314"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isResultPCM</b> ()</td></tr>
-<tr class="separator:a2b485ba5b9d96f94384f4a3840f84314 inherit pub_methods_classaudio__tools_1_1_audio_decoder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee18c0df859c286965f10777eb14ad97 inherit pub_methods_classaudio__tools_1_1_audio_decoder"><td class="memItemLeft" align="right" valign="top"><a id="aee18c0df859c286965f10777eb14ad97"></a>
-<a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> const &amp;)=delete</td></tr>
-<tr class="separator:aee18c0df859c286965f10777eb14ad97 inherit pub_methods_classaudio__tools_1_1_audio_decoder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c9ea752da0924b395c3a49f1f9c460 inherit pub_methods_classaudio__tools_1_1_audio_decoder"><td class="memItemLeft" align="right" valign="top"><a id="a64c9ea752da0924b395c3a49f1f9c460"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> from) override</td></tr>
-<tr class="separator:a64c9ea752da0924b395c3a49f1f9c460 inherit pub_methods_classaudio__tools_1_1_audio_decoder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33c50884a025e7c2049b71fe0b8d0045 inherit pub_methods_classaudio__tools_1_1_audio_decoder"><td class="memItemLeft" align="right" valign="top"><a id="a33c50884a025e7c2049b71fe0b8d0045"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;out_stream)</td></tr>
-<tr class="separator:a33c50884a025e7c2049b71fe0b8d0045 inherit pub_methods_classaudio__tools_1_1_audio_decoder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acac994dd0f0452da1aadec3ad99bcad7 inherit pub_methods_classaudio__tools_1_1_audio_decoder"><td class="memItemLeft" align="right" valign="top"><a id="acac994dd0f0452da1aadec3ad99bcad7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;out_stream)</td></tr>
-<tr class="separator:acac994dd0f0452da1aadec3ad99bcad7 inherit pub_methods_classaudio__tools_1_1_audio_decoder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
