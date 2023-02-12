@@ -84,8 +84,8 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceaudio__tools.html">audio_tools</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// forwrd declaratioin of callback</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span>PWMDriverRP2040;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> PWMDriver = PWMDriverRP2040;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_p_w_m_driver_r_p2040.html">PWMDriverRP2040</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> <a class="code" href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html">PWMDriver</a> = <a class="code" href="classaudio__tools_1_1_p_w_m_driver_r_p2040.html">PWMDriverRP2040</a>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_pico_channel_out.html">   28</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structaudio__tools_1_1_pico_channel_out.html">PicoChannelOut</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> gpio = -1;</div>
@@ -95,7 +95,7 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_p_w_m_driver_r_p2040.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_p_w_m_driver_r_p2040.html">PWMDriverRP2040</a> : <span class="keyword">public</span> DriverPWMBase {</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_p_w_m_driver_r_p2040.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_p_w_m_driver_r_p2040.html">PWMDriverRP2040</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_driver_p_w_m_base.html">DriverPWMBase</a> {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//friend bool defaultPWMAudioOutputCallbackPico(repeating_timer* ptr);</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">public</span>:</div>
@@ -136,7 +136,7 @@ $(function() {
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            pwm_config cfg = setupPWMConfig();</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            </div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="comment">// initialize empty pins</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            PicoChannelOut empty;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="structaudio__tools_1_1_pico_channel_out.html">PicoChannelOut</a> empty;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            pins.resize(audio_config.channels, empty);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="comment">// setup pin values</span></div>
@@ -173,7 +173,7 @@ $(function() {
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        } </div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="comment">// set up pwm </span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> setupPWMPin(pwm_config &amp;cfg, PicoChannelOut &amp;pinInfo)  {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> setupPWMPin(pwm_config &amp;cfg, <a class="code" href="structaudio__tools_1_1_pico_channel_out.html">PicoChannelOut</a> &amp;pinInfo)  {</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;             LOGD(<span class="stringliteral">&quot;%s for gpio %d&quot;</span>,LOG_METHOD, pinInfo.gpio);</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="comment">// setup pwm pin  </span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keywordtype">int</span> gpio = pinInfo.gpio;</div>
@@ -216,6 +216,8 @@ $(function() {
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="ttc" id="aclassaudio__tools_1_1_driver_p_w_m_base_html"><div class="ttname"><a href="classaudio__tools_1_1_driver_p_w_m_base.html">audio_tools::DriverPWMBase</a></div><div class="ttdoc">Base Class for all PWM drivers.</div><div class="ttdef"><b>Definition:</b> PWMAudioBase.h:91</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_p_w_m_driver_a_v_r_html"><div class="ttname"><a href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html">audio_tools::PWMDriverAVR</a></div><div class="ttdoc">Experimental: Audio output to PWM pins for the AVR. The AVR supports only up to 2 channels.</div><div class="ttdef"><b>Definition:</b> PWMAudioAVR.h:22</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_p_w_m_driver_r_p2040_html"><div class="ttname"><a href="classaudio__tools_1_1_p_w_m_driver_r_p2040.html">audio_tools::PWMDriverRP2040</a></div><div class="ttdoc">Audio output for the Rasperry Pico to PWM pins. The Raspberry Pi Pico has 8 PWM blocks/slices(1-8) an...</div><div class="ttdef"><b>Definition:</b> PWMAudioRP2040.h:45</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_p_w_m_driver_r_p2040_html_a413fe5a444b7977fc130f7c7f19a208d"><div class="ttname"><a href="classaudio__tools_1_1_p_w_m_driver_r_p2040.html#a413fe5a444b7977fc130f7c7f19a208d">audio_tools::PWMDriverRP2040::maxOutputValue</a></div><div class="ttdeci">virtual int maxOutputValue() override</div><div class="ttdoc">Max pwm output value.</div><div class="ttdef"><b>Definition:</b> PWMAudioRP2040.h:146</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_p_w_m_driver_r_p2040_html_a64e9fa75beda50a9e8400ee0d4e61984"><div class="ttname"><a href="classaudio__tools_1_1_p_w_m_driver_r_p2040.html#a64e9fa75beda50a9e8400ee0d4e61984">audio_tools::PWMDriverRP2040::end</a></div><div class="ttdeci">void end() override</div><div class="ttdoc">Ends the output -&gt; resets the timer and the pins.</div><div class="ttdef"><b>Definition:</b> PWMAudioRP2040.h:55</div></div>

@@ -122,6 +122,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html">AnalogAudioStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support reading of audio only using analog input with a timer.  <a href="classaudio__tools_1_1_analog_audio_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32 specific configuration for i2s input via adc. The default input pin is GPIO34. We always use int16_t values. The default output pins are GPIO25 and GPIO26!  <a href="classaudio__tools_1_1_analog_config.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_base.html">AnalogDriverBase</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_e_s_p32.html">AnalogDriverESP32</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Please use <a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>: A very fast ADC and DAC using the ESP32 I2S interface.  <a href="classaudio__tools_1_1_analog_driver_e_s_p32.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_p_t_x_decoder.html">APTXDecoder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decoder for OpenAptx. Depends on <a href="https://github.com/pschatzmann/libopenaptx">https://github.com/pschatzmann/libopenaptx</a>.  <a href="classaudio__tools_1_1_a_p_t_x_decoder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,7 +208,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a AudioKit into a <a class="el" href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...">AudioStream</a>, so that we can pass it to the converter.  <a href="classaudio__tools_1_1_audio_kit_stream_adapter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_kit_stream_config.html">AudioKitStreamConfig</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for <a class="el" href="classaudio__tools_1_1_audio_kit_stream.html" title="AudioKit Stream which uses the https://github.com/pschatzmann/arduino-audiokit library.">AudioKitStream</a>: we use as subclass of I2SConfig.  <a href="classaudio__tools_1_1_audio_kit_stream_config.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for <a class="el" href="classaudio__tools_1_1_audio_kit_stream.html" title="AudioKit Stream which uses the https://github.com/pschatzmann/arduino-audiokit library.">AudioKitStream</a>: we use as subclass of <a class="el" href="classaudio__tools_1_1_i2_s_config.html" title="configuration for all common i2s settings">I2SConfig</a>.  <a href="classaudio__tools_1_1_audio_kit_stream_config.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_m_p34_d_t05.html">AudioMP34DT05</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MP34DT05 Microphone of Nano BLE Sense. We provide a proper <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> implementation. See <a href="https://github.com/arduino/ArduinoCore-nRF528x-mbedos">https://github.com/arduino/ArduinoCore-nRF528x-mbedos</a>.  <a href="classaudio__tools_1_1_audio_m_p34_d_t05.html#details">More...</a><br /></td></tr>
@@ -417,6 +425,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_distortion.html">Distortion</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_distortion.html" title="Distortion AudioEffect.">Distortion</a> <a class="el" href="classaudio__tools_1_1_audio_effect.html" title="Abstract Base class for Sound Effects.">AudioEffect</a>.  <a href="classaudio__tools_1_1_distortion.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html">DriverPWMBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base Class for all PWM drivers.  <a href="classaudio__tools_1_1_driver_p_w_m_base.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_dynamic_memory_stream.html">DynamicMemoryStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_memory_stream.html" title="A simple Stream implementation which is backed by allocated memory.">MemoryStream</a> which is written and read using the internal RAM. For each write the data is allocated on the heap.  <a href="classaudio__tools_1_1_dynamic_memory_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -632,6 +643,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_request_header.html">HttpRequestHeader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reading and writing of Http Requests.  <a href="classaudio__tools_1_1_http_request_header.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_config.html">I2SConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration for all common i2s settings  <a href="classaudio__tools_1_1_i2_s_config.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html">I2SDriverESP32</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic I2S API - for the ESP32. If we receive 1 channel, we expand the result to 2 channels.  <a href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html#details">More...</a><br /></td></tr>
@@ -886,6 +900,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_audio_stream.html">PWMAudioStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common functionality for PWM output. Please use the <a class="el" href="classaudio__tools_1_1_p_w_m_audio_stream.html" title="Common functionality for PWM output. Please use the PWMAudioStream typedef instead which references t...">PWMAudioStream</a> typedef instead which references the implementation.  <a href="classaudio__tools_1_1_p_w_m_audio_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_p_w_m_config.html">PWMConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration data for PWM audio output.  <a href="structaudio__tools_1_1_p_w_m_config.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html">PWMDriverAVR</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experimental: Audio output to PWM pins for the AVR. The AVR supports only up to 2 channels.  <a href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html">PWMDriverESP32</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio output to PWM pins for the ESP32. The ESP32 supports up to 16 channels.  <a href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1129,6 +1149,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.html">TimerAlarmRepeatingDriverAVR</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeating Timer functions for repeated execution: Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>.  <a href="classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_base.html">TimerAlarmRepeatingDriverBase</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_e_s_p32.html">TimerAlarmRepeatingDriverESP32</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeating Timer functions for simple scheduling of repeated execution. The basic logic is taken from <a href="https://www.toptal.com/embedded/esp32-audio-sampling">https://www.toptal.com/embedded/esp32-audio-sampling</a>. Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>.  <a href="classaudio__tools_1_1_timer_alarm_repeating_driver_e_s_p32.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1143,6 +1165,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_callback.html">TimerCallback</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal class to manage the different timer callbacks for the 4 hardware timers.  <a href="classaudio__tools_1_1_timer_callback.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_callback_audio_stream.html">TimerCallbackAudioStream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback driven Audio Source (rx_tx_mode==RX_MODE) or Audio Sink (rx_tx_mode==TX_MODE). This class allows to to integrate external libraries in order to consume or generate a data stream which is based on a timer.  <a href="classaudio__tools_1_1_timer_callback_audio_stream.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_timer_callback_audio_stream_info.html">TimerCallbackAudioStreamInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_timer_callback_audio_stream.html" title="Callback driven Audio Source (rx_tx_mode==RX_MODE) or Audio Sink (rx_tx_mode==TX_MODE)....">TimerCallbackAudioStream</a> Configuration.  <a href="structaudio__tools_1_1_timer_callback_audio_stream_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_tremolo.html">Tremolo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_tremolo.html" title="Tremolo AudioEffect.">Tremolo</a> <a class="el" href="classaudio__tools_1_1_audio_effect.html" title="Abstract Base class for Sound Effects.">AudioEffect</a>.  <a href="classaudio__tools_1_1_tremolo.html#details">More...</a><br /></td></tr>
@@ -1224,6 +1252,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:aaa1343d8b748b17590142ca348d217db"><td class="memItemLeft" align="right" valign="top"><a id="aaa1343d8b748b17590142ca348d217db"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#aaa1343d8b748b17590142ca348d217db">AnalogDriver</a> = <a class="el" href="classaudio__tools_1_1_analog_driver_e_s_p32.html">AnalogDriverESP32</a></td></tr>
+<tr class="memdesc:aaa1343d8b748b17590142ca348d217db"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>. <br /></td></tr>
+<tr class="separator:aaa1343d8b748b17590142ca348d217db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3ffc5f15f9cfc3334ffc778984b04bf"><td class="memItemLeft" align="right" valign="top"><a id="ae3ffc5f15f9cfc3334ffc778984b04bf"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>AudioEffectStream</b> = <a class="el" href="classaudio__tools_1_1_audio_effect_stream_t.html">AudioEffectStreamT</a>&lt; effect_t &gt;</td></tr>
 <tr class="separator:ae3ffc5f15f9cfc3334ffc778984b04bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1259,8 +1291,11 @@ typedef <a class="el" href="structaudio__tools_1_1_pin_info_e_s_p32.html">PinInf
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__basic.html#ga869d6ee1c77c17df29cad21068f647cc">Pins</a> = <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; int &gt;</td></tr>
 <tr class="memdesc:ga869d6ee1c77c17df29cad21068f647cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pins. <br /></td></tr>
 <tr class="separator:ga869d6ee1c77c17df29cad21068f647cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36414d33418cab2d47c0c3e3ab507aeb"><td class="memItemLeft" align="right" valign="top"><a id="a36414d33418cab2d47c0c3e3ab507aeb"></a>
+typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>PWMCallbackType</b>) (uint8_t channels, int16_t *data)</td></tr>
+<tr class="separator:a36414d33418cab2d47c0c3e3ab507aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4261bcf80f6acc2509061a139a2b170"><td class="memItemLeft" align="right" valign="top"><a id="ad4261bcf80f6acc2509061a139a2b170"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>PWMDriver</b> = <a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html">PWMDriverESP32</a></td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>PWMDriver</b> = <a class="el" href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html">PWMDriverAVR</a></td></tr>
 <tr class="separator:ad4261bcf80f6acc2509061a139a2b170"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4352eeeaccea355821b98a27f37e129f"><td class="memItemLeft" align="right" valign="top"><a id="a4352eeeaccea355821b98a27f37e129f"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>repeating_timer_callback_t</b>) (void *obj)</td></tr>
@@ -1309,6 +1344,26 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a44f4d7d26b9f81198ebefe8c302ee30c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supported codecs by G7xxDecoder and G7xxEncoder.  <a href="namespaceaudio__tools.html#a44f4d7d26b9f81198ebefe8c302ee30c">More...</a><br /></td></tr>
 <tr class="separator:a44f4d7d26b9f81198ebefe8c302ee30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a720616ce211566d808f3e441f9b18cda"><td class="memItemLeft" align="right" valign="top"><a id="a720616ce211566d808f3e441f9b18cda"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a720616ce211566d808f3e441f9b18cda">I2SFormat</a> { <br />
+&#160;&#160;<b>I2S_STD_FORMAT</b>
+, <b>I2S_LSB_FORMAT</b>
+, <b>I2S_MSB_FORMAT</b>
+, <b>I2S_PHILIPS_FORMAT</b>
+, <br />
+&#160;&#160;<b>I2S_RIGHT_JUSTIFIED_FORMAT</b>
+, <b>I2S_LEFT_JUSTIFIED_FORMAT</b>
+, <b>I2S_PCM_LONG</b>
+, <b>I2S_PCM_SHORT</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:a720616ce211566d808f3e441f9b18cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2S Formats. <br /></td></tr>
+<tr class="separator:a720616ce211566d808f3e441f9b18cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d3846b210a1698eaf7cdb7258fcc3e1"><td class="memItemLeft" align="right" valign="top"><a id="a1d3846b210a1698eaf7cdb7258fcc3e1"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a1d3846b210a1698eaf7cdb7258fcc3e1">I2SSignalType</a> { <b>Digital</b>
+, <b>Analog</b>
+, <b>PDM</b>
+ }</td></tr>
+<tr class="memdesc:a1d3846b210a1698eaf7cdb7258fcc3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2S Signal Types: Digital, Analog, PDM. <br /></td></tr>
+<tr class="separator:a1d3846b210a1698eaf7cdb7258fcc3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga27477aa4d162c65da12c7ffd964f5779"><td class="memItemLeft" align="right" valign="top"><a id="ga27477aa4d162c65da12c7ffd964f5779"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__metadata.html#ga27477aa4d162c65da12c7ffd964f5779">ID3TypeSelection</a> { <br />
 &#160;&#160;<b>SELECT_ID3V1</b> =0b001
 , <b>SELECT_ID3V2</b> =0b010
@@ -1370,6 +1425,11 @@ Enumerations</h2></td></tr>
 , <b>SeekEnd</b> = 2
  }</td></tr>
 <tr class="separator:a84d76d32dd4ef90e5a90cf759b7e563f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a80d46b1fcf323c58eb596c016434f2"><td class="memItemLeft" align="right" valign="top"><a id="a1a80d46b1fcf323c58eb596c016434f2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TimerFunction</b> { <b>DirectTimerCallback</b>
+, <b>TimerCallbackInThread</b>
+, <b>SimpleThreadLoop</b>
+ }</td></tr>
+<tr class="separator:a1a80d46b1fcf323c58eb596c016434f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadd9fe45e09605eee3e4a39c8a5c4476d"><td class="memItemLeft" align="right" valign="top"><a id="gadd9fe45e09605eee3e4a39c8a5c4476d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__basic.html#gadd9fe45e09605eee3e4a39c8a5c4476d">TimeUnit</a> { <b>MS</b>
 , <b>US</b>
  }</td></tr>
@@ -1396,9 +1456,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_stream_sink_soun
 <tr class="memitem:aa1ece901456a47e0104f93a9daba8c9f"><td class="memItemLeft" align="right" valign="top"><a id="aa1ece901456a47e0104f93a9daba8c9f"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_stream_source_sound_data</b> (Frame *data, int32_t len)</td></tr>
 <tr class="separator:aa1ece901456a47e0104f93a9daba8c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af49370a6bf784826df0683c0d5a1bf15"><td class="memItemLeft" align="right" valign="top"><a id="af49370a6bf784826df0683c0d5a1bf15"></a>
-void IRAM_ATTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">defaultPWMAudioOutputCallback</a> ()</td></tr>
-<tr class="memdesc:af49370a6bf784826df0683c0d5a1bf15"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer callback: write the next frame to the pins <br /></td></tr>
+<tr class="memitem:a79ff6c2e174837e1331dbd20573e4667"><td class="memItemLeft" align="right" valign="top"><a id="a79ff6c2e174837e1331dbd20573e4667"></a>
+static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert8DAC</b> (int64_t value, int value_bits_per_sample)</td></tr>
+<tr class="separator:a79ff6c2e174837e1331dbd20573e4667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49370a6bf784826df0683c0d5a1bf15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">defaultPWMAudioOutputCallback</a> ()</td></tr>
+<tr class="memdesc:af49370a6bf784826df0683c0d5a1bf15"><td class="mdescLeft">&#160;</td><td class="mdescRight">separate method that can be defined as friend so that we can access protected information  <a href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">More...</a><br /></td></tr>
 <tr class="separator:af49370a6bf784826df0683c0d5a1bf15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a504241b61d3595ad9356f8fccef71c20"><td class="memItemLeft" align="right" valign="top"><a id="a504241b61d3595ad9356f8fccef71c20"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a> (uint64_t ms)</td></tr>
@@ -1411,6 +1473,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="names
 <tr class="memitem:a62993f315faa8cc871210e6d4be10e6e"><td class="memItemLeft" align="right" valign="top"><a id="a62993f315faa8cc871210e6d4be10e6e"></a>
 CHSV&#160;</td><td class="memItemRight" valign="bottom"><b>getColor</b> (int x, int y, int magnitude)</td></tr>
 <tr class="separator:a62993f315faa8cc871210e6d4be10e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e2ed9bbfc3a6778916dff5c270980c"><td class="memItemLeft" align="right" valign="top"><a id="aa2e2ed9bbfc3a6778916dff5c270980c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#aa2e2ed9bbfc3a6778916dff5c270980c">ISR</a> (TIMER1_COMPA_vect)</td></tr>
+<tr class="memdesc:aa2e2ed9bbfc3a6778916dff5c270980c"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer callback: write the next frame to the pins <br /></td></tr>
+<tr class="separator:aa2e2ed9bbfc3a6778916dff5c270980c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07f83b0475b1f3c98eccd9b1642dd1cb"><td class="memItemLeft" align="right" valign="top"><a id="a07f83b0475b1f3c98eccd9b1642dd1cb"></a>
 long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a07f83b0475b1f3c98eccd9b1642dd1cb">map</a> (long x, long in_min, long in_max, long out_min, long out_max)</td></tr>
 <tr class="memdesc:a07f83b0475b1f3c98eccd9b1642dd1cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps input to output values. <br /></td></tr>
@@ -1517,6 +1583,9 @@ INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>AC
 <tr class="memitem:a40a59127bf3a9aae97add35f23491c19"><td class="memItemLeft" align="right" valign="top"><a id="a40a59127bf3a9aae97add35f23491c19"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ACCEPT_ENCODING</b> = &quot;Accept-Encoding&quot;</td></tr>
 <tr class="separator:a40a59127bf3a9aae97add35f23491c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed270b8020b06bb0634ff6e321cafcd"><td class="memItemLeft" align="right" valign="top"><a id="a5ed270b8020b06bb0634ff6e321cafcd"></a>
+static <a class="el" href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html">PWMDriverAVR</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>accessAudioPWM</b> = nullptr</td></tr>
+<tr class="separator:a5ed270b8020b06bb0634ff6e321cafcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72a4c21953cee3604eb373c23f4d8c90"><td class="memItemLeft" align="right" valign="top"><a id="a72a4c21953cee3604eb373c23f4d8c90"></a>
 static <a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html">PWMDriverESP32</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>accessAudioPWM</b> = nullptr</td></tr>
 <tr class="separator:a72a4c21953cee3604eb373c23f4d8c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1562,6 +1631,9 @@ INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>CO
 <tr class="memitem:adb4e1a9fb882f53625e527b900e036f9"><td class="memItemLeft" align="right" valign="top"><a id="adb4e1a9fb882f53625e527b900e036f9"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_AGENT</b> = &quot;Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)&quot;</td></tr>
 <tr class="separator:adb4e1a9fb882f53625e527b900e036f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a4b94cdd9c6326435d73baf10b714ad"><td class="memItemLeft" align="right" valign="top"><a id="a5a4b94cdd9c6326435d73baf10b714ad"></a>
+<a class="el" href="structaudio__tools_1_1_p_w_m_config.html">audio_tools::PWMConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>default_config</b></td></tr>
+<tr class="separator:a5a4b94cdd9c6326435d73baf10b714ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e80ac23b0cfbd2179f446211da0dc6a"><td class="memItemLeft" align="right" valign="top"><a id="a9e80ac23b0cfbd2179f446211da0dc6a"></a>
 tflite::ErrorReporter *&#160;</td><td class="memItemRight" valign="bottom"><b>error_reporter</b> = &amp;my_error_reporter</td></tr>
 <tr class="separator:a9e80ac23b0cfbd2179f446211da0dc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1574,6 +1646,9 @@ INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ge
 <tr class="memitem:a057cab1bfbc8bf970d27c9844d5b68bf"><td class="memItemLeft" align="right" valign="top"><a id="a057cab1bfbc8bf970d27c9844d5b68bf"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>HOST_C</b> = &quot;Host&quot;</td></tr>
 <tr class="separator:a057cab1bfbc8bf970d27c9844d5b68bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba6ba92067daa4deab6667b0ba41d8e4"><td class="memItemLeft" align="right" valign="top"><a id="aba6ba92067daa4deab6667b0ba41d8e4"></a>
+INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_formats</b> [] = {&quot;I2S_STD_FORMAT&quot;,&quot;I2S_LSB_FORMAT&quot;,&quot;I2S_MSB_FORMAT&quot;,&quot;I2S_PHILIPS_FORMAT&quot;,&quot;I2S_RIGHT_JUSTIFIED_FORMAT&quot;,&quot;I2S_LEFT_JUSTIFIED_FORMAT&quot;,&quot;I2S_PCM_LONG&quot;,&quot;I2S_PCM_SHORT&quot;}</td></tr>
+<tr class="separator:aba6ba92067daa4deab6667b0ba41d8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5bd66f7ba08dad7aa9bb00de8967a04"><td class="memItemLeft" align="right" valign="top"><a id="ac5bd66f7ba08dad7aa9bb00de8967a04"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>id3_v2_tags</b> [] = {&quot;TALB&quot;, &quot;TOPE&quot;, &quot;TPE1&quot;, &quot;TIT2&quot;, &quot;TCON&quot;}</td></tr>
 <tr class="separator:ac5bd66f7ba08dad7aa9bb00de8967a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1714,6 +1789,26 @@ Phil Schatzmann</dd></dl>
 
 <p>Opus header. </p>
 <p>Simplified header w/o comments. </p>
+
+</div>
+</div>
+<a id="af49370a6bf784826df0683c0d5a1bf15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af49370a6bf784826df0683c0d5a1bf15">&#9670;&nbsp;</a></span>defaultPWMAudioOutputCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IRAM_ATTR defaultPWMAudioOutputCallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>separate method that can be defined as friend so that we can access protected information </p>
+<p>timer callback: write the next frame to the pins </p>
 
 </div>
 </div>
