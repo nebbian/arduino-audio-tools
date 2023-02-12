@@ -263,7 +263,7 @@ $(function() {
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;};</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_fade_stream.html">  234</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_fade_stream.html">FadeStream</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_stream_x.html">AudioStreamX</a> {</div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_fade_stream.html">  234</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_fade_stream.html">FadeStream</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> {</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <a class="code" href="classaudio__tools_1_1_fade_stream.html">FadeStream</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <a class="code" href="classaudio__tools_1_1_fade_stream.html">FadeStream</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out) { setTarget(out); }</div>
@@ -277,7 +277,7 @@ $(function() {
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordtype">void</span> setTarget(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out) { p_out = &amp;out; }</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    AudioStreamX::setAudioInfo(info);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    AudioStream::setAudioInfo(info);</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    fade_last.setAudioInfo(info);</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    active = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  }</div>
@@ -360,7 +360,7 @@ $(function() {
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;};</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_stream_x_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream_x.html">audio_tools::AudioStreamX</a></div><div class="ttdoc">Same as AudioStream - but we do not have any abstract methods.</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:119</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream.html">audio_tools::AudioStream</a></div><div class="ttdoc">Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:34</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_converter_html"><div class="ttname"><a href="classaudio__tools_1_1_base_converter.html">audio_tools::BaseConverter</a></div><div class="ttdoc">Abstract Base class for Converters A converter is processing the data in the indicated array.</div><div class="ttdef"><b>Definition:</b> Converter.h:26</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_fade_converter_html"><div class="ttname"><a href="classaudio__tools_1_1_fade_converter.html">audio_tools::FadeConverter</a></div><div class="ttdoc">converter which does a fade out or fade in.</div><div class="ttdef"><b>Definition:</b> Fade.h:308</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_fade_html"><div class="ttname"><a href="classaudio__tools_1_1_fade.html">audio_tools::Fade</a></div><div class="ttdoc">Fade In and Fade out in order to prevent popping sound when the audio is started or stopped....</div><div class="ttdef"><b>Definition:</b> Fade.h:16</div></div>

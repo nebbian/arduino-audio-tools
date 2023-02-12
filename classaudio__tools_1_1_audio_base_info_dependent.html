@@ -83,32 +83,67 @@ Inheritance diagram for AudioBaseInfoDependent:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_audio_base_info_dependent.png" usemap="#AudioBaseInfoDependent_map" alt=""/>
   <map id="AudioBaseInfoDependent_map" name="AudioBaseInfoDependent_map">
-<area href="classaudio__tools_1_1_audio_player.html" title="Implements a simple audio player which supports the following commands:" alt="AudioPlayer" shape="rect" coords="0,56,202,80"/>
-<area href="classaudio__tools_1_1_audio_print.html" title="Abstract Audio Ouptut class." alt="AudioPrint" shape="rect" coords="212,56,414,80"/>
-<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="636,56,838,80"/>
-<area href="classaudio__tools_1_1_adapter_audio_stream_to_audio_print.html" title="Wrapper which converts a AudioStream to a AudioPrint." alt="AdapterAudioStreamToAudioPrint" shape="rect" coords="424,112,626,136"/>
-<area href="classaudio__tools_1_1_adapter_print_to_audio_print.html" title="Wrapper which converts a Print to a AudioPrint." alt="AdapterPrintToAudioPrint" shape="rect" coords="424,168,626,192"/>
-<area href="classaudio__tools_1_1_audio_f_f_t_base.html" title="Executes FFT using audio data. The Driver which is passed in the constructor selects a specifc FFT im..." alt="AudioFFTBase" shape="rect" coords="424,224,626,248"/>
-<area href="classaudio__tools_1_1_audio_server_ex.html" title="A powerfull Web server which is based on https://github.com/pschatzmann/TinyHttp. It supports multipl..." alt="AudioServerEx" shape="rect" coords="424,280,626,304"/>
-<area href="classaudio__tools_1_1_audio_sync_writer.html" title="Audio Writer which is synchronizing the amount of data that can be processed with the AudioReceiver." alt="AudioSyncWriter" shape="rect" coords="424,336,626,360"/>
-<area href="classaudio__tools_1_1_csv_stream.html" title="Stream Wrapper which can be used to print the values as readable ASCII to the screen to be analyzed i..." alt="CsvStream&lt; T &gt;" shape="rect" coords="424,392,626,416"/>
-<area href="classaudio__tools_1_1_hex_dump_stream.html" title="Creates a Hex Dump." alt="HexDumpStream" shape="rect" coords="424,448,626,472"/>
-<area href="classaudio__tools_1_1_memory_print.html" title="Prints to a preallocated memory." alt="MemoryPrint" shape="rect" coords="424,504,626,528"/>
-<area href="classaudio__tools_1_1_meta_data_print.html" title="ID3 and Icecast/Shoutcast metadata output support. Just write the audio data to an object of this cla..." alt="MetaDataPrint" shape="rect" coords="424,560,626,584"/>
-<area href="classaudio__tools_1_1_multi_output.html" title="Replicates the output to multiple destinations." alt="MultiOutput" shape="rect" coords="424,616,626,640"/>
-<area href="classaudio__tools_1_1_p_w_m_audio_stream.html" title="Common functionality for PWM output. Please use the PWMAudioStream typedef instead which references t..." alt="PWMAudioStream" shape="rect" coords="424,672,626,696"/>
-<area href="classaudio__tools_1_1_pitch_shift_stream.html" title="Pitch Shift: Shifts the frequency up or down w/o impacting the length! We reduce the channels to 1 to..." alt="PitchShiftStream&lt; T, BufferT &gt;" shape="rect" coords="424,728,626,752"/>
-<area href="classaudio__tools_1_1_volume_print.html" title="A simple class to determine the volume." alt="VolumePrint" shape="rect" coords="424,784,626,808"/>
-<area href="classaudio__tools_1_1_a2_d_p_stream.html" title="Stream support for A2DP: begin(TX_MODE) uses a2dp_source - begin(RX_MODE) a a2dp_sink The data is in ..." alt="A2DPStream" shape="rect" coords="848,112,1050,136"/>
-<area href="classaudio__tools_1_1_abstract_u_r_l_stream.html" title="Abstract Base class for all URLStream implementations." alt="AbstractURLStream" shape="rect" coords="848,168,1050,192"/>
-<area href="classaudio__tools_1_1_audio_stream_wrapper.html" title="To be used to support implementations where the readBytes is not virtual." alt="AudioStreamWrapper" shape="rect" coords="848,224,1050,248"/>
-<area href="classaudio__tools_1_1_audio_stream_x.html" title="Same as AudioStream - but we do not have any abstract methods." alt="AudioStreamX" shape="rect" coords="848,280,1050,304"/>
-<area href="classaudio__tools_1_1_buffered_stream.html" title="The Arduino Stream supports operations on single characters. This is usually not the best way to push..." alt="BufferedStream" shape="rect" coords="848,336,1050,360"/>
-<area href="classaudio__tools_1_1_buffered_task_stream.html" title="A FreeRTOS task is filling the buffer from the indicated stream. Only to be used on the ESP32." alt="BufferedTaskStream" shape="rect" coords="848,392,1050,416"/>
-<area href="classaudio__tools_1_1_i2_s_stream.html" title="We support the Stream interface for the I2S access. In addition we allow a separate mute pin which mi..." alt="I2SStream" shape="rect" coords="848,448,1050,472"/>
-<area href="classaudio__tools_1_1_memory_stream.html" title="A simple Stream implementation which is backed by allocated memory." alt="MemoryStream" shape="rect" coords="848,504,1050,528"/>
-<area href="classaudio__tools_1_1_mozzi_stream.html" title="We use the output functionality of Mozzi to output audio data. We expect the data as array of int16_t..." alt="MozziStream" shape="rect" coords="848,560,1050,584"/>
-<area href="classaudio__tools_1_1_ring_buffer_stream.html" title="A Stream backed by a Ringbuffer. We can write to the end and read from the beginning of the stream." alt="RingBufferStream" shape="rect" coords="848,616,1050,640"/>
+<area href="classaudio__tools_1_1_audio_player.html" title="Implements a simple audio player which supports the following commands:" alt="AudioPlayer" shape="rect" coords="0,56,288,80"/>
+<area href="classaudio__tools_1_1_audio_print.html" title="Abstract Audio Ouptut class." alt="AudioPrint" shape="rect" coords="298,56,586,80"/>
+<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="894,56,1182,80"/>
+<area href="classaudio__tools_1_1_adapter_audio_stream_to_audio_print.html" title="Wrapper which converts a AudioStream to a AudioPrint." alt="AdapterAudioStreamToAudioPrint" shape="rect" coords="596,112,884,136"/>
+<area href="classaudio__tools_1_1_adapter_print_to_audio_print.html" title="Wrapper which converts a Print to a AudioPrint." alt="AdapterPrintToAudioPrint" shape="rect" coords="596,168,884,192"/>
+<area href="classaudio__tools_1_1_audio_f_f_t_base.html" title="Executes FFT using audio data. The Driver which is passed in the constructor selects a specifc FFT im..." alt="AudioFFTBase" shape="rect" coords="596,224,884,248"/>
+<area href="classaudio__tools_1_1_audio_server_ex.html" title="A powerfull Web server which is based on https://github.com/pschatzmann/TinyHttp. It supports multipl..." alt="AudioServerEx" shape="rect" coords="596,280,884,304"/>
+<area href="classaudio__tools_1_1_audio_sync_writer.html" title="Audio Writer which is synchronizing the amount of data that can be processed with the AudioReceiver." alt="AudioSyncWriter" shape="rect" coords="596,336,884,360"/>
+<area href="classaudio__tools_1_1_csv_stream.html" title="Stream Wrapper which can be used to print the values as readable ASCII to the screen to be analyzed i..." alt="CsvStream&lt; T &gt;" shape="rect" coords="596,392,884,416"/>
+<area href="classaudio__tools_1_1_hex_dump_stream.html" title="Creates a Hex Dump." alt="HexDumpStream" shape="rect" coords="596,448,884,472"/>
+<area href="classaudio__tools_1_1_memory_print.html" title="Prints to a preallocated memory." alt="MemoryPrint" shape="rect" coords="596,504,884,528"/>
+<area href="classaudio__tools_1_1_meta_data_print.html" title="ID3 and Icecast/Shoutcast metadata output support. Just write the audio data to an object of this cla..." alt="MetaDataPrint" shape="rect" coords="596,560,884,584"/>
+<area href="classaudio__tools_1_1_multi_output.html" title="Replicates the output to multiple destinations." alt="MultiOutput" shape="rect" coords="596,616,884,640"/>
+<area href="classaudio__tools_1_1_p_w_m_audio_stream.html" title="Common functionality for PWM output. Please use the PWMAudioStream typedef instead which references t..." alt="PWMAudioStream" shape="rect" coords="596,672,884,696"/>
+<area href="classaudio__tools_1_1_pitch_shift_stream.html" title="Pitch Shift: Shifts the frequency up or down w/o impacting the length! We reduce the channels to 1 to..." alt="PitchShiftStream&lt; T, BufferT &gt;" shape="rect" coords="596,728,884,752"/>
+<area href="classaudio__tools_1_1_volume_print.html" title="A simple class to determine the volume." alt="VolumePrint" shape="rect" coords="596,784,884,808"/>
+<area href="classaudio__tools_1_1_generated_sound_stream.html" alt="GeneratedSoundStream&lt; int16_t &gt;" shape="rect" coords="1192,112,1480,136"/>
+<area href="classaudio__tools_1_1_queue_stream.html" alt="QueueStream&lt; uint8_t &gt;" shape="rect" coords="1192,168,1480,192"/>
+<area href="classaudio__tools_1_1_a2_d_p_stream.html" title="Stream support for A2DP: begin(TX_MODE) uses a2dp_source - begin(RX_MODE) a a2dp_sink The data is in ..." alt="A2DPStream" shape="rect" coords="1192,224,1480,248"/>
+<area href="classaudio__tools_1_1_abstract_u_r_l_stream.html" title="Abstract Base class for all URLStream implementations." alt="AbstractURLStream" shape="rect" coords="1192,280,1480,304"/>
+<area href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ..." alt="AnalogAudioStream" shape="rect" coords="1192,336,1480,360"/>
+<area href="classaudio__tools_1_1_audio_effect_stream_t.html" title="EffectsStreamT: the template class describes an input or output stream to which one or multiple effec..." alt="AudioEffectStreamT&lt; T &gt;" shape="rect" coords="1192,392,1480,416"/>
+<area href="classaudio__tools_1_1_audio_kit_stream.html" title="AudioKit Stream which uses the https://github.com/pschatzmann/arduino-audiokit library." alt="AudioKitStream" shape="rect" coords="1192,448,1480,472"/>
+<area href="classaudio__tools_1_1_audio_kit_stream_adapter.html" title="Converts a AudioKit into a AudioStream, so that we can pass it to the converter." alt="AudioKitStreamAdapter" shape="rect" coords="1192,504,1480,528"/>
+<area href="classaudio__tools_1_1_audio_m_p34_d_t05.html" title="MP34DT05 Microphone of Nano BLE Sense. We provide a proper Stream implementation. See https://github...." alt="AudioMP34DT05" shape="rect" coords="1192,560,1480,584"/>
+<area href="classaudio__tools_1_1_audio_stream_wrapper.html" title="To be used to support implementations where the readBytes is not virtual." alt="AudioStreamWrapper" shape="rect" coords="1192,616,1480,640"/>
+<area href="classaudio__tools_1_1_audio_sync_reader.html" title="Receving Audio Data over the wire and requesting for more data when done to synchronize the processin..." alt="AudioSyncReader" shape="rect" coords="1192,672,1480,696"/>
+<area href="classaudio__tools_1_1_buffered_stream.html" title="The Arduino Stream supports operations on single characters. This is usually not the best way to push..." alt="BufferedStream" shape="rect" coords="1192,728,1480,752"/>
+<area href="classaudio__tools_1_1_buffered_task_stream.html" title="A FreeRTOS task is filling the buffer from the indicated stream. Only to be used on the ESP32." alt="BufferedTaskStream" shape="rect" coords="1192,784,1480,808"/>
+<area href="classaudio__tools_1_1_channel_format_converter_stream.html" title="Channel converter which does not use a template." alt="ChannelFormatConverterStream" shape="rect" coords="1192,840,1480,864"/>
+<area href="classaudio__tools_1_1_channel_format_converter_stream_t.html" title="Converter for reducing or increasing the number of Channels." alt="ChannelFormatConverterStreamT&lt; T &gt;" shape="rect" coords="1192,896,1480,920"/>
+<area href="classaudio__tools_1_1_converter_stream.html" title="Both the data of the read or write operations will be converted with the help of the indicated conver..." alt="ConverterStream&lt; T, ConverterT &gt;" shape="rect" coords="1192,952,1480,976"/>
+<area href="classaudio__tools_1_1_dynamic_memory_stream.html" title="MemoryStream which is written and read using the internal RAM. For each write the data is allocated o..." alt="DynamicMemoryStream" shape="rect" coords="1192,1008,1480,1032"/>
+<area href="classaudio__tools_1_1_e_s_p3288_audio_output.html" title="Stream Adapter for ESP8288-Audio AudioOutput." alt="ESP3288AudioOutput" shape="rect" coords="1192,1064,1480,1088"/>
+<area href="classaudio__tools_1_1_e_s_p_now_stream.html" title="ESPNow as Arduino Stream." alt="ESPNowStream" shape="rect" coords="1192,1120,1480,1144"/>
+<area href="classaudio__tools_1_1_encoded_audio_print.html" title="A more natural Print class to process encoded data (aac, wav, mp3...). Just define the output and the..." alt="EncodedAudioPrint" shape="rect" coords="1192,1176,1480,1200"/>
+<area href="classaudio__tools_1_1_equilizer3_bands.html" title="3 Band Equilizer inspired from https://www.musicdsp.org/en/latest/Filters/236-3-band-equaliser...." alt="Equilizer3Bands" shape="rect" coords="1192,1232,1480,1256"/>
+<area href="classaudio__tools_1_1_fade_stream.html" title="Stream which can be used to manage fade in and fade out. Before you read or write data you need to ca..." alt="FadeStream" shape="rect" coords="1192,1288,1480,1312"/>
+<area href="classaudio__tools_1_1_faust_stream.html" title="Integration into Faust DSP see https://faust.grame.fr/ To generate code from faust,..." alt="FaustStream&lt; DSP &gt;" shape="rect" coords="1192,1344,1480,1368"/>
+<area href="classaudio__tools_1_1_filtered_stream.html" title="Stream to which we can apply Filters for each channel. The filter might change the result size!" alt="FilteredStream&lt; T, TF &gt;" shape="rect" coords="1192,1400,1480,1424"/>
+<area href="classaudio__tools_1_1_format_converter_stream.html" title="Converter which converts bits_per_sample and channels." alt="FormatConverterStream" shape="rect" coords="1192,1456,1480,1480"/>
+<area href="classaudio__tools_1_1_generated_sound_stream.html" title="Source for reading generated tones. Please note." alt="GeneratedSoundStream&lt; T &gt;" shape="rect" coords="1192,1512,1480,1536"/>
+<area href="classaudio__tools_1_1_i2_s_stream.html" title="We support the Stream interface for the I2S access. In addition we allow a separate mute pin which mi..." alt="I2SStream" shape="rect" coords="1192,1568,1480,1592"/>
+<area href="classaudio__tools_1_1_input_merge.html" title="Merges multiple input channels. The input must be mono! So if you provide 2 mono channels you get a s..." alt="InputMerge&lt; T &gt;" shape="rect" coords="1192,1624,1480,1648"/>
+<area href="classaudio__tools_1_1_input_mixer.html" title="MixerStream is mixing the input from Multiple Input Streams. All streams must have the same audo form..." alt="InputMixer&lt; T &gt;" shape="rect" coords="1192,1680,1480,1704"/>
+<area href="classaudio__tools_1_1_jupyter_audio_t.html" title="Output to Jupyter. We write the data just to a file from where we can load the data again for differe..." alt="JupyterAudioT&lt; T &gt;" shape="rect" coords="1192,1736,1480,1760"/>
+<area href="classaudio__tools_1_1_measuring_stream.html" title="Class which measures the truput." alt="MeasuringStream" shape="rect" coords="1192,1792,1480,1816"/>
+<area href="classaudio__tools_1_1_memory_stream.html" title="A simple Stream implementation which is backed by allocated memory." alt="MemoryStream" shape="rect" coords="1192,1848,1480,1872"/>
+<area href="classaudio__tools_1_1_mozzi_stream.html" title="We use the output functionality of Mozzi to output audio data. We expect the data as array of int16_t..." alt="MozziStream" shape="rect" coords="1192,1904,1480,1928"/>
+<area href="classaudio__tools_1_1_number_format_converter_stream.html" title="Converter which converts between bits_per_sample and 16 bits." alt="NumberFormatConverterStream" shape="rect" coords="1192,1960,1480,1984"/>
+<area href="classaudio__tools_1_1_number_format_converter_stream_t.html" title="Converter which converts from source bits_per_sample to target bits_per_sample." alt="NumberFormatConverterStreamT&lt; TFrom, TTo &gt;" shape="rect" coords="1192,2016,1480,2040"/>
+<area href="classaudio__tools_1_1_port_audio_stream.html" title="Arduino Audio Stream using PortAudio." alt="PortAudioStream" shape="rect" coords="1192,2072,1480,2096"/>
+<area href="classaudio__tools_1_1_queue_stream.html" title="AudioOutput class which stores the data in a temporary queue buffer. The queue can be consumed e...." alt="QueueStream&lt; T &gt;" shape="rect" coords="1192,2128,1480,2152"/>
+<area href="classaudio__tools_1_1_resample_stream.html" title="Dynamic Resampling. We can use a variable factor to speed up or slow down the playback." alt="ResampleStream&lt; T &gt;" shape="rect" coords="1192,2184,1480,2208"/>
+<area href="classaudio__tools_1_1_ring_buffer_stream.html" title="A Stream backed by a Ringbuffer. We can write to the end and read from the beginning of the stream." alt="RingBufferStream" shape="rect" coords="1192,2240,1480,2264"/>
+<area href="classaudio__tools_1_1_s_p_d_i_f_stream.html" title="Output as 16 bit stereo SPDIF on the I2S data output pin." alt="SPDIFStream" shape="rect" coords="1192,2296,1480,2320"/>
+<area href="classaudio__tools_1_1_stdio_stream.html" alt="StdioStream" shape="rect" coords="1192,2352,1480,2376"/>
+<area href="classaudio__tools_1_1_tf_lite_audio_stream_base.html" title="Astract TfLiteAudioStream to provide access to TfLiteAudioStream for Reader and Writers." alt="TfLiteAudioStreamBase" shape="rect" coords="1192,2408,1480,2432"/>
+<area href="classaudio__tools_1_1_v_s1053_stream.html" title="VS1053 Output Interface which processes PCM data by default. If you want to write encoded data set is..." alt="VS1053Stream" shape="rect" coords="1192,2464,1480,2488"/>
+<area href="classaudio__tools_1_1_volume_stream.html" title="Adjust the volume of the related input or output: To work properly the class needs to know the bits p..." alt="VolumeStream" shape="rect" coords="1192,2520,1480,2544"/>
+<area href="classaudio__tools_1_1_w_m8960_stream.html" title="Stream for reading and writing audio data using the WM8960 Codec Chip You need to install https://git..." alt="WM8960Stream" shape="rect" coords="1192,2576,1480,2600"/>
   </map>
 </div></div>
 <table class="memberdecls">

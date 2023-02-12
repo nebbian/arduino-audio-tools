@@ -1,17 +1,17 @@
 var searchData=
 [
-  ['nbuffer_1369',['NBuffer',['../classaudio__tools_1_1_n_buffer.html',1,'audio_tools']]],
-  ['nbuffer_3c_20frame_20_3e_1370',['NBuffer&lt; Frame &gt;',['../classaudio__tools_1_1_n_buffer.html',1,'audio_tools']]],
-  ['nbuffer_3c_20uint8_5ft_20_3e_1371',['NBuffer&lt; uint8_t &gt;',['../classaudio__tools_1_1_n_buffer.html',1,'audio_tools']]],
-  ['node_1372',['Node',['../structaudio__tools_1_1_list_1_1_node.html',1,'audio_tools::List']]],
-  ['node_1373',['node',['../structaudio__tools_1_1_queue_lock_free_1_1node.html',1,'audio_tools::QueueLockFree']]],
-  ['nofilter_1374',['NoFilter',['../classaudio__tools_1_1_no_filter.html',1,'audio_tools']]],
-  ['noisegenerator_1375',['NoiseGenerator',['../classaudio__tools_1_1_noise_generator.html',1,'audio_tools']]],
-  ['nopconverter_1376',['NOPConverter',['../classaudio__tools_1_1_n_o_p_converter.html',1,'audio_tools']]],
-  ['nullstream_1377',['NullStream',['../classaudio__tools_1_1_null_stream.html',1,'audio_tools']]],
-  ['numberconverter_1378',['NumberConverter',['../classaudio__tools_1_1_number_converter.html',1,'audio_tools']]],
-  ['numberformatconverterstream_1379',['NumberFormatConverterStream',['../classaudio__tools_1_1_number_format_converter_stream.html',1,'audio_tools']]],
-  ['numberformatconverterstreamt_1380',['NumberFormatConverterStreamT',['../classaudio__tools_1_1_number_format_converter_stream_t.html',1,'audio_tools']]],
-  ['numberreader_1381',['NumberReader',['../classaudio__tools_1_1_number_reader.html',1,'audio_tools']]],
-  ['nuttall_1382',['Nuttall',['../classaudio__tools_1_1_nuttall.html',1,'audio_tools']]]
+  ['nbuffer_1367',['NBuffer',['../classaudio__tools_1_1_n_buffer.html',1,'audio_tools']]],
+  ['nbuffer_3c_20frame_20_3e_1368',['NBuffer&lt; Frame &gt;',['../classaudio__tools_1_1_n_buffer.html',1,'audio_tools']]],
+  ['nbuffer_3c_20uint8_5ft_20_3e_1369',['NBuffer&lt; uint8_t &gt;',['../classaudio__tools_1_1_n_buffer.html',1,'audio_tools']]],
+  ['node_1370',['Node',['../structaudio__tools_1_1_list_1_1_node.html',1,'audio_tools::List']]],
+  ['node_1371',['node',['../structaudio__tools_1_1_queue_lock_free_1_1node.html',1,'audio_tools::QueueLockFree']]],
+  ['nofilter_1372',['NoFilter',['../classaudio__tools_1_1_no_filter.html',1,'audio_tools']]],
+  ['noisegenerator_1373',['NoiseGenerator',['../classaudio__tools_1_1_noise_generator.html',1,'audio_tools']]],
+  ['nopconverter_1374',['NOPConverter',['../classaudio__tools_1_1_n_o_p_converter.html',1,'audio_tools']]],
+  ['nullstream_1375',['NullStream',['../classaudio__tools_1_1_null_stream.html',1,'audio_tools']]],
+  ['numberconverter_1376',['NumberConverter',['../classaudio__tools_1_1_number_converter.html',1,'audio_tools']]],
+  ['numberformatconverterstream_1377',['NumberFormatConverterStream',['../classaudio__tools_1_1_number_format_converter_stream.html',1,'audio_tools']]],
+  ['numberformatconverterstreamt_1378',['NumberFormatConverterStreamT',['../classaudio__tools_1_1_number_format_converter_stream_t.html',1,'audio_tools']]],
+  ['numberreader_1379',['NumberReader',['../classaudio__tools_1_1_number_reader.html',1,'audio_tools']]],
+  ['nuttall_1380',['Nuttall',['../classaudio__tools_1_1_nuttall.html',1,'audio_tools']]]
 ];

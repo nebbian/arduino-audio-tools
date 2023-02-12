@@ -85,7 +85,6 @@ Inheritance diagram for AudioEffectStreamT&lt; T &gt;:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_audio_effect_stream_t.png" usemap="#AudioEffectStreamT_3C_20T_20_3E_map" alt=""/>
   <map id="AudioEffectStreamT_3C_20T_20_3E_map" name="AudioEffectStreamT_3C_20T_20_3E_map">
-<area href="classaudio__tools_1_1_audio_stream_x.html" title="Same as AudioStream - but we do not have any abstract methods." alt="AudioStreamX" shape="rect" coords="165,168,320,192"/>
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="165,112,320,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,155,80"/>
 <area href="classaudio__tools_1_1_audio_base_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioBaseInfoDependent" shape="rect" coords="165,56,320,80"/>
@@ -149,12 +148,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () 
 <a class="el" href="classaudio__tools_1_1_audio_effect.html">AudioEffect</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect_stream_t.html#a722144d124c35931c637345566824441">operator[]</a> (int idx)</td></tr>
 <tr class="memdesc:a722144d124c35931c637345566824441"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets an effect by index <br /></td></tr>
 <tr class="separator:a722144d124c35931c637345566824441"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bb6daa18ee5d207a6f2e1899eaadcf3"><td class="memItemLeft" align="right" valign="top"><a id="a9bb6daa18ee5d207a6f2e1899eaadcf3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>peek</b> () override</td></tr>
-<tr class="separator:a9bb6daa18ee5d207a6f2e1899eaadcf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31e8f8111a9c57b7a2be72337ab07e0e"><td class="memItemLeft" align="right" valign="top"><a id="a31e8f8111a9c57b7a2be72337ab07e0e"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> () override</td></tr>
-<tr class="separator:a31e8f8111a9c57b7a2be72337ab07e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a28841c35da456c0ccccbe9623c00a1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect_stream_t.html#a5a28841c35da456c0ccccbe9623c00a1">readBytes</a> (uint8_t *buffer, size_t length) override</td></tr>
 <tr class="separator:a5a28841c35da456c0ccccbe9623c00a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7887161ce1f9436b161f6f6842a5116"><td class="memItemLeft" align="right" valign="top"><a id="ab7887161ce1f9436b161f6f6842a5116"></a>
@@ -260,7 +253,7 @@ class audio_tools::AudioEffectStreamT&lt; T &gt;</h3>
 </div><div class="memdoc">
 <p>Provides the audio data by reading the assinged <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> and applying the effects on that input </p>
 
-<p>Reimplemented from <a class="el" href="classaudio__tools_1_1_audio_stream_x.html">AudioStreamX</a>.</p>
+<p>Reimplemented from <a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a>.</p>
 
 </div>
 </div>
@@ -299,7 +292,7 @@ class audio_tools::AudioEffectStreamT&lt; T &gt;</h3>
 </div><div class="memdoc">
 <p>Writes the samples passed in the buffer and applies the effects before writing the result to the output defined in the constructor. </p>
 
-<p>Reimplemented from <a class="el" href="classaudio__tools_1_1_audio_stream_x.html">AudioStreamX</a>.</p>
+<p>Reimplemented from <a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a>.</p>
 
 </div>
 </div>
