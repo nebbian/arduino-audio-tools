@@ -71,7 +71,7 @@ $(function() {
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_input_merge-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">InputMerge&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__transform.html">Converting Streams</a></div></div>  </div>
+<div class="title">InputMerge&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__transform.html">Converting Streams</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -157,15 +157,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_input_merge.html#af4b57d21919c42d55af03391f91a1c08">size</a> ()</td></tr>
 <tr class="memdesc:af4b57d21919c42d55af03391f91a1c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of stremams to which are mixed together = number of result channels. <br /></td></tr>
 <tr class="separator:af4b57d21919c42d55af03391f91a1c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1001f4f79752392b3775ced33b1175c"><td class="memItemLeft" align="right" valign="top"><a id="aa1001f4f79752392b3775ced33b1175c"></a>
-virtual <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>toStreamPointer</b> ()</td></tr>
-<tr class="separator:aa1001f4f79752392b3775ced33b1175c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d13ce67979fd03ea213f793e44d834"><td class="memItemLeft" align="right" valign="top"><a id="a02d13ce67979fd03ea213f793e44d834"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> &amp;info)</td></tr>
 <tr class="separator:a02d13ce67979fd03ea213f793e44d834"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dc19ad83d7464f1a4c104d76ba37aa7"><td class="memItemLeft" align="right" valign="top"><a id="a2dc19ad83d7464f1a4c104d76ba37aa7"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t <a class="el" href="classaudio__tools_1_1_input_merge.html#af4b57d21919c42d55af03391f91a1c08">size</a>) override=0</td></tr>
-<tr class="separator:a2dc19ad83d7464f1a4c104d76ba37aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74e483484f1f059fc9ee780b1a7cc29"><td class="memItemLeft" align="right" valign="top"><a id="ae74e483484f1f059fc9ee780b1a7cc29"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t <a class="el" href="classaudio__tools_1_1_input_merge.html#af4b57d21919c42d55af03391f91a1c08">size</a>) override</td></tr>
+<tr class="separator:ae74e483484f1f059fc9ee780b1a7cc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad89418aeb557f65a8f1a0aed755633b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1">writeSilence</a> (size_t len)</td></tr>
 <tr class="separator:ad89418aeb557f65a8f1a0aed755633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -274,7 +271,7 @@ class audio_tools::InputMerge&lt; T &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Writes n 0 values (= silence) </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Writes len bytes of silence (=0). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">len</td><td><br  />
  </td></tr>

@@ -233,9 +233,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_kit_stream.html#a68eb6bc4f1a8a9ccf4e2368e39371565">setVolume</a> (int vol)</td></tr>
 <tr class="memdesc:a68eb6bc4f1a8a9ccf4e2368e39371565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the Volume: Range 0 to 100. <br /></td></tr>
 <tr class="separator:a68eb6bc4f1a8a9ccf4e2368e39371565"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1001f4f79752392b3775ced33b1175c"><td class="memItemLeft" align="right" valign="top"><a id="aa1001f4f79752392b3775ced33b1175c"></a>
-virtual <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>toStreamPointer</b> ()</td></tr>
-<tr class="separator:aa1001f4f79752392b3775ced33b1175c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d13ce67979fd03ea213f793e44d834"><td class="memItemLeft" align="right" valign="top"><a id="a02d13ce67979fd03ea213f793e44d834"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> &amp;info)</td></tr>
 <tr class="separator:a02d13ce67979fd03ea213f793e44d834"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1008,7 +1005,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>volume_value</b> = 40<
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Writes n 0 values (= silence) </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Writes len bytes of silence (=0). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">len</td><td><br  />
  </td></tr>

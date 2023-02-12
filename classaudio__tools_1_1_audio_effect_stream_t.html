@@ -176,9 +176,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutput</b> (<a cla
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect_stream_t.html#a0b6b70701c46e22849f0f363861351cd">size</a> ()</td></tr>
 <tr class="memdesc:a0b6b70701c46e22849f0f363861351cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the actual number of defined effects. <br /></td></tr>
 <tr class="separator:a0b6b70701c46e22849f0f363861351cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1001f4f79752392b3775ced33b1175c"><td class="memItemLeft" align="right" valign="top"><a id="aa1001f4f79752392b3775ced33b1175c"></a>
-virtual <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>toStreamPointer</b> ()</td></tr>
-<tr class="separator:aa1001f4f79752392b3775ced33b1175c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d13ce67979fd03ea213f793e44d834"><td class="memItemLeft" align="right" valign="top"><a id="a02d13ce67979fd03ea213f793e44d834"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> &amp;info)</td></tr>
 <tr class="separator:a02d13ce67979fd03ea213f793e44d834"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,7 +293,7 @@ class audio_tools::AudioEffectStreamT&lt; T &gt;</h3>
 </div><div class="memdoc">
 <p>Writes the samples passed in the buffer and applies the effects before writing the result to the output defined in the constructor. </p>
 
-<p>Implements <a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a>.</p>
+<p>Reimplemented from <a class="el" href="classaudio__tools_1_1_audio_stream_x.html">AudioStreamX</a>.</p>
 
 </div>
 </div>
@@ -323,7 +320,7 @@ class audio_tools::AudioEffectStreamT&lt; T &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Writes n 0 values (= silence) </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Writes len bytes of silence (=0). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">len</td><td><br  />
  </td></tr>

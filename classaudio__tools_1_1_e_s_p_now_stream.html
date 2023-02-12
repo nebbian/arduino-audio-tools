@@ -166,9 +166,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudi
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_e_s_p_now_stream.html#a19b2f79c6278f469fceebf0696a7d5c7">setSendCallback</a> (esp_now_send_cb_t cb)</td></tr>
 <tr class="memdesc:a19b2f79c6278f469fceebf0696a7d5c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an alternative send callback. <br /></td></tr>
 <tr class="separator:a19b2f79c6278f469fceebf0696a7d5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1001f4f79752392b3775ced33b1175c"><td class="memItemLeft" align="right" valign="top"><a id="aa1001f4f79752392b3775ced33b1175c"></a>
-virtual <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>toStreamPointer</b> ()</td></tr>
-<tr class="separator:aa1001f4f79752392b3775ced33b1175c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d13ce67979fd03ea213f793e44d834"><td class="memItemLeft" align="right" valign="top"><a id="a02d13ce67979fd03ea213f793e44d834"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> &amp;info)</td></tr>
 <tr class="separator:a02d13ce67979fd03ea213f793e44d834"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,7 +304,7 @@ _lock_t&#160;</td><td class="memItemRight" valign="bottom"><b>write_lock</b></td
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Writes n 0 values (= silence) </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Writes len bytes of silence (=0). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">len</td><td><br  />
  </td></tr>
