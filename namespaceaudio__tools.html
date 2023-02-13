@@ -696,6 +696,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i_l_b_c_encoder.html">ILBCEncoder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encoder for iLBC - Depends on <a href="https://github.com/pschatzmann/libopenilbc">https://github.com/pschatzmann/libopenilbc</a>.  <a href="classaudio__tools_1_1_i_l_b_c_encoder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_i_m_a_state.html">IMAState</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_input_merge.html">InputMerge</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merges multiple input channels. The input must be mono! So if you provide 2 mono channels you get a stereo signal as result with the left channel from channel 0 and the right from channel 1.  <a href="classaudio__tools_1_1_input_merge.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1240,6 +1242,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_header.html">WAVHeader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser for Wav header data for details see <a href="https://de.wikipedia.org/wiki/RIFF_WAVE">https://de.wikipedia.org/wiki/RIFF_WAVE</a>.  <a href="classaudio__tools_1_1_w_a_v_header.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_wav_i_m_a_audio_info.html">WavIMAAudioInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sound information which is available in the WAV header - adjusted for IMA ADPCM.  <a href="structaudio__tools_1_1_wav_i_m_a_audio_info.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_wav_i_m_a_decoder.html">WavIMADecoder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_wav_i_m_a_decoder.html" title="WavIMADecoder - based on WAVDecoder - We parse the header data as we receive it and send the sound da...">WavIMADecoder</a> - based on <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="WAVDecoder - We parse the header data on the first record and send the sound data to the stream which...">WAVDecoder</a> - We parse the header data as we receive it and send the sound data to the stream which was indicated in the constructor. Only WAV files with WAVE_FORMAT_IMA_ADPCM are supported by this codec!  <a href="classaudio__tools_1_1_wav_i_m_a_decoder.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_wav_i_m_a_header.html">WavIMAHeader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_welch.html">Welch</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_welch.html" title="Welch FFT Window function.">Welch</a> FFT Window function.  <a href="classaudio__tools_1_1_welch.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1327,6 +1337,13 @@ Enumerations</h2></td></tr>
 , <b>WAV</b>
  }</td></tr>
 <tr class="separator:a320f7b385576131cdae7758303baf7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a59ed379dc716d3d4f19e585d96abcc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a6a59ed379dc716d3d4f19e585d96abcc">chunk_result</a> { <b>IMA_ERR_INVALID_CHUNK</b> = -2
+, <b>IMA_ERR_INVALID_CONTAINER</b>
+, <b>IMA_CHUNK_OK</b>
+, <b>IMA_CHUNK_UNKNOWN</b>
+ }</td></tr>
+<tr class="memdesc:a6a59ed379dc716d3d4f19e585d96abcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser for Wav header data adjusted for IMA ADPCM format - partially based on <a class="el" href="_codec_w_a_v_8h_source.html">CodecWAV.h</a> for details see <a href="https://de.wikipedia.org/wiki/RIFF_WAVE">https://de.wikipedia.org/wiki/RIFF_WAVE</a>.  <a href="namespaceaudio__tools.html#a6a59ed379dc716d3d4f19e585d96abcc">More...</a><br /></td></tr>
+<tr class="separator:a6a59ed379dc716d3d4f19e585d96abcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a031770da453a180e21dcbef5cf5aeab6"><td class="memItemLeft" align="right" valign="top"><a id="a031770da453a180e21dcbef5cf5aeab6"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>FileMode</b> { <b>FILE_READ</b> ='r'
 , <b>FILE_WRITE</b> ='w'
 , <b>FILE_APPEND</b> ='a'
@@ -1658,6 +1675,10 @@ INLINE_VAR const int&#160;</td><td class="memItemRight" valign="bottom"><b>ID3Fr
 <tr class="memitem:af3e50de07ec3075a126968bd6bfd2fa7"><td class="memItemLeft" align="right" valign="top"><a id="af3e50de07ec3075a126968bd6bfd2fa7"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>IDENTITY</b> = &quot;identity&quot;</td></tr>
 <tr class="separator:af3e50de07ec3075a126968bd6bfd2fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd16d9c878142e5abb1eb957e077319"><td class="memItemLeft" align="right" valign="top">const int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ima_index_table</b> [16]</td></tr>
+<tr class="separator:adcd16d9c878142e5abb1eb957e077319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad15653cacfae299036b4d1e0f0a298c0"><td class="memItemLeft" align="right" valign="top">const int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>ima_step_table</b> [89]</td></tr>
+<tr class="separator:ad15653cacfae299036b4d1e0f0a298c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a8099d013ab0669c1f915584b0ed32e"><td class="memItemLeft" align="right" valign="top"><a id="a6a8099d013ab0669c1f915584b0ed32e"></a>
 static effectsuite_t **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a6a8099d013ab0669c1f915584b0ed32e">interpolationTable</a> = nullptr</td></tr>
 <tr class="memdesc:a6a8099d013ab0669c1f915584b0ed32e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Table of interpolation values as a 2D array indexed by interpolationTable[pointIndex][alphaIndex]. <br /></td></tr>
@@ -1733,6 +1754,9 @@ INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>TR
 <tr class="memitem:afb62a09b75d01c1bec2cc4e8d5aa362f"><td class="memItemLeft" align="right" valign="top"><a id="afb62a09b75d01c1bec2cc4e8d5aa362f"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>USER_AGENT</b> = &quot;User-Agent&quot;</td></tr>
 <tr class="separator:afb62a09b75d01c1bec2cc4e8d5aa362f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30b82576cc06ddc824aa8cf0fd84d5f"><td class="memItemLeft" align="right" valign="top"><a id="ad30b82576cc06ddc824aa8cf0fd84d5f"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>wav_ima_mime</b> = &quot;audio/x-wav&quot;</td></tr>
+<tr class="separator:ad30b82576cc06ddc824aa8cf0fd84d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0341cb1ac1b675c45be024d44d4a1b6f"><td class="memItemLeft" align="right" valign="top"><a id="a0341cb1ac1b675c45be024d44d4a1b6f"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>wav_mime</b> = &quot;audio/wav&quot;</td></tr>
 <tr class="separator:a0341cb1ac1b675c45be024d44d4a1b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1752,6 +1776,26 @@ Phil Schatzmann</dd></dl>
 </li>
 </ul>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a6a59ed379dc716d3d4f19e585d96abcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a59ed379dc716d3d4f19e585d96abcc">&#9670;&nbsp;</a></span>chunk_result</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespaceaudio__tools.html#a6a59ed379dc716d3d4f19e585d96abcc">chunk_result</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parser for Wav header data adjusted for IMA ADPCM format - partially based on <a class="el" href="_codec_w_a_v_8h_source.html">CodecWAV.h</a> for details see <a href="https://de.wikipedia.org/wiki/RIFF_WAVE">https://de.wikipedia.org/wiki/RIFF_WAVE</a>. </p>
+<dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd>
+<dd>
+Norman Ritz </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
+
+</div>
+</div>
 <a id="a44f4d7d26b9f81198ebefe8c302ee30c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44f4d7d26b9f81198ebefe8c302ee30c">&#9670;&nbsp;</a></span>G7xxCODEC_e</h2>
 
@@ -1878,6 +1922,50 @@ Phil Schatzmann</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><br  />
  </dd></dl>
 
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="adcd16d9c878142e5abb1eb957e077319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd16d9c878142e5abb1eb957e077319">&#9670;&nbsp;</a></span>ima_index_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int16_t ima_index_table[16]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">    -1, -1, -1, -1, 2, 4, 6, 8,</div>
+<div class="line">    -1, -1, -1, -1, 2, 4, 6, 8</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad15653cacfae299036b4d1e0f0a298c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad15653cacfae299036b4d1e0f0a298c0">&#9670;&nbsp;</a></span>ima_step_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int32_t ima_step_table[89]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">    7, 8, 9, 10, 11, 12, 13, 14, 16, 17,</div>
+<div class="line">    19, 21, 23, 25, 28, 31, 34, 37, 41, 45,</div>
+<div class="line">    50, 55, 60, 66, 73, 80, 88, 97, 107, 118,</div>
+<div class="line">    130, 143, 157, 173, 190, 209, 230, 253, 279, 307,</div>
+<div class="line">    337, 371, 408, 449, 494, 544, 598, 658, 724, 796,</div>
+<div class="line">    876, 963, 1060, 1166, 1282, 1411, 1552, 1707, 1878, 2066,</div>
+<div class="line">    2272, 2499, 2749, 3024, 3327, 3660, 4026, 4428, 4871, 5358,</div>
+<div class="line">    5894, 6484, 7132, 7845, 8630, 9493, 10442, 11487, 12635, 13899,</div>
+<div class="line">    15289, 16818, 18500, 20350, 22385, 24623, 27086, 29794, 32767</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
