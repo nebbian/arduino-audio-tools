@@ -7,7 +7,7 @@ var searchData=
   ['variablespeedringbuffersimple_1027',['VariableSpeedRingBufferSimple',['../classaudio__tools_1_1_variable_speed_ring_buffer_simple.html',1,'audio_tools']]],
   ['vbr_1028',['vbr',['../structaudio__tools_1_1_opus_encoder_settings.html#a0384c7ae67dce93dfaf33f8fd40bd4e6',1,'audio_tools::OpusEncoderSettings']]],
   ['vbr_5fconstraint_1029',['vbr_constraint',['../structaudio__tools_1_1_opus_encoder_settings.html#a125cd54483bd7e5dbff7e8e0d3d3f6cb',1,'audio_tools::OpusEncoderSettings']]],
-  ['vector_1030',['Vector',['../classaudio__tools_1_1_vector.html',1,'Vector&lt; T &gt;'],['../classaudio__tools_1_1_vector.html#a56c0272405a621eb8ef6725bad9a19a0',1,'audio_tools::Vector::Vector(Vector&lt; T &gt; &amp;copyFrom)'],['../classaudio__tools_1_1_vector.html#a11e874def9de9e45ce86f1d5ed73cc01',1,'audio_tools::Vector::Vector(T *from, T *to)'],['../classaudio__tools_1_1_vector.html#a3c671b50d8244040089ba15b0cb6592c',1,'audio_tools::Vector::Vector(int size, T value)'],['../classaudio__tools_1_1_vector.html#a4155c2064fb658b43b41b64756c6398f',1,'audio_tools::Vector::Vector(size_t len=20)']]],
+  ['vector_1030',['Vector',['../classaudio__tools_1_1_vector.html',1,'Vector&lt; T &gt;'],['../classaudio__tools_1_1_vector.html#a11e874def9de9e45ce86f1d5ed73cc01',1,'audio_tools::Vector::Vector(T *from, T *to)'],['../classaudio__tools_1_1_vector.html#a56c0272405a621eb8ef6725bad9a19a0',1,'audio_tools::Vector::Vector(Vector&lt; T &gt; &amp;copyFrom)'],['../classaudio__tools_1_1_vector.html#a3c671b50d8244040089ba15b0cb6592c',1,'audio_tools::Vector::Vector(int size, T value)'],['../classaudio__tools_1_1_vector.html#a4155c2064fb658b43b41b64756c6398f',1,'audio_tools::Vector::Vector(size_t len=20)']]],
   ['vector_3c_20audio_5ftools_3a_3aabstractsynthesizerchannel_20_2a_20_3e_1031',['Vector&lt; audio_tools::AbstractSynthesizerChannel * &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
   ['vector_3c_20audio_5ftools_3a_3aaudioeffect_20_2a_20_3e_1032',['Vector&lt; audio_tools::AudioEffect * &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
   ['vector_3c_20audio_5ftools_3a_3aaudioprint_20_2a_20_3e_1033',['Vector&lt; audio_tools::AudioPrint * &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
@@ -34,7 +34,7 @@ var searchData=
   ['vector_3c_20uint64_5ft_20_3e_1054',['Vector&lt; uint64_t &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
   ['vector_3c_20uint8_5ft_20_3e_1055',['Vector&lt; uint8_t &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
   ['volume_1056',['Volume',['../group__volume.html',1,'']]],
-  ['volume_1057',['volume',['../classaudio__tools_1_1_volume_stream.html#af70e2220bd25b8609cf5386bbcded254',1,'audio_tools::VolumeStream::volume(int channel)'],['../classaudio__tools_1_1_volume_stream.html#a1d59a107c6918cdc9a17b92f6cd4e136',1,'audio_tools::VolumeStream::volume()'],['../classaudio__tools_1_1_volume_print.html#af70e2220bd25b8609cf5386bbcded254',1,'audio_tools::VolumePrint::volume(int channel)'],['../classaudio__tools_1_1_volume_print.html#a1d59a107c6918cdc9a17b92f6cd4e136',1,'audio_tools::VolumePrint::volume()'],['../classaudio__tools_1_1_audio_player.html#a893871d008fd5516565045bb55e60dd8',1,'audio_tools::AudioPlayer::volume()'],['../classaudio__tools_1_1_audio_kit_stream.html#a56fd55a21e8060769938c33ac16ee4f2',1,'audio_tools::AudioKitStream::volume()'],['../classaudio__tools_1_1_v_s1053_stream.html#a1d59a107c6918cdc9a17b92f6cd4e136',1,'audio_tools::VS1053Stream::volume()']]],
+  ['volume_1057',['volume',['../classaudio__tools_1_1_volume_stream.html#af70e2220bd25b8609cf5386bbcded254',1,'audio_tools::VolumeStream::volume(int channel)'],['../classaudio__tools_1_1_volume_stream.html#a1d59a107c6918cdc9a17b92f6cd4e136',1,'audio_tools::VolumeStream::volume()'],['../classaudio__tools_1_1_volume_print.html#af70e2220bd25b8609cf5386bbcded254',1,'audio_tools::VolumePrint::volume()'],['../classaudio__tools_1_1_audio_kit_stream.html#a56fd55a21e8060769938c33ac16ee4f2',1,'audio_tools::AudioKitStream::volume()'],['../classaudio__tools_1_1_v_s1053_stream.html#a1d59a107c6918cdc9a17b92f6cd4e136',1,'audio_tools::VS1053Stream::volume()'],['../classaudio__tools_1_1_audio_player.html#a893871d008fd5516565045bb55e60dd8',1,'audio_tools::AudioPlayer::volume()'],['../classaudio__tools_1_1_volume_print.html#a1d59a107c6918cdc9a17b92f6cd4e136',1,'audio_tools::VolumePrint::volume()']]],
   ['volumecontrol_1058',['VolumeControl',['../classaudio__tools_1_1_volume_control.html',1,'audio_tools']]],
   ['volumein_1059',['volumeIn',['../classaudio__tools_1_1_w_m8960_stream.html#a1d35bc028db1458300b918b02148d618',1,'audio_tools::WM8960Stream']]],
   ['volumeprint_1060',['VolumePrint',['../classaudio__tools_1_1_volume_print.html',1,'audio_tools']]],
@@ -42,8 +42,9 @@ var searchData=
   ['volumestreamconfig_1062',['VolumeStreamConfig',['../structaudio__tools_1_1_volume_stream_config.html',1,'audio_tools']]],
   ['vorbis_1063',['Vorbis',['../group__codec-vorbis.html',1,'']]],
   ['vorbisdecoder_1064',['VorbisDecoder',['../classaudio__tools_1_1_vorbis_decoder.html',1,'audio_tools']]],
-  ['vs1053_5fenable_5fpll_1065',['vs1053_enable_pll',['../classaudio__tools_1_1_w_m8960_config.html#a3f1c8e5721a062a24f7b7d2ef549601b',1,'audio_tools::WM8960Config']]],
-  ['vs1053_5fmclk_5fhz_1066',['vs1053_mclk_hz',['../classaudio__tools_1_1_w_m8960_config.html#ad9b0acc96ff1397ffcf5d23829d1d437',1,'audio_tools::WM8960Config']]],
-  ['vs1053config_1067',['VS1053Config',['../classaudio__tools_1_1_v_s1053_config.html',1,'audio_tools']]],
-  ['vs1053stream_1068',['VS1053Stream',['../classaudio__tools_1_1_v_s1053_stream.html',1,'audio_tools']]]
+  ['vs1053_5fdump_1065',['vs1053_dump',['../classaudio__tools_1_1_w_m8960_config.html#ac422ac3c2e25766ec8115811b7b75a1d',1,'audio_tools::WM8960Config']]],
+  ['vs1053_5fenable_5fpll_1066',['vs1053_enable_pll',['../classaudio__tools_1_1_w_m8960_config.html#a3f1c8e5721a062a24f7b7d2ef549601b',1,'audio_tools::WM8960Config']]],
+  ['vs1053_5fmclk_5fhz_1067',['vs1053_mclk_hz',['../classaudio__tools_1_1_w_m8960_config.html#ad9b0acc96ff1397ffcf5d23829d1d437',1,'audio_tools::WM8960Config']]],
+  ['vs1053config_1068',['VS1053Config',['../classaudio__tools_1_1_v_s1053_config.html',1,'audio_tools']]],
+  ['vs1053stream_1069',['VS1053Stream',['../classaudio__tools_1_1_v_s1053_stream.html',1,'audio_tools']]]
 ];
