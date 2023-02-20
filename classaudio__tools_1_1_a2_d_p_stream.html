@@ -125,9 +125,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memItemLeft" align="right" valign="top"><a id="ad3aed50bc3b4459454ccb8c64f5ced5a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()</td></tr>
-<tr class="separator:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memItemLeft" align="right" valign="top"><a id="af654b48544c195ab99fe27e7bc3ed5fe"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
+<tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a772f8f0487e0d3804e9da7585e23a29a"><td class="memItemLeft" align="right" valign="top"><a id="a772f8f0487e0d3804e9da7585e23a29a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#a772f8f0487e0d3804e9da7585e23a29a">isConnected</a> ()</td></tr>
 <tr class="memdesc:a772f8f0487e0d3804e9da7585e23a29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if we are connected <br /></td></tr>
@@ -140,12 +140,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#a9b3baad8c612d81b96e46f84d7e97580">operator bool</a> ()</td></tr>
 <tr class="memdesc:a9b3baad8c612d81b96e46f84d7e97580"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert to bool <br /></td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec8a730e59c6c81c5e920234ff50da07"><td class="memItemLeft" align="right" valign="top"><a id="aec8a730e59c6c81c5e920234ff50da07"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>peek</b> ()</td></tr>
-<tr class="separator:aec8a730e59c6c81c5e920234ff50da07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93d7a1b17b13c190cbdb58853e91ae46"><td class="memItemLeft" align="right" valign="top"><a id="a93d7a1b17b13c190cbdb58853e91ae46"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> ()</td></tr>
-<tr class="separator:a93d7a1b17b13c190cbdb58853e91ae46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1635579cf4f895eaaded84a513cb90c9"><td class="memItemLeft" align="right" valign="top"><a id="a1635579cf4f895eaaded84a513cb90c9"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#a1635579cf4f895eaaded84a513cb90c9">readBytes</a> (uint8_t *data, size_t len)</td></tr>
 <tr class="memdesc:a1635579cf4f895eaaded84a513cb90c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the data from the temporary buffer. <br /></td></tr>
@@ -174,9 +168,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> 
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#a8b8471dbbdc5527cdf9bfd31612cc973">write</a> (const uint8_t *data, size_t len)</td></tr>
 <tr class="memdesc:a8b8471dbbdc5527cdf9bfd31612cc973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the data into a temporary send buffer - where it can be picked up by the callback. <br /></td></tr>
 <tr class="separator:a8b8471dbbdc5527cdf9bfd31612cc973"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab951bb19f06d4e5151474659cfdfd807"><td class="memItemLeft" align="right" valign="top"><a id="ab951bb19f06d4e5151474659cfdfd807"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t c)</td></tr>
-<tr class="separator:ab951bb19f06d4e5151474659cfdfd807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
+<tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad89418aeb557f65a8f1a0aed755633b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1">writeSilence</a> (size_t len)</td></tr>
 <tr class="separator:ad89418aeb557f65a8f1a0aed755633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">

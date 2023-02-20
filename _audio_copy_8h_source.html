@@ -89,7 +89,7 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            this-&gt;buffer_size = buffer_size;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            buffer.resize(buffer_size);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (!buffer){</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                LOGE(<span class="stringliteral">&quot;Could not allocate enough memory for StreamCopy: %d bytes&quot;</span>, buffer_size);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                LOGE(NOT_ENOUGH_MEMORY_MSG, buffer_size);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            }</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
@@ -99,7 +99,7 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            this-&gt;buffer_size = buffer_size;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            buffer.resize(buffer_size);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">if</span> (!buffer){</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                LOGE(<span class="stringliteral">&quot;Could not allocate enough memory for StreamCopy: %d bytes&quot;</span>, buffer_size);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                LOGE(NOT_ENOUGH_MEMORY_MSG, buffer_size);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
@@ -108,7 +108,7 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            this-&gt;buffer_size = buffer_size;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            buffer.resize(buffer_size);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> (!buffer){</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                LOGE(<span class="stringliteral">&quot;Could not allocate enough memory for StreamCopy: %d bytes&quot;</span>, buffer_size);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                LOGE(NOT_ENOUGH_MEMORY_MSG, buffer_size);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
@@ -312,114 +312,115 @@ $(function() {
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* actual_mime = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordtype">int</span> retryLimit = COPY_RETRY_LIMIT;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordtype">int</span> delay_on_no_data = COPY_DELAY_ON_NODATA;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="comment">// blocking write - until everything is processed</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordtype">size_t</span> write(<span class="keywordtype">size_t</span> len, <span class="keywordtype">size_t</span> &amp;delayCount ){</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordflow">if</span> (!buffer || len==0) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordtype">size_t</span> total = 0;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            <span class="keywordtype">long</span> open = len;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="keywordtype">int</span> retry = 0;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="keywordflow">while</span>(open&gt;0){</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                <span class="keywordtype">size_t</span> written = to-&gt;write((<span class="keyword">const</span> uint8_t*)buffer.data()+total, open);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                total += written;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                open -= written;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                delayCount++;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                <span class="keywordflow">if</span> (retry++ &gt; retryLimit){</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                    LOGE(<span class="stringliteral">&quot;write to target has failed! (%ld bytes)&quot;</span>, open);</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                </div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                <span class="keywordflow">if</span> (retry&gt;1) {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                    <a class="code" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a>(5);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    LOGI(<span class="stringliteral">&quot;try write - %d (open %ld bytes) &quot;</span>,retry, open);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                }</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                CHECK_MEMORY();</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            }</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            <span class="keywordflow">return</span> total;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_stream_copy_t.html#a9de2b44cb9d920f5ac6229c03e7acb9e">  294</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_stream_copy_t.html#a9de2b44cb9d920f5ac6229c03e7acb9e">notifyMime</a>(<span class="keywordtype">void</span>* data, <span class="keywordtype">size_t</span> len){</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            <span class="keywordflow">if</span> (len&gt;4) {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                <span class="keyword">const</span> uint8_t *start = (<span class="keyword">const</span> uint8_t *) data;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                actual_mime = <span class="stringliteral">&quot;audio/basic&quot;</span>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                <span class="keywordflow">if</span> (start[0]==0xFF &amp;&amp; start[1]==0xF1){</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    actual_mime = <span class="stringliteral">&quot;audio/aac&quot;</span>;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (memcmp(start,<span class="stringliteral">&quot;ID3&quot;</span>,3) || start[0]==0xFF || start[0]==0xFE ){</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                    actual_mime = <span class="stringliteral">&quot;audio/mpeg&quot;</span>;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (memcmp(start,<span class="stringliteral">&quot;RIFF&quot;</span>,4)){</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    actual_mime = <span class="stringliteral">&quot;audio/vnd.wave&quot;</span>;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                }</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                <span class="keywordflow">if</span> (notifyMimeCallback!=<span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                    notifyMimeCallback(actual_mime);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            }</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;};</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_stream_copy.html">  319</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_stream_copy.html">StreamCopy</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_stream_copy_t.html">StreamCopyT</a>&lt;uint8_t&gt; {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <a class="code" href="classaudio__tools_1_1_stream_copy.html">StreamCopy</a>(<span class="keywordtype">int</span> buffer_size=DEFAULT_BUFFER_SIZE): <a class="code" href="classaudio__tools_1_1_stream_copy_t.html">StreamCopyT&lt;uint8_t&gt;</a>(buffer_size) {            </div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;             TRACED();</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        }</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <a class="code" href="classaudio__tools_1_1_stream_copy.html">StreamCopy</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;to, <a class="code" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;from, <span class="keywordtype">int</span> buffer_size=DEFAULT_BUFFER_SIZE) : <a class="code" href="classaudio__tools_1_1_stream_copy_t.html">StreamCopyT&lt;uint8_t&gt;</a>(to, from, buffer_size){</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;             TRACED();</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        }</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <a class="code" href="classaudio__tools_1_1_stream_copy.html">StreamCopy</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;to, <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;from, <span class="keywordtype">int</span> buffer_size=DEFAULT_BUFFER_SIZE) : <a class="code" href="classaudio__tools_1_1_stream_copy_t.html">StreamCopyT&lt;uint8_t&gt;</a>(to, from, buffer_size){</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;             TRACED();</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00335"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_stream_copy.html#a804c969d8a52dba9265efad44ce88d3a">  335</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_stream_copy.html#a804c969d8a52dba9265efad44ce88d3a">copy</a>(<a class="code" href="classaudio__tools_1_1_base_converter.html">BaseConverter&lt;T&gt;</a> &amp;converter) {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="keywordtype">size_t</span> result = available();</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <span class="keywordtype">size_t</span> delayCount = 0;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <a class="code" href="classaudio__tools_1_1_base_converter.html">BaseConverter&lt;T&gt;</a> *coverter_ptr = &amp;converter;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            <span class="keywordflow">if</span> (result&gt;0){</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                <span class="keywordtype">size_t</span> bytes_to_read = min(result, <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(buffer_size) );</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                result = from-&gt;readBytes((uint8_t*)&amp;buffer[0], bytes_to_read);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                <span class="comment">// determine mime</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                <a class="code" href="classaudio__tools_1_1_stream_copy_t.html#a9de2b44cb9d920f5ac6229c03e7acb9e">notifyMime</a>(buffer.data(), bytes_to_read);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                is_first = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                <span class="comment">// callback with unconverted data</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                <span class="keywordflow">if</span> (onWrite!=<span class="keyword">nullptr</span>) onWrite(onWriteObj, buffer.data(), result);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                <span class="comment">// convert data</span></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                coverter_ptr-&gt;convert((uint8_t*)buffer.data(),  result );</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                write(result, delayCount);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="preprocessor">                #ifndef COPY_LOG_OFF</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                    LOGI(<span class="stringliteral">&quot;StreamCopy::copy %u bytes - in %u hops&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)result,(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>) delayCount);</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="preprocessor">                #endif</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                <span class="comment">// give the processor some time </span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                <a class="code" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a>(delay_on_no_data);</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            }</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        }</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        </div>
-<div class="line"><a name="l00365"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_stream_copy.html#aecb44a6d385121be2179187d45520331">  365</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_stream_copy.html#aecb44a6d385121be2179187d45520331">copy</a>()  {</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_stream_copy_t.html">StreamCopyT&lt;uint8_t&gt;::copy</a>();</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        }</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        </div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordtype">int</span> available() {</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            <span class="keywordflow">return</span> from == <span class="keyword">nullptr</span> ? 0 : from-&gt;available();</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        }</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;};</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;} <span class="comment">// Namespace</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* NOT_ENOUGH_MEMORY_MSG = <span class="stringliteral">&quot;Could not allocate enough memory for StreamCopy: %d bytes&quot;</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="comment">// blocking write - until everything is processed</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordtype">size_t</span> write(<span class="keywordtype">size_t</span> len, <span class="keywordtype">size_t</span> &amp;delayCount ){</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">if</span> (!buffer || len==0) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            <span class="keywordtype">size_t</span> total = 0;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="keywordtype">long</span> open = len;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="keywordtype">int</span> retry = 0;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="keywordflow">while</span>(open&gt;0){</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                <span class="keywordtype">size_t</span> written = to-&gt;write((<span class="keyword">const</span> uint8_t*)buffer.data()+total, open);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                total += written;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                open -= written;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                delayCount++;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                <span class="keywordflow">if</span> (retry++ &gt; retryLimit){</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                    LOGE(<span class="stringliteral">&quot;write to target has failed! (%ld bytes)&quot;</span>, open);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                <span class="keywordflow">if</span> (retry&gt;1) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    <a class="code" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a>(5);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                    LOGI(<span class="stringliteral">&quot;try write - %d (open %ld bytes) &quot;</span>,retry, open);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                CHECK_MEMORY();</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <span class="keywordflow">return</span> total;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_stream_copy_t.html#a9de2b44cb9d920f5ac6229c03e7acb9e">  295</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_stream_copy_t.html#a9de2b44cb9d920f5ac6229c03e7acb9e">notifyMime</a>(<span class="keywordtype">void</span>* data, <span class="keywordtype">size_t</span> len){</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">if</span> (len&gt;4) {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                <span class="keyword">const</span> uint8_t *start = (<span class="keyword">const</span> uint8_t *) data;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                actual_mime = <span class="stringliteral">&quot;audio/basic&quot;</span>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                <span class="keywordflow">if</span> (start[0]==0xFF &amp;&amp; start[1]==0xF1){</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                    actual_mime = <span class="stringliteral">&quot;audio/aac&quot;</span>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (memcmp(start,<span class="stringliteral">&quot;ID3&quot;</span>,3) || start[0]==0xFF || start[0]==0xFE ){</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    actual_mime = <span class="stringliteral">&quot;audio/mpeg&quot;</span>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (memcmp(start,<span class="stringliteral">&quot;RIFF&quot;</span>,4)){</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                    actual_mime = <span class="stringliteral">&quot;audio/vnd.wave&quot;</span>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                <span class="keywordflow">if</span> (notifyMimeCallback!=<span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    notifyMimeCallback(actual_mime);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;};</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00320"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_stream_copy.html">  320</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_stream_copy.html">StreamCopy</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_stream_copy_t.html">StreamCopyT</a>&lt;uint8_t&gt; {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <a class="code" href="classaudio__tools_1_1_stream_copy.html">StreamCopy</a>(<span class="keywordtype">int</span> buffer_size=DEFAULT_BUFFER_SIZE): <a class="code" href="classaudio__tools_1_1_stream_copy_t.html">StreamCopyT&lt;uint8_t&gt;</a>(buffer_size) {            </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;             TRACED();</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        }</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <a class="code" href="classaudio__tools_1_1_stream_copy.html">StreamCopy</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;to, <a class="code" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;from, <span class="keywordtype">int</span> buffer_size=DEFAULT_BUFFER_SIZE) : <a class="code" href="classaudio__tools_1_1_stream_copy_t.html">StreamCopyT&lt;uint8_t&gt;</a>(to, from, buffer_size){</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;             TRACED();</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <a class="code" href="classaudio__tools_1_1_stream_copy.html">StreamCopy</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;to, <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;from, <span class="keywordtype">int</span> buffer_size=DEFAULT_BUFFER_SIZE) : <a class="code" href="classaudio__tools_1_1_stream_copy_t.html">StreamCopyT&lt;uint8_t&gt;</a>(to, from, buffer_size){</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;             TRACED();</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_stream_copy.html#a804c969d8a52dba9265efad44ce88d3a">  336</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_stream_copy.html#a804c969d8a52dba9265efad44ce88d3a">copy</a>(<a class="code" href="classaudio__tools_1_1_base_converter.html">BaseConverter&lt;T&gt;</a> &amp;converter) {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <span class="keywordtype">size_t</span> result = available();</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            <span class="keywordtype">size_t</span> delayCount = 0;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            <a class="code" href="classaudio__tools_1_1_base_converter.html">BaseConverter&lt;T&gt;</a> *coverter_ptr = &amp;converter;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            <span class="keywordflow">if</span> (result&gt;0){</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                <span class="keywordtype">size_t</span> bytes_to_read = min(result, <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(buffer_size) );</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                result = from-&gt;readBytes((uint8_t*)&amp;buffer[0], bytes_to_read);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                <span class="comment">// determine mime</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                <a class="code" href="classaudio__tools_1_1_stream_copy_t.html#a9de2b44cb9d920f5ac6229c03e7acb9e">notifyMime</a>(buffer.data(), bytes_to_read);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                is_first = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                <span class="comment">// callback with unconverted data</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                <span class="keywordflow">if</span> (onWrite!=<span class="keyword">nullptr</span>) onWrite(onWriteObj, buffer.data(), result);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                <span class="comment">// convert data</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                coverter_ptr-&gt;convert((uint8_t*)buffer.data(),  result );</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                write(result, delayCount);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="preprocessor">                #ifndef COPY_LOG_OFF</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                    LOGI(<span class="stringliteral">&quot;StreamCopy::copy %u bytes - in %u hops&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)result,(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>) delayCount);</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="preprocessor">                #endif</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                <span class="comment">// give the processor some time </span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                <a class="code" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a>(delay_on_no_data);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            }</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        </div>
+<div class="line"><a name="l00366"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_stream_copy.html#aecb44a6d385121be2179187d45520331">  366</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_stream_copy.html#aecb44a6d385121be2179187d45520331">copy</a>()  {</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_stream_copy_t.html">StreamCopyT&lt;uint8_t&gt;::copy</a>();</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        }</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordtype">int</span> available() {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            <span class="keywordflow">return</span> from == <span class="keyword">nullptr</span> ? 0 : from-&gt;available();</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;};</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;} <span class="comment">// Namespace</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream.html">audio_tools::AudioStream</a></div><div class="ttdoc">Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:40</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_stream_wrapper_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream_wrapper.html">audio_tools::AudioStreamWrapper</a></div><div class="ttdoc">To be used to support implementations where the readBytes is not virtual.</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:133</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_converter_html"><div class="ttname"><a href="classaudio__tools_1_1_base_converter.html">audio_tools::BaseConverter</a></div><div class="ttdoc">Abstract Base class for Converters A converter is processing the data in the indicated array.</div><div class="ttdef"><b>Definition:</b> Converter.h:26</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:33</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_stream_copy_html"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy.html">audio_tools::StreamCopy</a></div><div class="ttdoc">We provide the typeless StreamCopy as a subclass of StreamCopyT.</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:319</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_stream_copy_html_a804c969d8a52dba9265efad44ce88d3a"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy.html#a804c969d8a52dba9265efad44ce88d3a">audio_tools::StreamCopy::copy</a></div><div class="ttdeci">size_t copy(BaseConverter&lt; T &gt; &amp;converter)</div><div class="ttdoc">copies a buffer length of data and applies the converter</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:335</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_stream_copy_html_aecb44a6d385121be2179187d45520331"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy.html#aecb44a6d385121be2179187d45520331">audio_tools::StreamCopy::copy</a></div><div class="ttdeci">size_t copy()</div><div class="ttdoc">Copies all bytes from the input to the output.</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:365</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_stream_copy_html"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy.html">audio_tools::StreamCopy</a></div><div class="ttdoc">We provide the typeless StreamCopy as a subclass of StreamCopyT.</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:320</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_stream_copy_html_a804c969d8a52dba9265efad44ce88d3a"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy.html#a804c969d8a52dba9265efad44ce88d3a">audio_tools::StreamCopy::copy</a></div><div class="ttdeci">size_t copy(BaseConverter&lt; T &gt; &amp;converter)</div><div class="ttdoc">copies a buffer length of data and applies the converter</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:336</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_stream_copy_html_aecb44a6d385121be2179187d45520331"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy.html#aecb44a6d385121be2179187d45520331">audio_tools::StreamCopy::copy</a></div><div class="ttdeci">size_t copy()</div><div class="ttdoc">Copies all bytes from the input to the output.</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:366</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html">audio_tools::StreamCopyT</a></div><div class="ttdoc">Typed Stream Copy which supports the conversion from channel to 2 channels. We make sure that we allw...</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:21</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html_a270b0b803120d1fd87b919d29e083979"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html#a270b0b803120d1fd87b919d29e083979">audio_tools::StreamCopyT::mime</a></div><div class="ttdeci">const char * mime()</div><div class="ttdoc">Provides the actual mime type, that was determined from the first available data.</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:203</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html_a4549a76725f2e4c013e4d57018366109"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html#a4549a76725f2e4c013e4d57018366109">audio_tools::StreamCopyT::available</a></div><div class="ttdeci">int available()</div><div class="ttdoc">available bytes in the data source</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:147</div></div>
@@ -429,7 +430,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html_a7575750492ee545b18faf84cdada3caa"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html#a7575750492ee545b18faf84cdada3caa">audio_tools::StreamCopyT::setCallbackOnWrite</a></div><div class="ttdeci">void setCallbackOnWrite(void(*onWrite)(void *obj, void *buffer, size_t len), void *obj)</div><div class="ttdoc">Defines a callback that is notified with the wirtten data.</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:214</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html_a7f2d7de65b2c37346fde120d8a9657b0"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html#a7f2d7de65b2c37346fde120d8a9657b0">audio_tools::StreamCopyT::setDelayOnNoData</a></div><div class="ttdeci">void setDelayOnNoData(int delayMs)</div><div class="ttdoc">Defines the dealy that is used if no data is available.</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:160</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html_a81c4dd3919c1824540306c995521c89a"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html#a81c4dd3919c1824540306c995521c89a">audio_tools::StreamCopyT::copyAll</a></div><div class="ttdeci">size_t copyAll(int retryCount=5, int retryWaitMs=200)</div><div class="ttdoc">copies all data - returns true if we copied anything</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:174</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html_a9de2b44cb9d920f5ac6229c03e7acb9e"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html#a9de2b44cb9d920f5ac6229c03e7acb9e">audio_tools::StreamCopyT::notifyMime</a></div><div class="ttdeci">void notifyMime(void *data, size_t len)</div><div class="ttdoc">Update the mime type.</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:294</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html_a9de2b44cb9d920f5ac6229c03e7acb9e"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html#a9de2b44cb9d920f5ac6229c03e7acb9e">audio_tools::StreamCopyT::notifyMime</a></div><div class="ttdeci">void notifyMime(void *data, size_t len)</div><div class="ttdoc">Update the mime type.</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:295</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html_ab30bc84f9ea0a116951f3ad2a281c54f"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html#ab30bc84f9ea0a116951f3ad2a281c54f">audio_tools::StreamCopyT::bufferSize</a></div><div class="ttdeci">int bufferSize()</div><div class="ttdoc">Provides the buffer size.</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:231</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html_aba348716f2d6eb5b35c12a7aed42cd4b"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html#aba348716f2d6eb5b35c12a7aed42cd4b">audio_tools::StreamCopyT::setMimeCallback</a></div><div class="ttdeci">void setMimeCallback(void(*callback)(const char *))</div><div class="ttdoc">Define the callback that will notify about mime changes.</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:208</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html_aba7dbc8829c1916f43311fc9053fec44"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html#aba7dbc8829c1916f43311fc9053fec44">audio_tools::StreamCopyT::setAvailableCallback</a></div><div class="ttdeci">void setAvailableCallback(int(*callback)(Stream *stream))</div><div class="ttdoc">Defines a callback that provides the available bytes at the source.</div><div class="ttdef"><b>Definition:</b> AudioCopy.h:221</div></div>
