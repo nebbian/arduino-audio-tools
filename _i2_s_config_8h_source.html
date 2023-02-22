@@ -177,20 +177,22 @@ $(function() {
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      LOGI(<span class="stringliteral">&quot;buffer_size:%d&quot;</span>,buffer_size);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      LOGI(<span class="stringliteral">&quot;pin_bck: %d&quot;</span>, pin_bck);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      LOGI(<span class="stringliteral">&quot;pin_ws: %d&quot;</span>, pin_ws);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      LOGI(<span class="stringliteral">&quot;pin_data: %d&quot;</span>, pin_data);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classaudio__tools_1_1_i2_s_config.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a>==RXTX_MODE){</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        LOGI(<span class="stringliteral">&quot;pin_data_rx: %d&quot;</span>, pin_data_rx);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keywordflow">if</span> (pin_bck!=-1)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        LOGI(<span class="stringliteral">&quot;pin_bck: %d&quot;</span>, pin_bck);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">if</span> (pin_ws!=-1)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        LOGI(<span class="stringliteral">&quot;pin_ws: %d&quot;</span>, pin_ws);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">if</span> (pin_data!=-1)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        LOGI(<span class="stringliteral">&quot;pin_data: %d&quot;</span>, pin_data);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="keywordflow">if</span> (pin_data_rx!=-1 &amp;&amp; <a class="code" href="classaudio__tools_1_1_i2_s_config.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a>==RXTX_MODE){</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        LOGI(<span class="stringliteral">&quot;pin_data_rx: %d&quot;</span>, pin_data_rx);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;};</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_html"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config.html">audio_tools::I2SConfig</a></div><div class="ttdoc">configuration for all common i2s settings</div><div class="ttdef"><b>Definition:</b> I2SConfig.h:38</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_html_a121806f3861b13229ad26d0b33497cab"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config.html#a121806f3861b13229ad26d0b33497cab">audio_tools::I2SConfig::I2SConfig</a></div><div class="ttdeci">I2SConfig(const I2SConfig &amp;cfg)=default</div><div class="ttdoc">Default Copy Constructor.</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_html_a31a454d24fb1f4d74779a0ff668d54cc"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config.html#a31a454d24fb1f4d74779a0ff668d54cc">audio_tools::I2SConfig::rx_tx_mode</a></div><div class="ttdeci">RxTxMode rx_tx_mode</div><div class="ttdoc">public settings</div><div class="ttdef"><b>Definition:</b> I2SConfig.h:77</div></div>
