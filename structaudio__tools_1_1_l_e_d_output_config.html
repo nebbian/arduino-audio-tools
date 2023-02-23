@@ -77,14 +77,28 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a7288ed95e9f56c3ecce8ae4468f695f1"><td class="memItemLeft" align="right" valign="top"><a id="a7288ed95e9f56c3ecce8ae4468f695f1"></a>
-CHSV(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a7288ed95e9f56c3ecce8ae4468f695f1">color_callback</a> )(int <a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, int <a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, int magnitude) = getColor</td></tr>
-<tr class="memdesc:a7288ed95e9f56c3ecce8ae4468f695f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">optinal custom logic to provide CHSV color: Prividing a 'rainbow' color with hue 0-255, saturating 0-255, and brightness (value) 0-255 (v2) <br /></td></tr>
+<tr class="memitem:a7288ed95e9f56c3ecce8ae4468f695f1"><td class="memItemLeft" align="right" valign="top">CHSV(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a7288ed95e9f56c3ecce8ae4468f695f1">color_callback</a> )(int <a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, int <a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, int magnitude) = <a class="el" href="namespaceaudio__tools.html#a7788a85ffcebdcf25ea71d8789d60e42">getDefaultColor</a></td></tr>
 <tr class="separator:a7288ed95e9f56c3ecce8ae4468f695f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf4308f236b87beb3c953ee1426467e5"><td class="memItemLeft" align="right" valign="top"><a id="aaf4308f236b87beb3c953ee1426467e5"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#aaf4308f236b87beb3c953ee1426467e5">update_callback</a> )(<a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html">LEDOutputConfig</a> *cfg, <a class="el" href="classaudio__tools_1_1_l_e_d_output.html">LEDOutput</a> *matrix, int max_y) = <a class="el" href="namespaceaudio__tools.html#aaca9825b335bf12cf63bf9103845e6b4">updateLEDOutput</a></td></tr>
-<tr class="memdesc:aaf4308f236b87beb3c953ee1426467e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom callback logic to update the LEDs - by default we use <a class="el" href="namespaceaudio__tools.html#aaca9825b335bf12cf63bf9103845e6b4" title="Default update implementation which provides the fft result as &quot;barchart&quot;.">updateLEDOutput()</a> <br /></td></tr>
-<tr class="separator:aaf4308f236b87beb3c953ee1426467e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b01b39dadcefeedf5dba96e198404d"><td class="memItemLeft" align="right" valign="top"><a id="a73b01b39dadcefeedf5dba96e198404d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a73b01b39dadcefeedf5dba96e198404d">fft_group_bin</a> = 1</td></tr>
+<tr class="memdesc:a73b01b39dadcefeedf5dba96e198404d"><td class="mdescLeft">&#160;</td><td class="mdescRight">group result by adding subsequent bins <br /></td></tr>
+<tr class="separator:a73b01b39dadcefeedf5dba96e198404d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad497bbb193dd1bdd692ca56937aa41df"><td class="memItemLeft" align="right" valign="top"><a id="ad497bbb193dd1bdd692ca56937aa41df"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#ad497bbb193dd1bdd692ca56937aa41df">fft_max_magnitude</a> = 700</td></tr>
+<tr class="memdesc:ad497bbb193dd1bdd692ca56937aa41df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Influences the senitivity. <br /></td></tr>
+<tr class="separator:ad497bbb193dd1bdd692ca56937aa41df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bb26f83cc9e2a5a64ed305d9bb3a4fb"><td class="memItemLeft" align="right" valign="top"><a id="a9bb26f83cc9e2a5a64ed305d9bb3a4fb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a9bb26f83cc9e2a5a64ed305d9bb3a4fb">fft_start_bin</a> = 0</td></tr>
+<tr class="memdesc:a9bb26f83cc9e2a5a64ed305d9bb3a4fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">start bin which is displayed <br /></td></tr>
+<tr class="separator:a9bb26f83cc9e2a5a64ed305d9bb3a4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4781439c4274b50df13999b38a283c57"><td class="memItemLeft" align="right" valign="top"><a id="a4781439c4274b50df13999b38a283c57"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_matrix_vertical</b> = true</td></tr>
+<tr class="separator:a4781439c4274b50df13999b38a283c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f9da4cf362fade792bc7b91a77440b2"><td class="memItemLeft" align="right" valign="top"><a id="a2f9da4cf362fade792bc7b91a77440b2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_serpentine_layout</b> = true</td></tr>
+<tr class="separator:a2f9da4cf362fade792bc7b91a77440b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407f72286192d582e451c779a24eee24"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a407f72286192d582e451c779a24eee24">update_callback</a> )(<a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html">LEDOutputConfig</a> *cfg, <a class="el" href="classaudio__tools_1_1_l_e_d_output.html">LEDOutput</a> *matrix) = nullptr</td></tr>
+<tr class="separator:a407f72286192d582e451c779a24eee24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a637858590a54f57f8ce05bb395cc8798"><td class="memItemLeft" align="right" valign="top"><a id="a637858590a54f57f8ce05bb395cc8798"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a637858590a54f57f8ce05bb395cc8798">update_frequency</a> = 1</td></tr>
 <tr class="memdesc:a637858590a54f57f8ce05bb395cc8798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the leds only ever nth call. <br /></td></tr>
@@ -94,13 +108,44 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struc
 <tr class="memdesc:a6150e0515f7202e2fb518f7206ed97dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of leds in x direction. <br /></td></tr>
 <tr class="separator:a6150e0515f7202e2fb518f7206ed97dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a2f84ed7838f07779ae24c5a9086d33"><td class="memItemLeft" align="right" valign="top"><a id="a0a2f84ed7838f07779ae24c5a9086d33"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a> = 0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a> = 1</td></tr>
 <tr class="memdesc:a0a2f84ed7838f07779ae24c5a9086d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of leds in y direction. <br /></td></tr>
 <tr class="separator:a0a2f84ed7838f07779ae24c5a9086d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>LED Matrix Configuration. Provide the number of leds in x and y direction and the data pin. </p><dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7288ed95e9f56c3ecce8ae4468f695f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7288ed95e9f56c3ecce8ae4468f695f1">&#9670;&nbsp;</a></span>color_callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CHSV(* color_callback) (int <a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, int <a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, int magnitude) = <a class="el" href="namespaceaudio__tools.html#a7788a85ffcebdcf25ea71d8789d60e42">getDefaultColor</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>optinal custom logic to provide CHSV color: Prividing a 'rainbow' color with hue 0-255, saturating 0-255, and brightness (value) 0-255 (v2) </p>
+
+</div>
+</div>
+<a id="a407f72286192d582e451c779a24eee24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a407f72286192d582e451c779a24eee24">&#9670;&nbsp;</a></span>update_callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* update_callback) (<a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html">LEDOutputConfig</a> *cfg, <a class="el" href="classaudio__tools_1_1_l_e_d_output.html">LEDOutput</a> *matrix) = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Custom callback logic to update the LEDs - by default we use <a class="el" href="namespaceaudio__tools.html#a95b23c6de7556f7c41facc4fa6994c81" title="Default update implementation which provides the fft result as &quot;barchart&quot;.">fftLEDOutput()</a> </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/AudioLibs/<a class="el" href="_l_e_d_output_8h_source.html">LEDOutput.h</a></li>
 </ul>
 </div><!-- contents -->
