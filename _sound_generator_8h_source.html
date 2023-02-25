@@ -530,9 +530,9 @@ $(function() {
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        index_increment = inc;</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    }</div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160; </div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    <span class="comment">// Sets up a sine table - returns</span></div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <span class="keywordtype">int</span> setupSine(<span class="keywordtype">int</span> sampleRate, <span class="keywordtype">int</span> reqFrequency, <span class="keywordtype">float</span> amplitude=1.0){</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;        <span class="keywordtype">int</span> sample_count = sampleRate / reqFrequency  ; <span class="comment">// e.g.  44100 / 300hz = 147 samples per wave</span></div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    <span class="comment">// Sets up a sine table - returns the effective frequency</span></div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <span class="keywordtype">int</span> setupSine(<span class="keywordtype">int</span> sampleRate, <span class="keywordtype">float</span> reqFrequency, <span class="keywordtype">float</span> amplitude=1.0){</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;        <span class="keywordtype">int</span> sample_count = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(sampleRate) / reqFrequency; <span class="comment">// e.g.  44100 / 300hz = 147 samples per wave</span></div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;        <span class="keywordtype">float</span> angle = 2.0*PI / sample_count; </div>
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        table = <span class="keyword">new</span> T[sample_count];</div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j&lt;sample_count;j++){</div>
