@@ -95,9 +95,12 @@ Inheritance diagram for FilteredStream&lt; T, TF &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad4dabeb50c943cee60d9fca0bf30a1d6"><td class="memItemLeft" align="right" valign="top"><a id="ad4dabeb50c943cee60d9fca0bf30a1d6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FilteredStream</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream, int channels=2)</td></tr>
-<tr class="separator:ad4dabeb50c943cee60d9fca0bf30a1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a830ec206811d0ed9e0e77edf2d931f2f"><td class="memItemLeft" align="right" valign="top"><a id="a830ec206811d0ed9e0e77edf2d931f2f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FilteredStream</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream)</td></tr>
+<tr class="separator:a830ec206811d0ed9e0e77edf2d931f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a751ccd9d933af9ecf5308d1dbb0b754f"><td class="memItemLeft" align="right" valign="top"><a id="a751ccd9d933af9ecf5308d1dbb0b754f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FilteredStream</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream, int channels)</td></tr>
+<tr class="separator:a751ccd9d933af9ecf5308d1dbb0b754f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d69e9eb602f9fc58dcee84007813554"><td class="memItemLeft" align="right" valign="top"><a id="a2d69e9eb602f9fc58dcee84007813554"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
 <tr class="separator:a2d69e9eb602f9fc58dcee84007813554"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,9 +110,12 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> 
 <tr class="memitem:a6ff0d6d1b0f3f9b652c9d5298ed0863c"><td class="memItemLeft" align="right" valign="top"><a id="a6ff0d6d1b0f3f9b652c9d5298ed0863c"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> () override</td></tr>
 <tr class="separator:a6ff0d6d1b0f3f9b652c9d5298ed0863c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba365cc28eb702040c382646cfb0a7a"><td class="memItemLeft" align="right" valign="top"><a id="acba365cc28eb702040c382646cfb0a7a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () override</td></tr>
+<tr class="separator:acba365cc28eb702040c382646cfb0a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab46c0ae7d3980c826efcf5ee8fb89b"><td class="memItemLeft" align="right" valign="top"><a id="aaab46c0ae7d3980c826efcf5ee8fb89b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info)</td></tr>
+<tr class="separator:aaab46c0ae7d3980c826efcf5ee8fb89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,9 +131,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint
 <tr class="memitem:ab7887161ce1f9436b161f6f6842a5116"><td class="memItemLeft" align="right" valign="top"><a id="ab7887161ce1f9436b161f6f6842a5116"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info) override</td></tr>
 <tr class="separator:ab7887161ce1f9436b161f6f6842a5116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa150bce25b70367e98b23fe01e44cae3"><td class="memItemLeft" align="right" valign="top"><a id="aa150bce25b70367e98b23fe01e44cae3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_filtered_stream.html#aa150bce25b70367e98b23fe01e44cae3">setFilter</a> (int channel, <a class="el" href="classaudio__tools_1_1_filter.html">Filter</a>&lt; TF &gt; *filter)</td></tr>
-<tr class="memdesc:aa150bce25b70367e98b23fe01e44cae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">defines the filter for an individual channel - the first channel is 0 <br /></td></tr>
+<tr class="memitem:aa150bce25b70367e98b23fe01e44cae3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_filtered_stream.html#aa150bce25b70367e98b23fe01e44cae3">setFilter</a> (int channel, <a class="el" href="classaudio__tools_1_1_filter.html">Filter</a>&lt; TF &gt; *filter)</td></tr>
 <tr class="separator:aa150bce25b70367e98b23fe01e44cae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26271bd0c9c22550dccdf5b8a3fa4ef0"><td class="memItemLeft" align="right" valign="top"><a id="a26271bd0c9c22550dccdf5b8a3fa4ef0"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi) override</td></tr>
@@ -153,7 +157,7 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported<
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a178795099d0608972755dfef8d8367e3"><td class="memItemLeft" align="right" valign="top"><a id="a178795099d0608972755dfef8d8367e3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b> =0</td></tr>
 <tr class="separator:a178795099d0608972755dfef8d8367e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"><td class="memItemLeft" align="right" valign="top"><a id="abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"></a>
 <a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
@@ -179,6 +183,43 @@ class audio_tools::FilteredStream&lt; T, TF &gt;</h3>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa150bce25b70367e98b23fe01e44cae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa150bce25b70367e98b23fe01e44cae3">&#9670;&nbsp;</a></span>setFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFilter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_filter.html">Filter</a>&lt; TF &gt; *&#160;</td>
+          <td class="paramname"><em>filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>defines the filter for an individual channel - the first channel is 0. The number of channels must have been defined before we can call this function. </p>
+
+</div>
+</div>
 <a id="ad89418aeb557f65a8f1a0aed755633b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad89418aeb557f65a8f1a0aed755633b1">&#9670;&nbsp;</a></span>writeSilence()</h2>
 
