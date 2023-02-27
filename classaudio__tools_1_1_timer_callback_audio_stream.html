@@ -182,9 +182,9 @@ Protected Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_callback_audio_stream.html#a7aa7718b1f3579d03c244a597cd03b85">measureSampleRate</a> ()</td></tr>
 <tr class="memdesc:a7aa7718b1f3579d03c244a597cd03b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates the effective sample rate <br /></td></tr>
 <tr class="separator:a7aa7718b1f3579d03c244a597cd03b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memItemLeft" align="right" valign="top"><a id="ae8b36f594a1e3aaaf9737aabb7c95ba3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out)</td></tr>
-<tr class="separator:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
+<tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64b567cc75ab07671737cb63d0b32064"><td class="memItemLeft" align="right" valign="top"><a id="a64b567cc75ab07671737cb63d0b32064"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_callback_audio_stream.html#a64b567cc75ab07671737cb63d0b32064">notifyAudioChange</a> ()</td></tr>
 <tr class="memdesc:a64b567cc75ab07671737cb63d0b32064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update Audio Information in target device. <br /></td></tr>
@@ -199,6 +199,9 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readExt</b>
 <tr class="memitem:a55a92a02360355337f5b149add054789"><td class="memItemLeft" align="right" valign="top"><a id="a55a92a02360355337f5b149add054789"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refill</b> ()</td></tr>
 <tr class="separator:a55a92a02360355337f5b149add054789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
+<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3201bd75f4c89ad3c626f54339d30a4f"><td class="memItemLeft" align="right" valign="top"><a id="a3201bd75f4c89ad3c626f54339d30a4f"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>writeExt</b> (const uint8_t *data, size_t len) override</td></tr>
 <tr class="separator:a3201bd75f4c89ad3c626f54339d30a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,9 +256,12 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>time</b> = 0</td>
 <tr class="memitem:abe83fbab97ebb1f0584ef3885f0cbf72"><td class="memItemLeft" align="right" valign="top"><a id="abe83fbab97ebb1f0584ef3885f0cbf72"></a>
 <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html">TimerAlarmRepeating</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b> = nullptr</td></tr>
 <tr class="separator:abe83fbab97ebb1f0584ef3885f0cbf72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
-<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
+<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
+<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>

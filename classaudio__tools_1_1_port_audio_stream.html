@@ -152,9 +152,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac83ba29faf1fb8c5f54ebdbfaa74d4a8"><td class="memItemLeft" align="right" valign="top"><a id="ac83ba29faf1fb8c5f54ebdbfaa74d4a8"></a>
 PaSampleFormat&#160;</td><td class="memItemRight" valign="bottom"><b>getFormat</b> (int bitLength)</td></tr>
 <tr class="separator:ac83ba29faf1fb8c5f54ebdbfaa74d4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memItemLeft" align="right" valign="top"><a id="ae8b36f594a1e3aaaf9737aabb7c95ba3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out)</td></tr>
-<tr class="separator:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
+<tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
+<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93f422be18f883e2f9b2d99b360a8218"><td class="memItemLeft" align="right" valign="top"><a id="a93f422be18f883e2f9b2d99b360a8218"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_port_audio_stream.html#a93f422be18f883e2f9b2d99b360a8218">startStream</a> ()</td></tr>
 <tr class="memdesc:a93f422be18f883e2f9b2d99b360a8218"><td class="mdescLeft">&#160;</td><td class="mdescRight">automatically start the stream when we start to get data <br /></td></tr>
@@ -180,9 +183,12 @@ PaStream *&#160;</td><td class="memItemRight" valign="bottom"><b>stream</b> = nu
 <tr class="memitem:a37947ef603a1ab53519bb124b5579c9b"><td class="memItemLeft" align="right" valign="top"><a id="a37947ef603a1ab53519bb124b5579c9b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>stream_started</b> = false</td></tr>
 <tr class="separator:a37947ef603a1ab53519bb124b5579c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
-<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
+<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
+<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Arduino Audio <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> using PortAudio. </p>

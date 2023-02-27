@@ -167,15 +167,18 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memItemLeft" align="right" valign="top"><a id="ae8b36f594a1e3aaaf9737aabb7c95ba3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out)</td></tr>
-<tr class="separator:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
+<tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a924ad6e4a6fd56fb42157c8d0e20ebbd"><td class="memItemLeft" align="right" valign="top"><a id="a924ad6e4a6fd56fb42157c8d0e20ebbd"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readExt</b> (uint8_t *data, size_t len) override</td></tr>
 <tr class="separator:a924ad6e4a6fd56fb42157c8d0e20ebbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55a92a02360355337f5b149add054789"><td class="memItemLeft" align="right" valign="top"><a id="a55a92a02360355337f5b149add054789"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refill</b> ()</td></tr>
 <tr class="separator:a55a92a02360355337f5b149add054789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
+<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3201bd75f4c89ad3c626f54339d30a4f"><td class="memItemLeft" align="right" valign="top"><a id="a3201bd75f4c89ad3c626f54339d30a4f"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>writeExt</b> (const uint8_t *data, size_t len) override</td></tr>
 <tr class="separator:a3201bd75f4c89ad3c626f54339d30a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,9 +200,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_measure</b></td></
 <tr class="memitem:a639e65bbd749de17060d658eb233f72b"><td class="memItemLeft" align="right" valign="top"><a id="a639e65bbd749de17060d658eb233f72b"></a>
 unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>timeout</b> = 0</td></tr>
 <tr class="separator:a639e65bbd749de17060d658eb233f72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
-<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
+<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
+<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fab45bb4d7cd7e889bdf00080096e8e"><td class="memItemLeft" align="right" valign="top"><a id="a3fab45bb4d7cd7e889bdf00080096e8e"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>total</b> = 0</td></tr>
 <tr class="separator:a3fab45bb4d7cd7e889bdf00080096e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>

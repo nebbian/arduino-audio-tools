@@ -191,13 +191,16 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEOS</b> ()</td></tr
 <tr class="memitem:af76b7b46958dabf5e4ee9a492f0ec3fa"><td class="memItemLeft" align="right" valign="top"><a id="af76b7b46958dabf5e4ee9a492f0ec3fa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>login</b> ()</td></tr>
 <tr class="separator:af76b7b46958dabf5e4ee9a492f0ec3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memItemLeft" align="right" valign="top"><a id="ae8b36f594a1e3aaaf9737aabb7c95ba3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out)</td></tr>
-<tr class="separator:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
+<tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa492fdf944a90814322e4df12889b271"><td class="memItemLeft" align="right" valign="top"><a id="aa492fdf944a90814322e4df12889b271"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#aa492fdf944a90814322e4df12889b271">process</a> (MethodID action, <a class="el" href="classaudio__tools_1_1_url.html">Url</a> &amp;url, const char *reqMime, const char *reqData, int len=-1)</td></tr>
 <tr class="memdesc:aa492fdf944a90814322e4df12889b271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the Http request and handle redirects. <br /></td></tr>
 <tr class="separator:aa492fdf944a90814322e4df12889b271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
+<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f1b0c2e6131663280f059ac45c37e6e"><td class="memItemLeft" align="right" valign="top"><a id="a3f1b0c2e6131663280f059ac45c37e6e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeouts</b> ()</td></tr>
 <tr class="separator:a3f1b0c2e6131663280f059ac45c37e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,9 +259,12 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_size</b></td
 <tr class="memitem:a37363161b41c4165b98cba7abc7a9d95"><td class="memItemLeft" align="right" valign="top"><a id="a37363161b41c4165b98cba7abc7a9d95"></a>
 long&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
 <tr class="separator:a37363161b41c4165b98cba7abc7a9d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
-<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
+<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
+<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a359f7cd186c81e78ba53481f85972412"><td class="memItemLeft" align="right" valign="top"><a id="a359f7cd186c81e78ba53481f85972412"></a>
 long&#160;</td><td class="memItemRight" valign="bottom"><b>total_read</b></td></tr>
 <tr class="separator:a359f7cd186c81e78ba53481f85972412"><td class="memSeparator" colspan="2">&#160;</td></tr>

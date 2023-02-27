@@ -275,9 +275,12 @@ Protected Member Functions</h2></td></tr>
 AudioActions::ActiveLogic&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_kit_stream.html#a429791ee6aa07d099b1e2df39b688507">getActionLogic</a> (int pin)</td></tr>
 <tr class="memdesc:a429791ee6aa07d099b1e2df39b688507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the action logic (ActiveLow or ActiveTouch) for the pin. <br /></td></tr>
 <tr class="separator:a429791ee6aa07d099b1e2df39b688507"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memItemLeft" align="right" valign="top"><a id="ae8b36f594a1e3aaaf9737aabb7c95ba3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out)</td></tr>
-<tr class="separator:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
+<tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
+<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb0b64a019aabee31715293f5196d3a3"><td class="memItemLeft" align="right" valign="top"><a id="abb0b64a019aabee31715293f5196d3a3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_kit_stream.html#abb0b64a019aabee31715293f5196d3a3">setupActions</a> ()</td></tr>
 <tr class="memdesc:abb0b64a019aabee31715293f5196d3a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the supported default actions. <br /></td></tr>
@@ -312,9 +315,12 @@ AudioKit&#160;</td><td class="memItemRight" valign="bottom"><b>kit</b></td></tr>
 <tr class="memitem:a55593fb098b50040bc63f28fa32e995a"><td class="memItemLeft" align="right" valign="top"><a id="a55593fb098b50040bc63f28fa32e995a"></a>
 <a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a55593fb098b50040bc63f28fa32e995a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
-<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
+<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
+<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9d5f2133600d11a1551585d3968b9b8"><td class="memItemLeft" align="right" valign="top"><a id="aa9d5f2133600d11a1551585d3968b9b8"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>volume_value</b> = 40</td></tr>
 <tr class="separator:aa9d5f2133600d11a1551585d3968b9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>

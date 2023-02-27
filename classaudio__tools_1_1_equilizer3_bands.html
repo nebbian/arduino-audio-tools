@@ -170,9 +170,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3f0f543f4a52bd9981574a68a2f39ef8"><td class="memItemLeft" align="right" valign="top"><a id="a3f0f543f4a52bd9981574a68a2f39ef8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>filterSamples</b> (const uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a3f0f543f4a52bd9981574a68a2f39ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memItemLeft" align="right" valign="top"><a id="ae8b36f594a1e3aaaf9737aabb7c95ba3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out)</td></tr>
-<tr class="separator:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
+<tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
+<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50e57001857e732018eab102d83b5935"><td class="memItemLeft" align="right" valign="top"><a id="a50e57001857e732018eab102d83b5935"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>sample</b> (<a class="el" href="structaudio__tools_1_1_equilizer3_bands_1_1_e_q_s_t_a_t_e.html">EQSTATE</a> &amp;es, float sample)</td></tr>
 <tr class="separator:a50e57001857e732018eab102d83b5935"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,9 +220,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>max_state_count</b> =0
 <tr class="memitem:a6a43d530bb56f991af1abad83498a211"><td class="memItemLeft" align="right" valign="top"><a id="a6a43d530bb56f991af1abad83498a211"></a>
 struct <a class="el" href="structaudio__tools_1_1_equilizer3_bands_1_1_e_q_s_t_a_t_e.html">audio_tools::Equilizer3Bands::EQSTATE</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>state</b> =nullptr</td></tr>
 <tr class="separator:a6a43d530bb56f991af1abad83498a211"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
-<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
+<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
+<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c99f82cdda0c54b60b99cc55c10c3b6"><td class="memItemLeft" align="right" valign="top"><a id="a4c99f82cdda0c54b60b99cc55c10c3b6"></a>
 const float&#160;</td><td class="memItemRight" valign="bottom"><b>vsa</b> = (1.0 / 4294967295.0)</td></tr>
 <tr class="separator:a4c99f82cdda0c54b60b99cc55c10c3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>

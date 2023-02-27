@@ -357,12 +357,12 @@ $(function() {
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a16b7c68e75bd849fec2fa9dc33c5970a">EncodedAudioStream</a>(<a class="code" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> *ioStream, <a class="code" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> *<a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a11f7ddac5cfa81a408fd32a35875db47">decoder</a>) : <a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a042f1fd0af436c64d4c9175b47edde7f">EncodedAudioPrint</a>(ioStream, <a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a11f7ddac5cfa81a408fd32a35875db47">decoder</a>) { </div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="comment">// the indicated stream can be used as input</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">setInput</a>(ioStream);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a281977f67359f85e429e51feecf7d9f0">setStream</a>(ioStream);</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  }</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a16b7c68e75bd849fec2fa9dc33c5970a">EncodedAudioStream</a>(<a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> *ioStream, <a class="code" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> *<a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a11f7ddac5cfa81a408fd32a35875db47">decoder</a>) : <a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a042f1fd0af436c64d4c9175b47edde7f">EncodedAudioPrint</a>((<a class="code" href="classaudio__tools_1_1_print.html">Print</a>*)ioStream, <a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a11f7ddac5cfa81a408fd32a35875db47">decoder</a>) { </div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="comment">// the indicated stream can be used as input</span></div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">setInput</a>(ioStream);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a281977f67359f85e429e51feecf7d9f0">setStream</a>(ioStream);</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  }</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a16b7c68e75bd849fec2fa9dc33c5970a">EncodedAudioStream</a>(<a class="code" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> *<a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a11f7ddac5cfa81a408fd32a35875db47">decoder</a>) : <a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a042f1fd0af436c64d4c9175b47edde7f">EncodedAudioPrint</a>() { </div>
@@ -383,85 +383,90 @@ $(function() {
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
 <div class="line"><a name="l00435"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_encoded_audio_stream.html#a16b7c68e75bd849fec2fa9dc33c5970a">  435</a></span>&#160;  <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a16b7c68e75bd849fec2fa9dc33c5970a">EncodedAudioStream</a>() : <a class="code" href="classaudio__tools_1_1_encoded_audio_print.html">EncodedAudioPrint</a>() {}</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
-<div class="line"><a name="l00442"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">  442</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">setInput</a>(<a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> *ioStream){</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    p_stream = ioStream;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  }</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  <span class="keywordtype">void</span> setEncoder(<a class="code" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *<a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a1772c3a009a751e5eceb43fedb0c6c43">encoder</a>){</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    EncodedAudioPrint::setEncoder(<a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a1772c3a009a751e5eceb43fedb0c6c43">encoder</a>);</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    is_setup = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;  }</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  <span class="keywordtype">void</span> setDecoder(AudioDecoder *<a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a11f7ddac5cfa81a408fd32a35875db47">decoder</a>){</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    EncodedAudioPrint::setDecoder(<a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a11f7ddac5cfa81a408fd32a35875db47">decoder</a>);</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    is_setup = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  }</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160; </div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160; </div>
-<div class="line"><a name="l00459"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_encoded_audio_stream.html#ada388d17b93c54a1a0f6edddbe0953ab">  459</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#ada388d17b93c54a1a0f6edddbe0953ab">resize</a>(<span class="keywordtype">int</span> size){</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    decoded_buffer.resize(size);</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;  }</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
-<div class="line"><a name="l00464"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_encoded_audio_stream.html#a0fc3d585aa53859602ac79c9c421f2a9">  464</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a0fc3d585aa53859602ac79c9c421f2a9">resize</a>(){</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a0fc3d585aa53859602ac79c9c421f2a9">resize</a>(1024*10);</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;  }</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;  <span class="keywordtype">int</span> available()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordflow">if</span> (p_stream==<span class="keyword">nullptr</span>) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    decode(reqested_bytes);</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordflow">return</span> decoded_buffer.available();</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;  }</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160; </div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  <span class="keywordtype">size_t</span> readBytes(uint8_t *buffer, <span class="keywordtype">size_t</span> length)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <span class="keywordflow">if</span> (p_stream==<span class="keyword">nullptr</span>) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    decode(reqested_bytes);</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="keywordflow">return</span> decoded_buffer.readArray(buffer, length);</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;  }</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160; </div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;  RingBuffer&lt;uint8_t&gt; decoded_buffer{0}; </div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;  QueueStream&lt;uint8_t&gt; out_stream{decoded_buffer};</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;  Vector&lt;uint8_t&gt; copy_buffer{DEFAULT_BUFFER_SIZE};</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;  Stream *p_stream = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;  <span class="keywordtype">int</span> reqested_bytes = DEFAULT_BUFFER_SIZE;</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;  <span class="keywordtype">bool</span> is_setup = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;  <span class="keywordtype">int</span> max_read_count = 5;</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160; </div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;  <span class="comment">// Fill the decoded_buffer so that we have data for readBytes call</span></div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;  <span class="keywordtype">void</span> decode(<span class="keywordtype">int</span> requestedBytes){</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <span class="comment">// setup buffer once</span></div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    setupOnce();</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="comment">// fill decoded_buffer if we do not have enough data</span></div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <span class="keywordflow">if</span>(p_stream-&gt;available()&gt;0 &amp;&amp; decoded_buffer.available()&lt;reqested_bytes){</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j&lt;max_read_count;j++){</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;        <span class="keywordtype">int</span> bytes_read = p_stream-&gt;readBytes(copy_buffer.data(), DEFAULT_BUFFER_SIZE);</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        <span class="keywordtype">int</span> result = decoder_ptr-&gt;write(copy_buffer.data(), bytes_read);</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        <span class="keywordflow">if</span> (p_stream-&gt;available()==0 || decoded_buffer.available()&gt;=reqested_bytes){</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        }</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;      }</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    } </div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    LOGD(<span class="stringliteral">&quot;available decoded data %d&quot;</span>, decoded_buffer.available());</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;  }</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160; </div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;  <span class="keywordtype">void</span> setupOnce(){</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordflow">if</span> (!is_setup){</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;      is_setup = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;      LOGI(<span class="stringliteral">&quot;Setup reading support&quot;</span>);</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;      <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a0fc3d585aa53859602ac79c9c421f2a9">resize</a>();</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;      <span class="comment">// make sure the result goes to out_stream</span></div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;      decoder_ptr-&gt;setOutputStream(out_stream);</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;      writer_ptr = decoder_ptr;</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;      out_stream.<a class="code" href="classaudio__tools_1_1_queue_stream.html#a4d2a8f208d69989c8676b0c632c9ea5c">begin</a>();</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    }</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;  }</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;};</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160; </div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160; </div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">  438</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">setInput</a>(<a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> *ioStream){</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a281977f67359f85e429e51feecf7d9f0">setStream</a>(ioStream);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  }</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00443"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_encoded_audio_stream.html#a281977f67359f85e429e51feecf7d9f0">  443</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a281977f67359f85e429e51feecf7d9f0">setStream</a>(<a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> *ioStream){</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a45597b245106bdfe136907286731d651">EncodedAudioPrint::setStream</a>(ioStream);</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    p_stream = ioStream;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  }</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160; </div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  <span class="keywordtype">void</span> setEncoder(<a class="code" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *<a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a1772c3a009a751e5eceb43fedb0c6c43">encoder</a>){</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    EncodedAudioPrint::setEncoder(<a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a1772c3a009a751e5eceb43fedb0c6c43">encoder</a>);</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    is_setup = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  }</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160; </div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  <span class="keywordtype">void</span> setDecoder(AudioDecoder *<a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a11f7ddac5cfa81a408fd32a35875db47">decoder</a>){</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    EncodedAudioPrint::setDecoder(<a class="code" href="classaudio__tools_1_1_encoded_audio_print.html#a11f7ddac5cfa81a408fd32a35875db47">decoder</a>);</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    is_setup = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;  }</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160; </div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160; </div>
+<div class="line"><a name="l00461"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_encoded_audio_stream.html#ada388d17b93c54a1a0f6edddbe0953ab">  461</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#ada388d17b93c54a1a0f6edddbe0953ab">resize</a>(<span class="keywordtype">int</span> size){</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    decoded_buffer.resize(size);</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;  }</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160; </div>
+<div class="line"><a name="l00466"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_encoded_audio_stream.html#a0fc3d585aa53859602ac79c9c421f2a9">  466</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a0fc3d585aa53859602ac79c9c421f2a9">resize</a>(){</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a0fc3d585aa53859602ac79c9c421f2a9">resize</a>(1024*10);</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;  }</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160; </div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;  <span class="keywordtype">int</span> available()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordflow">if</span> (p_stream==<span class="keyword">nullptr</span>) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    decode(reqested_bytes);</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordflow">return</span> decoded_buffer.available();</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  }</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160; </div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;  <span class="keywordtype">size_t</span> readBytes(uint8_t *buffer, <span class="keywordtype">size_t</span> length)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="keywordflow">if</span> (p_stream==<span class="keyword">nullptr</span>) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    decode(reqested_bytes);</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    <span class="keywordflow">return</span> decoded_buffer.readArray(buffer, length);</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;  }</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160; </div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;  RingBuffer&lt;uint8_t&gt; decoded_buffer{0}; </div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;  QueueStream&lt;uint8_t&gt; out_stream{decoded_buffer};</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;  Vector&lt;uint8_t&gt; copy_buffer{DEFAULT_BUFFER_SIZE};</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;  Stream *p_stream = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;  <span class="keywordtype">int</span> reqested_bytes = DEFAULT_BUFFER_SIZE;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;  <span class="keywordtype">bool</span> is_setup = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;  <span class="keywordtype">int</span> max_read_count = 5;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160; </div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;  <span class="comment">// Fill the decoded_buffer so that we have data for readBytes call</span></div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;  <span class="keywordtype">void</span> decode(<span class="keywordtype">int</span> requestedBytes){</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="comment">// setup buffer once</span></div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    setupOnce();</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="comment">// fill decoded_buffer if we do not have enough data</span></div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="keywordflow">if</span>(p_stream-&gt;available()&gt;0 &amp;&amp; decoded_buffer.available()&lt;reqested_bytes){</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j&lt;max_read_count;j++){</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        <span class="keywordtype">int</span> bytes_read = p_stream-&gt;readBytes(copy_buffer.data(), DEFAULT_BUFFER_SIZE);</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        <span class="keywordtype">int</span> result = decoder_ptr-&gt;write(copy_buffer.data(), bytes_read);</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        <span class="keywordflow">if</span> (p_stream-&gt;available()==0 || decoded_buffer.available()&gt;=reqested_bytes){</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        }</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;      }</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    } </div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    LOGD(<span class="stringliteral">&quot;available decoded data %d&quot;</span>, decoded_buffer.available());</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;  }</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160; </div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;  <span class="keywordtype">void</span> setupOnce(){</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <span class="keywordflow">if</span> (!is_setup){</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;      is_setup = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;      LOGI(<span class="stringliteral">&quot;Setup reading support&quot;</span>);</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;      <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html#a0fc3d585aa53859602ac79c9c421f2a9">resize</a>();</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;      <span class="comment">// make sure the result goes to out_stream</span></div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;      decoder_ptr-&gt;setOutputStream(out_stream);</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;      writer_ptr = decoder_ptr;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;      out_stream.<a class="code" href="classaudio__tools_1_1_queue_stream.html#a4d2a8f208d69989c8676b0c632c9ea5c">begin</a>();</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    }</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;  }</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;};</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160; </div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160; </div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_base_info_dependent_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_base_info_dependent.html">audio_tools::AudioBaseInfoDependent</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:73</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_base_info_source_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_base_info_source.html">audio_tools::AudioBaseInfoSource</a></div><div class="ttdoc">Supports the subscription to audio change notifications.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:86</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:16</div></div>
@@ -488,17 +493,18 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_print_html_af2416b6284de657da2d08005d10413e7"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_print.html#af2416b6284de657da2d08005d10413e7">audio_tools::EncodedAudioPrint::setOutput</a></div><div class="ttdeci">void setOutput(Print *outputStream)</div><div class="ttdoc">Defines the output.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:269</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_print_html_af249b568d0475827b5ff2691feb3a2a4"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_print.html#af249b568d0475827b5ff2691feb3a2a4">audio_tools::EncodedAudioPrint::EncodedAudioPrint</a></div><div class="ttdeci">EncodedAudioPrint(AudioPrint *outputStream, AudioDecoder *decoder)</div><div class="ttdoc">Constructor for AudioPrint with automatic notification of audio changes.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:166</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html">audio_tools::EncodedAudioStream</a></div><div class="ttdoc">A more natural Stream class to process encoded data (aac, wav, mp3...) which also supports the decodi...</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:377</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_a0fc3d585aa53859602ac79c9c421f2a9"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#a0fc3d585aa53859602ac79c9c421f2a9">audio_tools::EncodedAudioStream::resize</a></div><div class="ttdeci">void resize()</div><div class="ttdoc">setup default size for buffer</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:464</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_a0fc3d585aa53859602ac79c9c421f2a9"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#a0fc3d585aa53859602ac79c9c421f2a9">audio_tools::EncodedAudioStream::resize</a></div><div class="ttdeci">void resize()</div><div class="ttdoc">setup default size for buffer</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:466</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_a11eb6639c407b7954f387384e5d0ab93"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#a11eb6639c407b7954f387384e5d0ab93">audio_tools::EncodedAudioStream::EncodedAudioStream</a></div><div class="ttdeci">EncodedAudioStream(Print *outputStream, AudioDecoder *decoder)</div><div class="ttdoc">Construct a new Encoded Audio Stream object - used for decoding.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:412</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_a16b7c68e75bd849fec2fa9dc33c5970a"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#a16b7c68e75bd849fec2fa9dc33c5970a">audio_tools::EncodedAudioStream::EncodedAudioStream</a></div><div class="ttdeci">EncodedAudioStream()</div><div class="ttdoc">Construct a new Encoded Audio Stream object - the Output and Encoder/Decoder needs to be defined with...</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:435</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_a1dd1375a167000d90110d04ef74136f6"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#a1dd1375a167000d90110d04ef74136f6">audio_tools::EncodedAudioStream::EncodedAudioStream</a></div><div class="ttdeci">EncodedAudioStream(Print &amp;outputStream, AudioEncoder &amp;encoder)</div><div class="ttdoc">Construct a new Encoded Audio Stream object - used for encoding.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:420</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_a281977f67359f85e429e51feecf7d9f0"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#a281977f67359f85e429e51feecf7d9f0">audio_tools::EncodedAudioStream::setStream</a></div><div class="ttdeci">void setStream(Stream *ioStream)</div><div class="ttdoc">Defines the input/output stream for decoding.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:443</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_a4408383e19a143ebbbdd62765aed39f0"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#a4408383e19a143ebbbdd62765aed39f0">audio_tools::EncodedAudioStream::EncodedAudioStream</a></div><div class="ttdeci">EncodedAudioStream(AudioPrint *outputStream, AudioDecoder *decoder)</div><div class="ttdoc">Constructor for AudioPrint with automatic notification of audio changes.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:396</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_a6ae275e83d881d1ea494535b46ddef63"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#a6ae275e83d881d1ea494535b46ddef63">audio_tools::EncodedAudioStream::EncodedAudioStream</a></div><div class="ttdeci">EncodedAudioStream(Print &amp;outputStream, AudioDecoder &amp;decoder)</div><div class="ttdoc">Construct a new Encoded Stream object - used for decoding.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:404</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_ad3a5e0c03b2b973d374bdf6aa3fa1ab7"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#ad3a5e0c03b2b973d374bdf6aa3fa1ab7">audio_tools::EncodedAudioStream::EncodedAudioStream</a></div><div class="ttdeci">EncodedAudioStream(Print *outputStream, AudioEncoder *encoder)</div><div class="ttdoc">Construct a new Encoded Audio Stream object - used for encoding.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:428</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_ada388d17b93c54a1a0f6edddbe0953ab"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#ada388d17b93c54a1a0f6edddbe0953ab">audio_tools::EncodedAudioStream::resize</a></div><div class="ttdeci">void resize(int size)</div><div class="ttdoc">Defines the buffer size.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:459</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_af8124372afa43e8a096c4c63a2a99182"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">audio_tools::EncodedAudioStream::setInput</a></div><div class="ttdeci">void setInput(Stream *ioStream)</div><div class="ttdoc">Defines the input stream for decoding.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:442</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_ada388d17b93c54a1a0f6edddbe0953ab"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#ada388d17b93c54a1a0f6edddbe0953ab">audio_tools::EncodedAudioStream::resize</a></div><div class="ttdeci">void resize(int size)</div><div class="ttdoc">Defines the buffer size.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:461</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_af8124372afa43e8a096c4c63a2a99182"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">audio_tools::EncodedAudioStream::setInput</a></div><div class="ttdeci">void setInput(Stream *ioStream)</div><div class="ttdoc">Same as setStream()</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:438</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:33</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_queue_stream_html_a4d2a8f208d69989c8676b0c632c9ea5c"><div class="ttname"><a href="classaudio__tools_1_1_queue_stream.html#a4d2a8f208d69989c8676b0c632c9ea5c">audio_tools::QueueStream::begin</a></div><div class="ttdeci">virtual bool begin() override</div><div class="ttdoc">Activates the output.</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:847</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_queue_stream_html_a4d2a8f208d69989c8676b0c632c9ea5c"><div class="ttname"><a href="classaudio__tools_1_1_queue_stream.html#a4d2a8f208d69989c8676b0c632c9ea5c">audio_tools::QueueStream::begin</a></div><div class="ttdeci">virtual bool begin() override</div><div class="ttdoc">Activates the output.</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:867</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_stream.html">audio_tools::Stream</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:96</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_streaming_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_streaming_decoder.html">audio_tools::StreamingDecoder</a></div><div class="ttdoc">A Streaming Decoder where we provide both the input and output as streams.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:100</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_streaming_decoder_html_a09b4fd0a2bd2c7c07c01fd12ae456c98"><div class="ttname"><a href="classaudio__tools_1_1_streaming_decoder.html#a09b4fd0a2bd2c7c07c01fd12ae456c98">audio_tools::StreamingDecoder::copy</a></div><div class="ttdeci">virtual bool copy()=0</div><div class="ttdoc">Process a single read operation - to be called in the loop.</div></div>

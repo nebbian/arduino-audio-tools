@@ -183,9 +183,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEncrypted</b> ()</t
 <tr class="memitem:afa59114b543d792b546c5b199caffe37"><td class="memItemLeft" align="right" valign="top"><a id="afa59114b543d792b546c5b199caffe37"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mac2str</b> (const uint8_t *array)</td></tr>
 <tr class="separator:afa59114b543d792b546c5b199caffe37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memItemLeft" align="right" valign="top"><a id="ae8b36f594a1e3aaaf9737aabb7c95ba3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out)</td></tr>
-<tr class="separator:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
+<tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
+<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe741b368153256f1438d1e50b16599d"><td class="memItemLeft" align="right" valign="top"><a id="afe741b368153256f1438d1e50b16599d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>resetAvailableToWrite</b> ()</td></tr>
 <tr class="separator:afe741b368153256f1438d1e50b16599d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,9 +244,12 @@ esp_now_recv_cb_t&#160;</td><td class="memItemRight" valign="bottom"><b>receive<
 <tr class="memitem:a8117e9f429b2a4e92fac2d3ddc9fc057"><td class="memItemLeft" align="right" valign="top"><a id="a8117e9f429b2a4e92fac2d3ddc9fc057"></a>
 esp_now_send_cb_t&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> = default_send_cb</td></tr>
 <tr class="separator:a8117e9f429b2a4e92fac2d3ddc9fc057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
-<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
+<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
+<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1576de6fba3b84e81c8919de3142565a"><td class="memItemLeft" align="right" valign="top"><a id="a1576de6fba3b84e81c8919de3142565a"></a>
 _lock_t&#160;</td><td class="memItemRight" valign="bottom"><b>write_lock</b></td></tr>
 <tr class="separator:a1576de6fba3b84e81c8919de3142565a"><td class="memSeparator" colspan="2">&#160;</td></tr>

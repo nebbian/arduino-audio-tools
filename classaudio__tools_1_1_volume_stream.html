@@ -226,9 +226,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>cleanup</b> ()</td></
 <tr class="memitem:a006b1e9240e602ca418de6140a724e4a"><td class="memItemLeft" align="right" valign="top"><a id="a006b1e9240e602ca418de6140a724e4a"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>factorForChannel</b> (int channel)</td></tr>
 <tr class="separator:a006b1e9240e602ca418de6140a724e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memItemLeft" align="right" valign="top"><a id="ae8b36f594a1e3aaaf9737aabb7c95ba3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out)</td></tr>
-<tr class="separator:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
+<tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
+<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af421fb6fddc334d721ae23703c1688b0"><td class="memItemLeft" align="right" valign="top"><a id="af421fb6fddc334d721ae23703c1688b0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> (float vol)</td></tr>
 <tr class="separator:af421fb6fddc334d721ae23703c1688b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -274,9 +277,12 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>max_value</b> = 3276
 <tr class="memitem:aed324bde3b193d45cd47e12352f906d9"><td class="memItemLeft" align="right" valign="top"><a id="aed324bde3b193d45cd47e12352f906d9"></a>
 <a class="el" href="classaudio__tools_1_1_simulated_audio_pot.html">SimulatedAudioPot</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pot_vc</b></td></tr>
 <tr class="separator:aed324bde3b193d45cd47e12352f906d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
-<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
+<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
+<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8949c7a7ff752ba42a853ea78061ca2"><td class="memItemLeft" align="right" valign="top"><a id="ad8949c7a7ff752ba42a853ea78061ca2"></a>
 float *&#160;</td><td class="memItemRight" valign="bottom"><b>volume_values</b> = nullptr</td></tr>
 <tr class="separator:ad8949c7a7ff752ba42a853ea78061ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>

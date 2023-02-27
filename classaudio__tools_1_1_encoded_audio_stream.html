@@ -184,8 +184,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setDecoder</b> (<a cl
 <tr class="memitem:a55b5ec76948d05d4e2c78e93bc9ebdcb"><td class="memItemLeft" align="right" valign="top"><a id="a55b5ec76948d05d4e2c78e93bc9ebdcb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setEncoder</b> (<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *<a class="el" href="classaudio__tools_1_1_encoded_audio_print.html#a1772c3a009a751e5eceb43fedb0c6c43">encoder</a>)</td></tr>
 <tr class="separator:a55b5ec76948d05d4e2c78e93bc9ebdcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8124372afa43e8a096c4c63a2a99182"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">setInput</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *ioStream)</td></tr>
-<tr class="memdesc:af8124372afa43e8a096c4c63a2a99182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the input stream for decoding.  <a href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">More...</a><br /></td></tr>
+<tr class="memitem:af8124372afa43e8a096c4c63a2a99182"><td class="memItemLeft" align="right" valign="top"><a id="af8124372afa43e8a096c4c63a2a99182"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">setInput</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *ioStream)</td></tr>
+<tr class="memdesc:af8124372afa43e8a096c4c63a2a99182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#a281977f67359f85e429e51feecf7d9f0" title="Defines the input/output stream for decoding.">setStream()</a> <br /></td></tr>
 <tr class="separator:af8124372afa43e8a096c4c63a2a99182"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2514dcd36f69fa75df24c9d4f351f51f"><td class="memItemLeft" align="right" valign="top"><a id="a2514dcd36f69fa75df24c9d4f351f51f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_print.html#a2514dcd36f69fa75df24c9d4f351f51f">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi) override</td></tr>
@@ -199,6 +200,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_print.html#a45597b245106bdfe136907286731d651">setStream</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *outputStream)</td></tr>
 <tr class="memdesc:a45597b245106bdfe136907286731d651"><td class="mdescLeft">&#160;</td><td class="mdescRight">The same as setOutput. <br /></td></tr>
 <tr class="separator:a45597b245106bdfe136907286731d651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281977f67359f85e429e51feecf7d9f0"><td class="memItemLeft" align="right" valign="top"><a id="a281977f67359f85e429e51feecf7d9f0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#a281977f67359f85e429e51feecf7d9f0">setStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *ioStream)</td></tr>
+<tr class="memdesc:a281977f67359f85e429e51feecf7d9f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the input/output stream for decoding. <br /></td></tr>
+<tr class="separator:a281977f67359f85e429e51feecf7d9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d13ce67979fd03ea213f793e44d834"><td class="memItemLeft" align="right" valign="top"><a id="a02d13ce67979fd03ea213f793e44d834"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> &amp;info)</td></tr>
 <tr class="separator:a02d13ce67979fd03ea213f793e44d834"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,9 +222,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ad969655eb408f8108f32a537263d03fd"><td class="memItemLeft" align="right" valign="top"><a id="ad969655eb408f8108f32a537263d03fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>decode</b> (int requestedBytes)</td></tr>
 <tr class="separator:ad969655eb408f8108f32a537263d03fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memItemLeft" align="right" valign="top"><a id="ae8b36f594a1e3aaaf9737aabb7c95ba3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out)</td></tr>
-<tr class="separator:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
+<tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
+<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a00bb0fac690fce3e18911d2f31a247"><td class="memItemLeft" align="right" valign="top"><a id="a5a00bb0fac690fce3e18911d2f31a247"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setupOnce</b> ()</td></tr>
 <tr class="separator:a5a00bb0fac690fce3e18911d2f31a247"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,9 +273,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>max_read_count</b> = 5
 <tr class="memitem:a3b25483af87fab1f32b6691893e42321"><td class="memItemLeft" align="right" valign="top"><a id="a3b25483af87fab1f32b6691893e42321"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>reqested_bytes</b> = DEFAULT_BUFFER_SIZE</td></tr>
 <tr class="separator:a3b25483af87fab1f32b6691893e42321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
-<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
+<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
+<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5893e22e84a0f40d771d1d8d0cb8e070"><td class="memItemLeft" align="right" valign="top"><a id="a5893e22e84a0f40d771d1d8d0cb8e070"></a>
 <a class="el" href="classaudio__tools_1_1_audio_writer.html">AudioWriter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>writer_ptr</b> = nullptr</td></tr>
 <tr class="separator:a5893e22e84a0f40d771d1d8d0cb8e070"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -458,40 +469,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>reqested_bytes</b> = D
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af8124372afa43e8a096c4c63a2a99182"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8124372afa43e8a096c4c63a2a99182">&#9670;&nbsp;</a></span>setInput()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setInput </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td>
-          <td class="paramname"><em>ioStream</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Defines the input stream for decoding. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ioStream</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ad89418aeb557f65a8f1a0aed755633b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad89418aeb557f65a8f1a0aed755633b1">&#9670;&nbsp;</a></span>writeSilence()</h2>
 

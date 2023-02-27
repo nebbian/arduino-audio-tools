@@ -173,15 +173,18 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memItemLeft" align="right" valign="top"><a id="ae8b36f594a1e3aaaf9737aabb7c95ba3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out)</td></tr>
-<tr class="separator:ae8b36f594a1e3aaaf9737aabb7c95ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
+<tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09c2f569c46daffcc7000d7c82afb65a"><td class="memItemLeft" align="right" valign="top"><a id="a09c2f569c46daffcc7000d7c82afb65a"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readExt</b> (uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a09c2f569c46daffcc7000d7c82afb65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55a92a02360355337f5b149add054789"><td class="memItemLeft" align="right" valign="top"><a id="a55a92a02360355337f5b149add054789"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refill</b> ()</td></tr>
 <tr class="separator:a55a92a02360355337f5b149add054789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
+<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33490eea95be838e94ef53433b9021dc"><td class="memItemLeft" align="right" valign="top"><a id="a33490eea95be838e94ef53433b9021dc"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>writeExt</b> (const uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a33490eea95be838e94ef53433b9021dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,9 +206,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b></td></tr>
 <tr class="memitem:a55593fb098b50040bc63f28fa32e995a"><td class="memItemLeft" align="right" valign="top"><a id="a55593fb098b50040bc63f28fa32e995a"></a>
 <a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a55593fb098b50040bc63f28fa32e995a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
-<tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
+<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
+<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ESP8266Audio AudioOutput class which stores the data in a temporary buffer. The buffer can be consumed e.g. by a callback function by calling <a class="el" href="classaudio__tools_1_1_buffered_stream.html#a31e8f8111a9c57b7a2be72337ab07e0e" title="reads a byte - to be avoided">read()</a>;. </p>
