@@ -469,7 +469,7 @@ $(function() {
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            <span class="keywordflow">if</span> (p_input_stream == <span class="keyword">nullptr</span> || <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>() &gt; timeout) {</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                fade.setFadeInActive(<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                <span class="keywordflow">if</span> (autonext) {</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                    LOGW(<span class="stringliteral">&quot;-&gt; timeout - moving by %d&quot;</span>, steam_increment);</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                    LOGI(<span class="stringliteral">&quot;-&gt; timeout - moving by %d&quot;</span>, steam_increment);</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                    <span class="comment">// open next stream</span></div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                    <span class="keywordflow">if</span> (!<a class="code" href="classaudio__tools_1_1_audio_player.html#a335f4f4ef919787f4d83f9de06caedb8">next</a>(steam_increment)) {</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                        LOGD(<span class="stringliteral">&quot;stream is null&quot;</span>);</div>
