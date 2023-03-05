@@ -465,48 +465,49 @@ $(function() {
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <span class="keywordtype">void</span> moveToNextFileOnTimeout(){</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            <span class="keywordflow">if</span> (p_final_stream-&gt;availableForWrite()==0) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            <span class="keywordflow">if</span> (p_input_stream == <span class="keyword">nullptr</span> || <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>() &gt; timeout) {</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                fade.setFadeInActive(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                <span class="keywordflow">if</span> (autonext) {</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                    LOGI(<span class="stringliteral">&quot;-&gt; timeout - moving by %d&quot;</span>, steam_increment);</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                    <span class="comment">// open next stream</span></div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                    <span class="keywordflow">if</span> (!<a class="code" href="classaudio__tools_1_1_audio_player.html#a335f4f4ef919787f4d83f9de06caedb8">next</a>(steam_increment)) {</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                        LOGD(<span class="stringliteral">&quot;stream is null&quot;</span>);</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                    }</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                    active = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                }</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                timeout = <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>() + p_source-&gt;<a class="code" href="classaudio__tools_1_1_audio_source.html#ac20e50555537a80d3d535eb2225cc738">timeoutAutoNext</a>();</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;            }</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        }</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160; </div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            <span class="keywordflow">if</span> (p_final_stream==<span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            <span class="keywordflow">if</span> (p_final_stream-&gt;availableForWrite()==0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;            <span class="keywordflow">if</span> (p_input_stream == <span class="keyword">nullptr</span> || <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>() &gt; timeout) {</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                fade.setFadeInActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                <span class="keywordflow">if</span> (autonext) {</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                    LOGI(<span class="stringliteral">&quot;-&gt; timeout - moving by %d&quot;</span>, steam_increment);</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                    <span class="comment">// open next stream</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                    <span class="keywordflow">if</span> (!<a class="code" href="classaudio__tools_1_1_audio_player.html#a335f4f4ef919787f4d83f9de06caedb8">next</a>(steam_increment)) {</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                        LOGD(<span class="stringliteral">&quot;stream is null&quot;</span>);</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                    }</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                    active = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                }</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                timeout = <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>() + p_source-&gt;<a class="code" href="classaudio__tools_1_1_audio_source.html#ac20e50555537a80d3d535eb2225cc738">timeoutAutoNext</a>();</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;            }</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        }</div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160; </div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;        <span class="keywordtype">void</span> writeEnd() {</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;            <span class="comment">// end silently</span></div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;            TRACEI();</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;            fade.setFadeOutActive(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;            copier.copy();</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;            <span class="comment">// start by fading in</span></div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;            fade.setFadeInActive(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;            <span class="comment">// restart the decoder to make sure it does not contain any audio when we continue</span></div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;            p_decoder-&gt;begin();</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        }</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160; </div>
-<div class="line"><a name="l00499"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_player.html#a061d2503580a033bd7c9e7edfc7df838">  499</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_audio_player.html#a061d2503580a033bd7c9e7edfc7df838">decodeMetaData</a>(<span class="keywordtype">void</span>* obj, <span class="keywordtype">void</span>* data, <span class="keywordtype">size_t</span> len) {</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;            LOGD(<span class="stringliteral">&quot;%s, %zu&quot;</span>, LOG_METHOD, len);</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;            <a class="code" href="classaudio__tools_1_1_audio_player.html">AudioPlayer</a>* p = (<a class="code" href="classaudio__tools_1_1_audio_player.html">AudioPlayer</a>*)obj;</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;            <span class="keywordflow">if</span> (p-&gt;meta_active) {</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;                p-&gt;meta_out.<a class="code" href="classaudio__tools_1_1_meta_data_i_d3.html#a0bc4cb6e5fbb01c214120c7a98ca47bb">write</a>((<span class="keyword">const</span> uint8_t*)data, len);</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;            }</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        }</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    };</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160; </div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;}</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160; </div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        <span class="keywordtype">void</span> writeEnd() {</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;            <span class="comment">// end silently</span></div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;            TRACEI();</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;            fade.setFadeOutActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;            copier.copy();</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;            <span class="comment">// start by fading in</span></div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;            fade.setFadeInActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;            <span class="comment">// restart the decoder to make sure it does not contain any audio when we continue</span></div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;            p_decoder-&gt;begin();</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        }</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160; </div>
+<div class="line"><a name="l00500"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_player.html#a061d2503580a033bd7c9e7edfc7df838">  500</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_audio_player.html#a061d2503580a033bd7c9e7edfc7df838">decodeMetaData</a>(<span class="keywordtype">void</span>* obj, <span class="keywordtype">void</span>* data, <span class="keywordtype">size_t</span> len) {</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;            LOGD(<span class="stringliteral">&quot;%s, %zu&quot;</span>, LOG_METHOD, len);</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;            <a class="code" href="classaudio__tools_1_1_audio_player.html">AudioPlayer</a>* p = (<a class="code" href="classaudio__tools_1_1_audio_player.html">AudioPlayer</a>*)obj;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;            <span class="keywordflow">if</span> (p-&gt;meta_active) {</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;                p-&gt;meta_out.<a class="code" href="classaudio__tools_1_1_meta_data_i_d3.html#a0bc4cb6e5fbb01c214120c7a98ca47bb">write</a>((<span class="keyword">const</span> uint8_t*)data, len);</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;            }</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        }</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    };</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160; </div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;}</div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_base_info_dependent_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_base_info_dependent.html">audio_tools::AudioBaseInfoDependent</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:73</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:16</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_player_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_player.html">audio_tools::AudioPlayer</a></div><div class="ttdoc">Implements a simple audio player which supports the following commands:</div><div class="ttdef"><b>Definition:</b> AudioPlayer.h:40</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_player_html_a061d2503580a033bd7c9e7edfc7df838"><div class="ttname"><a href="classaudio__tools_1_1_audio_player.html#a061d2503580a033bd7c9e7edfc7df838">audio_tools::AudioPlayer::decodeMetaData</a></div><div class="ttdeci">static void decodeMetaData(void *obj, void *data, size_t len)</div><div class="ttdoc">Callback implementation which writes to metadata.</div><div class="ttdef"><b>Definition:</b> AudioPlayer.h:499</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_player_html_a061d2503580a033bd7c9e7edfc7df838"><div class="ttname"><a href="classaudio__tools_1_1_audio_player.html#a061d2503580a033bd7c9e7edfc7df838">audio_tools::AudioPlayer::decodeMetaData</a></div><div class="ttdeci">static void decodeMetaData(void *obj, void *data, size_t len)</div><div class="ttdoc">Callback implementation which writes to metadata.</div><div class="ttdef"><b>Definition:</b> AudioPlayer.h:500</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_player_html_a09cb3e95771e4f15bae41ca4fc335917"><div class="ttname"><a href="classaudio__tools_1_1_audio_player.html#a09cb3e95771e4f15bae41ca4fc335917">audio_tools::AudioPlayer::setAudioSource</a></div><div class="ttdeci">void setAudioSource(AudioSource &amp;source)</div><div class="ttdoc">(Re)defines the audio source</div><div class="ttdef"><b>Definition:</b> AudioPlayer.h:204</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_player_html_a0c9e8fc6b910ac6bd185da2642cbad4a"><div class="ttname"><a href="classaudio__tools_1_1_audio_player.html#a0c9e8fc6b910ac6bd185da2642cbad4a">audio_tools::AudioPlayer::setBufferSize</a></div><div class="ttdeci">virtual void setBufferSize(int size)</div><div class="ttdoc">Defines the number of bytes used by the copier.</div><div class="ttdef"><b>Definition:</b> AudioPlayer.h:143</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_player_html_a17a8ba5d0dba0571c267ef6e53847d7e"><div class="ttname"><a href="classaudio__tools_1_1_audio_player.html#a17a8ba5d0dba0571c267ef6e53847d7e">audio_tools::AudioPlayer::AudioPlayer</a></div><div class="ttdeci">AudioPlayer(AudioSource &amp;source, AudioStream &amp;output, AudioDecoder &amp;decoder)</div><div class="ttdoc">Construct a new Audio Player object. The processing chain is AudioSource -&gt; Stream -copy&gt; EncodedAudi...</div><div class="ttdef"><b>Definition:</b> AudioPlayer.h:91</div></div>
