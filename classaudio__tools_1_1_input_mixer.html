@@ -95,10 +95,10 @@ Inheritance diagram for InputMixer&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae191d1c122ecaaf42df5f9e707ca5645"><td class="memItemLeft" align="right" valign="top"><a id="ae191d1c122ecaaf42df5f9e707ca5645"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_input_mixer.html#ae191d1c122ecaaf42df5f9e707ca5645">add</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;in, float weight=1.0)</td></tr>
-<tr class="memdesc:ae191d1c122ecaaf42df5f9e707ca5645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new input stream. <br /></td></tr>
-<tr class="separator:ae191d1c122ecaaf42df5f9e707ca5645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1356c580c466754a5f6afeb4389b9672"><td class="memItemLeft" align="right" valign="top"><a id="a1356c580c466754a5f6afeb4389b9672"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_input_mixer.html#a1356c580c466754a5f6afeb4389b9672">add</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;in, int weight=100)</td></tr>
+<tr class="memdesc:a1356c580c466754a5f6afeb4389b9672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new input stream. <br /></td></tr>
+<tr class="separator:a1356c580c466754a5f6afeb4389b9672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d69e9eb602f9fc58dcee84007813554"><td class="memItemLeft" align="right" valign="top"><a id="a2d69e9eb602f9fc58dcee84007813554"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
 <tr class="separator:a2d69e9eb602f9fc58dcee84007813554"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,10 +134,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo<
 <tr class="memitem:a26271bd0c9c22550dccdf5b8a3fa4ef0"><td class="memItemLeft" align="right" valign="top"><a id="a26271bd0c9c22550dccdf5b8a3fa4ef0"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi) override</td></tr>
 <tr class="separator:a26271bd0c9c22550dccdf5b8a3fa4ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb80a48eb1817f480e52497f42b5d4e5"><td class="memItemLeft" align="right" valign="top"><a id="abb80a48eb1817f480e52497f42b5d4e5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_input_mixer.html#abb80a48eb1817f480e52497f42b5d4e5">setWeight</a> (int channel, float weight)</td></tr>
-<tr class="memdesc:abb80a48eb1817f480e52497f42b5d4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a new weight for the indicated channel: If you set it to 0 it is muted. <br /></td></tr>
-<tr class="separator:abb80a48eb1817f480e52497f42b5d4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af958d7d7ce83c9577da34c091d216aa3"><td class="memItemLeft" align="right" valign="top"><a id="af958d7d7ce83c9577da34c091d216aa3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_input_mixer.html#af958d7d7ce83c9577da34c091d216aa3">setWeight</a> (int channel, int weight)</td></tr>
+<tr class="memdesc:af958d7d7ce83c9577da34c091d216aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a new weight for the indicated channel: If you set it to 0 it is muted. We recommend to use values between 1 and 100. <br /></td></tr>
+<tr class="separator:af958d7d7ce83c9577da34c091d216aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4b57d21919c42d55af03391f91a1c08"><td class="memItemLeft" align="right" valign="top"><a id="af4b57d21919c42d55af03391f91a1c08"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_input_mixer.html#af4b57d21919c42d55af03391f91a1c08">size</a> ()</td></tr>
 <tr class="memdesc:af4b57d21919c42d55af03391f91a1c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of stremams to which are mixed together. <br /></td></tr>
@@ -159,12 +159,25 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af7fd645d38c04d58019ab175c1f6e2"><td class="memItemLeft" align="right" valign="top"><a id="a4af7fd645d38c04d58019ab175c1f6e2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_input_mixer.html#a4af7fd645d38c04d58019ab175c1f6e2">readBytesVector</a> (T *p_data, int byteCount)</td></tr>
+<tr class="memdesc:a4af7fd645d38c04d58019ab175c1f6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">mixing using a vector of samples <br /></td></tr>
+<tr class="separator:a4af7fd645d38c04d58019ab175c1f6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
 <tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0455637b36081f1ba87bb690fcf15ec"><td class="memItemLeft" align="right" valign="top"><a id="ad0455637b36081f1ba87bb690fcf15ec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resultAdd</b> (float fact)</td></tr>
+<tr class="separator:ad0455637b36081f1ba87bb690fcf15ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0ad99db310ab67c62cd0f279bde172e"><td class="memItemLeft" align="right" valign="top"><a id="af0ad99db310ab67c62cd0f279bde172e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resultClear</b> ()</td></tr>
+<tr class="separator:af0ad99db310ab67c62cd0f279bde172e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:ab01c22aa681150052ec3c45774aebbfa"><td class="memItemLeft" align="right" valign="top"><a id="ab01c22aa681150052ec3c45774aebbfa"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>current_vect</b></td></tr>
+<tr class="separator:ab01c22aa681150052ec3c45774aebbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad662aa56c1696f09c0ac6b97abafac6d"><td class="memItemLeft" align="right" valign="top"><a id="ad662aa56c1696f09c0ac6b97abafac6d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>frame_size</b> = 4</td></tr>
 <tr class="separator:ad662aa56c1696f09c0ac6b97abafac6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,6 +187,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>frame_size</b> = 4</td
 <tr class="memitem:a55593fb098b50040bc63f28fa32e995a"><td class="memItemLeft" align="right" valign="top"><a id="a55593fb098b50040bc63f28fa32e995a"></a>
 <a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a55593fb098b50040bc63f28fa32e995a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7edc465c04c259b0997bdb1986bb9c9"><td class="memItemLeft" align="right" valign="top"><a id="af7edc465c04c259b0997bdb1986bb9c9"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>result_vect</b></td></tr>
+<tr class="separator:af7edc465c04c259b0997bdb1986bb9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acccd8caa57125dfaf86d7383d6fbb643"><td class="memItemLeft" align="right" valign="top"><a id="acccd8caa57125dfaf86d7383d6fbb643"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>streams</b> {10}</td></tr>
 <tr class="separator:acccd8caa57125dfaf86d7383d6fbb643"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,12 +199,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>frame_size</b> = 4</td
 <tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
 <tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3633c87dfd30ef8d9151ee9a6b336a8"><td class="memItemLeft" align="right" valign="top"><a id="af3633c87dfd30ef8d9151ee9a6b336a8"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>total_weights</b> = 0.0</td></tr>
-<tr class="separator:af3633c87dfd30ef8d9151ee9a6b336a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a795dfff1dd7c7e2381cedf65cd292fd7"><td class="memItemLeft" align="right" valign="top"><a id="a795dfff1dd7c7e2381cedf65cd292fd7"></a>
-<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>weights</b> {10}</td></tr>
-<tr class="separator:a795dfff1dd7c7e2381cedf65cd292fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad1dc26d0c393fd7d1f08bb8870d564d"><td class="memItemLeft" align="right" valign="top"><a id="aad1dc26d0c393fd7d1f08bb8870d564d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>total_weights</b> = 0</td></tr>
+<tr class="separator:aad1dc26d0c393fd7d1f08bb8870d564d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7861c64fd6773c88d1782150b865fbb9"><td class="memItemLeft" align="right" valign="top"><a id="a7861c64fd6773c88d1782150b865fbb9"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>weights</b> {10}</td></tr>
+<tr class="separator:a7861c64fd6773c88d1782150b865fbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
