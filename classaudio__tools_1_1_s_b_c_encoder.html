@@ -92,21 +92,24 @@ Inheritance diagram for SBCEncoder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac23de49f65f66c9b1793db3ea90f0732"><td class="memItemLeft" align="right" valign="top"><a id="ac23de49f65f66c9b1793db3ea90f0732"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SBCEncoder</b> (int resultBufferSize=1024, int subbands=SBC_SB_8, int blocks=16, int bitpool=32, int snr=SBC_AM_LOUDNESS)</td></tr>
-<tr class="separator:ac23de49f65f66c9b1793db3ea90f0732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765f57d415ea68ced74d583033048394"><td class="memItemLeft" align="right" valign="top"><a id="a765f57d415ea68ced74d583033048394"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SBCEncoder</b> (int subbands=SBC_SB_8, int blocks=16, int bitpool=32, int snr=SBC_AM_LOUDNESS)</td></tr>
+<tr class="separator:a765f57d415ea68ced74d583033048394"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="memItemLeft" align="right" valign="top"><a id="ab0bdf5cca484fb2ba637c39384b27fb2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a714a06e061a0ef8f78f8db52141ceb23"><td class="memItemLeft" align="right" valign="top"><a id="a714a06e061a0ef8f78f8db52141ceb23"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> bi)</td></tr>
 <tr class="separator:a714a06e061a0ef8f78f8db52141ceb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4acc2555ecc44e12e20eec6974631c70"><td class="memItemLeft" align="right" valign="top"><a id="a4acc2555ecc44e12e20eec6974631c70"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>codeSize</b> ()</td></tr>
+<tr class="separator:a4acc2555ecc44e12e20eec6974631c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8721dea59e7d446cb9566766c9a073b0"><td class="memItemLeft" align="right" valign="top"><a id="a8721dea59e7d446cb9566766c9a073b0"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a8721dea59e7d446cb9566766c9a073b0">frameLength</a> ()</td></tr>
-<tr class="memdesc:a8721dea59e7d446cb9566766c9a073b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the frame length in bytes. <br /></td></tr>
+<tr class="memdesc:a8721dea59e7d446cb9566766c9a073b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the compressed length in bytes (after encoding) <br /></td></tr>
 <tr class="separator:a8721dea59e7d446cb9566766c9a073b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae25cee0d848eeb729a79fd46347a70da"><td class="memItemLeft" align="right" valign="top"><a id="ae25cee0d848eeb729a79fd46347a70da"></a>
 virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mime</b> ()</td></tr>
@@ -117,9 +120,21 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mime<
 <tr class="memitem:ad1f412532ae3278dd0af127c218b096e"><td class="memItemLeft" align="right" valign="top"><a id="ad1f412532ae3278dd0af127c218b096e"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info)</td></tr>
 <tr class="separator:ad1f412532ae3278dd0af127c218b096e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc8a8be313e8fb5d9c158225c3143dd6"><td class="memItemLeft" align="right" valign="top"><a id="acc8a8be313e8fb5d9c158225c3143dd6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setBitpool</b> (int bitpool)</td></tr>
+<tr class="separator:acc8a8be313e8fb5d9c158225c3143dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54432aa904b0e72a505d1f0596692c0f"><td class="memItemLeft" align="right" valign="top"><a id="a54432aa904b0e72a505d1f0596692c0f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlocks</b> (int blocks)</td></tr>
+<tr class="separator:a54432aa904b0e72a505d1f0596692c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade185bd4f49909ba863274df35c54901"><td class="memItemLeft" align="right" valign="top"><a id="ade185bd4f49909ba863274df35c54901"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
 <tr class="separator:ade185bd4f49909ba863274df35c54901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02eef665ae16e4ddee4f4dcdf9c6aec0"><td class="memItemLeft" align="right" valign="top"><a id="a02eef665ae16e4ddee4f4dcdf9c6aec0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSnr</b> (int snr)</td></tr>
+<tr class="separator:a02eef665ae16e4ddee4f4dcdf9c6aec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e66cdd854b56dfea563c75c1b041607"><td class="memItemLeft" align="right" valign="top"><a id="a4e66cdd854b56dfea563c75c1b041607"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSubbands</b> (int subbands)</td></tr>
+<tr class="separator:a4e66cdd854b56dfea563c75c1b041607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fc6997daf9355d8ea370fce2994e9c8"><td class="memItemLeft" align="right" valign="top"><a id="a1fc6997daf9355d8ea370fce2994e9c8"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *in_ptr, size_t in_size)</td></tr>
 <tr class="separator:a1fc6997daf9355d8ea370fce2994e9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,9 +157,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>bitpool</b> = 32</td><
 <tr class="memitem:ac5ebc9432ec58d54aff086e0b5137b2f"><td class="memItemLeft" align="right" valign="top"><a id="ac5ebc9432ec58d54aff086e0b5137b2f"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>blocks</b> = 4</td></tr>
 <tr class="separator:ac5ebc9432ec58d54aff086e0b5137b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56ed84df35de10bdb65e72b184309497"><td class="memItemLeft" align="right" valign="top"><a id="a56ed84df35de10bdb65e72b184309497"></a>
-uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> = nullptr</td></tr>
-<tr class="separator:a56ed84df35de10bdb65e72b184309497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa0dac30433855379ff3ac93383d7ef2"><td class="memItemLeft" align="right" valign="top"><a id="afa0dac30433855379ff3ac93383d7ef2"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {0}</td></tr>
+<tr class="separator:afa0dac30433855379ff3ac93383d7ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a37d41b7b076eced766d7418450477d"><td class="memItemLeft" align="right" valign="top"><a id="a8a37d41b7b076eced766d7418450477d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_pos</b> = 0</td></tr>
 <tr class="separator:a8a37d41b7b076eced766d7418450477d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,15 +178,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_first</b> = true</
 <tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>
 <tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3c5d38b60ec2b35e273d80eeada9e92"><td class="memItemLeft" align="right" valign="top"><a id="aa3c5d38b60ec2b35e273d80eeada9e92"></a>
-uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>result_buffer</b> = nullptr</td></tr>
-<tr class="separator:aa3c5d38b60ec2b35e273d80eeada9e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6087ede852448df4cd499cc6b48df0be"><td class="memItemLeft" align="right" valign="top"><a id="a6087ede852448df4cd499cc6b48df0be"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>result_buffer_size</b> = 0</td></tr>
-<tr class="separator:a6087ede852448df4cd499cc6b48df0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0790152eb66eed491072642710bdcdab"><td class="memItemLeft" align="right" valign="top"><a id="a0790152eb66eed491072642710bdcdab"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>result_size</b> = 0</td></tr>
-<tr class="separator:a0790152eb66eed491072642710bdcdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a3f44eba249b33b8a0456414f3f5ef"><td class="memItemLeft" align="right" valign="top"><a id="a50a3f44eba249b33b8a0456414f3f5ef"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>result_buffer</b> {0}</td></tr>
+<tr class="separator:a50a3f44eba249b33b8a0456414f3f5ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6967dc23ce572db79489a95296fe741"><td class="memItemLeft" align="right" valign="top"><a id="ab6967dc23ce572db79489a95296fe741"></a>
 sbc_t&#160;</td><td class="memItemRight" valign="bottom"><b>sbc</b></td></tr>
 <tr class="separator:ab6967dc23ce572db79489a95296fe741"><td class="memSeparator" colspan="2">&#160;</td></tr>
