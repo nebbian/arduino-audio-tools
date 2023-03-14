@@ -92,9 +92,9 @@ Inheritance diagram for SBCEncoder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a765f57d415ea68ced74d583033048394"><td class="memItemLeft" align="right" valign="top"><a id="a765f57d415ea68ced74d583033048394"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SBCEncoder</b> (int subbands=SBC_SB_8, int blocks=16, int bitpool=32, int snr=SBC_AM_LOUDNESS)</td></tr>
-<tr class="separator:a765f57d415ea68ced74d583033048394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cb04dd6796db61d3cfedf048e8aa8e9"><td class="memItemLeft" align="right" valign="top"><a id="a2cb04dd6796db61d3cfedf048e8aa8e9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SBCEncoder</b> (int subbands=8, int blocks=16, int bitpool=32, int allocation_method=SBC_AM_LOUDNESS)</td></tr>
+<tr class="separator:a2cb04dd6796db61d3cfedf048e8aa8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="memItemLeft" align="right" valign="top"><a id="ab0bdf5cca484fb2ba637c39384b27fb2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +117,9 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mime<
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb823fb33d75636f6b057854596bfee"><td class="memItemLeft" align="right" valign="top"><a id="afdb823fb33d75636f6b057854596bfee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAllocationMethod</b> (int allocation_method)</td></tr>
+<tr class="separator:afdb823fb33d75636f6b057854596bfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1f412532ae3278dd0af127c218b096e"><td class="memItemLeft" align="right" valign="top"><a id="ad1f412532ae3278dd0af127c218b096e"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info)</td></tr>
 <tr class="separator:ad1f412532ae3278dd0af127c218b096e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,11 +132,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlocks</b> (int bl
 <tr class="memitem:ade185bd4f49909ba863274df35c54901"><td class="memItemLeft" align="right" valign="top"><a id="ade185bd4f49909ba863274df35c54901"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
 <tr class="separator:ade185bd4f49909ba863274df35c54901"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02eef665ae16e4ddee4f4dcdf9c6aec0"><td class="memItemLeft" align="right" valign="top"><a id="a02eef665ae16e4ddee4f4dcdf9c6aec0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSnr</b> (int snr)</td></tr>
-<tr class="separator:a02eef665ae16e4ddee4f4dcdf9c6aec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e66cdd854b56dfea563c75c1b041607"><td class="memItemLeft" align="right" valign="top"><a id="a4e66cdd854b56dfea563c75c1b041607"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSubbands</b> (int subbands)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a4e66cdd854b56dfea563c75c1b041607">setSubbands</a> (int subbands)</td></tr>
+<tr class="memdesc:a4e66cdd854b56dfea563c75c1b041607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use 4 or 8. <br /></td></tr>
 <tr class="separator:a4e66cdd854b56dfea563c75c1b041607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fc6997daf9355d8ea370fce2994e9c8"><td class="memItemLeft" align="right" valign="top"><a id="a1fc6997daf9355d8ea370fce2994e9c8"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *in_ptr, size_t in_size)</td></tr>
@@ -151,6 +152,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a28d16dd145de3866e4a568a677a792bc"><td class="memItemLeft" align="right" valign="top"><a id="a28d16dd145de3866e4a568a677a792bc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>allocation_method</b></td></tr>
+<tr class="separator:a28d16dd145de3866e4a568a677a792bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62c485934c0137e83d50b866c9649035"><td class="memItemLeft" align="right" valign="top"><a id="a62c485934c0137e83d50b866c9649035"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>bitpool</b> = 32</td></tr>
 <tr class="separator:a62c485934c0137e83d50b866c9649035"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,9 +188,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_first</b> = true</
 <tr class="memitem:ab6967dc23ce572db79489a95296fe741"><td class="memItemLeft" align="right" valign="top"><a id="ab6967dc23ce572db79489a95296fe741"></a>
 sbc_t&#160;</td><td class="memItemRight" valign="bottom"><b>sbc</b></td></tr>
 <tr class="separator:ab6967dc23ce572db79489a95296fe741"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade93ce0f3e00a3e9057f96ebeb4869fc"><td class="memItemLeft" align="right" valign="top"><a id="ade93ce0f3e00a3e9057f96ebeb4869fc"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>snr</b></td></tr>
-<tr class="separator:ade93ce0f3e00a3e9057f96ebeb4869fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0a50c958ca64ae4c9d2e1126c76f6a3"><td class="memItemLeft" align="right" valign="top"><a id="ab0a50c958ca64ae4c9d2e1126c76f6a3"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>subbands</b> = 4</td></tr>
 <tr class="separator:ab0a50c958ca64ae4c9d2e1126c76f6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['label_1875',['label',['../class_u_i.html#aa9f75f74bf982c82dce89ffb658d22e6',1,'UI']]],
-  ['labelvalue_1876',['labelValue',['../classaudio__tools_1_1_faust_stream.html#a8bb1706b56e2745064e760e2ceaa1e0c',1,'audio_tools::FaustStream']]],
-  ['lastindexof_1877',['lastIndexOf',['../classaudio__tools_1_1_str.html#a74015cf369c4225c2e556e6365427c39',1,'audio_tools::Str']]],
-  ['led_1878',['led',['../classaudio__tools_1_1_l_e_d_output.html#ac0e15fe5ca7df4136adea836883f9183',1,'audio_tools::LEDOutput']]],
-  ['ledcount_1879',['ledCount',['../classaudio__tools_1_1_l_e_d_output.html#a7dc590f51b0b6777b490b40ca3d9d938',1,'audio_tools::LEDOutput']]],
-  ['leddata_1880',['ledData',['../classaudio__tools_1_1_l_e_d_output.html#a7fcffd187dd3370848cd04c8cd1371ac',1,'audio_tools::LEDOutput']]],
-  ['ledoutput_1881',['LEDOutput',['../classaudio__tools_1_1_l_e_d_output.html#a4a12f11173395254da4e87839bc7a05c',1,'audio_tools::LEDOutput']]],
-  ['ledxy_1882',['ledXY',['../classaudio__tools_1_1_l_e_d_output.html#a205e2d3cf1471979674fd6e5a6441942',1,'audio_tools::LEDOutput']]],
-  ['length_1883',['length',['../classaudio__tools_1_1_str.html#a4c78c47ce1c204f9d233485b8036ac0e',1,'audio_tools::Str::length()'],['../classaudio__tools_1_1_audio_f_f_t_base.html#a3d0f4ae571310c6ed081daa3985ecb47',1,'audio_tools::AudioFFTBase::length()']]],
-  ['limit_1884',['limit',['../classaudio__tools_1_1_volume_control.html#ace0e1dc6943007f979f702e7b074b60e',1,'audio_tools::VolumeControl']]],
-  ['list_1885',['List',['../classaudio__tools_1_1_list.html#a17e6c90f14225bdac5c65ed915b0a2f6',1,'audio_tools::List::List()'],['../classaudio__tools_1_1_list.html#a70712c74fab1d9397d31165e8c225ad3',1,'audio_tools::List::List(const List &amp;ref)=default'],['../classaudio__tools_1_1_list.html#a67e070debc5833e6c23ae92c9d8e8725',1,'audio_tools::List::List(const T(&amp;a)[N])']]],
-  ['listdir_1886',['listDir',['../classaudio__tools_1_1_s_d_direct.html#aadba1a05a18816e212611289e860ad14',1,'audio_tools::SDDirect::listDir()'],['../classaudio__tools_1_1_s_d_index.html#a51580b39d56dcffff525b5110d18944e',1,'audio_tools::SDIndex::listDir()']]],
-  ['ltrim_1887',['ltrim',['../classaudio__tools_1_1_str.html#ab8b1977a1bbcd17a0f55714ac2cb50dc',1,'audio_tools::Str']]]
+  ['label_1876',['label',['../class_u_i.html#aa9f75f74bf982c82dce89ffb658d22e6',1,'UI']]],
+  ['labelvalue_1877',['labelValue',['../classaudio__tools_1_1_faust_stream.html#a8bb1706b56e2745064e760e2ceaa1e0c',1,'audio_tools::FaustStream']]],
+  ['lastindexof_1878',['lastIndexOf',['../classaudio__tools_1_1_str.html#a74015cf369c4225c2e556e6365427c39',1,'audio_tools::Str']]],
+  ['led_1879',['led',['../classaudio__tools_1_1_l_e_d_output.html#ac0e15fe5ca7df4136adea836883f9183',1,'audio_tools::LEDOutput']]],
+  ['ledcount_1880',['ledCount',['../classaudio__tools_1_1_l_e_d_output.html#a7dc590f51b0b6777b490b40ca3d9d938',1,'audio_tools::LEDOutput']]],
+  ['leddata_1881',['ledData',['../classaudio__tools_1_1_l_e_d_output.html#a7fcffd187dd3370848cd04c8cd1371ac',1,'audio_tools::LEDOutput']]],
+  ['ledoutput_1882',['LEDOutput',['../classaudio__tools_1_1_l_e_d_output.html#a4a12f11173395254da4e87839bc7a05c',1,'audio_tools::LEDOutput']]],
+  ['ledxy_1883',['ledXY',['../classaudio__tools_1_1_l_e_d_output.html#a205e2d3cf1471979674fd6e5a6441942',1,'audio_tools::LEDOutput']]],
+  ['length_1884',['length',['../classaudio__tools_1_1_str.html#a4c78c47ce1c204f9d233485b8036ac0e',1,'audio_tools::Str::length()'],['../classaudio__tools_1_1_audio_f_f_t_base.html#a3d0f4ae571310c6ed081daa3985ecb47',1,'audio_tools::AudioFFTBase::length()']]],
+  ['limit_1885',['limit',['../classaudio__tools_1_1_volume_control.html#ace0e1dc6943007f979f702e7b074b60e',1,'audio_tools::VolumeControl']]],
+  ['list_1886',['List',['../classaudio__tools_1_1_list.html#a17e6c90f14225bdac5c65ed915b0a2f6',1,'audio_tools::List::List()'],['../classaudio__tools_1_1_list.html#a70712c74fab1d9397d31165e8c225ad3',1,'audio_tools::List::List(const List &amp;ref)=default'],['../classaudio__tools_1_1_list.html#a67e070debc5833e6c23ae92c9d8e8725',1,'audio_tools::List::List(const T(&amp;a)[N])']]],
+  ['listdir_1887',['listDir',['../classaudio__tools_1_1_s_d_direct.html#aadba1a05a18816e212611289e860ad14',1,'audio_tools::SDDirect::listDir()'],['../classaudio__tools_1_1_s_d_index.html#a51580b39d56dcffff525b5110d18944e',1,'audio_tools::SDIndex::listDir()']]],
+  ['ltrim_1888',['ltrim',['../classaudio__tools_1_1_str.html#ab8b1977a1bbcd17a0f55714ac2cb50dc',1,'audio_tools::Str']]]
 ];
