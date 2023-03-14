@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lame_2362',['LAME',['../group__codec-lame.html',1,'']]],
-  ['lc3_2363',['lc3',['../group__c.html',1,'']]]
+  ['lame_2364',['LAME',['../group__codec-lame.html',1,'']]],
+  ['lc3_2365',['lc3',['../group__c.html',1,'']]]
 ];
