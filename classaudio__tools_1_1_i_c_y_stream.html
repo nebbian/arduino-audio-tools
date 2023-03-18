@@ -147,6 +147,10 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="memitem:ab7887161ce1f9436b161f6f6842a5116"><td class="memItemLeft" align="right" valign="top"><a id="ab7887161ce1f9436b161f6f6842a5116"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info) override</td></tr>
 <tr class="separator:ab7887161ce1f9436b161f6f6842a5116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad440a4de3d62b095c0ab57e13b511865"><td class="memItemLeft" align="right" valign="top"><a id="ad440a4de3d62b095c0ab57e13b511865"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i_c_y_stream.html#ad440a4de3d62b095c0ab57e13b511865">setClient</a> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;client) override</td></tr>
+<tr class="memdesc:ad440a4de3d62b095c0ab57e13b511865"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re-)defines the client <br /></td></tr>
+<tr class="separator:ad440a4de3d62b095c0ab57e13b511865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad95873c68a776ff93a5a4e35c1fe4eb0"><td class="memItemLeft" align="right" valign="top"><a id="ad95873c68a776ff93a5a4e35c1fe4eb0"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i_c_y_stream.html#ad95873c68a776ff93a5a4e35c1fe4eb0">setMetadataCallback</a> (void(*fn)(<a class="el" href="group__metadata.html#ga6760f423085f8a63374b1e2db102a6d1">MetaDataType</a> info, const char *str, int len)) override</td></tr>
 <tr class="memdesc:ad95873c68a776ff93a5a4e35c1fe4eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the meta data callback function. <br /></td></tr>
@@ -154,6 +158,17 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a26271bd0c9c22550dccdf5b8a3fa4ef0"><td class="memItemLeft" align="right" valign="top"><a id="a26271bd0c9c22550dccdf5b8a3fa4ef0"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi) override</td></tr>
 <tr class="separator:a26271bd0c9c22550dccdf5b8a3fa4ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae81c6839be5fb51cf5ffd9300a95534b"><td class="memItemLeft" align="right" valign="top"><a id="ae81c6839be5fb51cf5ffd9300a95534b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i_c_y_stream.html#ae81c6839be5fb51cf5ffd9300a95534b">setPassword</a> (const char *password) override</td></tr>
+<tr class="memdesc:ae81c6839be5fb51cf5ffd9300a95534b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the password that will be used for logging in (when calling begin) <br /></td></tr>
+<tr class="separator:ae81c6839be5fb51cf5ffd9300a95534b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6e2e957454b7d56ec5e08920ecfce8"><td class="memItemLeft" align="right" valign="top"><a id="a6c6e2e957454b7d56ec5e08920ecfce8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setReadBufferSize</b> (int readBufferSize)</td></tr>
+<tr class="separator:a6c6e2e957454b7d56ec5e08920ecfce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa746c1e18c63973923557421e7774c89"><td class="memItemLeft" align="right" valign="top"><a id="aa746c1e18c63973923557421e7774c89"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i_c_y_stream.html#aa746c1e18c63973923557421e7774c89">setSSID</a> (const char *ssid) override</td></tr>
+<tr class="memdesc:aa746c1e18c63973923557421e7774c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the ssid that will be used for logging in (when calling begin) <br /></td></tr>
+<tr class="separator:aa746c1e18c63973923557421e7774c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d13ce67979fd03ea213f793e44d834"><td class="memItemLeft" align="right" valign="top"><a id="a02d13ce67979fd03ea213f793e44d834"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> &amp;info)</td></tr>
 <tr class="separator:a02d13ce67979fd03ea213f793e44d834"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,9 +183,6 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a69f7703c8594c30d031cc08ad37d7f80"><td class="memItemLeft" align="right" valign="top"><a id="a69f7703c8594c30d031cc08ad37d7f80"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>checkUrl</b> ()</td></tr>
-<tr class="separator:a69f7703c8594c30d031cc08ad37d7f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,9 +210,9 @@ void(*&#160;</td><td class="memItemRight" valign="bottom"><b>callback</b> )(<a c
 <tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
 <tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29f03050907c12dc529870ff7a9c30b6"><td class="memItemLeft" align="right" valign="top"><a id="a29f03050907c12dc529870ff7a9c30b6"></a>
-<a class="el" href="classaudio__tools_1_1_u_r_l_stream.html">URLStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>url</b> = nullptr</td></tr>
-<tr class="separator:a29f03050907c12dc529870ff7a9c30b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaac90da8eac13b2a1cb6a079337c7f2"><td class="memItemLeft" align="right" valign="top"><a id="aaaac90da8eac13b2a1cb6a079337c7f2"></a>
+<a class="el" href="classaudio__tools_1_1_u_r_l_stream.html">URLStream</a>&#160;</td><td class="memItemRight" valign="bottom"><b>url</b></td></tr>
+<tr class="separator:aaaac90da8eac13b2a1cb6a079337c7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Icecast/Shoutcast Audio <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> which splits the data into metadata and audio data. The Audio data is provided via the regular stream functions. The metadata is handled with the help of the <a class="el" href="classaudio__tools_1_1_meta_data_i_c_y.html" title="Icecast/Shoutcast Metadata Handling. Metadata class which splits the data into audio and metadata....">MetaDataICY</a> state machine and provided via a callback method. </p>
