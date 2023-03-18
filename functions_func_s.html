@@ -128,7 +128,7 @@ $(function() {
 , <a class="el" href="classaudio__tools_1_1_encoder_float.html#a64c9ea752da0924b395c3a49f1f9c460">EncoderFloat</a>
 , <a class="el" href="classaudio__tools_1_1_f_l_a_c_encoder.html#a64c9ea752da0924b395c3a49f1f9c460">FLACEncoder</a>
 , <a class="el" href="classaudio__tools_1_1_i2_s_stream.html#ad1f412532ae3278dd0af127c218b096e">I2SStream</a>
-, <a class="el" href="classaudio__tools_1_1_m_p3_encoder_l_a_m_e.html#a76772b86c4e0867388d42df209e1a358">MP3EncoderLAME</a>
+, <a class="el" href="classaudio__tools_1_1_m_p3_encoder_l_a_m_e.html#a7fada19480b99fa787492cbc32b5b893">MP3EncoderLAME</a>
 , <a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html#a64c9ea752da0924b395c3a49f1f9c460">OggContainerEncoder</a>
 , <a class="el" href="classaudio__tools_1_1_opus_audio_encoder.html#a2f2cdefbbd572c4d9dd6026da037e7f3">OpusAudioEncoder</a>
 , <a class="el" href="classaudio__tools_1_1_port_audio_stream.html#ae976dd3f4f663a912c01ba5f76a45323">PortAudioStream</a>
@@ -197,6 +197,9 @@ $(function() {
 </li>
 <li>setCheckAvailableForWrite()
 : <a class="el" href="classaudio__tools_1_1_stream_copy_t.html#af2beb219bcf28b64c8da8b2021d3513b">StreamCopyT&lt; T &gt;</a>
+</li>
+<li>setClient()
+: <a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#a7d9df96fcfa833b72a10056018358414">URLStream</a>
 </li>
 <li>setDataOffset()
 : <a class="el" href="classaudio__tools_1_1_w_a_v_encoder.html#a714eb943cec9f2478e46d32af2467f3e">WAVEncoder</a>
@@ -293,7 +296,7 @@ $(function() {
 , <a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">EncodedAudioStream</a>
 </li>
 <li>setInputPin1()
-: <a class="el" href="classaudio__tools_1_1_analog_config.html#ab9b751c07cc8c56b58650c8d7476f99c">AnalogConfig</a>
+: <a class="el" href="classaudio__tools_1_1_analog_config.html#a841f1fb376492c764a2ef8d71879a67a">AnalogConfig</a>
 </li>
 <li>setInputStream()
 : <a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a3bcad8389ae08e07b345ab270c187078">FLACDecoder</a>
@@ -397,11 +400,14 @@ $(function() {
 , <a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html#a86ce681ae22c0345c20e583a8a1f298f">OggContainerEncoder</a>
 , <a class="el" href="classaudio__tools_1_1_opus_audio_decoder.html#a86ce681ae22c0345c20e583a8a1f298f">OpusAudioDecoder</a>
 , <a class="el" href="classaudio__tools_1_1_opus_audio_encoder.html#a86ce681ae22c0345c20e583a8a1f298f">OpusAudioEncoder</a>
-, <a class="el" href="classaudio__tools_1_1_streaming_decoder.html#a33c50884a025e7c2049b71fe0b8d0045">StreamingDecoder</a>
+, <a class="el" href="classaudio__tools_1_1_streaming_decoder.html#acac994dd0f0452da1aadec3ad99bcad7">StreamingDecoder</a>
 , <a class="el" href="classaudio__tools_1_1_vorbis_decoder.html#a262ef7a9ed245c89518ef6c14a885d8c">VorbisDecoder</a>
 , <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#ac8bad9f22f28c75edd3beec36ed35319">WAVDecoder</a>
 , <a class="el" href="classaudio__tools_1_1_w_a_v_encoder.html#a8eb17bda02c8dc1119025c441edcaa03">WAVEncoder</a>
 , <a class="el" href="classaudio__tools_1_1_wav_i_m_a_decoder.html#ac8bad9f22f28c75edd3beec36ed35319">WavIMADecoder</a>
+</li>
+<li>setPassword()
+: <a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#a0057b04edd6019a61feac6c6a62878b4">URLStream</a>
 </li>
 <li>setPath()
 : <a class="el" href="classaudio__tools_1_1_audio_player.html#a2f24eb6d5fb69a5230a1927fa90c6f00">AudioPlayer</a>
@@ -467,6 +473,9 @@ $(function() {
 </li>
 <li>setSquare()
 : <a class="el" href="classaudio__tools_1_1_modulation_base_class.html#ab73b9813f3f01891821ca11f7aca2b4e">ModulationBaseClass</a>
+</li>
+<li>setSSID()
+: <a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#a59acc6855d01c5bb88b7bbb5533f33d5">URLStream</a>
 </li>
 <li>setStepSize()
 : <a class="el" href="classaudio__tools_1_1_resample_stream.html#a7694bdde8707e5a9f92c36c905be2e56">ResampleStream&lt; T &gt;</a>
@@ -588,7 +597,7 @@ $(function() {
 : <a class="el" href="classaudio__tools_1_1_fast_sine_generator.html#a39b1d228d98347a574e5ef0ca6d170df">FastSineGenerator&lt; T &gt;</a>
 </li>
 <li>SingleBuffer()
-: <a class="el" href="classaudio__tools_1_1_single_buffer.html#a35c6a8c1d8f0857e27e85530479a444a">SingleBuffer&lt; T &gt;</a>
+: <a class="el" href="classaudio__tools_1_1_single_buffer.html#acc095e96946a477f0606fe4612fea1be">SingleBuffer&lt; T &gt;</a>
 </li>
 <li>sink()
 : <a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#a232966b695bfd512f7541f2354be9349">A2DPStream</a>
