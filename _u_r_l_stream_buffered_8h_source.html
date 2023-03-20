@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifdef ESP32</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#if defined(ESP32) &amp;&amp; defined(USE_URL_ARDUINO)</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;AudioConfig.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;AudioTools/SynchronizedBuffers.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;AudioTools/AudioStreams.h&quot;</span></div>
@@ -158,7 +158,7 @@ $(function() {
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> *p_stream=<span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">bool</span> active = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        TaskHandle_t xHandle = NULL;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="classaudio__tools_1_1_synchronized_n_buffer.html">SynchronizedNBuffer&lt;uint8_t&gt;</a> buffers {DEFAULT_BUFFER_SIZE, URL_STREAM_BUFFER_COUNT};</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        SynchronizedNBuffer&lt;uint8_t&gt; buffers {DEFAULT_BUFFER_SIZE, URL_STREAM_BUFFER_COUNT};</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">bool</span> ready = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> task(<span class="keywordtype">void</span> * pvParameters){</div>
@@ -283,7 +283,6 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_buffered_task_stream_html_afbb59a2f946191d7cf2a5c0a00b29ec2"><div class="ttname"><a href="classaudio__tools_1_1_buffered_task_stream.html#afbb59a2f946191d7cf2a5c0a00b29ec2">audio_tools::BufferedTaskStream::available</a></div><div class="ttdeci">virtual int available() override</div><div class="ttdoc">Returns the available bytes in the buffer: to be avoided.</div><div class="ttdef"><b>Definition:</b> URLStreamBuffered.h:92</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_client_html"><div class="ttname"><a href="classaudio__tools_1_1_client.html">audio_tools::Client</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:109</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_http_request_html"><div class="ttname"><a href="classaudio__tools_1_1_http_request.html">audio_tools::HttpRequest</a></div><div class="ttdoc">Simple API to process get, put, post, del http requests I tried to use Arduino HttpClient,...</div><div class="ttdef"><b>Definition:</b> HttpRequest.h:31</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_synchronized_n_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_synchronized_n_buffer.html">audio_tools::SynchronizedNBuffer&lt; uint8_t &gt;</a></div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_u_r_l_stream_buffered_html"><div class="ttname"><a href="classaudio__tools_1_1_u_r_l_stream_buffered.html">audio_tools::URLStreamBuffered</a></div><div class="ttdoc">URLStream implementation for the ESP32 based on a separate FreeRTOS task.</div><div class="ttdef"><b>Definition:</b> URLStreamBuffered.h:139</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_u_r_l_stream_buffered_html_aa746c1e18c63973923557421e7774c89"><div class="ttname"><a href="classaudio__tools_1_1_u_r_l_stream_buffered.html#aa746c1e18c63973923557421e7774c89">audio_tools::URLStreamBuffered::setSSID</a></div><div class="ttdeci">void setSSID(const char *ssid) override</div><div class="ttdoc">Sets the ssid that will be used for logging in (when calling begin)</div><div class="ttdef"><b>Definition:</b> URLStreamBuffered.h:209</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_u_r_l_stream_buffered_html_ad440a4de3d62b095c0ab57e13b511865"><div class="ttname"><a href="classaudio__tools_1_1_u_r_l_stream_buffered.html#ad440a4de3d62b095c0ab57e13b511865">audio_tools::URLStreamBuffered::setClient</a></div><div class="ttdeci">void setClient(Client &amp;client) override</div><div class="ttdoc">(Re-)defines the client</div><div class="ttdef"><b>Definition:</b> URLStreamBuffered.h:204</div></div>

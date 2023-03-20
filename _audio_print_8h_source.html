@@ -576,7 +576,7 @@ $(function() {
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;        <span class="keywordflow">if</span> (buffers[j]!=<span class="keyword">nullptr</span>){</div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            <span class="keyword">delete</span> buffers[j];</div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;        }</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="preprocessor">#ifdef ESP32</span></div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="preprocessor">#if defined(ESP32) &amp;&amp; defined(ARDUINO)</span></div>
 <div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;        <span class="keywordflow">if</span> (memory_type==PS_RAM &amp;&amp; ESP.getFreePsram()&gt;=size_bytes){</div>
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;            p_memory = ps_malloc(size_bytes);</div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;            LOGI(<span class="stringliteral">&quot;Buffer %d allocated %d bytes in PS_RAM&quot;</span>,j, size_bytes);</div>

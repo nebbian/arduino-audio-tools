@@ -376,7 +376,7 @@ $(function() {
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">if</span> (memoryCanChange()){      </div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      buffer_size = size;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <span class="keywordflow">switch</span>(memory_type){</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor">  #ifdef ESP32</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor">  #if defined(ESP32) &amp;&amp; defined(ARDUINO) </span></div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordflow">case</span> PS_RAM:</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;          buffer = (buffer==<span class="keyword">nullptr</span>) ? (uint8_t*)ps_calloc(size,1) : (uint8_t*)ps_realloc(buffer, size);</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;          assert(buffer!=<span class="keyword">nullptr</span>);</div>

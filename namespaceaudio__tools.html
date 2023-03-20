@@ -747,9 +747,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_lock.html">Lock</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple RIA locking class for the ESP32 using _lock_t.  <a href="classaudio__tools_1_1_lock.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_lock_guard.html">LockGuard</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII implementaion using a <a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a>: Only a few microcontrollers provide lock guards, so I decided to roll my own solution where we can just use a dummy <a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a> implementation that does nothing for the cases where this is not needed.  <a href="classaudio__tools_1_1_lock_guard.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_logarithmic_volume_control.html">LogarithmicVolumeControl</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parametric Logarithmic volume control. Using the formula pow(b,input) * a - a, where b is b = pow(((1/ym)-1), 2) and a is a = 1.0 / (b - 1.0). The parameter ym is determining the steepness. See <a href="https://electronics.stackexchange.com/questions/304692/formula-for-logarithmic-audio-taper-pot">https://electronics.stackexchange.com/questions/304692/formula-for-logarithmic-audio-taper-pot</a>.  <a href="classaudio__tools_1_1_logarithmic_volume_control.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -821,12 +818,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_musical_notes.html">MusicalNotes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determination of the frequency of a music note.  <a href="classaudio__tools_1_1_musical_notes.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mutex.html">Mutex</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a> implemntation using FreeRTOS.  <a href="classaudio__tools_1_1_mutex.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mutex_base.html">MutexBase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty <a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a> implementation which does nothing.  <a href="classaudio__tools_1_1_mutex_base.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lock free N buffer. If count=2 we create a DoubleBuffer, if count=3 a TripleBuffer etc.  <a href="classaudio__tools_1_1_n_buffer.html#details">More...</a><br /></td></tr>
@@ -931,9 +922,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue.html">Queue</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FIFO <a class="el" href="classaudio__tools_1_1_queue.html" title="FIFO Queue which is based on a List.">Queue</a> which is based on a <a class="el" href="classaudio__tools_1_1_list.html" title="Double linked list.">List</a>.  <a href="classaudio__tools_1_1_queue.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue_free_r_t_o_s.html">QueueFreeRTOS</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FIFO <a class="el" href="classaudio__tools_1_1_queue.html" title="FIFO Queue which is based on a List.">Queue</a> which is based on a <a class="el" href="classaudio__tools_1_1_list.html" title="Double linked list.">List</a>.  <a href="classaudio__tools_1_1_queue_free_r_t_o_s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue_lock_free.html">QueueLockFree</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_lock.html" title="A simple RIA locking class for the ESP32 using _lock_t.">Lock</a> Free <a class="el" href="classaudio__tools_1_1_queue.html" title="FIFO Queue which is based on a List.">Queue</a>.  <a href="classaudio__tools_1_1_queue_lock_free.html#details">More...</a><br /></td></tr>
@@ -1103,12 +1091,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_str.html" title="A simple wrapper to provide string functions on char*. If the underlying char* is a const we do not a...">Str</a> which keeps the data on the heap. We grow the allocated memory only if the copy source is not fitting.  <a href="classaudio__tools_1_1_str_ext.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_synchronized_buffer.html">SynchronizedBuffer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper class that can turn any Buffer into a thread save implementation.  <a href="classaudio__tools_1_1_synchronized_buffer.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_synchronized_n_buffer.html">SynchronizedNBuffer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_n_buffer.html" title="A lock free N buffer. If count=2 we create a DoubleBuffer, if count=3 a TripleBuffer etc.">NBuffer</a> which uses some RTOS queues to manage the available and filled buffers.  <a href="classaudio__tools_1_1_synchronized_n_buffer.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_synthesizer.html">Synthesizer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple <a class="el" href="classaudio__tools_1_1_synthesizer.html" title="A simple Synthesizer which can generate sound having multiple keys pressed. The main purpose of this ...">Synthesizer</a> which can generate sound having multiple keys pressed. The main purpose of this class is managing the synthezizer channels.  <a href="classaudio__tools_1_1_synthesizer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1165,9 +1147,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_base.html">TimerAlarmRepeatingDriverBase</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_e_s_p32.html">TimerAlarmRepeatingDriverESP32</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeating Timer functions for simple scheduling of repeated execution. The basic logic is taken from <a href="https://www.toptal.com/embedded/esp32-audio-sampling">https://www.toptal.com/embedded/esp32-audio-sampling</a>. Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>.  <a href="classaudio__tools_1_1_timer_alarm_repeating_driver_e_s_p32.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_e_s_p8266.html">TimerAlarmRepeatingDriverESP8266</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeating Timer functions for repeated execution: Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>.  <a href="classaudio__tools_1_1_timer_alarm_repeating_driver_e_s_p8266.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1176,9 +1155,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_s_t_m32.html">TimerAlarmRepeatingDriverSTM32</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">STM32 Repeating Timer functions for repeated execution: Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>.  <a href="classaudio__tools_1_1_timer_alarm_repeating_driver_s_t_m32.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_callback.html">TimerCallback</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal class to manage the different timer callbacks for the 4 hardware timers.  <a href="classaudio__tools_1_1_timer_callback.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_callback_audio_stream.html">TimerCallbackAudioStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback driven Audio Source (rx_tx_mode==RX_MODE) or Audio Sink (rx_tx_mode==TX_MODE). This class allows to to integrate external libraries in order to consume or generate a data stream which is based on a timer.  <a href="classaudio__tools_1_1_timer_callback_audio_stream.html#details">More...</a><br /></td></tr>
@@ -1202,9 +1178,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream_buffered.html">URLStreamBuffered</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html" title="Represents the content of a URL as Stream. We use the WiFi.h API.">URLStream</a> implementation for the ESP32 based on a separate FreeRTOS task.  <a href="classaudio__tools_1_1_u_r_l_stream_buffered.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_user_callback.html">UserCallback</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal class to manage User callbacks. An optinal parameter can be passed to the callback method.  <a href="classaudio__tools_1_1_user_callback.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_variable_speed_ring_buffer.html">VariableSpeedRingBuffer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimized Buffer implementation for Pitch Shift. We try to interpolate the samples and restore the phase when the read pointer and write pointer overtake each other.  <a href="classaudio__tools_1_1_variable_speed_ring_buffer.html#details">More...</a><br /></td></tr>
@@ -1329,9 +1302,6 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>repeating_t
 <tr class="memitem:a520276eb44a5b454535759788122e653"><td class="memItemLeft" align="right" valign="top"><a id="a520276eb44a5b454535759788122e653"></a>
 typedef sdfat::SdSpiConfig&#160;</td><td class="memItemRight" valign="bottom"><b>SdSpiConfig</b></td></tr>
 <tr class="separator:a520276eb44a5b454535759788122e653"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c5ec923118647d3eed83f6c8d02959b"><td class="memItemLeft" align="right" valign="top"><a id="a4c5ec923118647d3eed83f6c8d02959b"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>simple_callback</b>) (void)</td></tr>
-<tr class="separator:a4c5ec923118647d3eed83f6c8d02959b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26cc1d7714553c807f4592a48647bb2"><td class="memItemLeft" align="right" valign="top"><a id="ad26cc1d7714553c807f4592a48647bb2"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#ad26cc1d7714553c807f4592a48647bb2">TimerAlarmRepeatingDriver</a> = <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.html">TimerAlarmRepeatingDriverAVR</a></td></tr>
 <tr class="memdesc:ad26cc1d7714553c807f4592a48647bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">use TimerAlarmRepeating! <br /></td></tr>
@@ -1385,8 +1355,7 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<b>I2S_RIGHT_JUSTIFIED_FORMAT</b>
 , <b>I2S_LEFT_JUSTIFIED_FORMAT</b>
-, <b>I2S_PCM_LONG</b>
-, <b>I2S_PCM_SHORT</b>
+, <b>I2S_PCM</b>
 <br />
  }</td></tr>
 <tr class="memdesc:a720616ce211566d808f3e441f9b18cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2S Formats. <br /></td></tr>
@@ -1394,6 +1363,7 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a1d3846b210a1698eaf7cdb7258fcc3e1"><td class="memItemLeft" align="right" valign="top"><a id="a1d3846b210a1698eaf7cdb7258fcc3e1"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a1d3846b210a1698eaf7cdb7258fcc3e1">I2SSignalType</a> { <b>Digital</b>
 , <b>Analog</b>
 , <b>PDM</b>
+, <b>TDM</b>
  }</td></tr>
 <tr class="memdesc:a1d3846b210a1698eaf7cdb7258fcc3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2S Signal Types: Digital, Analog, PDM. <br /></td></tr>
 <tr class="separator:a1d3846b210a1698eaf7cdb7258fcc3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1572,34 +1542,10 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a1d8000e66a6b1df22bc01638f587b32c"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a1d8000e66a6b1df22bc01638f587b32c">readSamples</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *p_stream, T *data, int samples)</td></tr>
 <tr class="memdesc:a1d8000e66a6b1df22bc01638f587b32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">guaranteed to return the requested data <br /></td></tr>
 <tr class="separator:a1d8000e66a6b1df22bc01638f587b32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a9e56986969660a0c1ece83538df510"><td class="memItemLeft" align="right" valign="top"><a id="a2a9e56986969660a0c1ece83538df510"></a>
-static IRAM_ATTR void&#160;</td><td class="memItemRight" valign="bottom"><b>timerCallback0</b> ()</td></tr>
-<tr class="separator:a2a9e56986969660a0c1ece83538df510"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d9db3c24f27aabf480da8dcfa7d669e"><td class="memItemLeft" align="right" valign="top"><a id="a2d9db3c24f27aabf480da8dcfa7d669e"></a>
-static IRAM_ATTR void&#160;</td><td class="memItemRight" valign="bottom"><b>timerCallback1</b> ()</td></tr>
-<tr class="separator:a2d9db3c24f27aabf480da8dcfa7d669e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5e58a5f221a434979c5a1ad43989548"><td class="memItemLeft" align="right" valign="top"><a id="ae5e58a5f221a434979c5a1ad43989548"></a>
-static IRAM_ATTR void&#160;</td><td class="memItemRight" valign="bottom"><b>timerCallback2</b> ()</td></tr>
-<tr class="separator:ae5e58a5f221a434979c5a1ad43989548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2354db9bd0aa6b2cb87dcb38c8d45736"><td class="memItemLeft" align="right" valign="top"><a id="a2354db9bd0aa6b2cb87dcb38c8d45736"></a>
-static IRAM_ATTR void&#160;</td><td class="memItemRight" valign="bottom"><b>timerCallback3</b> ()</td></tr>
-<tr class="separator:a2354db9bd0aa6b2cb87dcb38c8d45736"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae06c56511c8bb5a3a7649c4821660886"><td class="memItemLeft" align="right" valign="top">
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__metadata.html#gae06c56511c8bb5a3a7649c4821660886">toStr</a> (<a class="el" href="group__metadata.html#ga6760f423085f8a63374b1e2db102a6d1">MetaDataType</a> t)</td></tr>
 <tr class="memdesc:gae06c56511c8bb5a3a7649c4821660886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the MetaDataType to a string. <br /></td></tr>
 <tr class="separator:gae06c56511c8bb5a3a7649c4821660886"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44efd1d1c6ac045c5217eca480cf6057"><td class="memItemLeft" align="right" valign="top"><a id="a44efd1d1c6ac045c5217eca480cf6057"></a>
-static IRAM_ATTR void&#160;</td><td class="memItemRight" valign="bottom"><b>userCallback0</b> ()</td></tr>
-<tr class="separator:a44efd1d1c6ac045c5217eca480cf6057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89cd3fa5cb38b3f5b7ed6c4adca60bae"><td class="memItemLeft" align="right" valign="top"><a id="a89cd3fa5cb38b3f5b7ed6c4adca60bae"></a>
-static IRAM_ATTR void&#160;</td><td class="memItemRight" valign="bottom"><b>userCallback1</b> ()</td></tr>
-<tr class="separator:a89cd3fa5cb38b3f5b7ed6c4adca60bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec98d70322db5d483b2648a090495ce3"><td class="memItemLeft" align="right" valign="top"><a id="aec98d70322db5d483b2648a090495ce3"></a>
-static IRAM_ATTR void&#160;</td><td class="memItemRight" valign="bottom"><b>userCallback2</b> ()</td></tr>
-<tr class="separator:aec98d70322db5d483b2648a090495ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a673649962278fce007046271c6b597e4"><td class="memItemLeft" align="right" valign="top"><a id="a673649962278fce007046271c6b597e4"></a>
-static IRAM_ATTR void&#160;</td><td class="memItemRight" valign="bottom"><b>userCallback3</b> ()</td></tr>
-<tr class="separator:a673649962278fce007046271c6b597e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92950deb71a0b74d99d22219de0dd83b"><td class="memItemLeft" align="right" valign="top"><a id="a92950deb71a0b74d99d22219de0dd83b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a92950deb71a0b74d99d22219de0dd83b">volumeLEDOutput</a> (<a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html">LEDOutputConfig</a> *cfg, <a class="el" href="classaudio__tools_1_1_l_e_d_output.html">LEDOutput</a> *matrix)</td></tr>
 <tr class="memdesc:a92950deb71a0b74d99d22219de0dd83b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default update implementation which provides the fft result as "barchart". <br /></td></tr>
@@ -1684,7 +1630,7 @@ tflite::ErrorReporter *&#160;</td><td class="memItemRight" valign="bottom"><b>er
 <a class="el" href="classaudio__tools_1_1_e_s_p_now_stream.html">ESPNowStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ESPNowStreamSelf</b> = nullptr</td></tr>
 <tr class="separator:a1657e5bc9760514c39cc563553f0b762"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1d4d6d66ce6f6d24adee538c25961b5"><td class="memItemLeft" align="right" valign="top"><a id="ab1d4d6d66ce6f6d24adee538c25961b5"></a>
-<a class="el" href="classaudio__tools_1_1_mutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fft_mux</b></td></tr>
+Mutex&#160;</td><td class="memItemRight" valign="bottom"><b>fft_mux</b></td></tr>
 <tr class="separator:ab1d4d6d66ce6f6d24adee538c25961b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56761b0ae50923be178b4ada8d5b7081"><td class="memItemLeft" align="right" valign="top"><a id="a56761b0ae50923be178b4ada8d5b7081"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>genres</b> [] = { &quot;Classic Rock&quot;, &quot;Country&quot;, &quot;Dance&quot;, &quot;Disco&quot;, &quot;Funk&quot;, &quot;Grunge&quot;, &quot;Hip-Hop&quot;, &quot;Jazz&quot;, &quot;Metal&quot;, &quot;New Age&quot;, &quot;Oldies&quot;, &quot;Other&quot;, &quot;Pop&quot;, &quot;R&amp;B&quot;, &quot;Rap&quot;, &quot;Reggae&quot;, &quot;Rock&quot;, &quot;Techno&quot;, &quot;Industrial&quot;, &quot;Alternative&quot;, &quot;Ska&quot;, &quot;Death Metal&quot;, &quot;Pranks&quot;, &quot;Soundtrack&quot;, &quot;Euro-Techno&quot;, &quot;Ambient&quot;, &quot;Trip-Hop&quot;, &quot;Vocal&quot;, &quot;Jazz+Funk&quot;, &quot;Fusion&quot;, &quot;Trance&quot;, &quot;Classical&quot;, &quot;Instrumental&quot;, &quot;Acid&quot;, &quot;House&quot;, &quot;Game&quot;, &quot;Sound Clip&quot;, &quot;Gospel&quot;, &quot;Noise&quot;, &quot;Alternative Rock&quot;, &quot;Bass&quot;, &quot;Soul&quot;, &quot;Punk&quot;, &quot;Space&quot;, &quot;Meditative&quot;, &quot;Instrumental Pop&quot;, &quot;Instrumental Rock&quot;, &quot;Ethnic&quot;, &quot;Gothic&quot;, &quot;Darkwave&quot;, &quot;Techno-Insdustiral&quot;, &quot;Electronic&quot;, &quot;Pop-Folk&quot;, &quot;Eurodance&quot;, &quot;Dream&quot;, &quot;Southern Rock&quot;, &quot;Comedy&quot;, &quot;Cult&quot;, &quot;Gangsta&quot;, &quot;Top 40&quot;, &quot;Christian Rap&quot;, &quot;Pop/Funk&quot;, &quot;Jungle&quot;, &quot;Native US&quot;, &quot;Cabaret&quot;, &quot;New Wave&quot;, &quot;Psychadelic&quot;, &quot;Rave&quot;, &quot;Showtunes&quot;, &quot;Trailer&quot;, &quot;Lo-Fi&quot;, &quot;Tribal&quot;, &quot;Acid Punk&quot;, &quot;Acid Jazz&quot;, &quot;Polka&quot;, &quot;Retro&quot;, &quot;Musical&quot;, &quot;Rock &amp; Roll&quot;, &quot;Hard Rock&quot;, &quot;Folk&quot;, &quot;Folk-Rock&quot;, &quot;National Folk&quot;, &quot;Swing&quot;, &quot;Fast Fusion&quot;, &quot;Bebob&quot;, &quot;Latin&quot;, &quot;Revival&quot;, &quot;Celtic&quot;, &quot;Bluegrass&quot;, &quot;Avantgarde&quot;, &quot;Gothic Rock&quot;, &quot;Progressive Rock&quot;, &quot;Psychedelic Rock&quot;, &quot;Symphonic Rock&quot;, &quot;Slow Rock&quot;, &quot;Big Band&quot;, &quot;Chorus&quot;, &quot;Easy Listening&quot;, &quot;Acoustic&quot;,&quot;Humour&quot;, &quot;Speech&quot;, &quot;Chanson&quot;, &quot;Opera&quot;, &quot;Chamber Music&quot;, &quot;Sonata&quot;, &quot;Symphony&quot;, &quot;Booty Bass&quot;, &quot;Primus&quot;, &quot;Porn Groove&quot;, &quot;Satire&quot;, &quot;Slow Jam&quot;, &quot;Club&quot;, &quot;Tango&quot;, &quot;Samba&quot;, &quot;Folklore&quot;, &quot;Ballad&quot;, &quot;Power Ballad&quot;, &quot;Rhytmic Soul&quot;, &quot;Freestyle&quot;, &quot;Duet&quot;, &quot;Punk Rock&quot;, &quot;Drum Solo&quot;, &quot;Acapella&quot;, &quot;Euro-House&quot;, &quot;Dance Hall&quot;, &quot;Goa&quot;, &quot;Drum &amp; Bass&quot;, &quot;Club-House&quot;, &quot;Hardcore&quot;, &quot;Terror&quot;, &quot;Indie&quot;, &quot;BritPop&quot;, &quot;Negerpunk&quot;, &quot;Polsk Punk&quot;, &quot;Beat&quot;, &quot;Christian Gangsta&quot;, &quot;Heavy Metal&quot;, &quot;Black Metal&quot;, &quot;Crossover&quot;, &quot;Contemporary C&quot;, &quot;Christian Rock&quot;, &quot;Merengue&quot;, &quot;Salsa&quot;, &quot;Thrash Metal&quot;, &quot;Anime&quot;, &quot;JPop&quot;, &quot;SynthPop&quot; }</td></tr>
@@ -1693,7 +1639,7 @@ INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ge
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>HOST_C</b> = &quot;Host&quot;</td></tr>
 <tr class="separator:a057cab1bfbc8bf970d27c9844d5b68bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba6ba92067daa4deab6667b0ba41d8e4"><td class="memItemLeft" align="right" valign="top"><a id="aba6ba92067daa4deab6667b0ba41d8e4"></a>
-INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_formats</b> [] = {&quot;I2S_STD_FORMAT&quot;,&quot;I2S_LSB_FORMAT&quot;,&quot;I2S_MSB_FORMAT&quot;,&quot;I2S_PHILIPS_FORMAT&quot;,&quot;I2S_RIGHT_JUSTIFIED_FORMAT&quot;,&quot;I2S_LEFT_JUSTIFIED_FORMAT&quot;,&quot;I2S_PCM_LONG&quot;,&quot;I2S_PCM_SHORT&quot;}</td></tr>
+INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_formats</b> [] = {&quot;I2S_STD_FORMAT&quot;,&quot;I2S_LSB_FORMAT&quot;,&quot;I2S_MSB_FORMAT&quot;,&quot;I2S_PHILIPS_FORMAT&quot;,&quot;I2S_RIGHT_JUSTIFIED_FORMAT&quot;,&quot;I2S_LEFT_JUSTIFIED_FORMAT&quot;,&quot;I2S_PCM&quot;}</td></tr>
 <tr class="separator:aba6ba92067daa4deab6667b0ba41d8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5bd66f7ba08dad7aa9bb00de8967a04"><td class="memItemLeft" align="right" valign="top"><a id="ac5bd66f7ba08dad7aa9bb00de8967a04"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>id3_v2_tags</b> [] = {&quot;TALB&quot;, &quot;TOPE&quot;, &quot;TPE1&quot;, &quot;TIT2&quot;, &quot;TCON&quot;}</td></tr>
@@ -1762,9 +1708,6 @@ class <a class="el" href="classaudio__tools_1_1_audio_m_p34_d_t05.html">AudioMP3
 <tr class="memitem:a7b8c4a195c58f9eb8750e94955c5aa4b"><td class="memItemLeft" align="right" valign="top"><a id="a7b8c4a195c58f9eb8750e94955c5aa4b"></a>
 static <a class="el" href="classaudio__tools_1_1_hardware_serial.html">HardwareSerial</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Serial</b></td></tr>
 <tr class="separator:a7b8c4a195c58f9eb8750e94955c5aa4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d1d67958325a335096ba36e1c71e29c"><td class="memItemLeft" align="right" valign="top"><a id="a2d1d67958325a335096ba36e1c71e29c"></a>
-class <a class="el" href="classaudio__tools_1_1_user_callback.html">audio_tools::UserCallback</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>simpleUserCallback</b> = nullptr</td></tr>
-<tr class="separator:a2d1d67958325a335096ba36e1c71e29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1907eabaa69c704094d43f1a3c67475a"><td class="memItemLeft" align="right" valign="top"><a id="a1907eabaa69c704094d43f1a3c67475a"></a>
 static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>spdif_buf</b> [(((192 *(64/8) *2)/2)/sizeof(uint32_t))]</td></tr>
 <tr class="separator:a1907eabaa69c704094d43f1a3c67475a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1780,9 +1723,6 @@ static <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_s_
 <tr class="memitem:a1aab9fccb0eea490c24d94140cd3301e"><td class="memItemLeft" align="right" valign="top"><a id="a1aab9fccb0eea490c24d94140cd3301e"></a>
 static <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.html">TimerAlarmRepeatingDriverAVR</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>timerAlarmRepeatingRef</b> = nullptr</td></tr>
 <tr class="separator:a1aab9fccb0eea490c24d94140cd3301e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a792dd7b5279768bc27640dca9eea21"><td class="memItemLeft" align="right" valign="top"><a id="a3a792dd7b5279768bc27640dca9eea21"></a>
-class <a class="el" href="classaudio__tools_1_1_timer_callback.html">audio_tools::TimerCallback</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>timerCallbackArray</b> = nullptr</td></tr>
-<tr class="separator:a3a792dd7b5279768bc27640dca9eea21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad34a5f61c1256168d5c9cd8fdad2d15f"><td class="memItemLeft" align="right" valign="top"><a id="ad34a5f61c1256168d5c9cd8fdad2d15f"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>TRANSFER_ENCODING</b> = &quot;Transfer-Encoding&quot;</td></tr>
 <tr class="separator:ad34a5f61c1256168d5c9cd8fdad2d15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
