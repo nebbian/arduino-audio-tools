@@ -233,9 +233,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> 
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_kit_stream.html#a56fd55a21e8060769938c33ac16ee4f2">volume</a> ()</td></tr>
 <tr class="memdesc:a56fd55a21e8060769938c33ac16ee4f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the volume. <br /></td></tr>
 <tr class="separator:a56fd55a21e8060769938c33ac16ee4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae74e483484f1f059fc9ee780b1a7cc29"><td class="memItemLeft" align="right" valign="top"><a id="ae74e483484f1f059fc9ee780b1a7cc29"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t size) override</td></tr>
-<tr class="separator:ae74e483484f1f059fc9ee780b1a7cc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabc798ab6a44922106372b4ea94ee949"><td class="memItemLeft" align="right" valign="top"><a id="aabc798ab6a44922106372b4ea94ee949"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *data, size_t length) override</td></tr>
+<tr class="separator:aabc798ab6a44922106372b4ea94ee949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
 <tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -297,9 +297,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = true</td
 <tr class="memitem:a25bff79e97d8b1a72597d3410fd0133d"><td class="memItemLeft" align="right" valign="top"><a id="a25bff79e97d8b1a72597d3410fd0133d"></a>
 <a class="el" href="classaudio__tools_1_1_audio_kit_stream_config.html">AudioKitStreamConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cfg</b></td></tr>
 <tr class="separator:a25bff79e97d8b1a72597d3410fd0133d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d8d66fd490b70bfd887db01d03bc81a"><td class="memItemLeft" align="right" valign="top"><a id="a5d8d66fd490b70bfd887db01d03bc81a"></a>
-<a class="el" href="classaudio__tools_1_1_channel_format_converter_stream.html">ChannelFormatConverterStream</a>&#160;</td><td class="memItemRight" valign="bottom"><b>converter</b> {kit_stream}</td></tr>
-<tr class="separator:a5d8d66fd490b70bfd887db01d03bc81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bd812e201b40f6c7251fad1fca65654"><td class="memItemLeft" align="right" valign="top"><a id="a4bd812e201b40f6c7251fad1fca65654"></a>
+<a class="el" href="classaudio__tools_1_1_i2_s_stream.html">I2SStream</a>&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_stream</b></td></tr>
+<tr class="separator:a4bd812e201b40f6c7251fad1fca65654"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"><td class="memItemLeft" align="right" valign="top"><a id="abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"></a>
 <a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -309,9 +309,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_started</b> = fals
 <tr class="memitem:ab0c034f0991a293c7173f43c37360316"><td class="memItemLeft" align="right" valign="top"><a id="ab0c034f0991a293c7173f43c37360316"></a>
 AudioKit&#160;</td><td class="memItemRight" valign="bottom"><b>kit</b></td></tr>
 <tr class="separator:ab0c034f0991a293c7173f43c37360316"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81f403b47b4aa392386d7e60908be0f7"><td class="memItemLeft" align="right" valign="top"><a id="a81f403b47b4aa392386d7e60908be0f7"></a>
-<a class="el" href="classaudio__tools_1_1_audio_kit_stream_adapter.html">AudioKitStreamAdapter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>kit_stream</b> {&amp;kit}</td></tr>
-<tr class="separator:a81f403b47b4aa392386d7e60908be0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55593fb098b50040bc63f28fa32e995a"><td class="memItemLeft" align="right" valign="top"><a id="a55593fb098b50040bc63f28fa32e995a"></a>
 <a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a55593fb098b50040bc63f28fa32e995a"><td class="memSeparator" colspan="2">&#160;</td></tr>
