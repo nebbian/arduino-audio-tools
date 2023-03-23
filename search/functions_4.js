@@ -17,7 +17,7 @@ var searchData=
   ['delaysample_1731',['delaySample',['../classaudio__tools_1_1_delay_effect_base.html#ac667f23b583721b9191a881fd25cc817',1,'audio_tools::DelayEffectBase']]],
   ['deleteoldrecords_1732',['deleteOldRecords',['../classaudio__tools_1_1_tf_lite_micro_speech_recognize_commands.html#a311d1bc7b9336d5db6f2701831a22cce',1,'audio_tools::TfLiteMicroSpeechRecognizeCommands']]],
   ['destroy_1733',['destroy',['../classdsp__memory__manager.html#a105a00e96586f86c11e457b26ffa588f',1,'dsp_memory_manager']]],
-  ['digitalread_1734',['digitalRead',['../namespaceaudio__tools.html#a14759718a94c433ecad45629b575599f',1,'audio_tools']]],
+  ['digitalread_1734',['digitalRead',['../_no_arduino_8h.html#ae1e3d979645a535a8ce49f935392d8bc',1,'NoArduino.h']]],
   ['distortion_1735',['Distortion',['../classaudio__tools_1_1_distortion.html#a30cd5fedc5a0cda1b3a290f45ccb004d',1,'audio_tools::Distortion']]],
   ['doloop_1736',['doLoop',['../classaudio__tools_1_1_audio_server.html#abdd99e468f667b748b0c9bfd395163d7',1,'audio_tools::AudioServer']]],
   ['driver_1737',['driver',['../classaudio__tools_1_1_audio_f_f_t_base.html#ad360e5c2be36d28d74715e70f31a9f98',1,'audio_tools::AudioFFTBase']]]
