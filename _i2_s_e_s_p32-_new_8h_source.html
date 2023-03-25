@@ -377,8 +377,8 @@ $(function() {
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    DriverCommon &amp;driver = getDriver(cfg);</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    i2s_chan_config_t chan_cfg = driver.getChannelConfig(cfg);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordflow">if</span> (USE_I2S_NEW_channel(&amp;chan_cfg, &amp;tx_chan, &amp;rx_chan) != ESP_OK) {</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      LOGE(<span class="stringliteral">&quot;USE_I2S_NEW_channel&quot;</span>);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordflow">if</span> (i2s_channel(&amp;chan_cfg, &amp;tx_chan, &amp;rx_chan) != ESP_OK) {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      LOGE(<span class="stringliteral">&quot;i2s_channel&quot;</span>);</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    }</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
