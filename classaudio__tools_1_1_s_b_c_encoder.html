@@ -96,16 +96,20 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SBCEncoder</b> (int subbands=8, int blocks=16, int bitpool=32, int allocation_method=SBC_AM_LOUDNESS)</td></tr>
 <tr class="separator:a2cb04dd6796db61d3cfedf048e8aa8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="memItemLeft" align="right" valign="top"><a id="ab0bdf5cca484fb2ba637c39384b27fb2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#ab0bdf5cca484fb2ba637c39384b27fb2">begin</a> ()</td></tr>
+<tr class="memdesc:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restarts the processing. <br /></td></tr>
 <tr class="separator:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a714a06e061a0ef8f78f8db52141ceb23"><td class="memItemLeft" align="right" valign="top"><a id="a714a06e061a0ef8f78f8db52141ceb23"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> bi)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a714a06e061a0ef8f78f8db52141ceb23">begin</a> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> bi)</td></tr>
+<tr class="memdesc:a714a06e061a0ef8f78f8db52141ceb23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the processing: channels 1 or 2, supported sample rates: 16000, 32000, 44100, 48000. <br /></td></tr>
 <tr class="separator:a714a06e061a0ef8f78f8db52141ceb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4acc2555ecc44e12e20eec6974631c70"><td class="memItemLeft" align="right" valign="top"><a id="a4acc2555ecc44e12e20eec6974631c70"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>codeSize</b> ()</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a4acc2555ecc44e12e20eec6974631c70">codeSize</a> ()</td></tr>
+<tr class="memdesc:a4acc2555ecc44e12e20eec6974631c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the uncompressed length (of the PCM data) in bytes. <br /></td></tr>
 <tr class="separator:a4acc2555ecc44e12e20eec6974631c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#adc34417a19a7b70626d19c41072d72a5">end</a> ()</td></tr>
+<tr class="memdesc:adc34417a19a7b70626d19c41072d72a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the processing. <br /></td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8721dea59e7d446cb9566766c9a073b0"><td class="memItemLeft" align="right" valign="top"><a id="a8721dea59e7d446cb9566766c9a073b0"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a8721dea59e7d446cb9566766c9a073b0">frameLength</a> ()</td></tr>
@@ -118,23 +122,26 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mime<
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdb823fb33d75636f6b057854596bfee"><td class="memItemLeft" align="right" valign="top"><a id="afdb823fb33d75636f6b057854596bfee"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAllocationMethod</b> (int allocation_method)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#afdb823fb33d75636f6b057854596bfee">setAllocationMethod</a> (int allocation_method)</td></tr>
+<tr class="memdesc:afdb823fb33d75636f6b057854596bfee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the allocation method: Use SBC_AM_LOUDNESS, SBC_AM_SNR. <br /></td></tr>
 <tr class="separator:afdb823fb33d75636f6b057854596bfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1f412532ae3278dd0af127c218b096e"><td class="memItemLeft" align="right" valign="top"><a id="ad1f412532ae3278dd0af127c218b096e"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info)</td></tr>
 <tr class="separator:ad1f412532ae3278dd0af127c218b096e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc8a8be313e8fb5d9c158225c3143dd6"><td class="memItemLeft" align="right" valign="top"><a id="acc8a8be313e8fb5d9c158225c3143dd6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBitpool</b> (int bitpool)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#acc8a8be313e8fb5d9c158225c3143dd6">setBitpool</a> (int bitpool)</td></tr>
+<tr class="memdesc:acc8a8be313e8fb5d9c158225c3143dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the bitpool (2-86?) <br /></td></tr>
 <tr class="separator:acc8a8be313e8fb5d9c158225c3143dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54432aa904b0e72a505d1f0596692c0f"><td class="memItemLeft" align="right" valign="top"><a id="a54432aa904b0e72a505d1f0596692c0f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlocks</b> (int blocks)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a54432aa904b0e72a505d1f0596692c0f">setBlocks</a> (int blocks)</td></tr>
+<tr class="memdesc:a54432aa904b0e72a505d1f0596692c0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the number of blocks: valid values (4,8,12,16) <br /></td></tr>
 <tr class="separator:a54432aa904b0e72a505d1f0596692c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade185bd4f49909ba863274df35c54901"><td class="memItemLeft" align="right" valign="top"><a id="ade185bd4f49909ba863274df35c54901"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
 <tr class="separator:ade185bd4f49909ba863274df35c54901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e66cdd854b56dfea563c75c1b041607"><td class="memItemLeft" align="right" valign="top"><a id="a4e66cdd854b56dfea563c75c1b041607"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a4e66cdd854b56dfea563c75c1b041607">setSubbands</a> (int subbands)</td></tr>
-<tr class="memdesc:a4e66cdd854b56dfea563c75c1b041607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use 4 or 8. <br /></td></tr>
+<tr class="memdesc:a4e66cdd854b56dfea563c75c1b041607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the subbands: Use 4 or 8. <br /></td></tr>
 <tr class="separator:a4e66cdd854b56dfea563c75c1b041607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fc6997daf9355d8ea370fce2994e9c8"><td class="memItemLeft" align="right" valign="top"><a id="a1fc6997daf9355d8ea370fce2994e9c8"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *in_ptr, size_t in_size)</td></tr>
