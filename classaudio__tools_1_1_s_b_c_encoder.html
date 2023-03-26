@@ -99,10 +99,10 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#ab0bdf5cca484fb2ba637c39384b27fb2">begin</a> ()</td></tr>
 <tr class="memdesc:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restarts the processing. <br /></td></tr>
 <tr class="separator:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a714a06e061a0ef8f78f8db52141ceb23"><td class="memItemLeft" align="right" valign="top"><a id="a714a06e061a0ef8f78f8db52141ceb23"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a714a06e061a0ef8f78f8db52141ceb23">begin</a> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> bi)</td></tr>
-<tr class="memdesc:a714a06e061a0ef8f78f8db52141ceb23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the processing: channels 1 or 2, supported sample rates: 16000, 32000, 44100, 48000. <br /></td></tr>
-<tr class="separator:a714a06e061a0ef8f78f8db52141ceb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae011a2d42c0a1fffd980430371394512"><td class="memItemLeft" align="right" valign="top"><a id="ae011a2d42c0a1fffd980430371394512"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#ae011a2d42c0a1fffd980430371394512">begin</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> bi)</td></tr>
+<tr class="memdesc:ae011a2d42c0a1fffd980430371394512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the processing: channels 1 or 2, supported sample rates: 16000, 32000, 44100, 48000. <br /></td></tr>
+<tr class="separator:ae011a2d42c0a1fffd980430371394512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4acc2555ecc44e12e20eec6974631c70"><td class="memItemLeft" align="right" valign="top"><a id="a4acc2555ecc44e12e20eec6974631c70"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a4acc2555ecc44e12e20eec6974631c70">codeSize</a> ()</td></tr>
 <tr class="memdesc:a4acc2555ecc44e12e20eec6974631c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the uncompressed length (of the PCM data) in bytes. <br /></td></tr>
@@ -125,9 +125,9 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mime<
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#afdb823fb33d75636f6b057854596bfee">setAllocationMethod</a> (int allocation_method)</td></tr>
 <tr class="memdesc:afdb823fb33d75636f6b057854596bfee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the allocation method: Use SBC_AM_LOUDNESS, SBC_AM_SNR. <br /></td></tr>
 <tr class="separator:afdb823fb33d75636f6b057854596bfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1f412532ae3278dd0af127c218b096e"><td class="memItemLeft" align="right" valign="top"><a id="ad1f412532ae3278dd0af127c218b096e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info)</td></tr>
-<tr class="separator:ad1f412532ae3278dd0af127c218b096e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87feead15897a49c7dccb043ac9fcddc"><td class="memItemLeft" align="right" valign="top"><a id="a87feead15897a49c7dccb043ac9fcddc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a87feead15897a49c7dccb043ac9fcddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc8a8be313e8fb5d9c158225c3143dd6"><td class="memItemLeft" align="right" valign="top"><a id="acc8a8be313e8fb5d9c158225c3143dd6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#acc8a8be313e8fb5d9c158225c3143dd6">setBitpool</a> (int bitpool)</td></tr>
 <tr class="memdesc:acc8a8be313e8fb5d9c158225c3143dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the bitpool (2-86?) <br /></td></tr>
@@ -177,9 +177,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_pos</b> = 0</td
 <tr class="memitem:a455955d267cfddde02ab4ae02d4e68b4"><td class="memItemLeft" align="right" valign="top"><a id="a455955d267cfddde02ab4ae02d4e68b4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>current_codesize</b> = 0</td></tr>
 <tr class="separator:a455955d267cfddde02ab4ae02d4e68b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"><td class="memItemLeft" align="right" valign="top"><a id="abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"></a>
-<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
-<tr class="separator:abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a407c3efba665d276a38229f905bef352"><td class="memItemLeft" align="right" valign="top"><a id="a407c3efba665d276a38229f905bef352"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false</td></tr>
 <tr class="separator:a407c3efba665d276a38229f905bef352"><td class="memSeparator" colspan="2">&#160;</td></tr>

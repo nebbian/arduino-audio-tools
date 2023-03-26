@@ -90,7 +90,7 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <a class="code" href="classaudio__tools_1_1_sound_generator.html#adc34417a19a7b70626d19c41072d72a5">end</a>();</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            this-&gt;info = info;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">return</span> begin();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
@@ -130,8 +130,8 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span> readBytesFromBuffer(buffer, lengthBytes, frame_size, channels);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> defaultConfig(){</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> def;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> defaultConfig(){</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> def;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            def.bits_per_sample = <span class="keyword">sizeof</span>(T)*8;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            def.channels = 1;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            def.sample_rate = 44100;</div>
@@ -143,11 +143,11 @@ $(function() {
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">virtual</span> AudioBaseInfo audioInfo() {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">virtual</span> AudioInfo audioInfo() {</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">return</span> info;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAudioInfo(AudioBaseInfo info){</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAudioInfo(AudioInfo info){</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            this-&gt;info = info;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">if</span> (info.bits_per_sample!=<span class="keyword">sizeof</span>(T)*8){</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                LOGE(<span class="stringliteral">&quot;invalid bits_per_sample: %d&quot;</span>, info.channels);</div>
@@ -158,7 +158,7 @@ $(function() {
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">bool</span> active = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">bool</span> activeWarningIssued = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">int</span> output_channels = 1;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        AudioBaseInfo info;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        AudioInfo info;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        RingBuffer&lt;uint8_t&gt; ring_buffer{0};</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">size_t</span> readBytesFrames(uint8_t *buffer, <span class="keywordtype">size_t</span> lengthBytes, <span class="keywordtype">int</span> frames, <span class="keywordtype">int</span> channels ){</div>
@@ -206,14 +206,14 @@ $(function() {
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            LOGI(<span class="stringliteral">&quot;%s::begin(channels=%d, sample_rate=%d)&quot;</span>,<span class="stringliteral">&quot;SineWaveGenerator&quot;</span>, info.channels, info.sample_rate);</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <a class="code" href="classaudio__tools_1_1_sound_generator.html">SoundGenerator&lt;T&gt;::begin</a>(info);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            this-&gt;m_deltaTime = 1.0 / <a class="code" href="classaudio__tools_1_1_sound_generator.html">SoundGenerator&lt;T&gt;::info</a>.sample_rate;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        }</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info, <span class="keywordtype">float</span> frequency){</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info, <span class="keywordtype">float</span> frequency){</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            LOGI(<span class="stringliteral">&quot;%s::begin(channels=%d, sample_rate=%d, frequency=%.2f)&quot;</span>,<span class="stringliteral">&quot;SineWaveGenerator&quot;</span>,info.channels, info.sample_rate,frequency);</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <a class="code" href="classaudio__tools_1_1_sound_generator.html">SoundGenerator&lt;T&gt;::begin</a>(info);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            this-&gt;m_deltaTime = 1.0 / <a class="code" href="classaudio__tools_1_1_sound_generator.html">SoundGenerator&lt;T&gt;::info</a>.sample_rate;</div>
@@ -230,12 +230,12 @@ $(function() {
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        }</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="comment">// update m_deltaTime</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <a class="code" href="classaudio__tools_1_1_sound_generator.html">SoundGenerator&lt;T&gt;::setAudioInfo</a>(info);</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            this-&gt;m_deltaTime = 1.0 / <a class="code" href="classaudio__tools_1_1_sound_generator.html">SoundGenerator&lt;T&gt;::info</a>.sample_rate;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> defaultConfig()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> defaultConfig()<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_sound_generator.html">SoundGenerator&lt;T&gt;::defaultConfig</a>();</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        }</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
@@ -487,7 +487,7 @@ $(function() {
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;      LOGI(<span class="stringliteral">&quot;table_length: %d&quot;</span>, (<span class="keywordtype">int</span>)size);</div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    }</div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160; </div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_generator_from_array.html#acba365cc28eb702040c382646cfb0a7a">begin</a>(AudioBaseInfo info)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_generator_from_array.html#acba365cc28eb702040c382646cfb0a7a">begin</a>(AudioInfo info)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        <span class="keywordflow">return</span> SoundGenerator&lt;T&gt;::begin(info);</div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    }</div>
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160; </div>
@@ -568,7 +568,7 @@ $(function() {
 <div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160; </div>
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;    <a class="code" href="classaudio__tools_1_1_generator_fixed_value.html">GeneratorFixedValue</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160; </div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_generator_fixed_value.html#acba365cc28eb702040c382646cfb0a7a">begin</a>(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info) {</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_generator_fixed_value.html#acba365cc28eb702040c382646cfb0a7a">begin</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) {</div>
 <div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_sound_generator.html">SoundGenerator&lt;T&gt;::begin</a>(info);</div>
 <div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    }</div>
 <div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160; </div>
@@ -638,7 +638,7 @@ $(function() {
 <div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        }</div>
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160; </div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;        <span class="keywordtype">bool</span> begin(AudioBaseInfo info, <span class="keywordtype">float</span> frequency) {</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;        <span class="keywordtype">bool</span> begin(AudioInfo info, <span class="keywordtype">float</span> frequency) {</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;            SoundGenerator&lt;T&gt;::begin(info);</div>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            base_frequency = SoundGenerator&lt;T&gt;::audioInfo().sample_rate / 360.0; <span class="comment">//122.5 hz (at 44100); 61 hz (at 22050)</span></div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;            setFrequency(frequency);</div>
@@ -778,7 +778,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_generator_from_stream_html_adc79c89fc1d63b418c9f074b63f3d651"><div class="ttname"><a href="classaudio__tools_1_1_generator_from_stream.html#adc79c89fc1d63b418c9f074b63f3d651">audio_tools::GeneratorFromStream::readSample</a></div><div class="ttdeci">T readSample()</div><div class="ttdoc">Provides a single sample from the stream.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:447</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_generator_mixer_html"><div class="ttname"><a href="classaudio__tools_1_1_generator_mixer.html">audio_tools::GeneratorMixer</a></div><div class="ttdoc">Mixer which combines multiple sound generators into one output.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:763</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_generator_mixer_html_adc79c89fc1d63b418c9f074b63f3d651"><div class="ttname"><a href="classaudio__tools_1_1_generator_mixer.html#adc79c89fc1d63b418c9f074b63f3d651">audio_tools::GeneratorMixer::readSample</a></div><div class="ttdeci">T readSample()</div><div class="ttdoc">Provides a single sample.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:778</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_number_converter_html_aa83040da5c51151a9bd3286ecfcfe413"><div class="ttname"><a href="classaudio__tools_1_1_number_converter.html#aa83040da5c51151a9bd3286ecfcfe413">audio_tools::NumberConverter::maxValue</a></div><div class="ttdeci">static int64_t maxValue(int value_bits_per_sample)</div><div class="ttdoc">provides the biggest number for the indicated number of bits</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:180</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_number_converter_html_aa83040da5c51151a9bd3286ecfcfe413"><div class="ttname"><a href="classaudio__tools_1_1_number_converter.html#aa83040da5c51151a9bd3286ecfcfe413">audio_tools::NumberConverter::maxValue</a></div><div class="ttdeci">static int64_t maxValue(int value_bits_per_sample)</div><div class="ttdoc">provides the biggest number for the indicated number of bits</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:183</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_pink_noise_generator_html"><div class="ttname"><a href="classaudio__tools_1_1_pink_noise_generator.html">audio_tools::PinkNoiseGenerator</a></div><div class="ttdoc">Generates pink noise.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:335</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_pink_noise_generator_html_a4b1069db8df79428e29704ea5c29ce4e"><div class="ttname"><a href="classaudio__tools_1_1_pink_noise_generator.html#a4b1069db8df79428e29704ea5c29ce4e">audio_tools::PinkNoiseGenerator::PinkNoiseGenerator</a></div><div class="ttdeci">PinkNoiseGenerator(T amplitude=32767)</div><div class="ttdoc">the amplitude defines the max value which is generated</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:338</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_pink_noise_generator_html_adc79c89fc1d63b418c9f074b63f3d651"><div class="ttname"><a href="classaudio__tools_1_1_pink_noise_generator.html#adc79c89fc1d63b418c9f074b63f3d651">audio_tools::PinkNoiseGenerator::readSample</a></div><div class="ttdeci">T readSample()</div><div class="ttdoc">Provides a single sample.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:347</div></div>
@@ -807,7 +807,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_white_noise_generator_html_adc79c89fc1d63b418c9f074b63f3d651"><div class="ttname"><a href="classaudio__tools_1_1_white_noise_generator.html#adc79c89fc1d63b418c9f074b63f3d651">audio_tools::WhiteNoiseGenerator::readSample</a></div><div class="ttdeci">T readSample()</div><div class="ttdoc">Provides a single sample.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:314</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html_a07f83b0475b1f3c98eccd9b1642dd1cb"><div class="ttname"><a href="namespaceaudio__tools.html#a07f83b0475b1f3c98eccd9b1642dd1cb">audio_tools::map</a></div><div class="ttdeci">long map(long x, long in_min, long in_max, long out_min, long out_max)</div><div class="ttdoc">Maps input to output values.</div><div class="ttdef"><b>Definition:</b> NoArduino.h:150</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

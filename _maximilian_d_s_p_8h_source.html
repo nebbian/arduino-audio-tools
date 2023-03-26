@@ -95,7 +95,7 @@ $(function() {
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">delete</span>[] p_buffer;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_maximilian.html#a8f9a2c19a02f5bc0b7b870138164d92d">   32</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_maximilian.html#a8f9a2c19a02f5bc0b7b870138164d92d">begin</a>(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> cfg){</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_maximilian.html#afd420696e82e3c9725541a0dbab9c767">   32</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_maximilian.html#afd420696e82e3c9725541a0dbab9c767">begin</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg){</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            this-&gt;cfg = cfg;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            maxiSettings::setup(cfg.sample_rate, cfg.channels, DEFAULT_BUFFER_SIZE);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
@@ -132,7 +132,7 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">float</span> volume=1.0;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">int</span> buffer_size=256;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *p_sink=<span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> cfg;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        void (*callback)(maxi_float_t *channels);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
@@ -140,11 +140,11 @@ $(function() {
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;} <span class="comment">// namespace</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_maximilian_html"><div class="ttname"><a href="classaudio__tools_1_1_maximilian.html">audio_tools::Maximilian</a></div><div class="ttdoc">AudioTools integration with Maximilian.</div><div class="ttdef"><b>Definition:</b> MaximilianDSP.h:17</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_maximilian_html_a12c2fba1888a04d3e954c1eda3a56c34"><div class="ttname"><a href="classaudio__tools_1_1_maximilian.html#a12c2fba1888a04d3e954c1eda3a56c34">audio_tools::Maximilian::setVolume</a></div><div class="ttdeci">void setVolume(float f)</div><div class="ttdoc">Defines the volume. The values are between 0.0 and 1.0.</div><div class="ttdef"><b>Definition:</b> MaximilianDSP.h:38</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_maximilian_html_a8f9a2c19a02f5bc0b7b870138164d92d"><div class="ttname"><a href="classaudio__tools_1_1_maximilian.html#a8f9a2c19a02f5bc0b7b870138164d92d">audio_tools::Maximilian::begin</a></div><div class="ttdeci">void begin(AudioBaseInfo cfg)</div><div class="ttdoc">Setup Maximilian with audio parameters.</div><div class="ttdef"><b>Definition:</b> MaximilianDSP.h:32</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_maximilian_html_aaa6c087511a52e64fc9ad92820c7c0a8"><div class="ttname"><a href="classaudio__tools_1_1_maximilian.html#aaa6c087511a52e64fc9ad92820c7c0a8">audio_tools::Maximilian::copy</a></div><div class="ttdeci">void copy()</div><div class="ttdoc">Copies the audio data from maximilian to the audio sink, Call this method from the Arduino Loop.</div><div class="ttdef"><b>Definition:</b> MaximilianDSP.h:49</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_maximilian_html_afd420696e82e3c9725541a0dbab9c767"><div class="ttname"><a href="classaudio__tools_1_1_maximilian.html#afd420696e82e3c9725541a0dbab9c767">audio_tools::Maximilian::begin</a></div><div class="ttdeci">void begin(AudioInfo cfg)</div><div class="ttdoc">Setup Maximilian with audio parameters.</div><div class="ttdef"><b>Definition:</b> MaximilianDSP.h:32</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:51</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

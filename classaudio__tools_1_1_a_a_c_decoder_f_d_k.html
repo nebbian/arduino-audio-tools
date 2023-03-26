@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Audio Decoder which decodes AAC into a PCM stream This is basically just a wrapper using <a href="https://github.com/pschatzmann/arduino-fdk-aac">https://github.com/pschatzmann/arduino-fdk-aac</a> which uses <a class="el" href="structaudio__tools_1_1_audio_base_info.html" title="Basic Audio information which drives e.g. I2S.">AudioBaseInfo</a> and provides the handlig of <a class="el" href="structaudio__tools_1_1_audio_base_info.html" title="Basic Audio information which drives e.g. I2S.">AudioBaseInfo</a> changes.  
+<p>Audio Decoder which decodes AAC into a PCM stream This is basically just a wrapper using <a href="https://github.com/pschatzmann/arduino-fdk-aac">https://github.com/pschatzmann/arduino-fdk-aac</a> which uses <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> and provides the handlig of <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> changes.  
  <a href="classaudio__tools_1_1_a_a_c_decoder_f_d_k.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_codec_a_a_c_f_d_k_8h_source.html">CodecAACFDK.h</a>&gt;</code></p>
@@ -85,9 +85,9 @@ Inheritance diagram for AACDecoderFDK:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_a_a_c_decoder_f_d_k.png" usemap="#AACDecoderFDK_map" alt=""/>
   <map id="AACDecoderFDK_map" name="AACDecoderFDK_map">
-<area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="72,56,207,80"/>
-<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,135,24"/>
-<area href="classaudio__tools_1_1_audio_base_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioBaseInfoSource" shape="rect" coords="145,0,280,24"/>
+<area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="61,56,174,80"/>
+<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,113,24"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="123,0,236,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -96,9 +96,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adebec8b703a5b0d69adcbc299685e9cd"><td class="memItemLeft" align="right" valign="top"><a id="adebec8b703a5b0d69adcbc299685e9cd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AACDecoderFDK</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream, int output_buffer_size=2048)</td></tr>
 <tr class="separator:adebec8b703a5b0d69adcbc299685e9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af049bc7a119d431517d924571e5e570d"><td class="memItemLeft" align="right" valign="top"><a id="af049bc7a119d431517d924571e5e570d"></a>
-<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
-<tr class="separator:af049bc7a119d431517d924571e5e570d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff1ae64fbc062f59f773489333273689"><td class="memItemLeft" align="right" valign="top"><a id="aff1ae64fbc062f59f773489333273689"></a>
 CStreamInfo&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfoEx</b> ()</td></tr>
 <tr class="separator:aff1ae64fbc062f59f773489333273689"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,12 +124,12 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isResultPCM</
 <tr class="memitem:a0d52c0ed98e047d782054fa126b281e5"><td class="memItemLeft" align="right" valign="top"><a id="a0d52c0ed98e047d782054fa126b281e5"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a0d52c0ed98e047d782054fa126b281e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c9ea752da0924b395c3a49f1f9c460"><td class="memItemLeft" align="right" valign="top"><a id="a64c9ea752da0924b395c3a49f1f9c460"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> from) override</td></tr>
-<tr class="separator:a64c9ea752da0924b395c3a49f1f9c460"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66e0debe8d445735325a5cd4b9625ca6"><td class="memItemLeft" align="right" valign="top"><a id="a66e0debe8d445735325a5cd4b9625ca6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi)</td></tr>
-<tr class="separator:a66e0debe8d445735325a5cd4b9625ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
+<tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8dfe7837928747737ad15bccdbd004"><td class="memItemLeft" align="right" valign="top"><a id="abb8dfe7837928747737ad15bccdbd004"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
+<tr class="separator:abb8dfe7837928747737ad15bccdbd004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c50884a025e7c2049b71fe0b8d0045"><td class="memItemLeft" align="right" valign="top"><a id="a33c50884a025e7c2049b71fe0b8d0045"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;out_stream)</td></tr>
 <tr class="separator:a33c50884a025e7c2049b71fe0b8d0045"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,7 +157,7 @@ aac_fdk::AACDecoderFDK *&#160;</td><td class="memItemRight" valign="bottom"><b>d
 <tr class="separator:a955b98f20e1d8a96f9f29e34227872ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Audio Decoder which decodes AAC into a PCM stream This is basically just a wrapper using <a href="https://github.com/pschatzmann/arduino-fdk-aac">https://github.com/pschatzmann/arduino-fdk-aac</a> which uses <a class="el" href="structaudio__tools_1_1_audio_base_info.html" title="Basic Audio information which drives e.g. I2S.">AudioBaseInfo</a> and provides the handlig of <a class="el" href="structaudio__tools_1_1_audio_base_info.html" title="Basic Audio information which drives e.g. I2S.">AudioBaseInfo</a> changes. </p>
+<div class="textblock"><p>Audio Decoder which decodes AAC into a PCM stream This is basically just a wrapper using <a href="https://github.com/pschatzmann/arduino-fdk-aac">https://github.com/pschatzmann/arduino-fdk-aac</a> which uses <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> and provides the handlig of <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> changes. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>

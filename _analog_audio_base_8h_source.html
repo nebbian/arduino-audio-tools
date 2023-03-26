@@ -80,7 +80,7 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceaudio__tools.html">audio_tools</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a> : <span class="keyword">public</span> <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a> : <span class="keyword">public</span> <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> buffer_count = I2S_BUFFER_COUNT;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> buffer_size = I2S_BUFFER_SIZE;</div>
@@ -129,7 +129,7 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> logInfo() {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      AudioBaseInfo::logInfo();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      AudioInfo::logInfo();</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">if</span> (rx_tx_mode == TX_MODE){</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        LOGI(<span class="stringliteral">&quot;analog left output pin: %d&quot;</span>, 25);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        LOGI(<span class="stringliteral">&quot;analog right output pin: %d&quot;</span>, 26);</div>
@@ -229,7 +229,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_analog_driver_e_s_p32_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_e_s_p32.html">audio_tools::AnalogDriverESP32</a></div><div class="ttdoc">Please use AnalogAudioStream: A very fast ADC and DAC using the ESP32 I2S interface.</div><div class="ttdef"><b>Definition:</b> AnalogAudioESP32.h:35</div></div>
 <div class="ttc" id="agroup__basic_html_ga8cbd91a8bac9b5ab425112be1620eb49"><div class="ttname"><a href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">audio_tools::RxTxMode</a></div><div class="ttdeci">RxTxMode</div><div class="ttdoc">Audio Source (TX_MODE) or Audio Sink (RX_MODE). RXTX_MODE is Source and Sink at the same time!</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:17</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

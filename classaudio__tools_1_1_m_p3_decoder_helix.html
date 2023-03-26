@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>MP3 Decoder using libhelix: <a href="https://github.com/pschatzmann/arduino-libhelix">https://github.com/pschatzmann/arduino-libhelix</a> This is basically just a simple wrapper to provide <a class="el" href="structaudio__tools_1_1_audio_base_info.html" title="Basic Audio information which drives e.g. I2S.">AudioBaseInfo</a> and <a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html" title="Supports changes to the sampling rate, bits and channels.">AudioBaseInfoDependent</a>.  
+<p>MP3 Decoder using libhelix: <a href="https://github.com/pschatzmann/arduino-libhelix">https://github.com/pschatzmann/arduino-libhelix</a> This is basically just a simple wrapper to provide <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> and <a class="el" href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels.">AudioInfoDependent</a>.  
  <a href="classaudio__tools_1_1_m_p3_decoder_helix.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_codec_m_p3_helix_8h_source.html">CodecMP3Helix.h</a>&gt;</code></p>
@@ -85,9 +85,9 @@ Inheritance diagram for MP3DecoderHelix:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_m_p3_decoder_helix.png" usemap="#MP3DecoderHelix_map" alt=""/>
   <map id="MP3DecoderHelix_map" name="MP3DecoderHelix_map">
-<area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="72,56,207,80"/>
-<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,135,24"/>
-<area href="classaudio__tools_1_1_audio_base_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioBaseInfoSource" shape="rect" coords="145,0,280,24"/>
+<area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="62,56,177,80"/>
+<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,115,24"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="125,0,240,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -96,16 +96,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a953f4e5f421fb16daa48630901c0bc8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a953f4e5f421fb16daa48630901c0bc8c">MP3DecoderHelix</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
 <tr class="memdesc:a953f4e5f421fb16daa48630901c0bc8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_m_p3_decoder_mini.html" title="MP3 Decoder using https://github.com/pschatzmann/minimp3. This decoder does not provide any good resu...">MP3DecoderMini</a> object.  <a href="classaudio__tools_1_1_m_p3_decoder_helix.html#a953f4e5f421fb16daa48630901c0bc8c">More...</a><br /></td></tr>
 <tr class="separator:a953f4e5f421fb16daa48630901c0bc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cc28b4456c54e9e4deae7edd9ffd8b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a4cc28b4456c54e9e4deae7edd9ffd8b4">MP3DecoderHelix</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream, <a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi)</td></tr>
-<tr class="memdesc:a4cc28b4456c54e9e4deae7edd9ffd8b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_m_p3_decoder_mini.html" title="MP3 Decoder using https://github.com/pschatzmann/minimp3. This decoder does not provide any good resu...">MP3DecoderMini</a> object. The decoded output will go to the print object.  <a href="classaudio__tools_1_1_m_p3_decoder_helix.html#a4cc28b4456c54e9e4deae7edd9ffd8b4">More...</a><br /></td></tr>
-<tr class="separator:a4cc28b4456c54e9e4deae7edd9ffd8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f21c3f468dcc961e2bb2068cd1b72d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a2f21c3f468dcc961e2bb2068cd1b72d1">MP3DecoderHelix</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream, <a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
+<tr class="memdesc:a2f21c3f468dcc961e2bb2068cd1b72d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_m_p3_decoder_mini.html" title="MP3 Decoder using https://github.com/pschatzmann/minimp3. This decoder does not provide any good resu...">MP3DecoderMini</a> object. The decoded output will go to the print object.  <a href="classaudio__tools_1_1_m_p3_decoder_helix.html#a2f21c3f468dcc961e2bb2068cd1b72d1">More...</a><br /></td></tr>
+<tr class="separator:a2f21c3f468dcc961e2bb2068cd1b72d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e3ff218051614b352b28ff3ccf8703a"><td class="memItemLeft" align="right" valign="top"><a id="a4e3ff218051614b352b28ff3ccf8703a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a4e3ff218051614b352b28ff3ccf8703a">~MP3DecoderHelix</a> ()</td></tr>
 <tr class="memdesc:a4e3ff218051614b352b28ff3ccf8703a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classaudio__tools_1_1_m_p3_decoder_mini.html" title="MP3 Decoder using https://github.com/pschatzmann/minimp3. This decoder does not provide any good resu...">MP3DecoderMini</a> object. <br /></td></tr>
 <tr class="separator:a4e3ff218051614b352b28ff3ccf8703a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af049bc7a119d431517d924571e5e570d"><td class="memItemLeft" align="right" valign="top"><a id="af049bc7a119d431517d924571e5e570d"></a>
-<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
-<tr class="separator:af049bc7a119d431517d924571e5e570d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7140ab4dbd714d8c0bf71d905b5ab0fb"><td class="memItemLeft" align="right" valign="top"><a id="a7140ab4dbd714d8c0bf71d905b5ab0fb"></a>
 MP3FrameInfo&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfoEx</b> ()</td></tr>
 <tr class="separator:a7140ab4dbd714d8c0bf71d905b5ab0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,9 +139,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a9b3baad8c612d81b96e46f84d7e97580">operator bool</a> ()</td></tr>
 <tr class="memdesc:a9b3baad8c612d81b96e46f84d7e97580"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if the class is active <br /></td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c9ea752da0924b395c3a49f1f9c460"><td class="memItemLeft" align="right" valign="top"><a id="a64c9ea752da0924b395c3a49f1f9c460"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> from) override</td></tr>
-<tr class="separator:a64c9ea752da0924b395c3a49f1f9c460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
+<tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8532db8250b1047a70318a6d80b91ec"><td class="memItemLeft" align="right" valign="top"><a id="ac8532db8250b1047a70318a6d80b91ec"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#ac8532db8250b1047a70318a6d80b91ec">setFilterMetaData</a> (bool filter)</td></tr>
 <tr class="memdesc:ac8532db8250b1047a70318a6d80b91ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates a filter that makes sure that helix does not get any metadata segments. <br /></td></tr>
@@ -154,10 +154,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a00f9dda211e2236d718c7c68bf610ea7">setMaxPCMSize</a> (size_t len)</td></tr>
 <tr class="memdesc:a00f9dda211e2236d718c7c68bf610ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define your optimized maximum pwm buffer size. <br /></td></tr>
 <tr class="separator:a00f9dda211e2236d718c7c68bf610ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0e17a58e9f221999b796c48c6dcc907"><td class="memItemLeft" align="right" valign="top"><a id="ad0e17a58e9f221999b796c48c6dcc907"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#ad0e17a58e9f221999b796c48c6dcc907">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi)</td></tr>
-<tr class="memdesc:ad0e17a58e9f221999b796c48c6dcc907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the callback object to which the Audio information change is provided. <br /></td></tr>
-<tr class="separator:ad0e17a58e9f221999b796c48c6dcc907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01cdc98818a242f795f5f1a74dea50e3"><td class="memItemLeft" align="right" valign="top"><a id="a01cdc98818a242f795f5f1a74dea50e3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a01cdc98818a242f795f5f1a74dea50e3">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
+<tr class="memdesc:a01cdc98818a242f795f5f1a74dea50e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the callback object to which the Audio information change is provided. <br /></td></tr>
+<tr class="separator:a01cdc98818a242f795f5f1a74dea50e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c50884a025e7c2049b71fe0b8d0045"><td class="memItemLeft" align="right" valign="top"><a id="a33c50884a025e7c2049b71fe0b8d0045"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;out_stream)</td></tr>
 <tr class="separator:a33c50884a025e7c2049b71fe0b8d0045"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,7 +193,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_filter</b> = fals
 <tr class="separator:a77d720c38d2b1bb1b766ab943757e447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>MP3 Decoder using libhelix: <a href="https://github.com/pschatzmann/arduino-libhelix">https://github.com/pschatzmann/arduino-libhelix</a> This is basically just a simple wrapper to provide <a class="el" href="structaudio__tools_1_1_audio_base_info.html" title="Basic Audio information which drives e.g. I2S.">AudioBaseInfo</a> and <a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html" title="Supports changes to the sampling rate, bits and channels.">AudioBaseInfoDependent</a>. </p>
+<div class="textblock"><p>MP3 Decoder using libhelix: <a href="https://github.com/pschatzmann/arduino-libhelix">https://github.com/pschatzmann/arduino-libhelix</a> This is basically just a simple wrapper to provide <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> and <a class="el" href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels.">AudioInfoDependent</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -231,8 +231,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_filter</b> = fals
 
 </div>
 </div>
-<a id="a4cc28b4456c54e9e4deae7edd9ffd8b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cc28b4456c54e9e4deae7edd9ffd8b4">&#9670;&nbsp;</a></span>MP3DecoderHelix() <span class="overload">[2/2]</span></h2>
+<a id="a2f21c3f468dcc961e2bb2068cd1b72d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f21c3f468dcc961e2bb2068cd1b72d1">&#9670;&nbsp;</a></span>MP3DecoderHelix() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +249,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_filter</b> = fals
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;&#160;</td>
           <td class="paramname"><em>bi</em>&#160;</td>
         </tr>
         <tr>

@@ -85,7 +85,7 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    info.bits_per_sample = isHd ? 24 : 16;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> audioInfo() { <span class="keywordflow">return</span> info; }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> audioInfo() { <span class="keywordflow">return</span> info; }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> begin() {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    TRACEI();</div>
@@ -103,7 +103,7 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ctx = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> setNotifyAudioChange(<a class="code" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> setNotifyAudioChange(<a class="code" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) {</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    notify = &amp;bi;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
@@ -150,9 +150,9 @@ $(function() {
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">struct </span>aptx_context *ctx = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> *notify = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *notify = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *p_print = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">bool</span> is_first_write = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;uint8_t&gt;</a> output_buffer;</div>
@@ -249,7 +249,7 @@ $(function() {
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    info.bits_per_sample = isHd ? 24 : 16;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  }</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keywordtype">void</span> begin(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info) {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keywordtype">void</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) {</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    setAudioInfo(info);</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    begin();</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  }</div>
@@ -286,7 +286,7 @@ $(function() {
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *mime() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;audio/aptx&quot;</span>; }</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) {</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    this-&gt;info = info;</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">switch</span> (info.bits_per_sample) {</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      <span class="keywordflow">case</span> 16:</div>
@@ -349,7 +349,7 @@ $(function() {
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keywordtype">bool</span> is_hd;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;int24_t&gt;</a> input_buffer{4 * 2};</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;uint8_t&gt;</a> output_buffer;</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordtype">int</span> input_pos = 0;</div>
@@ -364,14 +364,14 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_a_p_t_x_decoder_html_aa1d0071fc1874ec9e73acd7531392da1"><div class="ttname"><a href="classaudio__tools_1_1_a_p_t_x_decoder.html#aa1d0071fc1874ec9e73acd7531392da1">audio_tools::APTXDecoder::checkPrefix</a></div><div class="ttdeci">bool checkPrefix(const void *input_buffer, size_t length)</div><div class="ttdoc">Checks the prefix of the received data.</div><div class="ttdef"><b>Definition:</b> CodecAPTX.h:171</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_a_p_t_x_decoder_html_afcfdf8cac8adf3cecd498347d2fbcc61"><div class="ttname"><a href="classaudio__tools_1_1_a_p_t_x_decoder.html#afcfdf8cac8adf3cecd498347d2fbcc61">audio_tools::APTXDecoder::writeData</a></div><div class="ttdeci">void writeData(size_t written, bool &amp;is_ok)</div><div class="ttdoc">Converts the data to 16 bit and writes it to final output.</div><div class="ttdef"><b>Definition:</b> CodecAPTX.h:116</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_a_p_t_x_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_a_p_t_x_encoder.html">audio_tools::APTXEncoder</a></div><div class="ttdoc">Encoder for OpenAptx - Depends on https://github.com/pschatzmann/libopenaptx.</div><div class="ttdef"><b>Definition:</b> CodecAPTX.h:204</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_base_info_dependent_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_base_info_dependent.html">audio_tools::AudioBaseInfoDependent</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:84</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:16</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_encoder.html">audio_tools::AudioEncoder</a></div><div class="ttdoc">Encoding of PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:47</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_info_dependent_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_dependent.html">audio_tools::AudioInfoDependent</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:87</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:51</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html"><div class="ttname"><a href="classaudio__tools_1_1_vector.html">audio_tools::Vector&lt; uint8_t &gt;</a></div></div>
 <div class="ttc" id="aclassaudio__tools_1_1int24__t_html"><div class="ttname"><a href="classaudio__tools_1_1int24__t.html">audio_tools::int24_t</a></div><div class="ttdoc">24bit integer which is used for I2S sound processing. The values are represented as int32_t,...</div><div class="ttdef"><b>Definition:</b> Int24.h:16</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

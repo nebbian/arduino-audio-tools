@@ -55,7 +55,7 @@ var searchData=
   ['mozziconfig_592',['MozziConfig',['../structaudio__tools_1_1_mozzi_config.html',1,'audio_tools']]],
   ['mozzigenerator_593',['MozziGenerator',['../classaudio__tools_1_1_mozzi_generator.html',1,'audio_tools']]],
   ['mozzistream_594',['MozziStream',['../classaudio__tools_1_1_mozzi_stream.html',1,'audio_tools']]],
-  ['mp3decoderhelix_595',['MP3DecoderHelix',['../classaudio__tools_1_1_m_p3_decoder_helix.html',1,'MP3DecoderHelix'],['../classaudio__tools_1_1_m_p3_decoder_helix.html#a4cc28b4456c54e9e4deae7edd9ffd8b4',1,'audio_tools::MP3DecoderHelix::MP3DecoderHelix(Print &amp;out_stream, AudioBaseInfoDependent &amp;bi)'],['../classaudio__tools_1_1_m_p3_decoder_helix.html#a953f4e5f421fb16daa48630901c0bc8c',1,'audio_tools::MP3DecoderHelix::MP3DecoderHelix(Print &amp;out_stream)']]],
+  ['mp3decoderhelix_595',['MP3DecoderHelix',['../classaudio__tools_1_1_m_p3_decoder_helix.html',1,'MP3DecoderHelix'],['../classaudio__tools_1_1_m_p3_decoder_helix.html#a2f21c3f468dcc961e2bb2068cd1b72d1',1,'audio_tools::MP3DecoderHelix::MP3DecoderHelix(Print &amp;out_stream, AudioInfoDependent &amp;bi)'],['../classaudio__tools_1_1_m_p3_decoder_helix.html#a953f4e5f421fb16daa48630901c0bc8c',1,'audio_tools::MP3DecoderHelix::MP3DecoderHelix(Print &amp;out_stream)']]],
   ['mp3decodermad_596',['MP3DecoderMAD',['../classaudio__tools_1_1_m_p3_decoder_m_a_d.html',1,'audio_tools']]],
   ['mp3decodermini_597',['MP3DecoderMini',['../classaudio__tools_1_1_m_p3_decoder_mini.html',1,'audio_tools']]],
   ['mp3encoderlame_598',['MP3EncoderLAME',['../classaudio__tools_1_1_m_p3_encoder_l_a_m_e.html',1,'audio_tools']]],

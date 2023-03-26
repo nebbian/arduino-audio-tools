@@ -76,7 +76,7 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceaudio__tools.html">audio_tools</a> {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_resample_config.html">   13</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structaudio__tools_1_1_resample_config.html">ResampleConfig</a> : <span class="keyword">public</span> <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_resample_config.html">   13</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structaudio__tools_1_1_resample_config.html">ResampleConfig</a> : <span class="keyword">public</span> <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">float</span> step_size=1.0f;</div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_resample_config.html#af736bd115bcd9ab90219d854b57642a5">   16</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structaudio__tools_1_1_resample_config.html#af736bd115bcd9ab90219d854b57642a5">to_sample_rate</a> = 0;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
@@ -124,7 +124,7 @@ $(function() {
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">bool</span> begin(AudioBaseInfo info, <span class="keywordtype">int</span> fromRate, <span class="keywordtype">int</span> toRate){</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">bool</span> begin(AudioInfo info, <span class="keywordtype">int</span> fromRate, <span class="keywordtype">int</span> toRate){</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        ResampleConfig rcfg;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        rcfg.to_sample_rate = toRate;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        rcfg.step_size = <a class="code" href="classaudio__tools_1_1_resample_stream.html#ab49cc7c5e84baee6171477076ad7284a">getStepSize</a>(fromRate, toRate);</div>
@@ -132,14 +132,14 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> begin(rcfg);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">bool</span> begin(AudioBaseInfo info, <span class="keywordtype">float</span> step){</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">bool</span> begin(AudioInfo info, <span class="keywordtype">float</span> step){</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        ResampleConfig rcfg;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        rcfg.step_size = step;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        rcfg.copyFrom(info);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> begin(rcfg);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> setAudioInfo(AudioBaseInfo info)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> setAudioInfo(AudioInfo info)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        AudioStream::setAudioInfo(info);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="classaudio__tools_1_1_resample_stream.html#ab5a7ba68d6c150f9643e74f3838270a5">setChannels</a>(info.channels);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="comment">// update the step size if a fixed to_sample_rate has been defined</span></div>
@@ -351,8 +351,8 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_resample_stream_html_af68d567deb61ebb2452d61b9e1beed8e"><div class="ttname"><a href="classaudio__tools_1_1_resample_stream.html#af68d567deb61ebb2452d61b9e1beed8e">audio_tools::ResampleStream::ResampleStream</a></div><div class="ttdeci">ResampleStream(AudioStream &amp;io)</div><div class="ttdoc">Support for resampling via write and read. The audio information is copied from the io.</div><div class="ttdef"><b>Definition:</b> Resample.h:49</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_stream.html">audio_tools::Stream</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:114</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_a2320e2f14f2ac363a4eb3fafd8c5afa7"><div class="ttname"><a href="namespaceaudio__tools.html#a2320e2f14f2ac363a4eb3fafd8c5afa7">audio_tools::mapFloat</a></div><div class="ttdeci">float mapFloat(float x, float in_min, float in_max, float out_min, float out_max)</div><div class="ttdoc">Similar to Arduino map function but using floats.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:258</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_a2320e2f14f2ac363a4eb3fafd8c5afa7"><div class="ttname"><a href="namespaceaudio__tools.html#a2320e2f14f2ac363a4eb3fafd8c5afa7">audio_tools::mapFloat</a></div><div class="ttdeci">float mapFloat(float x, float in_min, float in_max, float out_min, float out_max)</div><div class="ttdoc">Similar to Arduino map function but using floats.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:261</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_resample_config_html"><div class="ttname"><a href="structaudio__tools_1_1_resample_config.html">audio_tools::ResampleConfig</a></div><div class="ttdoc">Optional Configuration object. The critical information is the channels and the step_size....</div><div class="ttdef"><b>Definition:</b> Resample.h:13</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_resample_config_html_af736bd115bcd9ab90219d854b57642a5"><div class="ttname"><a href="structaudio__tools_1_1_resample_config.html#af736bd115bcd9ab90219d854b57642a5">audio_tools::ResampleConfig::to_sample_rate</a></div><div class="ttdeci">int to_sample_rate</div><div class="ttdoc">Optional fixed target sample rate.</div><div class="ttdef"><b>Definition:</b> Resample.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->

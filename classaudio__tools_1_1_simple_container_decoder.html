@@ -86,7 +86,7 @@ Inheritance diagram for SimpleContainerDecoder:</div>
   <map id="SimpleContainerDecoder_map" name="SimpleContainerDecoder_map">
 <area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="81,56,234,80"/>
 <area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,153,24"/>
-<area href="classaudio__tools_1_1_audio_base_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioBaseInfoSource" shape="rect" coords="163,0,316,24"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="163,0,316,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -95,9 +95,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a205d0122deebc990954c8fbd7df8ad40"><td class="memItemLeft" align="right" valign="top"><a id="a205d0122deebc990954c8fbd7df8ad40"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SimpleContainerDecoder</b> (<a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> &amp;decoder)</td></tr>
 <tr class="separator:a205d0122deebc990954c8fbd7df8ad40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af049bc7a119d431517d924571e5e570d"><td class="memItemLeft" align="right" valign="top"><a id="af049bc7a119d431517d924571e5e570d"></a>
-<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
-<tr class="separator:af049bc7a119d431517d924571e5e570d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="memItemLeft" align="right" valign="top"><a id="ab0bdf5cca484fb2ba637c39384b27fb2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,12 +110,12 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isResultPCM</
 <tr class="memitem:ac496133545cba767b45c6ce8df3587e7"><td class="memItemLeft" align="right" valign="top"><a id="ac496133545cba767b45c6ce8df3587e7"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()=0</td></tr>
 <tr class="separator:ac496133545cba767b45c6ce8df3587e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c9ea752da0924b395c3a49f1f9c460"><td class="memItemLeft" align="right" valign="top"><a id="a64c9ea752da0924b395c3a49f1f9c460"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> from) override</td></tr>
-<tr class="separator:a64c9ea752da0924b395c3a49f1f9c460"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0e17a58e9f221999b796c48c6dcc907"><td class="memItemLeft" align="right" valign="top"><a id="ad0e17a58e9f221999b796c48c6dcc907"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi)</td></tr>
-<tr class="separator:ad0e17a58e9f221999b796c48c6dcc907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
+<tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01cdc98818a242f795f5f1a74dea50e3"><td class="memItemLeft" align="right" valign="top"><a id="a01cdc98818a242f795f5f1a74dea50e3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
+<tr class="separator:a01cdc98818a242f795f5f1a74dea50e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c50884a025e7c2049b71fe0b8d0045"><td class="memItemLeft" align="right" valign="top"><a id="a33c50884a025e7c2049b71fe0b8d0045"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;out_stream)</td></tr>
 <tr class="separator:a33c50884a025e7c2049b71fe0b8d0045"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,9 +137,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a7b3f68e6805fe007f4fdc631cc0bbe19"><td class="memItemLeft" align="right" valign="top"><a id="a7b3f68e6805fe007f4fdc631cc0bbe19"></a>
 <a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_codec</b> = nullptr</td></tr>
 <tr class="separator:a7b3f68e6805fe007f4fdc631cc0bbe19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21a7d5722c27708b9be7dd9b7f37ce24"><td class="memItemLeft" align="right" valign="top"><a id="a21a7d5722c27708b9be7dd9b7f37ce24"></a>
-<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_inform</b> = nullptr</td></tr>
-<tr class="separator:a21a7d5722c27708b9be7dd9b7f37ce24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dda8d3537744bfe37314bcdbdd62dbf"><td class="memItemLeft" align="right" valign="top"><a id="a5dda8d3537744bfe37314bcdbdd62dbf"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_inform</b> = nullptr</td></tr>
+<tr class="separator:a5dda8d3537744bfe37314bcdbdd62dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5c63a39f4150bc11a3bbe66ea166572"><td class="memItemLeft" align="right" valign="top"><a id="ae5c63a39f4150bc11a3bbe66ea166572"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>parsed</b></td></tr>
 <tr class="separator:ae5c63a39f4150bc11a3bbe66ea166572"><td class="memSeparator" colspan="2">&#160;</td></tr>

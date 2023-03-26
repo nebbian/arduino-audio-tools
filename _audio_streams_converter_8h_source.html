@@ -123,7 +123,7 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;           <span class="keywordflow">return</span> size;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> cfg)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;          AudioStream::setAudioInfo(cfg);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          to_channels = cfg.channels;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
@@ -180,7 +180,7 @@ $(function() {
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;          p_print = &amp;print;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> cfg)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;          AudioStream::setAudioInfo(cfg);</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordflow">switch</span>(bits_per_sample){</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;              <span class="keywordflow">case</span> 8:</div>
@@ -574,11 +574,11 @@ $(function() {
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        }</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160; </div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        <a class="code" href="classaudio__tools_1_1_format_converter_stream.html">FormatConverterStream</a>(<a class="code" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;stream){</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;          <a class="code" href="classaudio__tools_1_1_format_converter_stream.html#acc5a42a128c81513f4cb6076244f86eb">setSourceAudioInfo</a>(stream.audioInfo());  </div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;          <a class="code" href="classaudio__tools_1_1_format_converter_stream.html#a67ebca633a73d3b088928fb2e788437b">setSourceAudioInfo</a>(stream.audioInfo());  </div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;          setStream(stream);</div>
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        }</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        <a class="code" href="classaudio__tools_1_1_format_converter_stream.html">FormatConverterStream</a>(<a class="code" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;print){</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;          <a class="code" href="classaudio__tools_1_1_format_converter_stream.html#acc5a42a128c81513f4cb6076244f86eb">setSourceAudioInfo</a>(print.audioInfo());  </div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;          <a class="code" href="classaudio__tools_1_1_format_converter_stream.html#a67ebca633a73d3b088928fb2e788437b">setSourceAudioInfo</a>(print.audioInfo());  </div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;          setStream(print);</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        }</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160; </div>
@@ -591,16 +591,16 @@ $(function() {
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;          p_print = &amp;print;</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;        }</div>
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160; </div>
-<div class="line"><a name="l00558"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_format_converter_stream.html#acc5a42a128c81513f4cb6076244f86eb">  558</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_format_converter_stream.html#acc5a42a128c81513f4cb6076244f86eb">setSourceAudioInfo</a>(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> from){</div>
+<div class="line"><a name="l00558"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_format_converter_stream.html#a67ebca633a73d3b088928fb2e788437b">  558</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_format_converter_stream.html#a67ebca633a73d3b088928fb2e788437b">setSourceAudioInfo</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from){</div>
 <div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;          from_cfg = from;</div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        }</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160; </div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> from, <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> to){</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;            <a class="code" href="classaudio__tools_1_1_format_converter_stream.html#acc5a42a128c81513f4cb6076244f86eb">setSourceAudioInfo</a>(from);</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from, <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> to){</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;            <a class="code" href="classaudio__tools_1_1_format_converter_stream.html#a67ebca633a73d3b088928fb2e788437b">setSourceAudioInfo</a>(from);</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;            <span class="keywordflow">return</span> begin(to);</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;        }</div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160; </div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        <span class="keywordtype">bool</span> begin(AudioBaseInfo to){</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        <span class="keywordtype">bool</span> begin(AudioInfo to){</div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;          setAudioInfo(to);</div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;          to_cfg = to;</div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;          <span class="keywordflow">if</span> (p_stream!=<span class="keyword">nullptr</span>){</div>
@@ -634,8 +634,8 @@ $(function() {
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        }</div>
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160; </div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;  <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    AudioBaseInfo from_cfg;</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    AudioBaseInfo to_cfg;</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    AudioInfo from_cfg;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    AudioInfo to_cfg;</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    Stream *p_stream=<span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    Print *p_print=<span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    NumberFormatConverterStream numberFormatConverter;</div>
@@ -650,14 +650,14 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_channel_format_converter_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_channel_format_converter_stream.html">audio_tools::ChannelFormatConverterStream</a></div><div class="ttdoc">Channel converter which does not use a template.</div><div class="ttdef"><b>Definition:</b> AudioStreamsConverter.h:103</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_channel_format_converter_stream_t_html"><div class="ttname"><a href="classaudio__tools_1_1_channel_format_converter_stream_t.html">audio_tools::ChannelFormatConverterStreamT</a></div><div class="ttdoc">Converter for reducing or increasing the number of Channels.</div><div class="ttdef"><b>Definition:</b> AudioStreamsConverter.h:14</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_format_converter_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_format_converter_stream.html">audio_tools::FormatConverterStream</a></div><div class="ttdoc">Converter which converts bits_per_sample and channels.</div><div class="ttdef"><b>Definition:</b> AudioStreamsConverter.h:528</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_format_converter_stream_html_acc5a42a128c81513f4cb6076244f86eb"><div class="ttname"><a href="classaudio__tools_1_1_format_converter_stream.html#acc5a42a128c81513f4cb6076244f86eb">audio_tools::FormatConverterStream::setSourceAudioInfo</a></div><div class="ttdeci">void setSourceAudioInfo(AudioBaseInfo from)</div><div class="ttdoc">Defines the audio info of the stream which has been defined in the constructor.</div><div class="ttdef"><b>Definition:</b> AudioStreamsConverter.h:558</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_format_converter_stream_html_a67ebca633a73d3b088928fb2e788437b"><div class="ttname"><a href="classaudio__tools_1_1_format_converter_stream.html#a67ebca633a73d3b088928fb2e788437b">audio_tools::FormatConverterStream::setSourceAudioInfo</a></div><div class="ttdeci">void setSourceAudioInfo(AudioInfo from)</div><div class="ttdoc">Defines the audio info of the stream which has been defined in the constructor.</div><div class="ttdef"><b>Definition:</b> AudioStreamsConverter.h:558</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_number_format_converter_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_number_format_converter_stream.html">audio_tools::NumberFormatConverterStream</a></div><div class="ttdoc">Converter which converts between bits_per_sample and 16 bits.</div><div class="ttdef"><b>Definition:</b> AudioStreamsConverter.h:343</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_number_format_converter_stream_t_html"><div class="ttname"><a href="classaudio__tools_1_1_number_format_converter_stream_t.html">audio_tools::NumberFormatConverterStreamT</a></div><div class="ttdoc">Converter which converts from source bits_per_sample to target bits_per_sample.</div><div class="ttdef"><b>Definition:</b> AudioStreamsConverter.h:275</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:51</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_stream.html">audio_tools::Stream</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:114</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html"><div class="ttname"><a href="classaudio__tools_1_1_vector.html">audio_tools::Vector</a></div><div class="ttdoc">Vector implementation which provides the most important methods as defined by std::vector....</div><div class="ttdef"><b>Definition:</b> Vector.h:16</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

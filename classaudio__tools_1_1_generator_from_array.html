@@ -95,19 +95,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f6f7efed214cfdc8a1e2eb40475e706"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_generator_from_array.html#a8f6f7efed214cfdc8a1e2eb40475e706">GeneratorFromArray</a> (T(&amp;array)[arrayLen], int repeat=0, bool setInactiveAtEnd=true, size_t startIndex=0)</td></tr>
 <tr class="memdesc:a8f6f7efed214cfdc8a1e2eb40475e706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Generator From Array object.  <a href="classaudio__tools_1_1_generator_from_array.html#a8f6f7efed214cfdc8a1e2eb40475e706">More...</a><br /></td></tr>
 <tr class="separator:a8f6f7efed214cfdc8a1e2eb40475e706"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefef4ed2dde9eed4b6af9fc4f197f272"><td class="memItemLeft" align="right" valign="top"><a id="aefef4ed2dde9eed4b6af9fc4f197f272"></a>
-virtual <a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
-<tr class="separator:aefef4ed2dde9eed4b6af9fc4f197f272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada56eff2516fb0a4f5091ce06805411a"><td class="memItemLeft" align="right" valign="top"><a id="ada56eff2516fb0a4f5091ce06805411a"></a>
+virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:ada56eff2516fb0a4f5091ce06805411a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acba365cc28eb702040c382646cfb0a7a"><td class="memItemLeft" align="right" valign="top"><a id="acba365cc28eb702040c382646cfb0a7a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_generator_from_array.html#acba365cc28eb702040c382646cfb0a7a">begin</a> () override</td></tr>
 <tr class="memdesc:acba365cc28eb702040c382646cfb0a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the generation of samples. <br /></td></tr>
 <tr class="separator:acba365cc28eb702040c382646cfb0a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab687ecc4b734cffe9240f5dcc475869b"><td class="memItemLeft" align="right" valign="top"><a id="ab687ecc4b734cffe9240f5dcc475869b"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info) override</td></tr>
-<tr class="separator:ab687ecc4b734cffe9240f5dcc475869b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5e4124a096a2b1991c0f143bd59c8bb"><td class="memItemLeft" align="right" valign="top"><a id="ab5e4124a096a2b1991c0f143bd59c8bb"></a>
-virtual <a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
-<tr class="separator:ab5e4124a096a2b1991c0f143bd59c8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53535f66e5ffb2b3074fccc630c1b8ee"><td class="memItemLeft" align="right" valign="top"><a id="a53535f66e5ffb2b3074fccc630c1b8ee"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
+<tr class="separator:a53535f66e5ffb2b3074fccc630c1b8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1ae688606d873e5b04c9a7ada020a0d"><td class="memItemLeft" align="right" valign="top"><a id="af1ae688606d873e5b04c9a7ada020a0d"></a>
+virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
+<tr class="separator:af1ae688606d873e5b04c9a7ada020a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_sound_generator.html#adc34417a19a7b70626d19c41072d72a5">end</a> ()</td></tr>
 <tr class="memdesc:adc34417a19a7b70626d19c41072d72a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ends the processing <br /></td></tr>
@@ -134,9 +134,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setArray</b> (T *arra
 template&lt;int arrayLen&gt; </td></tr>
 <tr class="memitem:ae0746ff443c426baed7afc2990db95f6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setArray</b> (T(&amp;array)[arrayLen])</td></tr>
 <tr class="separator:ae0746ff443c426baed7afc2990db95f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1f412532ae3278dd0af127c218b096e"><td class="memItemLeft" align="right" valign="top"><a id="ad1f412532ae3278dd0af127c218b096e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> info)</td></tr>
-<tr class="separator:ad1f412532ae3278dd0af127c218b096e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87feead15897a49c7dccb043ac9fcddc"><td class="memItemLeft" align="right" valign="top"><a id="a87feead15897a49c7dccb043ac9fcddc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a87feead15897a49c7dccb043ac9fcddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ff3c2ef30b2de62b94852b5842fd3f7"><td class="memItemLeft" align="right" valign="top"><a id="a4ff3c2ef30b2de62b94852b5842fd3f7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setFrequency</b> (float frequency)</td></tr>
 <tr class="separator:a4ff3c2ef30b2de62b94852b5842fd3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,9 +170,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>inactive_at_end</b></
 <tr class="memitem:afc061d5a1a15ac581863427b2ca067af"><td class="memItemLeft" align="right" valign="top"><a id="afc061d5a1a15ac581863427b2ca067af"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>index_increment</b> = 1</td></tr>
 <tr class="separator:afc061d5a1a15ac581863427b2ca067af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"><td class="memItemLeft" align="right" valign="top"><a id="abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"></a>
-<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
-<tr class="separator:abb8fb5d79ecf45e01fdf3ad5e4d1fa2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95cbd6b99430748422cc048b4f29dc52"><td class="memItemLeft" align="right" valign="top"><a id="a95cbd6b99430748422cc048b4f29dc52"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_running</b> = false</td></tr>
 <tr class="separator:a95cbd6b99430748422cc048b4f29dc52"><td class="memSeparator" colspan="2">&#160;</td></tr>

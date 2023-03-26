@@ -96,11 +96,11 @@ Inheritance diagram for OpusOggEncoder:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="memItemLeft" align="right" valign="top"><a id="a7c3e14d99bd3dc0e3670d6956dafcaf2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_opus_ogg_encoder.html#a7c3e14d99bd3dc0e3670d6956dafcaf2">begin</a> () override</td></tr>
-<tr class="memdesc:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the processing using the actual AudioInfo <br /></td></tr>
+<tr class="memdesc:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the processing using the actual <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> <br /></td></tr>
 <tr class="separator:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2065fca2c98f1ee55d1f7b87da19f6bf"><td class="memItemLeft" align="right" valign="top"><a id="a2065fca2c98f1ee55d1f7b87da19f6bf"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> from)</td></tr>
-<tr class="separator:a2065fca2c98f1ee55d1f7b87da19f6bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a56a6a18679213c6a6901f8c7e9134"><td class="memItemLeft" align="right" valign="top"><a id="a53a56a6a18679213c6a6901f8c7e9134"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from)</td></tr>
+<tr class="separator:a53a56a6a18679213c6a6901f8c7e9134"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a080ae0a468d9a2e3f5f2132e62456616"><td class="memItemLeft" align="right" valign="top"><a id="a080ae0a468d9a2e3f5f2132e62456616"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_opus_encoder_settings.html">OpusEncoderSettings</a> settings)</td></tr>
 <tr class="separator:a080ae0a468d9a2e3f5f2132e62456616"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,10 +128,10 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a90622bd78258a36bbcf63426b28307ac"><td class="memItemLeft" align="right" valign="top"><a id="a90622bd78258a36bbcf63426b28307ac"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () override</td></tr>
 <tr class="separator:a90622bd78258a36bbcf63426b28307ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c9ea752da0924b395c3a49f1f9c460"><td class="memItemLeft" align="right" valign="top"><a id="a64c9ea752da0924b395c3a49f1f9c460"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html#a64c9ea752da0924b395c3a49f1f9c460">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> from) override</td></tr>
-<tr class="memdesc:a64c9ea752da0924b395c3a49f1f9c460"><td class="mdescLeft">&#160;</td><td class="mdescRight">We actually do nothing with this. <br /></td></tr>
-<tr class="separator:a64c9ea752da0924b395c3a49f1f9c460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html#accee684614189e73bdc9f1b2f7abf919">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
+<tr class="memdesc:accee684614189e73bdc9f1b2f7abf919"><td class="mdescLeft">&#160;</td><td class="mdescRight">We actually do nothing with this. <br /></td></tr>
+<tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86ce681ae22c0345c20e583a8a1f298f"><td class="memItemLeft" align="right" valign="top"><a id="a86ce681ae22c0345c20e583a8a1f298f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html#a86ce681ae22c0345c20e583a8a1f298f">setOutputStream</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream) override</td></tr>
 <tr class="memdesc:a86ce681ae22c0345c20e583a8a1f298f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the output <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a>. <br /></td></tr>
@@ -164,9 +164,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aaf0eef2d94f5e586b3d7cd5935560e29"><td class="memItemLeft" align="right" valign="top"><a id="aaf0eef2d94f5e586b3d7cd5935560e29"></a>
 <a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {1024}</td></tr>
 <tr class="separator:aaf0eef2d94f5e586b3d7cd5935560e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7454f9fc700ac7a27bbbd898be505e6c"><td class="memItemLeft" align="right" valign="top"><a id="a7454f9fc700ac7a27bbbd898be505e6c"></a>
-<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cfg</b></td></tr>
-<tr class="separator:a7454f9fc700ac7a27bbbd898be505e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07fab440d87063e83df0bc30223964c5"><td class="memItemLeft" align="right" valign="top"><a id="a07fab440d87063e83df0bc30223964c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cfg</b></td></tr>
+<tr class="separator:a07fab440d87063e83df0bc30223964c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e664dffafddce4cc1b9c9fbcf8c0aab"><td class="memItemLeft" align="right" valign="top"><a id="a6e664dffafddce4cc1b9c9fbcf8c0aab"></a>
 <a class="el" href="classaudio__tools_1_1_queue_stream.html">QueueStream</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>codec_buffer</b> {buffer}</td></tr>
 <tr class="separator:a6e664dffafddce4cc1b9c9fbcf8c0aab"><td class="memSeparator" colspan="2">&#160;</td></tr>

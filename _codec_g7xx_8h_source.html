@@ -104,7 +104,7 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> cfg)<span class="keyword"> override </span>{ </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg)<span class="keyword"> override </span>{ </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (cfg.channels!=1){</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      LOGE(<span class="stringliteral">&quot;channels must be 1 instead of %d&quot;</span>, cfg.channels);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
@@ -116,9 +116,9 @@ $(function() {
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> audioInfo()<span class="keyword">override </span>{ <span class="keywordflow">return</span> cfg; }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> audioInfo()<span class="keyword">override </span>{ <span class="keywordflow">return</span> cfg; }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> begin(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> cfg)  {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg)  {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    setAudioInfo(cfg);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    begin();</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
@@ -138,7 +138,7 @@ $(function() {
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    is_active = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">void</span> setNotifyAudioChange(<a class="code" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">void</span> setNotifyAudioChange(<a class="code" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    p_notify = &amp;bi;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
@@ -164,8 +164,8 @@ $(function() {
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *p_print = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> cfg;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> *p_notify = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *p_notify = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordtype">int</span> input_pos = 0;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">bool</span> is_active = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  int16_t sample;</div>
@@ -209,7 +209,7 @@ $(function() {
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  }</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> begin(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> bi) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> bi) {</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    setAudioInfo(bi);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    begin();</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  }</div>
@@ -230,7 +230,7 @@ $(function() {
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *mime()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> p_mime; }</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> cfg) { </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg) { </div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">if</span> (cfg.channels!=1){</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      LOGE(<span class="stringliteral">&quot;channels must be 1 instead of %d&quot;</span>, cfg.channels);</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
@@ -264,7 +264,7 @@ $(function() {
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  }</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> cfg;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg;</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *p_print = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="keywordtype">bool</span> is_active = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *p_mime = <span class="keyword">nullptr</span>;</div>
@@ -380,9 +380,9 @@ $(function() {
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;};</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_base_info_dependent_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_base_info_dependent.html">audio_tools::AudioBaseInfoDependent</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:84</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:16</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_encoder.html">audio_tools::AudioEncoder</a></div><div class="ttdoc">Encoding of PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:47</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_info_dependent_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_dependent.html">audio_tools::AudioInfoDependent</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:87</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_g711___a_l_a_w_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_g711___a_l_a_w_decoder.html">audio_tools::G711_ALAWDecoder</a></div><div class="ttdoc">64 kbit/s g711 ALOW Decoder based on https://github.com/pschatzmann/arduino-libg7xx</div><div class="ttdef"><b>Definition:</b> CodecG7xx.h:383</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_g711___a_l_a_w_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_g711___a_l_a_w_encoder.html">audio_tools::G711_ALAWEncoder</a></div><div class="ttdoc">64 kbit/s g711 ALOW Encoder based on https://github.com/pschatzmann/arduino-libg7xx</div><div class="ttdef"><b>Definition:</b> CodecG7xx.h:372</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_g711___u_l_a_w_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_g711___u_l_a_w_decoder.html">audio_tools::G711_ULAWDecoder</a></div><div class="ttdoc">64 kbit/s g711 ULOW Decoder based on https://github.com/pschatzmann/arduino-libg7xx</div><div class="ttdef"><b>Definition:</b> CodecG7xx.h:405</div></div>
@@ -400,7 +400,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:51</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html_a44f4d7d26b9f81198ebefe8c302ee30c"><div class="ttname"><a href="namespaceaudio__tools.html#a44f4d7d26b9f81198ebefe8c302ee30c">audio_tools::G7xxCODEC_e</a></div><div class="ttdeci">G7xxCODEC_e</div><div class="ttdoc">Supported codecs by G7xxDecoder and G7xxEncoder.</div><div class="ttdef"><b>Definition:</b> CodecG7xx.h:21</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -85,9 +85,9 @@ Inheritance diagram for MP3DecoderMAD:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_m_p3_decoder_m_a_d.png" usemap="#MP3DecoderMAD_map" alt=""/>
   <map id="MP3DecoderMAD_map" name="MP3DecoderMAD_map">
-<area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="72,56,207,80"/>
-<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,135,24"/>
-<area href="classaudio__tools_1_1_audio_base_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioBaseInfoSource" shape="rect" coords="145,0,280,24"/>
+<area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="63,56,179,80"/>
+<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,116,24"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="126,0,242,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -99,9 +99,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af0463a86b22fca85aecac6b4499483c5"><td class="memItemLeft" align="right" valign="top"><a id="af0463a86b22fca85aecac6b4499483c5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MP3DecoderMAD</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;mad_output_streamput, libmad::MP3InfoCallback infoCB=nullptr)</td></tr>
 <tr class="separator:af0463a86b22fca85aecac6b4499483c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af049bc7a119d431517d924571e5e570d"><td class="memItemLeft" align="right" valign="top"><a id="af049bc7a119d431517d924571e5e570d"></a>
-<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
-<tr class="separator:af049bc7a119d431517d924571e5e570d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee542fc531c6d47ab1b36ffa8e8fc721"><td class="memItemLeft" align="right" valign="top"><a id="aee542fc531c6d47ab1b36ffa8e8fc721"></a>
 libmad::MadAudioInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_m_a_d.html#aee542fc531c6d47ab1b36ffa8e8fc721">audioInfoEx</a> ()</td></tr>
 <tr class="memdesc:aee542fc531c6d47ab1b36ffa8e8fc721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the last valid audio information. <br /></td></tr>
@@ -128,16 +128,16 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isResultPCM</
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_m_a_d.html#ab2e700f0f83bc889bdd74bfac91afb8b">setAudioDataCallback</a> (libmad::MP3DataCallback cb)</td></tr>
 <tr class="memdesc:ab2e700f0f83bc889bdd74bfac91afb8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the callback which receives the decoded data. <br /></td></tr>
 <tr class="separator:ab2e700f0f83bc889bdd74bfac91afb8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c9ea752da0924b395c3a49f1f9c460"><td class="memItemLeft" align="right" valign="top"><a id="a64c9ea752da0924b395c3a49f1f9c460"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> from) override</td></tr>
-<tr class="separator:a64c9ea752da0924b395c3a49f1f9c460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
+<tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eec588e512fb89ed7137ceb50e5c3f9"><td class="memItemLeft" align="right" valign="top"><a id="a4eec588e512fb89ed7137ceb50e5c3f9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_m_a_d.html#a4eec588e512fb89ed7137ceb50e5c3f9">setInfoCallback</a> (libmad::MP3InfoCallback cb)</td></tr>
 <tr class="memdesc:a4eec588e512fb89ed7137ceb50e5c3f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the callback which receives the Info changes. <br /></td></tr>
 <tr class="separator:a4eec588e512fb89ed7137ceb50e5c3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66e0debe8d445735325a5cd4b9625ca6"><td class="memItemLeft" align="right" valign="top"><a id="a66e0debe8d445735325a5cd4b9625ca6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi)</td></tr>
-<tr class="separator:a66e0debe8d445735325a5cd4b9625ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8dfe7837928747737ad15bccdbd004"><td class="memItemLeft" align="right" valign="top"><a id="abb8dfe7837928747737ad15bccdbd004"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
+<tr class="separator:abb8dfe7837928747737ad15bccdbd004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c50884a025e7c2049b71fe0b8d0045"><td class="memItemLeft" align="right" valign="top"><a id="a33c50884a025e7c2049b71fe0b8d0045"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;out_stream)</td></tr>
 <tr class="separator:a33c50884a025e7c2049b71fe0b8d0045"><td class="memSeparator" colspan="2">&#160;</td></tr>

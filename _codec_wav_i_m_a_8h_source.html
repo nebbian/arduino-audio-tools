@@ -96,9 +96,9 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    15289, 16818, 18500, 20350, 22385, 24623, 27086, 29794, 32767</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_wav_i_m_a_audio_info.html">   35</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structaudio__tools_1_1_wav_i_m_a_audio_info.html">WavIMAAudioInfo</a> : <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_wav_i_m_a_audio_info.html">   35</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structaudio__tools_1_1_wav_i_m_a_audio_info.html">WavIMAAudioInfo</a> : <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="structaudio__tools_1_1_wav_i_m_a_audio_info.html">WavIMAAudioInfo</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="structaudio__tools_1_1_wav_i_m_a_audio_info.html">WavIMAAudioInfo</a>(<span class="keyword">const</span> <a class="code" href="structaudio__tools_1_1_audio_base_info.html">AudioBaseInfo</a>&amp; from) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="structaudio__tools_1_1_wav_i_m_a_audio_info.html">WavIMAAudioInfo</a>(<span class="keyword">const</span> <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&amp; from) {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        sample_rate = from.sample_rate;    </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        channels = from.channels;       </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        bits_per_sample = from.bits_per_sample; </div>
@@ -339,7 +339,7 @@ $(function() {
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            this-&gt;active = active;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        }</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
-<div class="line"><a name="l00314"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_wav_i_m_a_decoder.html#aeede05f420b9cf03727ef62fcc760cb3">  314</a></span>&#160;        <a class="code" href="classaudio__tools_1_1_wav_i_m_a_decoder.html#aeede05f420b9cf03727ef62fcc760cb3">WavIMADecoder</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream, <a class="code" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi) {</div>
+<div class="line"><a name="l00314"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_wav_i_m_a_decoder.html#a917a4aa204c730e96c8985fc17a20bf1">  314</a></span>&#160;        <a class="code" href="classaudio__tools_1_1_wav_i_m_a_decoder.html#a917a4aa204c730e96c8985fc17a20bf1">WavIMADecoder</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream, <a class="code" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) {</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            TRACED();</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            this-&gt;out = &amp;out_stream;</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            this-&gt;audioBaseInfoSupport = &amp;bi;</div>
@@ -354,7 +354,7 @@ $(function() {
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            this-&gt;out = &amp;out_stream;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        }</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordtype">void</span> setNotifyAudioChange(<a class="code" href="classaudio__tools_1_1_audio_base_info_dependent.html">AudioBaseInfoDependent</a> &amp;bi) {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordtype">void</span> setNotifyAudioChange(<a class="code" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) {</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            this-&gt;audioBaseInfoSupport = &amp;bi;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        }</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
@@ -383,7 +383,7 @@ $(function() {
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keywordflow">return</span> header.audioInfo();</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        }</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        AudioBaseInfo audioInfo() {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        AudioInfo audioInfo() {</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            <span class="keywordflow">return</span> header.audioInfo();</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        }</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
@@ -423,7 +423,7 @@ $(function() {
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                        input_buffer = <span class="keyword">new</span> uint8_t[bytes_per_encoded_block];</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                        output_buffer = <span class="keyword">new</span> int16_t[samples_per_decoded_block];</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                        <span class="comment">// update sampling rate if the target supports it</span></div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                        AudioBaseInfo bi;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                        AudioInfo bi;</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                        bi.sample_rate = header.audioInfo().sample_rate;</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                        bi.channels = header.audioInfo().channels;</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                        bi.bits_per_sample = 16;</div>
@@ -463,7 +463,7 @@ $(function() {
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        WavIMAHeader header;</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        Print *out;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        AudioBaseInfoDependent *audioBaseInfoSupport;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        AudioInfoDependent *audioBaseInfoSupport;</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        <span class="keywordtype">bool</span> isFirst = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        <span class="keywordtype">bool</span> isValid = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        <span class="keywordtype">bool</span> active;</div>
@@ -540,21 +540,21 @@ $(function() {
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;};</div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160; </div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;}</div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_base_info_dependent_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_base_info_dependent.html">audio_tools::AudioBaseInfoDependent</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:84</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:16</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_info_dependent_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_dependent.html">audio_tools::AudioInfoDependent</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:87</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:51</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_stream.html">audio_tools::Stream</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:114</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_wav_i_m_a_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_wav_i_m_a_decoder.html">audio_tools::WavIMADecoder</a></div><div class="ttdoc">WavIMADecoder - based on WAVDecoder - We parse the header data as we receive it and send the sound da...</div><div class="ttdef"><b>Definition:</b> CodecWavIMA.h:284</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_wav_i_m_a_decoder_html_a00e41f386087cda4eaf92bd7024ed6bb"><div class="ttname"><a href="classaudio__tools_1_1_wav_i_m_a_decoder.html#a00e41f386087cda4eaf92bd7024ed6bb">audio_tools::WavIMADecoder::WavIMADecoder</a></div><div class="ttdeci">WavIMADecoder()</div><div class="ttdoc">Construct a new WavIMADecoder object.</div><div class="ttdef"><b>Definition:</b> CodecWavIMA.h:290</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_wav_i_m_a_decoder_html_a917a4aa204c730e96c8985fc17a20bf1"><div class="ttname"><a href="classaudio__tools_1_1_wav_i_m_a_decoder.html#a917a4aa204c730e96c8985fc17a20bf1">audio_tools::WavIMADecoder::WavIMADecoder</a></div><div class="ttdeci">WavIMADecoder(Print &amp;out_stream, AudioInfoDependent &amp;bi)</div><div class="ttdoc">Construct a new WavIMADecoder object.</div><div class="ttdef"><b>Definition:</b> CodecWavIMA.h:314</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_wav_i_m_a_decoder_html_ab754136602e0bb22ec2be26dedd9ff50"><div class="ttname"><a href="classaudio__tools_1_1_wav_i_m_a_decoder.html#ab754136602e0bb22ec2be26dedd9ff50">audio_tools::WavIMADecoder::readStream</a></div><div class="ttdeci">int readStream(Stream &amp;in)</div><div class="ttdoc">Alternative API which provides the data from an input stream.</div><div class="ttdef"><b>Definition:</b> CodecWavIMA.h:426</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_wav_i_m_a_decoder_html_ac8bad9f22f28c75edd3beec36ed35319"><div class="ttname"><a href="classaudio__tools_1_1_wav_i_m_a_decoder.html#ac8bad9f22f28c75edd3beec36ed35319">audio_tools::WavIMADecoder::setOutputStream</a></div><div class="ttdeci">void setOutputStream(Print &amp;out_stream)</div><div class="ttdoc">Defines the output Stream.</div><div class="ttdef"><b>Definition:</b> CodecWavIMA.h:326</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_wav_i_m_a_decoder_html_aeede05f420b9cf03727ef62fcc760cb3"><div class="ttname"><a href="classaudio__tools_1_1_wav_i_m_a_decoder.html#aeede05f420b9cf03727ef62fcc760cb3">audio_tools::WavIMADecoder::WavIMADecoder</a></div><div class="ttdeci">WavIMADecoder(Print &amp;out_stream, AudioBaseInfoDependent &amp;bi)</div><div class="ttdoc">Construct a new WavIMADecoder object.</div><div class="ttdef"><b>Definition:</b> CodecWavIMA.h:314</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_wav_i_m_a_decoder_html_af3311b0c1e6c2ea362e91fca3b053f2b"><div class="ttname"><a href="classaudio__tools_1_1_wav_i_m_a_decoder.html#af3311b0c1e6c2ea362e91fca3b053f2b">audio_tools::WavIMADecoder::WavIMADecoder</a></div><div class="ttdeci">WavIMADecoder(Print &amp;out_stream, bool active=true)</div><div class="ttdoc">Construct a new WavIMADecoder object.</div><div class="ttdef"><b>Definition:</b> CodecWavIMA.h:300</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_wav_i_m_a_header_html"><div class="ttname"><a href="classaudio__tools_1_1_wav_i_m_a_header.html">audio_tools::WavIMAHeader</a></div><div class="ttdef"><b>Definition:</b> CodecWavIMA.h:76</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_wav_i_m_a_header_html_a1ff465571c87cad9bcbfcfd1d573b7d2"><div class="ttname"><a href="classaudio__tools_1_1_wav_i_m_a_header.html#a1ff465571c87cad9bcbfcfd1d573b7d2">audio_tools::WavIMAHeader::isDataComplete</a></div><div class="ttdeci">bool isDataComplete()</div><div class="ttdoc">Returns true if the header is complete (data chunk has been found)</div><div class="ttdef"><b>Definition:</b> CodecWavIMA.h:212</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html_a6a59ed379dc716d3d4f19e585d96abcc"><div class="ttname"><a href="namespaceaudio__tools.html#a6a59ed379dc716d3d4f19e585d96abcc">audio_tools::chunk_result</a></div><div class="ttdeci">chunk_result</div><div class="ttdoc">Parser for Wav header data adjusted for IMA ADPCM format - partially based on CodecWAV....</div><div class="ttdef"><b>Definition:</b> CodecWavIMA.h:69</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_base_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_base_info.html">audio_tools::AudioBaseInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_i_m_a_state_html"><div class="ttname"><a href="structaudio__tools_1_1_i_m_a_state.html">audio_tools::IMAState</a></div><div class="ttdef"><b>Definition:</b> CodecWavIMA.h:53</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_wav_i_m_a_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_wav_i_m_a_audio_info.html">audio_tools::WavIMAAudioInfo</a></div><div class="ttdoc">Sound information which is available in the WAV header - adjusted for IMA ADPCM.</div><div class="ttdef"><b>Definition:</b> CodecWavIMA.h:35</div></div>
 </div><!-- fragment --></div><!-- contents -->
