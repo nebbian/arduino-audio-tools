@@ -550,7 +550,7 @@ $(function() {
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        </div>
 <div class="line"><a name="l00562"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_str.html#a76da0d105a721fafd7ce1cd2def377dc">  562</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_str.html#a76da0d105a721fafd7ce1cd2def377dc">rtrim</a>(){</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="classaudio__tools_1_1_str.html#ae7bbead3f07130d4bab2b78efe62147e">isConst</a>()){</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                <span class="keywordflow">while</span>(this-&gt;<a class="code" href="classaudio__tools_1_1_str.html#a36ea1ac4ff77d39eeed580726d77316e">endsWith</a>(<span class="stringliteral">&quot; &quot;</span>)){</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                <span class="keywordflow">while</span>(isspace(chars[len])){</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                    len--;</div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                    chars[len] = 0;</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;                }</div>

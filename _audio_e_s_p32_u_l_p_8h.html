@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: src/AudioLibs Directory Reference</title>
+<title>arduino-audio-tools: src/AudioLibs/AudioESP32ULP.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,27 +65,44 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
-<div class="title">AudioLibs Directory Reference</div>  </div>
+<div class="title">AudioESP32ULP.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Outputs to ESP32 DAC through the ULP, freeing I2S for other uses.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;driver/dac.h&gt;</code><br />
+<code>#include &lt;driver/rtc_io.h&gt;</code><br />
+<code>#include &lt;esp32/ulp.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;soc/rtc.h&gt;</code><br />
+</div>
+<p><a href="_audio_e_s_p32_u_l_p_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="subdirs"></a>
-Directories</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_audio_e_s_p32_u_l_p.html">AudioESP32ULP</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs to ESP32 DAC through the ULP (Ultra&gt; Low Power coprocessor), freeing I2S for other uses. Connect left channel on pin 25 Connect right channel on pin 26.  <a href="class_audio_e_s_p32_u_l_p.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:_audio_a2_d_p_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_audio_a2_d_p_8h.html">AudioA2DP.h</a> <a href="_audio_a2_d_p_8h_source.html">[code]</a></td></tr>
-<tr class="memdesc:_audio_a2_d_p_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">A2DP Support via Arduino Streams. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:_audio_e_s_p32_u_l_p_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_audio_e_s_p32_u_l_p_8h.html">AudioESP32ULP.h</a> <a href="_audio_e_s_p32_u_l_p_8h_source.html">[code]</a></td></tr>
-<tr class="memdesc:_audio_e_s_p32_u_l_p_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs to ESP32 DAC through the ULP, freeing I2S for other uses. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:_no_arduino_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_no_arduino_8h.html">NoArduino.h</a> <a href="_no_arduino_8h_source.html">[code]</a></td></tr>
-<tr class="memdesc:_no_arduino_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">If you want to use the framework w/o Arduino you need to provide the implementation of a couple of classes and methods! <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ab54fc3023f2ec29f09d7ff2d004255f2"><td class="memItemLeft" align="right" valign="top"><a id="ab54fc3023f2ec29f09d7ff2d004255f2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>UlpDac</b> { <b>ULP_DAC1</b> = 1
+, <b>ULP_DAC2</b> = 2
+ }</td></tr>
+<tr class="separator:ab54fc3023f2ec29f09d7ff2d004255f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Outputs to ESP32 DAC through the ULP, freeing I2S for other uses. </p>
+<dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2023-03-26 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>(C) 2020 Martin Laclaustra, based on bitluni's code </dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

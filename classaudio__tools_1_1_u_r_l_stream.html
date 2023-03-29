@@ -154,10 +154,18 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</
 <tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
 <tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad39861fd3793ecfe88b97999087f05a2"><td class="memItemLeft" align="right" valign="top"><a id="ad39861fd3793ecfe88b97999087f05a2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#ad39861fd3793ecfe88b97999087f05a2">setAutoCreateLines</a> (bool flag)</td></tr>
+<tr class="memdesc:ad39861fd3793ecfe88b97999087f05a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set to true, new undefined reply parameters will be stored. <br /></td></tr>
+<tr class="separator:ad39861fd3793ecfe88b97999087f05a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8f3869beb19790ca9a8f556d662d749"><td class="memItemLeft" align="right" valign="top"><a id="ab8f3869beb19790ca9a8f556d662d749"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#ab8f3869beb19790ca9a8f556d662d749">setClient</a> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;clientPar) override</td></tr>
 <tr class="memdesc:ab8f3869beb19790ca9a8f556d662d749"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re-)defines the client <br /></td></tr>
 <tr class="separator:ab8f3869beb19790ca9a8f556d662d749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7030d11c7af96d4b7983393817830a9"><td class="memItemLeft" align="right" valign="top"><a id="ae7030d11c7af96d4b7983393817830a9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#ae7030d11c7af96d4b7983393817830a9">setConnectionClose</a> (bool close)</td></tr>
+<tr class="memdesc:ae7030d11c7af96d4b7983393817830a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets if the connection should be close automatically. <br /></td></tr>
+<tr class="separator:ae7030d11c7af96d4b7983393817830a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75440ced7631cd14125dee528afdd531"><td class="memItemLeft" align="right" valign="top"><a id="a75440ced7631cd14125dee528afdd531"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>setMetadataCallback</b> (void(*fn)(<a class="el" href="group__metadata.html#ga6760f423085f8a63374b1e2db102a6d1">MetaDataType</a> info, const char *str, int len))</td></tr>
 <tr class="separator:a75440ced7631cd14125dee528afdd531"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -264,7 +272,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>password</b> 
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>read_buffer</b> {0}</td></tr>
 <tr class="separator:abf629c88cc938fc1b985ffb00b1839e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c6d8a492531c37dd4774aede51a05cc"><td class="memItemLeft" align="right" valign="top"><a id="a6c6d8a492531c37dd4774aede51a05cc"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_buffer_size</b></td></tr>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_buffer_size</b> =DEFAULT_BUFFER_SIZE</td></tr>
 <tr class="separator:a6c6d8a492531c37dd4774aede51a05cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd1bcff4ba9ae7ff98ce2d5d69409fc6"><td class="memItemLeft" align="right" valign="top"><a id="acd1bcff4ba9ae7ff98ce2d5d69409fc6"></a>
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_pos</b></td></tr>
