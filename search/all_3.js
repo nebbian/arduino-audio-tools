@@ -23,5 +23,6 @@ var searchData=
   ['bufferindex_146',['bufferIndex',['../classaudio__tools_1_1_filter_effect_base.html#a73b963945a418c57630c1b66ce2aa74f',1,'audio_tools::FilterEffectBase']]],
   ['buffers_147',['Buffers',['../group__buffers.html',1,'']]],
   ['buffersize_148',['bufferSize',['../classaudio__tools_1_1_stream_copy_t.html#ab30bc84f9ea0a116951f3ad2a281c54f',1,'audio_tools::StreamCopyT']]],
-  ['bytespersecond_149',['bytesPerSecond',['../classaudio__tools_1_1_measuring_stream.html#af8e4bd4a3ed944b9b3d49001690aeb85',1,'audio_tools::MeasuringStream']]]
+  ['bytescompressed_149',['bytesCompressed',['../classaudio__tools_1_1_s_b_c_decoder.html#a3511918f60a4c3f0135dc79573c5a502',1,'audio_tools::SBCDecoder']]],
+  ['bytespersecond_150',['bytesPerSecond',['../classaudio__tools_1_1_measuring_stream.html#af8e4bd4a3ed944b9b3d49001690aeb85',1,'audio_tools::MeasuringStream']]]
 ];

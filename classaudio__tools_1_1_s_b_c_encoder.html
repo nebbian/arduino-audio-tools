@@ -103,18 +103,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#ae011a2d42c0a1fffd980430371394512">begin</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> bi)</td></tr>
 <tr class="memdesc:ae011a2d42c0a1fffd980430371394512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the processing: channels 1 or 2, supported sample rates: 16000, 32000, 44100, 48000. <br /></td></tr>
 <tr class="separator:ae011a2d42c0a1fffd980430371394512"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4acc2555ecc44e12e20eec6974631c70"><td class="memItemLeft" align="right" valign="top"><a id="a4acc2555ecc44e12e20eec6974631c70"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a4acc2555ecc44e12e20eec6974631c70">codeSize</a> ()</td></tr>
-<tr class="memdesc:a4acc2555ecc44e12e20eec6974631c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the uncompressed length (of the PCM data) in bytes. <br /></td></tr>
-<tr class="separator:a4acc2555ecc44e12e20eec6974631c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3511918f60a4c3f0135dc79573c5a502"><td class="memItemLeft" align="right" valign="top"><a id="a3511918f60a4c3f0135dc79573c5a502"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bytesCompressed</b> ()</td></tr>
+<tr class="separator:a3511918f60a4c3f0135dc79573c5a502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08f2a37656484203f8353cec081b08fd"><td class="memItemLeft" align="right" valign="top"><a id="a08f2a37656484203f8353cec081b08fd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bytesUncompressed</b> ()</td></tr>
+<tr class="separator:a08f2a37656484203f8353cec081b08fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#adc34417a19a7b70626d19c41072d72a5">end</a> ()</td></tr>
 <tr class="memdesc:adc34417a19a7b70626d19c41072d72a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the processing. <br /></td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8721dea59e7d446cb9566766c9a073b0"><td class="memItemLeft" align="right" valign="top"><a id="a8721dea59e7d446cb9566766c9a073b0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a8721dea59e7d446cb9566766c9a073b0">frameLength</a> ()</td></tr>
-<tr class="memdesc:a8721dea59e7d446cb9566766c9a073b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the compressed length in bytes (after encoding) <br /></td></tr>
-<tr class="separator:a8721dea59e7d446cb9566766c9a073b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae25cee0d848eeb729a79fd46347a70da"><td class="memItemLeft" align="right" valign="top"><a id="ae25cee0d848eeb729a79fd46347a70da"></a>
 virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mime</b> ()</td></tr>
 <tr class="separator:ae25cee0d848eeb729a79fd46347a70da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,6 +147,14 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a4acc2555ecc44e12e20eec6974631c70"><td class="memItemLeft" align="right" valign="top"><a id="a4acc2555ecc44e12e20eec6974631c70"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a4acc2555ecc44e12e20eec6974631c70">codeSize</a> ()</td></tr>
+<tr class="memdesc:a4acc2555ecc44e12e20eec6974631c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the uncompressed length (of the PCM data) in bytes. <br /></td></tr>
+<tr class="separator:a4acc2555ecc44e12e20eec6974631c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8721dea59e7d446cb9566766c9a073b0"><td class="memItemLeft" align="right" valign="top"><a id="a8721dea59e7d446cb9566766c9a073b0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a8721dea59e7d446cb9566766c9a073b0">frameLength</a> ()</td></tr>
+<tr class="memdesc:a8721dea59e7d446cb9566766c9a073b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the compressed length in bytes (after encoding) <br /></td></tr>
+<tr class="separator:a8721dea59e7d446cb9566766c9a073b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac30d22c864c6347a8ae3710e9247517"><td class="memItemLeft" align="right" valign="top"><a id="aac30d22c864c6347a8ae3710e9247517"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>processByte</b> (uint8_t byte)</td></tr>
 <tr class="separator:aac30d22c864c6347a8ae3710e9247517"><td class="memSeparator" colspan="2">&#160;</td></tr>

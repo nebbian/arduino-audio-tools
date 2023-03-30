@@ -102,16 +102,16 @@ virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a
 <tr class="memitem:a2d8ec6ac27419ce65e20d415ebfe1495"><td class="memItemLeft" align="right" valign="top"><a id="a2d8ec6ac27419ce65e20d415ebfe1495"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a2d8ec6ac27419ce65e20d415ebfe1495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4acc2555ecc44e12e20eec6974631c70"><td class="memItemLeft" align="right" valign="top"><a id="a4acc2555ecc44e12e20eec6974631c70"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>codeSize</b> ()</td></tr>
-<tr class="separator:a4acc2555ecc44e12e20eec6974631c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3511918f60a4c3f0135dc79573c5a502"><td class="memItemLeft" align="right" valign="top"><a id="a3511918f60a4c3f0135dc79573c5a502"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_decoder.html#a3511918f60a4c3f0135dc79573c5a502">bytesCompressed</a> ()</td></tr>
+<tr class="memdesc:a3511918f60a4c3f0135dc79573c5a502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the compressed length in bytes (after encoding) <br /></td></tr>
+<tr class="separator:a3511918f60a4c3f0135dc79573c5a502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08f2a37656484203f8353cec081b08fd"><td class="memItemLeft" align="right" valign="top"><a id="a08f2a37656484203f8353cec081b08fd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bytesUncompressed</b> ()</td></tr>
+<tr class="separator:a08f2a37656484203f8353cec081b08fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8721dea59e7d446cb9566766c9a073b0"><td class="memItemLeft" align="right" valign="top"><a id="a8721dea59e7d446cb9566766c9a073b0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_decoder.html#a8721dea59e7d446cb9566766c9a073b0">frameLength</a> ()</td></tr>
-<tr class="memdesc:a8721dea59e7d446cb9566766c9a073b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the compressed length in bytes (after encoding) <br /></td></tr>
-<tr class="separator:a8721dea59e7d446cb9566766c9a073b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b485ba5b9d96f94384f4a3840f84314"><td class="memItemLeft" align="right" valign="top"><a id="a2b485ba5b9d96f94384f4a3840f84314"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isResultPCM</b> ()</td></tr>
 <tr class="separator:a2b485ba5b9d96f94384f4a3840f84314"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,10 +139,17 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a4acc2555ecc44e12e20eec6974631c70"><td class="memItemLeft" align="right" valign="top"><a id="a4acc2555ecc44e12e20eec6974631c70"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>codeSize</b> ()</td></tr>
+<tr class="separator:a4acc2555ecc44e12e20eec6974631c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af56a4e53afd50b73ae5f26566118aa09"><td class="memItemLeft" align="right" valign="top"><a id="af56a4e53afd50b73ae5f26566118aa09"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_decoder.html#af56a4e53afd50b73ae5f26566118aa09">firstWrite</a> (const void *data, size_t length)</td></tr>
 <tr class="memdesc:af56a4e53afd50b73ae5f26566118aa09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the framelen. <br /></td></tr>
 <tr class="separator:af56a4e53afd50b73ae5f26566118aa09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8721dea59e7d446cb9566766c9a073b0"><td class="memItemLeft" align="right" valign="top"><a id="a8721dea59e7d446cb9566766c9a073b0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_s_b_c_decoder.html#a8721dea59e7d446cb9566766c9a073b0">frameLength</a> ()</td></tr>
+<tr class="memdesc:a8721dea59e7d446cb9566766c9a073b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the compressed length in bytes (after encoding) <br /></td></tr>
+<tr class="separator:a8721dea59e7d446cb9566766c9a073b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a276d7cdb00007323e4881ef6eb5d6b4e"><td class="memItemLeft" align="right" valign="top"><a id="a276d7cdb00007323e4881ef6eb5d6b4e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValidFrameLen</b> (int len)</td></tr>
 <tr class="separator:a276d7cdb00007323e4881ef6eb5d6b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>

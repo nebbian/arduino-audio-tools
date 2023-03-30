@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['8bit_2330',['8Bit',['../group__codecs8bit.html',1,'']]]
+  ['8bit_2349',['8Bit',['../group__codecs8bit.html',1,'']]]
 ];
