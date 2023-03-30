@@ -1,18 +1,18 @@
 var searchData=
 [
-  ['basebuffer_1240',['BaseBuffer',['../classaudio__tools_1_1_base_buffer.html',1,'audio_tools']]],
-  ['basebuffer_3c_20uint8_5ft_20_3e_1241',['BaseBuffer&lt; uint8_t &gt;',['../classaudio__tools_1_1_base_buffer.html',1,'audio_tools']]],
-  ['baseconverter_1242',['BaseConverter',['../classaudio__tools_1_1_base_converter.html',1,'audio_tools']]],
-  ['baseconverter_3c_20int16_5ft_20_3e_1243',['BaseConverter&lt; int16_t &gt;',['../classaudio__tools_1_1_base_converter.html',1,'audio_tools']]],
-  ['biquaddf1_1244',['BiQuadDF1',['../classaudio__tools_1_1_bi_quad_d_f1.html',1,'audio_tools']]],
-  ['biquaddf2_1245',['BiQuadDF2',['../classaudio__tools_1_1_bi_quad_d_f2.html',1,'audio_tools']]],
-  ['bitvector_1246',['BitVector',['../classaudio__tools_1_1_bit_vector.html',1,'audio_tools']]],
-  ['blackman_1247',['Blackman',['../classaudio__tools_1_1_blackman.html',1,'audio_tools']]],
-  ['blackmanharris_1248',['BlackmanHarris',['../classaudio__tools_1_1_blackman_harris.html',1,'audio_tools']]],
-  ['blackmannuttall_1249',['BlackmanNuttall',['../classaudio__tools_1_1_blackman_nuttall.html',1,'audio_tools']]],
-  ['boost_1250',['Boost',['../classaudio__tools_1_1_boost.html',1,'audio_tools']]],
-  ['bufferedarray_1251',['BufferedArray',['../classaudio__tools_1_1_buffered_array.html',1,'audio_tools']]],
-  ['bufferedstream_1252',['BufferedStream',['../classaudio__tools_1_1_buffered_stream.html',1,'audio_tools']]],
-  ['bufferedtaskstream_1253',['BufferedTaskStream',['../classaudio__tools_1_1_buffered_task_stream.html',1,'audio_tools']]],
-  ['bufferedwindow_1254',['BufferedWindow',['../classaudio__tools_1_1_buffered_window.html',1,'audio_tools']]]
+  ['basebuffer_1241',['BaseBuffer',['../classaudio__tools_1_1_base_buffer.html',1,'audio_tools']]],
+  ['basebuffer_3c_20uint8_5ft_20_3e_1242',['BaseBuffer&lt; uint8_t &gt;',['../classaudio__tools_1_1_base_buffer.html',1,'audio_tools']]],
+  ['baseconverter_1243',['BaseConverter',['../classaudio__tools_1_1_base_converter.html',1,'audio_tools']]],
+  ['baseconverter_3c_20int16_5ft_20_3e_1244',['BaseConverter&lt; int16_t &gt;',['../classaudio__tools_1_1_base_converter.html',1,'audio_tools']]],
+  ['biquaddf1_1245',['BiQuadDF1',['../classaudio__tools_1_1_bi_quad_d_f1.html',1,'audio_tools']]],
+  ['biquaddf2_1246',['BiQuadDF2',['../classaudio__tools_1_1_bi_quad_d_f2.html',1,'audio_tools']]],
+  ['bitvector_1247',['BitVector',['../classaudio__tools_1_1_bit_vector.html',1,'audio_tools']]],
+  ['blackman_1248',['Blackman',['../classaudio__tools_1_1_blackman.html',1,'audio_tools']]],
+  ['blackmanharris_1249',['BlackmanHarris',['../classaudio__tools_1_1_blackman_harris.html',1,'audio_tools']]],
+  ['blackmannuttall_1250',['BlackmanNuttall',['../classaudio__tools_1_1_blackman_nuttall.html',1,'audio_tools']]],
+  ['boost_1251',['Boost',['../classaudio__tools_1_1_boost.html',1,'audio_tools']]],
+  ['bufferedarray_1252',['BufferedArray',['../classaudio__tools_1_1_buffered_array.html',1,'audio_tools']]],
+  ['bufferedstream_1253',['BufferedStream',['../classaudio__tools_1_1_buffered_stream.html',1,'audio_tools']]],
+  ['bufferedtaskstream_1254',['BufferedTaskStream',['../classaudio__tools_1_1_buffered_task_stream.html',1,'audio_tools']]],
+  ['bufferedwindow_1255',['BufferedWindow',['../classaudio__tools_1_1_buffered_window.html',1,'audio_tools']]]
 ];
