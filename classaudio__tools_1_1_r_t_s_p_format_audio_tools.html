@@ -84,20 +84,28 @@ Inheritance diagram for RTSPFormatAudioTools:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_r_t_s_p_format_audio_tools.png" usemap="#RTSPFormatAudioTools_map" alt=""/>
   <map id="RTSPFormatAudioTools_map" name="RTSPFormatAudioTools_map">
-<area href="classaudio__tools_1_1_r_t_s_p_format_g_s_m.html" title="GSM format for RTSP https://en.wikipedia.org/wiki/RTP_payload_formats." alt="RTSPFormatGSM" shape="rect" coords="0,112,145,136"/>
-<area href="classaudio__tools_1_1_r_t_s_p_format_p_c_m.html" title="PCM format for RTSP https://en.wikipedia.org/wiki/RTP_payload_formats." alt="RTSPFormatPCM" shape="rect" coords="155,112,300,136"/>
-<area href="classaudio__tools_1_1_r_t_s_p_format_s_b_c.html" title="SBC format for RTSP https://en.wikipedia.org/wiki/RTSP_payload_formats." alt="RTSPFormatSBC" shape="rect" coords="310,112,455,136"/>
+<area href="classaudio__tools_1_1_r_t_s_p_format_abt_x.html" title="abtX format for RTSP https://en.wikipedia.org/wiki/RTP_payload_formats" alt="RTSPFormatAbtX" shape="rect" coords="0,112,145,136"/>
+<area href="classaudio__tools_1_1_r_t_s_p_format_g711.html" title="G711 μ-Law format for RTSP https://en.wikipedia.org/wiki/RTP_payload_formats Packet intervall: 20,..." alt="RTSPFormatG711" shape="rect" coords="155,112,300,136"/>
+<area href="classaudio__tools_1_1_r_t_s_p_format_g_s_m.html" title="GSM format for RTSP https://en.wikipedia.org/wiki/RTP_payload_formats." alt="RTSPFormatGSM" shape="rect" coords="310,112,455,136"/>
+<area href="classaudio__tools_1_1_r_t_s_p_format_opus.html" title="Opus format for RTSP https://en.wikipedia.org/wiki/RTP_payload_formats." alt="RTSPFormatOpus" shape="rect" coords="465,112,610,136"/>
+<area href="classaudio__tools_1_1_r_t_s_p_format_p_c_m.html" title="PCM format for RTSP https://en.wikipedia.org/wiki/RTP_payload_formats." alt="RTSPFormatPCM" shape="rect" coords="620,112,765,136"/>
+<area href="classaudio__tools_1_1_r_t_s_p_format_p_c_m8.html" title="L8 format for RTSP https://en.wikipedia.org/wiki/RTP_payload_formats." alt="RTSPFormatPCM8" shape="rect" coords="775,112,920,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4420129ea7fa5236cc6f0efffce764d2"><td class="memItemLeft" align="right" valign="top"><a id="a4420129ea7fa5236cc6f0efffce764d2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
-<tr class="separator:a4420129ea7fa5236cc6f0efffce764d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae219ce3d46e1a96fdcd9cd3b5b9fc73"><td class="memItemLeft" align="right" valign="top"><a id="aae219ce3d46e1a96fdcd9cd3b5b9fc73"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>format</b> (char *buffer, int len)=0</td></tr>
-<tr class="separator:aae219ce3d46e1a96fdcd9cd3b5b9fc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c23593971c66b1fee16958a3ad1b0a6"><td class="memItemLeft" align="right" valign="top"><a id="a6c23593971c66b1fee16958a3ad1b0a6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a6c23593971c66b1fee16958a3ad1b0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7bf7c93ebcce49daec84761d55b5587"><td class="memItemLeft" align="right" valign="top"><a id="ad7bf7c93ebcce49daec84761d55b5587"></a>
+virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_r_t_s_p_format_audio_tools.html#ad7bf7c93ebcce49daec84761d55b5587">defaultConfig</a> ()=0</td></tr>
+<tr class="memdesc:ad7bf7c93ebcce49daec84761d55b5587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a default format that will just work. <br /></td></tr>
+<tr class="separator:ad7bf7c93ebcce49daec84761d55b5587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ad9bd7c66af8cbaff4226cf8de3631"><td class="memItemLeft" align="right" valign="top"><a id="ad7ad9bd7c66af8cbaff4226cf8de3631"></a>
+virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_r_t_s_p_format_audio_tools.html#ad7ad9bd7c66af8cbaff4226cf8de3631">format</a> (char *buffer, int len)=0</td></tr>
+<tr class="memdesc:ad7ad9bd7c66af8cbaff4226cf8de3631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the format string. <br /></td></tr>
+<tr class="separator:ad7ad9bd7c66af8cbaff4226cf8de3631"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
