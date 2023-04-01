@@ -313,135 +313,139 @@ $(function() {
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;      LOGE(<span class="stringliteral">&quot;inactive&quot;</span>);</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keyword">const</span> uint8_t *start = (<span class="keyword">const</span> uint8_t *)in_ptr;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="comment">// encode bytes</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; in_size; j++) {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      processByte(start[j]);</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">return</span> in_size;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  }</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">if</span> (p_print==<span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      LOGE(<span class="stringliteral">&quot;output not defined&quot;</span>);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">const</span> uint8_t *start = (<span class="keyword">const</span> uint8_t *)in_ptr;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="comment">// encode bytes</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; in_size; j++) {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      processByte(start[j]);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <span class="keywordtype">int</span> bytesUncompressed() {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_s_b_c_encoder.html#a4acc2555ecc44e12e20eec6974631c70">codeSize</a>();</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keywordtype">int</span> bytesCompressed() {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_s_b_c_encoder.html#a8721dea59e7d446cb9566766c9a073b0">frameLength</a>();</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  AudioInfo info;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  Print *p_print = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  sbc_t sbc;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="keywordtype">bool</span> is_first = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="keywordtype">bool</span> is_active = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  <span class="keywordtype">int</span> current_codesize = 0;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keywordtype">int</span> buffer_pos = 0;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  Vector&lt;uint8_t&gt; buffer{0};</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  Vector&lt;uint8_t&gt; result_buffer{0};</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordtype">int</span> subbands = 4;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordtype">int</span> blocks = 4;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordtype">int</span> bitpool = 32;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keywordtype">int</span> allocation_method;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_s_b_c_encoder.html#a8721dea59e7d446cb9566766c9a073b0">  320</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_s_b_c_encoder.html#a8721dea59e7d446cb9566766c9a073b0">frameLength</a>() { <span class="keywordflow">return</span> sbc_get_frame_length(&amp;sbc); }</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
-<div class="line"><a name="l00323"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_s_b_c_encoder.html#a4acc2555ecc44e12e20eec6974631c70">  323</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_s_b_c_encoder.html#a4acc2555ecc44e12e20eec6974631c70">codeSize</a>() { <span class="keywordflow">return</span> sbc_get_codesize(&amp;sbc); }</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_s_b_c_encoder.html#af34785948af72a85d60ef0a2cae5cf22">  326</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_s_b_c_encoder.html#af34785948af72a85d60ef0a2cae5cf22">setup</a>() {</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    sbc_init(&amp;sbc, 0L);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">return</span> in_size;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keywordtype">int</span> bytesUncompressed() {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_s_b_c_encoder.html#a4acc2555ecc44e12e20eec6974631c70">codeSize</a>();</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  <span class="keywordtype">int</span> bytesCompressed() {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_s_b_c_encoder.html#a8721dea59e7d446cb9566766c9a073b0">frameLength</a>();</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  AudioInfo info;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  Print *p_print = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  sbc_t sbc;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keywordtype">bool</span> is_first = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keywordtype">bool</span> is_active = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordtype">int</span> current_codesize = 0;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordtype">int</span> buffer_pos = 0;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  Vector&lt;uint8_t&gt; buffer{0};</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  Vector&lt;uint8_t&gt; result_buffer{0};</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <span class="keywordtype">int</span> subbands = 4;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="keywordtype">int</span> blocks = 4;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordtype">int</span> bitpool = 32;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="keywordtype">int</span> allocation_method;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_s_b_c_encoder.html#a8721dea59e7d446cb9566766c9a073b0">  324</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_s_b_c_encoder.html#a8721dea59e7d446cb9566766c9a073b0">frameLength</a>() { <span class="keywordflow">return</span> sbc_get_frame_length(&amp;sbc); }</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_s_b_c_encoder.html#a4acc2555ecc44e12e20eec6974631c70">  327</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_s_b_c_encoder.html#a4acc2555ecc44e12e20eec6974631c70">codeSize</a>() { <span class="keywordflow">return</span> sbc_get_codesize(&amp;sbc); }</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">if</span> (info.bits_per_sample!=16){</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      LOGE(<span class="stringliteral">&quot;Invalid bits_per_sample: %d&quot;</span>, info.bits_per_sample);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    }</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">switch</span> (info.sample_rate) {</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">case</span> 16000:</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      sbc.frequency = SBC_FREQ_16000;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordflow">case</span> 32000:</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;      sbc.frequency = SBC_FREQ_32000;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">case</span> 44100:</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;      sbc.frequency = SBC_FREQ_44100;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordflow">case</span> 48000:</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;      sbc.frequency = SBC_FREQ_48000;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;      LOGE(<span class="stringliteral">&quot;Invalid sample_rate: %d&quot;</span>, info.sample_rate);</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    }</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordflow">switch</span> (info.channels) {</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      sbc.mode = SBC_MODE_MONO;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      sbc.mode = SBC_MODE_STEREO;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;      LOGE(<span class="stringliteral">&quot;Invalid channels: %d&quot;</span>, info.channels);</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    }</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">switch</span> (subbands) {</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">case</span> 4:</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;      sbc.subbands = SBC_SB_4;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">case</span> 8:</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      sbc.subbands = SBC_SB_8;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      LOGE(<span class="stringliteral">&quot;Invalid subbands: %d&quot;</span>, subbands);</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    }</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordflow">switch</span> (blocks) {</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordflow">case</span> 4:</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;      sbc.blocks = SBC_BLK_4;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">case</span> 8:</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      sbc.blocks = SBC_BLK_8;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">case</span> 12:</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      sbc.blocks = SBC_BLK_12;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordflow">case</span> 16:</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      sbc.blocks = SBC_BLK_16;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;      LOGE(<span class="stringliteral">&quot;Invalid blocks: %d&quot;</span>, blocks);</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    }</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    sbc.bitpool = bitpool;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    sbc.allocation = allocation_method;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  }</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  <span class="comment">// add byte to decoding buffer and decode if buffer is full</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  <span class="keywordtype">void</span> processByte(uint8_t <span class="keywordtype">byte</span>) {</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    buffer[buffer_pos++] = byte;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">if</span> (buffer_pos &gt;= current_codesize) {</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;      ssize_t written;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;      <span class="comment">// Encodes ONE input block into ONE output block */</span></div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;      <span class="comment">// ssize_t sbc_encode(sbc_t *sbc, const void *input, size_t input_len,</span></div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      <span class="comment">// void *output, size_t output_len, ssize_t *written);</span></div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      sbc_encode(&amp;sbc, &amp;buffer[0], current_codesize, &amp;result_buffer[0],</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                 result_buffer.size(), &amp;written);</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;      LOGD(<span class="stringliteral">&quot;sbc_encode: %d -&gt; %d (buffer: %d))&quot;</span>, current_codesize, written,</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;           result_buffer.size());</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;      p_print-&gt;write(&amp;result_buffer[0], written);</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;      buffer_pos = 0;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    }</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  }</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;};</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_s_b_c_encoder.html#af34785948af72a85d60ef0a2cae5cf22">  330</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_s_b_c_encoder.html#af34785948af72a85d60ef0a2cae5cf22">setup</a>() {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    sbc_init(&amp;sbc, 0L);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordflow">if</span> (info.bits_per_sample!=16){</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      LOGE(<span class="stringliteral">&quot;Invalid bits_per_sample: %d&quot;</span>, info.bits_per_sample);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordflow">switch</span> (info.sample_rate) {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">case</span> 16000:</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;      sbc.frequency = SBC_FREQ_16000;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">case</span> 32000:</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      sbc.frequency = SBC_FREQ_32000;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">case</span> 44100:</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      sbc.frequency = SBC_FREQ_44100;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordflow">case</span> 48000:</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      sbc.frequency = SBC_FREQ_48000;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      LOGE(<span class="stringliteral">&quot;Invalid sample_rate: %d&quot;</span>, info.sample_rate);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">switch</span> (info.channels) {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;      sbc.mode = SBC_MODE_MONO;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      sbc.mode = SBC_MODE_STEREO;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      LOGE(<span class="stringliteral">&quot;Invalid channels: %d&quot;</span>, info.channels);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">switch</span> (subbands) {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      sbc.subbands = SBC_SB_4;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordflow">case</span> 8:</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;      sbc.subbands = SBC_SB_8;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;      LOGE(<span class="stringliteral">&quot;Invalid subbands: %d&quot;</span>, subbands);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">switch</span> (blocks) {</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      sbc.blocks = SBC_BLK_4;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordflow">case</span> 8:</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      sbc.blocks = SBC_BLK_8;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordflow">case</span> 12:</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      sbc.blocks = SBC_BLK_12;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordflow">case</span> 16:</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;      sbc.blocks = SBC_BLK_16;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;      LOGE(<span class="stringliteral">&quot;Invalid blocks: %d&quot;</span>, blocks);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    sbc.bitpool = bitpool;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    sbc.allocation = allocation_method;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  }</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  <span class="comment">// add byte to decoding buffer and decode if buffer is full</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  <span class="keywordtype">void</span> processByte(uint8_t <span class="keywordtype">byte</span>) {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    buffer[buffer_pos++] = byte;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">if</span> (buffer_pos &gt;= current_codesize) {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      ssize_t written;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;      <span class="comment">// Encodes ONE input block into ONE output block */</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;      <span class="comment">// ssize_t sbc_encode(sbc_t *sbc, const void *input, size_t input_len,</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      <span class="comment">// void *output, size_t output_len, ssize_t *written);</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;      sbc_encode(&amp;sbc, &amp;buffer[0], current_codesize, &amp;result_buffer[0],</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                 result_buffer.size(), &amp;written);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;      LOGD(<span class="stringliteral">&quot;sbc_encode: %d -&gt; %d (buffer: %d))&quot;</span>, current_codesize, written,</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;           result_buffer.size());</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;      p_print-&gt;write(&amp;result_buffer[0], written);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;      buffer_pos = 0;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    }</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;};</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:16</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_encoder.html">audio_tools::AudioEncoder</a></div><div class="ttdoc">Encoding of PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:47</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_dependent_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_dependent.html">audio_tools::AudioInfoDependent</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:97</div></div>
@@ -453,15 +457,15 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_s_b_c_decoder_html_aac30d22c864c6347a8ae3710e9247517"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_decoder.html#aac30d22c864c6347a8ae3710e9247517">audio_tools::SBCDecoder::processByte</a></div><div class="ttdeci">void processByte(uint8_t byte)</div><div class="ttdoc">Build decoding buffer and decode when frame is full.</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:181</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_b_c_decoder_html_af56a4e53afd50b73ae5f26566118aa09"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_decoder.html#af56a4e53afd50b73ae5f26566118aa09">audio_tools::SBCDecoder::firstWrite</a></div><div class="ttdeci">int firstWrite(const void *data, size_t length)</div><div class="ttdoc">Determines the framelen.</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:158</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html">audio_tools::SBCEncoder</a></div><div class="ttdoc">Encoder for SBC - Depends on https://github.com/pschatzmann/arduino-libsbc. Inspired by sbcenc....</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:206</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_a4acc2555ecc44e12e20eec6974631c70"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#a4acc2555ecc44e12e20eec6974631c70">audio_tools::SBCEncoder::codeSize</a></div><div class="ttdeci">int codeSize()</div><div class="ttdoc">Provides the uncompressed length (of the PCM data) in bytes.</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:323</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_a4acc2555ecc44e12e20eec6974631c70"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#a4acc2555ecc44e12e20eec6974631c70">audio_tools::SBCEncoder::codeSize</a></div><div class="ttdeci">int codeSize()</div><div class="ttdoc">Provides the uncompressed length (of the PCM data) in bytes.</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:327</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_a4e66cdd854b56dfea563c75c1b041607"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#a4e66cdd854b56dfea563c75c1b041607">audio_tools::SBCEncoder::setSubbands</a></div><div class="ttdeci">void setSubbands(int subbands)</div><div class="ttdoc">Defines the subbands: Use 4 or 8.</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:217</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_a54432aa904b0e72a505d1f0596692c0f"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#a54432aa904b0e72a505d1f0596692c0f">audio_tools::SBCEncoder::setBlocks</a></div><div class="ttdeci">void setBlocks(int blocks)</div><div class="ttdoc">Defines the number of blocks: valid values (4,8,12,16)</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:227</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_a8721dea59e7d446cb9566766c9a073b0"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#a8721dea59e7d446cb9566766c9a073b0">audio_tools::SBCEncoder::frameLength</a></div><div class="ttdeci">int frameLength()</div><div class="ttdoc">Provides the compressed length in bytes (after encoding)</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:320</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_a8721dea59e7d446cb9566766c9a073b0"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#a8721dea59e7d446cb9566766c9a073b0">audio_tools::SBCEncoder::frameLength</a></div><div class="ttdeci">int frameLength()</div><div class="ttdoc">Provides the compressed length in bytes (after encoding)</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:324</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_ab0bdf5cca484fb2ba637c39384b27fb2"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#ab0bdf5cca484fb2ba637c39384b27fb2">audio_tools::SBCEncoder::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Restarts the processing.</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:256</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_acc8a8be313e8fb5d9c158225c3143dd6"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#acc8a8be313e8fb5d9c158225c3143dd6">audio_tools::SBCEncoder::setBitpool</a></div><div class="ttdeci">void setBitpool(int bitpool)</div><div class="ttdoc">Defines the bitpool (2-86?)</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:237</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_adc34417a19a7b70626d19c41072d72a5"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#adc34417a19a7b70626d19c41072d72a5">audio_tools::SBCEncoder::end</a></div><div class="ttdeci">virtual void end()</div><div class="ttdoc">Ends the processing.</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:266</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_ae011a2d42c0a1fffd980430371394512"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#ae011a2d42c0a1fffd980430371394512">audio_tools::SBCEncoder::begin</a></div><div class="ttdeci">void begin(AudioInfo bi)</div><div class="ttdoc">Starts the processing: channels 1 or 2, supported sample rates: 16000, 32000, 44100,...</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:250</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_af34785948af72a85d60ef0a2cae5cf22"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#af34785948af72a85d60ef0a2cae5cf22">audio_tools::SBCEncoder::setup</a></div><div class="ttdeci">bool setup()</div><div class="ttdoc">Determines audio information and calls sbc_init;.</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:326</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_af34785948af72a85d60ef0a2cae5cf22"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#af34785948af72a85d60ef0a2cae5cf22">audio_tools::SBCEncoder::setup</a></div><div class="ttdeci">bool setup()</div><div class="ttdoc">Determines audio information and calls sbc_init;.</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:330</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_s_b_c_encoder_html_afdb823fb33d75636f6b057854596bfee"><div class="ttname"><a href="classaudio__tools_1_1_s_b_c_encoder.html#afdb823fb33d75636f6b057854596bfee">audio_tools::SBCEncoder::setAllocationMethod</a></div><div class="ttdeci">void setAllocationMethod(int allocation_method)</div><div class="ttdoc">Defines the allocation method: Use SBC_AM_LOUDNESS, SBC_AM_SNR.</div><div class="ttdef"><b>Definition:</b> CodecSBC.h:240</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:8</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
