@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_csv_stream-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -156,6 +157,12 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (
 <tr class="memitem:ad89418aeb557f65a8f1a0aed755633b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_print.html#ad89418aeb557f65a8f1a0aed755633b1">writeSilence</a> (size_t len)</td></tr>
 <tr class="separator:ad89418aeb557f65a8f1a0aed755633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a0eb876a89cbbf3357e2eaa549d21e5b6"><td class="memItemLeft" align="right" valign="top"><a id="a0eb876a89cbbf3357e2eaa549d21e5b6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>writeFrames</b> (T *data_ptr, int frameCount)</td></tr>
+<tr class="separator:a0eb876a89cbbf3357e2eaa549d21e5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memItemLeft" align="right" valign="top"><a id="a03c996f9fcf0e10baeb3e700be0c409a"></a>
@@ -164,9 +171,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</t
 <tr class="memitem:a07fab440d87063e83df0bc30223964c5"><td class="memItemLeft" align="right" valign="top"><a id="a07fab440d87063e83df0bc30223964c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cfg</b></td></tr>
 <tr class="separator:a07fab440d87063e83df0bc30223964c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a178795099d0608972755dfef8d8367e3"><td class="memItemLeft" align="right" valign="top"><a id="a178795099d0608972755dfef8d8367e3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b> = 2</td></tr>
-<tr class="separator:a178795099d0608972755dfef8d8367e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7dff2c57c0da9a4a2b70e3e815be31"><td class="memItemLeft" align="right" valign="top"><a id="adf7dff2c57c0da9a4a2b70e3e815be31"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>channel</b> = 0</td></tr>
+<tr class="separator:adf7dff2c57c0da9a4a2b70e3e815be31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5735d29368ab553b498d36b2a8f48db"><td class="memItemLeft" align="right" valign="top"><a id="ac5735d29368ab553b498d36b2a8f48db"></a>
 T *&#160;</td><td class="memItemRight" valign="bottom"><b>data_ptr</b></td></tr>
 <tr class="separator:ac5735d29368ab553b498d36b2a8f48db"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: ResampleStream&lt; T &gt; Class Template Reference</title>
+<title>arduino-audio-tools: ResampleStream Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,47 +71,43 @@ $(function() {
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_resample_stream-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ResampleStream&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__transform.html">Converting Streams</a></div></div>  </div>
+<div class="title">ResampleStream Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__transform.html">Converting Streams</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Dynamic Resampling. We can use a variable factor to speed up or slow down the playback.  
  <a href="classaudio__tools_1_1_resample_stream.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_resample_8h_source.html">Resample.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_resample_stream_8h_source.html">ResampleStream.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for ResampleStream&lt; T &gt;:</div>
+Inheritance diagram for ResampleStream:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_resample_stream.png" usemap="#ResampleStream_3C_20T_20_3E_map" alt=""/>
-  <map id="ResampleStream_3C_20T_20_3E_map" name="ResampleStream_3C_20T_20_3E_map">
-<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="170,112,330,136"/>
-<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,160,80"/>
-<area href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoDependent" shape="rect" coords="170,56,330,80"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="340,56,500,80"/>
-<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,160,24"/>
-<area href="classaudio__tools_1_1_resample_stream_fast.html" title="Dynamic Resampling. We can use a variable factor to speed up or slow down the playback...." alt="ResampleStreamFast&lt; T &gt;" shape="rect" coords="170,224,330,248"/>
+  <img src="classaudio__tools_1_1_resample_stream.png" usemap="#ResampleStream_map" alt=""/>
+  <map id="ResampleStream_map" name="ResampleStream_map">
+<area href="classaudio__tools_1_1_reformat_base_stream.html" title="Base class for chained converting streams." alt="ReformatBaseStream" shape="rect" coords="139,168,268,192"/>
+<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="139,112,268,136"/>
+<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,129,80"/>
+<area href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoDependent" shape="rect" coords="139,56,268,80"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="278,56,407,80"/>
+<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,129,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a26785a69e74254b6753c984d79919afe"><td class="memItemLeft" align="right" valign="top"><a id="a26785a69e74254b6753c984d79919afe"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a26785a69e74254b6753c984d79919afe">ResampleStream</a> (<a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;out)</td></tr>
-<tr class="memdesc:a26785a69e74254b6753c984d79919afe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support for resampling via write. The audio information is copied from the io. <br /></td></tr>
+<tr class="memitem:a26785a69e74254b6753c984d79919afe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a26785a69e74254b6753c984d79919afe">ResampleStream</a> (<a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;out)</td></tr>
 <tr class="separator:a26785a69e74254b6753c984d79919afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af68d567deb61ebb2452d61b9e1beed8e"><td class="memItemLeft" align="right" valign="top"><a id="af68d567deb61ebb2452d61b9e1beed8e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#af68d567deb61ebb2452d61b9e1beed8e">ResampleStream</a> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;io)</td></tr>
-<tr class="memdesc:af68d567deb61ebb2452d61b9e1beed8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support for resampling via write and read. The audio information is copied from the io. <br /></td></tr>
+<tr class="memitem:af68d567deb61ebb2452d61b9e1beed8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#af68d567deb61ebb2452d61b9e1beed8e">ResampleStream</a> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;io)</td></tr>
 <tr class="separator:af68d567deb61ebb2452d61b9e1beed8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a650a7f7b6e8498389055bc211a6b1955"><td class="memItemLeft" align="right" valign="top"><a id="a650a7f7b6e8498389055bc211a6b1955"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a650a7f7b6e8498389055bc211a6b1955">ResampleStream</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out, int channelCount=2)</td></tr>
-<tr class="memdesc:a650a7f7b6e8498389055bc211a6b1955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support for resampling via write. <br /></td></tr>
-<tr class="separator:a650a7f7b6e8498389055bc211a6b1955"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e3062a402c4b5a1191cf44df3c68a12"><td class="memItemLeft" align="right" valign="top"><a id="a2e3062a402c4b5a1191cf44df3c68a12"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a2e3062a402c4b5a1191cf44df3c68a12">ResampleStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;io, int channelCount=2)</td></tr>
-<tr class="memdesc:a2e3062a402c4b5a1191cf44df3c68a12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support for resampling via write and read. <br /></td></tr>
-<tr class="separator:a2e3062a402c4b5a1191cf44df3c68a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4086fb1a96a79787cd34d990af19f0a3"><td class="memItemLeft" align="right" valign="top"><a id="a4086fb1a96a79787cd34d990af19f0a3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a4086fb1a96a79787cd34d990af19f0a3">ResampleStream</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
+<tr class="memdesc:a4086fb1a96a79787cd34d990af19f0a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support for resampling via write. <br /></td></tr>
+<tr class="separator:a4086fb1a96a79787cd34d990af19f0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea051bc9a6fb01ba6d7706d12305045d"><td class="memItemLeft" align="right" valign="top"><a id="aea051bc9a6fb01ba6d7706d12305045d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#aea051bc9a6fb01ba6d7706d12305045d">ResampleStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;io)</td></tr>
+<tr class="memdesc:aea051bc9a6fb01ba6d7706d12305045d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support for resampling via write and read. <br /></td></tr>
+<tr class="separator:aea051bc9a6fb01ba6d7706d12305045d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
 <tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,17 +120,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> 
 <tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3378ec3f1bc9e5a8919b9a5aaa34f498"><td class="memItemLeft" align="right" valign="top"><a id="a3378ec3f1bc9e5a8919b9a5aaa34f498"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from, int toRate)</td></tr>
+<tr class="separator:a3378ec3f1bc9e5a8919b9a5aaa34f498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22ffcf2c191e3d86d8570970badad978"><td class="memItemLeft" align="right" valign="top"><a id="a22ffcf2c191e3d86d8570970badad978"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info, float step)</td></tr>
 <tr class="separator:a22ffcf2c191e3d86d8570970badad978"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09cbf715ad9aea2625bde5b1468bb698"><td class="memItemLeft" align="right" valign="top"><a id="a09cbf715ad9aea2625bde5b1468bb698"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info, int fromRate, int toRate)</td></tr>
-<tr class="separator:a09cbf715ad9aea2625bde5b1468bb698"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f0c7d24d4e9b452731992e74008686c"><td class="memItemLeft" align="right" valign="top"><a id="a8f0c7d24d4e9b452731992e74008686c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_resample_config.html">ResampleConfig</a> cfg)</td></tr>
 <tr class="separator:a8f0c7d24d4e9b452731992e74008686c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af52118d79bafb3eefdd7e6138f15b9e7"><td class="memItemLeft" align="right" valign="top"><a id="af52118d79bafb3eefdd7e6138f15b9e7"></a>
-<a class="el" href="structaudio__tools_1_1_resample_config.html">ResampleConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
+<a class="el" href="structaudio__tools_1_1_resample_config.html">ResampleConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#af52118d79bafb3eefdd7e6138f15b9e7">defaultConfig</a> ()</td></tr>
+<tr class="memdesc:af52118d79bafb3eefdd7e6138f15b9e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the default configuraiton. <br /></td></tr>
 <tr class="separator:af52118d79bafb3eefdd7e6138f15b9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
@@ -142,42 +139,43 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</t
 <tr class="memitem:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memItemLeft" align="right" valign="top"><a id="af654b48544c195ab99fe27e7bc3ed5fe"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
 <tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23545f6aadd0ac8e4e16fba4e5b35c6b"><td class="memItemLeft" align="right" valign="top"><a id="a23545f6aadd0ac8e4e16fba4e5b35c6b"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getReadBufferLen</b> ()</td></tr>
-<tr class="separator:a23545f6aadd0ac8e4e16fba4e5b35c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bde85b9ba6c66a2f140effc20a8d1dc"><td class="memItemLeft" align="right" valign="top"><a id="a1bde85b9ba6c66a2f140effc20a8d1dc"></a>
+virtual <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPrint</b> ()</td></tr>
+<tr class="separator:a1bde85b9ba6c66a2f140effc20a8d1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab49cc7c5e84baee6171477076ad7284a"><td class="memItemLeft" align="right" valign="top"><a id="ab49cc7c5e84baee6171477076ad7284a"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#ab49cc7c5e84baee6171477076ad7284a">getStepSize</a> ()</td></tr>
 <tr class="memdesc:ab49cc7c5e84baee6171477076ad7284a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the actual step size. <br /></td></tr>
 <tr class="separator:ab49cc7c5e84baee6171477076ad7284a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ab0b6134d712c7733c4cf91d9bf45b8"><td class="memItemLeft" align="right" valign="top"><a id="a3ab0b6134d712c7733c4cf91d9bf45b8"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a3ab0b6134d712c7733c4cf91d9bf45b8">getStepSize</a> (float sampleRateFrom, float sampleRateTo)</td></tr>
-<tr class="memdesc:a3ab0b6134d712c7733c4cf91d9bf45b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the step size the sample rate: e.g. from 44200 to 22100 gives a step size of 2 in order to provide fewer samples <br /></td></tr>
+<tr class="memitem:a3ab0b6134d712c7733c4cf91d9bf45b8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a3ab0b6134d712c7733c4cf91d9bf45b8">getStepSize</a> (float sampleRateFrom, float sampleRateTo)</td></tr>
 <tr class="separator:a3ab0b6134d712c7733c4cf91d9bf45b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190ffdf693e3bb63f5a9f560ba0f3bf9"><td class="memItemLeft" align="right" valign="top"><a id="a190ffdf693e3bb63f5a9f560ba0f3bf9"></a>
+virtual <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getStream</b> ()</td></tr>
+<tr class="separator:a190ffdf693e3bb63f5a9f560ba0f3bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a28841c35da456c0ccccbe9623c00a1"><td class="memItemLeft" align="right" valign="top"><a id="a5a28841c35da456c0ccccbe9623c00a1"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a5a28841c35da456c0ccccbe9623c00a1">readBytes</a> (uint8_t *buffer, size_t length) override</td></tr>
-<tr class="memdesc:a5a28841c35da456c0ccccbe9623c00a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reuses the write implementation to support readBytes. <br /></td></tr>
-<tr class="separator:a5a28841c35da456c0ccccbe9623c00a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed092e48bf1e3b039fb5d1dc148cad97"><td class="memItemLeft" align="right" valign="top"><a id="aed092e48bf1e3b039fb5d1dc148cad97"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *data, size_t size) override</td></tr>
+<tr class="separator:aed092e48bf1e3b039fb5d1dc148cad97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1fdd56031f1195cb221ab855fb6a102"><td class="memItemLeft" align="right" valign="top"><a id="ad1fdd56031f1195cb221ab855fb6a102"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
 <tr class="separator:ad1fdd56031f1195cb221ab855fb6a102"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5a7ba68d6c150f9643e74f3838270a5"><td class="memItemLeft" align="right" valign="top"><a id="ab5a7ba68d6c150f9643e74f3838270a5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#ab5a7ba68d6c150f9643e74f3838270a5">setChannels</a> (int channels)</td></tr>
-<tr class="memdesc:ab5a7ba68d6c150f9643e74f3838270a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the number of channels. <br /></td></tr>
-<tr class="separator:ab5a7ba68d6c150f9643e74f3838270a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memItemLeft" align="right" valign="top"><a id="a5ee65428f7ce3ff5deac4e5d380f3899"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
 <tr class="separator:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b53cf9801df0979eb122416b4c4dd1a"><td class="memItemLeft" align="right" valign="top"><a id="a7b53cf9801df0979eb122416b4c4dd1a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a7b53cf9801df0979eb122416b4c4dd1a">setReadBufferLen</a> (size_t len)</td></tr>
-<tr class="memdesc:a7b53cf9801df0979eb122416b4c4dd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the internal read buffer length that will be used to resample. <br /></td></tr>
-<tr class="separator:a7b53cf9801df0979eb122416b4c4dd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7694bdde8707e5a9f92c36c905be2e56"><td class="memItemLeft" align="right" valign="top"><a id="a7694bdde8707e5a9f92c36c905be2e56"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a7694bdde8707e5a9f92c36c905be2e56">setStepSize</a> (float step)</td></tr>
 <tr class="memdesc:a7694bdde8707e5a9f92c36c905be2e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">influence the sample rate <br /></td></tr>
 <tr class="separator:a7694bdde8707e5a9f92c36c905be2e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d55e826679d6de4133baf76958cbc37"><td class="memItemLeft" align="right" valign="top"><a id="a5d55e826679d6de4133baf76958cbc37"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;print)</td></tr>
+<tr class="separator:a5d55e826679d6de4133baf76958cbc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646af4ceb37088b4a2a19e1716969e94"><td class="memItemLeft" align="right" valign="top"><a id="a646af4ceb37088b4a2a19e1716969e94"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream)</td></tr>
+<tr class="separator:a646af4ceb37088b4a2a19e1716969e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec13de98d983457ab0c6986aa40abc8a"><td class="memItemLeft" align="right" valign="top"><a id="aec13de98d983457ab0c6986aa40abc8a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setupReader</b> ()</td></tr>
+<tr class="separator:aec13de98d983457ab0c6986aa40abc8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a989540d43150595fdde26c8f37265069"><td class="memItemLeft" align="right" valign="top"><a id="a989540d43150595fdde26c8f37265069"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> &amp;info)</td></tr>
 <tr class="separator:a989540d43150595fdde26c8f37265069"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,37 +190,45 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4b2b026d3387cb961f6118f7533dc76c"><td class="memItemLeft" align="right" valign="top"><a id="a4b2b026d3387cb961f6118f7533dc76c"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a4b2b026d3387cb961f6118f7533dc76c">getValue</a> (T *data, float frame_idx, int channel)</td></tr>
-<tr class="memdesc:a4b2b026d3387cb961f6118f7533dc76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the interpolated value for indicated (float) index value <br /></td></tr>
-<tr class="separator:a4b2b026d3387cb961f6118f7533dc76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83aaae337388e9c05cf72ca14ea3b70f"><td class="memItemLeft" align="right" valign="top"><a id="a83aaae337388e9c05cf72ca14ea3b70f"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>lookup</b> (T *data, int frame, int channel)</td></tr>
-<tr class="separator:a83aaae337388e9c05cf72ca14ea3b70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af670780acc7db5511153adf62a68a362"><td class="memTemplParams" colspan="2"><a id="af670780acc7db5511153adf62a68a362"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af670780acc7db5511153adf62a68a362"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#af670780acc7db5511153adf62a68a362">getValue</a> (T *data, float frame_idx, int channel)</td></tr>
+<tr class="memdesc:af670780acc7db5511153adf62a68a362"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the interpolated value for indicated (float) index value <br /></td></tr>
+<tr class="separator:af670780acc7db5511153adf62a68a362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8662bc698751731ef239e89b395d5a7"><td class="memTemplParams" colspan="2"><a id="af8662bc698751731ef239e89b395d5a7"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af8662bc698751731ef239e89b395d5a7"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>lookup</b> (T *data, int frame, int channel)</td></tr>
+<tr class="separator:af8662bc698751731ef239e89b395d5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
 <tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a919f1117f7204c7854769d1e12b46624"><td class="memItemLeft" align="right" valign="top"><a id="a919f1117f7204c7854769d1e12b46624"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setupLastSamples</b> (T *data, int frame)</td></tr>
-<tr class="separator:a919f1117f7204c7854769d1e12b46624"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7600a57c0e559c034a8ca4f3e6bb18d6"><td class="memItemLeft" align="right" valign="top"><a id="a7600a57c0e559c034a8ca4f3e6bb18d6"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a7600a57c0e559c034a8ca4f3e6bb18d6">write</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *p_out, const uint8_t *buffer, size_t bytes, size_t &amp;written)</td></tr>
-<tr class="memdesc:a7600a57c0e559c034a8ca4f3e6bb18d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the buffer to p_out after resampling. <br /></td></tr>
-<tr class="separator:a7600a57c0e559c034a8ca4f3e6bb18d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae80c7db53037e16c4654f123c8f19a93"><td class="memItemLeft" align="right" valign="top"><a id="ae80c7db53037e16c4654f123c8f19a93"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#ae80c7db53037e16c4654f123c8f19a93">setupLastSamples</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg)</td></tr>
+<tr class="memdesc:ae80c7db53037e16c4654f123c8f19a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the buffer for the rollover samples. <br /></td></tr>
+<tr class="separator:ae80c7db53037e16c4654f123c8f19a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51c00fbbc5e5e771b6b4a4da3e7075c"><td class="memTemplParams" colspan="2"><a id="ad51c00fbbc5e5e771b6b4a4da3e7075c"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad51c00fbbc5e5e771b6b4a4da3e7075c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setupLastSamples</b> (T *data, int frame)</td></tr>
+<tr class="separator:ad51c00fbbc5e5e771b6b4a4da3e7075c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0284c414da66b48385a66b676b2e2356"><td class="memTemplParams" colspan="2"><a id="a0284c414da66b48385a66b676b2e2356"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0284c414da66b48385a66b676b2e2356"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a0284c414da66b48385a66b676b2e2356">write</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *p_out, const uint8_t *buffer, size_t bytes, size_t &amp;written)</td></tr>
+<tr class="memdesc:a0284c414da66b48385a66b676b2e2356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the buffer to p_print after resampling. <br /></td></tr>
+<tr class="separator:a0284c414da66b48385a66b676b2e2356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ab034bc604dd1105a51d84ed1076a4623"><td class="memItemLeft" align="right" valign="top"><a id="ab034bc604dd1105a51d84ed1076a4623"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_read_len</b> = 256</td></tr>
-<tr class="separator:ab034bc604dd1105a51d84ed1076a4623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeff5997abcf0c88c9434923e2ffd032b"><td class="memItemLeft" align="right" valign="top"><a id="aeff5997abcf0c88c9434923e2ffd032b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>bytes_per_frame</b> = 0</td></tr>
 <tr class="separator:aeff5997abcf0c88c9434923e2ffd032b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a323c112c11500270be91b7cb353826bd"><td class="memItemLeft" align="right" valign="top"><a id="a323c112c11500270be91b7cb353826bd"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>factor</b></td></tr>
+<tr class="separator:a323c112c11500270be91b7cb353826bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a791caab74bc4e8b8d9bb4b9667744eb2"><td class="memItemLeft" align="right" valign="top"><a id="a791caab74bc4e8b8d9bb4b9667744eb2"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>idx</b> =0</td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>idx</b> = 0</td></tr>
 <tr class="separator:a791caab74bc4e8b8d9bb4b9667744eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
@@ -230,29 +236,23 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>idx</b> =0</td></tr>
 <tr class="memitem:a4c54361cc737ba2d4ea42efe398c924a"><td class="memItemLeft" align="right" valign="top"><a id="a4c54361cc737ba2d4ea42efe398c924a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_first</b> = true</td></tr>
 <tr class="separator:a4c54361cc737ba2d4ea42efe398c924a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c32865996ca04a8745393f06f71f6bb"><td class="memItemLeft" align="right" valign="top"><a id="a4c32865996ca04a8745393f06f71f6bb"></a>
-<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>last_samples</b> {0}</td></tr>
-<tr class="separator:a4c32865996ca04a8745393f06f71f6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2aba0f6e1d4d655d35ee4168b9e49f0b"><td class="memItemLeft" align="right" valign="top"><a id="a2aba0f6e1d4d655d35ee4168b9e49f0b"></a>
-<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_in</b> =nullptr</td></tr>
-<tr class="separator:a2aba0f6e1d4d655d35ee4168b9e49f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ffd497ea1629e9d0942e748ff55dfe2"><td class="memItemLeft" align="right" valign="top"><a id="a7ffd497ea1629e9d0942e748ff55dfe2"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>last_samples</b> {0}</td></tr>
+<tr class="separator:a7ffd497ea1629e9d0942e748ff55dfe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memItemLeft" align="right" valign="top"><a id="aa42c30e02e51ec7cc38ea4ab215e0db4"></a>
-<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_out</b> =nullptr</td></tr>
-<tr class="separator:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf629c88cc938fc1b985ffb00b1839e1"><td class="memItemLeft" align="right" valign="top"><a id="abf629c88cc938fc1b985ffb00b1839e1"></a>
-<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>read_buffer</b> {0}</td></tr>
-<tr class="separator:abf629c88cc938fc1b985ffb00b1839e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89ed0e5a737c7d55b410187ade23e39c"><td class="memItemLeft" align="right" valign="top"><a id="a89ed0e5a737c7d55b410187ade23e39c"></a>
-<a class="el" href="classaudio__tools_1_1_ring_buffer_stream.html">RingBufferStream</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ring_buffer</b> {0}</td></tr>
-<tr class="separator:a89ed0e5a737c7d55b410187ade23e39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d306284bbcebe181be3bfe2366e63d1"><td class="memItemLeft" align="right" valign="top"><a id="a3d306284bbcebe181be3bfe2366e63d1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>step_dirty</b> = true</td></tr>
-<tr class="separator:a3d306284bbcebe181be3bfe2366e63d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
+<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>
+<tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c87619d514c8c9627dc94e5e278a530"><td class="memItemLeft" align="right" valign="top"><a id="a7c87619d514c8c9627dc94e5e278a530"></a>
+<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> = nullptr</td></tr>
+<tr class="separator:a7c87619d514c8c9627dc94e5e278a530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ad5f037c98521559e8e102d7b10690"><td class="memItemLeft" align="right" valign="top"><a id="ad0ad5f037c98521559e8e102d7b10690"></a>
+<a class="el" href="classaudio__tools_1_1_transformation_reader.html">TransformationReader</a>&lt; <a class="el" href="classaudio__tools_1_1_resample_stream.html">ResampleStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>reader</b></td></tr>
+<tr class="separator:ad0ad5f037c98521559e8e102d7b10690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51a4b049059316e14165642a6ffb894f"><td class="memItemLeft" align="right" valign="top"><a id="a51a4b049059316e14165642a6ffb894f"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>step_size</b> =1.0</td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>step_size</b> = 1.0</td></tr>
 <tr class="separator:a51a4b049059316e14165642a6ffb894f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
@@ -265,10 +265,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>to_sample_rate</b> = 0
 <tr class="separator:af736bd115bcd9ab90219d854b57642a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-class audio_tools::ResampleStream&lt; T &gt;</h3>
-
-<p>Dynamic Resampling. We can use a variable factor to speed up or slow down the playback. </p>
+<div class="textblock"><p>Dynamic Resampling. We can use a variable factor to speed up or slow down the playback. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -277,7 +274,99 @@ class audio_tools::ResampleStream&lt; T &gt;</h3>
   </table>
   </dd>
 </dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a26785a69e74254b6753c984d79919afe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26785a69e74254b6753c984d79919afe">&#9670;&nbsp;</a></span>ResampleStream() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classaudio__tools_1_1_resample_stream.html">ResampleStream</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Support for resampling via write. The audio information is copied from the io </p>
+
+</div>
+</div>
+<a id="af68d567deb61ebb2452d61b9e1beed8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af68d567deb61ebb2452d61b9e1beed8e">&#9670;&nbsp;</a></span>ResampleStream() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classaudio__tools_1_1_resample_stream.html">ResampleStream</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>io</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Support for resampling via write and read. The audio information is copied from the io </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3ab0b6134d712c7733c4cf91d9bf45b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ab0b6134d712c7733c4cf91d9bf45b8">&#9670;&nbsp;</a></span>getStepSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getStepSize </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sampleRateFrom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sampleRateTo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>calculate the step size the sample rate: e.g. from 44200 to 22100 gives a step size of 2 in order to provide fewer samples </p>
+
+</div>
+</div>
 <a id="ad89418aeb557f65a8f1a0aed755633b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad89418aeb557f65a8f1a0aed755633b1">&#9670;&nbsp;</a></span>writeSilence()</h2>
 
@@ -312,7 +401,7 @@ class audio_tools::ResampleStream&lt; T &gt;</h3>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/AudioTools/<a class="el" href="_resample_8h_source.html">Resample.h</a></li>
+<li>src/AudioTools/<a class="el" href="_resample_stream_8h_source.html">ResampleStream.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

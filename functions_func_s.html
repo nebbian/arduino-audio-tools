@@ -185,6 +185,9 @@ $(function() {
 <li>setBlocks()
 : <a class="el" href="classaudio__tools_1_1_s_b_c_encoder.html#a54432aa904b0e72a505d1f0596692c0f">SBCEncoder</a>
 </li>
+<li>setBuffered()
+: <a class="el" href="classaudio__tools_1_1_number_format_converter_stream_t.html#a73a4f130b28b7fb6cfbe4f4957f84a18">NumberFormatConverterStreamT&lt; TFrom, TTo &gt;</a>
+</li>
 <li>setBufferSize()
 : <a class="el" href="classaudio__tools_1_1_audio_player.html#a0c9e8fc6b910ac6bd185da2642cbad4a">AudioPlayer</a>
 </li>
@@ -200,9 +203,6 @@ $(function() {
 </li>
 <li>setChangeCallback()
 : <a class="el" href="classaudio__tools_1_1_bit_vector.html#a854554bd3a60ca3441ff58121eb75f3d">BitVector</a>
-</li>
-<li>setChannels()
-: <a class="el" href="classaudio__tools_1_1_resample_stream.html#ab5a7ba68d6c150f9643e74f3838270a5">ResampleStream&lt; T &gt;</a>
 </li>
 <li>setChebyICoefficients()
 : <a class="el" href="classaudio__tools_1_1_filter_effect_base.html#a88f9bbb7d004b7f920601cc211c93ef0">FilterEffectBase</a>
@@ -428,7 +428,7 @@ $(function() {
 , <a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html#a86ce681ae22c0345c20e583a8a1f298f">OggContainerEncoder</a>
 , <a class="el" href="classaudio__tools_1_1_opus_audio_decoder.html#a86ce681ae22c0345c20e583a8a1f298f">OpusAudioDecoder</a>
 , <a class="el" href="classaudio__tools_1_1_opus_audio_encoder.html#a86ce681ae22c0345c20e583a8a1f298f">OpusAudioEncoder</a>
-, <a class="el" href="classaudio__tools_1_1_streaming_decoder.html#acac994dd0f0452da1aadec3ad99bcad7">StreamingDecoder</a>
+, <a class="el" href="classaudio__tools_1_1_streaming_decoder.html#a33c50884a025e7c2049b71fe0b8d0045">StreamingDecoder</a>
 , <a class="el" href="classaudio__tools_1_1_vorbis_decoder.html#a262ef7a9ed245c89518ef6c14a885d8c">VorbisDecoder</a>
 , <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#ac8bad9f22f28c75edd3beec36ed35319">WAVDecoder</a>
 , <a class="el" href="classaudio__tools_1_1_w_a_v_encoder.html#a8eb17bda02c8dc1119025c441edcaa03">WAVEncoder</a>
@@ -463,9 +463,6 @@ $(function() {
 </li>
 <li>setRate()
 : <a class="el" href="classaudio__tools_1_1_simple_flanger.html#a67d5fb7283e29b2582b107b8f3137a91">SimpleFlanger</a>
-</li>
-<li>setReadBufferLen()
-: <a class="el" href="classaudio__tools_1_1_resample_stream.html#a7b53cf9801df0979eb122416b4c4dd1a">ResampleStream&lt; T &gt;</a>
 </li>
 <li>setReceiveCallback()
 : <a class="el" href="classaudio__tools_1_1_e_s_p_now_stream.html#a8a2ce66666bf4387e15a7c619946b601">ESPNowStream</a>
@@ -518,7 +515,7 @@ $(function() {
 , <a class="el" href="classaudio__tools_1_1_u_r_l_stream_buffered.html#aa746c1e18c63973923557421e7774c89">URLStreamBuffered</a>
 </li>
 <li>setStepSize()
-: <a class="el" href="classaudio__tools_1_1_resample_stream.html#a7694bdde8707e5a9f92c36c905be2e56">ResampleStream&lt; T &gt;</a>
+: <a class="el" href="classaudio__tools_1_1_resample_stream.html#a7694bdde8707e5a9f92c36c905be2e56">ResampleStream</a>
 </li>
 <li>setStream()
 : <a class="el" href="classaudio__tools_1_1_audio_player.html#aea658c6f4c17e5aa46acdc4b7bb85a67">AudioPlayer</a>
@@ -534,7 +531,7 @@ $(function() {
 : <a class="el" href="classaudio__tools_1_1_simple_chorus.html#a6965f12aaac8e5b11dee7146ce45eea5">SimpleChorus</a>
 </li>
 <li>setTarget()
-: <a class="el" href="classaudio__tools_1_1_volume_stream.html#a257c8a69cef8507552ff441df96aa770">VolumeStream</a>
+: <a class="el" href="classaudio__tools_1_1_volume_stream.html#a6fb55d483321d9d1efc898c720c0205a">VolumeStream</a>
 </li>
 <li>setTimeout()
 : <a class="el" href="classaudio__tools_1_1_audio_source.html#a23e18762a56c2865cfb8abb1f3361af8">AudioSource</a>
@@ -574,11 +571,17 @@ $(function() {
 <li>setupDelayEffectBase()
 : <a class="el" href="classaudio__tools_1_1_delay_effect_base.html#a7ccea2a522b973a56da7c2f0280f9edb">DelayEffectBase</a>
 </li>
+<li>setupLastSamples()
+: <a class="el" href="classaudio__tools_1_1_resample_stream.html#ae80c7db53037e16c4654f123c8f19a93">ResampleStream</a>
+</li>
 <li>setupMetaData()
 : <a class="el" href="classaudio__tools_1_1_meta_data_i_c_y.html#a5522c1d8b9d56e529bcfef31b49c2652">MetaDataICY</a>
 </li>
 <li>setupModulationBaseClass()
 : <a class="el" href="classaudio__tools_1_1_modulation_base_class.html#a7bdc015afac5f8ef02208dcb2c23f758">ModulationBaseClass</a>
+</li>
+<li>setupOutput()
+: <a class="el" href="classaudio__tools_1_1_transformation_reader.html#a49ead13a1391cddd44b4a85f63a01a67">TransformationReader&lt; T &gt;</a>
 </li>
 <li>setupPins()
 : <a class="el" href="classaudio__tools_1_1_audio_kit_stream_config.html#a31d554847ae8fdeaba2460e0395cb75f">AudioKitStreamConfig</a>
