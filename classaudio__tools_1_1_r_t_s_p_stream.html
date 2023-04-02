@@ -93,8 +93,13 @@ Inheritance diagram for RTSPStream:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a6a251b27441905377de85730bbc75440"><td class="memItemLeft" align="right" valign="top"><a id="a6a251b27441905377de85730bbc75440"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_r_t_s_p_stream.html#a6a251b27441905377de85730bbc75440">RTSPStream</a> (int buffer_size=1024)</td></tr>
+<tr class="memdesc:a6a251b27441905377de85730bbc75440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construcor using <a class="el" href="classaudio__tools_1_1_r_t_s_p_format_p_c_m.html" title="PCM format for RTSP https://en.wikipedia.org/wiki/RTP_payload_formats.">RTSPFormatPCM</a> and no encoder. <br /></td></tr>
+<tr class="separator:a6a251b27441905377de85730bbc75440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01366b9b7b48022877ad5d838a0638a2"><td class="memItemLeft" align="right" valign="top"><a id="a01366b9b7b48022877ad5d838a0638a2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RTSPStream</b> (<a class="el" href="classaudio__tools_1_1_r_t_s_p_format_audio_tools.html">RTSPFormatAudioTools</a> &amp;format, <a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> &amp;encoder, int buffer_size=1024 *2)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_r_t_s_p_stream.html#a01366b9b7b48022877ad5d838a0638a2">RTSPStream</a> (<a class="el" href="classaudio__tools_1_1_r_t_s_p_format_audio_tools.html">RTSPFormatAudioTools</a> &amp;format, <a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> &amp;encoder, int buffer_size=1024 *2)</td></tr>
+<tr class="memdesc:a01366b9b7b48022877ad5d838a0638a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
 <tr class="separator:a01366b9b7b48022877ad5d838a0638a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
@@ -149,11 +154,14 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a07fab440d87063e83df0bc30223964c5"><td class="memItemLeft" align="right" valign="top"><a id="a07fab440d87063e83df0bc30223964c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cfg</b></td></tr>
 <tr class="separator:a07fab440d87063e83df0bc30223964c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07e36013d752275bc56345499a8f856f"><td class="memItemLeft" align="right" valign="top"><a id="a07e36013d752275bc56345499a8f856f"></a>
+<a class="el" href="classaudio__tools_1_1_copy_encoder.html">CopyEncoder</a>&#160;</td><td class="memItemRight" valign="bottom"><b>copy_encoder</b></td></tr>
+<tr class="separator:a07e36013d752275bc56345499a8f856f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae013f435f6fd3484021d3f481a489d0d"><td class="memItemLeft" align="right" valign="top"><a id="ae013f435f6fd3484021d3f481a489d0d"></a>
-<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_encoder</b> = nullptr</td></tr>
+<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_encoder</b> = &amp;copy_encoder</td></tr>
 <tr class="separator:ae013f435f6fd3484021d3f481a489d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f6782c471c5723a777b04b0b0656154"><td class="memItemLeft" align="right" valign="top"><a id="a5f6782c471c5723a777b04b0b0656154"></a>
-<a class="el" href="classaudio__tools_1_1_r_t_s_p_format_audio_tools.html">RTSPFormatAudioTools</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_format</b> = nullptr</td></tr>
+<a class="el" href="classaudio__tools_1_1_r_t_s_p_format_audio_tools.html">RTSPFormatAudioTools</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_format</b> = &amp;pcm</td></tr>
 <tr class="separator:a5f6782c471c5723a777b04b0b0656154"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd5780364a69280da7ffb3f64f6c373c"><td class="memItemLeft" align="right" valign="top"><a id="abd5780364a69280da7ffb3f64f6c373c"></a>
 <a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_input</b> = &amp;buffer</td></tr>
@@ -161,6 +169,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ec7baeb1344810068c61c8a084db51"><td class="memItemLeft" align="right" valign="top"><a id="a60ec7baeb1344810068c61c8a084db51"></a>
+<a class="el" href="classaudio__tools_1_1_r_t_s_p_format_p_c_m.html">RTSPFormatPCM</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pcm</b></td></tr>
+<tr class="separator:a60ec7baeb1344810068c61c8a084db51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ef5c5efdc1ae03e3d74cecccf0834de"><td class="memItemLeft" align="right" valign="top"><a id="a6ef5c5efdc1ae03e3d74cecccf0834de"></a>
 <a class="el" href="classaudio__tools_1_1_r_t_s_p_source_from_audio_stream.html">RTSPSourceFromAudioStream</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rtps_source</b></td></tr>
 <tr class="separator:a6ef5c5efdc1ae03e3d74cecccf0834de"><td class="memSeparator" colspan="2">&#160;</td></tr>

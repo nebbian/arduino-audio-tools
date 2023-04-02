@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['queue_1503',['Queue',['../classaudio__tools_1_1_queue.html',1,'audio_tools']]],
-  ['queuelockfree_1504',['QueueLockFree',['../classaudio__tools_1_1_queue_lock_free.html',1,'audio_tools']]],
-  ['queuestream_1505',['QueueStream',['../classaudio__tools_1_1_queue_stream.html',1,'audio_tools']]],
-  ['queuestream_3c_20uint8_5ft_20_3e_1506',['QueueStream&lt; uint8_t &gt;',['../classaudio__tools_1_1_queue_stream.html',1,'audio_tools']]]
+  ['queue_1506',['Queue',['../classaudio__tools_1_1_queue.html',1,'audio_tools']]],
+  ['queuelockfree_1507',['QueueLockFree',['../classaudio__tools_1_1_queue_lock_free.html',1,'audio_tools']]],
+  ['queuestream_1508',['QueueStream',['../classaudio__tools_1_1_queue_stream.html',1,'audio_tools']]],
+  ['queuestream_3c_20uint8_5ft_20_3e_1509',['QueueStream&lt; uint8_t &gt;',['../classaudio__tools_1_1_queue_stream.html',1,'audio_tools']]]
 ];
