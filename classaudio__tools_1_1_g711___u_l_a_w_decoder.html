@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_g711___u_l_a_w_decoder-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -116,7 +117,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isResultPCM</
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg) override</td></tr>
 <tr class="separator:ae7ea43235bd3821c81da4f95c519bba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2374112a036086eaa3a56da332ca8ac4"><td class="memItemLeft" align="right" valign="top"><a id="a2374112a036086eaa3a56da332ca8ac4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_g7xx_decoder.html#a2374112a036086eaa3a56da332ca8ac4">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
+<tr class="memdesc:a2374112a036086eaa3a56da332ca8ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an object that is notified if the audio format is changing. <br /></td></tr>
 <tr class="separator:a2374112a036086eaa3a56da332ca8ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c50884a025e7c2049b71fe0b8d0045"><td class="memItemLeft" align="right" valign="top"><a id="a33c50884a025e7c2049b71fe0b8d0045"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;out_stream)</td></tr>
@@ -130,6 +132,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (
 <tr class="memitem:ac9df001cacfb1816fb8f2cf871450c4a"><td class="memItemLeft" align="right" valign="top"><a id="ac9df001cacfb1816fb8f2cf871450c4a"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *in_ptr, size_t in_size) override</td></tr>
 <tr class="separator:ac9df001cacfb1816fb8f2cf871450c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
+<tr class="separator:a2e475070d3df18395c90a10c9d38eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -154,6 +162,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>in_bits</b> = 0</td></
 <tr class="memitem:ac6c81729732bb5676338a4f651aac131"><td class="memItemLeft" align="right" valign="top"><a id="ac6c81729732bb5676338a4f651aac131"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>in_buffer</b> = 0</td></tr>
 <tr class="separator:ac6c81729732bb5676338a4f651aac131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c3648243dc862e994ca2acd6918a5db"><td class="memItemLeft" align="right" valign="top"><a id="a0c3648243dc862e994ca2acd6918a5db"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>input_pos</b> = 0</td></tr>
 <tr class="separator:a0c3648243dc862e994ca2acd6918a5db"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -510,17 +510,17 @@ $(function() {
 <div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160; </div>
 <div class="line"><a name="l00522"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_tf_lite_micro_speach_writer.html#aa0216b27084c7453b3587e43e3fdb3fc">  522</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_tf_lite_micro_speach_writer.html#aa0216b27084c7453b3587e43e3fdb3fc">write1</a>(<span class="keyword">const</span> int16_t sample) {</div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <span class="keywordflow">if</span> (cfg.channels == 1) {</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;      p_buffer-&gt;write(sample);</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;      p_buffer-&gt;<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a762c87ce3d749ba209ff05e6af210be5">write</a>(sample);</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;      <span class="keywordflow">if</span> (channel == 0) {</div>
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        last_value = sample;</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        channel = 1;</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;      } <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        <span class="comment">// calculate avg of 2 channels and convert it to int8_t</span></div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        p_buffer-&gt;write(((sample / 2) + (last_value / 2)));</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        p_buffer-&gt;<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a762c87ce3d749ba209ff05e6af210be5">write</a>(((sample / 2) + (last_value / 2)));</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;      channel = 0;</div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    }</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <span class="keywordflow">return</span> p_buffer-&gt;availableForWrite() &gt; 0;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <span class="keywordflow">return</span> p_buffer-&gt;<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a473a08fbb41a997860a55213bc367d44">availableForWrite</a>() &gt; 0;</div>
 <div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;  }</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160; </div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;  <span class="comment">// If we can avoid recalculating some slices, just move the existing</span></div>
@@ -543,7 +543,7 @@ $(function() {
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160; </div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    <span class="comment">// copy data from buffer to p_audio_samples</span></div>
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    <span class="keywordtype">int</span> audio_samples_size =</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        p_buffer-&gt;readArray(p_audio_samples, kMaxAudioSampleSize);</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        p_buffer-&gt;<a class="code" href="classaudio__tools_1_1_base_buffer.html#af64689a1afcd0edd6cd5a85bc43e323d">readArray</a>(p_audio_samples, kMaxAudioSampleSize);</div>
 <div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160; </div>
 <div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    <span class="comment">// check size</span></div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keywordflow">if</span> (audio_samples_size != kMaxAudioSampleSize) {</div>
@@ -552,7 +552,7 @@ $(function() {
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    }</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160; </div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    <span class="comment">// keep some data to be reprocessed - move by kStrideSampleSize</span></div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    p_buffer-&gt;writeArray(p_audio_samples + kStrideSampleSize, kKeepSampleSize);</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    p_buffer-&gt;<a class="code" href="classaudio__tools_1_1_base_buffer.html#abbf71ea4af74621fee6e0dfbed215245">writeArray</a>(p_audio_samples + kStrideSampleSize, kKeepSampleSize);</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160; </div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <span class="comment">//  the new slice data will always be stored at the end</span></div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    int8_t* new_slice_data =</div>
@@ -977,7 +977,11 @@ $(function() {
 <div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160; </div>
 <div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream.html">audio_tools::AudioStream</a></div><div class="ttdoc">Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:40</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_abbf71ea4af74621fee6e0dfbed215245"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#abbf71ea4af74621fee6e0dfbed215245">audio_tools::BaseBuffer::writeArray</a></div><div class="ttdeci">int writeArray(const T data[], int len)</div><div class="ttdoc">Fills the data from the buffer.</div><div class="ttdef"><b>Definition:</b> Buffers.h:51</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_af64689a1afcd0edd6cd5a85bc43e323d"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#af64689a1afcd0edd6cd5a85bc43e323d">audio_tools::BaseBuffer::readArray</a></div><div class="ttdeci">int readArray(T data[], int len)</div><div class="ttdoc">reads multiple values</div><div class="ttdef"><b>Definition:</b> Buffers.h:41</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_ring_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_ring_buffer.html">audio_tools::RingBuffer&lt; int16_t &gt;</a></div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_ring_buffer_html_a473a08fbb41a997860a55213bc367d44"><div class="ttname"><a href="classaudio__tools_1_1_ring_buffer.html#a473a08fbb41a997860a55213bc367d44">audio_tools::RingBuffer::availableForWrite</a></div><div class="ttdeci">virtual int availableForWrite()</div><div class="ttdoc">provides the number of entries that are available to write</div><div class="ttdef"><b>Definition:</b> Buffers.h:289</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_ring_buffer_html_a762c87ce3d749ba209ff05e6af210be5"><div class="ttname"><a href="classaudio__tools_1_1_ring_buffer.html#a762c87ce3d749ba209ff05e6af210be5">audio_tools::RingBuffer::write</a></div><div class="ttdeci">virtual bool write(T data)</div><div class="ttdoc">write add an entry to the buffer</div><div class="ttdef"><b>Definition:</b> Buffers.h:267</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_tf_lite_abstract_recognize_commands_html"><div class="ttname"><a href="classaudio__tools_1_1_tf_lite_abstract_recognize_commands.html">audio_tools::TfLiteAbstractRecognizeCommands</a></div><div class="ttdoc">Base class for implementing different primitive decoding models on top of the instantaneous results f...</div><div class="ttdef"><b>Definition:</b> TfLiteAudioStream.h:212</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_tf_lite_audio_error_reporter_html"><div class="ttname"><a href="classaudio__tools_1_1_tf_lite_audio_error_reporter.html">audio_tools::TfLiteAudioErrorReporter</a></div><div class="ttdoc">Error Reporter using the Audio Tools Logger.</div><div class="ttdef"><b>Definition:</b> TfLiteAudioStream.h:64</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_tf_lite_audio_stream_base_html"><div class="ttname"><a href="classaudio__tools_1_1_tf_lite_audio_stream_base.html">audio_tools::TfLiteAudioStreamBase</a></div><div class="ttdoc">Astract TfLiteAudioStream to provide access to TfLiteAudioStream for Reader and Writers.</div><div class="ttdef"><b>Definition:</b> TfLiteAudioStream.h:403</div></div>

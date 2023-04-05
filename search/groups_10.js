@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sbc_2428',['SBC',['../group__codec-sbc.html',1,'']]],
-  ['strings_2429',['Strings',['../group__string.html',1,'']]]
+  ['sbc_2439',['SBC',['../group__codec-sbc.html',1,'']]],
+  ['strings_2440',['Strings',['../group__string.html',1,'']]]
 ];

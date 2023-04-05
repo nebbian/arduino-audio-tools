@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_w_a_v_decoder-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -131,7 +132,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
 <tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01cdc98818a242f795f5f1a74dea50e3"><td class="memItemLeft" align="right" valign="top"><a id="a01cdc98818a242f795f5f1a74dea50e3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a01cdc98818a242f795f5f1a74dea50e3">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
+<tr class="memdesc:a01cdc98818a242f795f5f1a74dea50e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an object that is notified if the audio format is changing. <br /></td></tr>
 <tr class="separator:a01cdc98818a242f795f5f1a74dea50e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c50884a025e7c2049b71fe0b8d0045"><td class="memItemLeft" align="right" valign="top"><a id="a33c50884a025e7c2049b71fe0b8d0045"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;out_stream)</td></tr>
@@ -147,6 +149,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *in_ptr, size_t in_size)</td></tr>
 <tr class="separator:a1fc6997daf9355d8ea370fce2994e9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
+<tr class="separator:a2e475070d3df18395c90a10c9d38eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memItemLeft" align="right" valign="top"><a id="a03c996f9fcf0e10baeb3e700be0c409a"></a>
@@ -158,6 +166,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b></td></tr>
 <tr class="memitem:aae5e6bba484cf15221185bf1bcb4198c"><td class="memItemLeft" align="right" valign="top"><a id="aae5e6bba484cf15221185bf1bcb4198c"></a>
 <a class="el" href="classaudio__tools_1_1_w_a_v_header.html">WAVHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>header</b></td></tr>
 <tr class="separator:aae5e6bba484cf15221185bf1bcb4198c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08d2a3449f250840171ef25487990223"><td class="memItemLeft" align="right" valign="top"><a id="a08d2a3449f250840171ef25487990223"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFirst</b> = true</td></tr>
 <tr class="separator:a08d2a3449f250840171ef25487990223"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,6 +178,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> = true</t
 <tr class="memitem:ab1e77b1e9512ce8dc31ef853e0abc02c"><td class="memItemLeft" align="right" valign="top"><a id="ab1e77b1e9512ce8dc31ef853e0abc02c"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>out</b></td></tr>
 <tr class="separator:ab1e77b1e9512ce8dc31ef853e0abc02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
+<tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
+<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> =nullptr</td></tr>
+<tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="WAVDecoder - We parse the header data on the first record and send the sound data to the stream which...">WAVDecoder</a> - We parse the header data on the first record and send the sound data to the stream which was indicated in the constructor. Only WAV files with WAV_FORMAT_PCM are supported! </p>

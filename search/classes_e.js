@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['oggcontainerdecoder_1479',['OggContainerDecoder',['../classaudio__tools_1_1_ogg_container_decoder.html',1,'audio_tools']]],
-  ['oggcontainerencoder_1480',['OggContainerEncoder',['../classaudio__tools_1_1_ogg_container_encoder.html',1,'audio_tools']]],
-  ['opusaudiodecoder_1481',['OpusAudioDecoder',['../classaudio__tools_1_1_opus_audio_decoder.html',1,'audio_tools']]],
-  ['opusaudioencoder_1482',['OpusAudioEncoder',['../classaudio__tools_1_1_opus_audio_encoder.html',1,'audio_tools']]],
-  ['opusencodersettings_1483',['OpusEncoderSettings',['../structaudio__tools_1_1_opus_encoder_settings.html',1,'audio_tools']]],
-  ['opusoggdecoder_1484',['OpusOggDecoder',['../classaudio__tools_1_1_opus_ogg_decoder.html',1,'audio_tools']]],
-  ['opusoggencoder_1485',['OpusOggEncoder',['../classaudio__tools_1_1_opus_ogg_encoder.html',1,'audio_tools']]],
-  ['opussettings_1486',['OpusSettings',['../structaudio__tools_1_1_opus_settings.html',1,'audio_tools']]],
-  ['oscsincos_1487',['OscSinCos',['../classffft_1_1_osc_sin_cos.html',1,'ffft']]],
-  ['outputmixer_1488',['OutputMixer',['../classaudio__tools_1_1_output_mixer.html',1,'audio_tools']]]
+  ['oggcontainerdecoder_1486',['OggContainerDecoder',['../classaudio__tools_1_1_ogg_container_decoder.html',1,'audio_tools']]],
+  ['oggcontainerencoder_1487',['OggContainerEncoder',['../classaudio__tools_1_1_ogg_container_encoder.html',1,'audio_tools']]],
+  ['opusaudiodecoder_1488',['OpusAudioDecoder',['../classaudio__tools_1_1_opus_audio_decoder.html',1,'audio_tools']]],
+  ['opusaudioencoder_1489',['OpusAudioEncoder',['../classaudio__tools_1_1_opus_audio_encoder.html',1,'audio_tools']]],
+  ['opusencodersettings_1490',['OpusEncoderSettings',['../structaudio__tools_1_1_opus_encoder_settings.html',1,'audio_tools']]],
+  ['opusoggdecoder_1491',['OpusOggDecoder',['../classaudio__tools_1_1_opus_ogg_decoder.html',1,'audio_tools']]],
+  ['opusoggencoder_1492',['OpusOggEncoder',['../classaudio__tools_1_1_opus_ogg_encoder.html',1,'audio_tools']]],
+  ['opussettings_1493',['OpusSettings',['../structaudio__tools_1_1_opus_settings.html',1,'audio_tools']]],
+  ['oscsincos_1494',['OscSinCos',['../classffft_1_1_osc_sin_cos.html',1,'ffft']]],
+  ['outputmixer_1495',['OutputMixer',['../classaudio__tools_1_1_output_mixer.html',1,'audio_tools']]]
 ];

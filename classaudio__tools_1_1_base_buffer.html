@@ -103,47 +103,62 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BaseBuffer</b> (<a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a> const &amp;)=delete</td></tr>
 <tr class="separator:a6ef49f5e8c5afeb0482a307d645c364e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1630a475441016638ee45edc5c3074f5"><td class="memItemLeft" align="right" valign="top"><a id="a1630a475441016638ee45edc5c3074f5"></a>
-virtual T *&#160;</td><td class="memItemRight" valign="bottom"><b>address</b> ()=0</td></tr>
+virtual T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#a1630a475441016638ee45edc5c3074f5">address</a> ()=0</td></tr>
+<tr class="memdesc:a1630a475441016638ee45edc5c3074f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the address of the start of the physical read buffer <br /></td></tr>
 <tr class="separator:a1630a475441016638ee45edc5c3074f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebd60457902debb30b07971a16f24ebd"><td class="memItemLeft" align="right" valign="top"><a id="aebd60457902debb30b07971a16f24ebd"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> ()=0</td></tr>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#aebd60457902debb30b07971a16f24ebd">available</a> ()=0</td></tr>
+<tr class="memdesc:aebd60457902debb30b07971a16f24ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the number of entries that are available to read <br /></td></tr>
 <tr class="separator:aebd60457902debb30b07971a16f24ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9953a7c3a981eb3a83adb4f9ecfb9ac5"><td class="memItemLeft" align="right" valign="top"><a id="a9953a7c3a981eb3a83adb4f9ecfb9ac5"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> ()=0</td></tr>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#a9953a7c3a981eb3a83adb4f9ecfb9ac5">availableForWrite</a> ()=0</td></tr>
+<tr class="memdesc:a9953a7c3a981eb3a83adb4f9ecfb9ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the number of entries that are available to write <br /></td></tr>
 <tr class="separator:a9953a7c3a981eb3a83adb4f9ecfb9ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top"><a id="ac8bb3912a3ce86b15842e79d0b421204"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">same as reset <br /></td></tr>
+<tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af337ffd75e4f019ce15302c60715d84b"><td class="memItemLeft" align="right" valign="top"><a id="af337ffd75e4f019ce15302c60715d84b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEmpty</b> ()</td></tr>
 <tr class="separator:af337ffd75e4f019ce15302c60715d84b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ef136d1e2a64e1343ab980e85c225f7"><td class="memItemLeft" align="right" valign="top"><a id="a2ef136d1e2a64e1343ab980e85c225f7"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFull</b> ()=0</td></tr>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#a2ef136d1e2a64e1343ab980e85c225f7">isFull</a> ()=0</td></tr>
+<tr class="memdesc:a2ef136d1e2a64e1343ab980e85c225f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if the buffer is full <br /></td></tr>
 <tr class="separator:a2ef136d1e2a64e1343ab980e85c225f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3884fd7d87bcf7fdacf8f85be1533682"><td class="memItemLeft" align="right" valign="top"><a id="a3884fd7d87bcf7fdacf8f85be1533682"></a>
 <a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a> const &amp;)=delete</td></tr>
 <tr class="separator:a3884fd7d87bcf7fdacf8f85be1533682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1e711e0b8eb67ffb4f17fb1b80bdc92"><td class="memItemLeft" align="right" valign="top"><a id="ab1e711e0b8eb67ffb4f17fb1b80bdc92"></a>
-virtual T&#160;</td><td class="memItemRight" valign="bottom"><b>peek</b> ()=0</td></tr>
+virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#ab1e711e0b8eb67ffb4f17fb1b80bdc92">peek</a> ()=0</td></tr>
+<tr class="memdesc:ab1e711e0b8eb67ffb4f17fb1b80bdc92"><td class="mdescLeft">&#160;</td><td class="mdescRight">peeks the actual entry from the buffer <br /></td></tr>
 <tr class="separator:ab1e711e0b8eb67ffb4f17fb1b80bdc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b3c05b1c2e4d61cad5f02afba4691cc"><td class="memItemLeft" align="right" valign="top"><a id="a7b3c05b1c2e4d61cad5f02afba4691cc"></a>
-virtual T&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> ()=0</td></tr>
+virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#a7b3c05b1c2e4d61cad5f02afba4691cc">read</a> ()=0</td></tr>
+<tr class="memdesc:a7b3c05b1c2e4d61cad5f02afba4691cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads a single value <br /></td></tr>
 <tr class="separator:a7b3c05b1c2e4d61cad5f02afba4691cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af64689a1afcd0edd6cd5a85bc43e323d"><td class="memItemLeft" align="right" valign="top"><a id="af64689a1afcd0edd6cd5a85bc43e323d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>readArray</b> (T data[], int len)</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#af64689a1afcd0edd6cd5a85bc43e323d">readArray</a> (T data[], int len)</td></tr>
+<tr class="memdesc:af64689a1afcd0edd6cd5a85bc43e323d"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads multiple values <br /></td></tr>
 <tr class="separator:af64689a1afcd0edd6cd5a85bc43e323d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a1bfa2c5cba939eed47428794683f22"><td class="memItemLeft" align="right" valign="top"><a id="a9a1bfa2c5cba939eed47428794683f22"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>readFrames</b> (T data[][2], int len)</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#a9a1bfa2c5cba939eed47428794683f22">readFrames</a> (T data[][2], int len)</td></tr>
+<tr class="memdesc:a9a1bfa2c5cba939eed47428794683f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads multiple values for array of 2 dimensional frames <br /></td></tr>
 <tr class="separator:a9a1bfa2c5cba939eed47428794683f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d6575aa6f930127c4b12be2a0712e23"><td class="memTemplParams" colspan="2"><a id="a6d6575aa6f930127c4b12be2a0712e23"></a>
 template&lt;int rows, int channels&gt; </td></tr>
 <tr class="memitem:a6d6575aa6f930127c4b12be2a0712e23"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>readFrames</b> (T(&amp;data)[rows][channels])</td></tr>
 <tr class="separator:a6d6575aa6f930127c4b12be2a0712e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20dcbdfbd0ec77afc802522bb7e379c1"><td class="memItemLeft" align="right" valign="top"><a id="a20dcbdfbd0ec77afc802522bb7e379c1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()=0</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#a20dcbdfbd0ec77afc802522bb7e379c1">reset</a> ()=0</td></tr>
+<tr class="memdesc:a20dcbdfbd0ec77afc802522bb7e379c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">clears the buffer <br /></td></tr>
 <tr class="separator:a20dcbdfbd0ec77afc802522bb7e379c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add0fdb7ecaaeadb3a231119d7d602311"><td class="memItemLeft" align="right" valign="top"><a id="add0fdb7ecaaeadb3a231119d7d602311"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (T data)=0</td></tr>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#add0fdb7ecaaeadb3a231119d7d602311">write</a> (T data)=0</td></tr>
+<tr class="memdesc:add0fdb7ecaaeadb3a231119d7d602311"><td class="mdescLeft">&#160;</td><td class="mdescRight">write add an entry to the buffer <br /></td></tr>
 <tr class="separator:add0fdb7ecaaeadb3a231119d7d602311"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbf71ea4af74621fee6e0dfbed215245"><td class="memItemLeft" align="right" valign="top"><a id="abbf71ea4af74621fee6e0dfbed215245"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>writeArray</b> (const T data[], int len)</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#abbf71ea4af74621fee6e0dfbed215245">writeArray</a> (const T data[], int len)</td></tr>
+<tr class="memdesc:abbf71ea4af74621fee6e0dfbed215245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the data from the buffer. <br /></td></tr>
 <tr class="separator:abbf71ea4af74621fee6e0dfbed215245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>

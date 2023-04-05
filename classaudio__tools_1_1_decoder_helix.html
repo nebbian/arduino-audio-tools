@@ -147,9 +147,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_decoder_helix.html#a769e48866fb0f8e11018bab68e02c08f">setupDecoder</a> (const byte *start)</td></tr>
 <tr class="memdesc:a769e48866fb0f8e11018bab68e02c08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the decoder based on the audio format. <br /></td></tr>
 <tr class="separator:a769e48866fb0f8e11018bab68e02c08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
+<tr class="separator:a2e475070d3df18395c90a10c9d38eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cb1e421bf7cfbb8fda9abb38a1ef3d1"><td class="memItemLeft" align="right" valign="top"><a id="a9cb1e421bf7cfbb8fda9abb38a1ef3d1"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>noInfo</b></td></tr>
 <tr class="separator:a9cb1e421bf7cfbb8fda9abb38a1ef3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,9 +165,15 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a8e84ad06b911d3e2a7e6ddac007d5ea6"><td class="memItemLeft" align="right" valign="top"><a id="a8e84ad06b911d3e2a7e6ddac007d5ea6"></a>
 <a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_decoder</b> = nullptr</td></tr>
 <tr class="separator:a8e84ad06b911d3e2a7e6ddac007d5ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
+<tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b261a6d888e46c18ffdfefc3e436859"><td class="memItemLeft" align="right" valign="top"><a id="a5b261a6d888e46c18ffdfefc3e436859"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_out_stream</b> = nullptr</td></tr>
 <tr class="separator:a5b261a6d888e46c18ffdfefc3e436859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
+<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> =nullptr</td></tr>
+<tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MP3 and AAC Decoder using libhelix: <a href="https://github.com/pschatzmann/arduino-libhelix">https://github.com/pschatzmann/arduino-libhelix</a>. We dynamically create a MP3 or AAC decoder dependent on the provided audio format. </p>
@@ -193,7 +205,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Defines the callback object to which the Audio information change is provided </p>
 
-<p>Implements <a class="el" href="classaudio__tools_1_1_audio_info_source.html">AudioInfoSource</a>.</p>
+<p>Reimplemented from <a class="el" href="classaudio__tools_1_1_audio_decoder.html#ae1c7e318899395cbcfc182dd304574b4">AudioDecoder</a>.</p>
 
 </div>
 </div>

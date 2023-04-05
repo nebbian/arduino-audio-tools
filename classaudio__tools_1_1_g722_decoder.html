@@ -115,7 +115,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isResultPCM</
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg)</td></tr>
 <tr class="separator:ac16dce708c8231391f220f847b8d05df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb8dfe7837928747737ad15bccdbd004"><td class="memItemLeft" align="right" valign="top"><a id="abb8dfe7837928747737ad15bccdbd004"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_g722_decoder.html#abb8dfe7837928747737ad15bccdbd004">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
+<tr class="memdesc:abb8dfe7837928747737ad15bccdbd004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an object that is notified if the audio format is changing. <br /></td></tr>
 <tr class="separator:abb8dfe7837928747737ad15bccdbd004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfff0a5c7d4142ab77da6f8ca276ecf4"><td class="memItemLeft" align="right" valign="top"><a id="acfff0a5c7d4142ab77da6f8ca276ecf4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_g722_decoder.html#acfff0a5c7d4142ab77da6f8ca276ecf4">setOptions</a> (int options)</td></tr>
@@ -140,6 +141,9 @@ Protected Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_g722_decoder.html#aac30d22c864c6347a8ae3710e9247517">processByte</a> (uint8_t byte)</td></tr>
 <tr class="memdesc:aac30d22c864c6347a8ae3710e9247517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build decoding buffer and decode when frame is full. <br /></td></tr>
 <tr class="separator:aac30d22c864c6347a8ae3710e9247517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
+<tr class="separator:a2e475070d3df18395c90a10c9d38eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -149,6 +153,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a9b400fa58d50228e4b192e9d36f320d5"><td class="memItemLeft" align="right" valign="top"><a id="a9b400fa58d50228e4b192e9d36f320d5"></a>
 G722_DEC_CTX *&#160;</td><td class="memItemRight" valign="bottom"><b>g722_dctx</b> =nullptr</td></tr>
 <tr class="separator:a9b400fa58d50228e4b192e9d36f320d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfb16e7a13d6ef570abb92ecdb760705"><td class="memItemLeft" align="right" valign="top"><a id="adfb16e7a13d6ef570abb92ecdb760705"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>input_buffer</b></td></tr>
 <tr class="separator:adfb16e7a13d6ef570abb92ecdb760705"><td class="memSeparator" colspan="2">&#160;</td></tr>

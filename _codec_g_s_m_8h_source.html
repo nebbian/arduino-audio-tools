@@ -113,7 +113,7 @@ $(function() {
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    is_active = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> setNotifyAudioChange(<a class="code" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_g_s_m_decoder.html#abb8dfe7837928747737ad15bccdbd004">   66</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_g_s_m_decoder.html#abb8dfe7837928747737ad15bccdbd004">setNotifyAudioChange</a>(<a class="code" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    p_notify = &amp;bi;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
@@ -137,13 +137,13 @@ $(function() {
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *p_print = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  Print *p_print = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  gsm v_gsm;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *p_notify = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  AudioInfo cfg;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  AudioInfoDependent *p_notify = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">bool</span> is_active = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;uint8_t&gt;</a> input_buffer;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;uint8_t&gt;</a> result_buffer;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  Vector&lt;uint8_t&gt; input_buffer;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  Vector&lt;uint8_t&gt; result_buffer;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">int</span> input_pos = 0;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_g_s_m_decoder.html#aac30d22c864c6347a8ae3710e9247517">  100</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_g_s_m_decoder.html#aac30d22c864c6347a8ae3710e9247517">processByte</a>(uint8_t <span class="keywordtype">byte</span>) {</div>
@@ -272,10 +272,11 @@ $(function() {
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:16</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_encoder.html">audio_tools::AudioEncoder</a></div><div class="ttdoc">Encoding of PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:47</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_encoder.html">audio_tools::AudioEncoder</a></div><div class="ttdoc">Encoding of PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:67</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_dependent_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_dependent.html">audio_tools::AudioInfoDependent</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:97</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_g_s_m_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_g_s_m_decoder.html">audio_tools::GSMDecoder</a></div><div class="ttdoc">Decoder for GSM. Depends on https://github.com/pschatzmann/arduino-libgsm. Inspired by gsmdec....</div><div class="ttdef"><b>Definition:</b> CodecGSM.h:30</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_g_s_m_decoder_html_aac30d22c864c6347a8ae3710e9247517"><div class="ttname"><a href="classaudio__tools_1_1_g_s_m_decoder.html#aac30d22c864c6347a8ae3710e9247517">audio_tools::GSMDecoder::processByte</a></div><div class="ttdeci">void processByte(uint8_t byte)</div><div class="ttdoc">Build decoding buffer and decode when frame is full.</div><div class="ttdef"><b>Definition:</b> CodecGSM.h:100</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_g_s_m_decoder_html_abb8dfe7837928747737ad15bccdbd004"><div class="ttname"><a href="classaudio__tools_1_1_g_s_m_decoder.html#abb8dfe7837928747737ad15bccdbd004">audio_tools::GSMDecoder::setNotifyAudioChange</a></div><div class="ttdeci">virtual void setNotifyAudioChange(AudioInfoDependent &amp;bi)</div><div class="ttdoc">Registers an object that is notified if the audio format is changing.</div><div class="ttdef"><b>Definition:</b> CodecGSM.h:66</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_g_s_m_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_g_s_m_encoder.html">audio_tools::GSMEncoder</a></div><div class="ttdoc">Encoder for GSM - Depends on https://github.com/pschatzmann/arduino-libgsm. Inspired by gsmenc....</div><div class="ttdef"><b>Definition:</b> CodecGSM.h:130</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:51</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html"><div class="ttname"><a href="classaudio__tools_1_1_vector.html">audio_tools::Vector&lt; uint8_t &gt;</a></div></div>
