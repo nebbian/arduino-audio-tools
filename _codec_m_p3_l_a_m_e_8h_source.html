@@ -76,7 +76,7 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceaudio__tools.html">audio_tools</a> {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_audio_info_l_a_m_e.html">   20</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structaudio__tools_1_1_audio_info_l_a_m_e.html">AudioInfoLAME</a> :  <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>  {</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_audio_info_l_a_m_e.html">   20</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structaudio__tools_1_1_audio_info_l_a_m_e.html">AudioInfoLAME</a> : <span class="keyword">public</span> liblame::AudioInfo  {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info_l_a_m_e.html">AudioInfoLAME</a> () {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        sample_rate = 44100;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        channels = 2;</div>
@@ -201,7 +201,7 @@ $(function() {
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">if</span> (p_print!=<span class="keyword">nullptr</span>){</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <a class="code" href="classaudio__tools_1_1_m_p3_encoder_l_a_m_e.html#ac8bad9f22f28c75edd3beec36ed35319">setOutputStream</a>(*p_print);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            }</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            liblame::AudioInfo tmp;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            AudioInfoLAME tmp;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            tmp.channels = info.channels;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            tmp.sample_rate = info.sample_rate;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            tmp.bits_per_sample = info.bits_per_sample;</div>
