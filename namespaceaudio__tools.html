@@ -549,6 +549,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1float16.html">float16</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores float values with 2 bytes.  <a href="classaudio__tools_1_1float16.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1float32.html">float32</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores float values as uint32_t so that we can use memory allocated with MALLOC_CAP_32BIT.  <a href="classaudio__tools_1_1float32.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_format_converter_stream.html">FormatConverterStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converter which converts bits_per_sample, channels and the sample_rate. The conversion is supported both on the input and output side.  <a href="classaudio__tools_1_1_format_converter_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1537,39 +1540,75 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="memitem:abe34e0e8f138e800abdd86473231520d"><td class="memItemLeft" align="right" valign="top"><a id="abe34e0e8f138e800abdd86473231520d"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (float one, <a class="el" href="classaudio__tools_1_1float16.html">float16</a> two)</td></tr>
 <tr class="separator:abe34e0e8f138e800abdd86473231520d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b75bf045debd3a7134e16c0d807a6b4"><td class="memItemLeft" align="right" valign="top"><a id="a4b75bf045debd3a7134e16c0d807a6b4"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (float one, <a class="el" href="classaudio__tools_1_1float32.html">float32</a> two)</td></tr>
+<tr class="separator:a4b75bf045debd3a7134e16c0d807a6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4625f8229598933a50c7e8bcc16637e6"><td class="memItemLeft" align="right" valign="top"><a id="a4625f8229598933a50c7e8bcc16637e6"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (<a class="el" href="classaudio__tools_1_1float16.html">float16</a> one, float two)</td></tr>
 <tr class="separator:a4625f8229598933a50c7e8bcc16637e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a047825675e6483edcd73f617dd43be00"><td class="memItemLeft" align="right" valign="top"><a id="a047825675e6483edcd73f617dd43be00"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (<a class="el" href="classaudio__tools_1_1float16.html">float16</a> one, <a class="el" href="classaudio__tools_1_1float16.html">float16</a> two)</td></tr>
 <tr class="separator:a047825675e6483edcd73f617dd43be00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae38a833e757cb3be969274187ec1f3ef"><td class="memItemLeft" align="right" valign="top"><a id="ae38a833e757cb3be969274187ec1f3ef"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (<a class="el" href="classaudio__tools_1_1float32.html">float32</a> one, float two)</td></tr>
+<tr class="separator:ae38a833e757cb3be969274187ec1f3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae3423de305aacec250f06532ed79744"><td class="memItemLeft" align="right" valign="top"><a id="aae3423de305aacec250f06532ed79744"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (<a class="el" href="classaudio__tools_1_1float32.html">float32</a> one, <a class="el" href="classaudio__tools_1_1float32.html">float32</a> two)</td></tr>
+<tr class="separator:aae3423de305aacec250f06532ed79744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e15c4bd199e6aadc1d28da6b29c09f9"><td class="memItemLeft" align="right" valign="top"><a id="a5e15c4bd199e6aadc1d28da6b29c09f9"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (float one, <a class="el" href="classaudio__tools_1_1float16.html">float16</a> two)</td></tr>
 <tr class="separator:a5e15c4bd199e6aadc1d28da6b29c09f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ccc8767cf0916185446200659af0253"><td class="memItemLeft" align="right" valign="top"><a id="a8ccc8767cf0916185446200659af0253"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (float one, <a class="el" href="classaudio__tools_1_1float32.html">float32</a> two)</td></tr>
+<tr class="separator:a8ccc8767cf0916185446200659af0253"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a348c82b477fe6522a62bf17ace03dae4"><td class="memItemLeft" align="right" valign="top"><a id="a348c82b477fe6522a62bf17ace03dae4"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (<a class="el" href="classaudio__tools_1_1float16.html">float16</a> one, float two)</td></tr>
 <tr class="separator:a348c82b477fe6522a62bf17ace03dae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abac3954e441629aa8697e343f9184091"><td class="memItemLeft" align="right" valign="top"><a id="abac3954e441629aa8697e343f9184091"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (<a class="el" href="classaudio__tools_1_1float16.html">float16</a> one, <a class="el" href="classaudio__tools_1_1float16.html">float16</a> two)</td></tr>
 <tr class="separator:abac3954e441629aa8697e343f9184091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c702281460db99c60f548cadb1106be"><td class="memItemLeft" align="right" valign="top"><a id="a4c702281460db99c60f548cadb1106be"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (<a class="el" href="classaudio__tools_1_1float32.html">float32</a> one, float two)</td></tr>
+<tr class="separator:a4c702281460db99c60f548cadb1106be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f8210151acc5b817f0b6f9ca364c165"><td class="memItemLeft" align="right" valign="top"><a id="a6f8210151acc5b817f0b6f9ca364c165"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (<a class="el" href="classaudio__tools_1_1float32.html">float32</a> one, <a class="el" href="classaudio__tools_1_1float32.html">float32</a> two)</td></tr>
+<tr class="separator:a6f8210151acc5b817f0b6f9ca364c165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7e24adc9b9be1d38367834d3365755f"><td class="memItemLeft" align="right" valign="top"><a id="aa7e24adc9b9be1d38367834d3365755f"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (float one, <a class="el" href="classaudio__tools_1_1float16.html">float16</a> two)</td></tr>
 <tr class="separator:aa7e24adc9b9be1d38367834d3365755f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f6d4fad6c7602178332219d9db3332"><td class="memItemLeft" align="right" valign="top"><a id="af5f6d4fad6c7602178332219d9db3332"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (float one, <a class="el" href="classaudio__tools_1_1float32.html">float32</a> two)</td></tr>
+<tr class="separator:af5f6d4fad6c7602178332219d9db3332"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c24387eeb95b4f8ba4e79317b34bdcc"><td class="memItemLeft" align="right" valign="top"><a id="a8c24387eeb95b4f8ba4e79317b34bdcc"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (<a class="el" href="classaudio__tools_1_1float16.html">float16</a> one, float two)</td></tr>
 <tr class="separator:a8c24387eeb95b4f8ba4e79317b34bdcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55735688359093d6d984c874d2bf10e9"><td class="memItemLeft" align="right" valign="top"><a id="a55735688359093d6d984c874d2bf10e9"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (<a class="el" href="classaudio__tools_1_1float16.html">float16</a> one, <a class="el" href="classaudio__tools_1_1float16.html">float16</a> two)</td></tr>
 <tr class="separator:a55735688359093d6d984c874d2bf10e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30166a9b44f6fc1882b08cee87683c28"><td class="memItemLeft" align="right" valign="top"><a id="a30166a9b44f6fc1882b08cee87683c28"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (<a class="el" href="classaudio__tools_1_1float32.html">float32</a> one, float two)</td></tr>
+<tr class="separator:a30166a9b44f6fc1882b08cee87683c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a206c7de84bf88e4643a5f7eafd55d78e"><td class="memItemLeft" align="right" valign="top"><a id="a206c7de84bf88e4643a5f7eafd55d78e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (<a class="el" href="classaudio__tools_1_1float32.html">float32</a> one, <a class="el" href="classaudio__tools_1_1float32.html">float32</a> two)</td></tr>
+<tr class="separator:a206c7de84bf88e4643a5f7eafd55d78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c09b272ec53f1ad9c69f9bd285108c0"><td class="memItemLeft" align="right" valign="top"><a id="a4c09b272ec53f1ad9c69f9bd285108c0"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (float one, <a class="el" href="classaudio__tools_1_1float16.html">float16</a> two)</td></tr>
 <tr class="separator:a4c09b272ec53f1ad9c69f9bd285108c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a8f92dae11a76d64bc21b2437f1c3a0"><td class="memItemLeft" align="right" valign="top"><a id="a5a8f92dae11a76d64bc21b2437f1c3a0"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (float one, <a class="el" href="classaudio__tools_1_1float32.html">float32</a> two)</td></tr>
+<tr class="separator:a5a8f92dae11a76d64bc21b2437f1c3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1ea095896e1428752cac04c81e86055"><td class="memItemLeft" align="right" valign="top"><a id="af1ea095896e1428752cac04c81e86055"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (<a class="el" href="classaudio__tools_1_1float16.html">float16</a> one, float two)</td></tr>
 <tr class="separator:af1ea095896e1428752cac04c81e86055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2659dd28d60e80413b5b37be5c049caf"><td class="memItemLeft" align="right" valign="top"><a id="a2659dd28d60e80413b5b37be5c049caf"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (<a class="el" href="classaudio__tools_1_1float16.html">float16</a> one, <a class="el" href="classaudio__tools_1_1float16.html">float16</a> two)</td></tr>
 <tr class="separator:a2659dd28d60e80413b5b37be5c049caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f147157068b66454c0a7e894c60346c"><td class="memItemLeft" align="right" valign="top"><a id="a4f147157068b66454c0a7e894c60346c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (<a class="el" href="classaudio__tools_1_1float32.html">float32</a> one, float two)</td></tr>
+<tr class="separator:a4f147157068b66454c0a7e894c60346c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff02e39b3e89e48f7abb7e2322acdfd0"><td class="memItemLeft" align="right" valign="top"><a id="aff02e39b3e89e48f7abb7e2322acdfd0"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (<a class="el" href="classaudio__tools_1_1float32.html">float32</a> one, <a class="el" href="classaudio__tools_1_1float32.html">float32</a> two)</td></tr>
+<tr class="separator:aff02e39b3e89e48f7abb7e2322acdfd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ce58b1cf7c8f2758bd2f7ac29d8bd5d"><td class="memTemplParams" colspan="2"><a id="a4ce58b1cf7c8f2758bd2f7ac29d8bd5d"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4ce58b1cf7c8f2758bd2f7ac29d8bd5d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a4ce58b1cf7c8f2758bd2f7ac29d8bd5d">readSample</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *p_stream)</td></tr>

@@ -32,7 +32,8 @@ var searchData=
   ['flacencoder_1367',['FLACEncoder',['../classaudio__tools_1_1_f_l_a_c_encoder.html',1,'audio_tools']]],
   ['flattop_1368',['FlatTop',['../classaudio__tools_1_1_flat_top.html',1,'audio_tools']]],
   ['float16_1369',['float16',['../classaudio__tools_1_1float16.html',1,'audio_tools']]],
-  ['formatconverterstream_1370',['FormatConverterStream',['../classaudio__tools_1_1_format_converter_stream.html',1,'audio_tools']]],
-  ['fs_1371',['FS',['../classaudio__tools_1_1_f_s.html',1,'audio_tools']]],
-  ['fuzz_1372',['Fuzz',['../classaudio__tools_1_1_fuzz.html',1,'audio_tools']]]
+  ['float32_1370',['float32',['../classaudio__tools_1_1float32.html',1,'audio_tools']]],
+  ['formatconverterstream_1371',['FormatConverterStream',['../classaudio__tools_1_1_format_converter_stream.html',1,'audio_tools']]],
+  ['fs_1372',['FS',['../classaudio__tools_1_1_f_s.html',1,'audio_tools']]],
+  ['fuzz_1373',['Fuzz',['../classaudio__tools_1_1_fuzz.html',1,'audio_tools']]]
 ];
