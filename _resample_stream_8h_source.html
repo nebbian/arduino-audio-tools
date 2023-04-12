@@ -95,7 +95,7 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">size_t</span> readBytes(uint8_t *data, <span class="keywordtype">size_t</span> byteCount) {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    LOGD(<span class="stringliteral">&quot;TransformationReader::readBytes: %d&quot;</span>, byteCount);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    LOGD(<span class="stringliteral">&quot;TransformationReader::readBytes: %d&quot;</span>, (<span class="keywordtype">int</span>)byteCount);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (!active) {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      LOGE(<span class="stringliteral">&quot;inactive&quot;</span>);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordflow">return</span> 0;</div>
@@ -130,7 +130,7 @@ $(function() {
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">int</span> availableForWrite()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> max_len; }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> uint8_t *data, <span class="keywordtype">size_t</span> byteCount)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      LOGD(<span class="stringliteral">&quot;AdapterPrintToArray::write: %d (%d)&quot;</span>, byteCount, pos);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      LOGD(<span class="stringliteral">&quot;AdapterPrintToArray::write: %d (%d)&quot;</span>, (<span class="keywordtype">int</span>) byteCount, (<span class="keywordtype">int</span>) pos);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">if</span> (pos + byteCount &gt; max_len) <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      memcpy(p_data + pos, data, byteCount);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> *getStream() { <span class="keywordflow">return</span> p_stream; }</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordtype">size_t</span> readBytes(uint8_t *data, <span class="keywordtype">size_t</span> size)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    LOGD(<span class="stringliteral">&quot;ReformatBaseStream::readBytes: %d&quot;</span>, size);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    LOGD(<span class="stringliteral">&quot;ReformatBaseStream::readBytes: %d&quot;</span>, (<span class="keywordtype">int</span>)size);</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">return</span> reader.readBytes(data, size);</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  }</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
@@ -298,7 +298,7 @@ $(function() {
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="comment">// int availableForWrite() override { return p_print-&gt;availableForWrite(); }</span></div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> uint8_t *buffer, <span class="keywordtype">size_t</span> bytes)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    LOGD(<span class="stringliteral">&quot;ResampleStream::write: %d&quot;</span>, bytes);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    LOGD(<span class="stringliteral">&quot;ResampleStream::write: %d&quot;</span>, (<span class="keywordtype">int</span>)bytes);</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">size_t</span> written;</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">switch</span> (info.bits_per_sample) {</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      <span class="keywordflow">case</span> 16:</div>

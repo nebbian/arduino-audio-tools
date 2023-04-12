@@ -1354,11 +1354,11 @@ $(function() {
 <div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;      <span class="keywordflow">return</span> begin();</div>
 <div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160;    }</div>
 <div class="line"><a name="l01457"></a><span class="lineno"> 1457</span>&#160; </div>
-<div class="line"><a name="l01458"></a><span class="lineno"> 1458</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> begin() {</div>
+<div class="line"><a name="l01458"></a><span class="lineno"> 1458</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> begin()<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l01459"></a><span class="lineno"> 1459</span>&#160;      active = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l01460"></a><span class="lineno"> 1460</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;    }</div>
-<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;    <span class="keywordtype">void</span> end() { active = <span class="keyword">false</span>;}</div>
+<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;    <span class="keywordtype">void</span> end()<span class="keyword"> override </span>{ active = <span class="keyword">false</span>;}</div>
 <div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160; </div>
 <div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;    <span class="keywordtype">size_t</span> readBytes(uint8_t* data, <span class="keywordtype">size_t</span> len)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;      <span class="keywordflow">if</span> (!active) <span class="keywordflow">return</span> 0;</div>
