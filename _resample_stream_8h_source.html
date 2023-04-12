@@ -383,7 +383,7 @@ $(function() {
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    T val1 = lookup&lt;T&gt;(data, frame_idx1, channel);</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordtype">float</span> result = <a class="code" href="namespaceaudio__tools.html#a2320e2f14f2ac363a4eb3fafd8c5afa7">mapFloat</a>(frame_idx, frame_idx1, frame_idx0, val0, val1);</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">return</span> round(result);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)round(result);</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  }</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  <span class="comment">// lookup value for indicated frame &amp; channel: index starts with -1;</span></div>
