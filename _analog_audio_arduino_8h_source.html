@@ -114,7 +114,7 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">size_t</span> readBytes(uint8_t *values, <span class="keywordtype">size_t</span> len) {</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (buffer==<span class="keyword">nullptr</span>) <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">int</span> samples = len / 2;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> buffer-&gt;readArray((int16_t *)values, samples);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> buffer-&gt;readArray((int16_t *)values, samples) * 2;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; <span class="keyword">protected</span>:</div>
