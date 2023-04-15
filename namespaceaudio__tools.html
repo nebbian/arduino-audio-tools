@@ -1676,6 +1676,8 @@ static <a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html">PWMD
 <tr class="memitem:a78d00aceb819da1fccfbcdcf743e9f50"><td class="memItemLeft" align="right" valign="top"><a id="a78d00aceb819da1fccfbcdcf743e9f50"></a>
 <a class="el" href="classaudio__tools_1_1_musical_notes.html">MusicalNotes</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AudioFFTNotes</b></td></tr>
 <tr class="separator:a78d00aceb819da1fccfbcdcf743e9f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac04c602632af8c620a21d35bf71fa5a"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><b>B64index</b> [256]</td></tr>
+<tr class="separator:aac04c602632af8c620a21d35bf71fa5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c45518358fa6583a2c35e27dc184d5c"><td class="memItemLeft" align="right" valign="top"><a id="a4c45518358fa6583a2c35e27dc184d5c"></a>
 static const int16_t *&#160;</td><td class="memItemRight" valign="bottom"><b>bmc_tab</b> = (int16_t *)bmc_tab_uint</td></tr>
 <tr class="separator:a4c45518358fa6583a2c35e27dc184d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1706,6 +1708,8 @@ INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>DE
 <tr class="memitem:a5a4b94cdd9c6326435d73baf10b714ad"><td class="memItemLeft" align="right" valign="top"><a id="a5a4b94cdd9c6326435d73baf10b714ad"></a>
 <a class="el" href="structaudio__tools_1_1_p_w_m_config.html">audio_tools::PWMConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>default_config</b></td></tr>
 <tr class="separator:a5a4b94cdd9c6326435d73baf10b714ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43f193c47cdf807a4546ccb9cd9549a8"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><b>encoding_table</b> []</td></tr>
+<tr class="separator:a43f193c47cdf807a4546ccb9cd9549a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e80ac23b0cfbd2179f446211da0dc6a"><td class="memItemLeft" align="right" valign="top"><a id="a9e80ac23b0cfbd2179f446211da0dc6a"></a>
 tflite::ErrorReporter *&#160;</td><td class="memItemRight" valign="bottom"><b>error_reporter</b> = &amp;my_error_reporter</td></tr>
 <tr class="separator:a9e80ac23b0cfbd2179f446211da0dc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1757,6 +1761,9 @@ INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>me
 static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a3961afb9c2a414e91d5687346be60285">mime_pcm</a> = &quot;audio/pcm&quot;</td></tr>
 <tr class="memdesc:a3961afb9c2a414e91d5687346be60285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mime type for PCM. <br /></td></tr>
 <tr class="separator:a3961afb9c2a414e91d5687346be60285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048ebc2a2915cbedc71c4b6fc60c5512"><td class="memItemLeft" align="right" valign="top"><a id="a048ebc2a2915cbedc71c4b6fc60c5512"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>mod_table</b> [] = {0, 2, 1}</td></tr>
+<tr class="separator:a048ebc2a2915cbedc71c4b6fc60c5512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa6b8a6eeddaa94b45d1658f4b8e43dee"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classaudio__tools_1_1_tf_lite_audio_error_reporter.html">audio_tools::TfLiteAudioErrorReporter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>my_error_reporter</b></td></tr>
 <tr class="separator:gaa6b8a6eeddaa94b45d1658f4b8e43dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1983,6 +1990,64 @@ Norman Ritz </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="aac04c602632af8c620a21d35bf71fa5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac04c602632af8c620a21d35bf71fa5a">&#9670;&nbsp;</a></span>B64index</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int B64index[256]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,</div>
+<div class="line">    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,</div>
+<div class="line">    0,  0,  0,  0,  0,  0,  0,  62, 63, 62, 62, 63, 52, 53, 54, 55, 56, 57,</div>
+<div class="line">    58, 59, 60, 61, 0,  0,  0,  0,  0,  0,  0,  0,  1,  2,  3,  4,  5,  6,</div>
+<div class="line">    7,  8,  9,  10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,</div>
+<div class="line">    25, 0,  0,  0,  0,  63, 0,  26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,</div>
+<div class="line">    37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a43f193c47cdf807a4546ccb9cd9549a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43f193c47cdf807a4546ccb9cd9549a8">&#9670;&nbsp;</a></span>encoding_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char encoding_table[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <span class="charliteral">&#39;A&#39;</span>, <span class="charliteral">&#39;B&#39;</span>, <span class="charliteral">&#39;C&#39;</span>, <span class="charliteral">&#39;D&#39;</span>, <span class="charliteral">&#39;E&#39;</span>, <span class="charliteral">&#39;F&#39;</span>, <span class="charliteral">&#39;G&#39;</span>, <span class="charliteral">&#39;H&#39;</span>, <span class="charliteral">&#39;I&#39;</span>, <span class="charliteral">&#39;J&#39;</span>, <span class="charliteral">&#39;K&#39;</span>, <span class="charliteral">&#39;L&#39;</span>, <span class="charliteral">&#39;M&#39;</span>,</div>
+<div class="line">    <span class="charliteral">&#39;N&#39;</span>, <span class="charliteral">&#39;O&#39;</span>, <span class="charliteral">&#39;P&#39;</span>, <span class="charliteral">&#39;Q&#39;</span>, <span class="charliteral">&#39;R&#39;</span>, <span class="charliteral">&#39;S&#39;</span>, <span class="charliteral">&#39;T&#39;</span>, <span class="charliteral">&#39;U&#39;</span>, <span class="charliteral">&#39;V&#39;</span>, <span class="charliteral">&#39;W&#39;</span>, <span class="charliteral">&#39;X&#39;</span>, <span class="charliteral">&#39;Y&#39;</span>, <span class="charliteral">&#39;Z&#39;</span>,</div>
+<div class="line">    <span class="charliteral">&#39;a&#39;</span>, <span class="charliteral">&#39;b&#39;</span>, <span class="charliteral">&#39;c&#39;</span>, <span class="charliteral">&#39;d&#39;</span>, <span class="charliteral">&#39;e&#39;</span>, <span class="charliteral">&#39;f&#39;</span>, <span class="charliteral">&#39;g&#39;</span>, <span class="charliteral">&#39;h&#39;</span>, <span class="charliteral">&#39;i&#39;</span>, <span class="charliteral">&#39;j&#39;</span>, <span class="charliteral">&#39;k&#39;</span>, <span class="charliteral">&#39;l&#39;</span>, <span class="charliteral">&#39;m&#39;</span>,</div>
+<div class="line">    <span class="charliteral">&#39;n&#39;</span>, <span class="charliteral">&#39;o&#39;</span>, <span class="charliteral">&#39;p&#39;</span>, <span class="charliteral">&#39;q&#39;</span>, <span class="charliteral">&#39;r&#39;</span>, <span class="charliteral">&#39;s&#39;</span>, <span class="charliteral">&#39;t&#39;</span>, <span class="charliteral">&#39;u&#39;</span>, <span class="charliteral">&#39;v&#39;</span>, <span class="charliteral">&#39;w&#39;</span>, <span class="charliteral">&#39;x&#39;</span>, <span class="charliteral">&#39;y&#39;</span>, <span class="charliteral">&#39;z&#39;</span>,</div>
+<div class="line">    <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;2&#39;</span>, <span class="charliteral">&#39;3&#39;</span>, <span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;+&#39;</span>, <span class="charliteral">&#39;/&#39;</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="adcd16d9c878142e5abb1eb957e077319"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adcd16d9c878142e5abb1eb957e077319">&#9670;&nbsp;</a></span>ima_index_table</h2>
 

@@ -69,7 +69,6 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_decoder_base64-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DecoderBase64 Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__codecs.html">Codecs</a> &raquo; <a class="el" href="group__codecsbase64.html">Base64</a></div></div>  </div>
@@ -179,11 +178,6 @@ Base46Logic&#160;</td><td class="memItemRight" valign="bottom"><b>newline_logic<
 <tr class="memitem:ac658f6f72b6c8a32e9beb3dd71dc1894"><td class="memItemLeft" align="right" valign="top"><a id="ac658f6f72b6c8a32e9beb3dd71dc1894"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>result</b></td></tr>
 <tr class="separator:ac658f6f72b6c8a32e9beb3dd71dc1894"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:abd206711f59bdac18177c88358e28c98"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><b>B64index</b> [256]</td></tr>
-<tr class="separator:abd206711f59bdac18177c88358e28c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classaudio__tools_1_1_decoder_base64.html" title="DecoderBase64 - Converts a Base64 encoded Stream into the original data stream. Decoding only gives a...">DecoderBase64</a> - Converts a Base64 encoded <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> into the original data stream. Decoding only gives a valid result if we start at a limit of 4 bytes. We therefore use by default a newline to determine a valid start boundary. </p>
@@ -222,37 +216,6 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="abd206711f59bdac18177c88358e28c98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd206711f59bdac18177c88358e28c98">&#9670;&nbsp;</a></span>B64index</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int B64index</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,</div>
-<div class="line">    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,</div>
-<div class="line">    0,  0,  0,  0,  0,  0,  0,  62, 63, 62, 62, 63, 52, 53, 54, 55, 56, 57,</div>
-<div class="line">    58, 59, 60, 61, 0,  0,  0,  0,  0,  0,  0,  0,  1,  2,  3,  4,  5,  6,</div>
-<div class="line">    7,  8,  9,  10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,</div>
-<div class="line">    25, 0,  0,  0,  0,  63, 0,  26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,</div>
-<div class="line">    37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51}</div>
-</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
