@@ -54,7 +54,7 @@ var searchData=
   ['setconnectionclose_856',['setConnectionClose',['../classaudio__tools_1_1_u_r_l_stream.html#ae7030d11c7af96d4b7983393817830a9',1,'audio_tools::URLStream']]],
   ['setdataoffset_857',['setDataOffset',['../classaudio__tools_1_1_w_a_v_encoder.html#a714eb943cec9f2478e46d32af2467f3e',1,'audio_tools::WAVEncoder']]],
   ['setdc_858',['setDC',['../classaudio__tools_1_1_modulation_base_class.html#aa7c951a115da3ce65842f8a0492f46b8',1,'audio_tools::ModulationBaseClass']]],
-  ['setdebounddelay_859',['setDeboundDelay',['../classaudio__tools_1_1_audio_actions.html#a4b3ab0733155e054c25c0ccdf52c7ccd',1,'audio_tools::AudioActions']]],
+  ['setdebouncedelay_859',['setDebounceDelay',['../classaudio__tools_1_1_audio_actions.html#a59cea0afb661d3352062cf223b3666c5',1,'audio_tools::AudioActions']]],
   ['setdecoder_860',['setDecoder',['../classaudio__tools_1_1_meta_data_filter.html#a8381905c682cb6718ddd4319b5822b0c',1,'audio_tools::MetaDataFilter::setDecoder()'],['../classaudio__tools_1_1_audio_player.html#a3ea5f561a76c0db83b58303d4e4280d1',1,'audio_tools::AudioPlayer::setDecoder()']]],
   ['setdelaybuffer_861',['setDelayBuffer',['../classaudio__tools_1_1_delay_effect_base.html#aaea0c98ac40750185850bee967b63a86',1,'audio_tools::DelayEffectBase']]],
   ['setdelaybuffreadindex_862',['setDelayBuffReadIndex',['../classaudio__tools_1_1_delay_effect_base.html#a09afa1b1edf3b6ba06c78437f1ff310f',1,'audio_tools::DelayEffectBase']]],
