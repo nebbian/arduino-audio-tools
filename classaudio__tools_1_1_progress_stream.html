@@ -114,10 +114,16 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0655046d9b991086ae6d9805e2a9c10e"><td class="memItemLeft" align="right" valign="top"><a id="a0655046d9b991086ae6d9805e2a9c10e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="classaudio__tools_1_1_progress_stream_info.html">ProgressStreamInfo</a> info)</td></tr>
+<tr class="separator:a0655046d9b991086ae6d9805e2a9c10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a000a10e426384c9aa5876979cd4d5be9"><td class="memItemLeft" align="right" valign="top"><a id="a000a10e426384c9aa5876979cd4d5be9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_progress_stream.html#a000a10e426384c9aa5876979cd4d5be9">begin</a> (size_t len)</td></tr>
 <tr class="memdesc:a000a10e426384c9aa5876979cd4d5be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the total size and restarts the percent calculation: Same as calling <a class="el" href="classaudio__tools_1_1_progress_stream.html#a6a8807196a10843ecf743d358394cb29" title="Updates the total size and restarts the percent calculation.">setSize()</a> <br /></td></tr>
 <tr class="separator:a000a10e426384c9aa5876979cd4d5be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae202bf15f81d6b9e203d46c4451986"><td class="memItemLeft" align="right" valign="top"><a id="a3ae202bf15f81d6b9e203d46c4451986"></a>
+<a class="el" href="classaudio__tools_1_1_progress_stream_info.html">ProgressStreamInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
+<tr class="separator:a3ae202bf15f81d6b9e203d46c4451986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,17 +137,21 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () 
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_progress_stream.html#a9f7f63c73cb40eff4a49b904013006b5">percentage</a> ()</td></tr>
 <tr class="memdesc:a9f7f63c73cb40eff4a49b904013006b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the processed percentage: If no size has been defined we return 0. <br /></td></tr>
 <tr class="separator:a9f7f63c73cb40eff4a49b904013006b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22bd9b4434b82255d700e3037031f59c"><td class="memItemLeft" align="right" valign="top"><a id="a22bd9b4434b82255d700e3037031f59c"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_progress_stream.html#a22bd9b4434b82255d700e3037031f59c">processed</a> ()</td></tr>
-<tr class="memdesc:a22bd9b4434b82255d700e3037031f59c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the number of processed bytes. <br /></td></tr>
-<tr class="separator:a22bd9b4434b82255d700e3037031f59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c748933f788283b6ff6ae34c2343413"><td class="memItemLeft" align="right" valign="top"><a id="a4c748933f788283b6ff6ae34c2343413"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_progress_stream.html#a4c748933f788283b6ff6ae34c2343413">processedBytes</a> ()</td></tr>
+<tr class="memdesc:a4c748933f788283b6ff6ae34c2343413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the number of processed bytes. <br /></td></tr>
+<tr class="separator:a4c748933f788283b6ff6ae34c2343413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87782ae17399f712bfd705080beb77b"><td class="memItemLeft" align="right" valign="top"><a id="ac87782ae17399f712bfd705080beb77b"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_progress_stream.html#ac87782ae17399f712bfd705080beb77b">processedSecs</a> ()</td></tr>
+<tr class="memdesc:ac87782ae17399f712bfd705080beb77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the number of processed seconds. <br /></td></tr>
+<tr class="separator:ac87782ae17399f712bfd705080beb77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c5c6275ddee80eb02839356b6185c0b"><td class="memItemLeft" align="right" valign="top"><a id="a4c5c6275ddee80eb02839356b6185c0b"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_progress_stream.html#a4c5c6275ddee80eb02839356b6185c0b">readBytes</a> (uint8_t *data, size_t len) override</td></tr>
 <tr class="memdesc:a4c5c6275ddee80eb02839356b6185c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the data from all streams mixed together. <br /></td></tr>
 <tr class="separator:a4c5c6275ddee80eb02839356b6185c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
-<tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1fdd56031f1195cb221ab855fb6a102"><td class="memItemLeft" align="right" valign="top"><a id="ad1fdd56031f1195cb221ab855fb6a102"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
+<tr class="separator:ad1fdd56031f1195cb221ab855fb6a102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memItemLeft" align="right" valign="top"><a id="a5ee65428f7ce3ff5deac4e5d380f3899"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
 <tr class="separator:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,6 +211,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a7c87619d514c8c9627dc94e5e278a530"><td class="memItemLeft" align="right" valign="top"><a id="a7c87619d514c8c9627dc94e5e278a530"></a>
 <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> =nullptr</td></tr>
 <tr class="separator:a7c87619d514c8c9627dc94e5e278a530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3572668385d338dad9949d684047f4e8"><td class="memItemLeft" align="right" valign="top"><a id="a3572668385d338dad9949d684047f4e8"></a>
+<a class="el" href="classaudio__tools_1_1_progress_stream_info.html">ProgressStreamInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>progress_info</b></td></tr>
+<tr class="separator:a3572668385d338dad9949d684047f4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
 <tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,9 +223,6 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a18e4f39deb03bea2fe3633e469490e0b"><td class="memItemLeft" align="right" valign="top"><a id="a18e4f39deb03bea2fe3633e469490e0b"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>total_processed</b> = 0</td></tr>
 <tr class="separator:a18e4f39deb03bea2fe3633e469490e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afca1a070ccd72ea11e4b6f83db3b6f46"><td class="memItemLeft" align="right" valign="top"><a id="afca1a070ccd72ea11e4b6f83db3b6f46"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>total_size</b> = 0</td></tr>
-<tr class="separator:afca1a070ccd72ea11e4b6f83db3b6f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic calss to measure the the total bytes which were processed in order to calculate the progress as a percentage of the total size. </p>
