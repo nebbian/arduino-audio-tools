@@ -93,6 +93,9 @@ Inheritance diagram for Codec2Decoder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a00717f3a656f06c10d3c2b7c295d83b8"><td class="memItemLeft" align="right" valign="top"><a id="a00717f3a656f06c10d3c2b7c295d83b8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Codec2Decoder</b> (int bps=3200)</td></tr>
+<tr class="separator:a00717f3a656f06c10d3c2b7c295d83b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada56eff2516fb0a4f5091ce06805411a"><td class="memItemLeft" align="right" valign="top"><a id="ada56eff2516fb0a4f5091ce06805411a"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
 <tr class="separator:ada56eff2516fb0a4f5091ce06805411a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,6 +108,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a
 <tr class="memitem:a86561f5bbdb5e94565ca460dba13b011"><td class="memItemLeft" align="right" valign="top"><a id="a86561f5bbdb5e94565ca460dba13b011"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>bitsPerSecond</b> ()</td></tr>
 <tr class="separator:a86561f5bbdb5e94565ca460dba13b011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3511918f60a4c3f0135dc79573c5a502"><td class="memItemLeft" align="right" valign="top"><a id="a3511918f60a4c3f0135dc79573c5a502"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bytesCompressed</b> ()</td></tr>
+<tr class="separator:a3511918f60a4c3f0135dc79573c5a502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08f2a37656484203f8353cec081b08fd"><td class="memItemLeft" align="right" valign="top"><a id="a08f2a37656484203f8353cec081b08fd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bytesUncompressed</b> ()</td></tr>
+<tr class="separator:a08f2a37656484203f8353cec081b08fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,17 +123,15 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isResultPCM</
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac16dce708c8231391f220f847b8d05df"><td class="memItemLeft" align="right" valign="top"><a id="ac16dce708c8231391f220f847b8d05df"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg)</td></tr>
-<tr class="separator:ac16dce708c8231391f220f847b8d05df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bc89a5db2eaa810580df37dc8b9dc87"><td class="memItemLeft" align="right" valign="top"><a id="a4bc89a5db2eaa810580df37dc8b9dc87"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_codec2_decoder.html#a4bc89a5db2eaa810580df37dc8b9dc87">setBitsPerSecond</a> (int bps)</td></tr>
-<tr class="memdesc:a4bc89a5db2eaa810580df37dc8b9dc87"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets bits per second: 3200, 2400, 1600, 1400, 1300, 1200, 700 and 450 bit/s <br /></td></tr>
+<tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
+<tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc89a5db2eaa810580df37dc8b9dc87"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_codec2_decoder.html#a4bc89a5db2eaa810580df37dc8b9dc87">setBitsPerSecond</a> (int bps)</td></tr>
 <tr class="separator:a4bc89a5db2eaa810580df37dc8b9dc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb8dfe7837928747737ad15bccdbd004"><td class="memItemLeft" align="right" valign="top"><a id="abb8dfe7837928747737ad15bccdbd004"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_codec2_decoder.html#abb8dfe7837928747737ad15bccdbd004">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
-<tr class="memdesc:abb8dfe7837928747737ad15bccdbd004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an object that is notified if the audio format is changing. <br /></td></tr>
-<tr class="separator:abb8dfe7837928747737ad15bccdbd004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fe47dd5abd9965a05761dce0eb9281f"><td class="memItemLeft" align="right" valign="top"><a id="a2fe47dd5abd9965a05761dce0eb9281f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#a2fe47dd5abd9965a05761dce0eb9281f">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;notify) override</td></tr>
+<tr class="memdesc:a2fe47dd5abd9965a05761dce0eb9281f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an object that is notified if the audio format is changing. <br /></td></tr>
+<tr class="separator:a2fe47dd5abd9965a05761dce0eb9281f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c50884a025e7c2049b71fe0b8d0045"><td class="memItemLeft" align="right" valign="top"><a id="a33c50884a025e7c2049b71fe0b8d0045"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;out_stream)</td></tr>
 <tr class="separator:a33c50884a025e7c2049b71fe0b8d0045"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,9 +141,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStre
 <tr class="memitem:ade185bd4f49909ba863274df35c54901"><td class="memItemLeft" align="right" valign="top"><a id="ade185bd4f49909ba863274df35c54901"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
 <tr class="separator:ade185bd4f49909ba863274df35c54901"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b2aeff2ec7fd6cbccce8eae68696d2a"><td class="memItemLeft" align="right" valign="top"><a id="a2b2aeff2ec7fd6cbccce8eae68696d2a"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *data, size_t length)</td></tr>
-<tr class="separator:a2b2aeff2ec7fd6cbccce8eae68696d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92ed4adcdea24441fe382467f2c22d25"><td class="memItemLeft" align="right" valign="top"><a id="a92ed4adcdea24441fe382467f2c22d25"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *data, size_t length) override</td></tr>
+<tr class="separator:a92ed4adcdea24441fe382467f2c22d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -151,11 +158,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aab426b0d3787b8e69d99792a6197ce95"><td class="memItemLeft" align="right" valign="top"><a id="aab426b0d3787b8e69d99792a6197ce95"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>bits_per_second</b> =2400</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bits_per_second</b> = 0</td></tr>
 <tr class="separator:aab426b0d3787b8e69d99792a6197ce95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07fab440d87063e83df0bc30223964c5"><td class="memItemLeft" align="right" valign="top"><a id="a07fab440d87063e83df0bc30223964c5"></a>
-<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cfg</b></td></tr>
-<tr class="separator:a07fab440d87063e83df0bc30223964c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,20 +176,48 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false
 struct CODEC2 *&#160;</td><td class="memItemRight" valign="bottom"><b>p_codec2</b></td></tr>
 <tr class="separator:a322ed9035f53a8d58dd2b81d64831177"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> = nullptr</td></tr>
+<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>
 <tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41d9f8d313faecd59fd124c2600332ac"><td class="memItemLeft" align="right" valign="top"><a id="a41d9f8d313faecd59fd124c2600332ac"></a>
-<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; int16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>result_buffer</b></td></tr>
-<tr class="separator:a41d9f8d313faecd59fd124c2600332ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a3f44eba249b33b8a0456414f3f5ef"><td class="memItemLeft" align="right" valign="top"><a id="a50a3f44eba249b33b8a0456414f3f5ef"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>result_buffer</b></td></tr>
+<tr class="separator:a50a3f44eba249b33b8a0456414f3f5ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Decoder for Codec2. Depends on <a href="https://github.com/pschatzmann/arduino-libcodec2">https://github.com/pschatzmann/arduino-libcodec2</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4bc89a5db2eaa810580df37dc8b9dc87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc89a5db2eaa810580df37dc8b9dc87">&#9670;&nbsp;</a></span>setBitsPerSecond()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setBitsPerSecond </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bps</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>sets bits per second: 3200, 2400, 1600, 1400, 1300, 1200, 700 and 450 bit/s </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioCodecs/<a class="el" href="_codec_codec2_8h_source.html">CodecCodec2.h</a></li>
 </ul>
 </div><!-- contents -->
