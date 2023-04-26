@@ -71,7 +71,7 @@ $(function() {
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_s_t_k_free_verb-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">STKFreeVerb Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__dsp.html">DSP</a> &raquo; <a class="el" href="group__effects.html">Effects</a></div></div>  </div>
+<div class="title">STKFreeVerb Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__dsp.html">DSP</a> &raquo; <a class="el" href="group__effects.html">Effects</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -91,13 +91,16 @@ Inheritance diagram for STKFreeVerb:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aafbfa4be55616fbceaaa53b89c904de8"><td class="memItemLeft" align="right" valign="top"><a id="aafbfa4be55616fbceaaa53b89c904de8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>STKFreeVerb</b> (const <a class="el" href="classaudio__tools_1_1_s_t_k_free_verb.html">STKFreeVerb</a> &amp;copy)=default</td></tr>
+<tr class="separator:aafbfa4be55616fbceaaa53b89c904de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3708b79a6e03c964327c2988b2a70668"><td class="memItemLeft" align="right" valign="top"><a id="a3708b79a6e03c964327c2988b2a70668"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect.html#a3708b79a6e03c964327c2988b2a70668">active</a> ()</td></tr>
 <tr class="memdesc:a3708b79a6e03c964327c2988b2a70668"><td class="mdescLeft">&#160;</td><td class="mdescRight">determines if the effect is active <br /></td></tr>
 <tr class="separator:a3708b79a6e03c964327c2988b2a70668"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa80f6251a20600cf6da083a627c401df"><td class="memItemLeft" align="right" valign="top"><a id="aa80f6251a20600cf6da083a627c401df"></a>
-virtual <a class="el" href="classaudio__tools_1_1_audio_effect.html">AudioEffect</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()=0</td></tr>
-<tr class="separator:aa80f6251a20600cf6da083a627c401df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dd900474cc05774cfa222eebb66a899"><td class="memItemLeft" align="right" valign="top"><a id="a7dd900474cc05774cfa222eebb66a899"></a>
+<a class="el" href="classaudio__tools_1_1_audio_effect.html">AudioEffect</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () override</td></tr>
+<tr class="separator:a7dd900474cc05774cfa222eebb66a899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a716406d3d9d4fdbbe46f100e648f3b"><td class="memItemLeft" align="right" valign="top"><a id="a4a716406d3d9d4fdbbe46f100e648f3b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect.html#a4a716406d3d9d4fdbbe46f100e648f3b">id</a> ()</td></tr>
 <tr class="memdesc:a4a716406d3d9d4fdbbe46f100e648f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to identify an effect. <br /></td></tr>
@@ -114,6 +117,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect.html#a3d929477fef71d52c9c6df2ba2d50841">setId</a> (int <a class="el" href="classaudio__tools_1_1_audio_effect.html#a4a716406d3d9d4fdbbe46f100e648f3b">id</a>)</td></tr>
 <tr class="memdesc:a3d929477fef71d52c9c6df2ba2d50841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to identify an effect. <br /></td></tr>
 <tr class="separator:a3d929477fef71d52c9c6df2ba2d50841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d07834e21841bf9e5c17437140c27d5"><td class="memItemLeft" align="right" valign="top"><a id="a0d07834e21841bf9e5c17437140c27d5"></a>
+StkFloat&#160;</td><td class="memItemRight" valign="bottom"><b>tick</b> (StkFloat input, unsigned int channel=0) override</td></tr>
+<tr class="separator:a0d07834e21841bf9e5c17437140c27d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
