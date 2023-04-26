@@ -72,7 +72,7 @@ $(function() {
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_a2_d_p_stream-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">A2DPStream Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__io.html">IO</a></div></div>  </div>
+<div class="title">A2DPStream Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__io.html">IO</a> &#124; <a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__communications.html">Communications</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -103,21 +103,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
 <tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a512cfced3ab951dde7a9a78f1274fe63"><td class="memItemLeft" align="right" valign="top"><a id="a512cfced3ab951dde7a9a78f1274fe63"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> ()</td></tr>
-<tr class="separator:a512cfced3ab951dde7a9a78f1274fe63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a473a08fbb41a997860a55213bc367d44"><td class="memItemLeft" align="right" valign="top"><a id="a473a08fbb41a997860a55213bc367d44"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> ()</td></tr>
-<tr class="separator:a473a08fbb41a997860a55213bc367d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="memItemLeft" align="right" valign="top"><a id="a692e2b18b3c2452e38e3f558ad87e9a5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> () override</td></tr>
+<tr class="separator:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b51853b7bf1bc90d9efa9f3b8d4fea"><td class="memItemLeft" align="right" valign="top"><a id="a87b51853b7bf1bc90d9efa9f3b8d4fea"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> () override</td></tr>
+<tr class="separator:a87b51853b7bf1bc90d9efa9f3b8d4fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee349d45a33f77500a1d59928339d8f2"><td class="memItemLeft" align="right" valign="top"><a id="aee349d45a33f77500a1d59928339d8f2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#aee349d45a33f77500a1d59928339d8f2">begin</a> (<a class="el" href="classaudio__tools_1_1_a2_d_p_config.html">A2DPConfig</a> cfg)</td></tr>
-<tr class="memdesc:aee349d45a33f77500a1d59928339d8f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the processing. <br /></td></tr>
+<tr class="memdesc:aee349d45a33f77500a1d59928339d8f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the processing. <br /></td></tr>
 <tr class="separator:aee349d45a33f77500a1d59928339d8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98f971b078dd42cc9f2912b236aeaf93"><td class="memItemLeft" align="right" valign="top"><a id="a98f971b078dd42cc9f2912b236aeaf93"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> mode, const char *name)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#a98f971b078dd42cc9f2912b236aeaf93">begin</a> (<a class="el" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> mode, const char *name)</td></tr>
+<tr class="memdesc:a98f971b078dd42cc9f2912b236aeaf93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the processing. <br /></td></tr>
 <tr class="separator:a98f971b078dd42cc9f2912b236aeaf93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31e02c5aa906357ca10388b6c50daf9e"><td class="memItemLeft" align="right" valign="top"><a id="a31e02c5aa906357ca10388b6c50daf9e"></a>
 <a class="el" href="classaudio__tools_1_1_a2_d_p_config.html">A2DPConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> (<a class="el" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> mode=RX_MODE)</td></tr>
@@ -140,16 +141,16 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#a9b3baad8c612d81b96e46f84d7e97580">operator bool</a> ()</td></tr>
 <tr class="memdesc:a9b3baad8c612d81b96e46f84d7e97580"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert to bool <br /></td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1635579cf4f895eaaded84a513cb90c9"><td class="memItemLeft" align="right" valign="top"><a id="a1635579cf4f895eaaded84a513cb90c9"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#a1635579cf4f895eaaded84a513cb90c9">readBytes</a> (uint8_t *data, size_t len)</td></tr>
-<tr class="memdesc:a1635579cf4f895eaaded84a513cb90c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the data from the temporary buffer. <br /></td></tr>
-<tr class="separator:a1635579cf4f895eaaded84a513cb90c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5c6275ddee80eb02839356b6185c0b"><td class="memItemLeft" align="right" valign="top"><a id="a4c5c6275ddee80eb02839356b6185c0b"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#a4c5c6275ddee80eb02839356b6185c0b">readBytes</a> (uint8_t *data, size_t len) override</td></tr>
+<tr class="memdesc:a4c5c6275ddee80eb02839356b6185c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the data from the temporary buffer. <br /></td></tr>
+<tr class="separator:a4c5c6275ddee80eb02839356b6185c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
 <tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb8dfe7837928747737ad15bccdbd004"><td class="memItemLeft" align="right" valign="top"><a id="abb8dfe7837928747737ad15bccdbd004"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
-<tr class="separator:abb8dfe7837928747737ad15bccdbd004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memItemLeft" align="right" valign="top"><a id="a5ee65428f7ce3ff5deac4e5d380f3899"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
+<tr class="separator:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85c293aec47a5e3dca892a9de49c5b83"><td class="memItemLeft" align="right" valign="top"><a id="a85c293aec47a5e3dca892a9de49c5b83"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setVolume</b> (float volume)</td></tr>
 <tr class="separator:a85c293aec47a5e3dca892a9de49c5b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,10 +165,10 @@ BluetoothA2DPSource &amp;&#160;</td><td class="memItemRight" valign="bottom"><a 
 <tr class="memitem:a989540d43150595fdde26c8f37265069"><td class="memItemLeft" align="right" valign="top"><a id="a989540d43150595fdde26c8f37265069"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> &amp;info)</td></tr>
 <tr class="separator:a989540d43150595fdde26c8f37265069"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b8471dbbdc5527cdf9bfd31612cc973"><td class="memItemLeft" align="right" valign="top"><a id="a8b8471dbbdc5527cdf9bfd31612cc973"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#a8b8471dbbdc5527cdf9bfd31612cc973">write</a> (const uint8_t *data, size_t len)</td></tr>
-<tr class="memdesc:a8b8471dbbdc5527cdf9bfd31612cc973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the data into a temporary send buffer - where it can be picked up by the callback. <br /></td></tr>
-<tr class="separator:a8b8471dbbdc5527cdf9bfd31612cc973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7597ef706dd1aa590903ce9e095db20a"><td class="memItemLeft" align="right" valign="top"><a id="a7597ef706dd1aa590903ce9e095db20a"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#a7597ef706dd1aa590903ce9e095db20a">write</a> (const uint8_t *data, size_t len) override</td></tr>
+<tr class="memdesc:a7597ef706dd1aa590903ce9e095db20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the data into a temporary send buffer - where it can be picked up by the callback. <br /></td></tr>
+<tr class="separator:a7597ef706dd1aa590903ce9e095db20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
 <tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,9 +219,6 @@ BluetoothA2DPSink *&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_s
 <tr class="memitem:a4c85e0d9d5863813aa863959ed6a844c"><td class="memItemLeft" align="right" valign="top"><a id="a4c85e0d9d5863813aa863959ed6a844c"></a>
 BluetoothA2DPSource *&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_source</b> = nullptr</td></tr>
 <tr class="separator:a4c85e0d9d5863813aa863959ed6a844c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8724e7bb8d3bae854887de6e5150cfef"><td class="memItemLeft" align="right" valign="top"><a id="a8724e7bb8d3bae854887de6e5150cfef"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>audioBaseInfoDependent</b> =nullptr</td></tr>
-<tr class="separator:a8724e7bb8d3bae854887de6e5150cfef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88fe6be6085a3bb1b12a94c25c0e4038"><td class="memItemLeft" align="right" valign="top"><a id="a88fe6be6085a3bb1b12a94c25c0e4038"></a>
 <a class="el" href="classaudio__tools_1_1_a2_d_p_config.html">A2DPConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>config</b></td></tr>
 <tr class="separator:a88fe6be6085a3bb1b12a94c25c0e4038"><td class="memSeparator" colspan="2">&#160;</td></tr>
