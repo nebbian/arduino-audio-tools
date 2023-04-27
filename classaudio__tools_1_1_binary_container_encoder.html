@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: SimpleContainerEncoder Class Reference</title>
+<title>arduino-audio-tools: BinaryContainerEncoder Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_simple_container_encoder.html">SimpleContainerEncoder</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_binary_container_encoder.html">BinaryContainerEncoder</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,22 +69,22 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classaudio__tools_1_1_simple_container_encoder-members.html">List of all members</a>  </div>
+<a href="classaudio__tools_1_1_binary_container_encoder-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">SimpleContainerEncoder Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__codecs.html">Codecs</a></div></div>  </div>
+<div class="title">BinaryContainerEncoder Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__codecs.html">Codecs</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Wraps the encoded data into CFG and DAT segments so that we can recover the audio configuration and orignial segments if this is relevant.  
- <a href="classaudio__tools_1_1_simple_container_encoder.html#details">More...</a></p>
+<p>Wraps the encoded data into Config, Data, and <a class="el" href="class_meta.html" title="minimial implementtion of Meta which just ignores the data">Meta</a> segments so that we can recover the audio configuration and orignial segments if this is relevant. We assume that a full segment is written with each call of <a class="el" href="classaudio__tools_1_1_binary_container_encoder.html#a2685d88d9d964c749bce462858634b6e" title="Add data segment. On first write we also add a AudioInfo header.">write()</a>; The segments are separated with a new line character.  
+ <a href="classaudio__tools_1_1_binary_container_encoder.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_container_simple_8h_source.html">ContainerSimple.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_container_binary_8h_source.html">ContainerBinary.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for SimpleContainerEncoder:</div>
+Inheritance diagram for BinaryContainerEncoder:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_simple_container_encoder.png" usemap="#SimpleContainerEncoder_map" alt=""/>
-  <map id="SimpleContainerEncoder_map" name="SimpleContainerEncoder_map">
+  <img src="classaudio__tools_1_1_binary_container_encoder.png" usemap="#BinaryContainerEncoder_map" alt=""/>
+  <map id="BinaryContainerEncoder_map" name="BinaryContainerEncoder_map">
 <area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="0,56,152,80"/>
 <area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,152,24"/>
   </map>
@@ -92,43 +92,50 @@ Inheritance diagram for SimpleContainerEncoder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5a5c909a4bfcbc881ea1512f6ed68897"><td class="memItemLeft" align="right" valign="top"><a id="a5a5c909a4bfcbc881ea1512f6ed68897"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SimpleContainerEncoder</b> (<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> &amp;encoder, int repeatHeader=0)</td></tr>
-<tr class="separator:a5a5c909a4bfcbc881ea1512f6ed68897"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="memItemLeft" align="right" valign="top"><a id="ab0bdf5cca484fb2ba637c39384b27fb2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="separator:ab0bdf5cca484fb2ba637c39384b27fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82da7ebda715fea310f133bf4eb70999"><td class="memItemLeft" align="right" valign="top"><a id="a82da7ebda715fea310f133bf4eb70999"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BinaryContainerEncoder</b> (<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> &amp;encoder)</td></tr>
+<tr class="separator:a82da7ebda715fea310f133bf4eb70999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="memItemLeft" align="right" valign="top"><a id="a7c3e14d99bd3dc0e3670d6956dafcaf2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () override</td></tr>
+<tr class="separator:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4420129ea7fa5236cc6f0efffce764d2"><td class="memItemLeft" align="right" valign="top"><a id="a4420129ea7fa5236cc6f0efffce764d2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="separator:a4420129ea7fa5236cc6f0efffce764d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad55316f5135cdae6aa6c5a763f6c3473"><td class="memItemLeft" align="right" valign="top"><a id="ad55316f5135cdae6aa6c5a763f6c3473"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_simple_container_encoder.html#ad55316f5135cdae6aa6c5a763f6c3473">commit</a> ()</td></tr>
-<tr class="memdesc:ad55316f5135cdae6aa6c5a763f6c3473"><td class="mdescLeft">&#160;</td><td class="mdescRight">call to mark end of data packat to start the next one <br /></td></tr>
-<tr class="separator:ad55316f5135cdae6aa6c5a763f6c3473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf81d3fdaf258088d7692fa70cece087"><td class="memItemLeft" align="right" valign="top"><a id="aaf81d3fdaf258088d7692fa70cece087"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:aaf81d3fdaf258088d7692fa70cece087"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adac116554b543b7c4228c018a85882f5"><td class="memItemLeft" align="right" valign="top"><a id="adac116554b543b7c4228c018a85882f5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()</td></tr>
-<tr class="separator:adac116554b543b7c4228c018a85882f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3eead7aeacc082287eabd2282dff0e1"><td class="memItemLeft" align="right" valign="top"><a id="ac3eead7aeacc082287eabd2282dff0e1"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mime</b> ()=0</td></tr>
-<tr class="separator:ac3eead7aeacc082287eabd2282dff0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac496133545cba767b45c6ce8df3587e7"><td class="memItemLeft" align="right" valign="top"><a id="ac496133545cba767b45c6ce8df3587e7"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()=0</td></tr>
-<tr class="separator:ac496133545cba767b45c6ce8df3587e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e283a9495aaf265739336829d45e215"><td class="memItemLeft" align="right" valign="top"><a id="a5e283a9495aaf265739336829d45e215"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
-<tr class="separator:a5e283a9495aaf265739336829d45e215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25cee0d848eeb729a79fd46347a70da"><td class="memItemLeft" align="right" valign="top"><a id="ae25cee0d848eeb729a79fd46347a70da"></a>
+virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mime</b> ()</td></tr>
+<tr class="separator:ae25cee0d848eeb729a79fd46347a70da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
+<tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1fdd56031f1195cb221ab855fb6a102"><td class="memItemLeft" align="right" valign="top"><a id="ad1fdd56031f1195cb221ab855fb6a102"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
+<tr class="separator:ad1fdd56031f1195cb221ab855fb6a102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b345b3599dbf05ab39e6ba1cac0f95"><td class="memItemLeft" align="right" valign="top"><a id="ac3b345b3599dbf05ab39e6ba1cac0f95"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> &amp;outStream)</td></tr>
+<tr class="separator:ac3b345b3599dbf05ab39e6ba1cac0f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef72c18518649b37e822d47994c337f8"><td class="memItemLeft" align="right" valign="top"><a id="aef72c18518649b37e822d47994c337f8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;outStream)</td></tr>
+<tr class="separator:aef72c18518649b37e822d47994c337f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f9a2c51f9c400f9177fb6e4fec57b4c"><td class="memItemLeft" align="right" valign="top"><a id="a6f9a2c51f9c400f9177fb6e4fec57b4c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;outStream)</td></tr>
 <tr class="separator:a6f9a2c51f9c400f9177fb6e4fec57b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2685d88d9d964c749bce462858634b6e"><td class="memItemLeft" align="right" valign="top"><a id="a2685d88d9d964c749bce462858634b6e"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *data, size_t len)</td></tr>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_binary_container_encoder.html#a2685d88d9d964c749bce462858634b6e">write</a> (const void *data, size_t len)</td></tr>
+<tr class="memdesc:a2685d88d9d964c749bce462858634b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add data segment. On first write we also add a <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> header. <br /></td></tr>
 <tr class="separator:a2685d88d9d964c749bce462858634b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43a30da913185727325494f8d559f939"><td class="memItemLeft" align="right" valign="top"><a id="a43a30da913185727325494f8d559f939"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_binary_container_encoder.html#a43a30da913185727325494f8d559f939">writeMeta</a> (const uint8_t *data, size_t len)</td></tr>
+<tr class="memdesc:a43a30da913185727325494f8d559f939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds meta data segment. <br /></td></tr>
+<tr class="separator:a43a30da913185727325494f8d559f939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a8c3a2ce0565823aee87298d435b0cef0"><td class="memItemLeft" align="right" valign="top"><a id="a8c3a2ce0565823aee87298d435b0cef0"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>output</b> (uint8_t *data, size_t len)</td></tr>
+<tr class="separator:a8c3a2ce0565823aee87298d435b0cef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a2e475070d3df18395c90a10c9d38eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,9 +154,15 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aa3de28cc1401a7913306c2f47b4d1a1e"><td class="memItemLeft" align="right" valign="top"><a id="aa3de28cc1401a7913306c2f47b4d1a1e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_beginning</b> = true</td></tr>
 <tr class="separator:aa3de28cc1401a7913306c2f47b4d1a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20474c170471f9b3d24b915be857f3aa"><td class="memItemLeft" align="right" valign="top"><a id="a20474c170471f9b3d24b915be857f3aa"></a>
+<a class="el" href="structaudio__tools_1_1_simple_container_meta_data_header.html">SimpleContainerMetaDataHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>meta</b></td></tr>
+<tr class="separator:a20474c170471f9b3d24b915be857f3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a125b8f635f2405b891164572c2a578cd"><td class="memItemLeft" align="right" valign="top"><a id="a125b8f635f2405b891164572c2a578cd"></a>
 <a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_codec</b> = nullptr</td></tr>
 <tr class="separator:a125b8f635f2405b891164572c2a578cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a35ede151316df848cb2d80c2547e4"><td class="memItemLeft" align="right" valign="top"><a id="ab4a35ede151316df848cb2d80c2547e4"></a>
+<a class="el" href="classaudio__tools_1_1_container_target.html">ContainerTarget</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_target</b> = nullptr</td></tr>
+<tr class="separator:ab4a35ede151316df848cb2d80c2547e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac533968d25054bb4834354d63a27d1b8"><td class="memItemLeft" align="right" valign="top"><a id="ac533968d25054bb4834354d63a27d1b8"></a>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>packet_count</b> = 0</td></tr>
 <tr class="separator:ac533968d25054bb4834354d63a27d1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,9 +171,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>repeat_header</b></td>
 <tr class="separator:a65552e693ebce50b934496e2c76dc935"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Wraps the encoded data into CFG and DAT segments so that we can recover the audio configuration and orignial segments if this is relevant. </p>
+<div class="textblock"><p>Wraps the encoded data into Config, Data, and <a class="el" href="class_meta.html" title="minimial implementtion of Meta which just ignores the data">Meta</a> segments so that we can recover the audio configuration and orignial segments if this is relevant. We assume that a full segment is written with each call of <a class="el" href="classaudio__tools_1_1_binary_container_encoder.html#a2685d88d9d964c749bce462858634b6e" title="Add data segment. On first write we also add a AudioInfo header.">write()</a>; The segments are separated with a new line character. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/AudioCodecs/<a class="el" href="_container_simple_8h_source.html">ContainerSimple.h</a></li>
+<li>src/AudioCodecs/<a class="el" href="_container_binary_8h_source.html">ContainerBinary.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

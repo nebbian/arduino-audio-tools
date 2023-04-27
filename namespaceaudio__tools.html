@@ -303,6 +303,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_converter.html">BaseConverter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract Base class for Converters A converter is processing the data in the indicated array.  <a href="classaudio__tools_1_1_base_converter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_binary_container_decoder.html">BinaryContainerDecoder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the provided data from the DAT and CFG segments.  <a href="classaudio__tools_1_1_binary_container_decoder.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_binary_container_encoder.html">BinaryContainerEncoder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps the encoded data into Config, Data, and <a class="el" href="class_meta.html" title="minimial implementtion of Meta which just ignores the data">Meta</a> segments so that we can recover the audio configuration and orignial segments if this is relevant. We assume that a full segment is written with each call of <a class="el" href="classaudio__tools_1_1_binary_container_encoder.html#a2685d88d9d964c749bce462858634b6e" title="Add data segment. On first write we also add a AudioInfo header.">write()</a>; The segments are separated with a new line character.  <a href="classaudio__tools_1_1_binary_container_encoder.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_bi_quad_d_f1.html">BiQuadDF1</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Biquad DF1 <a class="el" href="classaudio__tools_1_1_filter.html" title="Abstract filter interface definition;.">Filter</a>. converted from <a href="https://github.com/tttapa/Filters/blob/master/src/BiQuad.h">https://github.com/tttapa/Filters/blob/master/src/BiQuad.h</a> Use float or double (and not a integer type) as type parameter.  <a href="classaudio__tools_1_1_bi_quad_d_f1.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -374,8 +380,21 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_codec_n_o_p.html">CodecNOP</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummy no implmentation Codec. This is used so that we can initialize some pointers to decoders and encoders to make sure that they do not point to null.  <a href="classaudio__tools_1_1_codec_n_o_p.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_common_header.html">CommonHeader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_config_equilizer3_bands.html">ConfigEquilizer3Bands</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for 3 Band Equilizer: Set channels,bits_per_sample,sample_rate. Set and update gain_low, gain_medium and gain_high to value between 0 and 1.0.  <a href="structaudio__tools_1_1_config_equilizer3_bands.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_target.html">ContainerTarget</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_container_target.html" title="ContainerTarget: forwards requests to both the output and the encoder/decoder.">ContainerTarget</a>: forwards requests to both the output and the encoder/decoder.  <a href="classaudio__tools_1_1_container_target.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_target_audio_print.html">ContainerTargetAudioPrint</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_target_audio_stream.html">ContainerTargetAudioStream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_target_audio_writer.html">ContainerTargetAudioWriter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_target_print.html">ContainerTargetPrint</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_converter1_channel.html">Converter1Channel</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converter for 1 Channel which applies the indicated <a class="el" href="classaudio__tools_1_1_filter.html" title="Abstract filter interface definition;.">Filter</a>.  <a href="classaudio__tools_1_1_converter1_channel.html#details">More...</a><br /></td></tr>
@@ -920,6 +939,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_print.html">Print</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_processed_result.html">ProcessedResult</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_progress_stream.html">ProgressStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic calss to measure the the total bytes which were processed in order to calculate the progress as a percentage of the total size.  <a href="classaudio__tools_1_1_progress_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1032,11 +1053,7 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_simple_container_data_header.html">SimpleContainerDataHeader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_simple_container_decoder.html">SimpleContainerDecoder</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the provided data from the DAT and CFG segments.  <a href="classaudio__tools_1_1_simple_container_decoder.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_simple_container_encoder.html">SimpleContainerEncoder</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps the encoded data into CFG and DAT segments so that we can recover the audio configuration and orignial segments if this is relevant.  <a href="classaudio__tools_1_1_simple_container_encoder.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_simple_container_meta_data_header.html">SimpleContainerMetaDataHeader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_simple_delay.html">SimpleDelay</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple <a class="el" href="classaudio__tools_1_1_delay.html" title="Delay/Echo AudioEffect. See https://wiki.analog.com/resources/tools-software/sharc-audio-module/barem...">Delay</a> effect consiting of a single tap delay with Effect Gain and feed back controls Constructor requires internal delay in samples.  <a href="classaudio__tools_1_1_simple_delay.html#details">More...</a><br /></td></tr>
@@ -1389,6 +1406,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a6a59ed379dc716d3d4f19e585d96abcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser for Wav header data adjusted for IMA ADPCM format - partially based on <a class="el" href="_codec_w_a_v_8h_source.html">CodecWAV.h</a> for details see <a href="https://de.wikipedia.org/wiki/RIFF_WAVE">https://de.wikipedia.org/wiki/RIFF_WAVE</a>.  <a href="namespaceaudio__tools.html#a6a59ed379dc716d3d4f19e585d96abcc">More...</a><br /></td></tr>
 <tr class="separator:a6a59ed379dc716d3d4f19e585d96abcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd4453d1994a706c0eb2350ffa55372"><td class="memItemLeft" align="right" valign="top"><a id="a4dd4453d1994a706c0eb2350ffa55372"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ContainerType</b> : uint8_t { <b>Header</b> = 1
+, <b>Audio</b> = 2
+, <b>Meta</b> = 3
+, <b>Undefined</b> = 0
+ }</td></tr>
+<tr class="separator:a4dd4453d1994a706c0eb2350ffa55372"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a031770da453a180e21dcbef5cf5aeab6"><td class="memItemLeft" align="right" valign="top"><a id="a031770da453a180e21dcbef5cf5aeab6"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>FileMode</b> { <b>FILE_READ</b> ='r'
 , <b>FILE_WRITE</b> ='w'
 , <b>FILE_APPEND</b> ='a'
@@ -1466,7 +1489,7 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:ga1857f5fa1f018989102d5a5e3c5cf182"><td class="mdescLeft">&#160;</td><td class="mdescRight">current status of the parsing <br /></td></tr>
 <tr class="separator:ga1857f5fa1f018989102d5a5e3c5cf182"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5cfc25b1f32277d802a787556d072b2"><td class="memItemLeft" align="right" valign="top"><a id="ac5cfc25b1f32277d802a787556d072b2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>RecordType</b> : uint8_t { <br />
-&#160;&#160;<b>Undefined</b>
+&#160;&#160;<b>Undefined</b> = 0
 , <b>Begin</b>
 , <b>Send</b>
 , <b>Receive</b>
