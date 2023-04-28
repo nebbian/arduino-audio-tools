@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: AudioPrint Class Reference</title>
+<title>arduino-audio-tools: AudioWriterToPrint Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,48 +61,33 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_audio_writer_to_print.html">AudioWriterToPrint</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classaudio__tools_1_1_audio_print-members.html">List of all members</a>  </div>
+<a href="classaudio__tools_1_1_audio_writer_to_print-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">AudioPrint Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">AudioWriterToPrint Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Abstract Audio Ouptut class.  
- <a href="classaudio__tools_1_1_audio_print.html#details">More...</a></p>
+<p>Facade class which lets an <a class="el" href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders.">AudioWriter</a> behave like a <a class="el" href="classaudio__tools_1_1_print.html">Print</a>.  
+ <a href="classaudio__tools_1_1_audio_writer_to_print.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_audio_print_8h_source.html">AudioPrint.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_audio_encoded_8h_source.html">AudioEncoded.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for AudioPrint:</div>
+Inheritance diagram for AudioWriterToPrint:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_audio_print.png" usemap="#AudioPrint_map" alt=""/>
-  <map id="AudioPrint_map" name="AudioPrint_map">
-<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,202,24"/>
-<area href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoDependent" shape="rect" coords="212,0,414,24"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="424,0,626,24"/>
-<area href="classaudio__tools_1_1_adapter_audio_stream_to_audio_print.html" title="Wrapper which converts a AudioStream to a AudioPrint." alt="AdapterAudioStreamToAudioPrint" shape="rect" coords="424,112,626,136"/>
-<area href="classaudio__tools_1_1_adapter_print_to_audio_print.html" title="Wrapper which converts a Print to a AudioPrint." alt="AdapterPrintToAudioPrint" shape="rect" coords="424,168,626,192"/>
-<area href="classaudio__tools_1_1_audio_f_f_t_base.html" title="Executes FFT using audio data. The Driver which is passed in the constructor selects a specifc FFT im..." alt="AudioFFTBase" shape="rect" coords="424,224,626,248"/>
-<area href="classaudio__tools_1_1_audio_server_ex.html" title="A powerfull Web server which is based on https://github.com/pschatzmann/TinyHttp. It supports multipl..." alt="AudioServerEx" shape="rect" coords="424,280,626,304"/>
-<area href="classaudio__tools_1_1_audio_sync_writer.html" title="Audio Writer which is synchronizing the amount of data that can be processed with the AudioReceiver." alt="AudioSyncWriter" shape="rect" coords="424,336,626,360"/>
-<area href="classaudio__tools_1_1_audio_writer_to_print.html" title="Facade class which lets an AudioWriter behave like a Print." alt="AudioWriterToPrint" shape="rect" coords="424,392,626,416"/>
-<area href="classaudio__tools_1_1_csv_stream.html" title="Stream Wrapper which can be used to print the values as readable ASCII to the screen to be analyzed i..." alt="CsvStream&lt; T &gt;" shape="rect" coords="424,448,626,472"/>
-<area href="classaudio__tools_1_1_hex_dump_stream.html" title="Creates a Hex Dump." alt="HexDumpStream" shape="rect" coords="424,504,626,528"/>
-<area href="classaudio__tools_1_1_memory_print.html" title="Prints to a preallocated memory." alt="MemoryPrint" shape="rect" coords="424,560,626,584"/>
-<area href="classaudio__tools_1_1_meta_data_print.html" title="ID3 and Icecast/Shoutcast metadata output support. Just write the audio data to an object of this cla..." alt="MetaDataPrint" shape="rect" coords="424,616,626,640"/>
-<area href="classaudio__tools_1_1_multi_output.html" title="Replicates the output to multiple destinations." alt="MultiOutput" shape="rect" coords="424,672,626,696"/>
-<area href="classaudio__tools_1_1_p_w_m_audio_stream.html" title="Common functionality for PWM output. Please use the PWMAudioStream typedef instead which references t..." alt="PWMAudioStream" shape="rect" coords="424,728,626,752"/>
-<area href="classaudio__tools_1_1_pitch_shift_stream.html" title="Pitch Shift: Shifts the frequency up or down w/o impacting the length! We reduce the channels to 1 to..." alt="PitchShiftStream&lt; T, BufferT &gt;" shape="rect" coords="424,784,626,808"/>
-<area href="classaudio__tools_1_1_r_t_s_p_stream.html" title="We can write PCM data to the RTSPStream. This is encoded by the indicated encoder (e...." alt="RTSPStream" shape="rect" coords="424,840,626,864"/>
-<area href="classaudio__tools_1_1_transformation_reader_1_1_adapter_print_to_array.html" alt="TransformationReader&lt; T &gt;::AdapterPrintToArray" shape="rect" coords="424,896,626,920"/>
-<area href="classaudio__tools_1_1_volume_print.html" title="A simple class to determine the volume." alt="VolumePrint" shape="rect" coords="424,952,626,976"/>
+  <img src="classaudio__tools_1_1_audio_writer_to_print.png" usemap="#AudioWriterToPrint_map" alt=""/>
+  <map id="AudioWriterToPrint_map" name="AudioWriterToPrint_map">
+<area href="classaudio__tools_1_1_audio_print.html" title="Abstract Audio Ouptut class." alt="AudioPrint" shape="rect" coords="137,56,264,80"/>
+<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,127,24"/>
+<area href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoDependent" shape="rect" coords="137,0,264,24"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="274,0,401,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -133,12 +118,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo<
 <tr class="memitem:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memItemLeft" align="right" valign="top"><a id="a5ee65428f7ce3ff5deac4e5d380f3899"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
 <tr class="separator:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c6c1699ecadd440bd1f3e49e7f50489"><td class="memItemLeft" align="right" valign="top"><a id="a8c6c1699ecadd440bd1f3e49e7f50489"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWriter</b> (<a class="el" href="classaudio__tools_1_1_audio_writer.html">AudioWriter</a> *writer)</td></tr>
+<tr class="separator:a8c6c1699ecadd440bd1f3e49e7f50489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a989540d43150595fdde26c8f37265069"><td class="memItemLeft" align="right" valign="top"><a id="a989540d43150595fdde26c8f37265069"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> &amp;info)</td></tr>
 <tr class="separator:a989540d43150595fdde26c8f37265069"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dc19ad83d7464f1a4c104d76ba37aa7"><td class="memItemLeft" align="right" valign="top"><a id="a2dc19ad83d7464f1a4c104d76ba37aa7"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t size) override=0</td></tr>
-<tr class="separator:a2dc19ad83d7464f1a4c104d76ba37aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b21ccb4609e4a0b98e90889ec2a5a0"><td class="memItemLeft" align="right" valign="top"><a id="a94b21ccb4609e4a0b98e90889ec2a5a0"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *in_ptr, size_t in_size)</td></tr>
+<tr class="separator:a94b21ccb4609e4a0b98e90889ec2a5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
 <tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,6 +141,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a730e51923397df1fcde4120d626d8318"><td class="memItemLeft" align="right" valign="top"><a id="a730e51923397df1fcde4120d626d8318"></a>
+<a class="el" href="classaudio__tools_1_1_audio_writer.html">AudioWriter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_writer</b> = nullptr</td></tr>
+<tr class="separator:a730e51923397df1fcde4120d626d8318"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
 <a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
 <tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,7 +152,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>tmpPos</b> =0</td></tr
 <tr class="separator:a5c8bfed099f70e8b41e7ddcd5578fedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract Audio Ouptut class. </p>
+<div class="textblock"><p>Facade class which lets an <a class="el" href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders.">AudioWriter</a> behave like a <a class="el" href="classaudio__tools_1_1_print.html">Print</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
@@ -184,7 +175,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>tmpPos</b> =0</td></tr
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -199,7 +190,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>tmpPos</b> =0</td></tr
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/AudioTools/<a class="el" href="_audio_print_8h_source.html">AudioPrint.h</a></li>
+<li>src/AudioCodecs/<a class="el" href="_audio_encoded_8h_source.html">AudioEncoded.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

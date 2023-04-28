@@ -67,13 +67,14 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_container_target-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ContainerTarget Class Reference</div>  </div>
+<div class="title">ContainerTarget Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classaudio__tools_1_1_container_target.html" title="ContainerTarget: forwards requests to both the output and the encoder/decoder.">ContainerTarget</a>: forwards requests to both the output and the encoder/decoder.  
+<p><a class="el" href="classaudio__tools_1_1_container_target.html" title="ContainerTarget: forwards requests to both the output and the encoder/decoder and sets up the output ...">ContainerTarget</a>: forwards requests to both the output and the encoder/decoder and sets up the output chain for Containers. We also manage the proper sequence of the output classes.  
  <a href="classaudio__tools_1_1_container_target.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_audio_encoded_8h_source.html">AudioEncoded.h</a>&gt;</code></p>
@@ -83,30 +84,47 @@ Inheritance diagram for ContainerTarget:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_container_target.png" usemap="#ContainerTarget_map" alt=""/>
   <map id="ContainerTarget_map" name="ContainerTarget_map">
-<area href="classaudio__tools_1_1_container_target_audio_print.html" alt="ContainerTargetAudioPrint" shape="rect" coords="0,56,175,80"/>
-<area href="classaudio__tools_1_1_container_target_audio_stream.html" alt="ContainerTargetAudioStream" shape="rect" coords="185,56,360,80"/>
-<area href="classaudio__tools_1_1_container_target_audio_writer.html" alt="ContainerTargetAudioWriter" shape="rect" coords="370,56,545,80"/>
-<area href="classaudio__tools_1_1_container_target_print.html" alt="ContainerTargetPrint" shape="rect" coords="555,56,730,80"/>
+<area href="classaudio__tools_1_1_container_target_print.html" alt="ContainerTargetPrint" shape="rect" coords="0,56,129,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
-<tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a0d9ca63f8bb3de100e347c3f3bca4"><td class="memItemLeft" align="right" valign="top"><a id="ae8a0d9ca63f8bb3de100e347c3f3bca4"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()=0</td></tr>
+<tr class="separator:ae8a0d9ca63f8bb3de100e347c3f3bca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa540e86022c1f72380d1014d98f38f43"><td class="memItemLeft" align="right" valign="top"><a id="aa540e86022c1f72380d1014d98f38f43"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()=0</td></tr>
+<tr class="separator:aa540e86022c1f72380d1014d98f38f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87feead15897a49c7dccb043ac9fcddc"><td class="memItemLeft" align="right" valign="top"><a id="a87feead15897a49c7dccb043ac9fcddc"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="separator:a87feead15897a49c7dccb043ac9fcddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d721a9bbfbb034ccb921fc30f2f073b"><td class="memItemLeft" align="right" valign="top"><a id="a2d721a9bbfbb034ccb921fc30f2f073b"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t *data, size_t size)</td></tr>
-<tr class="separator:a2d721a9bbfbb034ccb921fc30f2f073b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2255db228c096b23fb954435facd7f35"><td class="memItemLeft" align="right" valign="top"><a id="a2255db228c096b23fb954435facd7f35"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t *data, size_t size)=0</td></tr>
+<tr class="separator:a2255db228c096b23fb954435facd7f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memItemLeft" align="right" valign="top"><a id="a03c996f9fcf0e10baeb3e700be0c409a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</td></tr>
+<tr class="separator:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16af2102e1a626b02cce784f61343180"><td class="memItemLeft" align="right" valign="top"><a id="a16af2102e1a626b02cce784f61343180"></a>
+<a class="el" href="classaudio__tools_1_1_audio_writer.html">AudioWriter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_writer1</b> = nullptr</td></tr>
+<tr class="separator:a16af2102e1a626b02cce784f61343180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac59eb1d5ea845d0970bae21a75934a"><td class="memItemLeft" align="right" valign="top"><a id="a0ac59eb1d5ea845d0970bae21a75934a"></a>
+<a class="el" href="classaudio__tools_1_1_audio_writer.html">AudioWriter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_writer2</b> = nullptr</td></tr>
+<tr class="separator:a0ac59eb1d5ea845d0970bae21a75934a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea981f2e4f7504a4cea7f9c2100ed823"><td class="memItemLeft" align="right" valign="top"><a id="aea981f2e4f7504a4cea7f9c2100ed823"></a>
+<a class="el" href="classaudio__tools_1_1_audio_writer_to_print.html">AudioWriterToPrint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>print2</b></td></tr>
+<tr class="separator:aea981f2e4f7504a4cea7f9c2100ed823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classaudio__tools_1_1_container_target.html" title="ContainerTarget: forwards requests to both the output and the encoder/decoder.">ContainerTarget</a>: forwards requests to both the output and the encoder/decoder. </p>
+<div class="textblock"><p><a class="el" href="classaudio__tools_1_1_container_target.html" title="ContainerTarget: forwards requests to both the output and the encoder/decoder and sets up the output ...">ContainerTarget</a>: forwards requests to both the output and the encoder/decoder and sets up the output chain for Containers. We also manage the proper sequence of the output classes. </p>
+<dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioCodecs/<a class="el" href="_audio_encoded_8h_source.html">AudioEncoded.h</a></li>
 </ul>
