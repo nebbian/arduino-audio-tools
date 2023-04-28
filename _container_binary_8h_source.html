@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordtype">void</span> setupIntialOutputStream(Print &amp;outStream) {</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    p_print1 = p_codec;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    p_print2 = <span class="keyword">this</span>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">if</span> (p_codec)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">if</span> (p_codec!=<span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      target.setupOutput(p_print1, p_print2, outStream);</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      target.setupOutput(p_print2, outStream);</div>
@@ -316,159 +316,160 @@ $(function() {
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordtype">void</span> setupIntialOutputStream(Print &amp;outStream) {</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    p_out = &amp;outStream;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    p_print1 = <span class="keyword">this</span>;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">if</span> (p_codec != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      p_print2 = p_codec;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">if</span> (p_codec != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      p_print1 = p_codec;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      p_print2 = <span class="keyword">this</span>;</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      target.setupOutput(p_print1, p_print2, outStream);</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      target.setupOutput(p_print1, outStream);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    is_initial_output = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  }</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="comment">// loads the data into the buffer and writes it if complete</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  ProcessedResult processData(uint8_t *data8, <span class="keywordtype">size_t</span> len) {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    ProcessedResult result = loadData(data8, len);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    writeData(result);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="comment">// loads the data</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  ProcessedResult loadData(uint8_t *data8, <span class="keywordtype">size_t</span> len) {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    ProcessedResult result;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">if</span> (data8[0] == <span class="charliteral">&#39;\n&#39;</span>) {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      memcpy(&amp;header, data8, header_size);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      result.total_len = header_size + header.len;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      LOGD(<span class="stringliteral">&quot;header.len: %d, result.total_len: %d, len: %d&quot;</span>, (<span class="keywordtype">int</span>)header.len,</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;           (<span class="keywordtype">int</span>)result.total_len, (<span class="keywordtype">int</span>)len);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      <span class="keywordflow">if</span> (result.total_len &lt;= len) {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        result.processed = result.total_len;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        result.open = 0;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        result.processed = len;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        result.open = result.total_len - len;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      }</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      result.type = checkType(header.type);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      <span class="keywordflow">if</span> (result.type != Undefined) {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        LOGD(<span class="stringliteral">&quot;header.len: %d&quot;</span>, header.len);</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">if</span> (frame.size() &lt; header.len) {</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;          frame.resize(header.len);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        }</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">if</span> (result.processed - header_size &gt; 0)</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;          frame.<a class="code" href="classaudio__tools_1_1_base_buffer.html#abbf71ea4af74621fee6e0dfbed215245">writeArray</a>(data8 + header_size, result.processed - header_size);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      }</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      LOGW(<span class="stringliteral">&quot;data ignored&quot;</span>);</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      result.type = Undefined;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    }</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  }</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="comment">// processes the completed data from frame buffer: e.g. writes it to the</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <span class="comment">// output</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <span class="keywordtype">bool</span> writeData(ProcessedResult result) {</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">bool</span> rc = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">if</span> (result.open == 0 &amp;&amp; frame.<a class="code" href="classaudio__tools_1_1_single_buffer.html#a4549a76725f2e4c013e4d57018366109">available</a>() &gt; 0) {</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      TRACED();</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      <span class="keywordflow">switch</span> (result.type) {</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">case</span> Header: {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;          LOGD(<span class="stringliteral">&quot;Header&quot;</span>);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;          <span class="comment">// We expect that the header is never split because it is at the</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;          <span class="comment">// start</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;          SimpleContainerConfig config;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;          assert(result.open == 0);</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;          memmove(&amp;config, frame.data(), <span class="keyword">sizeof</span>(config));</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;          info = config.info;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;          <span class="keywordflow">if</span> (p_notify) {</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            p_notify-&gt;setAudioInfo(info);</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;          }</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;          info.logInfo();</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;          frame.<a class="code" href="classaudio__tools_1_1_base_buffer.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;          rc = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        } <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">case</span> Audio: {</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;          LOGD(<span class="stringliteral">&quot;Audio&quot;</span>);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;          output(frame.data(), frame.<a class="code" href="classaudio__tools_1_1_single_buffer.html#a4549a76725f2e4c013e4d57018366109">available</a>());</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;          frame.<a class="code" href="classaudio__tools_1_1_base_buffer.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;          rc = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        } <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="class_meta.html">Meta</a>: {</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;          LOGD(<span class="stringliteral">&quot;Meta&quot;</span>);</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;          <span class="keywordflow">if</span> (meta_callback) {</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            meta_callback(frame.data(), frame.<a class="code" href="classaudio__tools_1_1_single_buffer.html#a4549a76725f2e4c013e4d57018366109">available</a>());</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;          }</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;          frame.<a class="code" href="classaudio__tools_1_1_base_buffer.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;          rc = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        } <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      }</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    }</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">return</span> rc;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  }</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  <span class="comment">// processes the reaminder of a split segment</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  ProcessedResult processOpen(ProcessedResult in, uint8_t *data8, <span class="keywordtype">size_t</span> len) {</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    ProcessedResult result = loadOpen(in, data8, len);</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    writeData(result);</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  }</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  <span class="comment">// if a segment is split we process the remaining missing part</span></div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  ProcessedResult loadOpen(ProcessedResult in, uint8_t *data8, <span class="keywordtype">size_t</span> len) {</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    ProcessedResult result = in;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordtype">int</span> to_process;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordflow">if</span> (in.open &lt;= len) {</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      result.open = 0;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      result.processed = in.open;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      result.open = in.open - len;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      result.processed = len;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    }</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    LOGD(<span class="stringliteral">&quot;in.type: %d, len: %d&quot;</span>, in.type, result.processed);</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">if</span> (in.type != Undefined) {</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;      frame.<a class="code" href="classaudio__tools_1_1_base_buffer.html#abbf71ea4af74621fee6e0dfbed215245">writeArray</a>(data8, result.processed);</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      LOGW(<span class="stringliteral">&quot;Unsupported tye&quot;</span>);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    }</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  }</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  <span class="comment">// checks the type</span></div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  ContainerType checkType(ContainerType type) {</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    ContainerType result = Undefined;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">switch</span> (header.type) {</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;      <span class="keywordflow">case</span> Header:</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        result = Header;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;      <span class="keywordflow">case</span> Audio:</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        result = Audio;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      <span class="keywordflow">case</span> <a class="code" href="class_meta.html">Meta</a>:</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        result = <a class="code" href="class_meta.html">Meta</a>;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    }</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  }</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="comment">// writes the data to the decoder which forwards it to the output; if there</span></div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  <span class="comment">// is no coded we write to the output instead</span></div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  <span class="keywordtype">size_t</span> output(uint8_t *data, <span class="keywordtype">size_t</span> len) {</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    LOGD(<span class="stringliteral">&quot;BinaryContainerDecoder::output: %d&quot;</span>, (<span class="keywordtype">int</span>)len);</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keywordflow">if</span> (p_final_print != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;      p_final_print-&gt;write((uint8_t *)data, len);</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;      LOGW(<span class="stringliteral">&quot;output not defined&quot;</span>);</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160; </div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">return</span> len;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  }</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;};</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      p_print1 = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      target.setupOutput(p_print1, outStream);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    is_initial_output = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="comment">// loads the data into the buffer and writes it if complete</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  ProcessedResult processData(uint8_t *data8, <span class="keywordtype">size_t</span> len) {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    ProcessedResult result = loadData(data8, len);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    writeData(result);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="comment">// loads the data</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  ProcessedResult loadData(uint8_t *data8, <span class="keywordtype">size_t</span> len) {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    ProcessedResult result;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">if</span> (data8[0] == <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      memcpy(&amp;header, data8, header_size);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      result.total_len = header_size + header.len;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      LOGD(<span class="stringliteral">&quot;header.len: %d, result.total_len: %d, len: %d&quot;</span>, (<span class="keywordtype">int</span>)header.len,</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;           (<span class="keywordtype">int</span>)result.total_len, (<span class="keywordtype">int</span>)len);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      <span class="keywordflow">if</span> (result.total_len &lt;= len) {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        result.processed = result.total_len;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        result.open = 0;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        result.processed = len;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        result.open = result.total_len - len;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      result.type = checkType(header.type);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      <span class="keywordflow">if</span> (result.type != Undefined) {</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        LOGD(<span class="stringliteral">&quot;header.len: %d&quot;</span>, header.len);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordflow">if</span> (frame.size() &lt; header.len) {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;          frame.resize(header.len);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">if</span> (result.processed - header_size &gt; 0)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;          frame.<a class="code" href="classaudio__tools_1_1_base_buffer.html#abbf71ea4af74621fee6e0dfbed215245">writeArray</a>(data8 + header_size, result.processed - header_size);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      LOGW(<span class="stringliteral">&quot;data ignored&quot;</span>);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;      result.type = Undefined;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    }</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  }</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <span class="comment">// processes the completed data from frame buffer: e.g. writes it to the</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <span class="comment">// output</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  <span class="keywordtype">bool</span> writeData(ProcessedResult result) {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordtype">bool</span> rc = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">if</span> (result.open == 0 &amp;&amp; frame.<a class="code" href="classaudio__tools_1_1_single_buffer.html#a4549a76725f2e4c013e4d57018366109">available</a>() &gt; 0) {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      TRACED();</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      <span class="keywordflow">switch</span> (result.type) {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keywordflow">case</span> Header: {</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;          LOGD(<span class="stringliteral">&quot;Header&quot;</span>);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;          <span class="comment">// We expect that the header is never split because it is at the</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;          <span class="comment">// start</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;          SimpleContainerConfig config;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;          assert(result.open == 0);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;          memmove(&amp;config, frame.data(), <span class="keyword">sizeof</span>(config));</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;          info = config.info;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;          <span class="keywordflow">if</span> (p_notify) {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            p_notify-&gt;setAudioInfo(info);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;          }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;          info.logInfo();</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;          frame.<a class="code" href="classaudio__tools_1_1_base_buffer.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;          rc = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordflow">case</span> Audio: {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;          LOGD(<span class="stringliteral">&quot;Audio&quot;</span>);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;          output(frame.data(), frame.<a class="code" href="classaudio__tools_1_1_single_buffer.html#a4549a76725f2e4c013e4d57018366109">available</a>());</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;          frame.<a class="code" href="classaudio__tools_1_1_base_buffer.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;          rc = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="class_meta.html">Meta</a>: {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;          LOGD(<span class="stringliteral">&quot;Meta&quot;</span>);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;          <span class="keywordflow">if</span> (meta_callback) {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            meta_callback(frame.data(), frame.<a class="code" href="classaudio__tools_1_1_single_buffer.html#a4549a76725f2e4c013e4d57018366109">available</a>());</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;          }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;          frame.<a class="code" href="classaudio__tools_1_1_base_buffer.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;          rc = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      }</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordflow">return</span> rc;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  <span class="comment">// processes the reaminder of a split segment</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  ProcessedResult processOpen(ProcessedResult in, uint8_t *data8, <span class="keywordtype">size_t</span> len) {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    ProcessedResult result = loadOpen(in, data8, len);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    writeData(result);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  <span class="comment">// if a segment is split we process the remaining missing part</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  ProcessedResult loadOpen(ProcessedResult in, uint8_t *data8, <span class="keywordtype">size_t</span> len) {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    ProcessedResult result = in;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordtype">int</span> to_process;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordflow">if</span> (in.open &lt;= len) {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      result.open = 0;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      result.processed = in.open;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      result.open = in.open - len;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      result.processed = len;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    }</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    LOGD(<span class="stringliteral">&quot;in.type: %d, len: %d&quot;</span>, in.type, result.processed);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordflow">if</span> (in.type != Undefined) {</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;      frame.<a class="code" href="classaudio__tools_1_1_base_buffer.html#abbf71ea4af74621fee6e0dfbed215245">writeArray</a>(data8, result.processed);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;      LOGW(<span class="stringliteral">&quot;Unsupported tye&quot;</span>);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    }</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  <span class="comment">// checks the type</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  ContainerType checkType(ContainerType type) {</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    ContainerType result = Undefined;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">switch</span> (header.type) {</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;      <span class="keywordflow">case</span> Header:</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        result = Header;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;      <span class="keywordflow">case</span> Audio:</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        result = Audio;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;      <span class="keywordflow">case</span> <a class="code" href="class_meta.html">Meta</a>:</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        result = <a class="code" href="class_meta.html">Meta</a>;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    }</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  }</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  <span class="comment">// writes the data to the decoder which forwards it to the output; if there</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  <span class="comment">// is no coded we write to the output instead</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  <span class="keywordtype">size_t</span> output(uint8_t *data, <span class="keywordtype">size_t</span> len) {</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    LOGD(<span class="stringliteral">&quot;BinaryContainerDecoder::output: %d&quot;</span>, (<span class="keywordtype">int</span>)len);</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">if</span> (p_final_print != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;      p_final_print-&gt;write((uint8_t *)data, len);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;      LOGW(<span class="stringliteral">&quot;output not defined&quot;</span>);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="keywordflow">return</span> len;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  }</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;};</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclass_meta_html"><div class="ttname"><a href="class_meta.html">Meta</a></div><div class="ttdoc">minimial implementtion of Meta which just ignores the data</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:39</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:16</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_encoder.html">audio_tools::AudioEncoder</a></div><div class="ttdoc">Encoding of PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:70</div></div>
