@@ -161,7 +161,7 @@ $(function() {
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">// we make sure that we return one sample for each </span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment">// requested number of channels sequentially</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        int16_t updateSample(){</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            AudioOutput out = info.updateAudio();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <a class="code" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> out = info.updateAudio();</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="comment">// requested mono</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            int16_t result = 0;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">            #if (AUDIO_CHANNELS == MONO)</span></div>
@@ -337,6 +337,7 @@ $(function() {
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;} <span class="comment">// Namespace</span></div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_output_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_output.html">audio_tools::AudioOutput</a></div><div class="ttdoc">Abstract Audio Ouptut class.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:23</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream.html">audio_tools::AudioStream</a></div><div class="ttdoc">Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:40</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_mozzi_generator_html"><div class="ttname"><a href="classaudio__tools_1_1_mozzi_generator.html">audio_tools::MozziGenerator</a></div><div class="ttdoc">Support for https://sensorium.github.io/Mozzi/ Define your updateControl() method....</div><div class="ttdef"><b>Definition:</b> AudioMozzi.h:38</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_mozzi_generator_html_a041dde89254164d0ad83b1cf54bfaa6d"><div class="ttname"><a href="classaudio__tools_1_1_mozzi_generator.html#a041dde89254164d0ad83b1cf54bfaa6d">audio_tools::MozziGenerator::readSample</a></div><div class="ttdeci">virtual int16_t readSample()</div><div class="ttdoc">Provides a single sample.</div><div class="ttdef"><b>Definition:</b> AudioMozzi.h:71</div></div>

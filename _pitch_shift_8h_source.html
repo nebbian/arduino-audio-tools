@@ -412,9 +412,9 @@ $(function() {
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;};</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">class</span> BufferT&gt;</div>
-<div class="line"><a name="l00389"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_pitch_shift_stream.html">  389</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_pitch_shift_stream.html">PitchShiftStream</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_print.html">AudioPrint</a> {</div>
+<div class="line"><a name="l00389"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_pitch_shift_output.html">  389</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_pitch_shift_output.html">PitchShiftOutput</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> {</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  <a class="code" href="classaudio__tools_1_1_pitch_shift_stream.html">PitchShiftStream</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out) { p_out = &amp;out; }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  <a class="code" href="classaudio__tools_1_1_pitch_shift_output.html">PitchShiftOutput</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out) { p_out = &amp;out; }</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160; </div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  <a class="code" href="structaudio__tools_1_1_pitch_shift_info.html">PitchShiftInfo</a> defaultConfig() {</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <a class="code" href="structaudio__tools_1_1_pitch_shift_info.html">PitchShiftInfo</a> result;</div>
@@ -425,7 +425,7 @@ $(function() {
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_pitch_shift_info.html">PitchShiftInfo</a> info) {</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    TRACED();</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    cfg = info;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    AudioPrint::setAudioInfo(info);</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    AudioOutput::setAudioInfo(info);</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    buffer.resize(info.buffer_size);</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    buffer.reset();</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    buffer.setIncrement(info.pitch_shift);</div>
@@ -453,7 +453,7 @@ $(function() {
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;      <span class="comment">// output values</span></div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      T out_value = pitchShift(value);</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      LOGD(<span class="stringliteral">&quot;PitchShiftStream %d -&gt; %d&quot;</span>, value, out_value);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      LOGD(<span class="stringliteral">&quot;PitchShiftOutput %d -&gt; %d&quot;</span>, value, out_value);</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      T out_array[channels];</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; channels; ch++) {</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        out_array[ch] = out_value;</div>
@@ -484,9 +484,9 @@ $(function() {
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;};</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160; </div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_print_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_print.html">audio_tools::AudioPrint</a></div><div class="ttdoc">Abstract Audio Ouptut class.</div><div class="ttdef"><b>Definition:</b> AudioPrint.h:23</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_output_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_output.html">audio_tools::AudioOutput</a></div><div class="ttdoc">Abstract Audio Ouptut class.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:23</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html">audio_tools::BaseBuffer</a></div><div class="ttdoc">Shared functionality of all buffers.</div><div class="ttdef"><b>Definition:</b> Buffers.h:30</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_pitch_shift_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_pitch_shift_stream.html">audio_tools::PitchShiftStream</a></div><div class="ttdoc">Pitch Shift: Shifts the frequency up or down w/o impacting the length! We reduce the channels to 1 to...</div><div class="ttdef"><b>Definition:</b> PitchShift.h:389</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_pitch_shift_output_html"><div class="ttname"><a href="classaudio__tools_1_1_pitch_shift_output.html">audio_tools::PitchShiftOutput</a></div><div class="ttdoc">Pitch Shift: Shifts the frequency up or down w/o impacting the length! We reduce the channels to 1 to...</div><div class="ttdef"><b>Definition:</b> PitchShift.h:389</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:51</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_variable_speed_ring_buffer180_html"><div class="ttname"><a href="classaudio__tools_1_1_variable_speed_ring_buffer180.html">audio_tools::VariableSpeedRingBuffer180</a></div><div class="ttdoc">Varialbe speed ring buffer where we read with 0 and 180 degree and blend the result to prevent overru...</div><div class="ttdef"><b>Definition:</b> PitchShift.h:106</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_variable_speed_ring_buffer180_html_a473a08fbb41a997860a55213bc367d44"><div class="ttname"><a href="classaudio__tools_1_1_variable_speed_ring_buffer180.html#a473a08fbb41a997860a55213bc367d44">audio_tools::VariableSpeedRingBuffer180::availableForWrite</a></div><div class="ttdeci">virtual int availableForWrite()</div><div class="ttdoc">provides the number of entries that are available to write</div><div class="ttdef"><b>Definition:</b> PitchShift.h:152</div></div>
@@ -523,7 +523,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html"><div class="ttname"><a href="classaudio__tools_1_1_vector.html">audio_tools::Vector</a></div><div class="ttdoc">Vector implementation which provides the most important methods as defined by std::vector....</div><div class="ttdef"><b>Definition:</b> Vector.h:16</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:9</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:33</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_pitch_shift_info_html"><div class="ttname"><a href="structaudio__tools_1_1_pitch_shift_info.html">audio_tools::PitchShiftInfo</a></div><div class="ttdoc">Configuration for PitchShiftStream: set the pitch_shift to define the shift.</div><div class="ttdef"><b>Definition:</b> PitchShift.h:15</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_pitch_shift_info_html"><div class="ttname"><a href="structaudio__tools_1_1_pitch_shift_info.html">audio_tools::PitchShiftInfo</a></div><div class="ttdoc">Configuration for PitchShiftOutput: set the pitch_shift to define the shift.</div><div class="ttdef"><b>Definition:</b> PitchShift.h:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
