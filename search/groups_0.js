@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['8bit_2450',['8Bit',['../group__codecs8bit.html',1,'']]]
+  ['arduino_20audio_20tools_2430',['Arduino Audio Tools',['../group__main.html',1,'']]]
 ];

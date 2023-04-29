@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['base64_2453',['Base64',['../group__codecsbase64.html',1,'']]],
-  ['basic_2454',['Basic',['../group__basic.html',1,'']]],
-  ['buffers_2455',['Buffers',['../group__buffers.html',1,'']]]
+  ['cmsis_2433',['CMSIS',['../group__fft-cmsis.html',1,'']]],
+  ['codecs_2434',['Codecs',['../group__codecs.html',1,'']]],
+  ['collections_2435',['Collections',['../group__collections.html',1,'']]],
+  ['communications_2436',['Communications',['../group__communications.html',1,'']]],
+  ['converters_2437',['Converters',['../group__convert.html',1,'']]],
+  ['converting_20streams_2438',['Converting Streams',['../group__transform.html',1,'']]]
 ];

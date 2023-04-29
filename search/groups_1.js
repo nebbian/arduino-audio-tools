@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['aptx_2451',['AptX',['../group__aptx.html',1,'']]],
-  ['arduino_20audio_20tools_2452',['Arduino Audio Tools',['../group__main.html',1,'']]]
+  ['basic_2431',['Basic',['../group__basic.html',1,'']]],
+  ['buffers_2432',['Buffers',['../group__buffers.html',1,'']]]
 ];

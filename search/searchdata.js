@@ -1,6 +1,6 @@
 var indexSectionsWithContent =
 {
-  0: "8_abcdefghijklmnopqrstuvwxy~",
+  0: "_abcdefghijklmnopqrstuvwxy~",
   1: "abcdefghijklmnopqrstuvw",
   2: "a",
   3: "acfnr",
@@ -9,7 +9,7 @@ var indexSectionsWithContent =
   6: "apt",
   7: "cgimprt",
   8: "d",
-  9: "8abcdefghiklmoprstvw",
+  9: "abcdefghikmprstv",
   10: "a"
 };
 

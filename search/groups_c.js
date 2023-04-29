@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['machine_20learning_2488',['Machine Learning',['../group__ml.html',1,'']]],
-  ['mad_2489',['MAD',['../group__codec-mad.html',1,'']]],
-  ['metadata_2490',['Metadata',['../group__metadata.html',1,'']]],
-  ['mini_2dmp3_2491',['Mini-mp3',['../group__codec-mini.html',1,'']]]
+  ['real_2458',['Real',['../group__fft-real.html',1,'']]],
+  ['rtsp_20streaming_2459',['RTSP Streaming',['../group__rtsp.html',1,'']]]
 ];

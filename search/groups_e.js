@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['platform_2493',['Platform',['../group__platform.html',1,'']]],
-  ['player_2494',['Player',['../group__player.html',1,'']]]
+  ['tflite_2461',['TFLite',['../group__tflite.html',1,'']]],
+  ['timers_2462',['Timers',['../group__timer.html',1,'']]],
+  ['tools_2463',['Tools',['../group__tools.html',1,'']]]
 ];

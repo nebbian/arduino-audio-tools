@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opus_2492',['OPUS',['../group__codec-opus.html',1,'']]]
+  ['strings_2460',['Strings',['../group__string.html',1,'']]]
 ];
