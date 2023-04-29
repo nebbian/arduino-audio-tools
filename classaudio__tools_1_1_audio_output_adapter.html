@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: AdapterPrintToAudioOutput Class Reference</title>
+<title>arduino-audio-tools: AudioOutputAdapter Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,42 +61,42 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_adapter_print_to_audio_output.html">AdapterPrintToAudioOutput</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_audio_output_adapter.html">AudioOutputAdapter</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classaudio__tools_1_1_adapter_print_to_audio_output-members.html">List of all members</a>  </div>
+<a href="classaudio__tools_1_1_audio_output_adapter-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">AdapterPrintToAudioOutput Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__tools.html">Tools</a></div></div>  </div>
+<div class="title">AudioOutputAdapter Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Wrapper which converts a <a class="el" href="classaudio__tools_1_1_print.html">Print</a> to a <a class="el" href="classaudio__tools_1_1_audio_output.html" title="Abstract Audio Ouptut class.">AudioOutput</a>.  
- <a href="classaudio__tools_1_1_adapter_print_to_audio_output.html#details">More...</a></p>
+<p>Base class for Output Adpapters.  
+ <a href="classaudio__tools_1_1_audio_output_adapter.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_audio_output_8h_source.html">AudioOutput.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for AdapterPrintToAudioOutput:</div>
+Inheritance diagram for AudioOutputAdapter:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_adapter_print_to_audio_output.png" usemap="#AdapterPrintToAudioOutput_map" alt=""/>
-  <map id="AdapterPrintToAudioOutput_map" name="AdapterPrintToAudioOutput_map">
-<area href="classaudio__tools_1_1_audio_output_adapter.html" title="Base class for Output Adpapters." alt="AudioOutputAdapter" shape="rect" coords="177,112,344,136"/>
-<area href="classaudio__tools_1_1_audio_output.html" title="Abstract Audio Ouptut class." alt="AudioOutput" shape="rect" coords="177,56,344,80"/>
-<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,167,24"/>
-<area href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoDependent" shape="rect" coords="177,0,344,24"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="354,0,521,24"/>
+  <img src="classaudio__tools_1_1_audio_output_adapter.png" usemap="#AudioOutputAdapter_map" alt=""/>
+  <map id="AudioOutputAdapter_map" name="AudioOutputAdapter_map">
+<area href="classaudio__tools_1_1_audio_output.html" title="Abstract Audio Ouptut class." alt="AudioOutput" shape="rect" coords="334,56,547,80"/>
+<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="111,0,324,24"/>
+<area href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoDependent" shape="rect" coords="334,0,547,24"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="557,0,770,24"/>
+<area href="classaudio__tools_1_1_adapter_audio_stream_to_audio_output.html" title="Wrapper which converts a AudioStream to a AudioOutput." alt="AdapterAudioStreamToAudioOutput" shape="rect" coords="0,168,213,192"/>
+<area href="classaudio__tools_1_1_adapter_print_to_audio_output.html" title="Wrapper which converts a Print to a AudioOutput." alt="AdapterPrintToAudioOutput" shape="rect" coords="223,168,436,192"/>
+<area href="classaudio__tools_1_1_audio_writer_to_audio_output.html" title="Adapter class which lets an AudioWriter behave like a Print." alt="AudioWriterToAudioOutput" shape="rect" coords="446,168,659,192"/>
+<area href="classaudio__tools_1_1_transformation_reader_1_1_adapter_print_to_array.html" alt="TransformationReader&lt; T &gt;::AdapterPrintToArray" shape="rect" coords="669,168,882,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a05c314ff3c362fce35fae8c1aba0d2ba"><td class="memItemLeft" align="right" valign="top"><a id="a05c314ff3c362fce35fae8c1aba0d2ba"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AdapterPrintToAudioOutput</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;print)</td></tr>
-<tr class="separator:a05c314ff3c362fce35fae8c1aba0d2ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
 <tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,21 +113,21 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</t
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
 <tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c6511baf83796cbba956c97935ae39"><td class="memItemLeft" align="right" valign="top"><a id="a33c6511baf83796cbba956c97935ae39"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_adapter_print_to_audio_output.html#a33c6511baf83796cbba956c97935ae39">isDeletable</a> ()</td></tr>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_output.html#a33c6511baf83796cbba956c97935ae39">isDeletable</a> ()</td></tr>
 <tr class="memdesc:a33c6511baf83796cbba956c97935ae39"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true we need to release the related memory in the destructor. <br /></td></tr>
 <tr class="separator:a33c6511baf83796cbba956c97935ae39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e283a9495aaf265739336829d45e215"><td class="memItemLeft" align="right" valign="top"><a id="a5e283a9495aaf265739336829d45e215"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
-<tr class="separator:a5e283a9495aaf265739336829d45e215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
+<tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memItemLeft" align="right" valign="top"><a id="a5ee65428f7ce3ff5deac4e5d380f3899"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
 <tr class="separator:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a989540d43150595fdde26c8f37265069"><td class="memItemLeft" align="right" valign="top"><a id="a989540d43150595fdde26c8f37265069"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> &amp;info)</td></tr>
 <tr class="separator:a989540d43150595fdde26c8f37265069"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c66fc8d559f4956d4ccea196299bca7"><td class="memItemLeft" align="right" valign="top"><a id="a7c66fc8d559f4956d4ccea196299bca7"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t size)</td></tr>
-<tr class="separator:a7c66fc8d559f4956d4ccea196299bca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc19ad83d7464f1a4c104d76ba37aa7"><td class="memItemLeft" align="right" valign="top"><a id="a2dc19ad83d7464f1a4c104d76ba37aa7"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t size) override=0</td></tr>
+<tr class="separator:a2dc19ad83d7464f1a4c104d76ba37aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
 <tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,9 +142,6 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
-<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> =nullptr</td></tr>
-<tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
 <a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
 <tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,7 +150,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>tmpPos</b> =0</td></tr
 <tr class="separator:a5c8bfed099f70e8b41e7ddcd5578fedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Wrapper which converts a <a class="el" href="classaudio__tools_1_1_print.html">Print</a> to a <a class="el" href="classaudio__tools_1_1_audio_output.html" title="Abstract Audio Ouptut class.">AudioOutput</a>. </p>
+<div class="textblock"><p>Base class for Output Adpapters. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad89418aeb557f65a8f1a0aed755633b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad89418aeb557f65a8f1a0aed755633b1">&#9670;&nbsp;</a></span>writeSilence()</h2>

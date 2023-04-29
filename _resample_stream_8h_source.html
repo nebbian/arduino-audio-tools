@@ -118,7 +118,7 @@ $(function() {
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">int</span> availableForWrite() { <span class="keywordflow">return</span> print_to_array.availableForWrite(); }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_transformation_reader_1_1_adapter_print_to_array.html">   62</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_transformation_reader_1_1_adapter_print_to_array.html">AdapterPrintToArray</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> {</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_transformation_reader_1_1_adapter_print_to_array.html">   62</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_transformation_reader_1_1_adapter_print_to_array.html">AdapterPrintToArray</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_output_adapter.html">AudioOutputAdapter</a> {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> begin(uint8_t *array, <span class="keywordtype">size_t</span> data_len) {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      TRACED();</div>
@@ -408,6 +408,7 @@ $(function() {
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;};</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_output_adapter_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_output_adapter.html">audio_tools::AudioOutputAdapter</a></div><div class="ttdoc">Base class for Output Adpapters.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:299</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_output_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_output.html">audio_tools::AudioOutput</a></div><div class="ttdoc">Abstract Audio Ouptut class.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:23</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream.html">audio_tools::AudioStream</a></div><div class="ttdoc">Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:40</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:51</div></div>
