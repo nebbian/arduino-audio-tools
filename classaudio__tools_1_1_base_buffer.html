@@ -90,10 +90,11 @@ Inheritance diagram for BaseBuffer&lt; T &gt;:</div>
 <area href="classaudio__tools_1_1_variable_speed_ring_buffer.html" alt="VariableSpeedRingBuffer&lt; int16_t &gt;" shape="rect" coords="234,168,458,192"/>
 <area href="classaudio__tools_1_1_n_buffer.html" title="A lock free N buffer. If count=2 we create a DoubleBuffer, if count=3 a TripleBuffer etc." alt="NBuffer&lt; T &gt;" shape="rect" coords="234,224,458,248"/>
 <area href="classaudio__tools_1_1_ring_buffer.html" title="Implements a typed Ringbuffer." alt="RingBuffer&lt; T &gt;" shape="rect" coords="234,280,458,304"/>
-<area href="classaudio__tools_1_1_single_buffer.html" title="A simple Buffer implementation which just uses a (dynamically sized) array." alt="SingleBuffer&lt; T &gt;" shape="rect" coords="234,336,458,360"/>
-<area href="classaudio__tools_1_1_variable_speed_ring_buffer.html" title="Optimized Buffer implementation for Pitch Shift. We try to interpolate the samples and restore the ph..." alt="VariableSpeedRingBuffer&lt; T &gt;" shape="rect" coords="234,392,458,416"/>
-<area href="classaudio__tools_1_1_variable_speed_ring_buffer180.html" title="Varialbe speed ring buffer where we read with 0 and 180 degree and blend the result to prevent overru..." alt="VariableSpeedRingBuffer180&lt; T &gt;" shape="rect" coords="234,448,458,472"/>
-<area href="classaudio__tools_1_1_variable_speed_ring_buffer_simple.html" title="Very Simple Buffer implementation for Pitch Shift. We write in constant speed, but reading can be don..." alt="VariableSpeedRingBufferSimple&lt; T &gt;" shape="rect" coords="234,504,458,528"/>
+<area href="classaudio__tools_1_1_ring_buffer_file.html" title="An File backed Ring Buffer that we can use to receive streaming audio. We expect an open p_file as pa..." alt="RingBufferFile&lt; File, T &gt;" shape="rect" coords="234,336,458,360"/>
+<area href="classaudio__tools_1_1_single_buffer.html" title="A simple Buffer implementation which just uses a (dynamically sized) array." alt="SingleBuffer&lt; T &gt;" shape="rect" coords="234,392,458,416"/>
+<area href="classaudio__tools_1_1_variable_speed_ring_buffer.html" title="Optimized Buffer implementation for Pitch Shift. We try to interpolate the samples and restore the ph..." alt="VariableSpeedRingBuffer&lt; T &gt;" shape="rect" coords="234,448,458,472"/>
+<area href="classaudio__tools_1_1_variable_speed_ring_buffer180.html" title="Varialbe speed ring buffer where we read with 0 and 180 degree and blend the result to prevent overru..." alt="VariableSpeedRingBuffer180&lt; T &gt;" shape="rect" coords="234,504,458,528"/>
+<area href="classaudio__tools_1_1_variable_speed_ring_buffer_simple.html" title="Very Simple Buffer implementation for Pitch Shift. We write in constant speed, but reading can be don..." alt="VariableSpeedRingBufferSimple&lt; T &gt;" shape="rect" coords="234,560,458,584"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -136,10 +137,10 @@ virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#a7b3c05b1c2e4d61cad5f02afba4691cc">read</a> ()=0</td></tr>
 <tr class="memdesc:a7b3c05b1c2e4d61cad5f02afba4691cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads a single value <br /></td></tr>
 <tr class="separator:a7b3c05b1c2e4d61cad5f02afba4691cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af64689a1afcd0edd6cd5a85bc43e323d"><td class="memItemLeft" align="right" valign="top"><a id="af64689a1afcd0edd6cd5a85bc43e323d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#af64689a1afcd0edd6cd5a85bc43e323d">readArray</a> (T data[], int len)</td></tr>
-<tr class="memdesc:af64689a1afcd0edd6cd5a85bc43e323d"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads multiple values <br /></td></tr>
-<tr class="separator:af64689a1afcd0edd6cd5a85bc43e323d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a163c69bc2b88421988d60f4efddb1f3f"><td class="memItemLeft" align="right" valign="top"><a id="a163c69bc2b88421988d60f4efddb1f3f"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a> (T data[], int len)</td></tr>
+<tr class="memdesc:a163c69bc2b88421988d60f4efddb1f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads multiple values <br /></td></tr>
+<tr class="separator:a163c69bc2b88421988d60f4efddb1f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a1bfa2c5cba939eed47428794683f22"><td class="memItemLeft" align="right" valign="top"><a id="a9a1bfa2c5cba939eed47428794683f22"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#a9a1bfa2c5cba939eed47428794683f22">readFrames</a> (T data[][2], int len)</td></tr>
 <tr class="memdesc:a9a1bfa2c5cba939eed47428794683f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads multiple values for array of 2 dimensional frames <br /></td></tr>
@@ -156,10 +157,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#add0fdb7ecaaeadb3a231119d7d602311">write</a> (T data)=0</td></tr>
 <tr class="memdesc:add0fdb7ecaaeadb3a231119d7d602311"><td class="mdescLeft">&#160;</td><td class="mdescRight">write add an entry to the buffer <br /></td></tr>
 <tr class="separator:add0fdb7ecaaeadb3a231119d7d602311"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbf71ea4af74621fee6e0dfbed215245"><td class="memItemLeft" align="right" valign="top"><a id="abbf71ea4af74621fee6e0dfbed215245"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#abbf71ea4af74621fee6e0dfbed215245">writeArray</a> (const T data[], int len)</td></tr>
-<tr class="memdesc:abbf71ea4af74621fee6e0dfbed215245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the data from the buffer. <br /></td></tr>
-<tr class="separator:abbf71ea4af74621fee6e0dfbed215245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b6c561aac2af64aafac1946b6e46393"><td class="memItemLeft" align="right" valign="top"><a id="a2b6c561aac2af64aafac1946b6e46393"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_base_buffer.html#a2b6c561aac2af64aafac1946b6e46393">writeArray</a> (const T data[], int len)</td></tr>
+<tr class="memdesc:a2b6c561aac2af64aafac1946b6e46393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the data from the buffer. <br /></td></tr>
+<tr class="separator:a2b6c561aac2af64aafac1946b6e46393"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>

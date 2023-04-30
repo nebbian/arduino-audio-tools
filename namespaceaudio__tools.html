@@ -969,7 +969,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_lock.html" title="A simple RIA locking class for the ESP32 using _lock_t.">Lock</a> Free <a class="el" href="classaudio__tools_1_1_queue.html" title="FIFO Queue which is based on a List.">Queue</a>.  <a href="classaudio__tools_1_1_queue_lock_free.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue_stream.html">QueueStream</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_audio_output.html" title="Abstract Audio Ouptut class.">AudioOutput</a> class which stores the data in a temporary queue buffer. The queue can be consumed e.g. by a callback function by calling readBytes();.  <a href="classaudio__tools_1_1_queue_stream.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...">AudioStream</a> class which stores the data in a temporary queue buffer. The queue can be consumed e.g. by a callback function by calling readBytes();.  <a href="classaudio__tools_1_1_queue_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_rectange.html">Rectange</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_rectange.html" title="Rectange FFT Window function.">Rectange</a> FFT Window function.  <a href="classaudio__tools_1_1_rectange.html#details">More...</a><br /></td></tr>
@@ -985,6 +985,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a typed Ringbuffer.  <a href="classaudio__tools_1_1_ring_buffer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ring_buffer_file.html">RingBufferFile</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An <a class="el" href="classaudio__tools_1_1_file.html" title="Arduino File support using std::fstream.">File</a> backed Ring Buffer that we can use to receive streaming audio. We expect an open p_file as parameter.  <a href="classaudio__tools_1_1_ring_buffer_file.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ring_buffer_stream.html">RingBufferStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> backed by a Ringbuffer. We can write to the end and read from the beginning of the stream.  <a href="classaudio__tools_1_1_ring_buffer_stream.html#details">More...</a><br /></td></tr>
@@ -1200,6 +1203,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_throttle_config.html">ThrottleConfig</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure <a class="el" href="classaudio__tools_1_1_throttle.html" title="Throttle the sending of the audio data to limit it to the indicated sample rate.">Throttle</a> setting.  <a href="structaudio__tools_1_1_throttle_config.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timed_stream.html">TimedStream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...">AudioStream</a> class that can define a start and (an optional) stop time Usually it is used to wrap an Audio Sink (e.g. <a class="el" href="classaudio__tools_1_1_i2_s_stream.html" title="We support the Stream interface for the I2S access. In addition we allow a separate mute pin which mi...">I2SStream</a>), but wrapping an Audio Source is supported as well. Only wrap classes which represent PCM data!  <a href="classaudio__tools_1_1_timed_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html">TimerAlarmRepeating</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common Interface definition for <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>.  <a href="classaudio__tools_1_1_timer_alarm_repeating.html#details">More...</a><br /></td></tr>
@@ -1488,11 +1494,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga27477aa4d162c65da12c7ffd964f5779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to filter by type of metadata. <br /></td></tr>
 <tr class="separator:ga27477aa4d162c65da12c7ffd964f5779"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a462bfa9dfea81692463ecb192183dd01"><td class="memItemLeft" align="right" valign="top"><a id="a462bfa9dfea81692463ecb192183dd01"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MemoryType</b> { <b>RAM</b>
+<tr class="memitem:ga462bfa9dfea81692463ecb192183dd01"><td class="memItemLeft" align="right" valign="top"><a id="ga462bfa9dfea81692463ecb192183dd01"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__basic.html#ga462bfa9dfea81692463ecb192183dd01">MemoryType</a> { <b>RAM</b>
 , <b>PS_RAM</b>
 , <b>FLASH_RAM</b>
  }</td></tr>
-<tr class="separator:a462bfa9dfea81692463ecb192183dd01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ga462bfa9dfea81692463ecb192183dd01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory types. <br /></td></tr>
+<tr class="separator:ga462bfa9dfea81692463ecb192183dd01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6760f423085f8a63374b1e2db102a6d1"><td class="memItemLeft" align="right" valign="top"><a id="ga6760f423085f8a63374b1e2db102a6d1"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__metadata.html#ga6760f423085f8a63374b1e2db102a6d1">MetaDataType</a> { <br />
 &#160;&#160;<b>Title</b>
 , <b>Artist</b>
