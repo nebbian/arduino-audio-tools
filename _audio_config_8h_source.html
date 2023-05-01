@@ -607,17 +607,17 @@ $(function() {
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160; </div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;<span class="comment">//----------------</span></div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160; </div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160; </div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160; </div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;<span class="preprocessor">#ifdef IS_DESKTOP</span></div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;<span class="preprocessor">#  include &lt;Client.h&gt;</span></div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;<span class="preprocessor">#  include &lt;WiFiClient.h&gt;</span></div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="preprocessor">#  define USE_URL_ARDUINO</span></div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="preprocessor">#  define USE_STREAM_WRITE_OVERRIDE</span></div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;<span class="preprocessor">#  define USE_STREAM_READ_OVERRIDE</span></div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;<span class="keyword">typedef</span> WiFiClient WiFiClientSecure;</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160; </div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;<span class="comment">// Full Arduino functionality using emulator</span></div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;<span class="preprocessor">#ifdef IS_DESKTOP</span></div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;<span class="preprocessor">#  include &lt;Client.h&gt;</span></div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;<span class="preprocessor">#  include &lt;WiFi.h&gt;</span></div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;<span class="preprocessor">#  define USE_URL_ARDUINO</span></div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="preprocessor">#  define USE_STREAM_WRITE_OVERRIDE</span></div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="preprocessor">#  define USE_STREAM_READ_OVERRIDE</span></div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;<span class="keyword">typedef</span> WiFiClient WiFiClientSecure;</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160; </div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;<span class="comment">// Minimum desktop functionality w/o Arduino emulator</span></div>
 <div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;<span class="preprocessor">#ifdef IS_MIN_DESKTOP</span></div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;<span class="preprocessor">#  include &quot;<a class="code" href="_no_arduino_8h.html">AudioLibs/Desktop/NoArduino.h</a>&quot;</span></div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;<span class="preprocessor">#  include &quot;AudioLibs/Desktop/Millis.h&quot;</span></div>
