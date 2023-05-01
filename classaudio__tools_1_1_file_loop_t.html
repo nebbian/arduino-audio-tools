@@ -87,7 +87,7 @@ Inheritance diagram for FileLoopT&lt; FileType &gt;:</div>
   <map id="FileLoopT_3C_20FileType_20_3E_map" name="FileLoopT_3C_20FileType_20_3E_map">
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="151,112,292,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,141,80"/>
-<area href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoDependent" shape="rect" coords="151,56,292,80"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="151,56,292,80"/>
 <area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="302,56,443,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,141,24"/>
   </map>
@@ -141,9 +141,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a32d5d25919e43b8c99e16c87629986b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a127bfce671f2e8a92304cc87473f3e7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_file_loop_t.html#a127bfce671f2e8a92304cc87473f3e7e">setLoopCount</a> (int count)</td></tr>
 <tr class="separator:a127bfce671f2e8a92304cc87473f3e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memItemLeft" align="right" valign="top"><a id="a5ee65428f7ce3ff5deac4e5d380f3899"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
-<tr class="separator:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
+<tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a8807196a10843ecf743d358394cb29"><td class="memItemLeft" align="right" valign="top"><a id="a6a8807196a10843ecf743d358394cb29"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_file_loop_t.html#a6a8807196a10843ecf743d358394cb29">setSize</a> (size_t len)</td></tr>
 <tr class="memdesc:a6a8807196a10843ecf743d358394cb29"><td class="mdescLeft">&#160;</td><td class="mdescRight">optionally defines the requested playing size in bytes <br /></td></tr>
@@ -191,9 +191,9 @@ FileType&#160;</td><td class="memItemRight" valign="bottom"><b>current_file</b><
 <tr class="memitem:a2ac8bc219bf895e4a3cdd514c1de6ec4"><td class="memItemLeft" align="right" valign="top"><a id="a2ac8bc219bf895e4a3cdd514c1de6ec4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>loop_count</b> = -1</td></tr>
 <tr class="separator:a2ac8bc219bf895e4a3cdd514c1de6ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
-<tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
+<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff4f881ec7d3d7d0de57e47a16ebc936"><td class="memItemLeft" align="right" valign="top"><a id="aff4f881ec7d3d7d0de57e47a16ebc936"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>size_open</b> = -1</td></tr>
 <tr class="separator:aff4f881ec7d3d7d0de57e47a16ebc936"><td class="memSeparator" colspan="2">&#160;</td></tr>

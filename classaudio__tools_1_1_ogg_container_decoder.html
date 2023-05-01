@@ -129,10 +129,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> 
 <tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
 <tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2374112a036086eaa3a56da332ca8ac4"><td class="memItemLeft" align="right" valign="top"><a id="a2374112a036086eaa3a56da332ca8ac4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ogg_container_decoder.html#a2374112a036086eaa3a56da332ca8ac4">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
-<tr class="memdesc:a2374112a036086eaa3a56da332ca8ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an object that is notified if the audio format is changing. <br /></td></tr>
-<tr class="separator:a2374112a036086eaa3a56da332ca8ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716343f0476acda119a0c1c9598261ce"><td class="memItemLeft" align="right" valign="top"><a id="a716343f0476acda119a0c1c9598261ce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ogg_container_decoder.html#a716343f0476acda119a0c1c9598261ce">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
+<tr class="memdesc:a716343f0476acda119a0c1c9598261ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an object that is notified if the audio format is changing. <br /></td></tr>
+<tr class="separator:a716343f0476acda119a0c1c9598261ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebd5c20f52cfd1dc105f154d6972bf86"><td class="memItemLeft" align="right" valign="top"><a id="aebd5c20f52cfd1dc105f154d6972bf86"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> &amp;out_stream)</td></tr>
 <tr class="separator:aebd5c20f52cfd1dc105f154d6972bf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,9 +176,9 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>read_page</b> (
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aa36904b04a96094cb7de8e89f78c98b6"><td class="memItemLeft" align="right" valign="top"><a id="aa36904b04a96094cb7de8e89f78c98b6"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>bid</b> = nullptr</td></tr>
-<tr class="separator:aa36904b04a96094cb7de8e89f78c98b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a2761aaa4d056fe99c2f4a4c62ccb5"><td class="memItemLeft" align="right" valign="top"><a id="a87a2761aaa4d056fe99c2f4a4c62ccb5"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>bid</b> = nullptr</td></tr>
+<tr class="separator:a87a2761aaa4d056fe99c2f4a4c62ccb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfda46b2efac52165f9c88041f555530"><td class="memItemLeft" align="right" valign="top"><a id="adfda46b2efac52165f9c88041f555530"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> { (246) }</td></tr>
 <tr class="separator:adfda46b2efac52165f9c88041f555530"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,9 +194,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_open</b> = false</
 <tr class="memitem:a7b3f68e6805fe007f4fdc631cc0bbe19"><td class="memItemLeft" align="right" valign="top"><a id="a7b3f68e6805fe007f4fdc631cc0bbe19"></a>
 <a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_codec</b> = nullptr</td></tr>
 <tr class="separator:a7b3f68e6805fe007f4fdc631cc0bbe19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> = nullptr</td></tr>
-<tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> = nullptr</td></tr>
+<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49c6401748fde5010180703f503d4ce7"><td class="memItemLeft" align="right" valign="top"><a id="a49c6401748fde5010180703f503d4ce7"></a>
 OGGZ *&#160;</td><td class="memItemRight" valign="bottom"><b>p_oggz</b> = nullptr</td></tr>
 <tr class="separator:a49c6401748fde5010180703f503d4ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>

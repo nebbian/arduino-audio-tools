@@ -82,7 +82,7 @@ Inheritance diagram for TransformationReader&lt; T &gt;::AdapterPrintToArray:</d
 <area href="classaudio__tools_1_1_audio_output_adapter.html" title="Base class for Output Adpapters." alt="AudioOutputAdapter" shape="rect" coords="140,112,270,136"/>
 <area href="classaudio__tools_1_1_audio_output.html" title="Abstract Audio Ouptut class." alt="AudioOutput" shape="rect" coords="140,56,270,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,130,24"/>
-<area href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoDependent" shape="rect" coords="140,0,270,24"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="140,0,270,24"/>
 <area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="280,0,410,24"/>
   </map>
 </div></div>
@@ -114,9 +114,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
 <tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memItemLeft" align="right" valign="top"><a id="a5ee65428f7ce3ff5deac4e5d380f3899"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
-<tr class="separator:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
+<tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c1fedd5cee3493b72251b368700cc4"><td class="memItemLeft" align="right" valign="top"><a id="a73c1fedd5cee3493b72251b368700cc4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>totalBytesWritten</b> ()</td></tr>
 <tr class="separator:a73c1fedd5cee3493b72251b368700cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,9 +143,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_len</b></td></t
 <tr class="memitem:a8304c4af5da6e830b86d7199dc9a22e6"><td class="memItemLeft" align="right" valign="top"><a id="a8304c4af5da6e830b86d7199dc9a22e6"></a>
 uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>p_data</b></td></tr>
 <tr class="separator:a8304c4af5da6e830b86d7199dc9a22e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
-<tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
+<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5438a597ee291f523ae04a9fe355924f"><td class="memItemLeft" align="right" valign="top"><a id="a5438a597ee291f523ae04a9fe355924f"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pos</b> = 0</td></tr>
 <tr class="separator:a5438a597ee291f523ae04a9fe355924f"><td class="memSeparator" colspan="2">&#160;</td></tr>

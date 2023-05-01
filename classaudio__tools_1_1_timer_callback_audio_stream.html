@@ -90,7 +90,7 @@ Inheritance diagram for TimerCallbackAudioStream:</div>
 <area href="classaudio__tools_1_1_buffered_stream.html" title="The Arduino Stream supports operations on single characters. This is usually not the best way to push..." alt="BufferedStream" shape="rect" coords="174,168,338,192"/>
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="174,112,338,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,164,80"/>
-<area href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoDependent" shape="rect" coords="174,56,338,80"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="174,56,338,80"/>
 <area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="348,56,512,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,164,24"/>
   </map>
@@ -158,10 +158,10 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_callback_audio_stream.html#a87feead15897a49c7dccb043ac9fcddc">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="memdesc:a87feead15897a49c7dccb043ac9fcddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the audio information <br /></td></tr>
 <tr class="separator:a87feead15897a49c7dccb043ac9fcddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01cdc98818a242f795f5f1a74dea50e3"><td class="memItemLeft" align="right" valign="top"><a id="a01cdc98818a242f795f5f1a74dea50e3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_callback_audio_stream.html#a01cdc98818a242f795f5f1a74dea50e3">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
-<tr class="memdesc:a01cdc98818a242f795f5f1a74dea50e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the target that needs to be notified. <br /></td></tr>
-<tr class="separator:a01cdc98818a242f795f5f1a74dea50e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f731a1a7698c73ac736b17066dcf51"><td class="memItemLeft" align="right" valign="top"><a id="a48f731a1a7698c73ac736b17066dcf51"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_callback_audio_stream.html#a48f731a1a7698c73ac736b17066dcf51">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:a48f731a1a7698c73ac736b17066dcf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the target that needs to be notified. <br /></td></tr>
+<tr class="separator:a48f731a1a7698c73ac736b17066dcf51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a989540d43150595fdde26c8f37265069"><td class="memItemLeft" align="right" valign="top"><a id="a989540d43150595fdde26c8f37265069"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> &amp;info)</td></tr>
 <tr class="separator:a989540d43150595fdde26c8f37265069"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,12 +241,12 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>frameSize</b> = 0
 <tr class="memitem:ab1ab2a32da6044f3aae095e596127f91"><td class="memItemLeft" align="right" valign="top"><a id="ab1ab2a32da6044f3aae095e596127f91"></a>
 unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>lastTimestamp</b> = 0u</td></tr>
 <tr class="separator:ab1ab2a32da6044f3aae095e596127f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42a6c23da304d88d840afc75b79be6ec"><td class="memItemLeft" align="right" valign="top"><a id="a42a6c23da304d88d840afc75b79be6ec"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>notifyTarget</b> = nullptr</td></tr>
-<tr class="separator:a42a6c23da304d88d840afc75b79be6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
-<tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1c2242ecb3d0c8817781071b2409f4e"><td class="memItemLeft" align="right" valign="top"><a id="ad1c2242ecb3d0c8817781071b2409f4e"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>notifyTarget</b> = nullptr</td></tr>
+<tr class="separator:ad1c2242ecb3d0c8817781071b2409f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
+<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af15fd15b71551c9f96798690b7091ab6"><td class="memItemLeft" align="right" valign="top"><a id="af15fd15b71551c9f96798690b7091ab6"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>printCount</b> = 0</td></tr>
 <tr class="separator:af15fd15b71551c9f96798690b7091ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>

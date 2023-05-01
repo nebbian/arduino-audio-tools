@@ -86,11 +86,11 @@ Inheritance diagram for VS1053Stream:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_v_s1053_stream.png" usemap="#VS1053Stream_map" alt=""/>
   <map id="VS1053Stream_map" name="VS1053Stream_map">
-<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="137,112,264,136"/>
-<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,127,80"/>
-<area href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoDependent" shape="rect" coords="137,56,264,80"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="274,56,401,80"/>
-<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,127,24"/>
+<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="120,112,230,136"/>
+<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,110,80"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="120,56,230,80"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="240,56,350,80"/>
+<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,110,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -152,9 +152,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_v_s1053_stream.html#a112088d1d203e928f46cc6dd4b7bcc99">setEncoder</a> (<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *enc)</td></tr>
 <tr class="memdesc:a112088d1d203e928f46cc6dd4b7bcc99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an alternative encoder that will be used (e.g. MP3Encoder). It must be allocated on the heap! <br /></td></tr>
 <tr class="separator:a112088d1d203e928f46cc6dd4b7bcc99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memItemLeft" align="right" valign="top"><a id="a5ee65428f7ce3ff5deac4e5d380f3899"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
-<tr class="separator:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
+<tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35c7533999826a3706e97f99442d4c7e"><td class="memItemLeft" align="right" valign="top"><a id="a35c7533999826a3706e97f99442d4c7e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_v_s1053_stream.html#a35c7533999826a3706e97f99442d4c7e">setVolume</a> (float vol)</td></tr>
 <tr class="memdesc:a35c7533999826a3706e97f99442d4c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">value from 0 to 1.0 <br /></td></tr>
@@ -205,9 +205,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ae013f435f6fd3484021d3f481a489d0d"><td class="memItemLeft" align="right" valign="top"><a id="ae013f435f6fd3484021d3f481a489d0d"></a>
 <a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_encoder</b> = new <a class="el" href="classaudio__tools_1_1_w_a_v_encoder.html">WAVEncoder</a>()</td></tr>
 <tr class="separator:ae013f435f6fd3484021d3f481a489d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
-<tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
+<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3ec7c52a92af77f89a8d905e5716855"><td class="memItemLeft" align="right" valign="top"><a id="af3ec7c52a92af77f89a8d905e5716855"></a>
 <a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html">EncodedAudioStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_out</b> = nullptr</td></tr>
 <tr class="separator:af3ec7c52a92af77f89a8d905e5716855"><td class="memSeparator" colspan="2">&#160;</td></tr>

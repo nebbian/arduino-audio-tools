@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>AAC Decoder using libhelix: <a href="https://github.com/pschatzmann/arduino-libhelix">https://github.com/pschatzmann/arduino-libhelix</a> This is basically just a simple wrapper to provide <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> and <a class="el" href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels.">AudioInfoDependent</a>.  
+<p>AAC Decoder using libhelix: <a href="https://github.com/pschatzmann/arduino-libhelix">https://github.com/pschatzmann/arduino-libhelix</a> This is basically just a simple wrapper to provide <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> and <a class="el" href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels.">AudioInfoSupport</a>.  
  <a href="classaudio__tools_1_1_a_a_c_decoder_helix.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_codec_a_a_c_helix_8h_source.html">CodecAACHelix.h</a>&gt;</code></p>
@@ -97,9 +97,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae8a31659659bbde196ff53740db5c34a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#ae8a31659659bbde196ff53740db5c34a">AACDecoderHelix</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
 <tr class="memdesc:ae8a31659659bbde196ff53740db5c34a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new AACDecoderMini object.  <a href="classaudio__tools_1_1_a_a_c_decoder_helix.html#ae8a31659659bbde196ff53740db5c34a">More...</a><br /></td></tr>
 <tr class="separator:ae8a31659659bbde196ff53740db5c34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d2d0391d4d251e3bd8faa65c105100f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#a7d2d0391d4d251e3bd8faa65c105100f">AACDecoderHelix</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream, <a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
-<tr class="memdesc:a7d2d0391d4d251e3bd8faa65c105100f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new AACDecoderMini object. The decoded output will go to the print object.  <a href="classaudio__tools_1_1_a_a_c_decoder_helix.html#a7d2d0391d4d251e3bd8faa65c105100f">More...</a><br /></td></tr>
-<tr class="separator:a7d2d0391d4d251e3bd8faa65c105100f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae93ecbd0ccdbdc6d745574e0b1da0e0c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#ae93ecbd0ccdbdc6d745574e0b1da0e0c">AACDecoderHelix</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream, <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:ae93ecbd0ccdbdc6d745574e0b1da0e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new AACDecoderMini object. The decoded output will go to the print object.  <a href="classaudio__tools_1_1_a_a_c_decoder_helix.html#ae93ecbd0ccdbdc6d745574e0b1da0e0c">More...</a><br /></td></tr>
+<tr class="separator:ae93ecbd0ccdbdc6d745574e0b1da0e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab44140b0944b1ad9ebea7310786b3668"><td class="memItemLeft" align="right" valign="top"><a id="ab44140b0944b1ad9ebea7310786b3668"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#ab44140b0944b1ad9ebea7310786b3668">~AACDecoderHelix</a> ()</td></tr>
 <tr class="memdesc:ab44140b0944b1ad9ebea7310786b3668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the AACDecoderMini object. <br /></td></tr>
@@ -150,10 +150,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#a00f9dda211e2236d718c7c68bf610ea7">setMaxPCMSize</a> (size_t len)</td></tr>
 <tr class="memdesc:a00f9dda211e2236d718c7c68bf610ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define your optimized maximum pwm buffer size. <br /></td></tr>
 <tr class="separator:a00f9dda211e2236d718c7c68bf610ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb8dfe7837928747737ad15bccdbd004"><td class="memItemLeft" align="right" valign="top"><a id="abb8dfe7837928747737ad15bccdbd004"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#abb8dfe7837928747737ad15bccdbd004">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi)</td></tr>
-<tr class="memdesc:abb8dfe7837928747737ad15bccdbd004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the callback object to which the Audio information change is provided. <br /></td></tr>
-<tr class="separator:abb8dfe7837928747737ad15bccdbd004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e0825fad7a777d93e43602670010c7"><td class="memItemLeft" align="right" valign="top"><a id="a64e0825fad7a777d93e43602670010c7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the callback object to which the Audio information change is provided. <br /></td></tr>
+<tr class="separator:a64e0825fad7a777d93e43602670010c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebd5c20f52cfd1dc105f154d6972bf86"><td class="memItemLeft" align="right" valign="top"><a id="aebd5c20f52cfd1dc105f154d6972bf86"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> &amp;out_stream)</td></tr>
 <tr class="separator:aebd5c20f52cfd1dc105f154d6972bf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,15 +190,15 @@ libhelix::AACDecoderHelix *&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> = nullptr</td></tr>
-<tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> = nullptr</td></tr>
+<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>
 <tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>AAC Decoder using libhelix: <a href="https://github.com/pschatzmann/arduino-libhelix">https://github.com/pschatzmann/arduino-libhelix</a> This is basically just a simple wrapper to provide <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> and <a class="el" href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels.">AudioInfoDependent</a>. </p>
+<div class="textblock"><p>AAC Decoder using libhelix: <a href="https://github.com/pschatzmann/arduino-libhelix">https://github.com/pschatzmann/arduino-libhelix</a> This is basically just a simple wrapper to provide <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> and <a class="el" href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels.">AudioInfoSupport</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -236,8 +236,8 @@ libhelix::AACDecoderHelix *&#160;</td><td class="memItemRight" valign="bottom"><
 
 </div>
 </div>
-<a id="a7d2d0391d4d251e3bd8faa65c105100f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d2d0391d4d251e3bd8faa65c105100f">&#9670;&nbsp;</a></span>AACDecoderHelix() <span class="overload">[2/2]</span></h2>
+<a id="ae93ecbd0ccdbdc6d745574e0b1da0e0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae93ecbd0ccdbdc6d745574e0b1da0e0c">&#9670;&nbsp;</a></span>AACDecoderHelix() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,7 +254,7 @@ libhelix::AACDecoderHelix *&#160;</td><td class="memItemRight" valign="bottom"><
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;&#160;</td>
           <td class="paramname"><em>bi</em>&#160;</td>
         </tr>
         <tr>

@@ -88,7 +88,7 @@ Inheritance diagram for EncodedAudioStream:</div>
 <area href="classaudio__tools_1_1_encoded_audio_output.html" title="A more natural Print class to process encoded data (aac, wav, mp3...). Just define the output and the..." alt="EncodedAudioOutput" shape="rect" coords="144,168,278,192"/>
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="144,112,278,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,134,80"/>
-<area href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoDependent" shape="rect" coords="144,56,278,80"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="144,56,278,80"/>
 <area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="288,56,422,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,134,24"/>
   </map>
@@ -196,10 +196,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setEncoder</b> (<a cl
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">setInput</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *ioStream)</td></tr>
 <tr class="memdesc:af8124372afa43e8a096c4c63a2a99182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#a281977f67359f85e429e51feecf7d9f0" title="Defines the input/output stream for decoding.">setStream()</a> <br /></td></tr>
 <tr class="separator:af8124372afa43e8a096c4c63a2a99182"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2374112a036086eaa3a56da332ca8ac4"><td class="memItemLeft" align="right" valign="top"><a id="a2374112a036086eaa3a56da332ca8ac4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_output.html#a2374112a036086eaa3a56da332ca8ac4">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
-<tr class="memdesc:a2374112a036086eaa3a56da332ca8ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define object which need to be notified if the basinfo is changing. <br /></td></tr>
-<tr class="separator:a2374112a036086eaa3a56da332ca8ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716343f0476acda119a0c1c9598261ce"><td class="memItemLeft" align="right" valign="top"><a id="a716343f0476acda119a0c1c9598261ce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_output.html#a716343f0476acda119a0c1c9598261ce">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
+<tr class="memdesc:a716343f0476acda119a0c1c9598261ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define object which need to be notified if the basinfo is changing. <br /></td></tr>
+<tr class="separator:a716343f0476acda119a0c1c9598261ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2416b6284de657da2d08005d10413e7"><td class="memItemLeft" align="right" valign="top"><a id="af2416b6284de657da2d08005d10413e7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_output.html#af2416b6284de657da2d08005d10413e7">setOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *outputStream)</td></tr>
 <tr class="memdesc:af2416b6284de657da2d08005d10413e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the output. <br /></td></tr>
@@ -266,9 +266,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_setup</b> = false<
 <tr class="memitem:ae38cab340b56e1b899aaac1970dd4bb6"><td class="memItemLeft" align="right" valign="top"><a id="ae38cab340b56e1b899aaac1970dd4bb6"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>max_read_count</b> = 5</td></tr>
 <tr class="separator:ae38cab340b56e1b899aaac1970dd4bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
-<tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
+<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c87619d514c8c9627dc94e5e278a530"><td class="memItemLeft" align="right" valign="top"><a id="a7c87619d514c8c9627dc94e5e278a530"></a>
 <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> = nullptr</td></tr>
 <tr class="separator:a7c87619d514c8c9627dc94e5e278a530"><td class="memSeparator" colspan="2">&#160;</td></tr>

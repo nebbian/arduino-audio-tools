@@ -87,7 +87,7 @@ Inheritance diagram for GeneratedSoundStream&lt; T &gt;:</div>
   <map id="GeneratedSoundStream_3C_20T_20_3E_map" name="GeneratedSoundStream_3C_20T_20_3E_map">
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="187,112,364,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,177,80"/>
-<area href="classaudio__tools_1_1_audio_info_dependent.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoDependent" shape="rect" coords="187,56,364,80"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="187,56,364,80"/>
 <area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="374,56,551,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,177,24"/>
   </map>
@@ -142,9 +142,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo<
 <tr class="memitem:a085f8d7979f2d05a5e5f8b821c2cbc92"><td class="memItemLeft" align="right" valign="top"><a id="a085f8d7979f2d05a5e5f8b821c2cbc92"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setInput</b> (<a class="el" href="classaudio__tools_1_1_sound_generator.html">SoundGenerator</a>&lt; T &gt; &amp;generator)</td></tr>
 <tr class="separator:a085f8d7979f2d05a5e5f8b821c2cbc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memItemLeft" align="right" valign="top"><a id="a5ee65428f7ce3ff5deac4e5d380f3899"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> &amp;bi) override</td></tr>
-<tr class="separator:a5ee65428f7ce3ff5deac4e5d380f3899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
+<tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a989540d43150595fdde26c8f37265069"><td class="memItemLeft" align="right" valign="top"><a id="a989540d43150595fdde26c8f37265069"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> &amp;info)</td></tr>
 <tr class="separator:a989540d43150595fdde26c8f37265069"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,18 +171,18 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memItemLeft" align="right" valign="top"><a id="a03c996f9fcf0e10baeb3e700be0c409a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</td></tr>
 <tr class="separator:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8724e7bb8d3bae854887de6e5150cfef"><td class="memItemLeft" align="right" valign="top"><a id="a8724e7bb8d3bae854887de6e5150cfef"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>audioBaseInfoDependent</b> = nullptr</td></tr>
-<tr class="separator:a8724e7bb8d3bae854887de6e5150cfef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67478b92c256861a1a054749825775e6"><td class="memItemLeft" align="right" valign="top"><a id="a67478b92c256861a1a054749825775e6"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>audioBaseInfoDependent</b> = nullptr</td></tr>
+<tr class="separator:a67478b92c256861a1a054749825775e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50e0ca4e0aa61311b7b7e97b41e2f503"><td class="memItemLeft" align="right" valign="top"><a id="a50e0ca4e0aa61311b7b7e97b41e2f503"></a>
 <a class="el" href="classaudio__tools_1_1_sound_generator.html">SoundGenerator</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>generator_ptr</b></td></tr>
 <tr class="separator:a50e0ca4e0aa61311b7b7e97b41e2f503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memItemLeft" align="right" valign="top"><a id="a5f9430ce0f86e27d6f96a4a50c779119"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_dependent.html">AudioInfoDependent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
-<tr class="separator:a5f9430ce0f86e27d6f96a4a50c779119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
+<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
+<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e44ee90ea95c487bc3397d92e35ec33"><td class="memItemLeft" align="right" valign="top"><a id="a1e44ee90ea95c487bc3397d92e35ec33"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>source_not_defined_error</b> = &quot;Source not defined&quot;</td></tr>
 <tr class="separator:a1e44ee90ea95c487bc3397d92e35ec33"><td class="memSeparator" colspan="2">&#160;</td></tr>
