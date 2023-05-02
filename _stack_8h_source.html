@@ -88,8 +88,8 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">bool</span> peek(T&amp; data){</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">if</span> (l.end()-&gt;prior==<span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            data = *(l.end()-&gt;prior);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">if</span> (size()==0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            data = *(--l.end());</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
