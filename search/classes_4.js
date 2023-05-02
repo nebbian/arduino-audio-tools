@@ -1,17 +1,18 @@
 var searchData=
 [
-  ['effectsuitebase_1377',['EffectSuiteBase',['../classaudio__tools_1_1_effect_suite_base.html',1,'audio_tools']]],
-  ['encodedaudiooutput_1378',['EncodedAudioOutput',['../classaudio__tools_1_1_encoded_audio_output.html',1,'audio_tools']]],
-  ['encodedaudiostream_1379',['EncodedAudioStream',['../classaudio__tools_1_1_encoded_audio_stream.html',1,'audio_tools']]],
-  ['encoderbase64_1380',['EncoderBase64',['../classaudio__tools_1_1_encoder_base64.html',1,'audio_tools']]],
-  ['encoderfloat_1381',['EncoderFloat',['../classaudio__tools_1_1_encoder_float.html',1,'audio_tools']]],
-  ['encoderl16_1382',['EncoderL16',['../classaudio__tools_1_1_encoder_l16.html',1,'audio_tools']]],
-  ['encoderl8_1383',['EncoderL8',['../classaudio__tools_1_1_encoder_l8.html',1,'audio_tools']]],
-  ['envelopefilter_1384',['EnvelopeFilter',['../classaudio__tools_1_1_envelope_filter.html',1,'audio_tools']]],
-  ['eqstate_1385',['EQSTATE',['../structaudio__tools_1_1_equilizer3_bands_1_1_e_q_s_t_a_t_e.html',1,'audio_tools::Equilizer3Bands']]],
-  ['equilizer3bands_1386',['Equilizer3Bands',['../classaudio__tools_1_1_equilizer3_bands.html',1,'audio_tools']]],
-  ['esp3288audiooutput_1387',['ESP3288AudioOutput',['../classaudio__tools_1_1_e_s_p3288_audio_output.html',1,'audio_tools']]],
-  ['espnowstream_1388',['ESPNowStream',['../classaudio__tools_1_1_e_s_p_now_stream.html',1,'audio_tools']]],
-  ['espnowstreamconfig_1389',['ESPNowStreamConfig',['../structaudio__tools_1_1_e_s_p_now_stream_config.html',1,'audio_tools']]],
-  ['exponentialvolumecontrol_1390',['ExponentialVolumeControl',['../classaudio__tools_1_1_exponential_volume_control.html',1,'audio_tools']]]
+  ['effectsuitebase_1381',['EffectSuiteBase',['../classaudio__tools_1_1_effect_suite_base.html',1,'audio_tools']]],
+  ['encodedaudiooutput_1382',['EncodedAudioOutput',['../classaudio__tools_1_1_encoded_audio_output.html',1,'audio_tools']]],
+  ['encodedaudiostream_1383',['EncodedAudioStream',['../classaudio__tools_1_1_encoded_audio_stream.html',1,'audio_tools']]],
+  ['encoderbase64_1384',['EncoderBase64',['../classaudio__tools_1_1_encoder_base64.html',1,'audio_tools']]],
+  ['encoderbasic_1385',['EncoderBasic',['../classaudio__tools_1_1_encoder_basic.html',1,'audio_tools']]],
+  ['encoderfloat_1386',['EncoderFloat',['../classaudio__tools_1_1_encoder_float.html',1,'audio_tools']]],
+  ['encoderl16_1387',['EncoderL16',['../classaudio__tools_1_1_encoder_l16.html',1,'audio_tools']]],
+  ['encoderl8_1388',['EncoderL8',['../classaudio__tools_1_1_encoder_l8.html',1,'audio_tools']]],
+  ['envelopefilter_1389',['EnvelopeFilter',['../classaudio__tools_1_1_envelope_filter.html',1,'audio_tools']]],
+  ['eqstate_1390',['EQSTATE',['../structaudio__tools_1_1_equilizer3_bands_1_1_e_q_s_t_a_t_e.html',1,'audio_tools::Equilizer3Bands']]],
+  ['equilizer3bands_1391',['Equilizer3Bands',['../classaudio__tools_1_1_equilizer3_bands.html',1,'audio_tools']]],
+  ['esp3288audiooutput_1392',['ESP3288AudioOutput',['../classaudio__tools_1_1_e_s_p3288_audio_output.html',1,'audio_tools']]],
+  ['espnowstream_1393',['ESPNowStream',['../classaudio__tools_1_1_e_s_p_now_stream.html',1,'audio_tools']]],
+  ['espnowstreamconfig_1394',['ESPNowStreamConfig',['../structaudio__tools_1_1_e_s_p_now_stream_config.html',1,'audio_tools']]],
+  ['exponentialvolumecontrol_1395',['ExponentialVolumeControl',['../classaudio__tools_1_1_exponential_volume_control.html',1,'audio_tools']]]
 ];
