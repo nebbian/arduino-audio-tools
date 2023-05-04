@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>EncoderL8s - Condenses 16 bit PCM data stream to 8 bits data. Most microcontrollers can not process 8 bit audio data directly. 8 bit data however is very memory efficient and helps if you need to store audio on constrained resources. This encoder translates 16bit data into 8bit data.  
+<p>EncoderL8s - Condenses 16 bit PCM data stream to 8 bits data. Most microcontrollers can not process 8 bit audio data directly. 8 bit data however is very memory efficient and helps if you need to store audio on constrained resources. This encoder translates 16bit data into 8bit data. By default the encoded data is represented as uint8_t, so the values are from 0 to 255.  
  <a href="classaudio__tools_1_1_encoder_l8.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_codec_l8_8h_source.html">CodecL8.h</a>&gt;</code></p>
@@ -92,6 +92,9 @@ Inheritance diagram for EncoderL8:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a8dfaf82d6ee3367fd9c70fc6135afa37"><td class="memItemLeft" align="right" valign="top"><a id="a8dfaf82d6ee3367fd9c70fc6135afa37"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>EncoderL8</b> (bool isSigned=true)</td></tr>
+<tr class="separator:a8dfaf82d6ee3367fd9c70fc6135afa37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a287b5930b04a66ff467042628f9deb25"><td class="memItemLeft" align="right" valign="top"><a id="a287b5930b04a66ff467042628f9deb25"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>EncoderL8</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
 <tr class="separator:a287b5930b04a66ff467042628f9deb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,14 +155,14 @@ Protected Attributes</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_open</b></td></tr>
 <tr class="separator:a01cdff9fb397966eed50aae3e8f64d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15479def85f83e92a62beeb305202d91"><td class="memItemLeft" align="right" valign="top"><a id="a15479def85f83e92a62beeb305202d91"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_signed</b> = true</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_signed</b> = false</td></tr>
 <tr class="separator:a15479def85f83e92a62beeb305202d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
-<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> =nullptr</td></tr>
+<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>
 <tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>EncoderL8s - Condenses 16 bit PCM data stream to 8 bits data. Most microcontrollers can not process 8 bit audio data directly. 8 bit data however is very memory efficient and helps if you need to store audio on constrained resources. This encoder translates 16bit data into 8bit data. </p>
+<div class="textblock"><p>EncoderL8s - Condenses 16 bit PCM data stream to 8 bits data. Most microcontrollers can not process 8 bit audio data directly. 8 bit data however is very memory efficient and helps if you need to store audio on constrained resources. This encoder translates 16bit data into 8bit data. By default the encoded data is represented as uint8_t, so the values are from 0 to 255. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>

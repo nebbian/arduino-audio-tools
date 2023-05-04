@@ -93,9 +93,16 @@ Inheritance diagram for AVIDecoder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a02752a332ef02f4a10c83edb29acabee"><td class="memItemLeft" align="right" valign="top"><a id="a02752a332ef02f4a10c83edb29acabee"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AVIDecoder</b> (<a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> *audioDecoder, int bufferSize=1024)</td></tr>
+<tr class="separator:a02752a332ef02f4a10c83edb29acabee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a950ff2460657841274478e1d59c6b974"><td class="memItemLeft" align="right" valign="top"><a id="a950ff2460657841274478e1d59c6b974"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AVIDecoder</b> (int bufferSize=1024)</td></tr>
 <tr class="separator:a950ff2460657841274478e1d59c6b974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66752eeab2ff3b8e6e093d20079f0eb7"><td class="memItemLeft" align="right" valign="top"><a id="a66752eeab2ff3b8e6e093d20079f0eb7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_v_i_decoder.html#a66752eeab2ff3b8e6e093d20079f0eb7">audioFormat</a> ()</td></tr>
+<tr class="memdesc:a66752eeab2ff3b8e6e093d20079f0eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the audio_info.wFormatTag. <br /></td></tr>
+<tr class="separator:a66752eeab2ff3b8e6e093d20079f0eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada56eff2516fb0a4f5091ce06805411a"><td class="memItemLeft" align="right" valign="top"><a id="ada56eff2516fb0a4f5091ce06805411a"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
 <tr class="separator:ada56eff2516fb0a4f5091ce06805411a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,6 +119,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a
 <tr class="memitem:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memItemLeft" align="right" valign="top"><a id="a64e9fa75beda50a9e8400ee0d4e61984"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
 <tr class="separator:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb7f239a8e1bac57c425710309582ad"><td class="memItemLeft" align="right" valign="top"><a id="a9fb7f239a8e1bac57c425710309582ad"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_v_i_decoder.html#a9fb7f239a8e1bac57c425710309582ad">isMetadataReady</a> ()</td></tr>
+<tr class="memdesc:a9fb7f239a8e1bac57c425710309582ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if all metadata has been parsed and is available. <br /></td></tr>
+<tr class="separator:a9fb7f239a8e1bac57c425710309582ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b485ba5b9d96f94384f4a3840f84314"><td class="memItemLeft" align="right" valign="top"><a id="a2b485ba5b9d96f94384f4a3840f84314"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isResultPCM</b> ()</td></tr>
 <tr class="separator:a2b485ba5b9d96f94384f4a3840f84314"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,14 +152,19 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStre
 <tr class="memitem:a8b056d4bb5aea030431b8c87d3d180f7"><td class="memItemLeft" align="right" valign="top"><a id="a8b056d4bb5aea030431b8c87d3d180f7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputVideoStream</b> (<a class="el" href="classaudio__tools_1_1_video_output.html">VideoOutput</a> &amp;out_stream)</td></tr>
 <tr class="separator:a8b056d4bb5aea030431b8c87d3d180f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade7a51a90eb817ac209b7b43c0ddd810"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_v_i_decoder.html#ade7a51a90eb817ac209b7b43c0ddd810">setValidationCallback</a> (bool(*cb)(<a class="el" href="classaudio__tools_1_1_a_v_i_decoder.html">AVIDecoder</a> &amp;avi))</td></tr>
+<tr class="separator:ade7a51a90eb817ac209b7b43c0ddd810"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2d2d9fa75b7f5d48b2cf38ce5c48f65"><td class="memItemLeft" align="right" valign="top"><a id="af2d2d9fa75b7f5d48b2cf38ce5c48f65"></a>
 <a class="el" href="structaudio__tools_1_1_a_v_i_stream_header.html">AVIStreamHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_v_i_decoder.html#af2d2d9fa75b7f5d48b2cf38ce5c48f65">streamHeader</a> (int idx)</td></tr>
 <tr class="memdesc:af2d2d9fa75b7f5d48b2cf38ce5c48f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the information from the stream header chunks. <br /></td></tr>
 <tr class="separator:af2d2d9fa75b7f5d48b2cf38ce5c48f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abce7fba529ee010eeb4e2487898ed417"><td class="memItemLeft" align="right" valign="top"><a id="abce7fba529ee010eeb4e2487898ed417"></a>
-<a class="el" href="structaudio__tools_1_1_bitmap_info_header.html">BitmapInfoHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_v_i_decoder.html#abce7fba529ee010eeb4e2487898ed417">videoInfo</a> ()</td></tr>
-<tr class="memdesc:abce7fba529ee010eeb4e2487898ed417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the video information. <br /></td></tr>
-<tr class="separator:abce7fba529ee010eeb4e2487898ed417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c4db53dc3511fa1bc4920f3cf73350"><td class="memItemLeft" align="right" valign="top"><a id="ad0c4db53dc3511fa1bc4920f3cf73350"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>videoFormat</b> ()</td></tr>
+<tr class="separator:ad0c4db53dc3511fa1bc4920f3cf73350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada0cfb2a591e76351c5207af253edb88"><td class="memItemLeft" align="right" valign="top"><a id="ada0cfb2a591e76351c5207af253edb88"></a>
+<a class="el" href="structaudio__tools_1_1_bitmap_info_header.html">BitmapInfoHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_v_i_decoder.html#ada0cfb2a591e76351c5207af253edb88">videoInfoExt</a> ()</td></tr>
+<tr class="memdesc:ada0cfb2a591e76351c5207af253edb88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the video information. <br /></td></tr>
+<tr class="separator:ada0cfb2a591e76351c5207af253edb88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b2aeff2ec7fd6cbccce8eae68696d2a"><td class="memItemLeft" align="right" valign="top"><a id="a2b2aeff2ec7fd6cbccce8eae68696d2a"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *data, size_t length)</td></tr>
 <tr class="separator:a2b2aeff2ec7fd6cbccce8eae68696d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,6 +215,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>processStack</b> (<a 
 <tr class="memitem:a3a98d1b0565d4ffa9823100e825ed27e"><td class="memItemLeft" align="right" valign="top"><a id="a3a98d1b0565d4ffa9823100e825ed27e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setupAudioInfo</b> ()</td></tr>
 <tr class="separator:a3a98d1b0565d4ffa9823100e825ed27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14546084b9cac062dc19e61ef2abc8ae"><td class="memItemLeft" align="right" valign="top"><a id="a14546084b9cac062dc19e61ef2abc8ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setupVideoInfo</b> ()</td></tr>
+<tr class="separator:a14546084b9cac062dc19e61ef2abc8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaead7bfa82627f62dcc663302fc3c51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classaudio__tools_1_1_parse_object.html">ParseObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_v_i_decoder.html#adaead7bfa82627f62dcc663302fc3c51">tryParseChunk</a> ()</td></tr>
 <tr class="separator:adaead7bfa82627f62dcc663302fc3c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af594a645cf9e66a99a98bef97b59803a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classaudio__tools_1_1_parse_object.html">ParseObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_v_i_decoder.html#af594a645cf9e66a99a98bef97b59803a">tryParseChunk</a> (const char *id)</td></tr>
@@ -225,6 +244,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ad4f05f1e8a55a892a59dd59ec469d1b2"><td class="memItemLeft" align="right" valign="top"><a id="ad4f05f1e8a55a892a59dd59ec469d1b2"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; StreamContentType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>content_types</b></td></tr>
 <tr class="separator:ad4f05f1e8a55a892a59dd59ec469d1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3beeef272fbc392109d1875fcdbeb9e"><td class="memItemLeft" align="right" valign="top"><a id="ab3beeef272fbc392109d1875fcdbeb9e"></a>
+<a class="el" href="classaudio__tools_1_1_copy_decoder.html">CopyDecoder</a>&#160;</td><td class="memItemRight" valign="bottom"><b>copy_decoder</b></td></tr>
+<tr class="separator:ab3beeef272fbc392109d1875fcdbeb9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31085a1bb3a701dbc7d778328f1b6951"><td class="memItemLeft" align="right" valign="top"><a id="a31085a1bb3a701dbc7d778328f1b6951"></a>
 long&#160;</td><td class="memItemRight" valign="bottom"><b>current_pos</b> = 0</td></tr>
 <tr class="separator:a31085a1bb3a701dbc7d778328f1b6951"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -237,6 +259,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>header_is_avi</b> = f
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78dbb22b224668f0af49262e735852d3"><td class="memItemLeft" align="right" valign="top"><a id="a78dbb22b224668f0af49262e735852d3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_metadata_ready</b> = false</td></tr>
+<tr class="separator:a78dbb22b224668f0af49262e735852d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70e2016cf6e04d2812ef3c452e5ccb54"><td class="memItemLeft" align="right" valign="top"><a id="a70e2016cf6e04d2812ef3c452e5ccb54"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_parsing_active</b> = true</td></tr>
 <tr class="separator:a70e2016cf6e04d2812ef3c452e5ccb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,18 +277,21 @@ long&#160;</td><td class="memItemRight" valign="bottom"><b>movi_end_pos</b> = 0<
 <tr class="memitem:a690d09fe02f4303905ed251dfab131ef"><td class="memItemLeft" align="right" valign="top"><a id="a690d09fe02f4303905ed251dfab131ef"></a>
 long&#160;</td><td class="memItemRight" valign="bottom"><b>open_subchunk_len</b> = 0</td></tr>
 <tr class="separator:a690d09fe02f4303905ed251dfab131ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e84ad06b911d3e2a7e6ddac007d5ea6"><td class="memItemLeft" align="right" valign="top"><a id="a8e84ad06b911d3e2a7e6ddac007d5ea6"></a>
+<a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_decoder</b> = nullptr</td></tr>
+<tr class="separator:a8e84ad06b911d3e2a7e6ddac007d5ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> = nullptr</td></tr>
 <tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8ddc9a0c790e4630cd7a4d3048192a7"><td class="memItemLeft" align="right" valign="top"><a id="aa8ddc9a0c790e4630cd7a4d3048192a7"></a>
+<a class="el" href="classaudio__tools_1_1_encoded_audio_output.html">EncodedAudioOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_output_audio</b> = nullptr</td></tr>
+<tr class="separator:aa8ddc9a0c790e4630cd7a4d3048192a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ba0ab3970d2fd63788ec58e6da32bc"><td class="memItemLeft" align="right" valign="top"><a id="a06ba0ab3970d2fd63788ec58e6da32bc"></a>
+<a class="el" href="classaudio__tools_1_1_video_output.html">VideoOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_output_video</b> = nullptr</td></tr>
+<tr class="separator:a06ba0ab3970d2fd63788ec58e6da32bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>
 <tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb3dcb170290fb2b680abddcc66e3bf1"><td class="memItemLeft" align="right" valign="top"><a id="acb3dcb170290fb2b680abddcc66e3bf1"></a>
-<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print_audio</b> = nullptr</td></tr>
-<tr class="separator:acb3dcb170290fb2b680abddcc66e3bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf38ffa23a801ed9c7bf5c6955e9bfa3"><td class="memItemLeft" align="right" valign="top"><a id="adf38ffa23a801ed9c7bf5c6955e9bfa3"></a>
-<a class="el" href="classaudio__tools_1_1_video_output.html">VideoOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print_video</b> = nullptr</td></tr>
-<tr class="separator:adf38ffa23a801ed9c7bf5c6955e9bfa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add15710f1adbe2429f86aae7caac3b0b"><td class="memItemLeft" align="right" valign="top"><a id="add15710f1adbe2429f86aae7caac3b0b"></a>
 <a class="el" href="classaudio__tools_1_1_parse_buffer.html">ParseBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parse_buffer</b></td></tr>
 <tr class="separator:add15710f1adbe2429f86aae7caac3b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,6 +310,12 @@ ParseState&#160;</td><td class="memItemRight" valign="bottom"><b>parse_state</b>
 <tr class="memitem:a957b525cb54ba060d25a31f6cd928bd7"><td class="memItemLeft" align="right" valign="top"><a id="a957b525cb54ba060d25a31f6cd928bd7"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>stream_header_idx</b> = -1</td></tr>
 <tr class="separator:a957b525cb54ba060d25a31f6cd928bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6374ae63fd05852715fd248731e08d7b"><td class="memItemLeft" align="right" valign="top"><a id="a6374ae63fd05852715fd248731e08d7b"></a>
+bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>validation_cb</b> )(<a class="el" href="classaudio__tools_1_1_a_v_i_decoder.html">AVIDecoder</a> &amp;avi) = nullptr</td></tr>
+<tr class="separator:a6374ae63fd05852715fd248731e08d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac94e596326d1711852e270b0adecd4"><td class="memItemLeft" align="right" valign="top"><a id="a8ac94e596326d1711852e270b0adecd4"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>video_format</b> [5] = {0}</td></tr>
+<tr class="separator:a8ac94e596326d1711852e270b0adecd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0527ced98801d1f7ee826772e00a6a7d"><td class="memItemLeft" align="right" valign="top"><a id="a0527ced98801d1f7ee826772e00a6a7d"></a>
 <a class="el" href="structaudio__tools_1_1_bitmap_info_header.html">BitmapInfoHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>video_info</b></td></tr>
 <tr class="separator:a0527ced98801d1f7ee826772e00a6a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,6 +325,33 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>stream_header_idx</b> 
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ade7a51a90eb817ac209b7b43c0ddd810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade7a51a90eb817ac209b7b43c0ddd810">&#9670;&nbsp;</a></span>setValidationCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setValidationCallback </td>
+          <td>(</td>
+          <td class="paramtype">bool(*)(<a class="el" href="classaudio__tools_1_1_a_v_i_decoder.html">AVIDecoder</a> &amp;avi)&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Register a validation callback which is called after parsing just before playing the audio </p>
+
+</div>
+</div>
 <a id="adaead7bfa82627f62dcc663302fc3c51"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adaead7bfa82627f62dcc663302fc3c51">&#9670;&nbsp;</a></span>tryParseChunk() <span class="overload">[1/2]</span></h2>
 
