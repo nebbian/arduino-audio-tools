@@ -641,33 +641,36 @@ $(function() {
 <div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;<span class="comment"> * @brief Class which can be used to filter the output out based on a switch: If</span></div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;<span class="comment"> * the switch is on the output is forwarded. If it is off it is just ignored.</span></div>
 <div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;<span class="comment"> * @ingroup io</span></div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;<span class="comment"> * @author Phil Schatzmann</span></div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;<span class="comment"> * @copyright GPLv3</span></div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00641"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_on_off_output.html">  641</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_on_off_output.html">OnOffOutput</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> {</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;  <a class="code" href="classaudio__tools_1_1_on_off_output.html">OnOffOutput</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out) { p_output = &amp;out; }</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160; </div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;  <span class="keywordtype">void</span> setOutput(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out) { p_output = &amp;out; }</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;<span class="comment"> * @ingroup transform</span></div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;<span class="comment"> * @author Phil Schatzmann</span></div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;<span class="comment"> * @copyright GPLv3</span></div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00642"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_on_off_output.html">  642</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_on_off_output.html">OnOffOutput</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> {</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;  <a class="code" href="classaudio__tools_1_1_on_off_output.html">OnOffOutput</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;  <a class="code" href="classaudio__tools_1_1_on_off_output.html">OnOffOutput</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out) { p_output = &amp;out; }</div>
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160; </div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;  <span class="keywordtype">void</span> setActive(<span class="keywordtype">bool</span> on) { is_active = on; }</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160; </div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;  <span class="keywordtype">bool</span> isActive() { <span class="keywordflow">return</span> is_active; }</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160; </div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;  <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> uint8_t *buffer, <span class="keywordtype">size_t</span> len)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <span class="keywordtype">size_t</span> result = len;</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    <span class="keywordflow">if</span> (is_active) {</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;      len = p_output-&gt;write(buffer, len);</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;    }</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    <span class="keywordflow">return</span> len;</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;  }</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160; </div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;  <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *p_output = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;  <span class="keywordtype">bool</span> is_active = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;};</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160; </div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00648"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_on_off_output.html#ae1220e7e3542f5a84c21fe2f7cef194c">  648</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_on_off_output.html#ae1220e7e3542f5a84c21fe2f7cef194c">setOutput</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out) { p_output = &amp;out; }</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160; </div>
+<div class="line"><a name="l00651"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_on_off_output.html#a2b8951fe5a4418a17d40c824fbff6ae3">  651</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_on_off_output.html#a2b8951fe5a4418a17d40c824fbff6ae3">setActive</a>(<span class="keywordtype">bool</span> on) { is_active = on; }</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160; </div>
+<div class="line"><a name="l00654"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_on_off_output.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">  654</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_on_off_output.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">isActive</a>() { <span class="keywordflow">return</span> is_active; }</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160; </div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;  <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> uint8_t *buffer, <span class="keywordtype">size_t</span> len)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    <span class="keywordflow">if</span> (p_output==<span class="keyword">nullptr</span>) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    <span class="keywordtype">size_t</span> result = len;</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    <span class="keywordflow">if</span> (is_active) {</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;      len = p_output-&gt;write(buffer, len);</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    }</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keywordflow">return</span> len;</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;  }</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160; </div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;  Print *p_output = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;  <span class="keywordtype">bool</span> is_active = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;};</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160; </div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_source_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_source.html">audio_tools::AudioInfoSource</a></div><div class="ttdoc">Supports the subscription to audio change notifications.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:120</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_support_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_support.html">audio_tools::AudioInfoSupport</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:101</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_output_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_output.html">audio_tools::AudioOutput</a></div><div class="ttdoc">Abstract Audio Ouptut class.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:23</div></div>
@@ -687,7 +690,10 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_hex_dump_output_html_a81a0ff258d72340fb3618b2ab5dc6732"><div class="ttname"><a href="classaudio__tools_1_1_hex_dump_output.html#a81a0ff258d72340fb3618b2ab5dc6732">audio_tools::HexDumpOutput::HexDumpOutput</a></div><div class="ttdeci">HexDumpOutput(Print &amp;out, int buffer_size=DEFAULT_BUFFER_SIZE, bool active=true)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:226</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_hex_dump_output_html_aaf81d3fdaf258088d7692fa70cece087"><div class="ttname"><a href="classaudio__tools_1_1_hex_dump_output.html#aaf81d3fdaf258088d7692fa70cece087">audio_tools::HexDumpOutput::end</a></div><div class="ttdeci">void end()</div><div class="ttdoc">Sets the CsvOutput as inactive.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:247</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_memory_output_html"><div class="ttname"><a href="classaudio__tools_1_1_memory_output.html">audio_tools::MemoryOutput</a></div><div class="ttdoc">Writes to a preallocated memory.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:595</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_on_off_output_html"><div class="ttname"><a href="classaudio__tools_1_1_on_off_output.html">audio_tools::OnOffOutput</a></div><div class="ttdef"><b>Definition:</b> AudioOutput.h:641</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_on_off_output_html"><div class="ttname"><a href="classaudio__tools_1_1_on_off_output.html">audio_tools::OnOffOutput</a></div><div class="ttdef"><b>Definition:</b> AudioOutput.h:642</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_on_off_output_html_a2b8951fe5a4418a17d40c824fbff6ae3"><div class="ttname"><a href="classaudio__tools_1_1_on_off_output.html#a2b8951fe5a4418a17d40c824fbff6ae3">audio_tools::OnOffOutput::setActive</a></div><div class="ttdeci">void setActive(bool on)</div><div class="ttdoc">set the sitch to on or off</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:651</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_on_off_output_html_aa1f512ab0fcc05612f8e3d6a4664ce9a"><div class="ttname"><a href="classaudio__tools_1_1_on_off_output.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">audio_tools::OnOffOutput::isActive</a></div><div class="ttdeci">bool isActive()</div><div class="ttdoc">Determines if the switch is on.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:654</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_on_off_output_html_ae1220e7e3542f5a84c21fe2f7cef194c"><div class="ttname"><a href="classaudio__tools_1_1_on_off_output.html#ae1220e7e3542f5a84c21fe2f7cef194c">audio_tools::OnOffOutput::setOutput</a></div><div class="ttdeci">void setOutput(Print &amp;out)</div><div class="ttdoc">Redefines the final output</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:648</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_output_mixer_html"><div class="ttname"><a href="classaudio__tools_1_1_output_mixer.html">audio_tools::OutputMixer</a></div><div class="ttdoc">Mixing of multiple outputs to one final output.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:298</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_output_mixer_html_a69fce743755f71ed4b89417b0a8f3408"><div class="ttname"><a href="classaudio__tools_1_1_output_mixer.html#a69fce743755f71ed4b89417b0a8f3408">audio_tools::OutputMixer::write</a></div><div class="ttdeci">size_t write(int idx, const uint8_t *buffer_c, size_t bytes)</div><div class="ttdoc">Write the data for an individual stream idx which will be mixed together.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:366</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_output_mixer_html_a87b51853b7bf1bc90d9efa9f3b8d4fea"><div class="ttname"><a href="classaudio__tools_1_1_output_mixer.html#a87b51853b7bf1bc90d9efa9f3b8d4fea">audio_tools::OutputMixer::availableForWrite</a></div><div class="ttdeci">int availableForWrite() override</div><div class="ttdoc">Provides the bytes available to write for the current stream buffer.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:383</div></div>
