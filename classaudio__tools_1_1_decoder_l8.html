@@ -93,10 +93,10 @@ Inheritance diagram for DecoderL8:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad47fa4c28440f8f4c006678055598ef5"><td class="memItemLeft" align="right" valign="top"><a id="ad47fa4c28440f8f4c006678055598ef5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_decoder_l8.html#ad47fa4c28440f8f4c006678055598ef5">DecoderL8</a> (bool isSigned=true)</td></tr>
-<tr class="memdesc:ad47fa4c28440f8f4c006678055598ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_decoder_l8.html" title="DecoderL8 - Converts an 8 Bit Stream into 16Bits Most microcontrollers can not output 8 bit data dire...">DecoderL8</a> object. <br /></td></tr>
-<tr class="separator:ad47fa4c28440f8f4c006678055598ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe56dd630e1c6b569f2cf9ff1353ff7f"><td class="memItemLeft" align="right" valign="top"><a id="afe56dd630e1c6b569f2cf9ff1353ff7f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_decoder_l8.html#afe56dd630e1c6b569f2cf9ff1353ff7f">DecoderL8</a> (bool isSigned=false)</td></tr>
+<tr class="memdesc:afe56dd630e1c6b569f2cf9ff1353ff7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_decoder_l8.html" title="DecoderL8 - Converts an 8 Bit Stream into 16Bits Most microcontrollers can not output 8 bit data dire...">DecoderL8</a> object. <br /></td></tr>
+<tr class="separator:afe56dd630e1c6b569f2cf9ff1353ff7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1601a5fb7baa9f58dffbc5aa8ab1db8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_decoder_l8.html#a1601a5fb7baa9f58dffbc5aa8ab1db8e">DecoderL8</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream, <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a1601a5fb7baa9f58dffbc5aa8ab1db8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_decoder_l8.html" title="DecoderL8 - Converts an 8 Bit Stream into 16Bits Most microcontrollers can not output 8 bit data dire...">DecoderL8</a> object.  <a href="classaudio__tools_1_1_decoder_l8.html#a1601a5fb7baa9f58dffbc5aa8ab1db8e">More...</a><br /></td></tr>
 <tr class="separator:a1601a5fb7baa9f58dffbc5aa8ab1db8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,6 +112,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () override
 <tr class="memitem:a1290b7e491da7eafb26740fb0245835f"><td class="memItemLeft" align="right" valign="top"><a id="a1290b7e491da7eafb26740fb0245835f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info1)</td></tr>
 <tr class="separator:a1290b7e491da7eafb26740fb0245835f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c9891e6cb8967823dcf3102bce23150"><td class="memItemLeft" align="right" valign="top"><a id="a2c9891e6cb8967823dcf3102bce23150"></a>
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>convertSample</b> (int16_t in)</td></tr>
+<tr class="separator:a2c9891e6cb8967823dcf3102bce23150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memItemLeft" align="right" valign="top"><a id="a64e9fa75beda50a9e8400ee0d4e61984"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
 <tr class="separator:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,7 +125,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isResultPCM</
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () override</td></tr>
 <tr class="separator:a5e20121f14644633fa87e762dccff25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_decoder_l8.html#accee684614189e73bdc9f1b2f7abf919">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
+<tr class="memdesc:accee684614189e73bdc9f1b2f7abf919"><td class="mdescLeft">&#160;</td><td class="mdescRight">for most decoders this is not needed <br /></td></tr>
 <tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4626becb07db8422467ad6e787b2b8d4"><td class="memItemLeft" align="right" valign="top"><a id="a4626becb07db8422467ad6e787b2b8d4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#a4626becb07db8422467ad6e787b2b8d4">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;notify) override</td></tr>
@@ -137,9 +141,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStre
 <tr class="memitem:a687aa6c886f44563a06bfacde4507971"><td class="memItemLeft" align="right" valign="top"><a id="a687aa6c886f44563a06bfacde4507971"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputStream</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream) override</td></tr>
 <tr class="separator:a687aa6c886f44563a06bfacde4507971"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0322b050a68a8c578d8a090a932e8bdc"><td class="memItemLeft" align="right" valign="top"><a id="a0322b050a68a8c578d8a090a932e8bdc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_decoder_l8.html#a0322b050a68a8c578d8a090a932e8bdc">setSigned</a> (bool isSigned)</td></tr>
-<tr class="memdesc:a0322b050a68a8c578d8a090a932e8bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default the encoded values are unsigned, but you can change them to signed. <br /></td></tr>
+<tr class="memitem:a0322b050a68a8c578d8a090a932e8bdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_decoder_l8.html#a0322b050a68a8c578d8a090a932e8bdc">setSigned</a> (bool isSigned)</td></tr>
 <tr class="separator:a0322b050a68a8c578d8a090a932e8bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b29912258e11751cfa24707a4e328ca"><td class="memItemLeft" align="right" valign="top"><a id="a1b29912258e11751cfa24707a4e328ca"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *in_ptr, size_t in_size) override</td></tr>
@@ -263,6 +265,34 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_signed</b> = false
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0322b050a68a8c578d8a090a932e8bdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0322b050a68a8c578d8a090a932e8bdc">&#9670;&nbsp;</a></span>setSigned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSigned </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isSigned</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>By default the encoded values are unsigned, but you can change them to signed </p>
 
 </div>
 </div>

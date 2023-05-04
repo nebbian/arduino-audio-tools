@@ -92,16 +92,16 @@ Inheritance diagram for EncoderL8:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8dfaf82d6ee3367fd9c70fc6135afa37"><td class="memItemLeft" align="right" valign="top"><a id="a8dfaf82d6ee3367fd9c70fc6135afa37"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>EncoderL8</b> (bool isSigned=true)</td></tr>
-<tr class="separator:a8dfaf82d6ee3367fd9c70fc6135afa37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67825149c22455bbec4557a702f06ef3"><td class="memItemLeft" align="right" valign="top"><a id="a67825149c22455bbec4557a702f06ef3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>EncoderL8</b> (bool isSigned=false)</td></tr>
+<tr class="separator:a67825149c22455bbec4557a702f06ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a287b5930b04a66ff467042628f9deb25"><td class="memItemLeft" align="right" valign="top"><a id="a287b5930b04a66ff467042628f9deb25"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>EncoderL8</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
 <tr class="separator:a287b5930b04a66ff467042628f9deb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a862ecf2b78cdb7877f997db8393c9825"><td class="memItemLeft" align="right" valign="top"><a id="a862ecf2b78cdb7877f997db8393c9825"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoder_l8.html#a862ecf2b78cdb7877f997db8393c9825">begin</a> () override</td></tr>
-<tr class="memdesc:a862ecf2b78cdb7877f997db8393c9825"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the processing using the actual RAWAudioInfo <br /></td></tr>
-<tr class="separator:a862ecf2b78cdb7877f997db8393c9825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="memItemLeft" align="right" valign="top"><a id="a7c3e14d99bd3dc0e3670d6956dafcaf2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoder_l8.html#a7c3e14d99bd3dc0e3670d6956dafcaf2">begin</a> () override</td></tr>
+<tr class="memdesc:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the processing using the actual RAWAudioInfo <br /></td></tr>
+<tr class="separator:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c23593971c66b1fee16958a3ad1b0a6"><td class="memItemLeft" align="right" valign="top"><a id="a6c23593971c66b1fee16958a3ad1b0a6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="separator:a6c23593971c66b1fee16958a3ad1b0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,6 +109,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoder_l8.html#abff6eaabd9829e911a1dbf8850192f05">begin</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
 <tr class="memdesc:abff6eaabd9829e911a1dbf8850192f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the processing <br /></td></tr>
 <tr class="separator:abff6eaabd9829e911a1dbf8850192f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1389dc2927aa07b515358574cb205b58"><td class="memItemLeft" align="right" valign="top"><a id="a1389dc2927aa07b515358574cb205b58"></a>
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>convertSample</b> (int16_t sample)</td></tr>
+<tr class="separator:a1389dc2927aa07b515358574cb205b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memItemLeft" align="right" valign="top"><a id="a64e9fa75beda50a9e8400ee0d4e61984"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoder_l8.html#a64e9fa75beda50a9e8400ee0d4e61984">end</a> () override</td></tr>
 <tr class="memdesc:a64e9fa75beda50a9e8400ee0d4e61984"><td class="mdescLeft">&#160;</td><td class="mdescRight">stops the processing <br /></td></tr>
@@ -123,10 +126,10 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a90622bd78258a36bbcf63426b28307ac"><td class="memItemLeft" align="right" valign="top"><a id="a90622bd78258a36bbcf63426b28307ac"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () override</td></tr>
 <tr class="separator:a90622bd78258a36bbcf63426b28307ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoder_l8.html#accee684614189e73bdc9f1b2f7abf919">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
-<tr class="memdesc:accee684614189e73bdc9f1b2f7abf919"><td class="mdescLeft">&#160;</td><td class="mdescRight">We actually do nothing with this. <br /></td></tr>
-<tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c749802992efec8bc20ba4a522b027f"><td class="memItemLeft" align="right" valign="top"><a id="a5c749802992efec8bc20ba4a522b027f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoder_l8.html#a5c749802992efec8bc20ba4a522b027f">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
+<tr class="memdesc:a5c749802992efec8bc20ba4a522b027f"><td class="mdescLeft">&#160;</td><td class="mdescRight">We actually do nothing with this. <br /></td></tr>
+<tr class="separator:a5c749802992efec8bc20ba4a522b027f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86ce681ae22c0345c20e583a8a1f298f"><td class="memItemLeft" align="right" valign="top"><a id="a86ce681ae22c0345c20e583a8a1f298f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoder_l8.html#a86ce681ae22c0345c20e583a8a1f298f">setOutputStream</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream) override</td></tr>
 <tr class="memdesc:a86ce681ae22c0345c20e583a8a1f298f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the output <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a>. <br /></td></tr>
@@ -135,10 +138,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoder_l8.html#a0322b050a68a8c578d8a090a932e8bdc">setSigned</a> (bool isSigned)</td></tr>
 <tr class="memdesc:a0322b050a68a8c578d8a090a932e8bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default the encoded values are unsigned, but can change them to signed. <br /></td></tr>
 <tr class="separator:a0322b050a68a8c578d8a090a932e8bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b29912258e11751cfa24707a4e328ca"><td class="memItemLeft" align="right" valign="top"><a id="a1b29912258e11751cfa24707a4e328ca"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoder_l8.html#a1b29912258e11751cfa24707a4e328ca">write</a> (const void *in_ptr, size_t in_size) override</td></tr>
-<tr class="memdesc:a1b29912258e11751cfa24707a4e328ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes PCM data to be encoded as RAW. <br /></td></tr>
-<tr class="separator:a1b29912258e11751cfa24707a4e328ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9df001cacfb1816fb8f2cf871450c4a"><td class="memItemLeft" align="right" valign="top"><a id="ac9df001cacfb1816fb8f2cf871450c4a"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoder_l8.html#ac9df001cacfb1816fb8f2cf871450c4a">write</a> (const void *in_ptr, size_t in_size) override</td></tr>
+<tr class="memdesc:ac9df001cacfb1816fb8f2cf871450c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes PCM data to be encoded as RAW. <br /></td></tr>
+<tr class="separator:ac9df001cacfb1816fb8f2cf871450c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
