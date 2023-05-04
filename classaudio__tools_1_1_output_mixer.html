@@ -119,17 +119,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:af8b8a26eeb8af999326ff1d5c9bbd5be"><td class="memItemLeft" align="right" valign="top"><a id="af8b8a26eeb8af999326ff1d5c9bbd5be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutputCount</b> (int count)</td></tr>
 <tr class="separator:af8b8a26eeb8af999326ff1d5c9bbd5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb80a48eb1817f480e52497f42b5d4e5"><td class="memItemLeft" align="right" valign="top"><a id="abb80a48eb1817f480e52497f42b5d4e5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_output_mixer.html#abb80a48eb1817f480e52497f42b5d4e5">setWeight</a> (int channel, float weight)</td></tr>
-<tr class="memdesc:abb80a48eb1817f480e52497f42b5d4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a new weight for the indicated channel: If you set it to 0 it is muted. <br /></td></tr>
+<tr class="memitem:abb80a48eb1817f480e52497f42b5d4e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_output_mixer.html#abb80a48eb1817f480e52497f42b5d4e5">setWeight</a> (int channel, float weight)</td></tr>
 <tr class="separator:abb80a48eb1817f480e52497f42b5d4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4b57d21919c42d55af03391f91a1c08"><td class="memItemLeft" align="right" valign="top"><a id="af4b57d21919c42d55af03391f91a1c08"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_output_mixer.html#af4b57d21919c42d55af03391f91a1c08">size</a> ()</td></tr>
 <tr class="memdesc:af4b57d21919c42d55af03391f91a1c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of stremams to which are mixed together. <br /></td></tr>
 <tr class="separator:af4b57d21919c42d55af03391f91a1c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91c8fc5c52681e7c3fae7f0fa4c8b3ed"><td class="memItemLeft" align="right" valign="top"><a id="a91c8fc5c52681e7c3fae7f0fa4c8b3ed"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_output_mixer.html#a91c8fc5c52681e7c3fae7f0fa4c8b3ed">write</a> (const uint8_t *buffer_c, size_t bytes) override</td></tr>
-<tr class="memdesc:a91c8fc5c52681e7c3fae7f0fa4c8b3ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the data from a simgle stream which will be mixed together (the stream idx is increased) <br /></td></tr>
+<tr class="memitem:a91c8fc5c52681e7c3fae7f0fa4c8b3ed"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_output_mixer.html#a91c8fc5c52681e7c3fae7f0fa4c8b3ed">write</a> (const uint8_t *buffer_c, size_t bytes) override</td></tr>
 <tr class="separator:a91c8fc5c52681e7c3fae7f0fa4c8b3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69fce743755f71ed4b89417b0a8f3408"><td class="memItemLeft" align="right" valign="top"><a id="a69fce743755f71ed4b89417b0a8f3408"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_output_mixer.html#a69fce743755f71ed4b89417b0a8f3408">write</a> (int idx, const uint8_t *buffer_c, size_t bytes)</td></tr>
@@ -153,9 +149,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update_total_weights<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a7f0496f1b182d1ba4ed310f4e45d53f4"><td class="memItemLeft" align="right" valign="top"><a id="a7f0496f1b182d1ba4ed310f4e45d53f4"></a>
+<tr class="memitem:a9cf7add9acbc035215a1467dfbcc9bcc"><td class="memItemLeft" align="right" valign="top"><a id="a9cf7add9acbc035215a1467dfbcc9bcc"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; T &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffers</b> {0}</td></tr>
-<tr class="separator:a7f0496f1b182d1ba4ed310f4e45d53f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a9cf7add9acbc035215a1467dfbcc9bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a407c3efba665d276a38229f905bef352"><td class="memItemLeft" align="right" valign="top"><a id="a407c3efba665d276a38229f905bef352"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false</td></tr>
 <tr class="separator:a407c3efba665d276a38229f905bef352"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,10 +165,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false
 int&#160;</td><td class="memItemRight" valign="bottom"><b>output_count</b></td></tr>
 <tr class="separator:ac39709c45a8838291f9c76e8193617e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99c350af45d350708934a697a219ec2c"><td class="memItemLeft" align="right" valign="top"><a id="a99c350af45d350708934a697a219ec2c"></a>
-<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_final_output</b> =nullptr</td></tr>
+<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_final_output</b> = nullptr</td></tr>
 <tr class="separator:a99c350af45d350708934a697a219ec2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0f3b6d8f47b1f0e8556873fe15f3297"><td class="memItemLeft" align="right" valign="top"><a id="ae0f3b6d8f47b1f0e8556873fe15f3297"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>p_memory</b> =nullptr</td></tr>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>p_memory</b> = nullptr</td></tr>
 <tr class="separator:ae0f3b6d8f47b1f0e8556873fe15f3297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17e28bed569f0834796f55dcc7de2ec0"><td class="memItemLeft" align="right" valign="top"><a id="a17e28bed569f0834796f55dcc7de2ec0"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>size_bytes</b></td></tr>
@@ -200,7 +196,84 @@ class audio_tools::OutputMixer&lt; T &gt;</h3>
   </table>
   </dd>
 </dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="abb80a48eb1817f480e52497f42b5d4e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb80a48eb1817f480e52497f42b5d4e5">&#9670;&nbsp;</a></span>setWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setWeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>weight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Defines a new weight for the indicated channel: If you set it to 0 it is muted. </p>
+
+</div>
+</div>
+<a id="a91c8fc5c52681e7c3fae7f0fa4c8b3ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c8fc5c52681e7c3fae7f0fa4c8b3ed">&#9670;&nbsp;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t write </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer_c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>bytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write the data from a simgle stream which will be mixed together (the stream idx is increased) </p>
+
+<p>Reimplemented from <a class="el" href="classaudio__tools_1_1_print.html">Print</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioTools/<a class="el" href="_audio_output_8h_source.html">AudioOutput.h</a></li>
 </ul>
 </div><!-- contents -->
