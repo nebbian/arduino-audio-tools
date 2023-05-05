@@ -1465,18 +1465,28 @@ Enumerations</h2></td></tr>
 , <b>StartOnConnect</b>
  }</td></tr>
 <tr class="separator:a2b5699409c82146721f7ed069d134dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a320f7b385576131cdae7758303baf7aa"><td class="memItemLeft" align="right" valign="top"><a id="a320f7b385576131cdae7758303baf7aa"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>AudioType</b> : uint8_t { <b>PCM</b> = 1
+<tr class="memitem:a4fcb46758e1356d5ff7c6523c52810c1"><td class="memItemLeft" align="right" valign="top"><a id="a4fcb46758e1356d5ff7c6523c52810c1"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a4fcb46758e1356d5ff7c6523c52810c1">AudioFormat</a> : uint16_t { <br />
+&#160;&#160;<b>UNKNOWN</b> = 0x0000
+, <b>PCM</b> = 0x0001
+, <b>ADPCM</b> = 0x0002
+, <b>IEEE_FLOAT</b> = 0x0003
+, <br />
+&#160;&#160;<b>ALAW</b> = 0x0006
+, <b>MULAW</b> = 0x0007
+<br />
+ }</td></tr>
+<tr class="memdesc:a4fcb46758e1356d5ff7c6523c52810c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio Formats. <br /></td></tr>
+<tr class="separator:a4fcb46758e1356d5ff7c6523c52810c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a320f7b385576131cdae7758303baf7aa"><td class="memItemLeft" align="right" valign="top"><a id="a320f7b385576131cdae7758303baf7aa"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>AudioType</b> : uint8_t { <br />
+&#160;&#160;<b>PCM</b>
+, <b>PCM</b> = 0x0001
 , <b>MP3</b>
-, <b>AAC</b> = 255
-, <b>WAV</b>
+, <b>AAC</b>
+, <br />
+&#160;&#160;<b>WAV</b>
+<br />
  }</td></tr>
 <tr class="separator:a320f7b385576131cdae7758303baf7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1ff9c2b2fa5f6915ca465c0af7e9595"><td class="memItemLeft" align="right" valign="top"><a id="aa1ff9c2b2fa5f6915ca465c0af7e9595"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>AVIAudioFormat</b> { <b>PCM</b> = 1
-, <b>ADPCM</b> = 2
-, <b>IEEE_FLOAT</b> = 3
-, <b>AAC</b> = 255
- }</td></tr>
-<tr class="separator:aa1ff9c2b2fa5f6915ca465c0af7e9595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0f1efd62d502b5ca0387fbcb43268e2"><td class="memItemLeft" align="right" valign="top"><a id="ab0f1efd62d502b5ca0387fbcb43268e2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Base46Logic</b> { <b>NoCR</b>
 , <b>CRforFrame</b>
 , <b>CRforWrite</b>

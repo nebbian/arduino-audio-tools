@@ -97,9 +97,9 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWr
 <tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e54bffdb86822a4f7d2068e97e2ba87"><td class="memItemLeft" align="right" valign="top"><a id="a9e54bffdb86822a4f7d2068e97e2ba87"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>beginFrame</b> (int size)=0</td></tr>
-<tr class="separator:a9e54bffdb86822a4f7d2068e97e2ba87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef9c64044a5ddcc534df424f38f31503"><td class="memItemLeft" align="right" valign="top"><a id="aef9c64044a5ddcc534df424f38f31503"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>beginFrame</b> (size_t size)=0</td></tr>
+<tr class="separator:aef9c64044a5ddcc534df424f38f31503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,9 +122,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudi
 <tr class="memitem:a989540d43150595fdde26c8f37265069"><td class="memItemLeft" align="right" valign="top"><a id="a989540d43150595fdde26c8f37265069"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> &amp;info)</td></tr>
 <tr class="separator:a989540d43150595fdde26c8f37265069"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dc19ad83d7464f1a4c104d76ba37aa7"><td class="memItemLeft" align="right" valign="top"><a id="a2dc19ad83d7464f1a4c104d76ba37aa7"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t size) override=0</td></tr>
-<tr class="separator:a2dc19ad83d7464f1a4c104d76ba37aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb92fbaa911ef96f2ac0502efc39e573"><td class="memItemLeft" align="right" valign="top"><a id="aeb92fbaa911ef96f2ac0502efc39e573"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *data, size_t byteCount)=0</td></tr>
+<tr class="separator:aeb92fbaa911ef96f2ac0502efc39e573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
 <tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['keyoff_541',['keyOff',['../classaudio__tools_1_1_abstract_synthesizer_channel.html#a225bc4c571a71d6c1bcecf47a6ffb650',1,'audio_tools::AbstractSynthesizerChannel::keyOff()'],['../classaudio__tools_1_1_default_synthesizer_channel.html#a248b8fd38d66a48400b8d44e78634edb',1,'audio_tools::DefaultSynthesizerChannel::keyOff()']]],
-  ['keyon_542',['keyOn',['../classaudio__tools_1_1_abstract_synthesizer_channel.html#afe2ceeff51e99722f7b6855b674797e9',1,'audio_tools::AbstractSynthesizerChannel::keyOn()'],['../classaudio__tools_1_1_default_synthesizer_channel.html#a1fbaf5d254e757c2593fa1a52dd89728',1,'audio_tools::DefaultSynthesizerChannel::keyOn()']]],
-  ['keyparameter_543',['KeyParameter',['../structaudio__tools_1_1_synthesizer_1_1_key_parameter.html',1,'audio_tools::Synthesizer']]],
-  ['kiss_544',['KISS',['../group__fft-kiss.html',1,'']]]
+  ['keyoff_543',['keyOff',['../classaudio__tools_1_1_abstract_synthesizer_channel.html#a225bc4c571a71d6c1bcecf47a6ffb650',1,'audio_tools::AbstractSynthesizerChannel::keyOff()'],['../classaudio__tools_1_1_default_synthesizer_channel.html#a248b8fd38d66a48400b8d44e78634edb',1,'audio_tools::DefaultSynthesizerChannel::keyOff()']]],
+  ['keyon_544',['keyOn',['../classaudio__tools_1_1_abstract_synthesizer_channel.html#afe2ceeff51e99722f7b6855b674797e9',1,'audio_tools::AbstractSynthesizerChannel::keyOn()'],['../classaudio__tools_1_1_default_synthesizer_channel.html#a1fbaf5d254e757c2593fa1a52dd89728',1,'audio_tools::DefaultSynthesizerChannel::keyOn()']]],
+  ['keyparameter_545',['KeyParameter',['../structaudio__tools_1_1_synthesizer_1_1_key_parameter.html',1,'audio_tools::Synthesizer']]],
+  ['kiss_546',['KISS',['../group__fft-kiss.html',1,'']]]
 ];

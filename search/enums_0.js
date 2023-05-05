@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['chunk_5fresult_2498',['chunk_result',['../namespaceaudio__tools.html#a6a59ed379dc716d3d4f19e585d96abcc',1,'audio_tools']]]
+  ['audioformat_2502',['AudioFormat',['../namespaceaudio__tools.html#a4fcb46758e1356d5ff7c6523c52810c1',1,'audio_tools']]]
 ];

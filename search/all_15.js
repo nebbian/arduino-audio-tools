@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['udpstream_1116',['UDPStream',['../classaudio__tools_1_1_u_d_p_stream.html',1,'audio_tools']]],
-  ['ui_1117',['UI',['../class_u_i.html',1,'']]],
-  ['update_1118',['update',['../classaudio__tools_1_1_l_e_d_output.html#acd36d7881ea8503d5c5824e7a5ad6c7e',1,'audio_tools::LEDOutput']]],
-  ['update_5fcallback_1119',['update_callback',['../structaudio__tools_1_1_l_e_d_output_config.html#a407f72286192d582e451c779a24eee24',1,'audio_tools::LEDOutputConfig']]],
-  ['update_5ffrequency_1120',['update_frequency',['../structaudio__tools_1_1_l_e_d_output_config.html#a637858590a54f57f8ce05bb395cc8798',1,'audio_tools::LEDOutputConfig']]],
-  ['updatecolumn_1121',['updateColumn',['../classaudio__tools_1_1_l_e_d_output.html#a5d110fad83bb455764370f74526501bc',1,'audio_tools::LEDOutput::updateColumn(int x, int currY)'],['../classaudio__tools_1_1_l_e_d_output.html#a5727155f41c2e8d5c14a30f18ec2864b',1,'audio_tools::LEDOutput::updateColumn(int currY)']]],
-  ['updatemodulation_1122',['updateModulation',['../classaudio__tools_1_1_simple_flanger.html#a0fa8a90f35312752588052b085075ac8',1,'audio_tools::SimpleFlanger']]],
-  ['url_1123',['Url',['../classaudio__tools_1_1_url.html',1,'audio_tools']]],
-  ['urlstream_1124',['URLStream',['../classaudio__tools_1_1_u_r_l_stream.html',1,'audio_tools']]],
-  ['urlstreambuffered_1125',['URLStreamBuffered',['../classaudio__tools_1_1_u_r_l_stream_buffered.html',1,'audio_tools']]],
-  ['use_5fdtx_1126',['use_dtx',['../structaudio__tools_1_1_opus_encoder_settings.html#a519462b22ce6239e3ec4834229d5361d',1,'audio_tools::OpusEncoderSettings']]]
+  ['udpstream_1118',['UDPStream',['../classaudio__tools_1_1_u_d_p_stream.html',1,'audio_tools']]],
+  ['ui_1119',['UI',['../class_u_i.html',1,'']]],
+  ['update_1120',['update',['../classaudio__tools_1_1_l_e_d_output.html#acd36d7881ea8503d5c5824e7a5ad6c7e',1,'audio_tools::LEDOutput']]],
+  ['update_5fcallback_1121',['update_callback',['../structaudio__tools_1_1_l_e_d_output_config.html#a407f72286192d582e451c779a24eee24',1,'audio_tools::LEDOutputConfig']]],
+  ['update_5ffrequency_1122',['update_frequency',['../structaudio__tools_1_1_l_e_d_output_config.html#a637858590a54f57f8ce05bb395cc8798',1,'audio_tools::LEDOutputConfig']]],
+  ['updatecolumn_1123',['updateColumn',['../classaudio__tools_1_1_l_e_d_output.html#a5d110fad83bb455764370f74526501bc',1,'audio_tools::LEDOutput::updateColumn(int x, int currY)'],['../classaudio__tools_1_1_l_e_d_output.html#a5727155f41c2e8d5c14a30f18ec2864b',1,'audio_tools::LEDOutput::updateColumn(int currY)']]],
+  ['updatemodulation_1124',['updateModulation',['../classaudio__tools_1_1_simple_flanger.html#a0fa8a90f35312752588052b085075ac8',1,'audio_tools::SimpleFlanger']]],
+  ['url_1125',['Url',['../classaudio__tools_1_1_url.html',1,'audio_tools']]],
+  ['urlstream_1126',['URLStream',['../classaudio__tools_1_1_u_r_l_stream.html',1,'audio_tools']]],
+  ['urlstreambuffered_1127',['URLStreamBuffered',['../classaudio__tools_1_1_u_r_l_stream_buffered.html',1,'audio_tools']]],
+  ['use_5fdtx_1128',['use_dtx',['../structaudio__tools_1_1_opus_encoder_settings.html#a519462b22ce6239e3ec4834229d5361d',1,'audio_tools::OpusEncoderSettings']]]
 ];
