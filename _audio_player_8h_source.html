@@ -289,7 +289,7 @@ $(function() {
 <div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_player.html#a335f4f4ef919787f4d83f9de06caedb8">  272</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_audio_player.html#a335f4f4ef919787f4d83f9de06caedb8">next</a>(<span class="keywordtype">int</span> offset=1) {</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            TRACED();</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            writeEnd();</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            steam_increment = offset &gt;= 0 ? 1 : -1;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            stream_increment = offset &gt;= 0 ? 1 : -1;</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            active = <a class="code" href="classaudio__tools_1_1_audio_player.html#aea658c6f4c17e5aa46acdc4b7bb85a67">setStream</a>(p_source-&gt;<a class="code" href="classaudio__tools_1_1_audio_source.html#ad63a998d632bdac03e94d3aeb4256ccc">nextStream</a>(offset));</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordflow">return</span> active;</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        }</div>
@@ -297,7 +297,7 @@ $(function() {
 <div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_player.html#a7e6f0e6e369424058c72c94d11ff94cc">  281</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_audio_player.html#a7e6f0e6e369424058c72c94d11ff94cc">setIndex</a>(<span class="keywordtype">int</span> idx) {</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            TRACED();</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            writeEnd();</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            steam_increment = 1;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            stream_increment = 1;</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            active = <a class="code" href="classaudio__tools_1_1_audio_player.html#aea658c6f4c17e5aa46acdc4b7bb85a67">setStream</a>(p_source-&gt;<a class="code" href="classaudio__tools_1_1_audio_source.html#a773f36226afa82260f1adf5830a150e2">selectStream</a>(idx));</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <span class="keywordflow">return</span> active;</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
@@ -305,7 +305,7 @@ $(function() {
 <div class="line"><a name="l00290"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_player.html#a2f24eb6d5fb69a5230a1927fa90c6f00">  290</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_audio_player.html#a2f24eb6d5fb69a5230a1927fa90c6f00">setPath</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path) {</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            TRACED();</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            writeEnd();</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            steam_increment = 1;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            stream_increment = 1;</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            active = <a class="code" href="classaudio__tools_1_1_audio_player.html#aea658c6f4c17e5aa46acdc4b7bb85a67">setStream</a>(p_source-&gt;<a class="code" href="classaudio__tools_1_1_audio_source.html#a773f36226afa82260f1adf5830a150e2">selectStream</a>(path));</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            <span class="keywordflow">return</span> active;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        }</div>
@@ -313,7 +313,7 @@ $(function() {
 <div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_player.html#acbf583e792ca4a2c94f0e2514fbfc377">  299</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_audio_player.html#acbf583e792ca4a2c94f0e2514fbfc377">previous</a>(<span class="keywordtype">int</span> offset=1) {</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            TRACED();</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            writeEnd();</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            steam_increment = -1;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            stream_increment = -1;</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            active = <a class="code" href="classaudio__tools_1_1_audio_player.html#aea658c6f4c17e5aa46acdc4b7bb85a67">setStream</a>(p_source-&gt;<a class="code" href="classaudio__tools_1_1_audio_source.html#ad8b400914f4e89544a6cc95e051abbe8">previousStream</a>(abs(offset)));</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="keywordflow">return</span> active;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        }</div>
@@ -389,7 +389,7 @@ $(function() {
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                <span class="comment">// handle sound</span></div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                result = copier.<a class="code" href="classaudio__tools_1_1_stream_copy.html#a804c969d8a52dba9265efad44ce88d3a">copy</a>();</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                <span class="keywordflow">if</span> (result&gt;0 || timeout == 0) {</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                    <span class="comment">// reset timeout</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                    <span class="comment">// reset timeout if we had any data</span></div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                    timeout = <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>() + p_source-&gt;<a class="code" href="classaudio__tools_1_1_audio_source.html#ac20e50555537a80d3d535eb2225cc738">timeoutAutoNext</a>();</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                }</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                <span class="comment">// move to next stream after timeout</span></div>
@@ -470,7 +470,7 @@ $(function() {
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        AudioInfo info;</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keywordtype">bool</span> meta_active = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        uint32_t timeout = 0;</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        <span class="keywordtype">int</span> steam_increment = 1; <span class="comment">// +1 moves forward; -1 moves backward</span></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        <span class="keywordtype">int</span> stream_increment = 1; <span class="comment">// +1 moves forward; -1 moves backward</span></div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="keywordtype">float</span> current_volume = -1.0; <span class="comment">// illegal value which will trigger an update</span></div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        <span class="keywordtype">int</span> delay_if_full = 100;</div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160; </div>
@@ -490,9 +490,9 @@ $(function() {
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;            <span class="keywordflow">if</span> (p_input_stream == <span class="keyword">nullptr</span> || <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>() &gt; timeout) {</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;                fade.setFadeInActive(<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;                <span class="keywordflow">if</span> (autonext) {</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;                    LOGI(<span class="stringliteral">&quot;-&gt; timeout - moving by %d&quot;</span>, steam_increment);</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;                    LOGI(<span class="stringliteral">&quot;-&gt; timeout - moving by %d&quot;</span>, stream_increment);</div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;                    <span class="comment">// open next stream</span></div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;                    <span class="keywordflow">if</span> (!<a class="code" href="classaudio__tools_1_1_audio_player.html#a335f4f4ef919787f4d83f9de06caedb8">next</a>(steam_increment)) {</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;                    <span class="keywordflow">if</span> (!<a class="code" href="classaudio__tools_1_1_audio_player.html#a335f4f4ef919787f4d83f9de06caedb8">next</a>(stream_increment)) {</div>
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;                        LOGD(<span class="stringliteral">&quot;stream is null&quot;</span>);</div>
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;                    }</div>
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;                } <span class="keywordflow">else</span> {</div>
