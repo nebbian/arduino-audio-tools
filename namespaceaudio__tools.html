@@ -291,8 +291,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_time.html">AudioTime</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tools for calculating timer values.  <a href="classaudio__tools_1_1_audio_time.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_video_sync.html">AudioVideoSync</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_w_a_v_server.html">AudioWAVServer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple Arduino Webserver which streams the audio as WAV data. This class is based on the AudioEncodedServer class. All you need to do is to provide the data with a callback method or from a <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a>.  <a href="classaudio__tools_1_1_audio_w_a_v_server.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -773,6 +771,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1int24x__t.html">int24x_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">24bit integer which is used for I2S sound processing. The values are really using 3 bytes. It works only on little endian machines!  <a href="classaudio__tools_1_1int24x__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_jpeg_open_c_v.html">JpegOpenCV</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_jupyter_audio_t.html">JupyterAudioT</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output to Jupyter. We write the data just to a file from where we can load the data again for different representations.  <a href="classaudio__tools_1_1_jupyter_audio_t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -940,9 +940,9 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constant value.  <a href="classaudio__tools_1_1_parameter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_parse_buffer.html">ParseBuffer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">We try to keep the necessary buffer for parsing as small as possible, The data() method provides the start of the actual data and with consume we remove the processed data from the buffer to make space again.  <a href="classaudio__tools_1_1_parse_buffer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_parse_object.html">ParseObject</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a LIST or a CHUNK.  <a href="classaudio__tools_1_1_parse_object.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_pin_info_e_s_p32.html">PinInfoESP32</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information for a PIN.  <a href="structaudio__tools_1_1_pin_info_e_s_p32.html#details">More...</a><br /></td></tr>
@@ -1295,6 +1295,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_vector.html">Vector</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_vector.html" title="Vector implementation which provides the most important methods as defined by std::vector....">Vector</a> implementation which provides the most important methods as defined by std::vector. This class it is quite handy to have and most of the times quite better then dealing with raw c arrays.  <a href="classaudio__tools_1_1_vector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_video_audio_sync.html">VideoAudioSync</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_video_output.html">VideoOutput</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_control.html">VolumeControl</a></td></tr>
@@ -1477,14 +1479,10 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a4fcb46758e1356d5ff7c6523c52810c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio Formats. <br /></td></tr>
 <tr class="separator:a4fcb46758e1356d5ff7c6523c52810c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a320f7b385576131cdae7758303baf7aa"><td class="memItemLeft" align="right" valign="top"><a id="a320f7b385576131cdae7758303baf7aa"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>AudioType</b> : uint8_t { <br />
-&#160;&#160;<b>PCM</b>
-, <b>PCM</b> = 0x0001
+<tr class="memitem:a320f7b385576131cdae7758303baf7aa"><td class="memItemLeft" align="right" valign="top"><a id="a320f7b385576131cdae7758303baf7aa"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>AudioType</b> : uint8_t { <b>PCM</b>
 , <b>MP3</b>
 , <b>AAC</b>
-, <br />
-&#160;&#160;<b>WAV</b>
-<br />
+, <b>WAV</b>
  }</td></tr>
 <tr class="separator:a320f7b385576131cdae7758303baf7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0f1efd62d502b5ca0387fbcb43268e2"><td class="memItemLeft" align="right" valign="top"><a id="ab0f1efd62d502b5ca0387fbcb43268e2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Base46Logic</b> { <b>NoCR</b>
