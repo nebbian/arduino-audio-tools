@@ -76,7 +76,7 @@ var searchData=
   ['audiofftbase_74',['AudioFFTBase',['../classaudio__tools_1_1_audio_f_f_t_base.html',1,'AudioFFTBase'],['../classaudio__tools_1_1_audio_f_f_t_base.html#a737190d3d351f65b5184f7c8047a2fb7',1,'audio_tools::AudioFFTBase::AudioFFTBase()']]],
   ['audiofftconfig_75',['AudioFFTConfig',['../structaudio__tools_1_1_audio_f_f_t_config.html',1,'audio_tools']]],
   ['audiofftresult_76',['AudioFFTResult',['../structaudio__tools_1_1_audio_f_f_t_result.html',1,'audio_tools']]],
-  ['audioformat_77',['AudioFormat',['../namespaceaudio__tools.html#a4fcb46758e1356d5ff7c6523c52810c1',1,'audio_tools']]],
+  ['audioformat_77',['AudioFormat',['../group__video.html#ga4fcb46758e1356d5ff7c6523c52810c1',1,'audio_tools']]],
   ['audioformat_78',['audioFormat',['../classaudio__tools_1_1_a_v_i_decoder.html#a5e1c60cc0458e1766542e6c5594de926',1,'audio_tools::AVIDecoder']]],
   ['audioformat_2eh_79',['AudioFormat.h',['../_audio_format_8h.html',1,'']]],
   ['audioheader_80',['AudioHeader',['../structaudio__tools_1_1_audio_header.html',1,'audio_tools']]],
