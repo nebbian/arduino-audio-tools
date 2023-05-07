@@ -772,8 +772,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">24bit integer which is used for I2S sound processing. The values are really using 3 bytes. It works only on little endian machines!  <a href="classaudio__tools_1_1int24x__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_jpeg_open_c_v.html">JpegOpenCV</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display image with opencv to be used on the desktop.  <a href="classaudio__tools_1_1_jpeg_open_c_v.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_jpeg_t_f_t.html">JpegTFT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display jpeg image using <a href="https://github.com/Bodmer/TFT_eSPI">https://github.com/Bodmer/TFT_eSPI</a> and <a href="https://github.com/Bodmer/JPEGDecoder">https://github.com/Bodmer/JPEGDecoder</a>.  <a href="classaudio__tools_1_1_jpeg_t_f_t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_jupyter_audio_t.html">JupyterAudioT</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output to Jupyter. We write the data just to a file from where we can load the data again for different representations.  <a href="classaudio__tools_1_1_jupyter_audio_t.html#details">More...</a><br /></td></tr>
@@ -1299,10 +1301,13 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_vector.html" title="Vector implementation which provides the most important methods as defined by std::vector....">Vector</a> implementation which provides the most important methods as defined by std::vector. This class it is quite handy to have and most of the times quite better then dealing with raw c arrays.  <a href="classaudio__tools_1_1_vector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_video_audio_buffered_sync.html">VideoAudioBufferedSync</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logic to Synchronize video and audio output: we use a buffer to store the audio and instead of delaying the frames with <a class="el" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20" title="Waits for the indicated milliseconds.">delay()</a> we play audio. The bufferSize defines the audio buffer in bytes. The correctionMs is used to slow down or speed up the playback of the video to prevent any audio buffer underflows.  <a href="classaudio__tools_1_1_video_audio_buffered_sync.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_video_audio_sync.html">VideoAudioSync</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logic to Synchronize video and audio output: This is the minimum implementatin which actually does not synchronize, but directly processes the data. No additinal memory is used! Provide your own optimized platform specific implementation.  <a href="classaudio__tools_1_1_video_audio_sync.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_video_output.html">VideoOutput</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract class for video playback. This class is used to assemble a complete video frame in memory.  <a href="classaudio__tools_1_1_video_output.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_control.html">VolumeControl</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract class for handling of the linear input volume to determine the multiplication factor which should be applied to the audio signal.  <a href="classaudio__tools_1_1_volume_control.html#details">More...</a><br /></td></tr>
@@ -1795,6 +1800,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__basic.html#ga83c0970d946a0c48474620352453b903">waitFor</a> (bool &amp;flag)</td></tr>
 <tr class="memdesc:ga83c0970d946a0c48474620352453b903"><td class="mdescLeft">&#160;</td><td class="mdescRight">wait for flag to be active <br /></td></tr>
 <tr class="separator:ga83c0970d946a0c48474620352453b903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49c9e7326cf6ff739f6ecd1f01ec3c1"><td class="memTemplParams" colspan="2"><a id="ad49c9e7326cf6ff739f6ecd1f01ec3c1"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad49c9e7326cf6ff739f6ecd1f01ec3c1"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#ad49c9e7326cf6ff739f6ecd1f01ec3c1">writeSamples</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *p_out, T *data, int samples)</td></tr>
+<tr class="memdesc:ad49c9e7326cf6ff739f6ecd1f01ec3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">guaranteed to return the requested data <br /></td></tr>
+<tr class="separator:ad49c9e7326cf6ff739f6ecd1f01ec3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
