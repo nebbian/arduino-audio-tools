@@ -181,12 +181,12 @@ $(function() {
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">if</span> (!active || p_print == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment">// decode data</span></div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    LOGD(<span class="stringliteral">&quot;OpusAudioDecoder::write: %d&quot;</span>, (<span class="keywordtype">int</span>)in_size);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">int</span> in_band_forware_error_correction = 0;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">int</span> in_band_forward_error_correction = 0;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">int</span> out_samples = opus_decode(</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        dec, (uint8_t *)in_ptr, in_size, (opus_int16 *)outbuf.data(),</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        cfg.max_buffer_size, in_band_forware_error_correction);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        cfg.max_buffer_size, in_band_forward_error_correction);</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">if</span> (out_samples &lt; 0) {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      LOGE(<span class="stringliteral">&quot;opus-decode: %s&quot;</span>, opus_strerror(out_samples));</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      LOGW(<span class="stringliteral">&quot;opus-decode: %s&quot;</span>, opus_strerror(out_samples));</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (out_samples &gt; 0) {</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="comment">// write data to final destination</span></div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="keywordtype">int</span> out_bytes = out_samples * cfg.channels * <span class="keyword">sizeof</span>(int16_t);</div>
@@ -305,7 +305,7 @@ $(function() {
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        LOGD(<span class="stringliteral">&quot;opus-encode: %d&quot;</span>, len);</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordtype">int</span> eff = p_print-&gt;write(packet, len);</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">if</span> (eff!=len){</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;          LOGE(<span class="stringliteral">&quot;encodeFrame data lost&quot;</span>);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;          LOGE(<span class="stringliteral">&quot;encodeFrame data lost: %d-&gt;%d&quot;</span>, len, eff);</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        }</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      }</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    }</div>

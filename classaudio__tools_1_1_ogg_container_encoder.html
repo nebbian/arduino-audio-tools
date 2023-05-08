@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html" title="OggContainerEncoder - Ogg Container. Encodes a packet for an Ogg container. The Ogg begin segment con...">OggContainerEncoder</a> - Ogg Container. Encodes a packet for an Ogg container. The Ogg begin segment contains the <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> structure. You can subclass ond overwrite the writeHeader() method to implement your own header logic. When an optional encoder is specified in the constructor we package the encoded data. Dependency: <a href="https://github.com/pschatzmann/arduino-libopus">https://github.com/pschatzmann/arduino-libopus</a>.  
+<p>Encoder for Ogg Container. Encodes a packet for an Ogg container. The Ogg begin segment contains the <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> structure. You can subclass ond overwrite the writeHeader() method to implement your own header logic. When an optional encoder is specified in the constructor we package the encoded data. Dependency: <a href="https://github.com/pschatzmann/arduino-libopus">https://github.com/pschatzmann/arduino-libopus</a>.  
  <a href="classaudio__tools_1_1_ogg_container_encoder.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_container_ogg_8h_source.html">ContainerOgg.h</a>&gt;</code></p>
@@ -87,7 +87,7 @@ Inheritance diagram for OggContainerEncoder:</div>
   <map id="OggContainerEncoder_map" name="OggContainerEncoder_map">
 <area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="0,56,139,80"/>
 <area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,139,24"/>
-<area href="classaudio__tools_1_1_opus_ogg_encoder.html" title="Opus Encoder which uses the Ogg Container: see https://datatracker.ietf.org/doc/html/rfc7845." alt="OpusOggEncoder" shape="rect" coords="0,168,139,192"/>
+<area href="classaudio__tools_1_1_opus_ogg_encoder.html" title="Opus Encoder which uses the Ogg Container: see https://datatracker.ietf.org/doc/html/rfc7845 Dependen..." alt="OpusOggEncoder" shape="rect" coords="0,168,139,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -135,6 +135,13 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a5cd91d7cd810c80c3fe7ff59fa57663b"><td class="memItemLeft" align="right" valign="top"><a id="a5cd91d7cd810c80c3fe7ff59fa57663b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setEncoder</b> (<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *enc)</td></tr>
+<tr class="separator:a5cd91d7cd810c80c3fe7ff59fa57663b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cca57574879e4a3423fdd9ed3093125"><td class="memItemLeft" align="right" valign="top"><a id="a7cca57574879e4a3423fdd9ed3093125"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html#a7cca57574879e4a3423fdd9ed3093125">setOggOutput</a> (<a class="el" href="classaudio__tools_1_1_ogg_container_output.html">OggContainerOutput</a> *out)</td></tr>
+<tr class="memdesc:a7cca57574879e4a3423fdd9ed3093125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the ogg output class. <br /></td></tr>
+<tr class="separator:a7cca57574879e4a3423fdd9ed3093125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a2e475070d3df18395c90a10c9d38eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,9 +154,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a125b8f635f2405b891164572c2a578cd"><td class="memItemLeft" align="right" valign="top"><a id="a125b8f635f2405b891164572c2a578cd"></a>
 <a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_codec</b> = nullptr</td></tr>
 <tr class="separator:a125b8f635f2405b891164572c2a578cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae09b11a19bfc1c1c26133d9612218b35"><td class="memItemLeft" align="right" valign="top"><a id="ae09b11a19bfc1c1c26133d9612218b35"></a>
+<a class="el" href="classaudio__tools_1_1_ogg_container_output.html">OggContainerOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_ogg</b> = &amp;ogg</td></tr>
+<tr class="separator:ae09b11a19bfc1c1c26133d9612218b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html" title="OggContainerEncoder - Ogg Container. Encodes a packet for an Ogg container. The Ogg begin segment con...">OggContainerEncoder</a> - Ogg Container. Encodes a packet for an Ogg container. The Ogg begin segment contains the <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> structure. You can subclass ond overwrite the writeHeader() method to implement your own header logic. When an optional encoder is specified in the constructor we package the encoded data. Dependency: <a href="https://github.com/pschatzmann/arduino-libopus">https://github.com/pschatzmann/arduino-libopus</a>. </p>
+<div class="textblock"><p>Encoder for Ogg Container. Encodes a packet for an Ogg container. The Ogg begin segment contains the <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> structure. You can subclass ond overwrite the writeHeader() method to implement your own header logic. When an optional encoder is specified in the constructor we package the encoded data. Dependency: <a href="https://github.com/pschatzmann/arduino-libopus">https://github.com/pschatzmann/arduino-libopus</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>

@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classaudio__tools_1_1_ogg_container_decoder.html" title="OggContainerDecoder - Ogg Container. Decodes a packet from an Ogg container. The Ogg begin segment co...">OggContainerDecoder</a> - Ogg Container. Decodes a packet from an Ogg container. The Ogg begin segment contains the <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> structure. You can subclass and overwrite the beginOfSegment() method to implement your own headers Dependency: <a href="https://github.com/pschatzmann/arduino-libopus">https://github.com/pschatzmann/arduino-libopus</a>.  
+<p>Decoder for Ogg Container. Decodes a packet from an Ogg container. The Ogg begin segment contains the <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> structure. You can subclass and overwrite the beginOfSegment() method to implement your own headers Dependency: <a href="https://github.com/pschatzmann/arduino-libopus">https://github.com/pschatzmann/arduino-libopus</a>.  
  <a href="classaudio__tools_1_1_ogg_container_decoder.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_container_ogg_8h_source.html">ContainerOgg.h</a>&gt;</code></p>
@@ -97,7 +97,7 @@ Inheritance diagram for OggContainerDecoder:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a131f485311ee0ab7729caf69c6fbe059"><td class="memItemLeft" align="right" valign="top"><a id="a131f485311ee0ab7729caf69c6fbe059"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ogg_container_decoder.html#a131f485311ee0ab7729caf69c6fbe059">OggContainerDecoder</a> ()</td></tr>
-<tr class="memdesc:a131f485311ee0ab7729caf69c6fbe059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_ogg_container_decoder.html" title="OggContainerDecoder - Ogg Container. Decodes a packet from an Ogg container. The Ogg begin segment co...">OggContainerDecoder</a> object. <br /></td></tr>
+<tr class="memdesc:a131f485311ee0ab7729caf69c6fbe059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_ogg_container_decoder.html" title="Decoder for Ogg Container. Decodes a packet from an Ogg container. The Ogg begin segment contains the...">OggContainerDecoder</a> object. <br /></td></tr>
 <tr class="separator:a131f485311ee0ab7729caf69c6fbe059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26558abb7a54f418262c9523ce3720df"><td class="memItemLeft" align="right" valign="top"><a id="a26558abb7a54f418262c9523ce3720df"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>OggContainerDecoder</b> (<a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> &amp;decoder)</td></tr>
@@ -129,6 +129,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> 
 <tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
 <tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad27811d90a3546482f8bb603b45942c0"><td class="memItemLeft" align="right" valign="top"><a id="ad27811d90a3546482f8bb603b45942c0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDecoder</b> (<a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> *decoder)</td></tr>
+<tr class="separator:ad27811d90a3546482f8bb603b45942c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a716343f0476acda119a0c1c9598261ce"><td class="memItemLeft" align="right" valign="top"><a id="a716343f0476acda119a0c1c9598261ce"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ogg_container_decoder.html#a716343f0476acda119a0c1c9598261ce">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
 <tr class="memdesc:a716343f0476acda119a0c1c9598261ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an object that is notified if the audio format is changing. <br /></td></tr>
@@ -205,7 +208,7 @@ long&#160;</td><td class="memItemRight" valign="bottom"><b>pos</b> = 0</td></tr>
 <tr class="separator:a330186836325896007e7434e07afa75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classaudio__tools_1_1_ogg_container_decoder.html" title="OggContainerDecoder - Ogg Container. Decodes a packet from an Ogg container. The Ogg begin segment co...">OggContainerDecoder</a> - Ogg Container. Decodes a packet from an Ogg container. The Ogg begin segment contains the <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> structure. You can subclass and overwrite the beginOfSegment() method to implement your own headers Dependency: <a href="https://github.com/pschatzmann/arduino-libopus">https://github.com/pschatzmann/arduino-libopus</a>. </p>
+<div class="textblock"><p>Decoder for Ogg Container. Decodes a packet from an Ogg container. The Ogg begin segment contains the <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> structure. You can subclass and overwrite the beginOfSegment() method to implement your own headers Dependency: <a href="https://github.com/pschatzmann/arduino-libopus">https://github.com/pschatzmann/arduino-libopus</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>

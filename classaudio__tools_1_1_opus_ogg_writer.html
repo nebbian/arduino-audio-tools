@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: OggContainerOutput Class Reference</title>
+<title>arduino-audio-tools: OpusOggWriter Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_ogg_container_output.html">OggContainerOutput</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_opus_ogg_writer.html">OpusOggWriter</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,27 +70,22 @@ $(function() {
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classaudio__tools_1_1_ogg_container_output-members.html">List of all members</a>  </div>
+<a href="classaudio__tools_1_1_opus_ogg_writer-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">OggContainerOutput Class Reference</div>  </div>
+<div class="title">OpusOggWriter Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Output class for the <a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html" title="Encoder for Ogg Container. Encodes a packet for an Ogg container. The Ogg begin segment contains the ...">OggContainerEncoder</a>. Each write is ending up as container entry.  
- <a href="classaudio__tools_1_1_ogg_container_output.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="_container_ogg_8h_source.html">ContainerOgg.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for OggContainerOutput:</div>
+Inheritance diagram for OpusOggWriter:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_ogg_container_output.png" usemap="#OggContainerOutput_map" alt=""/>
-  <map id="OggContainerOutput_map" name="OggContainerOutput_map">
+  <img src="classaudio__tools_1_1_opus_ogg_writer.png" usemap="#OpusOggWriter_map" alt=""/>
+  <map id="OpusOggWriter_map" name="OpusOggWriter_map">
+<area href="classaudio__tools_1_1_ogg_container_output.html" title="Output class for the OggContainerEncoder. Each write is ending up as container entry." alt="OggContainerOutput" shape="rect" coords="138,112,266,136"/>
 <area href="classaudio__tools_1_1_audio_output.html" title="Abstract Audio Ouptut class." alt="AudioOutput" shape="rect" coords="138,56,266,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,128,24"/>
 <area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="138,0,266,24"/>
 <area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="276,0,404,24"/>
-<area href="classaudio__tools_1_1_opus_ogg_writer.html" alt="OpusOggWriter" shape="rect" coords="138,168,266,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -151,9 +146,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:acdadf5be7d22e2657ac3d7af27b7b29f"><td class="memItemLeft" align="right" valign="top"><a id="acdadf5be7d22e2657ac3d7af27b7b29f"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>writeFooter</b> ()</td></tr>
 <tr class="separator:acdadf5be7d22e2657ac3d7af27b7b29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50e2a02b29448f61d0e5a071b72ba138"><td class="memItemLeft" align="right" valign="top"><a id="a50e2a02b29448f61d0e5a071b72ba138"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>writeHeader</b> ()</td></tr>
-<tr class="separator:a50e2a02b29448f61d0e5a071b72ba138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ba7d1855eaf7c8bf282ca69fe8beaa"><td class="memItemLeft" align="right" valign="top"><a id="a01ba7d1855eaf7c8bf282ca69fe8beaa"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>writeHeader</b> () override</td></tr>
+<tr class="separator:a01ba7d1855eaf7c8bf282ca69fe8beaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1d3a6d4ae5dd5777e04a6c879c493e2"><td class="memItemLeft" align="right" valign="top"><a id="aa1d3a6d4ae5dd5777e04a6c879c493e2"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>writePacket</b> (ogg_packet &amp;op, int flag=0)</td></tr>
 <tr class="separator:aa1d3a6d4ae5dd5777e04a6c879c493e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,9 +164,15 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a07fab440d87063e83df0bc30223964c5"><td class="memItemLeft" align="right" valign="top"><a id="a07fab440d87063e83df0bc30223964c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cfg</b></td></tr>
 <tr class="separator:a07fab440d87063e83df0bc30223964c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0d2563d5eb03895e5fb8572e94a898"><td class="memItemLeft" align="right" valign="top"><a id="afb0d2563d5eb03895e5fb8572e94a898"></a>
+OpusOggCommentHeader&#160;</td><td class="memItemRight" valign="bottom"><b>comment</b></td></tr>
+<tr class="separator:afb0d2563d5eb03895e5fb8572e94a898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a033864495874bf05599d7d0fc8b6b992"><td class="memItemLeft" align="right" valign="top"><a id="a033864495874bf05599d7d0fc8b6b992"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>granulepos</b> = 0</td></tr>
 <tr class="separator:a033864495874bf05599d7d0fc8b6b992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20424010d9813dc41bc60c1d63d7273e"><td class="memItemLeft" align="right" valign="top"><a id="a20424010d9813dc41bc60c1d63d7273e"></a>
+OpusOggHeader&#160;</td><td class="memItemRight" valign="bottom"><b>header</b></td></tr>
+<tr class="separator:a20424010d9813dc41bc60c1d63d7273e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fcdd83be6aa4b71752988aec7fe548d"><td class="memItemLeft" align="right" valign="top"><a id="a0fcdd83be6aa4b71752988aec7fe548d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_audio</b> = false</td></tr>
 <tr class="separator:a0fcdd83be6aa4b71752988aec7fe548d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,6 +182,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_open</b> = false</
 <tr class="memitem:a5d819d71a25499f110932fd2761e823e"><td class="memItemLeft" align="right" valign="top"><a id="a5d819d71a25499f110932fd2761e823e"></a>
 ogg_packet&#160;</td><td class="memItemRight" valign="bottom"><b>oh</b></td></tr>
 <tr class="separator:a5d819d71a25499f110932fd2761e823e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5735817baae865600db861c7fecc253"><td class="memItemLeft" align="right" valign="top"><a id="ac5735817baae865600db861c7fecc253"></a>
+ogg_packet&#160;</td><td class="memItemRight" valign="bottom"><b>oh1</b></td></tr>
+<tr class="separator:ac5735817baae865600db861c7fecc253"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a335149130217a917d4c38a08cba37aa1"><td class="memItemLeft" align="right" valign="top"><a id="a335149130217a917d4c38a08cba37aa1"></a>
 ogg_packet&#160;</td><td class="memItemRight" valign="bottom"><b>op</b></td></tr>
 <tr class="separator:a335149130217a917d4c38a08cba37aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,11 +210,7 @@ long&#160;</td><td class="memItemRight" valign="bottom"><b>serialno</b> = -1</td
 int&#160;</td><td class="memItemRight" valign="bottom"><b>tmpPos</b> = 0</td></tr>
 <tr class="separator:a5c8bfed099f70e8b41e7ddcd5578fedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Output class for the <a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html" title="Encoder for Ogg Container. Encodes a packet for an Ogg container. The Ogg begin segment contains the ...">OggContainerEncoder</a>. Each write is ending up as container entry. </p>
-<dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad89418aeb557f65a8f1a0aed755633b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad89418aeb557f65a8f1a0aed755633b1">&#9670;&nbsp;</a></span>writeSilence()</h2>
 
@@ -244,7 +244,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>tmpPos</b> = 0</td></t
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/AudioCodecs/<a class="el" href="_container_ogg_8h_source.html">ContainerOgg.h</a></li>
+<li>src/AudioCodecs/<a class="el" href="_codec_opus_ogg_8h_source.html">CodecOpusOgg.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

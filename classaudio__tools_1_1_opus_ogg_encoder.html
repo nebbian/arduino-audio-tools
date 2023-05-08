@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Opus Encoder which uses the Ogg Container: see <a href="https://datatracker.ietf.org/doc/html/rfc7845">https://datatracker.ietf.org/doc/html/rfc7845</a>.  
+<p>Opus Encoder which uses the Ogg Container: see <a href="https://datatracker.ietf.org/doc/html/rfc7845">https://datatracker.ietf.org/doc/html/rfc7845</a> Dependency: <a href="https://github.com/pschatzmann/arduino-libopus">https://github.com/pschatzmann/arduino-libopus</a>.  
  <a href="classaudio__tools_1_1_opus_ogg_encoder.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_codec_opus_ogg_8h_source.html">CodecOpusOgg.h</a>&gt;</code></p>
@@ -85,7 +85,7 @@ Inheritance diagram for OpusOggEncoder:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_opus_ogg_encoder.png" usemap="#OpusOggEncoder_map" alt=""/>
   <map id="OpusOggEncoder_map" name="OpusOggEncoder_map">
-<area href="classaudio__tools_1_1_ogg_container_encoder.html" title="OggContainerEncoder - Ogg Container. Encodes a packet for an Ogg container. The Ogg begin segment con..." alt="OggContainerEncoder" shape="rect" coords="0,112,139,136"/>
+<area href="classaudio__tools_1_1_ogg_container_encoder.html" title="Encoder for Ogg Container. Encodes a packet for an Ogg container. The Ogg begin segment contains the ..." alt="OggContainerEncoder" shape="rect" coords="0,112,139,136"/>
 <area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="0,56,139,80"/>
 <area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,139,24"/>
   </map>
@@ -93,25 +93,20 @@ Inheritance diagram for OpusOggEncoder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="memItemLeft" align="right" valign="top"><a id="a7c3e14d99bd3dc0e3670d6956dafcaf2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_opus_ogg_encoder.html#a7c3e14d99bd3dc0e3670d6956dafcaf2">begin</a> () override</td></tr>
-<tr class="memdesc:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the processing using the actual <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> <br /></td></tr>
-<tr class="separator:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862ecf2b78cdb7877f997db8393c9825"><td class="memItemLeft" align="right" valign="top"><a id="a862ecf2b78cdb7877f997db8393c9825"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html#a862ecf2b78cdb7877f997db8393c9825">begin</a> () override</td></tr>
+<tr class="memdesc:a862ecf2b78cdb7877f997db8393c9825"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the processing using the actual <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> <br /></td></tr>
+<tr class="separator:a862ecf2b78cdb7877f997db8393c9825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53a56a6a18679213c6a6901f8c7e9134"><td class="memItemLeft" align="right" valign="top"><a id="a53a56a6a18679213c6a6901f8c7e9134"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from)</td></tr>
 <tr class="separator:a53a56a6a18679213c6a6901f8c7e9134"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a080ae0a468d9a2e3f5f2132e62456616"><td class="memItemLeft" align="right" valign="top"><a id="a080ae0a468d9a2e3f5f2132e62456616"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_opus_encoder_settings.html">OpusEncoderSettings</a> settings)</td></tr>
-<tr class="separator:a080ae0a468d9a2e3f5f2132e62456616"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a450169e1dd55d42ad9be4232e6bc3f7e"><td class="memItemLeft" align="right" valign="top"><a id="a450169e1dd55d42ad9be4232e6bc3f7e"></a>
 <a class="el" href="structaudio__tools_1_1_opus_encoder_settings.html">OpusEncoderSettings</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_opus_ogg_encoder.html#a450169e1dd55d42ad9be4232e6bc3f7e">config</a> ()</td></tr>
-<tr class="memdesc:a450169e1dd55d42ad9be4232e6bc3f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the configuration. <br /></td></tr>
+<tr class="memdesc:a450169e1dd55d42ad9be4232e6bc3f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the Opus config. <br /></td></tr>
 <tr class="separator:a450169e1dd55d42ad9be4232e6bc3f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52d18f46cd7ee6fa3217e81760107074"><td class="memItemLeft" align="right" valign="top"><a id="a52d18f46cd7ee6fa3217e81760107074"></a>
-<a class="el" href="structaudio__tools_1_1_opus_encoder_settings.html">OpusEncoderSettings</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
-<tr class="separator:a52d18f46cd7ee6fa3217e81760107074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memItemLeft" align="right" valign="top"><a id="a64e9fa75beda50a9e8400ee0d4e61984"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html#a64e9fa75beda50a9e8400ee0d4e61984">end</a> () override</td></tr>
+<tr class="memdesc:a64e9fa75beda50a9e8400ee0d4e61984"><td class="mdescLeft">&#160;</td><td class="mdescRight">stops the processing <br /></td></tr>
 <tr class="separator:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a9ba7594ee74425dd345ecc263a5564"><td class="memItemLeft" align="right" valign="top"><a id="a3a9ba7594ee74425dd345ecc263a5564"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isOpen</b> ()</td></tr>
@@ -138,36 +133,37 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a5cd91d7cd810c80c3fe7ff59fa57663b"><td class="memItemLeft" align="right" valign="top"><a id="a5cd91d7cd810c80c3fe7ff59fa57663b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setEncoder</b> (<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *enc)</td></tr>
+<tr class="separator:a5cd91d7cd810c80c3fe7ff59fa57663b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cca57574879e4a3423fdd9ed3093125"><td class="memItemLeft" align="right" valign="top"><a id="a7cca57574879e4a3423fdd9ed3093125"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html#a7cca57574879e4a3423fdd9ed3093125">setOggOutput</a> (<a class="el" href="classaudio__tools_1_1_ogg_container_output.html">OggContainerOutput</a> *out)</td></tr>
+<tr class="memdesc:a7cca57574879e4a3423fdd9ed3093125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the ogg output class. <br /></td></tr>
+<tr class="separator:a7cca57574879e4a3423fdd9ed3093125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a2e475070d3df18395c90a10c9d38eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01ba7d1855eaf7c8bf282ca69fe8beaa"><td class="memItemLeft" align="right" valign="top"><a id="a01ba7d1855eaf7c8bf282ca69fe8beaa"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>writeHeader</b> () override</td></tr>
-<tr class="separator:a01ba7d1855eaf7c8bf282ca69fe8beaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:afb0d2563d5eb03895e5fb8572e94a898"><td class="memItemLeft" align="right" valign="top"><a id="afb0d2563d5eb03895e5fb8572e94a898"></a>
-OpusOggCommentHeader&#160;</td><td class="memItemRight" valign="bottom"><b>comment</b></td></tr>
-<tr class="separator:afb0d2563d5eb03895e5fb8572e94a898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0276e10f5be6fd7748b4f8c7134e6c9"><td class="memItemLeft" align="right" valign="top"><a id="aa0276e10f5be6fd7748b4f8c7134e6c9"></a>
 <a class="el" href="classaudio__tools_1_1_opus_audio_encoder.html">OpusAudioEncoder</a>&#160;</td><td class="memItemRight" valign="bottom"><b>enc</b></td></tr>
 <tr class="separator:aa0276e10f5be6fd7748b4f8c7134e6c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20424010d9813dc41bc60c1d63d7273e"><td class="memItemLeft" align="right" valign="top"><a id="a20424010d9813dc41bc60c1d63d7273e"></a>
-OpusOggHeader&#160;</td><td class="memItemRight" valign="bottom"><b>header</b></td></tr>
-<tr class="separator:a20424010d9813dc41bc60c1d63d7273e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab99c6d3209dba97f975d86555cea9cfe"><td class="memItemLeft" align="right" valign="top"><a id="ab99c6d3209dba97f975d86555cea9cfe"></a>
 <a class="el" href="classaudio__tools_1_1_ogg_container_output.html">OggContainerOutput</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ogg</b></td></tr>
 <tr class="separator:ab99c6d3209dba97f975d86555cea9cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5735817baae865600db861c7fecc253"><td class="memItemLeft" align="right" valign="top"><a id="ac5735817baae865600db861c7fecc253"></a>
-ogg_packet&#160;</td><td class="memItemRight" valign="bottom"><b>oh1</b></td></tr>
-<tr class="separator:ac5735817baae865600db861c7fecc253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab52cbfb322870570bb3634e284b175e5"><td class="memItemLeft" align="right" valign="top"><a id="ab52cbfb322870570bb3634e284b175e5"></a>
+<a class="el" href="classaudio__tools_1_1_opus_ogg_writer.html">OpusOggWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ogg_writer</b></td></tr>
+<tr class="separator:ab52cbfb322870570bb3634e284b175e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a125b8f635f2405b891164572c2a578cd"><td class="memItemLeft" align="right" valign="top"><a id="a125b8f635f2405b891164572c2a578cd"></a>
 <a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_codec</b> = nullptr</td></tr>
 <tr class="separator:a125b8f635f2405b891164572c2a578cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae09b11a19bfc1c1c26133d9612218b35"><td class="memItemLeft" align="right" valign="top"><a id="ae09b11a19bfc1c1c26133d9612218b35"></a>
+<a class="el" href="classaudio__tools_1_1_ogg_container_output.html">OggContainerOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_ogg</b> = &amp;ogg</td></tr>
+<tr class="separator:ae09b11a19bfc1c1c26133d9612218b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Opus Encoder which uses the Ogg Container: see <a href="https://datatracker.ietf.org/doc/html/rfc7845">https://datatracker.ietf.org/doc/html/rfc7845</a>. </p>
+<div class="textblock"><p>Opus Encoder which uses the Ogg Container: see <a href="https://datatracker.ietf.org/doc/html/rfc7845">https://datatracker.ietf.org/doc/html/rfc7845</a> Dependency: <a href="https://github.com/pschatzmann/arduino-libopus">https://github.com/pschatzmann/arduino-libopus</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
