@@ -131,11 +131,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a4551d43d99fc493544d13d654689cfa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9326490ebc307c9a274d5b4efa48d4f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_encoder_f_d_k.html#a9326490ebc307c9a274d5b4efa48d4f4">setBitrate</a> (int bitrate)</td></tr>
 <tr class="separator:a9326490ebc307c9a274d5b4efa48d4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b5bd320ae10a808fb0de3eb5e5b387"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_encoder_f_d_k.html#a93b5bd320ae10a808fb0de3eb5e5b387">setOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
+<tr class="separator:a93b5bd320ae10a808fb0de3eb5e5b387"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37cb082ebc94d0f901ff4addd04d9db3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_encoder_f_d_k.html#a37cb082ebc94d0f901ff4addd04d9db3">setOutputBufferSize</a> (int outbuf_size)</td></tr>
 <tr class="memdesc:a37cb082ebc94d0f901ff4addd04d9db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Output Buffer Size object.  <a href="classaudio__tools_1_1_a_a_c_encoder_f_d_k.html#a37cb082ebc94d0f901ff4addd04d9db3">More...</a><br /></td></tr>
 <tr class="separator:a37cb082ebc94d0f901ff4addd04d9db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8bad9f22f28c75edd3beec36ed35319"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_encoder_f_d_k.html#ac8bad9f22f28c75edd3beec36ed35319">setOutputStream</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
-<tr class="separator:ac8bad9f22f28c75edd3beec36ed35319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbab59df5a13e40fd2f098a2c8effb4c"><td class="memItemLeft" align="right" valign="top"><a id="acbab59df5a13e40fd2f098a2c8effb4c"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>setParameter</b> (AACENC_PARAM param, uint32_t value)</td></tr>
 <tr class="separator:acbab59df5a13e40fd2f098a2c8effb4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -354,6 +354,39 @@ aac_fdk::AACEncoderFDK *&#160;</td><td class="memItemRight" valign="bottom"><b>e
 
 </div>
 </div>
+<a id="a93b5bd320ae10a808fb0de3eb5e5b387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b5bd320ae10a808fb0de3eb5e5b387">&#9670;&nbsp;</a></span>setOutput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setOutput </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;&#160;</td>
+          <td class="paramname"><em>out_stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Total encoder bitrate. This parameter is <br  />
+ mandatory and interacts with ::AACENC_BITRATEMODE.</p><ul>
+<li>CBR: Bitrate in bits/second.</li>
+<li>VBR: Variable bitrate. Bitrate argument will be ignored. See suppBitrates for details. </li>
+</ul>
+
+<p>Implements <a class="el" href="classaudio__tools_1_1_audio_writer.html">AudioWriter</a>.</p>
+
+</div>
+</div>
 <a id="a37cb082ebc94d0f901ff4addd04d9db3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37cb082ebc94d0f901ff4addd04d9db3">&#9670;&nbsp;</a></span>setOutputBufferSize()</h2>
 
@@ -385,39 +418,6 @@ aac_fdk::AACEncoderFDK *&#160;</td><td class="memItemRight" valign="bottom"><b>e
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="ac8bad9f22f28c75edd3beec36ed35319"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8bad9f22f28c75edd3beec36ed35319">&#9670;&nbsp;</a></span>setOutputStream()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setOutputStream </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;&#160;</td>
-          <td class="paramname"><em>out_stream</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Total encoder bitrate. This parameter is <br  />
- mandatory and interacts with ::AACENC_BITRATEMODE.</p><ul>
-<li>CBR: Bitrate in bits/second.</li>
-<li>VBR: Variable bitrate. Bitrate argument will be ignored. See suppBitrates for details. </li>
-</ul>
-
-<p>Implements <a class="el" href="classaudio__tools_1_1_audio_writer.html">AudioWriter</a>.</p>
 
 </div>
 </div>

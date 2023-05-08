@@ -433,12 +433,12 @@ $(function() {
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    buffer.resize(buffer_size);</div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    p_format = &amp;format;</div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    p_encoder = &amp;encoder;</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    p_encoder-&gt;setOutputStream(buffer);</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    p_encoder-&gt;setOutput(buffer);</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;  }</div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160; </div>
 <div class="line"><a name="l00528"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_r_t_s_p_output.html#a1b06b09496d4cd96433b8148acfbd229">  528</a></span>&#160;  <a class="code" href="classaudio__tools_1_1_r_t_s_p_output.html#a1b06b09496d4cd96433b8148acfbd229">RTSPOutput</a>(<span class="keywordtype">int</span> buffer_size = 1024) {</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    buffer.resize(buffer_size);</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    p_encoder-&gt;setOutputStream(buffer);</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    p_encoder-&gt;setOutput(buffer);</div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;  }</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160; </div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;  AudioStreamer *streamer() { <span class="keywordflow">return</span> &amp;rtsp_streamer; }</div>

@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Decoder for FLAC. Depends on <a href="https://github.com/pschatzmann/arduino-libflac">https://github.com/pschatzmann/arduino-libflac</a>. We support an efficient streaming API and an very memory intensitiv standard interface. So you should prefer the streaming interface where you call <a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#ade185bd4f49909ba863274df35c54901" title="Defines the output Stream.">setOutputStream()</a> before the begin and <a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a68b01f6d74485da20c323b9c68d906fd" title="Stream Interface: Process a single frame - only relevant when input stream has been defined.">copy()</a> in the loop. Validated with <a href="http://www.2l.no/hires/">http://www.2l.no/hires/</a>.  
+<p>Decoder for FLAC. Depends on <a href="https://github.com/pschatzmann/arduino-libflac">https://github.com/pschatzmann/arduino-libflac</a>. We support an efficient streaming API and an very memory intensitiv standard interface. So you should prefer the streaming interface where you call <a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a33190106b1d5de89d6af68ad5924f7be" title="Defines the output Stream.">setOutput()</a> before the begin and <a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a68b01f6d74485da20c323b9c68d906fd" title="Stream Interface: Process a single frame - only relevant when input stream has been defined.">copy()</a> in the loop. Validated with <a href="http://www.2l.no/hires/">http://www.2l.no/hires/</a>.  
  <a href="classaudio__tools_1_1_f_l_a_c_decoder.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_codec_f_l_a_c_8h_source.html">CodecFLAC.h</a>&gt;</code></p>
@@ -128,18 +128,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a0dad2208f8ad6d4232697157f4be5dc0"><td class="memItemLeft" align="right" valign="top"><a id="a0dad2208f8ad6d4232697157f4be5dc0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setOgg</b> (bool isOgg)</td></tr>
 <tr class="separator:a0dad2208f8ad6d4232697157f4be5dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebd5c20f52cfd1dc105f154d6972bf86"><td class="memItemLeft" align="right" valign="top"><a id="aebd5c20f52cfd1dc105f154d6972bf86"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_streaming_decoder.html#aebd5c20f52cfd1dc105f154d6972bf86">setOutputStream</a> (<a class="el" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> &amp;out_stream)</td></tr>
-<tr class="memdesc:aebd5c20f52cfd1dc105f154d6972bf86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the output streams and register to be notified. <br /></td></tr>
-<tr class="separator:aebd5c20f52cfd1dc105f154d6972bf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acac994dd0f0452da1aadec3ad99bcad7"><td class="memItemLeft" align="right" valign="top"><a id="acac994dd0f0452da1aadec3ad99bcad7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_streaming_decoder.html#acac994dd0f0452da1aadec3ad99bcad7">setOutputStream</a> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;out_stream)</td></tr>
-<tr class="memdesc:acac994dd0f0452da1aadec3ad99bcad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the output streams and register to be notified. <br /></td></tr>
-<tr class="separator:acac994dd0f0452da1aadec3ad99bcad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade185bd4f49909ba863274df35c54901"><td class="memItemLeft" align="right" valign="top"><a id="ade185bd4f49909ba863274df35c54901"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#ade185bd4f49909ba863274df35c54901">setOutputStream</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
-<tr class="memdesc:ade185bd4f49909ba863274df35c54901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the output <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a>. <br /></td></tr>
-<tr class="separator:ade185bd4f49909ba863274df35c54901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf58dd0aedd8748b499ca948bd2cdf5d"><td class="memItemLeft" align="right" valign="top"><a id="acf58dd0aedd8748b499ca948bd2cdf5d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_streaming_decoder.html#acf58dd0aedd8748b499ca948bd2cdf5d">setOutput</a> (<a class="el" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> &amp;out_stream)</td></tr>
+<tr class="memdesc:acf58dd0aedd8748b499ca948bd2cdf5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the output streams and register to be notified. <br /></td></tr>
+<tr class="separator:acf58dd0aedd8748b499ca948bd2cdf5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74fb348e7fbaed39364af8869fb05231"><td class="memItemLeft" align="right" valign="top"><a id="a74fb348e7fbaed39364af8869fb05231"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_streaming_decoder.html#a74fb348e7fbaed39364af8869fb05231">setOutput</a> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;out_stream)</td></tr>
+<tr class="memdesc:a74fb348e7fbaed39364af8869fb05231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the output streams and register to be notified. <br /></td></tr>
+<tr class="separator:a74fb348e7fbaed39364af8869fb05231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33190106b1d5de89d6af68ad5924f7be"><td class="memItemLeft" align="right" valign="top"><a id="a33190106b1d5de89d6af68ad5924f7be"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a33190106b1d5de89d6af68ad5924f7be">setOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
+<tr class="memdesc:a33190106b1d5de89d6af68ad5924f7be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the output <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a>. <br /></td></tr>
+<tr class="separator:a33190106b1d5de89d6af68ad5924f7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33f2a63c08586d355e980fbb88769bc9"><td class="memItemLeft" align="right" valign="top"><a id="a33f2a63c08586d355e980fbb88769bc9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeout</b> (uint64_t readTimeout=10000)</td></tr>
 <tr class="separator:a33f2a63c08586d355e980fbb88769bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,7 +207,7 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>time_last_read</b
 <tr class="separator:a2c2b3f4ad54bb50179afc4054d8e3cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Decoder for FLAC. Depends on <a href="https://github.com/pschatzmann/arduino-libflac">https://github.com/pschatzmann/arduino-libflac</a>. We support an efficient streaming API and an very memory intensitiv standard interface. So you should prefer the streaming interface where you call <a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#ade185bd4f49909ba863274df35c54901" title="Defines the output Stream.">setOutputStream()</a> before the begin and <a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a68b01f6d74485da20c323b9c68d906fd" title="Stream Interface: Process a single frame - only relevant when input stream has been defined.">copy()</a> in the loop. Validated with <a href="http://www.2l.no/hires/">http://www.2l.no/hires/</a>. </p>
+<div class="textblock"><p>Decoder for FLAC. Depends on <a href="https://github.com/pschatzmann/arduino-libflac">https://github.com/pschatzmann/arduino-libflac</a>. We support an efficient streaming API and an very memory intensitiv standard interface. So you should prefer the streaming interface where you call <a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a33190106b1d5de89d6af68ad5924f7be" title="Defines the output Stream.">setOutput()</a> before the begin and <a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a68b01f6d74485da20c323b9c68d906fd" title="Stream Interface: Process a single frame - only relevant when input stream has been defined.">copy()</a> in the loop. Validated with <a href="http://www.2l.no/hires/">http://www.2l.no/hires/</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
