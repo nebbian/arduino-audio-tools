@@ -307,149 +307,150 @@ $(function() {
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    op.packet = (uint8_t *)data;</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    op.bytes = in_size;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">if</span> (op.bytes &gt; 0) {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      op.granulepos = granulepos +=</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;          op.bytes / <span class="keyword">sizeof</span>(int16_t) / cfg.channels;  <span class="comment">// sample</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      op.b_o_s = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      op.e_o_s = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      op.packetno = packetno++;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      is_audio = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      if (!writePacket(op, OGGZ_FLUSH_AFTER)) {</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">// trigger pysical write</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">while</span> ((oggz_write(p_oggz, in_size)) &gt; 0)</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      ;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">return</span> in_size;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  }</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordtype">bool</span> isOpen() { <span class="keywordflow">return</span> is_open; }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  Print *p_out = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="keywordtype">bool</span> is_open = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  OGGZ *p_oggz = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  ogg_packet op;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  ogg_packet oh;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="keywordtype">size_t</span> granulepos = 0;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keywordtype">size_t</span> packetno = 0;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keywordtype">long</span> serialno = -1;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keywordtype">bool</span> is_audio = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> writePacket(ogg_packet &amp;op, <span class="keywordtype">int</span> flag = 0) {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    LOGD(<span class="stringliteral">&quot;writePacket: %d&quot;</span>, (<span class="keywordtype">int</span>)op.bytes);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">long</span> result = oggz_write_feed(p_oggz, &amp;op, serialno, flag, NULL);</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">if</span> (result &lt; 0 &amp;&amp; result != OGGZ_ERR_OUT_OF_MEMORY) {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      LOGE(<span class="stringliteral">&quot;oggz_write_feed: %d&quot;</span>, (<span class="keywordtype">int</span>)result);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> writeHeader() {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    oh.packet = (uint8_t *)&amp;cfg;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    oh.bytes = <span class="keyword">sizeof</span>(AudioInfo);</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    oh.granulepos = 0;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    oh.packetno = packetno++;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    oh.b_o_s = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    oh.e_o_s = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    is_audio = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordflow">return</span> writePacket(oh);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  }</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> writeFooter() {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    op.packet = (uint8_t *)<span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    op.bytes = 0;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    op.granulepos = granulepos;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    op.packetno = packetno++;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    op.b_o_s = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    op.e_o_s = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    is_audio = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordflow">return</span> writePacket(op, OGGZ_FLUSH_AFTER);</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  }</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  <span class="comment">// Final Stream Callback</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">size_t</span> ogg_io_write(<span class="keywordtype">void</span> *user_handle, <span class="keywordtype">void</span> *buf, <span class="keywordtype">size_t</span> n) {</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    LOGD(<span class="stringliteral">&quot;ogg_io_write: %d&quot;</span>, (<span class="keywordtype">int</span>)n);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    OggContainerOutput *<span class="keyword">self</span> = (OggContainerOutput *)user_handle;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span> == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      LOGE(<span class="stringliteral">&quot;self is null&quot;</span>);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="comment">// self-&gt;out.write((uint8_t *)buf, n);</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    writeSamples&lt;uint8_t&gt;(self-&gt;p_out, (uint8_t *)buf, n);</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="comment">// 0 = continue</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  }</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;};</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
-<div class="line"><a name="l00355"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html">  355</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html">OggContainerEncoder</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> {</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;  <span class="comment">// Empty Constructor - the output stream must be provided with begin()</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html">OggContainerEncoder</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html">OggContainerEncoder</a>(<a class="code" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *encoder) { setEncoder(encoder); }</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html">OggContainerEncoder</a>(<a class="code" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> &amp;encoder) { setEncoder(&amp;encoder); }</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
-<div class="line"><a name="l00365"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#a27acf4e8aff3e64627e3269df6e73a0b">  365</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a27acf4e8aff3e64627e3269df6e73a0b">setOutputStream</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;print)<span class="keyword"> override </span>{ p_ogg-&gt;<a class="code" href="classaudio__tools_1_1_ogg_container_output.html#affacde5c7c0aefbf35fe2948cbade203">setOutput</a>(print); }</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
-<div class="line"><a name="l00368"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#a5d63922f6bdb7c371286ca453ae18f9c">  368</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a5d63922f6bdb7c371286ca453ae18f9c">mime</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code" href="namespaceaudio__tools.html#a3961afb9c2a414e91d5687346be60285">mime_pcm</a>; }</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
-<div class="line"><a name="l00371"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#aacd5a76de8d22c3909128c3539e5a6f7">  371</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#aacd5a76de8d22c3909128c3539e5a6f7">setAudioInfo</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    p_ogg-&gt;setAudioInfo(info);</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">if</span> (p_codec != <span class="keyword">nullptr</span>) p_codec-&gt;setAudioInfo(info);</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  }</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a862ecf2b78cdb7877f997db8393c9825">begin</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) {</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#aacd5a76de8d22c3909128c3539e5a6f7">setAudioInfo</a>(from);</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a862ecf2b78cdb7877f997db8393c9825">begin</a>();</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  }</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
-<div class="line"><a name="l00382"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#a862ecf2b78cdb7877f997db8393c9825">  382</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a862ecf2b78cdb7877f997db8393c9825">begin</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    p_ogg-&gt;begin();</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordflow">if</span> (p_codec != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      p_codec-&gt;setOutputStream(*p_ogg);</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      p_codec-&gt;begin(p_ogg-&gt;audioInfo());</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    }</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  }</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
-<div class="line"><a name="l00392"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#a64e9fa75beda50a9e8400ee0d4e61984">  392</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a64e9fa75beda50a9e8400ee0d4e61984">end</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordflow">if</span> (p_codec != <span class="keyword">nullptr</span>) p_codec-&gt;end();</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    p_ogg-&gt;<a class="code" href="classaudio__tools_1_1_ogg_container_output.html#a64e9fa75beda50a9e8400ee0d4e61984">end</a>();</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  }</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
-<div class="line"><a name="l00399"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#a1b29912258e11751cfa24707a4e328ca">  399</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a1b29912258e11751cfa24707a4e328ca">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *in_ptr, <span class="keywordtype">size_t</span> in_size)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">if</span> (!p_ogg-&gt;isOpen() || in_ptr == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    LOGD(<span class="stringliteral">&quot;OggContainerEncoder::write: %d&quot;</span>, (<span class="keywordtype">int</span>)in_size);</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordtype">size_t</span> result = 0;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordflow">if</span> (p_codec == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;      result = p_ogg-&gt;<a class="code" href="classaudio__tools_1_1_ogg_container_output.html#a59bfbf3ae12454d43d363e60e0e98824">write</a>((<span class="keyword">const</span> uint8_t *)in_ptr, in_size);</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      result = p_codec-&gt;write(in_ptr, in_size);</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    }</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  }</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160; </div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  <span class="keyword">operator</span> bool()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> p_ogg-&gt;isOpen(); }</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  <span class="keywordtype">bool</span> isOpen() { <span class="keywordflow">return</span> p_ogg-&gt;isOpen(); }</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  AudioEncoder *p_codec = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  OggContainerOutput ogg;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  OggContainerOutput *p_ogg = &amp;ogg;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <span class="keywordtype">void</span> setEncoder(AudioEncoder *enc) { p_codec = enc; }</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
-<div class="line"><a name="l00423"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#a7cca57574879e4a3423fdd9ed3093125">  423</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a7cca57574879e4a3423fdd9ed3093125">setOggOutput</a>(<a class="code" href="classaudio__tools_1_1_ogg_container_output.html">OggContainerOutput</a> *out) { p_ogg = out; }</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;};</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      <span class="keywordtype">int</span> bytes_per_sample = cfg.bits_per_sample / 8;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      granulepos += op.bytes / bytes_per_sample;  <span class="comment">// sample</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      op.granulepos = granulepos;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      op.b_o_s = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      op.e_o_s = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      op.packetno = packetno++;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      is_audio = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      <span class="keywordflow">if</span> (!writePacket(op, OGGZ_FLUSH_AFTER)) {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;      }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="comment">// trigger pysical write</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordflow">while</span> ((oggz_write(p_oggz, in_size)) &gt; 0)</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      ;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">return</span> in_size;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keywordtype">bool</span> isOpen() { <span class="keywordflow">return</span> is_open; }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  Print *p_out = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keywordtype">bool</span> is_open = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  OGGZ *p_oggz = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  ogg_packet op;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  ogg_packet oh;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keywordtype">size_t</span> granulepos = 0;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keywordtype">size_t</span> packetno = 0;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keywordtype">long</span> serialno = -1;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="keywordtype">bool</span> is_audio = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> writePacket(ogg_packet &amp;op, <span class="keywordtype">int</span> flag = 0) {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    LOGD(<span class="stringliteral">&quot;writePacket: %d&quot;</span>, (<span class="keywordtype">int</span>)op.bytes);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">long</span> result = oggz_write_feed(p_oggz, &amp;op, serialno, flag, NULL);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">if</span> (result &lt; 0 &amp;&amp; result != OGGZ_ERR_OUT_OF_MEMORY) {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      LOGE(<span class="stringliteral">&quot;oggz_write_feed: %d&quot;</span>, (<span class="keywordtype">int</span>)result);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> writeHeader() {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    oh.packet = (uint8_t *)&amp;cfg;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    oh.bytes = <span class="keyword">sizeof</span>(AudioInfo);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    oh.granulepos = 0;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    oh.packetno = packetno++;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    oh.b_o_s = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    oh.e_o_s = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    is_audio = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">return</span> writePacket(oh);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> writeFooter() {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    op.packet = (uint8_t *)<span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    op.bytes = 0;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    op.granulepos = granulepos;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    op.packetno = packetno++;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    op.b_o_s = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    op.e_o_s = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    is_audio = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">return</span> writePacket(op, OGGZ_FLUSH_AFTER);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="comment">// Final Stream Callback</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">size_t</span> ogg_io_write(<span class="keywordtype">void</span> *user_handle, <span class="keywordtype">void</span> *buf, <span class="keywordtype">size_t</span> n) {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    LOGD(<span class="stringliteral">&quot;ogg_io_write: %d&quot;</span>, (<span class="keywordtype">int</span>)n);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    OggContainerOutput *<span class="keyword">self</span> = (OggContainerOutput *)user_handle;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      LOGE(<span class="stringliteral">&quot;self is null&quot;</span>);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="comment">// self-&gt;out.write((uint8_t *)buf, n);</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    writeSamples&lt;uint8_t&gt;(self-&gt;p_out, (uint8_t *)buf, n);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="comment">// 0 = continue</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;};</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
+<div class="line"><a name="l00356"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html">  356</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html">OggContainerEncoder</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  <span class="comment">// Empty Constructor - the output stream must be provided with begin()</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html">OggContainerEncoder</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html">OggContainerEncoder</a>(<a class="code" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *encoder) { setEncoder(encoder); }</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html">OggContainerEncoder</a>(<a class="code" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> &amp;encoder) { setEncoder(&amp;encoder); }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
+<div class="line"><a name="l00366"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#a27acf4e8aff3e64627e3269df6e73a0b">  366</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a27acf4e8aff3e64627e3269df6e73a0b">setOutputStream</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;print)<span class="keyword"> override </span>{ p_ogg-&gt;<a class="code" href="classaudio__tools_1_1_ogg_container_output.html#affacde5c7c0aefbf35fe2948cbade203">setOutput</a>(print); }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00369"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#a5d63922f6bdb7c371286ca453ae18f9c">  369</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a5d63922f6bdb7c371286ca453ae18f9c">mime</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code" href="namespaceaudio__tools.html#a3961afb9c2a414e91d5687346be60285">mime_pcm</a>; }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00372"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#aacd5a76de8d22c3909128c3539e5a6f7">  372</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#aacd5a76de8d22c3909128c3539e5a6f7">setAudioInfo</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    p_ogg-&gt;setAudioInfo(info);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordflow">if</span> (p_codec != <span class="keyword">nullptr</span>) p_codec-&gt;setAudioInfo(info);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a862ecf2b78cdb7877f997db8393c9825">begin</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#aacd5a76de8d22c3909128c3539e5a6f7">setAudioInfo</a>(from);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a862ecf2b78cdb7877f997db8393c9825">begin</a>();</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  }</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00383"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#a862ecf2b78cdb7877f997db8393c9825">  383</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a862ecf2b78cdb7877f997db8393c9825">begin</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    p_ogg-&gt;begin();</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordflow">if</span> (p_codec != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      p_codec-&gt;setOutputStream(*p_ogg);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      p_codec-&gt;begin(p_ogg-&gt;audioInfo());</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;  }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#a64e9fa75beda50a9e8400ee0d4e61984">  393</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a64e9fa75beda50a9e8400ee0d4e61984">end</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="keywordflow">if</span> (p_codec != <span class="keyword">nullptr</span>) p_codec-&gt;end();</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    p_ogg-&gt;<a class="code" href="classaudio__tools_1_1_ogg_container_output.html#a64e9fa75beda50a9e8400ee0d4e61984">end</a>();</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  }</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00400"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#a1b29912258e11751cfa24707a4e328ca">  400</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a1b29912258e11751cfa24707a4e328ca">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *in_ptr, <span class="keywordtype">size_t</span> in_size)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">if</span> (!p_ogg-&gt;isOpen() || in_ptr == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    LOGD(<span class="stringliteral">&quot;OggContainerEncoder::write: %d&quot;</span>, (<span class="keywordtype">int</span>)in_size);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordtype">size_t</span> result = 0;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordflow">if</span> (p_codec == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;      result = p_ogg-&gt;<a class="code" href="classaudio__tools_1_1_ogg_container_output.html#a59bfbf3ae12454d43d363e60e0e98824">write</a>((<span class="keyword">const</span> uint8_t *)in_ptr, in_size);</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      result = p_codec-&gt;write(in_ptr, in_size);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    }</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  }</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  <span class="keyword">operator</span> bool()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> p_ogg-&gt;isOpen(); }</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keywordtype">bool</span> isOpen() { <span class="keywordflow">return</span> p_ogg-&gt;isOpen(); }</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  AudioEncoder *p_codec = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  OggContainerOutput ogg;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  OggContainerOutput *p_ogg = &amp;ogg;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="keywordtype">void</span> setEncoder(AudioEncoder *enc) { p_codec = enc; }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_ogg_container_encoder.html#a7cca57574879e4a3423fdd9ed3093125">  424</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_ogg_container_encoder.html#a7cca57574879e4a3423fdd9ed3093125">setOggOutput</a>(<a class="code" href="classaudio__tools_1_1_ogg_container_output.html">OggContainerOutput</a> *out) { p_ogg = out; }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;};</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:17</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_encoder.html">audio_tools::AudioEncoder</a></div><div class="ttdoc">Encoding of PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:71</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_support_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_support.html">audio_tools::AudioInfoSupport</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:101</div></div>
@@ -463,14 +464,14 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_ogg_container_decoder_html_a131f485311ee0ab7729caf69c6fbe059"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_decoder.html#a131f485311ee0ab7729caf69c6fbe059">audio_tools::OggContainerDecoder::OggContainerDecoder</a></div><div class="ttdeci">OggContainerDecoder()</div><div class="ttdoc">Construct a new OggContainerDecoder object.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:32</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_ogg_container_decoder_html_a27acf4e8aff3e64627e3269df6e73a0b"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_decoder.html#a27acf4e8aff3e64627e3269df6e73a0b">audio_tools::OggContainerDecoder::setOutputStream</a></div><div class="ttdeci">void setOutputStream(Print &amp;print) override</div><div class="ttdoc">Defines the output Stream.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:47</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_ogg_container_decoder_html_a716343f0476acda119a0c1c9598261ce"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_decoder.html#a716343f0476acda119a0c1c9598261ce">audio_tools::OggContainerDecoder::setNotifyAudioChange</a></div><div class="ttdeci">void setNotifyAudioChange(AudioInfoSupport &amp;bi) override</div><div class="ttdoc">Registers an object that is notified if the audio format is changing.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:49</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html">audio_tools::OggContainerEncoder</a></div><div class="ttdoc">Encoder for Ogg Container. Encodes a packet for an Ogg container. The Ogg begin segment contains the ...</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:355</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a1b29912258e11751cfa24707a4e328ca"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a1b29912258e11751cfa24707a4e328ca">audio_tools::OggContainerEncoder::write</a></div><div class="ttdeci">virtual size_t write(const void *in_ptr, size_t in_size) override</div><div class="ttdoc">Writes raw data to be encoded and packaged.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:399</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a27acf4e8aff3e64627e3269df6e73a0b"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a27acf4e8aff3e64627e3269df6e73a0b">audio_tools::OggContainerEncoder::setOutputStream</a></div><div class="ttdeci">void setOutputStream(Print &amp;print) override</div><div class="ttdoc">Defines the output Stream.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:365</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a5d63922f6bdb7c371286ca453ae18f9c"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a5d63922f6bdb7c371286ca453ae18f9c">audio_tools::OggContainerEncoder::mime</a></div><div class="ttdeci">const char * mime() override</div><div class="ttdoc">Provides &quot;audio/pcm&quot;.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:368</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a64e9fa75beda50a9e8400ee0d4e61984"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a64e9fa75beda50a9e8400ee0d4e61984">audio_tools::OggContainerEncoder::end</a></div><div class="ttdeci">void end() override</div><div class="ttdoc">stops the processing</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:392</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a7cca57574879e4a3423fdd9ed3093125"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a7cca57574879e4a3423fdd9ed3093125">audio_tools::OggContainerEncoder::setOggOutput</a></div><div class="ttdeci">void setOggOutput(OggContainerOutput *out)</div><div class="ttdoc">Replace the ogg output class.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:423</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a862ecf2b78cdb7877f997db8393c9825"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a862ecf2b78cdb7877f997db8393c9825">audio_tools::OggContainerEncoder::begin</a></div><div class="ttdeci">virtual void begin() override</div><div class="ttdoc">starts the processing using the actual AudioInfo</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:382</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_aacd5a76de8d22c3909128c3539e5a6f7"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#aacd5a76de8d22c3909128c3539e5a6f7">audio_tools::OggContainerEncoder::setAudioInfo</a></div><div class="ttdeci">virtual void setAudioInfo(AudioInfo info) override</div><div class="ttdoc">We actually do nothing with this.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:371</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html">audio_tools::OggContainerEncoder</a></div><div class="ttdoc">Encoder for Ogg Container. Encodes a packet for an Ogg container. The Ogg begin segment contains the ...</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:356</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a1b29912258e11751cfa24707a4e328ca"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a1b29912258e11751cfa24707a4e328ca">audio_tools::OggContainerEncoder::write</a></div><div class="ttdeci">virtual size_t write(const void *in_ptr, size_t in_size) override</div><div class="ttdoc">Writes raw data to be encoded and packaged.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:400</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a27acf4e8aff3e64627e3269df6e73a0b"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a27acf4e8aff3e64627e3269df6e73a0b">audio_tools::OggContainerEncoder::setOutputStream</a></div><div class="ttdeci">void setOutputStream(Print &amp;print) override</div><div class="ttdoc">Defines the output Stream.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:366</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a5d63922f6bdb7c371286ca453ae18f9c"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a5d63922f6bdb7c371286ca453ae18f9c">audio_tools::OggContainerEncoder::mime</a></div><div class="ttdeci">const char * mime() override</div><div class="ttdoc">Provides &quot;audio/pcm&quot;.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:369</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a64e9fa75beda50a9e8400ee0d4e61984"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a64e9fa75beda50a9e8400ee0d4e61984">audio_tools::OggContainerEncoder::end</a></div><div class="ttdeci">void end() override</div><div class="ttdoc">stops the processing</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:393</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a7cca57574879e4a3423fdd9ed3093125"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a7cca57574879e4a3423fdd9ed3093125">audio_tools::OggContainerEncoder::setOggOutput</a></div><div class="ttdeci">void setOggOutput(OggContainerOutput *out)</div><div class="ttdoc">Replace the ogg output class.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:424</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_a862ecf2b78cdb7877f997db8393c9825"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#a862ecf2b78cdb7877f997db8393c9825">audio_tools::OggContainerEncoder::begin</a></div><div class="ttdeci">virtual void begin() override</div><div class="ttdoc">starts the processing using the actual AudioInfo</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:383</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_ogg_container_encoder_html_aacd5a76de8d22c3909128c3539e5a6f7"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_encoder.html#aacd5a76de8d22c3909128c3539e5a6f7">audio_tools::OggContainerEncoder::setAudioInfo</a></div><div class="ttdeci">virtual void setAudioInfo(AudioInfo info) override</div><div class="ttdoc">We actually do nothing with this.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:372</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_ogg_container_output_html"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_output.html">audio_tools::OggContainerOutput</a></div><div class="ttdoc">Output class for the OggContainerEncoder. Each write is ending up as container entry.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:209</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_ogg_container_output_html_a4d2a8f208d69989c8676b0c632c9ea5c"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_output.html#a4d2a8f208d69989c8676b0c632c9ea5c">audio_tools::OggContainerOutput::begin</a></div><div class="ttdeci">virtual bool begin() override</div><div class="ttdoc">starts the processing using the actual AudioInfo</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:223</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_ogg_container_output_html_a59bfbf3ae12454d43d363e60e0e98824"><div class="ttname"><a href="classaudio__tools_1_1_ogg_container_output.html#a59bfbf3ae12454d43d363e60e0e98824">audio_tools::OggContainerOutput::write</a></div><div class="ttdeci">virtual size_t write(const uint8_t *in_ptr, size_t in_size) override</div><div class="ttdoc">Writes raw data to be encoded and packaged.</div><div class="ttdef"><b>Definition:</b> ContainerOgg.h:255</div></div>
