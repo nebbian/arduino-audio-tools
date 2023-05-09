@@ -469,7 +469,7 @@ $(function() {
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      <span class="keywordflow">if</span> (isCurrentStreamAudio()) {</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        audio_info = *(strf.asAVIAudioFormat(parse_buffer.data()));</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        setupAudioInfo();</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        LOGI(<span class="stringliteral">&quot;audioFormat: %d&quot;</span>, (<span class="keywordtype">int</span>)<a class="code" href="classaudio__tools_1_1_a_v_i_decoder.html#a5e1c60cc0458e1766542e6c5594de926">audioFormat</a>());</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        LOGI(<span class="stringliteral">&quot;audioFormat: %d (%x)&quot;</span>, (<span class="keywordtype">int</span>)<a class="code" href="classaudio__tools_1_1_a_v_i_decoder.html#a5e1c60cc0458e1766542e6c5594de926">audioFormat</a>(),(<span class="keywordtype">int</span>)<a class="code" href="classaudio__tools_1_1_a_v_i_decoder.html#a5e1c60cc0458e1766542e6c5594de926">audioFormat</a>());</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        content_types.push_back(Audio);</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <a class="code" href="classaudio__tools_1_1_a_v_i_decoder.html#aba97c16a038da99ec61d3b3145513742">consume</a>(strf.size());</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isCurrentStreamVideo()) {</div>
