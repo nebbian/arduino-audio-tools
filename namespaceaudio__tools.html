@@ -1505,7 +1505,7 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga4fcb46758e1356d5ff7c6523c52810c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio format codes used by Microsoft e.g. in avi or wav files. <br /></td></tr>
 <tr class="separator:ga4fcb46758e1356d5ff7c6523c52810c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a320f7b385576131cdae7758303baf7aa"><td class="memItemLeft" align="right" valign="top"><a id="a320f7b385576131cdae7758303baf7aa"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>AudioType</b> : uint8_t { <b>PCM</b>
+<tr class="memitem:a320f7b385576131cdae7758303baf7aa"><td class="memItemLeft" align="right" valign="top"><a id="a320f7b385576131cdae7758303baf7aa"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>AudioType</b> : uint8_t { <b>PCM</b>
 , <b>MP3</b>
 , <b>AAC</b>
 , <b>WAV</b>
@@ -1523,7 +1523,7 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a6a59ed379dc716d3d4f19e585d96abcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser for Wav header data adjusted for IMA ADPCM format - partially based on <a class="el" href="_codec_w_a_v_8h_source.html">CodecWAV.h</a> for details see <a href="https://de.wikipedia.org/wiki/RIFF_WAVE">https://de.wikipedia.org/wiki/RIFF_WAVE</a>.  <a href="namespaceaudio__tools.html#a6a59ed379dc716d3d4f19e585d96abcc">More...</a><br /></td></tr>
 <tr class="separator:a6a59ed379dc716d3d4f19e585d96abcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd4453d1994a706c0eb2350ffa55372"><td class="memItemLeft" align="right" valign="top"><a id="a4dd4453d1994a706c0eb2350ffa55372"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ContainerType</b> : uint8_t { <b>Header</b> = 1
+<tr class="memitem:a4dd4453d1994a706c0eb2350ffa55372"><td class="memItemLeft" align="right" valign="top"><a id="a4dd4453d1994a706c0eb2350ffa55372"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>ContainerType</b> : uint8_t { <b>Header</b> = 1
 , <b>Audio</b> = 2
 , <b>Meta</b> = 3
 , <b>Undefined</b> = 0
@@ -1628,8 +1628,8 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga1857f5fa1f018989102d5a5e3c5cf182"><td class="mdescLeft">&#160;</td><td class="mdescRight">current status of the parsing <br /></td></tr>
 <tr class="separator:ga1857f5fa1f018989102d5a5e3c5cf182"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5cfc25b1f32277d802a787556d072b2"><td class="memItemLeft" align="right" valign="top"><a id="ac5cfc25b1f32277d802a787556d072b2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>RecordType</b> : uint8_t { <br />
-&#160;&#160;<b>Undefined</b> = 0
+<tr class="memitem:ac5cfc25b1f32277d802a787556d072b2"><td class="memItemLeft" align="right" valign="top"><a id="ac5cfc25b1f32277d802a787556d072b2"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>RecordType</b> : uint8_t { <br />
+&#160;&#160;<b>Undefined</b>
 , <b>Begin</b>
 , <b>Send</b>
 , <b>Receive</b>
@@ -1650,7 +1650,7 @@ Enumerations</h2></td></tr>
 , <b>SeekEnd</b> = 2
  }</td></tr>
 <tr class="separator:a84d76d32dd4ef90e5a90cf759b7e563f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3529160d6b73e5a63e0a95afeb424659"><td class="memItemLeft" align="right" valign="top"><a id="a3529160d6b73e5a63e0a95afeb424659"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>StreamContentType</b> { <b>Audio</b> = 2
+<tr class="memitem:a3529160d6b73e5a63e0a95afeb424659"><td class="memItemLeft" align="right" valign="top"><a id="a3529160d6b73e5a63e0a95afeb424659"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>StreamContentType</b> { <b>Audio</b>
 , <b>Video</b>
  }</td></tr>
 <tr class="separator:a3529160d6b73e5a63e0a95afeb424659"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1664,7 +1664,7 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gadd9fe45e09605eee3e4a39c8a5c4476d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time Units. <br /></td></tr>
 <tr class="separator:gadd9fe45e09605eee3e4a39c8a5c4476d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39767e1d5e989bc1c5719791db129efa"><td class="memItemLeft" align="right" valign="top"><a id="a39767e1d5e989bc1c5719791db129efa"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TransmitRole</b> : uint8_t { <b>Sender</b>
+<tr class="memitem:a39767e1d5e989bc1c5719791db129efa"><td class="memItemLeft" align="right" valign="top"><a id="a39767e1d5e989bc1c5719791db129efa"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>TransmitRole</b> : uint8_t { <b>Sender</b>
 , <b>Receiver</b>
  }</td></tr>
 <tr class="separator:a39767e1d5e989bc1c5719791db129efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
