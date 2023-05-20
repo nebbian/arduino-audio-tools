@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="WAVDecoder - We parse the header data on the first record and send the sound data to the stream which...">WAVDecoder</a> - We parse the header data on the first record and send the sound data to the stream which was indicated in the constructor. Only WAV files with WAV_FORMAT_PCM are supported!  
+<p>A simple <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="A simple WAVDecoder: We parse the header data on the first record to determine the format....">WAVDecoder</a>: We parse the header data on the first record to determine the format. If no <a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html" title="Decoder for ADPCM. Depends on https://github.com/pschatzmann/adpcm.">ADPCMDecoder</a> is specified we just write the PCM data to the output that is defined by calling <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a93b5bd320ae10a808fb0de3eb5e5b387" title="Defines the output Stream.">setOutput()</a>. You can define a ADPCM decoder to decode WAV files that contain ADPCM data.  
  <a href="classaudio__tools_1_1_w_a_v_decoder.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_codec_w_a_v_8h_source.html">CodecWAV.h</a>&gt;</code></p>
@@ -93,16 +93,14 @@ Inheritance diagram for WAVDecoder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aae39ea2fe3a1572ff2a2e8dea8765334"><td class="memItemLeft" align="right" valign="top"><a id="aae39ea2fe3a1572ff2a2e8dea8765334"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#aae39ea2fe3a1572ff2a2e8dea8765334">WAVDecoder</a> ()</td></tr>
-<tr class="memdesc:aae39ea2fe3a1572ff2a2e8dea8765334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="WAVDecoder - We parse the header data on the first record and send the sound data to the stream which...">WAVDecoder</a> object. <br /></td></tr>
-<tr class="separator:aae39ea2fe3a1572ff2a2e8dea8765334"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e23cb49379c52362a1d4ee93a3751ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a5e23cb49379c52362a1d4ee93a3751ee">WAVDecoder</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream, <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
-<tr class="memdesc:a5e23cb49379c52362a1d4ee93a3751ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="WAVDecoder - We parse the header data on the first record and send the sound data to the stream which...">WAVDecoder</a> object.  <a href="classaudio__tools_1_1_w_a_v_decoder.html#a5e23cb49379c52362a1d4ee93a3751ee">More...</a><br /></td></tr>
-<tr class="separator:a5e23cb49379c52362a1d4ee93a3751ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8d6342d54be0f0a8cad7e3aa9162deb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#ae8d6342d54be0f0a8cad7e3aa9162deb">WAVDecoder</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream, bool active=true)</td></tr>
-<tr class="memdesc:ae8d6342d54be0f0a8cad7e3aa9162deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="WAVDecoder - We parse the header data on the first record and send the sound data to the stream which...">WAVDecoder</a> object.  <a href="classaudio__tools_1_1_w_a_v_decoder.html#ae8d6342d54be0f0a8cad7e3aa9162deb">More...</a><br /></td></tr>
-<tr class="separator:ae8d6342d54be0f0a8cad7e3aa9162deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c47a827a0f04215fa3005ba97123435"><td class="memItemLeft" align="right" valign="top"><a id="a9c47a827a0f04215fa3005ba97123435"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a9c47a827a0f04215fa3005ba97123435">WAVDecoder</a> ()=default</td></tr>
+<tr class="memdesc:a9c47a827a0f04215fa3005ba97123435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="A simple WAVDecoder: We parse the header data on the first record to determine the format....">WAVDecoder</a> object for PCM data. <br /></td></tr>
+<tr class="separator:a9c47a827a0f04215fa3005ba97123435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f15ee4e35f9bc50740777147d98e93"><td class="memItemLeft" align="right" valign="top"><a id="a74f15ee4e35f9bc50740777147d98e93"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a74f15ee4e35f9bc50740777147d98e93">WAVDecoder</a> (<a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html">ADPCMDecoder</a> &amp;dec, <a class="el" href="group__video.html#ga4fcb46758e1356d5ff7c6523c52810c1">AudioFormat</a> fmt)</td></tr>
+<tr class="memdesc:a74f15ee4e35f9bc50740777147d98e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="A simple WAVDecoder: We parse the header data on the first record to determine the format....">WAVDecoder</a> object for ADPCM data. <br /></td></tr>
+<tr class="separator:a74f15ee4e35f9bc50740777147d98e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
 <tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,16 +125,16 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mime</b> ()</
 <tr class="memitem:a0d52c0ed98e047d782054fa126b281e5"><td class="memItemLeft" align="right" valign="top"><a id="a0d52c0ed98e047d782054fa126b281e5"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a0d52c0ed98e047d782054fa126b281e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab754136602e0bb22ec2be26dedd9ff50"><td class="memItemLeft" align="right" valign="top"><a id="ab754136602e0bb22ec2be26dedd9ff50"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#ab754136602e0bb22ec2be26dedd9ff50">readStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;in)</td></tr>
-<tr class="memdesc:ab754136602e0bb22ec2be26dedd9ff50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative API which provides the data from an input stream. <br /></td></tr>
-<tr class="separator:ab754136602e0bb22ec2be26dedd9ff50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
 <tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5abd1fecacc0530ea5a0e7edcab29bc"><td class="memItemLeft" align="right" valign="top"><a id="ad5abd1fecacc0530ea5a0e7edcab29bc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#ad5abd1fecacc0530ea5a0e7edcab29bc">setDecoder</a> (<a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html">ADPCMDecoder</a> &amp;dec, <a class="el" href="group__video.html#ga4fcb46758e1356d5ff7c6523c52810c1">AudioFormat</a> fmt)</td></tr>
+<tr class="memdesc:ad5abd1fecacc0530ea5a0e7edcab29bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an optional decoder if the format is not PCM. <br /></td></tr>
+<tr class="separator:ad5abd1fecacc0530ea5a0e7edcab29bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48f731a1a7698c73ac736b17066dcf51"><td class="memItemLeft" align="right" valign="top"><a id="a48f731a1a7698c73ac736b17066dcf51"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a48f731a1a7698c73ac736b17066dcf51">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
-<tr class="memdesc:a48f731a1a7698c73ac736b17066dcf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an object that is notified if the audio format is changing. <br /></td></tr>
+<tr class="memdesc:a48f731a1a7698c73ac736b17066dcf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the object that needs to be notified about audio format changes. <br /></td></tr>
 <tr class="separator:a48f731a1a7698c73ac736b17066dcf51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf58dd0aedd8748b499ca948bd2cdf5d"><td class="memItemLeft" align="right" valign="top"><a id="acf58dd0aedd8748b499ca948bd2cdf5d"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutput</b> (<a class="el" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> &amp;out_stream)</td></tr>
@@ -154,6 +152,15 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a40ccab761fbae35e3eae43acc41be366"><td class="memItemLeft" align="right" valign="top"><a id="a40ccab761fbae35e3eae43acc41be366"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>decodeHeader</b> (uint8_t *in_ptr, size_t in_size)</td></tr>
+<tr class="separator:a40ccab761fbae35e3eae43acc41be366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae607080d1d8b4aabe305d60d9bf3d827"><td class="memItemLeft" align="right" valign="top"><a id="ae607080d1d8b4aabe305d60d9bf3d827"></a>
+<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>out</b> ()</td></tr>
+<tr class="separator:ae607080d1d8b4aabe305d60d9bf3d827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49624bf1f0983f6882e820138ebff1a3"><td class="memItemLeft" align="right" valign="top"><a id="a49624bf1f0983f6882e820138ebff1a3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setupEncodedAudio</b> ()</td></tr>
+<tr class="separator:a49624bf1f0983f6882e820138ebff1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a2e475070d3df18395c90a10c9d38eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,11 +168,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memItemLeft" align="right" valign="top"><a id="a03c996f9fcf0e10baeb3e700be0c409a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</td></tr>
 <tr class="separator:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86c5c386386197b53bbca522921dc2da"><td class="memItemLeft" align="right" valign="top"><a id="a86c5c386386197b53bbca522921dc2da"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>audioBaseInfoSupport</b></td></tr>
+<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>audioBaseInfoSupport</b> =nullptr</td></tr>
 <tr class="separator:a86c5c386386197b53bbca522921dc2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb88a7977658bc9af3cae6500011adf1"><td class="memItemLeft" align="right" valign="top"><a id="adb88a7977658bc9af3cae6500011adf1"></a>
+<a class="el" href="classaudio__tools_1_1_encoded_audio_output.html">EncodedAudioOutput</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dec_out</b></td></tr>
+<tr class="separator:adb88a7977658bc9af3cae6500011adf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b432da52d2652bb3e2a75d50bde2a84"><td class="memItemLeft" align="right" valign="top"><a id="a6b432da52d2652bb3e2a75d50bde2a84"></a>
+<a class="el" href="group__video.html#ga4fcb46758e1356d5ff7c6523c52810c1">AudioFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>decoder_format</b> = AudioFormat::PCM</td></tr>
+<tr class="separator:a6b432da52d2652bb3e2a75d50bde2a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae5e6bba484cf15221185bf1bcb4198c"><td class="memItemLeft" align="right" valign="top"><a id="aae5e6bba484cf15221185bf1bcb4198c"></a>
 <a class="el" href="classaudio__tools_1_1_w_a_v_header.html">WAVHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>header</b></td></tr>
 <tr class="separator:aae5e6bba484cf15221185bf1bcb4198c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,9 +191,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFirst</b> = true</t
 <tr class="memitem:a8cc8d1cb67b70386f41455552f3a56f4"><td class="memItemLeft" align="right" valign="top"><a id="a8cc8d1cb67b70386f41455552f3a56f4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> = true</td></tr>
 <tr class="separator:a8cc8d1cb67b70386f41455552f3a56f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1e77b1e9512ce8dc31ef853e0abc02c"><td class="memItemLeft" align="right" valign="top"><a id="ab1e77b1e9512ce8dc31ef853e0abc02c"></a>
-<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>out</b></td></tr>
-<tr class="separator:ab1e77b1e9512ce8dc31ef853e0abc02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad9c61859b8c1d6220f0409610e2c4e9"><td class="memItemLeft" align="right" valign="top"><a id="aad9c61859b8c1d6220f0409610e2c4e9"></a>
+<a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html">ADPCMDecoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_decoder</b> = nullptr</td></tr>
+<tr class="separator:aad9c61859b8c1d6220f0409610e2c4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> = nullptr</td></tr>
 <tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,100 +202,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> = true</t
 <tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="WAVDecoder - We parse the header data on the first record and send the sound data to the stream which...">WAVDecoder</a> - We parse the header data on the first record and send the sound data to the stream which was indicated in the constructor. Only WAV files with WAV_FORMAT_PCM are supported! </p>
+<div class="textblock"><p>A simple <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="A simple WAVDecoder: We parse the header data on the first record to determine the format....">WAVDecoder</a>: We parse the header data on the first record to determine the format. If no <a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html" title="Decoder for ADPCM. Depends on https://github.com/pschatzmann/adpcm.">ADPCMDecoder</a> is specified we just write the PCM data to the output that is defined by calling <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a93b5bd320ae10a808fb0de3eb5e5b387" title="Defines the output Stream.">setOutput()</a>. You can define a ADPCM decoder to decode WAV files that contain ADPCM data. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae8d6342d54be0f0a8cad7e3aa9162deb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8d6342d54be0f0a8cad7e3aa9162deb">&#9670;&nbsp;</a></span>WAVDecoder() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html">WAVDecoder</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;&#160;</td>
-          <td class="paramname"><em>out_stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>active</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Construct a new <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="WAVDecoder - We parse the header data on the first record and send the sound data to the stream which...">WAVDecoder</a> object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out_stream</td><td>Output <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> to which we write the decoded result </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a5e23cb49379c52362a1d4ee93a3751ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e23cb49379c52362a1d4ee93a3751ee">&#9670;&nbsp;</a></span>WAVDecoder() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html">WAVDecoder</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;&#160;</td>
-          <td class="paramname"><em>out_stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;&#160;</td>
-          <td class="paramname"><em>bi</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Construct a new <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="WAVDecoder - We parse the header data on the first record and send the sound data to the stream which...">WAVDecoder</a> object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out_stream</td><td>Output <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> to which we write the decoded result </td></tr>
-    <tr><td class="paramname">bi</td><td>Object that will be notified about the Audio Formt (Changes) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioCodecs/<a class="el" href="_codec_w_a_v_8h_source.html">CodecWAV.h</a></li>
 </ul>
 </div><!-- contents -->
