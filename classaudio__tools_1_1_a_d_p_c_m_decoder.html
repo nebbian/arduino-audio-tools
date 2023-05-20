@@ -85,9 +85,10 @@ Inheritance diagram for ADPCMDecoder:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_a_d_p_c_m_decoder.png" usemap="#ADPCMDecoder_map" alt=""/>
   <map id="ADPCMDecoder_map" name="ADPCMDecoder_map">
-<area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="58,56,165,80"/>
-<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,107,24"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="117,0,224,24"/>
+<area href="classaudio__tools_1_1_audio_decoder_ext.html" alt="AudioDecoderExt" shape="rect" coords="60,112,171,136"/>
+<area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="60,56,171,80"/>
+<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,111,24"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="121,0,232,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -119,9 +120,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#accee684614189e73bdc9f1b2f7abf919">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
 <tr class="memdesc:accee684614189e73bdc9f1b2f7abf919"><td class="mdescLeft">&#160;</td><td class="mdescRight">for most decoders this is not needed <br /></td></tr>
 <tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2398b9286ce8c2f1d613577f1bc8e0ce"><td class="memItemLeft" align="right" valign="top"><a id="a2398b9286ce8c2f1d613577f1bc8e0ce"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlockSize</b> (int blockSize)</td></tr>
-<tr class="separator:a2398b9286ce8c2f1d613577f1bc8e0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e353ab993dc4c3e2f5336026922784c"><td class="memItemLeft" align="right" valign="top"><a id="a5e353ab993dc4c3e2f5336026922784c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlockSize</b> (int blockSize) override</td></tr>
+<tr class="separator:a5e353ab993dc4c3e2f5336026922784c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4626becb07db8422467ad6e787b2b8d4"><td class="memItemLeft" align="right" valign="top"><a id="a4626becb07db8422467ad6e787b2b8d4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#a4626becb07db8422467ad6e787b2b8d4">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;notify) override</td></tr>
 <tr class="memdesc:a4626becb07db8422467ad6e787b2b8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an object that is notified if the audio format is changing. <br /></td></tr>
@@ -134,13 +135,13 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#a74fb348e7fbaed39364af8869fb05231">setOutput</a> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;out_stream)</td></tr>
 <tr class="memdesc:a74fb348e7fbaed39364af8869fb05231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines where the decoded result is written to. <br /></td></tr>
 <tr class="separator:a74fb348e7fbaed39364af8869fb05231"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33190106b1d5de89d6af68ad5924f7be"><td class="memItemLeft" align="right" valign="top"><a id="a33190106b1d5de89d6af68ad5924f7be"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html#a33190106b1d5de89d6af68ad5924f7be">setOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
-<tr class="memdesc:a33190106b1d5de89d6af68ad5924f7be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines where the decoded result is written to. <br /></td></tr>
-<tr class="separator:a33190106b1d5de89d6af68ad5924f7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bc89622393b80681646ad8e5e653e27"><td class="memItemLeft" align="right" valign="top"><a id="a6bc89622393b80681646ad8e5e653e27"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *input_buffer, size_t length)</td></tr>
-<tr class="separator:a6bc89622393b80681646ad8e5e653e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accd4a0f8bb385180e8006fd543aef936"><td class="memItemLeft" align="right" valign="top"><a id="accd4a0f8bb385180e8006fd543aef936"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html#accd4a0f8bb385180e8006fd543aef936">setOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream) override</td></tr>
+<tr class="memdesc:accd4a0f8bb385180e8006fd543aef936"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines where the decoded result is written to. <br /></td></tr>
+<tr class="separator:accd4a0f8bb385180e8006fd543aef936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a723c5bd4c26674eb852c3f3cd84cb"><td class="memItemLeft" align="right" valign="top"><a id="a15a723c5bd4c26674eb852c3f3cd84cb"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *input_buffer, size_t length) override</td></tr>
+<tr class="separator:a15a723c5bd4c26674eb852c3f3cd84cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>

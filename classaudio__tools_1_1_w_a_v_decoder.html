@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A simple <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="A simple WAVDecoder: We parse the header data on the first record to determine the format....">WAVDecoder</a>: We parse the header data on the first record to determine the format. If no <a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html" title="Decoder for ADPCM. Depends on https://github.com/pschatzmann/adpcm.">ADPCMDecoder</a> is specified we just write the PCM data to the output that is defined by calling <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a93b5bd320ae10a808fb0de3eb5e5b387" title="Defines the output Stream.">setOutput()</a>. You can define a ADPCM decoder to decode WAV files that contain ADPCM data.  
+<p>A simple <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="A simple WAVDecoder: We parse the header data on the first record to determine the format....">WAVDecoder</a>: We parse the header data on the first record to determine the format. If no <a class="el" href="classaudio__tools_1_1_audio_decoder_ext.html">AudioDecoderExt</a> is specified we just write the PCM data to the output that is defined by calling <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a93b5bd320ae10a808fb0de3eb5e5b387" title="Defines the output Stream.">setOutput()</a>. You can define a ADPCM decoder to decode WAV files that contain ADPCM data.  
  <a href="classaudio__tools_1_1_w_a_v_decoder.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_codec_w_a_v_8h_source.html">CodecWAV.h</a>&gt;</code></p>
@@ -97,10 +97,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a9c47a827a0f04215fa3005ba97123435">WAVDecoder</a> ()=default</td></tr>
 <tr class="memdesc:a9c47a827a0f04215fa3005ba97123435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="A simple WAVDecoder: We parse the header data on the first record to determine the format....">WAVDecoder</a> object for PCM data. <br /></td></tr>
 <tr class="separator:a9c47a827a0f04215fa3005ba97123435"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74f15ee4e35f9bc50740777147d98e93"><td class="memItemLeft" align="right" valign="top"><a id="a74f15ee4e35f9bc50740777147d98e93"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a74f15ee4e35f9bc50740777147d98e93">WAVDecoder</a> (<a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html">ADPCMDecoder</a> &amp;dec, <a class="el" href="group__video.html#ga4fcb46758e1356d5ff7c6523c52810c1">AudioFormat</a> fmt)</td></tr>
-<tr class="memdesc:a74f15ee4e35f9bc50740777147d98e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="A simple WAVDecoder: We parse the header data on the first record to determine the format....">WAVDecoder</a> object for ADPCM data. <br /></td></tr>
-<tr class="separator:a74f15ee4e35f9bc50740777147d98e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5555009a75f049857a44ae320627e59"><td class="memItemLeft" align="right" valign="top"><a id="ab5555009a75f049857a44ae320627e59"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#ab5555009a75f049857a44ae320627e59">WAVDecoder</a> (<a class="el" href="classaudio__tools_1_1_audio_decoder_ext.html">AudioDecoderExt</a> &amp;dec, <a class="el" href="group__video.html#ga4fcb46758e1356d5ff7c6523c52810c1">AudioFormat</a> fmt)</td></tr>
+<tr class="memdesc:ab5555009a75f049857a44ae320627e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="A simple WAVDecoder: We parse the header data on the first record to determine the format....">WAVDecoder</a> object for ADPCM data. <br /></td></tr>
+<tr class="separator:ab5555009a75f049857a44ae320627e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
 <tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,10 +130,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> 
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#accee684614189e73bdc9f1b2f7abf919">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
 <tr class="memdesc:accee684614189e73bdc9f1b2f7abf919"><td class="mdescLeft">&#160;</td><td class="mdescRight">for most decoders this is not needed <br /></td></tr>
 <tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5abd1fecacc0530ea5a0e7edcab29bc"><td class="memItemLeft" align="right" valign="top"><a id="ad5abd1fecacc0530ea5a0e7edcab29bc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#ad5abd1fecacc0530ea5a0e7edcab29bc">setDecoder</a> (<a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html">ADPCMDecoder</a> &amp;dec, <a class="el" href="group__video.html#ga4fcb46758e1356d5ff7c6523c52810c1">AudioFormat</a> fmt)</td></tr>
-<tr class="memdesc:ad5abd1fecacc0530ea5a0e7edcab29bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an optional decoder if the format is not PCM. <br /></td></tr>
-<tr class="separator:ad5abd1fecacc0530ea5a0e7edcab29bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1113a99aa668488e62a0f646af0f8b87"><td class="memItemLeft" align="right" valign="top"><a id="a1113a99aa668488e62a0f646af0f8b87"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a1113a99aa668488e62a0f646af0f8b87">setDecoder</a> (<a class="el" href="classaudio__tools_1_1_audio_decoder_ext.html">AudioDecoderExt</a> &amp;dec, <a class="el" href="group__video.html#ga4fcb46758e1356d5ff7c6523c52810c1">AudioFormat</a> fmt)</td></tr>
+<tr class="memdesc:a1113a99aa668488e62a0f646af0f8b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an optional decoder if the format is not PCM. <br /></td></tr>
+<tr class="separator:a1113a99aa668488e62a0f646af0f8b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48f731a1a7698c73ac736b17066dcf51"><td class="memItemLeft" align="right" valign="top"><a id="a48f731a1a7698c73ac736b17066dcf51"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a48f731a1a7698c73ac736b17066dcf51">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a48f731a1a7698c73ac736b17066dcf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the object that needs to be notified about audio format changes. <br /></td></tr>
@@ -195,9 +195,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFirst</b> = true</t
 <tr class="memitem:a8cc8d1cb67b70386f41455552f3a56f4"><td class="memItemLeft" align="right" valign="top"><a id="a8cc8d1cb67b70386f41455552f3a56f4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> = true</td></tr>
 <tr class="separator:a8cc8d1cb67b70386f41455552f3a56f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad9c61859b8c1d6220f0409610e2c4e9"><td class="memItemLeft" align="right" valign="top"><a id="aad9c61859b8c1d6220f0409610e2c4e9"></a>
-<a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html">ADPCMDecoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_decoder</b> = nullptr</td></tr>
-<tr class="separator:aad9c61859b8c1d6220f0409610e2c4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a471ba715df384e354b213dd10c3542aa"><td class="memItemLeft" align="right" valign="top"><a id="a471ba715df384e354b213dd10c3542aa"></a>
+<a class="el" href="classaudio__tools_1_1_audio_decoder_ext.html">AudioDecoderExt</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_decoder</b> = nullptr</td></tr>
+<tr class="separator:a471ba715df384e354b213dd10c3542aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> = nullptr</td></tr>
 <tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,7 +206,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> = true</t
 <tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A simple <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="A simple WAVDecoder: We parse the header data on the first record to determine the format....">WAVDecoder</a>: We parse the header data on the first record to determine the format. If no <a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html" title="Decoder for ADPCM. Depends on https://github.com/pschatzmann/adpcm.">ADPCMDecoder</a> is specified we just write the PCM data to the output that is defined by calling <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a93b5bd320ae10a808fb0de3eb5e5b387" title="Defines the output Stream.">setOutput()</a>. You can define a ADPCM decoder to decode WAV files that contain ADPCM data. </p>
+<div class="textblock"><p>A simple <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html" title="A simple WAVDecoder: We parse the header data on the first record to determine the format....">WAVDecoder</a>: We parse the header data on the first record to determine the format. If no <a class="el" href="classaudio__tools_1_1_audio_decoder_ext.html">AudioDecoderExt</a> is specified we just write the PCM data to the output that is defined by calling <a class="el" href="classaudio__tools_1_1_w_a_v_decoder.html#a93b5bd320ae10a808fb0de3eb5e5b387" title="Defines the output Stream.">setOutput()</a>. You can define a ADPCM decoder to decode WAV files that contain ADPCM data. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
