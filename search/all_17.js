@@ -28,7 +28,7 @@ var searchData=
   ['writeexpandchannel_1228',['writeExpandChannel',['../classaudio__tools_1_1_i2_s_driver_e_s_p32.html#a02fbc21599be69326c5e97c693978adc',1,'audio_tools::I2SDriverESP32']]],
   ['writeext_1229',['writeExt',['../classaudio__tools_1_1_i2_s_driver_e_s_p8266.html#a99a8f1db5a1afb834903480ab1e6913c',1,'audio_tools::I2SDriverESP8266']]],
   ['writefromreceive_1230',['writeFromReceive',['../classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a79908b9928cf48bb309f19dbdf2fa4f9',1,'audio_tools::I2SDriverSTM32']]],
-  ['writeheader_1231',['writeHeader',['../classaudio__tools_1_1_w_a_v_header.html#a15a8486a590d3553f484987126d1f53e',1,'audio_tools::WAVHeader']]],
+  ['writeheader_1231',['writeHeader',['../classaudio__tools_1_1_w_a_v_header.html#ac012624c961a3cdd2f76933fed3c2f65',1,'audio_tools::WAVHeader']]],
   ['writemeta_1232',['writeMeta',['../classaudio__tools_1_1_binary_container_encoder.html#a43a30da913185727325494f8d559f939',1,'audio_tools::BinaryContainerEncoder']]],
   ['writesamples_1233',['writeSamples',['../namespaceaudio__tools.html#ad49c9e7326cf6ff739f6ecd1f01ec3c1',1,'audio_tools']]],
   ['writesilence_1234',['writeSilence',['../classaudio__tools_1_1_audio_output.html#ad89418aeb557f65a8f1a0aed755633b1',1,'audio_tools::AudioOutput::writeSilence()'],['../classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1',1,'audio_tools::AudioStream::writeSilence()']]]
