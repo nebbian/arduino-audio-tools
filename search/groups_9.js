@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kiss_2592',['KISS',['../group__fft-kiss.html',1,'']]]
+  ['kiss_2596',['KISS',['../group__fft-kiss.html',1,'']]]
 ];
