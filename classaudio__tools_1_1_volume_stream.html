@@ -115,10 +115,6 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_stream.html#ad5f4bc6dc1d853957daa5b3708e55e72">VolumeStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;in)</td></tr>
 <tr class="memdesc:ad5f4bc6dc1d853957daa5b3708e55e72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor which assigns <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> input or output. <br /></td></tr>
 <tr class="separator:ad5f4bc6dc1d853957daa5b3708e55e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba13955cdedca4a0d4211f907aaca2fe"><td class="memItemLeft" align="right" valign="top"><a id="aba13955cdedca4a0d4211f907aaca2fe"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_stream.html#aba13955cdedca4a0d4211f907aaca2fe">~VolumeStream</a> ()</td></tr>
-<tr class="memdesc:aba13955cdedca4a0d4211f907aaca2fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
-<tr class="separator:aba13955cdedca4a0d4211f907aaca2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
 <tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,9 +229,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>applyVolume24</b> (<a
 <tr class="memitem:ad8cc2dc0bd53a089c4372972e689b9db"><td class="memItemLeft" align="right" valign="top"><a id="ad8cc2dc0bd53a089c4372972e689b9db"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>applyVolume32</b> (int32_t *data, size_t size)</td></tr>
 <tr class="separator:ad8cc2dc0bd53a089c4372972e689b9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b66d5e31b5dc18b314c8a68163263bd"><td class="memItemLeft" align="right" valign="top"><a id="a4b66d5e31b5dc18b314c8a68163263bd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>cleanup</b> ()</td></tr>
-<tr class="separator:a4b66d5e31b5dc18b314c8a68163263bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a006b1e9240e602ca418de6140a724e4a"><td class="memItemLeft" align="right" valign="top"><a id="a006b1e9240e602ca418de6140a724e4a"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>factorForChannel</b> (int channel)</td></tr>
 <tr class="separator:a006b1e9240e602ca418de6140a724e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,9 +253,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aa2edf78818e469ade2d06200ce93b724"><td class="memItemLeft" align="right" valign="top"><a id="aa2edf78818e469ade2d06200ce93b724"></a>
 <a class="el" href="classaudio__tools_1_1_cached_volume_control.html">CachedVolumeControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cached_volume</b> {pot_vc}</td></tr>
 <tr class="separator:aa2edf78818e469ade2d06200ce93b724"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1639916f08f31e498bd6b13b802819fd"><td class="memItemLeft" align="right" valign="top"><a id="a1639916f08f31e498bd6b13b802819fd"></a>
-float *&#160;</td><td class="memItemRight" valign="bottom"><b>factor_for_channel</b> = nullptr</td></tr>
-<tr class="separator:a1639916f08f31e498bd6b13b802819fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b559d07e6f17b25e30feccef647b83"><td class="memItemLeft" align="right" valign="top"><a id="ab2b559d07e6f17b25e30feccef647b83"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>factor_for_channel</b></td></tr>
+<tr class="separator:ab2b559d07e6f17b25e30feccef647b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4892d54cb4b58361852857c258dc637"><td class="memItemLeft" align="right" valign="top"><a id="ac4892d54cb4b58361852857c258dc637"></a>
 <a class="el" href="structaudio__tools_1_1_volume_stream_config.html">VolumeStreamConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:ac4892d54cb4b58361852857c258dc637"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,9 +289,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>max_value</b> = 3276
 <tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
 <tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8949c7a7ff752ba42a853ea78061ca2"><td class="memItemLeft" align="right" valign="top"><a id="ad8949c7a7ff752ba42a853ea78061ca2"></a>
-float *&#160;</td><td class="memItemRight" valign="bottom"><b>volume_values</b> = nullptr</td></tr>
-<tr class="separator:ad8949c7a7ff752ba42a853ea78061ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d32a9561b8fa96988320818efe55d2b"><td class="memItemLeft" align="right" valign="top"><a id="a0d32a9561b8fa96988320818efe55d2b"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>volume_values</b></td></tr>
+<tr class="separator:a0d32a9561b8fa96988320818efe55d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Adjust the volume of the related input or output: To work properly the class needs to know the bits per sample and number of channels! AudioChanges are forwareded to the related <a class="el" href="classaudio__tools_1_1_print.html">Print</a> or <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> class. </p>
