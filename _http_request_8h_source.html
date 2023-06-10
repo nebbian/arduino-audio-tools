@@ -253,7 +253,7 @@ $(function() {
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            }</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <a class="code" href="classaudio__tools_1_1_http_request.html#a7ea676da702cf4fa9667770e0fc6cb51">processBegin</a>(action, url, mime, len);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="comment">// posting data parameter</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordflow">if</span> (lenData&gt;0 &amp;&amp; data!=<span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordflow">if</span> (len&gt;0 &amp;&amp; data!=<span class="keyword">nullptr</span>){</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                LOGI(<span class="stringliteral">&quot;Writing data: %d bytes&quot;</span>, len);</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                client_ptr-&gt;write((<span class="keyword">const</span> uint8_t*)data, len);</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                LOGD(<span class="stringliteral">&quot;%s&quot;</span>,data);</div>
