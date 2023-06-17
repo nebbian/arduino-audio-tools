@@ -208,128 +208,130 @@ $(function() {
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">if</span> (p_notify!=<span class="keyword">nullptr</span>){</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;              p_notify-&gt;setAudioInfo(cfg);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            begin(cfg);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_volume_stream.html#a35c7533999826a3706e97f99442d4c7e">  173</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_volume_stream.html#a35c7533999826a3706e97f99442d4c7e">setVolume</a>(<span class="keywordtype">float</span> vol){</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="comment">// just to make sure that we have a valid start volume before begin</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            info.volume = vol; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j&lt;info.channels;j++){</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;              <a class="code" href="classaudio__tools_1_1_volume_stream.html#a35c7533999826a3706e97f99442d4c7e">setVolume</a>(vol, j);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_volume_stream.html#a28c83db3d78661d6e35b248d73006314">  182</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_volume_stream.html#a28c83db3d78661d6e35b248d73006314">setVolume</a>(<span class="keywordtype">float</span> vol, <span class="keywordtype">int</span> channel){</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordflow">if</span> (channel&lt;info.channels){</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;              setup(vol);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;              <span class="keywordtype">float</span> volume_value = volumeValue(vol);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;              LOGI(<span class="stringliteral">&quot;setVolume: %f&quot;</span>, volume_value);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;              <span class="keywordtype">float</span> factor = volumeControl().<a class="code" href="classaudio__tools_1_1_volume_control.html#ab9c01325a5a52a051934968f66b4a04c">getVolumeFactor</a>(volume_value);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;              volume_values[channel]=volume_value;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;              factor_for_channel[channel]=factor;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;              LOGE(<span class="stringliteral">&quot;Invalid channel %d - max: %d&quot;</span>, channel, info.channels-1);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_volume_stream.html#a1d59a107c6918cdc9a17b92f6cd4e136">  196</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="classaudio__tools_1_1_volume_stream.html#a1d59a107c6918cdc9a17b92f6cd4e136">volume</a>() {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keywordflow">return</span> volume_values.size()==0? 0: volume_values[0];</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_volume_stream.html#af70e2220bd25b8609cf5386bbcded254">  201</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="classaudio__tools_1_1_volume_stream.html#af70e2220bd25b8609cf5386bbcded254">volume</a>(<span class="keywordtype">int</span> channel) {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">return</span> channel&gt;=info.channels? 0 : volume_values[channel];</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *p_out=<span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> *p_in=<span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <a class="code" href="structaudio__tools_1_1_volume_stream_config.html">VolumeStreamConfig</a> info;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <a class="code" href="classaudio__tools_1_1_linear_volume_control.html">LinearVolumeControl</a> linear_vc{<span class="keyword">true</span>};</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        SimulatedAudioPot pot_vc;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        CachedVolumeControl cached_volume{pot_vc};</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        Vector&lt;float&gt; volume_values;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        Vector&lt;float&gt; factor_for_channel;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordtype">bool</span> is_active = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordtype">float</span> max_value = 32767; <span class="comment">// max value for clipping</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordtype">int</span> max_channels=0;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordtype">void</span> setup(<span class="keywordtype">float</span> vol) {</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            is_active = vol!=1.0f;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            factor_for_channel.resize(info.channels);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            volume_values.resize(info.channels);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        }</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordtype">float</span> volumeValue(<span class="keywordtype">float</span> vol){</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <span class="keywordflow">if</span> (!info.allow_boost &amp;&amp; vol&gt;1.0f) vol = 1.0;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">if</span> (vol&lt;0.0f) vol = 0.0;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="comment">// round to 2 digits</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordtype">float</span> value = (int)(vol * 100 + .5f);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordtype">float</span> volume_value = (float)value / 100;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keywordflow">return</span> volume_value;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        }</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        VolumeControl &amp;volumeControl(){</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="keywordflow">return</span> cached_volume;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        }</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordtype">float</span> factorForChannel(<span class="keywordtype">int</span> channel){</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordflow">return</span> factor_for_channel.size()==0? 1.0 : factor_for_channel[channel];</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        }</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordtype">void</span> applyVolume(<span class="keyword">const</span> uint8_t *buffer, <span class="keywordtype">size_t</span> size){</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keywordflow">switch</span>(info.bits_per_sample){</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="keywordflow">case</span> 16:</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                    applyVolume16((int16_t*)buffer, size/2);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                <span class="keywordflow">case</span> 24:</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                    applyVolume24((int24_t*)buffer, size/3);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                <span class="keywordflow">case</span> 32:</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                    applyVolume32((int32_t*)buffer, size/4);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    LOGE(<span class="stringliteral">&quot;Unsupported bits_per_sample: %d&quot;</span>, info.bits_per_sample);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordtype">void</span> applyVolume16(int16_t* data, <span class="keywordtype">size_t</span> size){</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0;j&lt;size;j++){</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                <span class="keywordtype">float</span> result = factorForChannel(j%info.channels) * data[j];</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                <span class="keywordflow">if</span> (!info.allow_boost){</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    <span class="keywordflow">if</span> (result&gt;max_value) result = max_value;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    <span class="keywordflow">if</span> (result&lt;-max_value) result = -max_value;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                } </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                data[j]= <span class="keyword">static_cast&lt;</span>int16_t<span class="keyword">&gt;</span>(result);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            }</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        }</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordtype">void</span> applyVolume24(int24_t* data, <span class="keywordtype">size_t</span> size) {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0;j&lt;size;j++){</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                <span class="keywordtype">float</span> result = factorForChannel(j%info.channels) * data[j];</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                <span class="keywordflow">if</span> (!info.allow_boost){</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                    <span class="keywordflow">if</span> (result&gt;max_value) result = max_value;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                    <span class="keywordflow">if</span> (result&lt;-max_value) result = -max_value;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                } </div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                int32_t result1 = result;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                data[j]= <span class="keyword">static_cast&lt;</span>int24_t<span class="keyword">&gt;</span>(result1);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        }</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordtype">void</span> applyVolume32(int32_t* data, <span class="keywordtype">size_t</span> size) {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0;j&lt;size;j++){</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                <span class="keywordtype">float</span> result = factorForChannel(j%info.channels) * data[j];</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                <span class="keywordflow">if</span> (!info.allow_boost){</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                    <span class="keywordflow">if</span> (result&gt;max_value) result = max_value;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                    <span class="keywordflow">if</span> (result&lt;-max_value) result = -max_value;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                } </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                data[j]= <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(result);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;};</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">if</span> (!is_active){</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;              begin(cfg); </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_volume_stream.html#a35c7533999826a3706e97f99442d4c7e">  175</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_volume_stream.html#a35c7533999826a3706e97f99442d4c7e">setVolume</a>(<span class="keywordtype">float</span> vol){</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="comment">// just to make sure that we have a valid start volume before begin</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            info.volume = vol; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j&lt;info.channels;j++){</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;              <a class="code" href="classaudio__tools_1_1_volume_stream.html#a35c7533999826a3706e97f99442d4c7e">setVolume</a>(vol, j);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_volume_stream.html#a28c83db3d78661d6e35b248d73006314">  184</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_volume_stream.html#a28c83db3d78661d6e35b248d73006314">setVolume</a>(<span class="keywordtype">float</span> vol, <span class="keywordtype">int</span> channel){</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordflow">if</span> (channel&lt;info.channels){</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;              setup(vol);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;              <span class="keywordtype">float</span> volume_value = volumeValue(vol);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;              LOGI(<span class="stringliteral">&quot;setVolume: %f&quot;</span>, volume_value);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;              <span class="keywordtype">float</span> factor = volumeControl().<a class="code" href="classaudio__tools_1_1_volume_control.html#ab9c01325a5a52a051934968f66b4a04c">getVolumeFactor</a>(volume_value);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;              volume_values[channel]=volume_value;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;              factor_for_channel[channel]=factor;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;              LOGE(<span class="stringliteral">&quot;Invalid channel %d - max: %d&quot;</span>, channel, info.channels-1);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_volume_stream.html#a1d59a107c6918cdc9a17b92f6cd4e136">  198</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="classaudio__tools_1_1_volume_stream.html#a1d59a107c6918cdc9a17b92f6cd4e136">volume</a>() {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">return</span> volume_values.size()==0? 0: volume_values[0];</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_volume_stream.html#af70e2220bd25b8609cf5386bbcded254">  203</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="classaudio__tools_1_1_volume_stream.html#af70e2220bd25b8609cf5386bbcded254">volume</a>(<span class="keywordtype">int</span> channel) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordflow">return</span> channel&gt;=info.channels? 0 : volume_values[channel];</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *p_out=<span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> *p_in=<span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <a class="code" href="structaudio__tools_1_1_volume_stream_config.html">VolumeStreamConfig</a> info;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <a class="code" href="classaudio__tools_1_1_linear_volume_control.html">LinearVolumeControl</a> linear_vc{<span class="keyword">true</span>};</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        SimulatedAudioPot pot_vc;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        CachedVolumeControl cached_volume{pot_vc};</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        Vector&lt;float&gt; volume_values;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        Vector&lt;float&gt; factor_for_channel;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordtype">bool</span> is_active = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordtype">float</span> max_value = 32767; <span class="comment">// max value for clipping</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordtype">int</span> max_channels=0;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordtype">void</span> setup(<span class="keywordtype">float</span> vol) {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            is_active = vol!=1.0f;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            factor_for_channel.resize(info.channels);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            volume_values.resize(info.channels);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordtype">float</span> volumeValue(<span class="keywordtype">float</span> vol){</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">if</span> (!info.allow_boost &amp;&amp; vol&gt;1.0f) vol = 1.0;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">if</span> (vol&lt;0.0f) vol = 0.0;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="comment">// round to 2 digits</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keywordtype">float</span> value = (int)(vol * 100 + .5f);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordtype">float</span> volume_value = (float)value / 100;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordflow">return</span> volume_value;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        VolumeControl &amp;volumeControl(){</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="keywordflow">return</span> cached_volume;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordtype">float</span> factorForChannel(<span class="keywordtype">int</span> channel){</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">return</span> factor_for_channel.size()==0? 1.0 : factor_for_channel[channel];</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordtype">void</span> applyVolume(<span class="keyword">const</span> uint8_t *buffer, <span class="keywordtype">size_t</span> size){</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordflow">switch</span>(info.bits_per_sample){</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                <span class="keywordflow">case</span> 16:</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                    applyVolume16((int16_t*)buffer, size/2);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                <span class="keywordflow">case</span> 24:</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                    applyVolume24((int24_t*)buffer, size/3);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                <span class="keywordflow">case</span> 32:</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                    applyVolume32((int32_t*)buffer, size/4);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    LOGE(<span class="stringliteral">&quot;Unsupported bits_per_sample: %d&quot;</span>, info.bits_per_sample);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordtype">void</span> applyVolume16(int16_t* data, <span class="keywordtype">size_t</span> size){</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0;j&lt;size;j++){</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                <span class="keywordtype">float</span> result = factorForChannel(j%info.channels) * data[j];</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                <span class="keywordflow">if</span> (!info.allow_boost){</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                    <span class="keywordflow">if</span> (result&gt;max_value) result = max_value;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    <span class="keywordflow">if</span> (result&lt;-max_value) result = -max_value;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                } </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                data[j]= <span class="keyword">static_cast&lt;</span>int16_t<span class="keyword">&gt;</span>(result);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordtype">void</span> applyVolume24(int24_t* data, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0;j&lt;size;j++){</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                <span class="keywordtype">float</span> result = factorForChannel(j%info.channels) * data[j];</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                <span class="keywordflow">if</span> (!info.allow_boost){</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                    <span class="keywordflow">if</span> (result&gt;max_value) result = max_value;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    <span class="keywordflow">if</span> (result&lt;-max_value) result = -max_value;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                } </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                int32_t result1 = result;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                data[j]= <span class="keyword">static_cast&lt;</span>int24_t<span class="keyword">&gt;</span>(result1);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordtype">void</span> applyVolume32(int32_t* data, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0;j&lt;size;j++){</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                <span class="keywordtype">float</span> result = factorForChannel(j%info.channels) * data[j];</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                <span class="keywordflow">if</span> (!info.allow_boost){</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                    <span class="keywordflow">if</span> (result&gt;max_value) result = max_value;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                    <span class="keywordflow">if</span> (result&lt;-max_value) result = -max_value;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                } </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                data[j]= <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(result);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;};</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_support_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_support.html">audio_tools::AudioInfoSupport</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:101</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_output_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_output.html">audio_tools::AudioOutput</a></div><div class="ttdoc">Abstract Audio Ouptut class.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:23</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream.html">audio_tools::AudioStream</a></div><div class="ttdoc">Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:47</div></div>
@@ -340,10 +342,10 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_volume_control_html"><div class="ttname"><a href="classaudio__tools_1_1_volume_control.html">audio_tools::VolumeControl</a></div><div class="ttdoc">Abstract class for handling of the linear input volume to determine the multiplication factor which s...</div><div class="ttdef"><b>Definition:</b> VolumeControl.h:17</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_volume_control_html_ab9c01325a5a52a051934968f66b4a04c"><div class="ttname"><a href="classaudio__tools_1_1_volume_control.html#ab9c01325a5a52a051934968f66b4a04c">audio_tools::VolumeControl::getVolumeFactor</a></div><div class="ttdeci">virtual float getVolumeFactor(float volume)=0</div><div class="ttdoc">determines a multiplication factor (0.0 to 1.0) from an input value (0.0 to 1.0).</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html">audio_tools::VolumeStream</a></div><div class="ttdoc">Adjust the volume of the related input or output: To work properly the class needs to know the bits p...</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:32</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_a1d59a107c6918cdc9a17b92f6cd4e136"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#a1d59a107c6918cdc9a17b92f6cd4e136">audio_tools::VolumeStream::volume</a></div><div class="ttdeci">float volume()</div><div class="ttdoc">Provides the current volume setting.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:196</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_a1d59a107c6918cdc9a17b92f6cd4e136"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#a1d59a107c6918cdc9a17b92f6cd4e136">audio_tools::VolumeStream::volume</a></div><div class="ttdeci">float volume()</div><div class="ttdoc">Provides the current volume setting.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:198</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_a257c8a69cef8507552ff441df96aa770"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#a257c8a69cef8507552ff441df96aa770">audio_tools::VolumeStream::setTarget</a></div><div class="ttdeci">void setTarget(Stream &amp;in)</div><div class="ttdoc">same as setStream</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:67</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_a28c83db3d78661d6e35b248d73006314"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#a28c83db3d78661d6e35b248d73006314">audio_tools::VolumeStream::setVolume</a></div><div class="ttdeci">void setVolume(float vol, int channel)</div><div class="ttdoc">Sets the volume for one channel.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:182</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_a35c7533999826a3706e97f99442d4c7e"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#a35c7533999826a3706e97f99442d4c7e">audio_tools::VolumeStream::setVolume</a></div><div class="ttdeci">void setVolume(float vol)</div><div class="ttdoc">Defines the volume for all channels: needs to be in the range of 0 to 1.0.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:173</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_a28c83db3d78661d6e35b248d73006314"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#a28c83db3d78661d6e35b248d73006314">audio_tools::VolumeStream::setVolume</a></div><div class="ttdeci">void setVolume(float vol, int channel)</div><div class="ttdoc">Sets the volume for one channel.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:184</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_a35c7533999826a3706e97f99442d4c7e"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#a35c7533999826a3706e97f99442d4c7e">audio_tools::VolumeStream::setVolume</a></div><div class="ttdeci">void setVolume(float vol)</div><div class="ttdoc">Defines the volume for all channels: needs to be in the range of 0 to 1.0.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:175</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_a43061a6ac2343137b176333cb989ba48"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#a43061a6ac2343137b176333cb989ba48">audio_tools::VolumeStream::readBytes</a></div><div class="ttdeci">virtual size_t readBytes(uint8_t *buffer, size_t length) override</div><div class="ttdoc">Read raw PCM audio data, which will be the input for the volume control.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:130</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_a6fb55d483321d9d1efc898c720c0205a"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#a6fb55d483321d9d1efc898c720c0205a">audio_tools::VolumeStream::setTarget</a></div><div class="ttdeci">void setTarget(Print &amp;out)</div><div class="ttdoc">Defines/Changes the output target.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:62</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_a6ff0d6d1b0f3f9b652c9d5298ed0863c"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#a6ff0d6d1b0f3f9b652c9d5298ed0863c">audio_tools::VolumeStream::availableForWrite</a></div><div class="ttdeci">virtual int availableForWrite() override</div><div class="ttdoc">Provides the nubmer of bytes we can write.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:153</div></div>
@@ -357,7 +359,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_ae7ea43235bd3821c81da4f95c519bba5"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#ae7ea43235bd3821c81da4f95c519bba5">audio_tools::VolumeStream::setAudioInfo</a></div><div class="ttdeci">void setAudioInfo(AudioInfo cfg) override</div><div class="ttdoc">Detines the Audio info - The bits_per_sample are critical to work properly!</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:163</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_aeefdc8cb4396440dcd16cf76ce39b168"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#aeefdc8cb4396440dcd16cf76ce39b168">audio_tools::VolumeStream::VolumeStream</a></div><div class="ttdeci">VolumeStream(Print &amp;out)</div><div class="ttdoc">Constructor which assigns Print output.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:38</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_af563fb27e0137b006c62af82654083fb"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#af563fb27e0137b006c62af82654083fb">audio_tools::VolumeStream::setVolumeControl</a></div><div class="ttdeci">void setVolumeControl(VolumeControl &amp;vc)</div><div class="ttdoc">Defines the volume control logic.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:120</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_af70e2220bd25b8609cf5386bbcded254"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#af70e2220bd25b8609cf5386bbcded254">audio_tools::VolumeStream::volume</a></div><div class="ttdeci">float volume(int channel)</div><div class="ttdoc">Provides the current volume setting for the indicated channel.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:201</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_af70e2220bd25b8609cf5386bbcded254"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#af70e2220bd25b8609cf5386bbcded254">audio_tools::VolumeStream::volume</a></div><div class="ttdeci">float volume(int channel)</div><div class="ttdoc">Provides the current volume setting for the indicated channel.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:203</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_afbb59a2f946191d7cf2a5c0a00b29ec2"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#afbb59a2f946191d7cf2a5c0a00b29ec2">audio_tools::VolumeStream::available</a></div><div class="ttdeci">virtual int available() override</div><div class="ttdoc">Provides the nubmer of bytes we can write.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:158</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_afcb2a62320edc10770189f42d3b80c86"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#afcb2a62320edc10770189f42d3b80c86">audio_tools::VolumeStream::setStream</a></div><div class="ttdeci">void setStream(Stream &amp;in)</div><div class="ttdoc">Defines/Changes the input &amp; output.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:73</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:9</div></div>
