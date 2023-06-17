@@ -238,9 +238,18 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported<
 <tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
 <tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af421fb6fddc334d721ae23703c1688b0"><td class="memItemLeft" align="right" valign="top"><a id="af421fb6fddc334d721ae23703c1688b0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> (float vol)</td></tr>
-<tr class="separator:af421fb6fddc334d721ae23703c1688b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198564f582b08ca779cedd43cafc8102"><td class="memItemLeft" align="right" valign="top"><a id="a198564f582b08ca779cedd43cafc8102"></a>
+<a class="el" href="structaudio__tools_1_1_volume_stream_config.html">VolumeStreamConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_stream.html#a198564f582b08ca779cedd43cafc8102">setupAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg)</td></tr>
+<tr class="memdesc:a198564f582b08ca779cedd43cafc8102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a <a class="el" href="structaudio__tools_1_1_volume_stream_config.html" title="Config for VolumeStream.">VolumeStreamConfig</a> based on a <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a>. <br /></td></tr>
+<tr class="separator:a198564f582b08ca779cedd43cafc8102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa43027e46c404244a52b4c8470876edd"><td class="memItemLeft" align="right" valign="top"><a id="aa43027e46c404244a52b4c8470876edd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_stream.html#aa43027e46c404244a52b4c8470876edd">setupVectors</a> ()</td></tr>
+<tr class="memdesc:aa43027e46c404244a52b4c8470876edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes the vectors. <br /></td></tr>
+<tr class="separator:aa43027e46c404244a52b4c8470876edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef9fdbdc5ffa4e83da9b18eb2920de3"><td class="memItemLeft" align="right" valign="top"><a id="a8ef9fdbdc5ffa4e83da9b18eb2920de3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_stream.html#a8ef9fdbdc5ffa4e83da9b18eb2920de3">setupVolumeStreamConfig</a> (<a class="el" href="structaudio__tools_1_1_volume_stream_config.html">VolumeStreamConfig</a> cfg)</td></tr>
+<tr class="memdesc:a8ef9fdbdc5ffa4e83da9b18eb2920de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the local variable and calculates some max values. <br /></td></tr>
+<tr class="separator:a8ef9fdbdc5ffa4e83da9b18eb2920de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9bd616f1f9b515322d311e7751c946f"><td class="memItemLeft" align="right" valign="top"><a id="ae9bd616f1f9b515322d311e7751c946f"></a>
 <a class="el" href="classaudio__tools_1_1_volume_control.html">VolumeControl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>volumeControl</b> ()</td></tr>
 <tr class="separator:ae9bd616f1f9b515322d311e7751c946f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,6 +271,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a407c3efba665d276a38229f905bef352"><td class="memItemLeft" align="right" valign="top"><a id="a407c3efba665d276a38229f905bef352"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false</td></tr>
 <tr class="separator:a407c3efba665d276a38229f905bef352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f8b893603bd3b5d0bd0d6378f07976c"><td class="memItemLeft" align="right" valign="top"><a id="a4f8b893603bd3b5d0bd0d6378f07976c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_started</b> = false</td></tr>
+<tr class="separator:a4f8b893603bd3b5d0bd0d6378f07976c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0d710c5fa93b57e0c606c57dda163ab"><td class="memItemLeft" align="right" valign="top"><a id="aa0d710c5fa93b57e0c606c57dda163ab"></a>
 <a class="el" href="classaudio__tools_1_1_linear_volume_control.html">LinearVolumeControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>linear_vc</b> {true}</td></tr>
 <tr class="separator:aa0d710c5fa93b57e0c606c57dda163ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
