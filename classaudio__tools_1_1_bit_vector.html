@@ -84,31 +84,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top"><a id="ac8bb3912a3ce86b15842e79d0b421204"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
 <tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd90ce21c2979e8e535d556118c8e7d9"><td class="memItemLeft" align="right" valign="top"><a id="acd90ce21c2979e8e535d556118c8e7d9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (size_t index)</td></tr>
-<tr class="separator:acd90ce21c2979e8e535d556118c8e7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14921af2607cba450fe47b8247765b48"><td class="memItemLeft" align="right" valign="top"><a id="a14921af2607cba450fe47b8247765b48"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (int64_t index)</td></tr>
+<tr class="separator:a14921af2607cba450fe47b8247765b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8af8dd6b3b0712d4a6fde4dd36f52498"><td class="memItemLeft" align="right" valign="top"><a id="a8af8dd6b3b0712d4a6fde4dd36f52498"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_t index)</td></tr>
 <tr class="separator:a8af8dd6b3b0712d4a6fde4dd36f52498"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f54487e151896f020c07e41258abdff"><td class="memItemLeft" align="right" valign="top"><a id="a3f54487e151896f020c07e41258abdff"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (size_t index, bool value)</td></tr>
-<tr class="separator:a3f54487e151896f020c07e41258abdff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada388d17b93c54a1a0f6edddbe0953ab"><td class="memItemLeft" align="right" valign="top"><a id="ada388d17b93c54a1a0f6edddbe0953ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (int size)</td></tr>
+<tr class="separator:ada388d17b93c54a1a0f6edddbe0953ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f7178630f7113688aacba122ef6a960"><td class="memItemLeft" align="right" valign="top"><a id="a8f7178630f7113688aacba122ef6a960"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (int64_t index, bool value)</td></tr>
+<tr class="separator:a8f7178630f7113688aacba122ef6a960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a854554bd3a60ca3441ff58121eb75f3d"><td class="memItemLeft" align="right" valign="top"><a id="a854554bd3a60ca3441ff58121eb75f3d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_bit_vector.html#a854554bd3a60ca3441ff58121eb75f3d">setChangeCallback</a> (void(*hdler)(int idx, bool value, void *ref), void *ref=nullptr)</td></tr>
 <tr class="memdesc:a854554bd3a60ca3441ff58121eb75f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a callback method which is called when a value is updated. <br /></td></tr>
 <tr class="separator:a854554bd3a60ca3441ff58121eb75f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeec31b62a007cd8b971b61c87018f4f"><td class="memItemLeft" align="right" valign="top"><a id="aeeec31b62a007cd8b971b61c87018f4f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>shift</b> (int n)</td></tr>
+<tr class="separator:aeeec31b62a007cd8b971b61c87018f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4b57d21919c42d55af03391f91a1c08"><td class="memItemLeft" align="right" valign="top"><a id="af4b57d21919c42d55af03391f91a1c08"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> ()</td></tr>
 <tr class="separator:af4b57d21919c42d55af03391f91a1c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49fc99b3fe2794758257afbed2cce046"><td class="memTemplParams" colspan="2"><a id="a49fc99b3fe2794758257afbed2cce046"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a49fc99b3fe2794758257afbed2cce046"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>toInt</b> (int n)</td></tr>
+<tr class="separator:a49fc99b3fe2794758257afbed2cce046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282b179551d22ff75ae049993ba05dbb"><td class="memItemLeft" align="right" valign="top"><a id="a282b179551d22ff75ae049993ba05dbb"></a>
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>toInt16</b> (int n)</td></tr>
+<tr class="separator:a282b179551d22ff75ae049993ba05dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9913ed59d88281138882ad75ee2222"><td class="memItemLeft" align="right" valign="top"><a id="a0e9913ed59d88281138882ad75ee2222"></a>
+int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>toInt8</b> (int n)</td></tr>
+<tr class="separator:a0e9913ed59d88281138882ad75ee2222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a90a2b4e7c3a9b48889c133a8ce81e20d"><td class="memItemLeft" align="right" valign="top"><a id="a90a2b4e7c3a9b48889c133a8ce81e20d"></a>
 void(*&#160;</td><td class="memItemRight" valign="bottom"><b>changeHandler</b> )(int idx, bool value, void *ref) = nullptr</td></tr>
 <tr class="separator:a90a2b4e7c3a9b48889c133a8ce81e20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38ed82834167d5fda8843128e438b201"><td class="memItemLeft" align="right" valign="top"><a id="a38ed82834167d5fda8843128e438b201"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_idx</b> =0</td></tr>
-<tr class="separator:a38ed82834167d5fda8843128e438b201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d80aa5a4095568c10920afd8520492f"><td class="memItemLeft" align="right" valign="top"><a id="a7d80aa5a4095568c10920afd8520492f"></a>
+int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_idx</b> = 0</td></tr>
+<tr class="separator:a7d80aa5a4095568c10920afd8520492f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1830ddb36c14bdd7057683e633f918c8"><td class="memItemLeft" align="right" valign="top"><a id="a1830ddb36c14bdd7057683e633f918c8"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>ref</b></td></tr>
 <tr class="separator:a1830ddb36c14bdd7057683e633f918c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
