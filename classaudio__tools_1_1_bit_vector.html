@@ -68,6 +68,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classaudio__tools_1_1_bit_vector-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BitVector Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__tools.html">Tools</a> &raquo; <a class="el" href="group__collections.html">Collections</a></div></div>  </div>
@@ -81,6 +82,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a12ff5770852636ee9666b8d3736e99c7"><td class="memItemLeft" align="right" valign="top"><a id="a12ff5770852636ee9666b8d3736e99c7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BitVector</b> (int size)</td></tr>
+<tr class="separator:a12ff5770852636ee9666b8d3736e99c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top"><a id="ac8bb3912a3ce86b15842e79d0b421204"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
 <tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -91,7 +95,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (int64_t inde
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_t index)</td></tr>
 <tr class="separator:a8af8dd6b3b0712d4a6fde4dd36f52498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada388d17b93c54a1a0f6edddbe0953ab"><td class="memItemLeft" align="right" valign="top"><a id="ada388d17b93c54a1a0f6edddbe0953ab"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (int size)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_bit_vector.html#ada388d17b93c54a1a0f6edddbe0953ab">resize</a> (int size)</td></tr>
+<tr class="memdesc:ada388d17b93c54a1a0f6edddbe0953ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the size of the bit vector. <br /></td></tr>
 <tr class="separator:ada388d17b93c54a1a0f6edddbe0953ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f7178630f7113688aacba122ef6a960"><td class="memItemLeft" align="right" valign="top"><a id="a8f7178630f7113688aacba122ef6a960"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (int64_t index, bool value)</td></tr>
@@ -108,14 +113,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> ()</td></tr>
 <tr class="separator:af4b57d21919c42d55af03391f91a1c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49fc99b3fe2794758257afbed2cce046"><td class="memTemplParams" colspan="2"><a id="a49fc99b3fe2794758257afbed2cce046"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a49fc99b3fe2794758257afbed2cce046"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>toInt</b> (int n)</td></tr>
+<tr class="memitem:a49fc99b3fe2794758257afbed2cce046"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_bit_vector.html#a49fc99b3fe2794758257afbed2cce046">toInt</a> (int n)</td></tr>
+<tr class="memdesc:a49fc99b3fe2794758257afbed2cce046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts an integer. <br /></td></tr>
 <tr class="separator:a49fc99b3fe2794758257afbed2cce046"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a282b179551d22ff75ae049993ba05dbb"><td class="memItemLeft" align="right" valign="top"><a id="a282b179551d22ff75ae049993ba05dbb"></a>
-int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>toInt16</b> (int n)</td></tr>
-<tr class="separator:a282b179551d22ff75ae049993ba05dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e9913ed59d88281138882ad75ee2222"><td class="memItemLeft" align="right" valign="top"><a id="a0e9913ed59d88281138882ad75ee2222"></a>
-int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>toInt8</b> (int n)</td></tr>
-<tr class="separator:a0e9913ed59d88281138882ad75ee2222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -131,6 +131,12 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><b>ref</b></td></tr>
 <tr class="memitem:a434cb84c66b35491f7997124a90c045a"><td class="memItemLeft" align="right" valign="top"><a id="a434cb84c66b35491f7997124a90c045a"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vector</b></td></tr>
 <tr class="separator:a434cb84c66b35491f7997124a90c045a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ad402c401d03274ef148ce93fb92a2fef"><td class="memItemLeft" align="right" valign="top"><a id="ad402c401d03274ef148ce93fb92a2fef"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, <a class="el" href="classaudio__tools_1_1_bit_vector.html">BitVector</a> &amp;dt)</td></tr>
+<tr class="separator:ad402c401d03274ef148ce93fb92a2fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Space optimized vector which stores the boolean values as bits. </p>
