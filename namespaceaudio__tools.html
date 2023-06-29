@@ -128,17 +128,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_d_s_r_gain.html">ADSRGain</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_a_d_s_r.html" title="Generates ADSR values between 0.0 and 1.0.">ADSR</a> Envelope: Attack, Decay, Sustain and Release. Attack is the time taken for initial run-up oeffect_tf level from nil to peak, beginning when the key is pressed. Decay is the time taken for the subsequent run down from the attack level to the designated sustainLevel level. Sustain is the level during the main sequence of the sound's duration, until the key is released. Release is the time taken for the level to decay from the sustainLevel level to zero after the key is released.[4].  <a href="classaudio__tools_1_1_a_d_s_r_gain.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html">AnalogAudioStream</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support reading of audio only using analog input with a timer.  <a href="classaudio__tools_1_1_analog_audio_stream.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32 specific configuration for i2s input via adc. The default input pin is GPIO34. We always use int16_t values. The default output pins are GPIO25 and GPIO26!  <a href="classaudio__tools_1_1_analog_config.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_base.html">AnalogDriverBase</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_e_s_p32.html">AnalogDriverESP32</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Please use <a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>: A very fast ADC and DAC using the ESP32 I2S interface.  <a href="classaudio__tools_1_1_analog_driver_e_s_p32.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_p_t_x_decoder.html">APTXDecoder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decoder for OpenAptx. Depends on <a href="https://github.com/pschatzmann/libopenaptx">https://github.com/pschatzmann/libopenaptx</a>.  <a href="classaudio__tools_1_1_a_p_t_x_decoder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1394,10 +1383,6 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aaa1343d8b748b17590142ca348d217db"><td class="memItemLeft" align="right" valign="top"><a id="aaa1343d8b748b17590142ca348d217db"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#aaa1343d8b748b17590142ca348d217db">AnalogDriver</a> = <a class="el" href="classaudio__tools_1_1_analog_driver_e_s_p32.html">AnalogDriverESP32</a></td></tr>
-<tr class="memdesc:aaa1343d8b748b17590142ca348d217db"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>. <br /></td></tr>
-<tr class="separator:aaa1343d8b748b17590142ca348d217db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adceec2c2bb56cdaa41df59466d7f6c5e"><td class="memItemLeft" align="right" valign="top"><a id="adceec2c2bb56cdaa41df59466d7f6c5e"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>AudioBaseInfo</b> = <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a></td></tr>
 <tr class="separator:adceec2c2bb56cdaa41df59466d7f6c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1701,6 +1686,7 @@ Enumerations</h2></td></tr>
 <tr class="separator:a1a80d46b1fcf323c58eb596c016434f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadd9fe45e09605eee3e4a39c8a5c4476d"><td class="memItemLeft" align="right" valign="top"><a id="gadd9fe45e09605eee3e4a39c8a5c4476d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__basic.html#gadd9fe45e09605eee3e4a39c8a5c4476d">TimeUnit</a> { <b>MS</b>
 , <b>US</b>
+, <b>HZ</b>
  }</td></tr>
 <tr class="memdesc:gadd9fe45e09605eee3e4a39c8a5c4476d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time Units. <br /></td></tr>
 <tr class="separator:gadd9fe45e09605eee3e4a39c8a5c4476d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1725,9 +1711,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_stream_sink_soun
 <tr class="memitem:aa1ece901456a47e0104f93a9daba8c9f"><td class="memItemLeft" align="right" valign="top"><a id="aa1ece901456a47e0104f93a9daba8c9f"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_stream_source_sound_data</b> (Frame *data, int32_t len)</td></tr>
 <tr class="separator:aa1ece901456a47e0104f93a9daba8c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79ff6c2e174837e1331dbd20573e4667"><td class="memItemLeft" align="right" valign="top"><a id="a79ff6c2e174837e1331dbd20573e4667"></a>
-static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert8DAC</b> (int64_t value, int value_bits_per_sample)</td></tr>
-<tr class="separator:a79ff6c2e174837e1331dbd20573e4667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49370a6bf784826df0683c0d5a1bf15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">defaultPWMAudioOutputCallback</a> ()</td></tr>
 <tr class="memdesc:af49370a6bf784826df0683c0d5a1bf15"><td class="mdescLeft">&#160;</td><td class="mdescRight">separate method that can be defined as friend so that we can access protected information  <a href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">More...</a><br /></td></tr>
 <tr class="separator:af49370a6bf784826df0683c0d5a1bf15"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1926,9 +1909,6 @@ INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>CO
 <tr class="memitem:adb4e1a9fb882f53625e527b900e036f9"><td class="memItemLeft" align="right" valign="top"><a id="adb4e1a9fb882f53625e527b900e036f9"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_AGENT</b> = &quot;Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)&quot;</td></tr>
 <tr class="separator:adb4e1a9fb882f53625e527b900e036f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a4b94cdd9c6326435d73baf10b714ad"><td class="memItemLeft" align="right" valign="top"><a id="a5a4b94cdd9c6326435d73baf10b714ad"></a>
-<a class="el" href="structaudio__tools_1_1_p_w_m_config.html">audio_tools::PWMConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>default_config</b></td></tr>
-<tr class="separator:a5a4b94cdd9c6326435d73baf10b714ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43f193c47cdf807a4546ccb9cd9549a8"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><b>encoding_table</b> []</td></tr>
 <tr class="separator:a43f193c47cdf807a4546ccb9cd9549a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e80ac23b0cfbd2179f446211da0dc6a"><td class="memItemLeft" align="right" valign="top"><a id="a9e80ac23b0cfbd2179f446211da0dc6a"></a>
@@ -2037,6 +2017,9 @@ static <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_s_
 <tr class="memitem:a1aab9fccb0eea490c24d94140cd3301e"><td class="memItemLeft" align="right" valign="top"><a id="a1aab9fccb0eea490c24d94140cd3301e"></a>
 static <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.html">TimerAlarmRepeatingDriverAVR</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>timerAlarmRepeatingRef</b> = nullptr</td></tr>
 <tr class="separator:a1aab9fccb0eea490c24d94140cd3301e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5ddcb8fe02c3735fc501db30d76c35"><td class="memItemLeft" align="right" valign="top"><a id="aab5ddcb8fe02c3735fc501db30d76c35"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>TimeUnitStr</b> [] {&quot;MS&quot;,&quot;US&quot;,&quot;HZ&quot;}</td></tr>
+<tr class="separator:aab5ddcb8fe02c3735fc501db30d76c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad34a5f61c1256168d5c9cd8fdad2d15f"><td class="memItemLeft" align="right" valign="top"><a id="ad34a5f61c1256168d5c9cd8fdad2d15f"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>TRANSFER_ENCODING</b> = &quot;Transfer-Encoding&quot;</td></tr>
 <tr class="separator:ad34a5f61c1256168d5c9cd8fdad2d15f"><td class="memSeparator" colspan="2">&#160;</td></tr>

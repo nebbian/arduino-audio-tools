@@ -381,9 +381,9 @@ $(function() {
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      assert(p_data!=<span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    }</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordtype">void</span> cleanup(T*p_data, <span class="keywordtype">int</span> from, <span class="keywordtype">int</span> to){</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordtype">void</span> cleanup(T*data, <span class="keywordtype">int</span> from, <span class="keywordtype">int</span> to){</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=from;j&lt;to;j++){</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        p_data[j].~T();</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        data[j].~T();</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      }</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    }</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;};</div>
@@ -397,7 +397,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html_a4155c2064fb658b43b41b64756c6398f"><div class="ttname"><a href="classaudio__tools_1_1_vector.html#a4155c2064fb658b43b41b64756c6398f">audio_tools::Vector::Vector</a></div><div class="ttdeci">Vector(size_t len=20)</div><div class="ttdoc">default constructor</div><div class="ttdef"><b>Definition:</b> Vector.h:114</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html_a56c0272405a621eb8ef6725bad9a19a0"><div class="ttname"><a href="classaudio__tools_1_1_vector.html#a56c0272405a621eb8ef6725bad9a19a0">audio_tools::Vector::Vector</a></div><div class="ttdeci">Vector(Vector&lt; T &gt; &amp;copyFrom)</div><div class="ttdoc">copy constructor</div><div class="ttdef"><b>Definition:</b> Vector.h:130</div></div>
 <div class="ttc" id="aclassstd_1_1initializer__list_html"><div class="ttname"><a href="classstd_1_1initializer__list.html">std::initializer_list</a></div><div class="ttdoc">Custom initializer_list if not provided by the compiler.</div><div class="ttdef"><b>Definition:</b> InitializerList.h:14</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:9</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> BitVector.h:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
