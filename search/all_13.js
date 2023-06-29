@@ -233,7 +233,7 @@ var searchData=
   ['streamingdecoder_1083',['StreamingDecoder',['../classaudio__tools_1_1_streaming_decoder.html',1,'audio_tools']]],
   ['strext_1084',['StrExt',['../classaudio__tools_1_1_str_ext.html',1,'audio_tools']]],
   ['strings_1085',['Strings',['../group__string.html',1,'']]],
-  ['strnlength_1086',['strnlength',['../namespaceaudio__tools.html#a9f5e749c1505c145acaf258953899402',1,'audio_tools']]],
+  ['strnlength_1086',['strnlength',['../namespaceaudio__tools.html#af68d88c17f0bce43f0551198d0dcbd04',1,'audio_tools']]],
   ['substring_1087',['substring',['../classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed',1,'audio_tools::Str::substring(Str &amp;from, int start, int end)'],['../classaudio__tools_1_1_str.html#a3f6497cf6cccccd073dd6cf73f9273f3',1,'audio_tools::Str::substring(const char *from, int start, int end)']]],
   ['swing_1088',['swing',['../classaudio__tools_1_1_simple_chorus.html#a97f5a92ad2c16f85ca305be30ba8477b',1,'audio_tools::SimpleChorus']]],
   ['synthesizer_1089',['Synthesizer',['../classaudio__tools_1_1_synthesizer.html',1,'audio_tools']]],
