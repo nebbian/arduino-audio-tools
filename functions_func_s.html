@@ -132,6 +132,7 @@ $(function() {
 : <a class="el" href="classaudio__tools_1_1_a_a_c_encoder_f_d_k.html#ae9dd0258a562852d9334cd71ab9ab9c1">AACEncoderFDK</a>
 , <a class="el" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#ad1fdd56031f1195cb221ab855fb6a102">ADPCMEncoder</a>
 , <a class="el" href="classaudio__tools_1_1_a_d_p_c_m_encoder_x_q.html#ad1fdd56031f1195cb221ab855fb6a102">ADPCMEncoderXQ</a>
+, <a class="el" href="classaudio__tools_1_1_analog_audio_stream.html#a87feead15897a49c7dccb043ac9fcddc">AnalogAudioStream</a>
 , <a class="el" href="classaudio__tools_1_1_a_p_t_x_encoder.html#a87feead15897a49c7dccb043ac9fcddc">APTXEncoder</a>
 , <a class="el" href="classaudio__tools_1_1_audio_decoder.html#accee684614189e73bdc9f1b2f7abf919">AudioDecoder</a>
 , <a class="el" href="classaudio__tools_1_1_audio_encoder.html#a5c749802992efec8bc20ba4a522b027f">AudioEncoder</a>
@@ -160,7 +161,7 @@ $(function() {
 , <a class="el" href="classaudio__tools_1_1_i2_s_stream.html#a87feead15897a49c7dccb043ac9fcddc">I2SStream</a>
 , <a class="el" href="classaudio__tools_1_1_i_l_b_c_encoder.html#a5e283a9495aaf265739336829d45e215">ILBCEncoder</a>
 , <a class="el" href="classaudio__tools_1_1_l_c3_encoder.html#a87feead15897a49c7dccb043ac9fcddc">LC3Encoder</a>
-, <a class="el" href="classaudio__tools_1_1_m_p3_encoder_l_a_m_e.html#a7fada19480b99fa787492cbc32b5b893">MP3EncoderLAME</a>
+, <a class="el" href="classaudio__tools_1_1_m_p3_encoder_l_a_m_e.html#a81d4320037ca3aed1c9713c8516f1340">MP3EncoderLAME</a>
 , <a class="el" href="classaudio__tools_1_1_ogg_container_encoder.html#aacd5a76de8d22c3909128c3539e5a6f7">OggContainerEncoder</a>
 , <a class="el" href="classaudio__tools_1_1_opus_audio_decoder.html#a5c749802992efec8bc20ba4a522b027f">OpusAudioDecoder</a>
 , <a class="el" href="classaudio__tools_1_1_opus_audio_encoder.html#a5c749802992efec8bc20ba4a522b027f">OpusAudioEncoder</a>
@@ -369,6 +370,9 @@ $(function() {
 <li>setInput()
 : <a class="el" href="classaudio__tools_1_1_audio_effects.html#ab528c2d2e5318406f6b2ca46eebf8e4f">AudioEffects&lt; GeneratorT &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">EncodedAudioStream</a>
+</li>
+<li>setInputPin1()
+: <a class="el" href="classaudio__tools_1_1_analog_config.html#a841f1fb376492c764a2ef8d71879a67a">AnalogConfig</a>
 </li>
 <li>setInputStream()
 : <a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a3bcad8389ae08e07b345ab270c187078">FLACDecoder</a>
@@ -709,9 +713,13 @@ $(function() {
 <li>setupOutput()
 : <a class="el" href="classaudio__tools_1_1_transformation_reader.html#a49ead13a1391cddd44b4a85f63a01a67">TransformationReader&lt; T &gt;</a>
 </li>
+<li>setupPins()
+: <a class="el" href="classaudio__tools_1_1_analog_driver_arduino.html#a31d554847ae8fdeaba2460e0395cb75f">AnalogDriverArduino</a>
+</li>
 <li>setupPWM()
 : <a class="el" href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html#a9aab38b961e7af7f2385e1553532cfdb">PWMDriverAVR</a>
 , <a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#ab9d89f49874ec6da1534423c364453bf">PWMDriverESP32</a>
+, <a class="el" href="classaudio__tools_1_1_p_w_m_driver_renesis.html#ab9d89f49874ec6da1534423c364453bf">PWMDriverRenesis</a>
 , <a class="el" href="classaudio__tools_1_1_p_w_m_driver_s_t_m32.html#ab9d89f49874ec6da1534423c364453bf">PWMDriverSTM32</a>
 </li>
 <li>setupSimpleDelay()
@@ -719,6 +727,7 @@ $(function() {
 </li>
 <li>setupTimer()
 : <a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#adba588f4c4041836e56c7ffb61a04764">PWMDriverESP32</a>
+, <a class="el" href="classaudio__tools_1_1_p_w_m_driver_renesis.html#adba588f4c4041836e56c7ffb61a04764">PWMDriverRenesis</a>
 </li>
 <li>setupVectors()
 : <a class="el" href="classaudio__tools_1_1_volume_stream.html#aa43027e46c404244a52b4c8470876edd">VolumeStream</a>
@@ -817,6 +826,7 @@ $(function() {
 </li>
 <li>startTimer()
 : <a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#ac70c6a1420e03c6e8c938188c8b7dd56">PWMDriverESP32</a>
+, <a class="el" href="classaudio__tools_1_1_p_w_m_driver_renesis.html#a23e8b43798a6b64b48e29f32517efeca">PWMDriverRenesis</a>
 , <a class="el" href="classaudio__tools_1_1_p_w_m_driver_s_t_m32.html#a23e8b43798a6b64b48e29f32517efeca">PWMDriverSTM32</a>
 </li>
 <li>status()

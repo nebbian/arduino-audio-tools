@@ -97,16 +97,16 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span>AnalogDriverESP32  : <span class="keyword">public</span> AnalogDriverBase {</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_driver_e_s_p32.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_analog_driver_e_s_p32.html">AnalogDriverESP32</a>  : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_analog_driver_base.html">AnalogDriverBase</a> {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    AnalogDriverESP32() {</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_driver_e_s_p32.html#ab54b68b2ca78285d62b7f66da16eaa3b">   38</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_driver_e_s_p32.html#ab54b68b2ca78285d62b7f66da16eaa3b">AnalogDriverESP32</a>() {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> ~AnalogDriverESP32() {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      end();</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_driver_e_s_p32.html#ad6adf8a8f39c09edf7a0a8b2564e1205">   42</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classaudio__tools_1_1_analog_driver_e_s_p32.html#ad6adf8a8f39c09edf7a0a8b2564e1205">~AnalogDriverESP32</a>() {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <a class="code" href="classaudio__tools_1_1_analog_driver_e_s_p32.html#a64e9fa75beda50a9e8400ee0d4e61984">end</a>();</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> begin(AnalogConfig cfg) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_driver_e_s_p32.html#a5b57d1fefbbb011e8e8672dcc6750895">   47</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_analog_driver_e_s_p32.html#a5b57d1fefbbb011e8e8672dcc6750895">begin</a>(<a class="code" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a> cfg) {</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      TRACEI();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      cfg.logInfo();</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
@@ -189,7 +189,7 @@ $(function() {
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">void</span> end()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_driver_e_s_p32.html#a64e9fa75beda50a9e8400ee0d4e61984">  131</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_analog_driver_e_s_p32.html#a64e9fa75beda50a9e8400ee0d4e61984">end</a>()<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        LOGI(__func__);</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        i2s_zero_dma_buffer(port_no);</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
@@ -215,7 +215,7 @@ $(function() {
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">//   SET_PERI_REG_BITS(I2S_SAMPLE_RATE_CONF_REG(0), I2S_TX_BCK_DIV_NUM_V, 1, I2S_TX_BCK_DIV_NUM_S); </span></div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">// }</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> uint8_t *src, <span class="keywordtype">size_t</span> size_bytes)<span class="keyword"> override </span>{ </div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_driver_e_s_p32.html#a360ffe5435df7f910720c0f3faa04dee">  158</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_analog_driver_e_s_p32.html#a360ffe5435df7f910720c0f3faa04dee">write</a>(<span class="keyword">const</span> uint8_t *src, <span class="keywordtype">size_t</span> size_bytes)<span class="keyword"> override </span>{ </div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      TRACED();</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <span class="keywordtype">size_t</span> result = 0;   </div>
@@ -345,14 +345,23 @@ $(function() {
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      <span class="keywordflow">return</span> resultTotal;</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;};</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="keyword">using</span> AnalogDriver = AnalogDriverESP32;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceaudio__tools.html#ab063b4b8a473fcf62db503efd2cfafec">AnalogDriver</a> = AnalogDriverESP32;</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;} <span class="comment">// namespace</span></div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_config_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_config.html">audio_tools::AnalogConfig</a></div><div class="ttdoc">ESP32 specific configuration for i2s input via adc. The default input pin is GPIO34....</div><div class="ttdef"><b>Definition:</b> AnalogAudioBase.h:19</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_base_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_base.html">audio_tools::AnalogDriverBase</a></div><div class="ttdef"><b>Definition:</b> AnalogAudioBase.h:151</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_e_s_p32_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_e_s_p32.html">audio_tools::AnalogDriverESP32</a></div><div class="ttdoc">Please use AnalogAudioStream: A very fast ADC and DAC using the ESP32 I2S interface.</div><div class="ttdef"><b>Definition:</b> AnalogAudioESP32.h:35</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_e_s_p32_html_a360ffe5435df7f910720c0f3faa04dee"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_e_s_p32.html#a360ffe5435df7f910720c0f3faa04dee">audio_tools::AnalogDriverESP32::write</a></div><div class="ttdeci">size_t write(const uint8_t *src, size_t size_bytes) override</div><div class="ttdoc">writes the data to the I2S interface</div><div class="ttdef"><b>Definition:</b> AnalogAudioESP32.h:158</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_e_s_p32_html_a5b57d1fefbbb011e8e8672dcc6750895"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_e_s_p32.html#a5b57d1fefbbb011e8e8672dcc6750895">audio_tools::AnalogDriverESP32::begin</a></div><div class="ttdeci">bool begin(AnalogConfig cfg)</div><div class="ttdoc">starts the DAC</div><div class="ttdef"><b>Definition:</b> AnalogAudioESP32.h:47</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_e_s_p32_html_a64e9fa75beda50a9e8400ee0d4e61984"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_e_s_p32.html#a64e9fa75beda50a9e8400ee0d4e61984">audio_tools::AnalogDriverESP32::end</a></div><div class="ttdeci">void end() override</div><div class="ttdoc">stops the I2S and unistalls the driver</div><div class="ttdef"><b>Definition:</b> AnalogAudioESP32.h:131</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_e_s_p32_html_ab54b68b2ca78285d62b7f66da16eaa3b"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_e_s_p32.html#ab54b68b2ca78285d62b7f66da16eaa3b">audio_tools::AnalogDriverESP32::AnalogDriverESP32</a></div><div class="ttdeci">AnalogDriverESP32()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> AnalogAudioESP32.h:38</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_e_s_p32_html_ad6adf8a8f39c09edf7a0a8b2564e1205"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_e_s_p32.html#ad6adf8a8f39c09edf7a0a8b2564e1205">audio_tools::AnalogDriverESP32::~AnalogDriverESP32</a></div><div class="ttdeci">virtual ~AnalogDriverESP32()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> AnalogAudioESP32.h:42</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_number_converter_html_aa83040da5c51151a9bd3286ecfcfe413"><div class="ttname"><a href="classaudio__tools_1_1_number_converter.html#aa83040da5c51151a9bd3286ecfcfe413">audio_tools::NumberConverter::maxValue</a></div><div class="ttdeci">static int64_t maxValue(int value_bits_per_sample)</div><div class="ttdoc">provides the biggest number for the indicated number of bits</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:234</div></div>
 <div class="ttc" id="agroup__basic_html_ga8c528baf37154d347366083f0f816846"><div class="ttname"><a href="group__basic.html#ga8c528baf37154d347366083f0f816846">stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Public generic methods.</div><div class="ttdef"><b>Definition:</b> AudioRuntime.h:12</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> BitVector.h:6</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:9</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_ab063b4b8a473fcf62db503efd2cfafec"><div class="ttname"><a href="namespaceaudio__tools.html#ab063b4b8a473fcf62db503efd2cfafec">audio_tools::AnalogDriver</a></div><div class="ttdeci">AnalogDriverArduino AnalogDriver</div><div class="ttdoc">AnalogAudioStream.</div><div class="ttdef"><b>Definition:</b> AnalogAudioArduino.h:147</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -128,6 +128,20 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_d_s_r_gain.html">ADSRGain</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_a_d_s_r.html" title="Generates ADSR values between 0.0 and 1.0.">ADSR</a> Envelope: Attack, Decay, Sustain and Release. Attack is the time taken for initial run-up oeffect_tf level from nil to peak, beginning when the key is pressed. Decay is the time taken for the subsequent run down from the attack level to the designated sustainLevel level. Sustain is the level during the main sequence of the sound's duration, until the key is released. Release is the time taken for the level to decay from the sustainLevel level to zero after the key is released.[4].  <a href="classaudio__tools_1_1_a_d_s_r_gain.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html">AnalogAudioStream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support reading of audio only using analog input with a timer.  <a href="classaudio__tools_1_1_analog_audio_stream.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32 specific configuration for i2s input via adc. The default input pin is GPIO34. We always use int16_t values. The default output pins are GPIO25 and GPIO26!  <a href="classaudio__tools_1_1_analog_config.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Please use the <a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>: Reading Analog Data using a timer and the Arduino analogRead() method and writing using analogWrite();.  <a href="classaudio__tools_1_1_analog_driver_arduino.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_base.html">AnalogDriverBase</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_e_s_p32.html">AnalogDriverESP32</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Please use <a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>: A very fast ADC and DAC using the ESP32 I2S interface.  <a href="classaudio__tools_1_1_analog_driver_e_s_p32.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_p_t_x_decoder.html">APTXDecoder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decoder for OpenAptx. Depends on <a href="https://github.com/pschatzmann/libopenaptx">https://github.com/pschatzmann/libopenaptx</a>.  <a href="classaudio__tools_1_1_a_p_t_x_decoder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1008,6 +1022,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html">PWMDriverESP32</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio output to PWM pins for the ESP32. The ESP32 supports up to 16 channels.  <a href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_renesis.html">PWMDriverRenesis</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio output to PWM pins for Renesis based Arduino implementations.  <a href="classaudio__tools_1_1_p_w_m_driver_renesis.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_s_t_m32.html">PWMDriverSTM32</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio output to PWM pins for STM32. We use one timer to generate the sample rate and one timer for the PWM signal.  <a href="classaudio__tools_1_1_p_w_m_driver_s_t_m32.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1269,6 +1286,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_e_s_p8266.html">TimerAlarmRepeatingDriverESP8266</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeating Timer functions for repeated execution: Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>.  <a href="classaudio__tools_1_1_timer_alarm_repeating_driver_e_s_p8266.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_renesis.html">TimerAlarmRepeatingDriverRenesis</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeating Timer functions for repeated execution: Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>. Please note that in Renesis we only have one high resolution timer (channel 1) available!  <a href="classaudio__tools_1_1_timer_alarm_repeating_driver_renesis.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_r_p2040.html">TimerAlarmRepeatingDriverRP2040</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeating Timer functions for repeated execution: Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>.  <a href="classaudio__tools_1_1_timer_alarm_repeating_driver_r_p2040.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1383,6 +1403,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:ab063b4b8a473fcf62db503efd2cfafec"><td class="memItemLeft" align="right" valign="top"><a id="ab063b4b8a473fcf62db503efd2cfafec"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#ab063b4b8a473fcf62db503efd2cfafec">AnalogDriver</a> = <a class="el" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a></td></tr>
+<tr class="memdesc:ab063b4b8a473fcf62db503efd2cfafec"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>. <br /></td></tr>
+<tr class="separator:ab063b4b8a473fcf62db503efd2cfafec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adceec2c2bb56cdaa41df59466d7f6c5e"><td class="memItemLeft" align="right" valign="top"><a id="adceec2c2bb56cdaa41df59466d7f6c5e"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>AudioBaseInfo</b> = <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a></td></tr>
 <tr class="separator:adceec2c2bb56cdaa41df59466d7f6c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1437,9 +1461,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>MemoryPrint</b> = <a
 <tr class="memitem:a0a328397d619ccf87fa26d5f0a592620"><td class="memItemLeft" align="right" valign="top"><a id="a0a328397d619ccf87fa26d5f0a592620"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>MetaDataPrint</b> = <a class="el" href="classaudio__tools_1_1_meta_data_output.html">MetaDataOutput</a></td></tr>
 <tr class="separator:a0a328397d619ccf87fa26d5f0a592620"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56ed0c7c48d16f8dd76c00a8b26eb02a"><td class="memItemLeft" align="right" valign="top"><a id="a56ed0c7c48d16f8dd76c00a8b26eb02a"></a>
+<tr class="memitem:a32ee6e88bd39113fbf040db5514a5313"><td class="memItemLeft" align="right" valign="top"><a id="a32ee6e88bd39113fbf040db5514a5313"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>my_repeating_timer_callback_t</b>) (void *obj)</td></tr>
-<tr class="separator:a56ed0c7c48d16f8dd76c00a8b26eb02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a32ee6e88bd39113fbf040db5514a5313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b32ea6dc1faa5b993f626691b2a42b8"><td class="memItemLeft" align="right" valign="top"><a id="a9b32ea6dc1faa5b993f626691b2a42b8"></a>
 typedef <a class="el" href="structaudio__tools_1_1_pin_info_e_s_p32.html">PinInfoESP32</a>&#160;</td><td class="memItemRight" valign="bottom"><b>PinInfo</b></td></tr>
 <tr class="separator:a9b32ea6dc1faa5b993f626691b2a42b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1711,6 +1735,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_stream_sink_soun
 <tr class="memitem:aa1ece901456a47e0104f93a9daba8c9f"><td class="memItemLeft" align="right" valign="top"><a id="aa1ece901456a47e0104f93a9daba8c9f"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_stream_source_sound_data</b> (Frame *data, int32_t len)</td></tr>
 <tr class="separator:aa1ece901456a47e0104f93a9daba8c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ff6c2e174837e1331dbd20573e4667"><td class="memItemLeft" align="right" valign="top"><a id="a79ff6c2e174837e1331dbd20573e4667"></a>
+static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert8DAC</b> (int64_t value, int value_bits_per_sample)</td></tr>
+<tr class="separator:a79ff6c2e174837e1331dbd20573e4667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49370a6bf784826df0683c0d5a1bf15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">defaultPWMAudioOutputCallback</a> ()</td></tr>
 <tr class="memdesc:af49370a6bf784826df0683c0d5a1bf15"><td class="mdescLeft">&#160;</td><td class="mdescRight">separate method that can be defined as friend so that we can access protected information  <a href="namespaceaudio__tools.html#af49370a6bf784826df0683c0d5a1bf15">More...</a><br /></td></tr>
 <tr class="separator:af49370a6bf784826df0683c0d5a1bf15"><td class="memSeparator" colspan="2">&#160;</td></tr>

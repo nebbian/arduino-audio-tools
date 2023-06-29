@@ -81,11 +81,11 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceaudio__tools.html">audio_tools</a> {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span>AnalogDriverArduino : <span class="keyword">public</span> AnalogDriverBase {</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_driver_arduino.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_analog_driver_base.html">AnalogDriverBase</a> {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  AnalogDriverArduino() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">bool</span> begin(AnalogConfig cfg) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">bool</span> begin(<a class="code" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a> cfg) {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    TRACED();</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (cfg.rx_tx_mode == RXTX_MODE) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      LOGE(<span class="stringliteral">&quot;RXTX not supported&quot;</span>);</div>
@@ -94,13 +94,13 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    config = cfg;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> (buffer == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <span class="comment">// allocate buffer_count</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      buffer = <span class="keyword">new</span> NBuffer&lt;int16_t&gt;(cfg.buffer_size, cfg.buffer_count);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      buffer = <span class="keyword">new</span> <a class="code" href="classaudio__tools_1_1_n_buffer.html">NBuffer&lt;int16_t&gt;</a>(cfg.buffer_size, cfg.buffer_count);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keywordflow">if</span> (buffer == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        LOGE(<span class="stringliteral">&quot;Not enough memory for buffer&quot;</span>);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="comment">// setup pins</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      setupPins();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html#a31d554847ae8fdeaba2460e0395cb75f">setupPins</a>();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      timer.end();</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
@@ -108,7 +108,7 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// (re)start timer</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    LOGI(<span class="stringliteral">&quot;sample_rate: %d&quot;</span>, cfg.sample_rate);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    timer.setCallbackParameter(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> timer.begin(callback, cfg.sample_rate, TimeUnit::HZ);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> timer.begin(<a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html#a1f6728aa34c4d7f0743160574e03d594">callback</a>, cfg.sample_rate, TimeUnit::HZ);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> end()<span class="keyword"> override </span>{</div>
@@ -117,28 +117,28 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">int</span> available() {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (config.rx_tx_mode == TX_MODE) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> buffer == <span class="keyword">nullptr</span> ? 0 : buffer-&gt;available() * 2;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> buffer == <span class="keyword">nullptr</span> ? 0 : buffer-&gt;<a class="code" href="classaudio__tools_1_1_base_buffer.html#aebd60457902debb30b07971a16f24ebd">available</a>() * 2;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  };</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">size_t</span> readBytes(uint8_t *values, <span class="keywordtype">size_t</span> len) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_driver_arduino.html#aa4c2c2deeac99e8dc52bacbed15d7377">   61</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html#aa4c2c2deeac99e8dc52bacbed15d7377">readBytes</a>(uint8_t *values, <span class="keywordtype">size_t</span> len) {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (config.rx_tx_mode == TX_MODE) <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (buffer == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> samples = len / 2;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> buffer-&gt;readArray((int16_t *)values, samples) * 2;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> buffer-&gt;<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>((int16_t *)values, samples) * 2;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">int</span> availableForWrite() {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (config.rx_tx_mode == RX_MODE) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> buffer == <span class="keyword">nullptr</span> ? 0 : buffer-&gt;availableForWrite() * 2;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> buffer == <span class="keyword">nullptr</span> ? 0 : buffer-&gt;<a class="code" href="classaudio__tools_1_1_base_buffer.html#a9953a7c3a981eb3a83adb4f9ecfb9ac5">availableForWrite</a>() * 2;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> uint8_t *data, <span class="keywordtype">size_t</span> len) {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> (config.rx_tx_mode == RX_MODE) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">while</span> (config.is_blocking_write &amp;&amp; buffer-&gt;availableForWrite()==0){</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">while</span> (config.is_blocking_write &amp;&amp; buffer-&gt;<a class="code" href="classaudio__tools_1_1_base_buffer.html#a9953a7c3a981eb3a83adb4f9ecfb9ac5">availableForWrite</a>()==0){</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <a class="code" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a>(10);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    } </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    int16_t *data_16 = (int16_t*)data;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> buffer-&gt;writeArray(data_16, len/2) * 2;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> buffer-&gt;<a class="code" href="classaudio__tools_1_1_base_buffer.html#a2b6c561aac2af64aafac1946b6e46393">writeArray</a>(data_16, len/2) * 2;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; <span class="keyword">protected</span>:</div>
@@ -147,9 +147,9 @@ $(function() {
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  BaseBuffer&lt;int16_t&gt; *buffer = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  int16_t avg_value = 0;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> callback(<span class="keywordtype">void</span> *arg) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_driver_arduino.html#a1f6728aa34c4d7f0743160574e03d594">   89</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html#a1f6728aa34c4d7f0743160574e03d594">callback</a>(<span class="keywordtype">void</span> *arg) {</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    int16_t value = 0;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    AnalogDriverArduino *<span class="keyword">self</span> = (AnalogDriverArduino *)arg;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a> *<span class="keyword">self</span> = (<a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a> *)arg;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// prevent NPE</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (self-&gt;buffer == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
@@ -175,7 +175,7 @@ $(function() {
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  }</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">void</span> setupPins() {</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_driver_arduino.html#a31d554847ae8fdeaba2460e0395cb75f">  118</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html#a31d554847ae8fdeaba2460e0395cb75f">setupPins</a>() {</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    TRACED();</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">if</span> (config.rx_tx_mode == RX_MODE) {</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        LOGI(<span class="stringliteral">&quot;rx start_pin: %d&quot;</span>, config.start_pin);</div>
@@ -204,12 +204,23 @@ $(function() {
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  }</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;};</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">using</span> AnalogDriver = AnalogDriverArduino;</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#ab063b4b8a473fcf62db503efd2cfafec">  147</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriver</a> = <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a>;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> BitVector.h:6</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_config_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_config.html">audio_tools::AnalogConfig</a></div><div class="ttdoc">ESP32 specific configuration for i2s input via adc. The default input pin is GPIO34....</div><div class="ttdef"><b>Definition:</b> AnalogAudioBase.h:19</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_arduino_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_arduino.html">audio_tools::AnalogDriverArduino</a></div><div class="ttdoc">Please use the AnalogAudioStream: Reading Analog Data using a timer and the Arduino analogRead() meth...</div><div class="ttdef"><b>Definition:</b> AnalogAudioArduino.h:21</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_arduino_html_a1f6728aa34c4d7f0743160574e03d594"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_arduino.html#a1f6728aa34c4d7f0743160574e03d594">audio_tools::AnalogDriverArduino::callback</a></div><div class="ttdeci">static void callback(void *arg)</div><div class="ttdoc">Sample data and write to buffer.</div><div class="ttdef"><b>Definition:</b> AnalogAudioArduino.h:89</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_arduino_html_a31d554847ae8fdeaba2460e0395cb75f"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_arduino.html#a31d554847ae8fdeaba2460e0395cb75f">audio_tools::AnalogDriverArduino::setupPins</a></div><div class="ttdeci">void setupPins()</div><div class="ttdoc">pinmode input for defined analog pins</div><div class="ttdef"><b>Definition:</b> AnalogAudioArduino.h:118</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_arduino_html_aa4c2c2deeac99e8dc52bacbed15d7377"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_arduino.html#aa4c2c2deeac99e8dc52bacbed15d7377">audio_tools::AnalogDriverArduino::readBytes</a></div><div class="ttdeci">size_t readBytes(uint8_t *values, size_t len)</div><div class="ttdoc">Provides the sampled audio data.</div><div class="ttdef"><b>Definition:</b> AnalogAudioArduino.h:61</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_driver_base_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_base.html">audio_tools::AnalogDriverBase</a></div><div class="ttdef"><b>Definition:</b> AnalogAudioBase.h:151</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_a163c69bc2b88421988d60f4efddb1f3f"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">audio_tools::BaseBuffer::readArray</a></div><div class="ttdeci">virtual int readArray(T data[], int len)</div><div class="ttdoc">reads multiple values</div><div class="ttdef"><b>Definition:</b> Buffers.h:41</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_a2b6c561aac2af64aafac1946b6e46393"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#a2b6c561aac2af64aafac1946b6e46393">audio_tools::BaseBuffer::writeArray</a></div><div class="ttdeci">virtual int writeArray(const T data[], int len)</div><div class="ttdoc">Fills the data from the buffer.</div><div class="ttdef"><b>Definition:</b> Buffers.h:51</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_a9953a7c3a981eb3a83adb4f9ecfb9ac5"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#a9953a7c3a981eb3a83adb4f9ecfb9ac5">audio_tools::BaseBuffer::availableForWrite</a></div><div class="ttdeci">virtual int availableForWrite()=0</div><div class="ttdoc">provides the number of entries that are available to write</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_aebd60457902debb30b07971a16f24ebd"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#aebd60457902debb30b07971a16f24ebd">audio_tools::BaseBuffer::available</a></div><div class="ttdeci">virtual int available()=0</div><div class="ttdoc">provides the number of entries that are available to read</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_n_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_n_buffer.html">audio_tools::NBuffer</a></div><div class="ttdoc">A lock free N buffer. If count=2 we create a DoubleBuffer, if count=3 a TripleBuffer etc.</div><div class="ttdef"><b>Definition:</b> Buffers.h:478</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:9</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html_a07f83b0475b1f3c98eccd9b1642dd1cb"><div class="ttname"><a href="namespaceaudio__tools.html#a07f83b0475b1f3c98eccd9b1642dd1cb">audio_tools::map</a></div><div class="ttdeci">long map(long x, long in_min, long in_max, long out_min, long out_max)</div><div class="ttdoc">Maps input to output values.</div><div class="ttdef"><b>Definition:</b> NoArduino.h:150</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html_a504241b61d3595ad9356f8fccef71c20"><div class="ttname"><a href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">audio_tools::delay</a></div><div class="ttdeci">void delay(uint64_t ms)</div><div class="ttdoc">Waits for the indicated milliseconds.</div><div class="ttdef"><b>Definition:</b> Millis.h:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
