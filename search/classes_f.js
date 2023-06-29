@@ -20,6 +20,6 @@ var searchData=
   ['pwmconfig_1652',['PWMConfig',['../structaudio__tools_1_1_p_w_m_config.html',1,'audio_tools']]],
   ['pwmdriveravr_1653',['PWMDriverAVR',['../classaudio__tools_1_1_p_w_m_driver_a_v_r.html',1,'audio_tools']]],
   ['pwmdriveresp32_1654',['PWMDriverESP32',['../classaudio__tools_1_1_p_w_m_driver_e_s_p32.html',1,'audio_tools']]],
-  ['pwmdriverrenesis_1655',['PWMDriverRenesis',['../classaudio__tools_1_1_p_w_m_driver_renesis.html',1,'audio_tools']]],
+  ['pwmdriverrenesas_1655',['PWMDriverRenesas',['../classaudio__tools_1_1_p_w_m_driver_renesas.html',1,'audio_tools']]],
   ['pwmdriverstm32_1656',['PWMDriverSTM32',['../classaudio__tools_1_1_p_w_m_driver_s_t_m32.html',1,'audio_tools']]]
 ];

@@ -19,7 +19,7 @@ var searchData=
   ['timeralarmrepeatingdriveravr_1760',['TimerAlarmRepeatingDriverAVR',['../classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.html',1,'audio_tools']]],
   ['timeralarmrepeatingdriverbase_1761',['TimerAlarmRepeatingDriverBase',['../classaudio__tools_1_1_timer_alarm_repeating_driver_base.html',1,'audio_tools']]],
   ['timeralarmrepeatingdriveresp8266_1762',['TimerAlarmRepeatingDriverESP8266',['../classaudio__tools_1_1_timer_alarm_repeating_driver_e_s_p8266.html',1,'audio_tools']]],
-  ['timeralarmrepeatingdriverrenesis_1763',['TimerAlarmRepeatingDriverRenesis',['../classaudio__tools_1_1_timer_alarm_repeating_driver_renesis.html',1,'audio_tools']]],
+  ['timeralarmrepeatingdriverrenesas_1763',['TimerAlarmRepeatingDriverRenesas',['../classaudio__tools_1_1_timer_alarm_repeating_driver_renesas.html',1,'audio_tools']]],
   ['timeralarmrepeatingdriverrp2040_1764',['TimerAlarmRepeatingDriverRP2040',['../classaudio__tools_1_1_timer_alarm_repeating_driver_r_p2040.html',1,'audio_tools']]],
   ['timeralarmrepeatingdriverstm32_1765',['TimerAlarmRepeatingDriverSTM32',['../classaudio__tools_1_1_timer_alarm_repeating_driver_s_t_m32.html',1,'audio_tools']]],
   ['timercallbackaudiostream_1766',['TimerCallbackAudioStream',['../classaudio__tools_1_1_timer_callback_audio_stream.html',1,'audio_tools']]],

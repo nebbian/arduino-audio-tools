@@ -74,7 +74,7 @@ var searchData=
   ['pwmconfig_783',['PWMConfig',['../structaudio__tools_1_1_p_w_m_config.html',1,'audio_tools']]],
   ['pwmdriveravr_784',['PWMDriverAVR',['../classaudio__tools_1_1_p_w_m_driver_a_v_r.html',1,'audio_tools']]],
   ['pwmdriveresp32_785',['PWMDriverESP32',['../classaudio__tools_1_1_p_w_m_driver_e_s_p32.html',1,'audio_tools']]],
-  ['pwmdriverrenesis_786',['PWMDriverRenesis',['../classaudio__tools_1_1_p_w_m_driver_renesis.html',1,'audio_tools']]],
+  ['pwmdriverrenesas_786',['PWMDriverRenesas',['../classaudio__tools_1_1_p_w_m_driver_renesas.html',1,'audio_tools']]],
   ['pwmdriverstm32_787',['PWMDriverSTM32',['../classaudio__tools_1_1_p_w_m_driver_s_t_m32.html',1,'audio_tools']]],
-  ['pwmwrite_788',['pwmWrite',['../classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#acd2fecd9cd9705ac26cf1a2c4f8398de',1,'audio_tools::PWMDriverESP32::pwmWrite()'],['../classaudio__tools_1_1_p_w_m_driver_renesis.html#acd2fecd9cd9705ac26cf1a2c4f8398de',1,'audio_tools::PWMDriverRenesis::pwmWrite()'],['../classaudio__tools_1_1_p_w_m_driver_s_t_m32.html#acd2fecd9cd9705ac26cf1a2c4f8398de',1,'audio_tools::PWMDriverSTM32::pwmWrite()']]]
+  ['pwmwrite_788',['pwmWrite',['../classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#acd2fecd9cd9705ac26cf1a2c4f8398de',1,'audio_tools::PWMDriverESP32::pwmWrite()'],['../classaudio__tools_1_1_p_w_m_driver_renesas.html#acd2fecd9cd9705ac26cf1a2c4f8398de',1,'audio_tools::PWMDriverRenesas::pwmWrite()'],['../classaudio__tools_1_1_p_w_m_driver_s_t_m32.html#acd2fecd9cd9705ac26cf1a2c4f8398de',1,'audio_tools::PWMDriverSTM32::pwmWrite()']]]
 ];
