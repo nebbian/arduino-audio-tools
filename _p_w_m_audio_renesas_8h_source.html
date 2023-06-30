@@ -159,7 +159,7 @@ $(function() {
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        </div>
 <div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_p_w_m_driver_renesas.html#acd2fecd9cd9705ac26cf1a2c4f8398de">  105</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_p_w_m_driver_renesas.html#acd2fecd9cd9705ac26cf1a2c4f8398de">pwmWrite</a>(<span class="keywordtype">int</span> channel, <span class="keywordtype">int</span> value){</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            pins[channel]-&gt;pulse_perc(value);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordtype">char</span> buffer[80];</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="comment">//char buffer[80];</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="comment">//sprintf(buffer,&quot;channel %d - value: %d&quot;, channel, value);</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="comment">//LOGD(&quot;%s&quot;, buffer);</span></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>

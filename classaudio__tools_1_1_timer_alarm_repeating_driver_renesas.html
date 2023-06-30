@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Repeating Timer functions for repeated execution: Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>. Please note that in Renesas we only have one high resolution timer (channel 1) available!  
+<p>Repeating Timer functions for repeated execution: Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>. By default we use a new GPT timer. You can also request 1 AGT timer by calling setTimer(1);.  
  <a href="classaudio__tools_1_1_timer_alarm_repeating_driver_renesas.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_audio_timer_renesas_8h_source.html">AudioTimerRenesas.h</a>&gt;</code></p>
@@ -98,13 +98,15 @@ Public Member Functions</h2></td></tr>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>callbackParameter</b> ()</td></tr>
 <tr class="separator:a102f2cbffafb79eaa4d846faabdd225b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af545ab12986d2fe462f1013c3bafb5f3"><td class="memItemLeft" align="right" valign="top"><a id="af545ab12986d2fe462f1013c3bafb5f3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_renesas.html#af545ab12986d2fe462f1013c3bafb5f3">end</a> ()</td></tr>
+<tr class="memdesc:af545ab12986d2fe462f1013c3bafb5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ends the timer and if necessary the task <br /></td></tr>
 <tr class="separator:af545ab12986d2fe462f1013c3bafb5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac13ace18be01a25c51391d37fb24b736"><td class="memItemLeft" align="right" valign="top"><a id="ac13ace18be01a25c51391d37fb24b736"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setCallbackParameter</b> (void *obj)</td></tr>
 <tr class="separator:ac13ace18be01a25c51391d37fb24b736"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e5fae72ee20fa7c8ab512e46117cf5c"><td class="memItemLeft" align="right" valign="top"><a id="a9e5fae72ee20fa7c8ab512e46117cf5c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimer</b> (int timer) override</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_renesas.html#a9e5fae72ee20fa7c8ab512e46117cf5c">setTimer</a> (int timer) override</td></tr>
+<tr class="memdesc:a9e5fae72ee20fa7c8ab512e46117cf5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the timer type: 0=GPT and 1=AGT. <br /></td></tr>
 <tr class="separator:a9e5fae72ee20fa7c8ab512e46117cf5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76cc8f0d84952989d6c65a8e027ab60e"><td class="memItemLeft" align="right" valign="top"><a id="a76cc8f0d84952989d6c65a8e027ab60e"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimerFunction</b> (TimerFunction function=DirectTimerCallback)</td></tr>
@@ -118,9 +120,12 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>staticCallback
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae9bde73a0823c0571c16caf00e30f1b1"><td class="memItemLeft" align="right" valign="top"><a id="ae9bde73a0823c0571c16caf00e30f1b1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>startTimer</b> (float rate)</td></tr>
-<tr class="separator:ae9bde73a0823c0571c16caf00e30f1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5b65034a37758e8319948f07c9c7d6"><td class="memItemLeft" align="right" valign="top"><a id="a8e5b65034a37758e8319948f07c9c7d6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>startAGTTimer</b> (float rate)</td></tr>
+<tr class="separator:a8e5b65034a37758e8319948f07c9c7d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59132949f60167c96d03be5eecda441f"><td class="memItemLeft" align="right" valign="top"><a id="a59132949f60167c96d03be5eecda441f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>startGPTTimer</b> (float rate)</td></tr>
+<tr class="separator:a59132949f60167c96d03be5eecda441f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -133,15 +138,12 @@ my_repeating_timer_callback_t&#160;</td><td class="memItemRight" valign="bottom"
 <tr class="memitem:a077376d12464f945e2414d5499c79b3f"><td class="memItemLeft" align="right" valign="top"><a id="a077376d12464f945e2414d5499c79b3f"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>object</b> =nullptr</td></tr>
 <tr class="separator:a077376d12464f945e2414d5499c79b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb9806e2a337abe29645a8cf851c8b47"><td class="memItemLeft" align="right" valign="top"><a id="abb9806e2a337abe29645a8cf851c8b47"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>timer_channel</b> = 1</td></tr>
-<tr class="separator:abb9806e2a337abe29645a8cf851c8b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d127017fb298b889f4ba24752d08b8e"><td class="memItemLeft" align="right" valign="top"><a id="a1d127017fb298b889f4ba24752d08b8e"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> =AGT_TIMER</td></tr>
-<tr class="separator:a1d127017fb298b889f4ba24752d08b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00dd7ebb41c98dcffd75323e6cedfcc"><td class="memItemLeft" align="right" valign="top"><a id="ae00dd7ebb41c98dcffd75323e6cedfcc"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>timer_type</b> = 1</td></tr>
+<tr class="separator:ae00dd7ebb41c98dcffd75323e6cedfcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Repeating Timer functions for repeated execution: Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>. Please note that in Renesas we only have one high resolution timer (channel 1) available! </p>
+<div class="textblock"><p>Repeating Timer functions for repeated execution: Plaease use the typedef <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>. By default we use a new GPT timer. You can also request 1 AGT timer by calling setTimer(1);. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
