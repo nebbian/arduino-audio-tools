@@ -118,6 +118,12 @@ Protected Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_arduino.html#a31d554847ae8fdeaba2460e0395cb75f">setupPins</a> ()</td></tr>
 <tr class="memdesc:a31d554847ae8fdeaba2460e0395cb75f"><td class="mdescLeft">&#160;</td><td class="mdescRight">pinmode input for defined analog pins <br /></td></tr>
 <tr class="separator:a31d554847ae8fdeaba2460e0395cb75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc86d3311c100c729468cb2dfa8cccd5"><td class="memItemLeft" align="right" valign="top"><a id="abc86d3311c100c729468cb2dfa8cccd5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateAvg</b> ()</td></tr>
+<tr class="separator:abc86d3311c100c729468cb2dfa8cccd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ba67459e45d398164ea9e560e592f0"><td class="memItemLeft" align="right" valign="top"><a id="a03ba67459e45d398164ea9e560e592f0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateMinMax</b> (int value)</td></tr>
+<tr class="separator:a03ba67459e45d398164ea9e560e592f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
@@ -128,15 +134,24 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a65a32c68b2c74a8c8dc1fd565b29a940"><td class="memItemLeft" align="right" valign="top"><a id="a65a32c68b2c74a8c8dc1fd565b29a940"></a>
-int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>avg_value</b> = 0</td></tr>
-<tr class="separator:a65a32c68b2c74a8c8dc1fd565b29a940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae88439bc09de5ad49c6a42807bf0f5bc"><td class="memItemLeft" align="right" valign="top"><a id="ae88439bc09de5ad49c6a42807bf0f5bc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>avg_value</b></td></tr>
+<tr class="separator:ae88439bc09de5ad49c6a42807bf0f5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94d98a92aae52ab417cf8303e6e79a2a"><td class="memItemLeft" align="right" valign="top"><a id="a94d98a92aae52ab417cf8303e6e79a2a"></a>
 <a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; int16_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> = nullptr</td></tr>
 <tr class="separator:a94d98a92aae52ab417cf8303e6e79a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad74a379f43730367af1ce2b6e6eeb9f3"><td class="memItemLeft" align="right" valign="top"><a id="ad74a379f43730367af1ce2b6e6eeb9f3"></a>
 <a class="el" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>config</b></td></tr>
 <tr class="separator:ad74a379f43730367af1ce2b6e6eeb9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad43c3812e6d13e0518d9f8b8f463ffcf"><td class="memItemLeft" align="right" valign="top"><a id="ad43c3812e6d13e0518d9f8b8f463ffcf"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>count</b></td></tr>
+<tr class="separator:ad43c3812e6d13e0518d9f8b8f463ffcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e1dde676c120fa6d10f3bb2c14059e"><td class="memItemLeft" align="right" valign="top"><a id="ae1e1dde676c120fa6d10f3bb2c14059e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>max</b></td></tr>
+<tr class="separator:ae1e1dde676c120fa6d10f3bb2c14059e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e202b201e6255d975cd6d3aff1f5a4d"><td class="memItemLeft" align="right" valign="top"><a id="a3e202b201e6255d975cd6d3aff1f5a4d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>min</b></td></tr>
+<tr class="separator:a3e202b201e6255d975cd6d3aff1f5a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a871a88d476269c96439f02adc0ded977"><td class="memItemLeft" align="right" valign="top"><a id="a871a88d476269c96439f02adc0ded977"></a>
 <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html">TimerAlarmRepeating</a>&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b></td></tr>
 <tr class="separator:a871a88d476269c96439f02adc0ded977"><td class="memSeparator" colspan="2">&#160;</td></tr>
