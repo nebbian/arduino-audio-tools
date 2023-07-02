@@ -178,11 +178,11 @@ $(function() {
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      LOGI(<span class="stringliteral">&quot;sample rate: %d&quot;</span>, sample_rate);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      LOGI(<span class="stringliteral">&quot;bits per sample: %d&quot;</span>, bits_per_sample);</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      LOGI(<span class="stringliteral">&quot;number of channels: %d&quot;</span>, channels);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      LOGI(<span class="stringliteral">&quot;signal_type: %s&quot;</span>, i2s_signal_types[signal_type]);      </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">if</span> (signal_type==Digital){</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        LOGI(<span class="stringliteral">&quot;i2s_format: %s&quot;</span>, i2s_formats[i2s_format]);      </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      } </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#ifdef ESP32</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#ifdef ESP32</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      LOGI(<span class="stringliteral">&quot;signal_type: %s&quot;</span>, i2s_signal_types[signal_type]);      </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <span class="keywordflow">if</span> (signal_type==Digital){</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        LOGI(<span class="stringliteral">&quot;i2s_format: %s&quot;</span>, i2s_formats[i2s_format]);      </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      } </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      LOGI(<span class="stringliteral">&quot;auto_clear: %s&quot;</span>,auto_clear? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keywordflow">if</span> (use_apll) {</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        LOGI(<span class="stringliteral">&quot;use_apll: %s&quot;</span>, use_apll ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>

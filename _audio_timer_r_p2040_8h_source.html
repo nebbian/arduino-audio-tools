@@ -108,37 +108,35 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    uint64_t time_us = <a class="code" href="classaudio__tools_1_1_audio_time.html#ac75be917519dc82b0025e9187218394d">AudioTime::toTimeUs</a>(time);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    result = alarm_pool_add_repeating_timer_us(ap, time_us, &amp;staticCallback, <span class="keyword">this</span>, &amp;timer);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    LOGE(<span class="stringliteral">&quot;Undefined Unit&quot;</span>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> staticCallback(repeating_timer *ptr)  {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="classaudio__tools_1_1_timer_alarm_repeating_driver_r_p2040.html">TimerAlarmRepeatingDriverRP2040</a> *<span class="keyword">self</span> = (<a class="code" href="classaudio__tools_1_1_timer_alarm_repeating_driver_r_p2040.html">TimerAlarmRepeatingDriverRP2040</a> *)ptr-&gt;user_data; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            self-&gt;instanceCallback(self-&gt;object);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// ends the timer and if necessary the task</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">bool</span> end(){</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> cancel_repeating_timer(&amp;timer);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        alarm_pool_t *ap = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        repeating_timer_t timer;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        my_repeating_timer_callback_t instanceCallback=<span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceaudio__tools.html#ad26cc1d7714553c807f4592a48647bb2">TimerAlarmRepeatingDriver</a> = TimerAlarmRepeatingDriverRP2040;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> staticCallback(repeating_timer *ptr)  {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="classaudio__tools_1_1_timer_alarm_repeating_driver_r_p2040.html">TimerAlarmRepeatingDriverRP2040</a> *<span class="keyword">self</span> = (<a class="code" href="classaudio__tools_1_1_timer_alarm_repeating_driver_r_p2040.html">TimerAlarmRepeatingDriverRP2040</a> *)ptr-&gt;user_data; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            self-&gt;instanceCallback(self-&gt;object);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">// ends the timer and if necessary the task</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">bool</span> end(){</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> cancel_repeating_timer(&amp;timer);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        alarm_pool_t *ap = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        repeating_timer_t timer;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        my_repeating_timer_callback_t instanceCallback=<span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceaudio__tools.html#ad26cc1d7714553c807f4592a48647bb2">TimerAlarmRepeatingDriver</a> = TimerAlarmRepeatingDriverRP2040;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_time_html_ac75be917519dc82b0025e9187218394d"><div class="ttname"><a href="classaudio__tools_1_1_audio_time.html#ac75be917519dc82b0025e9187218394d">audio_tools::AudioTime::toTimeUs</a></div><div class="ttdeci">static uint32_t toTimeUs(uint32_t samplingRate, uint8_t limit=10)</div><div class="ttdoc">converts sampling rate to delay in microseconds (μs)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:163</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_timer_alarm_repeating_driver_base_html"><div class="ttname"><a href="classaudio__tools_1_1_timer_alarm_repeating_driver_base.html">audio_tools::TimerAlarmRepeatingDriverBase</a></div><div class="ttdef"><b>Definition:</b> AudioTimerBase.h:19</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_timer_alarm_repeating_driver_r_p2040_html"><div class="ttname"><a href="classaudio__tools_1_1_timer_alarm_repeating_driver_r_p2040.html">audio_tools::TimerAlarmRepeatingDriverRP2040</a></div><div class="ttdoc">Repeating Timer functions for repeated execution: Plaease use the typedef TimerAlarmRepeating.</div><div class="ttdef"><b>Definition:</b> AudioTimerRP2040.h:21</div></div>
