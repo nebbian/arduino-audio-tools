@@ -349,9 +349,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_bitmap_info_header.html">BitmapInfoHeader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_bit_vector.html">BitVector</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Space optimized vector which stores the boolean values as bits.  <a href="classaudio__tools_1_1_bit_vector.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_blackman.html">Blackman</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_blackman.html" title="Blackman FFT Window function.">Blackman</a> FFT Window function.  <a href="classaudio__tools_1_1_blackman.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -421,6 +418,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_config_equilizer3_bands.html">ConfigEquilizer3Bands</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for 3 Band Equilizer: Set channels,bits_per_sample,sample_rate. Set and update gain_low, gain_medium and gain_high to value between 0 and 1.0.  <a href="structaudio__tools_1_1_config_equilizer3_bands.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html">ContainerMP4</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum flexible parser for MPEG4 data (which is based on the Quicktime format). Small atoms will be make available via a callback method. The big (audio) content is written to the <a class="el" href="classaudio__tools_1_1_print.html">Print</a> object which was specified in the constructor.  <a href="classaudio__tools_1_1_container_m_p4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_target.html">ContainerTarget</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_container_target.html" title="ContainerTarget: forwards requests to both the output and the encoder/decoder and sets up the output ...">ContainerTarget</a>: forwards requests to both the output and the encoder/decoder and sets up the output chain for Containers. We also manage the proper sequence of the output classes.  <a href="classaudio__tools_1_1_container_target.html#details">More...</a><br /></td></tr>
@@ -897,6 +897,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_encoder_l_a_m_e.html">MP3EncoderLAME</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encodes PCM data to the MP3 format and writes the result to a stream This is basically just a wrapper using <a href="https://github.com/pschatzmann/arduino-liblame">https://github.com/pschatzmann/arduino-liblame</a>.  <a href="classaudio__tools_1_1_m_p3_encoder_l_a_m_e.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a single MPEG4 atom.  <a href="structaudio__tools_1_1_m_p4_atom.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p4_parse_buffer.html">MP4ParseBuffer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_multi_converter.html">MultiConverter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines multiple converters.  <a href="classaudio__tools_1_1_multi_converter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1146,6 +1151,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple Buffer implementation which just uses a (dynamically sized) array.  <a href="classaudio__tools_1_1_single_buffer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_slice.html">Slice</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helps to split up a big memory array into smaller slices. There are no additinal heap allocations! Example: if we have an array with 9 entries (1,2,3,4,5,6,7,8,9): slices(5) gives 2. slice(5,0) returns size 5 with 1,2,3,4,5 and slice(5,1) returns size 4 with 6,7,8,9!  <a href="classaudio__tools_1_1_slice.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_smooth_transition.html">SmoothTransition</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the samples at the beginning or at the end to slowly ramp up the volume.  <a href="classaudio__tools_1_1_smooth_transition.html#details">More...</a><br /></td></tr>
