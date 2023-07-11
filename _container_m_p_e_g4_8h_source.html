@@ -176,236 +176,239 @@ $(function() {
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    stream_atom = <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ae81130b914ec03661b95be1c406a37dc">streamAtom</a>;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  }</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">void</span> begin()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    current_pos = 0;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    assert(p_print!=<span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    decoder.<a class="code" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#a33190106b1d5de89d6af68ad5924f7be">setOutput</a>(*p_print);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    decoder.<a class="code" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#ab0bdf5cca484fb2ba637c39384b27fb2">begin</a>();</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordtype">void</span> end()<span class="keyword"> override </span>{ decoder.<a class="code" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#adc34417a19a7b70626d19c41072d72a5">end</a>(); }</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#a7c3e14d99bd3dc0e3670d6956dafcaf2">  135</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#a7c3e14d99bd3dc0e3670d6956dafcaf2">begin</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    current_pos = 0;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    assert(p_print!=<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    decoder.<a class="code" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#a33190106b1d5de89d6af68ad5924f7be">setOutput</a>(*p_print);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    decoder.<a class="code" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#ab0bdf5cca484fb2ba637c39384b27fb2">begin</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    is_active = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  }</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keyword">operator</span> bool()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#af1ee46b5654a0a16612efb1a89d44d0f">  147</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#af1ee46b5654a0a16612efb1a89d44d0f">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *in, <span class="keywordtype">size_t</span> length)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    uint8_t *data = (uint8_t *)in;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="comment">// initialize the max_size with copy length</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">if</span> (max_size == 0) <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ad86e401cecc65a533c20cdf92d7bdc54">setMaxSize</a>(length);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">// direct output to stream</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">if</span> (stream_out_open &gt; 0) {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      <span class="keywordtype">int</span> len = min(stream_out_open, (<span class="keywordtype">int</span>)length);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keywordtype">int</span> result = len;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      <a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> atom{<span class="keyword">this</span>, stream_atom};</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      atom.total_size = len;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      atom.data_size = len;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      atom.data = data;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      atom.start_pos = current_pos;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      <span class="keywordflow">if</span> (data_callback != <span class="keyword">nullptr</span>) data_callback(atom, *<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      current_pos += len;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      stream_out_open -= result;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">// parse data and provide info via callback</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">size_t</span> result = buffer.write(data, length);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> atom = buffer.<a class="code" href="classaudio__tools_1_1_m_p4_parse_buffer.html#a733f288c0d16f9c1edd345f3016c6f3e">parse</a>();</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">while</span> (atom &amp;&amp; !atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#aca37a3469c636b99ddd5aee36184f7d5">is_stream</a>) {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="comment">// atom.start_pos = current_pos;</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="comment">// current_pos += atom.total_size;</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      atom = buffer.<a class="code" href="classaudio__tools_1_1_m_p4_parse_buffer.html#a733f288c0d16f9c1edd345f3016c6f3e">parse</a>();</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#a9a87d052f5f3575b7d5ef21dfad965aa">  182</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#a9a87d052f5f3575b7d5ef21dfad965aa">setDataCallback</a>(<span class="keywordtype">void</span> (*cb)(<a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> &amp;atom, <a class="code" href="classaudio__tools_1_1_container_m_p4.html">ContainerMP4</a> &amp;container)) {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    data_callback = cb;</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#a64e9fa75beda50a9e8400ee0d4e61984">  144</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#a64e9fa75beda50a9e8400ee0d4e61984">end</a>()<span class="keyword"> override </span>{ </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    decoder.<a class="code" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#adc34417a19a7b70626d19c41072d72a5">end</a>(); </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    is_active = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keyword">operator</span> bool()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> is_active; }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#af1ee46b5654a0a16612efb1a89d44d0f">  152</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#af1ee46b5654a0a16612efb1a89d44d0f">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *in, <span class="keywordtype">size_t</span> length)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    uint8_t *data = (uint8_t *)in;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">// initialize the max_size with copy length</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">if</span> (max_size == 0) <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ad86e401cecc65a533c20cdf92d7bdc54">setMaxSize</a>(length);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="comment">// direct output to stream</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">if</span> (stream_out_open &gt; 0) {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      <span class="keywordtype">int</span> len = min(stream_out_open, (<span class="keywordtype">int</span>)length);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <span class="keywordtype">int</span> result = len;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> atom{<span class="keyword">this</span>, stream_atom};</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      atom.total_size = len;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      atom.data_size = len;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      atom.data = data;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      atom.start_pos = current_pos;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="keywordflow">if</span> (data_callback != <span class="keyword">nullptr</span>) data_callback(atom, *<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      current_pos += len;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      stream_out_open -= result;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">// parse data and provide info via callback</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">size_t</span> result = buffer.write(data, length);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> atom = buffer.<a class="code" href="classaudio__tools_1_1_m_p4_parse_buffer.html#a733f288c0d16f9c1edd345f3016c6f3e">parse</a>();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">while</span> (atom &amp;&amp; !atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#aca37a3469c636b99ddd5aee36184f7d5">is_stream</a>) {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <span class="comment">// atom.start_pos = current_pos;</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      <span class="comment">// current_pos += atom.total_size;</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      atom = buffer.<a class="code" href="classaudio__tools_1_1_m_p4_parse_buffer.html#a733f288c0d16f9c1edd345f3016c6f3e">parse</a>();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  }</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#ac5da9b5e3d1406eefa81e4b602364f0a">  188</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ac5da9b5e3d1406eefa81e4b602364f0a">setIsHeaderCallback</a>(<span class="keywordtype">bool</span> (*cb)(<a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, <span class="keyword">const</span> uint8_t *data)) {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    is_header_callback = cb;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  }</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#ae81130b914ec03661b95be1c406a37dc">  193</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classaudio__tools_1_1_container_m_p4.html#ae81130b914ec03661b95be1c406a37dc">streamAtom</a>() { <span class="keywordflow">return</span> stream_atom; }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#abb16a11e1a07b94615c8ee63c9c9e7f9">  197</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#abb16a11e1a07b94615c8ee63c9c9e7f9">isHeader</a>(<a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, <span class="keyword">const</span> uint8_t *data) {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">return</span> is_header_callback(atom, data);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  }</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#ad86e401cecc65a533c20cdf92d7bdc54">  202</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ad86e401cecc65a533c20cdf92d7bdc54">setMaxSize</a>(<span class="keywordtype">int</span> size) { max_size = size; }</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#a9a87d052f5f3575b7d5ef21dfad965aa">  187</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#a9a87d052f5f3575b7d5ef21dfad965aa">setDataCallback</a>(<span class="keywordtype">void</span> (*cb)(<a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> &amp;atom, <a class="code" href="classaudio__tools_1_1_container_m_p4.html">ContainerMP4</a> &amp;container)) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    data_callback = cb;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#ac5da9b5e3d1406eefa81e4b602364f0a">  192</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ac5da9b5e3d1406eefa81e4b602364f0a">setIsHeaderCallback</a>(<span class="keywordtype">bool</span> (*cb)(<a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, <span class="keyword">const</span> uint8_t *data)) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    is_header_callback = cb;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#ae81130b914ec03661b95be1c406a37dc">  197</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classaudio__tools_1_1_container_m_p4.html#ae81130b914ec03661b95be1c406a37dc">streamAtom</a>() { <span class="keywordflow">return</span> stream_atom; }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#abb16a11e1a07b94615c8ee63c9c9e7f9">  200</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#abb16a11e1a07b94615c8ee63c9c9e7f9">isHeader</a>(<a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, <span class="keyword">const</span> uint8_t *data) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">return</span> is_header_callback(atom, data);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  }</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#ad27b458e3f25d8febbea264749b6347b">  205</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ad27b458e3f25d8febbea264749b6347b">maxSize</a>() { <span class="keywordflow">return</span> max_size; }</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#ad86e401cecc65a533c20cdf92d7bdc54">  205</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ad86e401cecc65a533c20cdf92d7bdc54">setMaxSize</a>(<span class="keywordtype">int</span> size) { max_size = size; }</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keywordtype">int</span> max_size;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <a class="code" href="classaudio__tools_1_1_m_p4_parse_buffer.html">MP4ParseBuffer</a> buffer{<span class="keyword">this</span>};</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keywordtype">int</span> stream_out_open = 0;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keywordtype">bool</span> is_sound = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  AACDecoderHelix decoder{<span class="keyword">false</span>};</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *stream_atom;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keywordtype">int</span> current_pos = 0;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *current_atom = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  void (*data_callback)(MP4Atom &amp;atom,</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                        ContainerMP4 &amp;container) = <a class="code" href="classaudio__tools_1_1_container_m_p4.html#a999cf9e39e4f5ed3da49f68ee50e61b5">default_data_callback</a>;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  bool (*is_header_callback)(MP4Atom *atom,</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                             <span class="keyword">const</span> uint8_t *data) = <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ac19a34fbe54daa32498f582f1f4b1778">default_is_header_callback</a>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#adad9b4faff502c052c0d14005f33390b">  222</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#adad9b4faff502c052c0d14005f33390b">decode</a>(<span class="keyword">const</span> uint8_t *data, <span class="keywordtype">size_t</span> len) {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> decoder.<a class="code" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#ade6ec60e71760083752b4949e68b59c9">write</a>(data, len);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  }</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="keywordtype">void</span> setStreamOutputSize(<span class="keywordtype">int</span> size) { stream_out_open = size; }</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#ac19a34fbe54daa32498f582f1f4b1778">  230</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ac19a34fbe54daa32498f582f1f4b1778">default_is_header_callback</a>(<a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, <span class="keyword">const</span> uint8_t *data) {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="comment">// it is a header atom when the next atom just follows it</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">bool</span> is_header_atom = isalpha(data[12]) &amp;&amp; isalpha(data[13]) &amp;&amp;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                          isalpha(data[14]) &amp;&amp; isalpha(data[15]) &amp;&amp;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                          atom-&gt;data_size &gt; 0;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">return</span> is_header_atom;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  }</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#a999cf9e39e4f5ed3da49f68ee50e61b5">  239</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#a999cf9e39e4f5ed3da49f68ee50e61b5">default_data_callback</a>(<a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> &amp;atom, <a class="code" href="classaudio__tools_1_1_container_m_p4.html">ContainerMP4</a> &amp;container) {</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">// char msg[80];</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">// snprintf(msg, 80, &quot;%s %d-%d %d&quot;, atom.atom, (int)atom.start_pos,</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="comment">// atom.start_pos+atom.total_size,  atom.total_size);</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    LOGI(<span class="stringliteral">&quot;%s: 0x%06x-0x%06x %d %s&quot;</span>, atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#ac95cff6292ef1670bdaa51dbaabb41b1">atom</a>, (<span class="keywordtype">int</span>)atom.start_pos,</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;         (<span class="keywordtype">int</span>)atom.start_pos + atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a18eddfc116c781b3f547074046fd19b7">total_size</a>, atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a18eddfc116c781b3f547074046fd19b7">total_size</a>, atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a4d6da82e71ad7d26f3f75da60f862bad">is_header_atom</a>?<span class="stringliteral">&quot; *&quot;</span>:<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">if</span> (atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a18eddfc116c781b3f547074046fd19b7">total_size</a> &gt; 1024) {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      TRACED();</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="comment">// parse ftyp to determine the subtype</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">if</span> (atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#aa1e15f0d913907e4a59fd73ca9022f2a">is</a>(<span class="stringliteral">&quot;ftyp&quot;</span>) &amp;&amp; atom.data != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      <span class="keywordtype">char</span> subtype[5];</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      memcpy(subtype, atom.data, 4);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      subtype[4] = 0;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      LOGI(<span class="stringliteral">&quot;    subtype: %s&quot;</span>, subtype);</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="comment">// parse hdlr to determine if audio</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">if</span> (atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#aa1e15f0d913907e4a59fd73ca9022f2a">is</a>(<span class="stringliteral">&quot;hdlr&quot;</span>) &amp;&amp; atom.data != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      <span class="keyword">const</span> uint8_t *sound = atom.data + 8;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      container.is_sound = memcmp(<span class="stringliteral">&quot;soun&quot;</span>, sound, 4) == 0;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      LOGI(<span class="stringliteral">&quot;    is_sound: %s&quot;</span>, container.is_sound ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;flase&quot;</span>);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">// parse stsd -&gt; audio info</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">if</span> (atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#aa1e15f0d913907e4a59fd73ca9022f2a">is</a>(<span class="stringliteral">&quot;stsd&quot;</span>)) {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      info.channels = atom.read16(0x20);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      info.bits_per_sample = atom.read16(0x22);  <span class="comment">// not used</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      info.sample_rate = atom.read32(0x26);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      info.logInfo();</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      container.<a class="code" href="classaudio__tools_1_1_audio_decoder.html#accee684614189e73bdc9f1b2f7abf919">setAudioInfo</a>(info);</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      <span class="comment">// init raw output</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      container.decoder.<a class="code" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#a5e283a9495aaf265739336829d45e215">setAudioInfo</a>(info);</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">if</span> (atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a6b31e592e0ffbedab554039d694bb594">isStreamAtom</a>()) { <span class="comment">// </span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      <span class="keywordflow">if</span> (container.is_sound){</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordtype">int</span> pos = 0;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordtype">int</span> open = atom.data_size;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">while</span> (open&gt;0){</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;          <span class="keywordtype">int</span> processed = container.<a class="code" href="classaudio__tools_1_1_container_m_p4.html#adad9b4faff502c052c0d14005f33390b">decode</a>(atom.data+pos, open);</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;          open -=processed;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;          pos +=processed;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        }</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        LOGD(<span class="stringliteral">&quot;%s: %d bytes ignored&quot;</span>, container.stream_atom, atom.data_size);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      }</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;};</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">//-------------------------------------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">// methods</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#ad27b458e3f25d8febbea264749b6347b">  208</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ad27b458e3f25d8febbea264749b6347b">maxSize</a>() { <span class="keywordflow">return</span> max_size; }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keywordtype">int</span> max_size;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <a class="code" href="classaudio__tools_1_1_m_p4_parse_buffer.html">MP4ParseBuffer</a> buffer{<span class="keyword">this</span>};</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keywordtype">int</span> stream_out_open = 0;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keywordtype">bool</span> is_sound = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keywordtype">bool</span> is_active = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  AACDecoderHelix decoder{<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *stream_atom;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="keywordtype">int</span> current_pos = 0;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *current_atom = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  void (*data_callback)(MP4Atom &amp;atom,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                        ContainerMP4 &amp;container) = <a class="code" href="classaudio__tools_1_1_container_m_p4.html#a999cf9e39e4f5ed3da49f68ee50e61b5">default_data_callback</a>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  bool (*is_header_callback)(MP4Atom *atom,</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                             <span class="keyword">const</span> uint8_t *data) = <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ac19a34fbe54daa32498f582f1f4b1778">default_is_header_callback</a>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#adad9b4faff502c052c0d14005f33390b">  226</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#adad9b4faff502c052c0d14005f33390b">decode</a>(<span class="keyword">const</span> uint8_t *data, <span class="keywordtype">size_t</span> len) {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">return</span> decoder.<a class="code" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#ade6ec60e71760083752b4949e68b59c9">write</a>(data, len);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#aa11d4ea3fdd22f0a638419ed1b15389c">  231</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#aa11d4ea3fdd22f0a638419ed1b15389c">setStreamOutputSize</a>(<span class="keywordtype">int</span> size) { stream_out_open = size; }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#ac19a34fbe54daa32498f582f1f4b1778">  234</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#ac19a34fbe54daa32498f582f1f4b1778">default_is_header_callback</a>(<a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, <span class="keyword">const</span> uint8_t *data) {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">// it is a header atom when the next atom just follows it</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">bool</span> is_header_atom = isalpha(data[12]) &amp;&amp; isalpha(data[13]) &amp;&amp;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                          isalpha(data[14]) &amp;&amp; isalpha(data[15]) &amp;&amp;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                          atom-&gt;data_size &gt; 0;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">return</span> is_header_atom;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_container_m_p4.html#a999cf9e39e4f5ed3da49f68ee50e61b5">  243</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_container_m_p4.html#a999cf9e39e4f5ed3da49f68ee50e61b5">default_data_callback</a>(<a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> &amp;atom, <a class="code" href="classaudio__tools_1_1_container_m_p4.html">ContainerMP4</a> &amp;container) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">// char msg[80];</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">// snprintf(msg, 80, &quot;%s %d-%d %d&quot;, atom.atom, (int)atom.start_pos,</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="comment">// atom.start_pos+atom.total_size,  atom.total_size);</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    LOGI(<span class="stringliteral">&quot;%s: 0x%06x-0x%06x %d %s&quot;</span>, atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#ac95cff6292ef1670bdaa51dbaabb41b1">atom</a>, (<span class="keywordtype">int</span>)atom.start_pos,</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;         (<span class="keywordtype">int</span>)atom.start_pos + atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a18eddfc116c781b3f547074046fd19b7">total_size</a>, atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a18eddfc116c781b3f547074046fd19b7">total_size</a>, atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a4d6da82e71ad7d26f3f75da60f862bad">is_header_atom</a>?<span class="stringliteral">&quot; *&quot;</span>:<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">if</span> (atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a18eddfc116c781b3f547074046fd19b7">total_size</a> &gt; 1024) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      TRACED();</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">// parse ftyp to determine the subtype</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">if</span> (atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#aa1e15f0d913907e4a59fd73ca9022f2a">is</a>(<span class="stringliteral">&quot;ftyp&quot;</span>) &amp;&amp; atom.data != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      <span class="keywordtype">char</span> subtype[5];</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      memcpy(subtype, atom.data, 4);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      subtype[4] = 0;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      LOGI(<span class="stringliteral">&quot;    subtype: %s&quot;</span>, subtype);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="comment">// parse hdlr to determine if audio</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">if</span> (atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#aa1e15f0d913907e4a59fd73ca9022f2a">is</a>(<span class="stringliteral">&quot;hdlr&quot;</span>) &amp;&amp; atom.data != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <span class="keyword">const</span> uint8_t *sound = atom.data + 8;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      container.is_sound = memcmp(<span class="stringliteral">&quot;soun&quot;</span>, sound, 4) == 0;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      LOGI(<span class="stringliteral">&quot;    is_sound: %s&quot;</span>, container.is_sound ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;flase&quot;</span>);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="comment">// parse stsd -&gt; audio info</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">if</span> (atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#aa1e15f0d913907e4a59fd73ca9022f2a">is</a>(<span class="stringliteral">&quot;stsd&quot;</span>)) {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      info.channels = atom.read16(0x20);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      info.bits_per_sample = atom.read16(0x22);  <span class="comment">// not used</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      info.sample_rate = atom.read32(0x26);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      info.logInfo();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;      container.<a class="code" href="classaudio__tools_1_1_audio_decoder.html#accee684614189e73bdc9f1b2f7abf919">setAudioInfo</a>(info);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      <span class="comment">// init raw output</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      container.decoder.<a class="code" href="classaudio__tools_1_1_a_a_c_decoder_helix.html#a5e283a9495aaf265739336829d45e215">setAudioInfo</a>(info);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">if</span> (atom.<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a6b31e592e0ffbedab554039d694bb594">isStreamAtom</a>()) { <span class="comment">// </span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      <span class="keywordflow">if</span> (container.is_sound){</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordtype">int</span> pos = 0;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordtype">int</span> open = atom.data_size;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">while</span> (open&gt;0){</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;          <span class="keywordtype">int</span> processed = container.<a class="code" href="classaudio__tools_1_1_container_m_p4.html#adad9b4faff502c052c0d14005f33390b">decode</a>(atom.data+pos, open);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;          open -=processed;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;          pos +=processed;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        LOGD(<span class="stringliteral">&quot;%s: %d bytes ignored&quot;</span>, container.stream_atom, atom.data_size);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;};</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="keywordtype">void</span> MP4Atom::setHeader(uint8_t *data, <span class="keywordtype">int</span> len) {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  uint32_t *p_size = (uint32_t *)data;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a18eddfc116c781b3f547074046fd19b7">total_size</a> = ntohl(*p_size);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  data_size = <a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a18eddfc116c781b3f547074046fd19b7">total_size</a> - 8;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  memcpy(<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#ac95cff6292ef1670bdaa51dbaabb41b1">atom</a>, data + 4, 4);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a4d6da82e71ad7d26f3f75da60f862bad">is_header_atom</a> = container-&gt;<a class="code" href="classaudio__tools_1_1_container_m_p4.html#abb16a11e1a07b94615c8ee63c9c9e7f9">isHeader</a>(<span class="keyword">this</span>, data);</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;}</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_m_p4_atom.html#a6b31e592e0ffbedab554039d694bb594">  306</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a6b31e592e0ffbedab554039d694bb594">MP4Atom::isStreamAtom</a>() {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *name = container-&gt;<a class="code" href="classaudio__tools_1_1_container_m_p4.html#ae81130b914ec03661b95be1c406a37dc">streamAtom</a>();</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="structaudio__tools_1_1_m_p4_atom.html#aa1e15f0d913907e4a59fd73ca9022f2a">is</a>(name);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_m_p4_parse_buffer.html#a733f288c0d16f9c1edd345f3016c6f3e">  311</a></span>&#160;<a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> <a class="code" href="classaudio__tools_1_1_m_p4_parse_buffer.html#a733f288c0d16f9c1edd345f3016c6f3e">MP4ParseBuffer::parse</a>() {</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  TRACED();</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="comment">// determine atom length from header of buffer</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> result{container};</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  result.start_pos = container-&gt;current_pos;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="comment">// read potentially 2 headers</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  uint8_t header[16];</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  buffer.peekArray(header, 16);</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  result.setHeader(header, 16);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  result.is_stream = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  container-&gt;current_atom = result.atom;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="comment">// abort on invalid atom</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keywordflow">if</span> (!result) {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    LOGE(<span class="stringliteral">&quot;Invalid atom&quot;</span>);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  }</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="comment">// make sure that we fill the buffer to it&#39;s max limit</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  <span class="keywordflow">if</span> (result.data_size &gt; buffer.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">available</a>() &amp;&amp;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      buffer.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">available</a>() != container-&gt;<a class="code" href="classaudio__tools_1_1_container_m_p4.html#ad27b458e3f25d8febbea264749b6347b">maxSize</a>()) {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    result.clear();</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  }</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  <span class="comment">// temp buffer for data</span></div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  uint8_t data[min(result.data_size, buffer.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">available</a>())];</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <span class="keywordflow">if</span> (result.is_header_atom) {</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="comment">// consume data for header atom</span></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    buffer.<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>(header, 8);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    container-&gt;current_pos += 8;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">if</span> (result.total_size &gt; buffer.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">available</a>()) {</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      <span class="comment">// not enough data use streaming</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      LOGI(<span class="stringliteral">&quot;total %s: 0x%06x-0x%06x - %d&quot;</span>, container-&gt;current_atom,</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;           container-&gt;current_pos, container-&gt;current_pos + result.total_size,</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;           result.data_size);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      <span class="keywordtype">int</span> avail = buffer.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">available</a>() - 8;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      container-&gt;setStreamOutputSize(result.data_size - avail);</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;      buffer.<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>(header, 8);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      buffer.<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>(data, avail);</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      result.setData(data, avail);</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      result.total_size = avail;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      result.data_size = avail - 8;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;      result.is_stream = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;      assert(buffer.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">available</a>()==0);</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;      container-&gt;current_pos += result.total_size;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;      buffer.<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>(header, 8);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      buffer.<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>(data, result.data_size);</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      result.setData(data, result.data_size);</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;      container-&gt;current_pos += result.total_size;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    }</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  }</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  <span class="comment">// callback for data</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  <span class="keywordflow">if</span> (result &amp;&amp; container-&gt;data_callback != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    container-&gt;data_callback(result, *container);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">//-------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">// methods</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment">//--------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keywordtype">void</span> MP4Atom::setHeader(uint8_t *data, <span class="keywordtype">int</span> len) {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  uint32_t *p_size = (uint32_t *)data;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a18eddfc116c781b3f547074046fd19b7">total_size</a> = ntohl(*p_size);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  data_size = <a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a18eddfc116c781b3f547074046fd19b7">total_size</a> - 8;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  memcpy(<a class="code" href="structaudio__tools_1_1_m_p4_atom.html#ac95cff6292ef1670bdaa51dbaabb41b1">atom</a>, data + 4, 4);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a4d6da82e71ad7d26f3f75da60f862bad">is_header_atom</a> = container-&gt;<a class="code" href="classaudio__tools_1_1_container_m_p4.html#abb16a11e1a07b94615c8ee63c9c9e7f9">isHeader</a>(<span class="keyword">this</span>, data);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_m_p4_atom.html#a6b31e592e0ffbedab554039d694bb594">  310</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="structaudio__tools_1_1_m_p4_atom.html#a6b31e592e0ffbedab554039d694bb594">MP4Atom::isStreamAtom</a>() {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *name = container-&gt;<a class="code" href="classaudio__tools_1_1_container_m_p4.html#ae81130b914ec03661b95be1c406a37dc">streamAtom</a>();</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="structaudio__tools_1_1_m_p4_atom.html#aa1e15f0d913907e4a59fd73ca9022f2a">is</a>(name);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_m_p4_parse_buffer.html#a733f288c0d16f9c1edd345f3016c6f3e">  315</a></span>&#160;<a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> <a class="code" href="classaudio__tools_1_1_m_p4_parse_buffer.html#a733f288c0d16f9c1edd345f3016c6f3e">MP4ParseBuffer::parse</a>() {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  TRACED();</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="comment">// determine atom length from header of buffer</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <a class="code" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> result{container};</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  result.start_pos = container-&gt;current_pos;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="comment">// read potentially 2 headers</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  uint8_t header[16];</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  buffer.peekArray(header, 16);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  result.setHeader(header, 16);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  result.is_stream = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  container-&gt;current_atom = result.atom;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  <span class="comment">// abort on invalid atom</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="keywordflow">if</span> (!result) {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    LOGE(<span class="stringliteral">&quot;Invalid atom&quot;</span>);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <span class="comment">// make sure that we fill the buffer to it&#39;s max limit</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="keywordflow">if</span> (result.data_size &gt; buffer.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">available</a>() &amp;&amp;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      buffer.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">available</a>() != container-&gt;<a class="code" href="classaudio__tools_1_1_container_m_p4.html#ad27b458e3f25d8febbea264749b6347b">maxSize</a>()) {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    result.clear();</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  <span class="comment">// temp buffer for data</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  uint8_t data[min(result.data_size, buffer.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">available</a>())];</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  <span class="keywordflow">if</span> (result.is_header_atom) {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="comment">// consume data for header atom</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    buffer.<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>(header, 8);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    container-&gt;current_pos += 8;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">if</span> (result.total_size &gt; buffer.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">available</a>()) {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      <span class="comment">// not enough data use streaming</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      LOGI(<span class="stringliteral">&quot;total %s: 0x%06x-0x%06x - %d&quot;</span>, container-&gt;current_atom,</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;           container-&gt;current_pos, container-&gt;current_pos + result.total_size,</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;           result.data_size);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="keywordtype">int</span> avail = buffer.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">available</a>() - 8;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      container-&gt;<a class="code" href="classaudio__tools_1_1_container_m_p4.html#aa11d4ea3fdd22f0a638419ed1b15389c">setStreamOutputSize</a>(result.data_size - avail);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      buffer.<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>(header, 8);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;      buffer.<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>(data, avail);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;      result.setData(data, avail);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;      result.total_size = avail;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      result.data_size = avail - 8;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;      result.is_stream = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      assert(buffer.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">available</a>()==0);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      container-&gt;current_pos += result.total_size;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;      buffer.<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>(header, 8);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      buffer.<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>(data, result.data_size);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;      result.setData(data, result.data_size);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      container-&gt;current_pos += result.total_size;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  }</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;}</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  <span class="comment">// callback for data</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="keywordflow">if</span> (result &amp;&amp; container-&gt;data_callback != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    container-&gt;data_callback(result, *container);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;}</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_a_a_c_decoder_helix_html_a33190106b1d5de89d6af68ad5924f7be"><div class="ttname"><a href="classaudio__tools_1_1_a_a_c_decoder_helix.html#a33190106b1d5de89d6af68ad5924f7be">audio_tools::AACDecoderHelix::setOutput</a></div><div class="ttdeci">virtual void setOutput(Print &amp;out_stream)</div><div class="ttdoc">Defines the output Stream.</div><div class="ttdef"><b>Definition:</b> CodecAACHelix.h:71</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_a_a_c_decoder_helix_html_a5e283a9495aaf265739336829d45e215"><div class="ttname"><a href="classaudio__tools_1_1_a_a_c_decoder_helix.html#a5e283a9495aaf265739336829d45e215">audio_tools::AACDecoderHelix::setAudioInfo</a></div><div class="ttdeci">void setAudioInfo(AudioInfo info)</div><div class="ttdoc">for most decoders this is not needed</div><div class="ttdef"><b>Definition:</b> CodecAACHelix.h:104</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_a_a_c_decoder_helix_html_ab0bdf5cca484fb2ba637c39384b27fb2"><div class="ttname"><a href="classaudio__tools_1_1_a_a_c_decoder_helix.html#ab0bdf5cca484fb2ba637c39384b27fb2">audio_tools::AACDecoderHelix::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Starts the processing.</div><div class="ttdef"><b>Definition:</b> CodecAACHelix.h:77</div></div>
@@ -416,18 +419,21 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_a163c69bc2b88421988d60f4efddb1f3f"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">audio_tools::BaseBuffer::readArray</a></div><div class="ttdeci">virtual int readArray(T data[], int len)</div><div class="ttdoc">reads multiple values</div><div class="ttdef"><b>Definition:</b> Buffers.h:41</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_a2b6c561aac2af64aafac1946b6e46393"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#a2b6c561aac2af64aafac1946b6e46393">audio_tools::BaseBuffer::writeArray</a></div><div class="ttdeci">virtual int writeArray(const T data[], int len)</div><div class="ttdoc">Fills the data from the buffer.</div><div class="ttdef"><b>Definition:</b> Buffers.h:51</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html">audio_tools::ContainerMP4</a></div><div class="ttdoc">Minimum flexible parser for MPEG4 data (which is based on the Quicktime format). Small atoms will be ...</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:126</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_a999cf9e39e4f5ed3da49f68ee50e61b5"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#a999cf9e39e4f5ed3da49f68ee50e61b5">audio_tools::ContainerMP4::default_data_callback</a></div><div class="ttdeci">static void default_data_callback(MP4Atom &amp;atom, ContainerMP4 &amp;container)</div><div class="ttdoc">Default logic to process an atom.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:239</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_a9a87d052f5f3575b7d5ef21dfad965aa"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#a9a87d052f5f3575b7d5ef21dfad965aa">audio_tools::ContainerMP4::setDataCallback</a></div><div class="ttdeci">void setDataCallback(void(*cb)(MP4Atom &amp;atom, ContainerMP4 &amp;container))</div><div class="ttdoc">Defines the callback that is executed on each atom.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:182</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_abb16a11e1a07b94615c8ee63c9c9e7f9"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#abb16a11e1a07b94615c8ee63c9c9e7f9">audio_tools::ContainerMP4::isHeader</a></div><div class="ttdeci">bool isHeader(MP4Atom *atom, const uint8_t *data)</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:197</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_ac19a34fbe54daa32498f582f1f4b1778"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#ac19a34fbe54daa32498f582f1f4b1778">audio_tools::ContainerMP4::default_is_header_callback</a></div><div class="ttdeci">static bool default_is_header_callback(MP4Atom *atom, const uint8_t *data)</div><div class="ttdoc">Default logic to determine if a atom is a header.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:230</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_ac5da9b5e3d1406eefa81e4b602364f0a"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#ac5da9b5e3d1406eefa81e4b602364f0a">audio_tools::ContainerMP4::setIsHeaderCallback</a></div><div class="ttdeci">void setIsHeaderCallback(bool(*cb)(MP4Atom *atom, const uint8_t *data))</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:188</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_ad27b458e3f25d8febbea264749b6347b"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#ad27b458e3f25d8febbea264749b6347b">audio_tools::ContainerMP4::maxSize</a></div><div class="ttdeci">int maxSize()</div><div class="ttdoc">Provides the maximum size.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:205</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_ad86e401cecc65a533c20cdf92d7bdc54"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#ad86e401cecc65a533c20cdf92d7bdc54">audio_tools::ContainerMP4::setMaxSize</a></div><div class="ttdeci">void setMaxSize(int size)</div><div class="ttdoc">Defines the maximum size that we can submit to the decoder.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:202</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_adad9b4faff502c052c0d14005f33390b"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#adad9b4faff502c052c0d14005f33390b">audio_tools::ContainerMP4::decode</a></div><div class="ttdeci">size_t decode(const uint8_t *data, size_t len)</div><div class="ttdoc">output of mdat to decoder;</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:222</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_ae81130b914ec03661b95be1c406a37dc"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#ae81130b914ec03661b95be1c406a37dc">audio_tools::ContainerMP4::streamAtom</a></div><div class="ttdeci">const char * streamAtom()</div><div class="ttdoc">Provides the content atom name which will be written incrementally.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:193</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_af1ee46b5654a0a16612efb1a89d44d0f"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#af1ee46b5654a0a16612efb1a89d44d0f">audio_tools::ContainerMP4::write</a></div><div class="ttdeci">size_t write(const void *in, size_t length) override</div><div class="ttdoc">writes the next atom</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:147</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_a64e9fa75beda50a9e8400ee0d4e61984"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#a64e9fa75beda50a9e8400ee0d4e61984">audio_tools::ContainerMP4::end</a></div><div class="ttdeci">void end() override</div><div class="ttdoc">ends the processing</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:144</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_a7c3e14d99bd3dc0e3670d6956dafcaf2"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#a7c3e14d99bd3dc0e3670d6956dafcaf2">audio_tools::ContainerMP4::begin</a></div><div class="ttdeci">void begin() override</div><div class="ttdoc">starts the processing</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:135</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_a999cf9e39e4f5ed3da49f68ee50e61b5"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#a999cf9e39e4f5ed3da49f68ee50e61b5">audio_tools::ContainerMP4::default_data_callback</a></div><div class="ttdeci">static void default_data_callback(MP4Atom &amp;atom, ContainerMP4 &amp;container)</div><div class="ttdoc">Default logic to process an atom.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:243</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_a9a87d052f5f3575b7d5ef21dfad965aa"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#a9a87d052f5f3575b7d5ef21dfad965aa">audio_tools::ContainerMP4::setDataCallback</a></div><div class="ttdeci">void setDataCallback(void(*cb)(MP4Atom &amp;atom, ContainerMP4 &amp;container))</div><div class="ttdoc">Defines the callback that is executed on each atom.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:187</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_aa11d4ea3fdd22f0a638419ed1b15389c"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#aa11d4ea3fdd22f0a638419ed1b15389c">audio_tools::ContainerMP4::setStreamOutputSize</a></div><div class="ttdeci">void setStreamOutputSize(int size)</div><div class="ttdoc">Defines the size of open data that will be written directly w/o parsing.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:231</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_abb16a11e1a07b94615c8ee63c9c9e7f9"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#abb16a11e1a07b94615c8ee63c9c9e7f9">audio_tools::ContainerMP4::isHeader</a></div><div class="ttdeci">bool isHeader(MP4Atom *atom, const uint8_t *data)</div><div class="ttdoc">Checks if the indicated atom is a header atom: you can define your custom method with setIsHeaderCall...</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:200</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_ac19a34fbe54daa32498f582f1f4b1778"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#ac19a34fbe54daa32498f582f1f4b1778">audio_tools::ContainerMP4::default_is_header_callback</a></div><div class="ttdeci">static bool default_is_header_callback(MP4Atom *atom, const uint8_t *data)</div><div class="ttdoc">Default logic to determine if a atom is a header.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:234</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_ac5da9b5e3d1406eefa81e4b602364f0a"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#ac5da9b5e3d1406eefa81e4b602364f0a">audio_tools::ContainerMP4::setIsHeaderCallback</a></div><div class="ttdeci">void setIsHeaderCallback(bool(*cb)(MP4Atom *atom, const uint8_t *data))</div><div class="ttdoc">Defines the callback which is used to determine if an atom is a header atom.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:192</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_ad27b458e3f25d8febbea264749b6347b"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#ad27b458e3f25d8febbea264749b6347b">audio_tools::ContainerMP4::maxSize</a></div><div class="ttdeci">int maxSize()</div><div class="ttdoc">Provides the maximum size.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:208</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_ad86e401cecc65a533c20cdf92d7bdc54"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#ad86e401cecc65a533c20cdf92d7bdc54">audio_tools::ContainerMP4::setMaxSize</a></div><div class="ttdeci">void setMaxSize(int size)</div><div class="ttdoc">Defines the maximum size that we can submit to the decoder.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:205</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_adad9b4faff502c052c0d14005f33390b"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#adad9b4faff502c052c0d14005f33390b">audio_tools::ContainerMP4::decode</a></div><div class="ttdeci">size_t decode(const uint8_t *data, size_t len)</div><div class="ttdoc">output of audio mdat to helix decoder;</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:226</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_ae81130b914ec03661b95be1c406a37dc"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#ae81130b914ec03661b95be1c406a37dc">audio_tools::ContainerMP4::streamAtom</a></div><div class="ttdeci">const char * streamAtom()</div><div class="ttdoc">Provides the content atom name which will be written incrementally.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:197</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_container_m_p4_html_af1ee46b5654a0a16612efb1a89d44d0f"><div class="ttname"><a href="classaudio__tools_1_1_container_m_p4.html#af1ee46b5654a0a16612efb1a89d44d0f">audio_tools::ContainerMP4::write</a></div><div class="ttdeci">size_t write(const void *in, size_t length) override</div><div class="ttdoc">writes the data to be parsed into atoms</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:152</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_m_p4_parse_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_m_p4_parse_buffer.html">audio_tools::MP4ParseBuffer</a></div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:91</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_m_p4_parse_buffer_html_a733f288c0d16f9c1edd345f3016c6f3e"><div class="ttname"><a href="classaudio__tools_1_1_m_p4_parse_buffer.html#a733f288c0d16f9c1edd345f3016c6f3e">audio_tools::MP4ParseBuffer::parse</a></div><div class="ttdeci">MP4Atom parse()</div><div class="ttdoc">returns the parsed atoms</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:311</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_m_p4_parse_buffer_html_a733f288c0d16f9c1edd345f3016c6f3e"><div class="ttname"><a href="classaudio__tools_1_1_m_p4_parse_buffer.html#a733f288c0d16f9c1edd345f3016c6f3e">audio_tools::MP4ParseBuffer::parse</a></div><div class="ttdeci">MP4Atom parse()</div><div class="ttdoc">returns the parsed atoms</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:315</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_ring_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_ring_buffer.html">audio_tools::RingBuffer&lt; uint8_t &gt;</a></div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_ring_buffer_html_a512cfced3ab951dde7a9a78f1274fe63"><div class="ttname"><a href="classaudio__tools_1_1_ring_buffer.html#a512cfced3ab951dde7a9a78f1274fe63">audio_tools::RingBuffer::available</a></div><div class="ttdeci">virtual int available()</div><div class="ttdoc">provides the number of entries that are available to read</div><div class="ttdef"><b>Definition:</b> Buffers.h:300</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_ring_buffer_html_a7edc9fae01093617967fd7c9df18a2a2"><div class="ttname"><a href="classaudio__tools_1_1_ring_buffer.html#a7edc9fae01093617967fd7c9df18a2a2">audio_tools::RingBuffer::size</a></div><div class="ttdeci">virtual int size()</div><div class="ttdoc">Returns the maximum capacity of the buffer.</div><div class="ttdef"><b>Definition:</b> Buffers.h:317</div></div>
@@ -438,7 +444,7 @@ $(function() {
 <div class="ttc" id="astructaudio__tools_1_1_m_p4_atom_html_a1a40e00b82e41b6f87ccd5e7c597b811"><div class="ttname"><a href="structaudio__tools_1_1_m_p4_atom.html#a1a40e00b82e41b6f87ccd5e7c597b811">audio_tools::MP4Atom::isHeader</a></div><div class="ttdeci">bool isHeader()</div><div class="ttdoc">Returns true if the atom is a header atom.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:72</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_m_p4_atom_html_a49eba78c3c22d25e2e64517cd5f50a7d"><div class="ttname"><a href="structaudio__tools_1_1_m_p4_atom.html#a49eba78c3c22d25e2e64517cd5f50a7d">audio_tools::MP4Atom::setData</a></div><div class="ttdeci">void setData(const uint8_t *data, int len_data)</div><div class="ttdoc">Updates the data and size field.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:57</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_m_p4_atom_html_a4d6da82e71ad7d26f3f75da60f862bad"><div class="ttname"><a href="structaudio__tools_1_1_m_p4_atom.html#a4d6da82e71ad7d26f3f75da60f862bad">audio_tools::MP4Atom::is_header_atom</a></div><div class="ttdeci">bool is_header_atom</div><div class="ttdoc">true if atom is header w/o data content</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:30</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_m_p4_atom_html_a6b31e592e0ffbedab554039d694bb594"><div class="ttname"><a href="structaudio__tools_1_1_m_p4_atom.html#a6b31e592e0ffbedab554039d694bb594">audio_tools::MP4Atom::isStreamAtom</a></div><div class="ttdeci">bool isStreamAtom()</div><div class="ttdoc">Atom which is sent to print output.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:306</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_m_p4_atom_html_a6b31e592e0ffbedab554039d694bb594"><div class="ttname"><a href="structaudio__tools_1_1_m_p4_atom.html#a6b31e592e0ffbedab554039d694bb594">audio_tools::MP4Atom::isStreamAtom</a></div><div class="ttdeci">bool isStreamAtom()</div><div class="ttdoc">Atom which is sent to print output.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:310</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_m_p4_atom_html_aa1e15f0d913907e4a59fd73ca9022f2a"><div class="ttname"><a href="structaudio__tools_1_1_m_p4_atom.html#aa1e15f0d913907e4a59fd73ca9022f2a">audio_tools::MP4Atom::is</a></div><div class="ttdeci">bool is(const char *atom)</div><div class="ttdoc">Compares the atom name.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:43</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_m_p4_atom_html_ac8bb3912a3ce86b15842e79d0b421204"><div class="ttname"><a href="structaudio__tools_1_1_m_p4_atom.html#ac8bb3912a3ce86b15842e79d0b421204">audio_tools::MP4Atom::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clears the atom.</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:64</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_m_p4_atom_html_ac95cff6292ef1670bdaa51dbaabb41b1"><div class="ttname"><a href="structaudio__tools_1_1_m_p4_atom.html#ac95cff6292ef1670bdaa51dbaabb41b1">audio_tools::MP4Atom::atom</a></div><div class="ttdeci">char atom[5]</div><div class="ttdoc">4 digit atom name</div><div class="ttdef"><b>Definition:</b> ContainerMPEG4.h:28</div></div>

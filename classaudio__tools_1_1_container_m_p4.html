@@ -102,15 +102,19 @@ Public Member Functions</h2></td></tr>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
 <tr class="separator:ada56eff2516fb0a4f5091ce06805411a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="memItemLeft" align="right" valign="top"><a id="a7c3e14d99bd3dc0e3670d6956dafcaf2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () override</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#a7c3e14d99bd3dc0e3670d6956dafcaf2">begin</a> () override</td></tr>
+<tr class="memdesc:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the processing <br /></td></tr>
 <tr class="separator:a7c3e14d99bd3dc0e3670d6956dafcaf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c23593971c66b1fee16958a3ad1b0a6"><td class="memItemLeft" align="right" valign="top"><a id="a6c23593971c66b1fee16958a3ad1b0a6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="separator:a6c23593971c66b1fee16958a3ad1b0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memItemLeft" align="right" valign="top"><a id="a64e9fa75beda50a9e8400ee0d4e61984"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#a64e9fa75beda50a9e8400ee0d4e61984">end</a> () override</td></tr>
+<tr class="memdesc:a64e9fa75beda50a9e8400ee0d4e61984"><td class="mdescLeft">&#160;</td><td class="mdescRight">ends the processing <br /></td></tr>
 <tr class="separator:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb16a11e1a07b94615c8ee63c9c9e7f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#abb16a11e1a07b94615c8ee63c9c9e7f9">isHeader</a> (<a class="el" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, const uint8_t *data)</td></tr>
+<tr class="memitem:abb16a11e1a07b94615c8ee63c9c9e7f9"><td class="memItemLeft" align="right" valign="top"><a id="abb16a11e1a07b94615c8ee63c9c9e7f9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#abb16a11e1a07b94615c8ee63c9c9e7f9">isHeader</a> (<a class="el" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, const uint8_t *data)</td></tr>
+<tr class="memdesc:abb16a11e1a07b94615c8ee63c9c9e7f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the indicated atom is a header atom: you can define your custom method with <a class="el" href="classaudio__tools_1_1_container_m_p4.html#ac5da9b5e3d1406eefa81e4b602364f0a" title="Defines the callback which is used to determine if an atom is a header atom.">setIsHeaderCallback()</a> <br /></td></tr>
 <tr class="separator:abb16a11e1a07b94615c8ee63c9c9e7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b485ba5b9d96f94384f4a3840f84314"><td class="memItemLeft" align="right" valign="top"><a id="a2b485ba5b9d96f94384f4a3840f84314"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#a2b485ba5b9d96f94384f4a3840f84314">isResultPCM</a> ()</td></tr>
@@ -131,7 +135,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#a9a87d052f5f3575b7d5ef21dfad965aa">setDataCallback</a> (void(*cb)(<a class="el" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> &amp;atom, <a class="el" href="classaudio__tools_1_1_container_m_p4.html">ContainerMP4</a> &amp;container))</td></tr>
 <tr class="memdesc:a9a87d052f5f3575b7d5ef21dfad965aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the callback that is executed on each atom. <br /></td></tr>
 <tr class="separator:a9a87d052f5f3575b7d5ef21dfad965aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5da9b5e3d1406eefa81e4b602364f0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#ac5da9b5e3d1406eefa81e4b602364f0a">setIsHeaderCallback</a> (bool(*cb)(<a class="el" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, const uint8_t *data))</td></tr>
+<tr class="memitem:ac5da9b5e3d1406eefa81e4b602364f0a"><td class="memItemLeft" align="right" valign="top"><a id="ac5da9b5e3d1406eefa81e4b602364f0a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#ac5da9b5e3d1406eefa81e4b602364f0a">setIsHeaderCallback</a> (bool(*cb)(<a class="el" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, const uint8_t *data))</td></tr>
+<tr class="memdesc:ac5da9b5e3d1406eefa81e4b602364f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the callback which is used to determine if an atom is a header atom. <br /></td></tr>
 <tr class="separator:ac5da9b5e3d1406eefa81e4b602364f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad86e401cecc65a533c20cdf92d7bdc54"><td class="memItemLeft" align="right" valign="top"><a id="ad86e401cecc65a533c20cdf92d7bdc54"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#ad86e401cecc65a533c20cdf92d7bdc54">setMaxSize</a> (int size)</td></tr>
@@ -159,17 +165,18 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:ae81130b914ec03661b95be1c406a37dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1ee46b5654a0a16612efb1a89d44d0f"><td class="memItemLeft" align="right" valign="top"><a id="af1ee46b5654a0a16612efb1a89d44d0f"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#af1ee46b5654a0a16612efb1a89d44d0f">write</a> (const void *in, size_t length) override</td></tr>
-<tr class="memdesc:af1ee46b5654a0a16612efb1a89d44d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes the next atom <br /></td></tr>
+<tr class="memdesc:af1ee46b5654a0a16612efb1a89d44d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes the data to be parsed into atoms <br /></td></tr>
 <tr class="separator:af1ee46b5654a0a16612efb1a89d44d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:adad9b4faff502c052c0d14005f33390b"><td class="memItemLeft" align="right" valign="top"><a id="adad9b4faff502c052c0d14005f33390b"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#adad9b4faff502c052c0d14005f33390b">decode</a> (const uint8_t *data, size_t len)</td></tr>
-<tr class="memdesc:adad9b4faff502c052c0d14005f33390b"><td class="mdescLeft">&#160;</td><td class="mdescRight">output of mdat to decoder; <br /></td></tr>
+<tr class="memdesc:adad9b4faff502c052c0d14005f33390b"><td class="mdescLeft">&#160;</td><td class="mdescRight">output of audio mdat to helix decoder; <br /></td></tr>
 <tr class="separator:adad9b4faff502c052c0d14005f33390b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa11d4ea3fdd22f0a638419ed1b15389c"><td class="memItemLeft" align="right" valign="top"><a id="aa11d4ea3fdd22f0a638419ed1b15389c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setStreamOutputSize</b> (int size)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#aa11d4ea3fdd22f0a638419ed1b15389c">setStreamOutputSize</a> (int size)</td></tr>
+<tr class="memdesc:aa11d4ea3fdd22f0a638419ed1b15389c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the size of open data that will be written directly w/o parsing. <br /></td></tr>
 <tr class="separator:aa11d4ea3fdd22f0a638419ed1b15389c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
@@ -205,6 +212,9 @@ void(*&#160;</td><td class="memItemRight" valign="bottom"><b>data_callback</b> )
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407c3efba665d276a38229f905bef352"><td class="memItemLeft" align="right" valign="top"><a id="a407c3efba665d276a38229f905bef352"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false</td></tr>
+<tr class="separator:a407c3efba665d276a38229f905bef352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e40cde0b3015fcff67e564a6311f1a"><td class="memItemLeft" align="right" valign="top"><a id="a64e40cde0b3015fcff67e564a6311f1a"></a>
 bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>is_header_callback</b> )(<a class="el" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, const uint8_t *data)=<a class="el" href="classaudio__tools_1_1_container_m_p4.html#ac19a34fbe54daa32498f582f1f4b1778">default_is_header_callback</a></td></tr>
 <tr class="separator:a64e40cde0b3015fcff67e564a6311f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -274,70 +284,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>MP4ParseBuffer</b></
 
 <p>Default logic to process an atom. </p>
 <p>output of mdat to decoder;</p>
-
-</div>
-</div>
-<a id="abb16a11e1a07b94615c8ee63c9c9e7f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb16a11e1a07b94615c8ee63c9c9e7f9">&#9670;&nbsp;</a></span>isHeader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isHeader </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *&#160;</td>
-          <td class="paramname"><em>atom</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint8_t *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Checks if the indicated atom is a header atom: you can define your custom method with <a class="el" href="classaudio__tools_1_1_container_m_p4.html#ac5da9b5e3d1406eefa81e4b602364f0a">setIsHeaderCallback()</a> </p>
-
-</div>
-</div>
-<a id="ac5da9b5e3d1406eefa81e4b602364f0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5da9b5e3d1406eefa81e4b602364f0a">&#9670;&nbsp;</a></span>setIsHeaderCallback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setIsHeaderCallback </td>
-          <td>(</td>
-          <td class="paramtype">bool(*)(<a class="el" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, const uint8_t *data)&#160;</td>
-          <td class="paramname"><em>cb</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Defines the callback which is used to determine if an atom is a header atom </p>
 
 </div>
 </div>
