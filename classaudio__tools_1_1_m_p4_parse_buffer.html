@@ -67,7 +67,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_m_p4_parse_buffer-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -77,6 +76,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ad3dc6033c68ea9493b69b75d6480aa1f"><td class="memItemLeft" align="right" valign="top"><a id="ad3dc6033c68ea9493b69b75d6480aa1f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MP4ParseBuffer</b> (<a class="el" href="classaudio__tools_1_1_container_m_p4.html">ContainerMP4</a> *container)</td></tr>
+<tr class="separator:ad3dc6033c68ea9493b69b75d6480aa1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4549a76725f2e4c013e4d57018366109"><td class="memItemLeft" align="right" valign="top"><a id="a4549a76725f2e4c013e4d57018366109"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> ()</td></tr>
 <tr class="separator:a4549a76725f2e4c013e4d57018366109"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -91,17 +93,14 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readArray</b> (uint
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *data, size_t length)</td></tr>
 <tr class="separator:a13dd0ff8a330b61d47cbbf4164c93853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a950623faa3ec8542929531bd1ac5a874"><td class="memItemLeft" align="right" valign="top"><a id="a950623faa3ec8542929531bd1ac5a874"></a>
-int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>peekLength</b> ()</td></tr>
-<tr class="separator:a950623faa3ec8542929531bd1ac5a874"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:adfda46b2efac52165f9c88041f555530"><td class="memItemLeft" align="right" valign="top"><a id="adfda46b2efac52165f9c88041f555530"></a>
-<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {0}</td></tr>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {1024}</td></tr>
 <tr class="separator:adfda46b2efac52165f9c88041f555530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac39ce347bd6deab71a1315074cde8ac7"><td class="memItemLeft" align="right" valign="top"><a id="ac39ce347bd6deab71a1315074cde8ac7"></a>
+<a class="el" href="classaudio__tools_1_1_container_m_p4.html">ContainerMP4</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>container</b> = nullptr</td></tr>
+<tr class="separator:ac39ce347bd6deab71a1315074cde8ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioCodecs/<a class="el" href="_container_m_p_e_g4_8h_source.html">ContainerMPEG4.h</a></li>
