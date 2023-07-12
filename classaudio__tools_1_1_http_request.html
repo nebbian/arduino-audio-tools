@@ -190,6 +190,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setConnection
 <tr class="memitem:afbe879b63fdb121f3efd4478a6693340"><td class="memItemLeft" align="right" valign="top"><a id="afbe879b63fdb121f3efd4478a6693340"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setHost</b> (const char *host)</td></tr>
 <tr class="separator:afbe879b63fdb121f3efd4478a6693340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4f59d434249e98049f1bf6917a4faec"><td class="memItemLeft" align="right" valign="top"><a id="ac4f59d434249e98049f1bf6917a4faec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_request.html#ac4f59d434249e98049f1bf6917a4faec">setOnConnectCallback</a> (void(*callback)(<a class="el" href="classaudio__tools_1_1_http_request.html">HttpRequest</a> &amp;request, <a class="el" href="classaudio__tools_1_1_url.html">Url</a> &amp;url, <a class="el" href="classaudio__tools_1_1_http_request_header.html">HttpRequestHeader</a> &amp;request_header))</td></tr>
+<tr class="memdesc:ac4f59d434249e98049f1bf6917a4faec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback which allows you to add additional paramters dynamically. <br /></td></tr>
+<tr class="separator:ac4f59d434249e98049f1bf6917a4faec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae92ae13a136435391be883fd6f0f5c8c"><td class="memItemLeft" align="right" valign="top"><a id="ae92ae13a136435391be883fd6f0f5c8c"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
 <tr class="separator:ae92ae13a136435391be883fd6f0f5c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -230,6 +234,9 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>connection</b
 <tr class="memitem:ad48cbe30d91e7ee2ed2c892b10e47c8b"><td class="memItemLeft" align="right" valign="top"><a id="ad48cbe30d91e7ee2ed2c892b10e47c8b"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>host_name</b> =nullptr</td></tr>
 <tr class="separator:ad48cbe30d91e7ee2ed2c892b10e47c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a733c8683ae8d68b787fd6eca201d7970"><td class="memItemLeft" align="right" valign="top"><a id="a733c8683ae8d68b787fd6eca201d7970"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><b>http_connect_callback</b> )(<a class="el" href="classaudio__tools_1_1_http_request.html">HttpRequest</a> &amp;request, <a class="el" href="classaudio__tools_1_1_url.html">Url</a> &amp;url, <a class="el" href="classaudio__tools_1_1_http_request_header.html">HttpRequestHeader</a> &amp;request_header) = nullptr</td></tr>
+<tr class="separator:a733c8683ae8d68b787fd6eca201d7970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a466fcc592ff391c7cb164d9d94707871"><td class="memItemLeft" align="right" valign="top"><a id="a466fcc592ff391c7cb164d9d94707871"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_ready</b> = false</td></tr>
 <tr class="separator:a466fcc592ff391c7cb164d9d94707871"><td class="memSeparator" colspan="2">&#160;</td></tr>
