@@ -204,9 +204,9 @@ $(function() {
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keyword">virtual</span> tinyhttp::Str* getReplyHeader() {</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            header.allocate(44);</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            MemoryOutput mp{(uint8_t*)header.c_str(), 44};</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            WAVEncoder enc;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            WAVHeader enc;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            WAVAudioInfo wi;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            wi.format = WAV_FORMAT_PCM;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            wi.format = AudioFormat::PCM;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            wi.sample_rate = info.sample_rate;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            wi.bits_per_sample = info.bits_per_sample;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            wi.channels = info.channels;</div>
