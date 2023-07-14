@@ -27,7 +27,7 @@ var searchData=
   ['delimiter_2016',['delimiter',['../classaudio__tools_1_1_csv_output.html#ab75ed2e3a626c991e9e225cb298e3609',1,'audio_tools::CsvOutput']]],
   ['destroy_2017',['destroy',['../classdsp__memory__manager.html#a105a00e96586f86c11e457b26ffa588f',1,'dsp_memory_manager']]],
   ['digitalread_2018',['digitalRead',['../_no_arduino_8h.html#ae1e3d979645a535a8ce49f935392d8bc',1,'NoArduino.h']]],
-  ['display_2019',['display',['../classaudio__tools_1_1_l_e_d_output_uno_r4.html#a1e5b20fed15743656bb6d2e6a6ea6269',1,'audio_tools::LEDOutputUnoR4']]],
+  ['display_2019',['display',['../classaudio__tools_1_1_l_e_d_output.html#a1e5b20fed15743656bb6d2e6a6ea6269',1,'audio_tools::LEDOutput::display()'],['../classaudio__tools_1_1_l_e_d_output_uno_r4.html#a1e5b20fed15743656bb6d2e6a6ea6269',1,'audio_tools::LEDOutputUnoR4::display()']]],
   ['distortion_2020',['Distortion',['../classaudio__tools_1_1_distortion.html#a30cd5fedc5a0cda1b3a290f45ccb004d',1,'audio_tools::Distortion']]],
   ['doloop_2021',['doLoop',['../classaudio__tools_1_1_audio_server.html#abdd99e468f667b748b0c9bfd395163d7',1,'audio_tools::AudioServer']]],
   ['driver_2022',['driver',['../classaudio__tools_1_1_audio_f_f_t_base.html#ad360e5c2be36d28d74715e70f31a9f98',1,'audio_tools::AudioFFTBase']]]
