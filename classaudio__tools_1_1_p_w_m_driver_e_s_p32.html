@@ -68,8 +68,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="classaudio__tools_1_1_p_w_m_driver_e_s_p32-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PWMDriverESP32 Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__platform.html">Platform</a></div></div>  </div>
@@ -177,6 +177,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ac42a5c2db8e87431b3806e9b64a0dfe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes the next frame to the output pins <br /></td></tr>
 <tr class="separator:ac42a5c2db8e87431b3806e9b64a0dfe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:ad01c3142af5779554e93ef32d81ac71c"><td class="memItemLeft" align="right" valign="top"><a id="ad01c3142af5779554e93ef32d81ac71c"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#ad01c3142af5779554e93ef32d81ac71c">pwm_callback</a> (void *ptr)</td></tr>
+<tr class="memdesc:ad01c3142af5779554e93ef32d81ac71c"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer callback: write the next frame to the pins <br /></td></tr>
+<tr class="separator:ad01c3142af5779554e93ef32d81ac71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aafb15a7f56992cf279aec99436e57085"><td class="memItemLeft" align="right" valign="top"><a id="aafb15a7f56992cf279aec99436e57085"></a>
@@ -203,12 +210,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_timer_started</b> 
 <tr class="memitem:adfd7f5e8f8688bad4fa8988dc21355b8"><td class="memItemLeft" align="right" valign="top"><a id="adfd7f5e8f8688bad4fa8988dc21355b8"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>time_1_sec</b></td></tr>
 <tr class="separator:adfd7f5e8f8688bad4fa8988dc21355b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97222eeccb5b18e1fc532806c1efcb34"><td class="memItemLeft" align="right" valign="top"><a id="a97222eeccb5b18e1fc532806c1efcb34"></a>
-hw_timer_t *&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b> = nullptr</td></tr>
-<tr class="separator:a97222eeccb5b18e1fc532806c1efcb34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adedb0f4641b7b425776dbacb23a96576"><td class="memItemLeft" align="right" valign="top"><a id="adedb0f4641b7b425776dbacb23a96576"></a>
-portMUX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>timerMux</b> = portMUX_INITIALIZER_UNLOCKED</td></tr>
-<tr class="separator:adedb0f4641b7b425776dbacb23a96576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a871a88d476269c96439f02adc0ded977"><td class="memItemLeft" align="right" valign="top"><a id="a871a88d476269c96439f02adc0ded977"></a>
+<a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html">TimerAlarmRepeating</a>&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b></td></tr>
+<tr class="separator:a871a88d476269c96439f02adc0ded977"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70526662d58cd79067f2ad7733359304"><td class="memItemLeft" align="right" valign="top"><a id="a70526662d58cd79067f2ad7733359304"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>underflow_count</b> = 0</td></tr>
 <tr class="separator:a70526662d58cd79067f2ad7733359304"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,47 +222,12 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>underflow_per_sec
 <tr class="memitem:a9546f57bd470e36a39ca4849d9dbb84c"><td class="memItemLeft" align="right" valign="top"><a id="a9546f57bd470e36a39ca4849d9dbb84c"></a>
 PWMCallbackType&#160;</td><td class="memItemRight" valign="bottom"><b>user_callback</b> = nullptr</td></tr>
 <tr class="separator:a9546f57bd470e36a39ca4849d9dbb84c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:ac74c69e5f370226829182a11466619eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#ac74c69e5f370226829182a11466619eb">defaultPWMAudioOutputCallback</a> ()</td></tr>
-<tr class="memdesc:ac74c69e5f370226829182a11466619eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">separate method that can be defined as friend so that we can access protected information  <a href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#ac74c69e5f370226829182a11466619eb">More...</a><br /></td></tr>
-<tr class="separator:ac74c69e5f370226829182a11466619eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Audio output to PWM pins for the ESP32. The ESP32 supports up to 16 channels. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
-</div><h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="ac74c69e5f370226829182a11466619eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac74c69e5f370226829182a11466619eb">&#9670;&nbsp;</a></span>defaultPWMAudioOutputCallback</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void defaultPWMAudioOutputCallback </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>separate method that can be defined as friend so that we can access protected information </p>
-<p>timer callback: write the next frame to the pins </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioPWM/<a class="el" href="_p_w_m_audio_e_s_p32_8h_source.html">PWMAudioESP32.h</a></li>
 </ul>
 </div><!-- contents -->
