@@ -72,22 +72,26 @@ $(function() {
 <a href="#friends">Friends</a> &#124;
 <a href="classaudio__tools_1_1_l_e_d_output-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">LEDOutput Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__io.html">IO</a></div></div>  </div>
+<div class="title">LEDOutput Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classaudio__tools_1_1_l_e_d_output.html" title="LEDOutput using the FastLED library. You write the data to the FFT Stream. This displays the result o...">LEDOutput</a> using the FastLED library. You write the data to the FFT <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a>. This displays the result of the FFT to a LED matrix.  
+<p>LED output using the FastLED library.  
  <a href="classaudio__tools_1_1_l_e_d_output.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_l_e_d_output_8h_source.html">LEDOutput.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a51d2826befbf2201390c9bdea0ac823f"><td class="memItemLeft" align="right" valign="top"><a id="a51d2826befbf2201390c9bdea0ac823f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a51d2826befbf2201390c9bdea0ac823f">LEDOutput</a> ()=default</td></tr>
+<tr class="memdesc:a51d2826befbf2201390c9bdea0ac823f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor. <br /></td></tr>
+<tr class="separator:a51d2826befbf2201390c9bdea0ac823f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3981b01094250b0f62c77640e91fafd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#ad3981b01094250b0f62c77640e91fafd">LEDOutput</a> (<a class="el" href="classaudio__tools_1_1_f_f_t_display.html">FFTDisplay</a> &amp;fft)</td></tr>
-<tr class="memdesc:ad3981b01094250b0f62c77640e91fafd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <a href="classaudio__tools_1_1_l_e_d_output.html#ad3981b01094250b0f62c77640e91fafd">More...</a><br /></td></tr>
+<tr class="memdesc:ad3981b01094250b0f62c77640e91fafd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for FFT scenario.  <a href="classaudio__tools_1_1_l_e_d_output.html#ad3981b01094250b0f62c77640e91fafd">More...</a><br /></td></tr>
 <tr class="separator:ad3981b01094250b0f62c77640e91fafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ca0f2c13c6e1d848aa8493f256b0d33"><td class="memItemLeft" align="right" valign="top"><a id="a5ca0f2c13c6e1d848aa8493f256b0d33"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LEDOutput</b> (<a class="el" href="classaudio__tools_1_1_volume_output.html">VolumeOutput</a> &amp;vol)</td></tr>
+<tr class="memitem:a5ca0f2c13c6e1d848aa8493f256b0d33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a5ca0f2c13c6e1d848aa8493f256b0d33">LEDOutput</a> (<a class="el" href="classaudio__tools_1_1_volume_output.html">VolumeOutput</a> &amp;vol)</td></tr>
+<tr class="memdesc:a5ca0f2c13c6e1d848aa8493f256b0d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classaudio__tools_1_1_volume_output.html" title="A simple class to determine the volume.">VolumeOutput</a> scenario.  <a href="classaudio__tools_1_1_l_e_d_output.html#a5ca0f2c13c6e1d848aa8493f256b0d33">More...</a><br /></td></tr>
 <tr class="separator:a5ca0f2c13c6e1d848aa8493f256b0d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a9868c8067918772f7f48b33c36114a"><td class="memItemLeft" align="right" valign="top"><a id="a4a9868c8067918772f7f48b33c36114a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a4a9868c8067918772f7f48b33c36114a">addColumnBar</a> (int currY)</td></tr>
@@ -97,18 +101,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#aab6570fa867d03509c8437e02f0f4e1d">begin</a> (<a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html">LEDOutputConfig</a> <a class="el" href="classaudio__tools_1_1_l_e_d_output.html#aa4dd40c7c10f7adf35e3cfa26049206a">config</a>)</td></tr>
 <tr class="memdesc:aab6570fa867d03509c8437e02f0f4e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup Led matrix. <br /></td></tr>
 <tr class="separator:aab6570fa867d03509c8437e02f0f4e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4dd40c7c10f7adf35e3cfa26049206a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html">LEDOutputConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#aa4dd40c7c10f7adf35e3cfa26049206a">config</a> ()</td></tr>
+<tr class="memitem:aa4dd40c7c10f7adf35e3cfa26049206a"><td class="memItemLeft" align="right" valign="top"><a id="aa4dd40c7c10f7adf35e3cfa26049206a"></a>
+<a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html">LEDOutputConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#aa4dd40c7c10f7adf35e3cfa26049206a">config</a> ()</td></tr>
+<tr class="memdesc:aa4dd40c7c10f7adf35e3cfa26049206a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the actual config object. E.g. to change the update logic. <br /></td></tr>
 <tr class="separator:aa4dd40c7c10f7adf35e3cfa26049206a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaba1380b847be94f1cb6428ed68efb37"><td class="memItemLeft" align="right" valign="top"><a id="aaba1380b847be94f1cb6428ed68efb37"></a>
 <a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html">LEDOutputConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#aaba1380b847be94f1cb6428ed68efb37">defaultConfig</a> ()</td></tr>
 <tr class="memdesc:aaba1380b847be94f1cb6428ed68efb37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the default config object. <br /></td></tr>
 <tr class="separator:aaba1380b847be94f1cb6428ed68efb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c903e4f5408eee60896c234807c478b"><td class="memItemLeft" align="right" valign="top"><a id="a0c903e4f5408eee60896c234807c478b"></a>
-<a class="el" href="classaudio__tools_1_1_f_f_t_display.html">FFTDisplay</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>fftDisplay</b> ()</td></tr>
+<a class="el" href="classaudio__tools_1_1_f_f_t_display.html">FFTDisplay</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a0c903e4f5408eee60896c234807c478b">fftDisplay</a> ()</td></tr>
+<tr class="memdesc:a0c903e4f5408eee60896c234807c478b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides acces to the <a class="el" href="classaudio__tools_1_1_f_f_t_display.html">FFTDisplay</a> object. <br /></td></tr>
 <tr class="separator:a0c903e4f5408eee60896c234807c478b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53ef9e74ad374547aa7a7092e2801c56"><td class="memItemLeft" align="right" valign="top"><a id="a53ef9e74ad374547aa7a7092e2801c56"></a>
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a53ef9e74ad374547aa7a7092e2801c56">getMaxMagnitude</a> ()</td></tr>
-<tr class="memdesc:a53ef9e74ad374547aa7a7092e2801c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provodes the max magnitude. <br /></td></tr>
+<tr class="memdesc:a53ef9e74ad374547aa7a7092e2801c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provodes the max magnitude for both the. <br /></td></tr>
 <tr class="separator:a53ef9e74ad374547aa7a7092e2801c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0e15fe5ca7df4136adea836883f9183"><td class="memItemLeft" align="right" valign="top"><a id="ac0e15fe5ca7df4136adea836883f9183"></a>
 CRGB &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#ac0e15fe5ca7df4136adea836883f9183">led</a> (uint8_t index)</td></tr>
@@ -180,11 +187,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AudioFFTBase</b></td
 <tr class="separator:aec24d70ba440b1073c4b315afa17a275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classaudio__tools_1_1_l_e_d_output.html" title="LEDOutput using the FastLED library. You write the data to the FFT Stream. This displays the result o...">LEDOutput</a> using the FastLED library. You write the data to the FFT <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a>. This displays the result of the FFT to a LED matrix. </p>
+<div class="textblock"><p>LED output using the FastLED library. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad3981b01094250b0f62c77640e91fafd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3981b01094250b0f62c77640e91fafd">&#9670;&nbsp;</a></span>LEDOutput()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3981b01094250b0f62c77640e91fafd">&#9670;&nbsp;</a></span>LEDOutput() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +214,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AudioFFTBase</b></td
 </table>
 </div><div class="memdoc">
 
-<p>Default Constructor. </p>
+<p>Constructor for FFT scenario. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fft</td><td></td></tr>
@@ -217,9 +224,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AudioFFTBase</b></td
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa4dd40c7c10f7adf35e3cfa26049206a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4dd40c7c10f7adf35e3cfa26049206a">&#9670;&nbsp;</a></span>config()</h2>
+<a id="a5ca0f2c13c6e1d848aa8493f256b0d33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca0f2c13c6e1d848aa8493f256b0d33">&#9670;&nbsp;</a></span>LEDOutput() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -228,9 +234,10 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AudioFFTBase</b></td
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html">LEDOutputConfig</a>&amp; config </td>
+          <td class="memname"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html">LEDOutput</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_volume_output.html">VolumeOutput</a> &amp;&#160;</td>
+          <td class="paramname"><em>vol</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -240,7 +247,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AudioFFTBase</b></td
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Provides access to the actual config object. E.g. to change the update logic </p>
+
+<p>Constructor for <a class="el" href="classaudio__tools_1_1_volume_output.html" title="A simple class to determine the volume.">VolumeOutput</a> scenario. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vol</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
