@@ -68,7 +68,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classaudio__tools_1_1_l_e_d_output-members.html">List of all members</a>  </div>
@@ -84,16 +83,16 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4a12f11173395254da4e87839bc7a05c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a4a12f11173395254da4e87839bc7a05c">LEDOutput</a> (<a class="el" href="classaudio__tools_1_1_audio_f_f_t_base.html">AudioFFTBase</a> &amp;fft)</td></tr>
-<tr class="memdesc:a4a12f11173395254da4e87839bc7a05c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <a href="classaudio__tools_1_1_l_e_d_output.html#a4a12f11173395254da4e87839bc7a05c">More...</a><br /></td></tr>
-<tr class="separator:a4a12f11173395254da4e87839bc7a05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3981b01094250b0f62c77640e91fafd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#ad3981b01094250b0f62c77640e91fafd">LEDOutput</a> (<a class="el" href="classaudio__tools_1_1_f_f_t_display.html">FFTDisplay</a> &amp;fft)</td></tr>
+<tr class="memdesc:ad3981b01094250b0f62c77640e91fafd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <a href="classaudio__tools_1_1_l_e_d_output.html#ad3981b01094250b0f62c77640e91fafd">More...</a><br /></td></tr>
+<tr class="separator:ad3981b01094250b0f62c77640e91fafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ca0f2c13c6e1d848aa8493f256b0d33"><td class="memItemLeft" align="right" valign="top"><a id="a5ca0f2c13c6e1d848aa8493f256b0d33"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LEDOutput</b> (<a class="el" href="classaudio__tools_1_1_volume_output.html">VolumeOutput</a> &amp;vol)</td></tr>
 <tr class="separator:a5ca0f2c13c6e1d848aa8493f256b0d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69df0fad693e4f220447aa53ca24994e"><td class="memItemLeft" align="right" valign="top"><a id="a69df0fad693e4f220447aa53ca24994e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a69df0fad693e4f220447aa53ca24994e">addEmptyColumn</a> ()</td></tr>
-<tr class="memdesc:a69df0fad693e4f220447aa53ca24994e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an empty column to the end shifting the content to the left. <br /></td></tr>
-<tr class="separator:a69df0fad693e4f220447aa53ca24994e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a9868c8067918772f7f48b33c36114a"><td class="memItemLeft" align="right" valign="top"><a id="a4a9868c8067918772f7f48b33c36114a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a4a9868c8067918772f7f48b33c36114a">addColumnBar</a> (int currY)</td></tr>
+<tr class="memdesc:a4a9868c8067918772f7f48b33c36114a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the last column with the indicated bar. <br /></td></tr>
+<tr class="separator:a4a9868c8067918772f7f48b33c36114a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab6570fa867d03509c8437e02f0f4e1d"><td class="memItemLeft" align="right" valign="top"><a id="aab6570fa867d03509c8437e02f0f4e1d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#aab6570fa867d03509c8437e02f0f4e1d">begin</a> (<a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html">LEDOutputConfig</a> <a class="el" href="classaudio__tools_1_1_l_e_d_output.html#aa4dd40c7c10f7adf35e3cfa26049206a">config</a>)</td></tr>
 <tr class="memdesc:aab6570fa867d03509c8437e02f0f4e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup Led matrix. <br /></td></tr>
@@ -104,8 +103,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html">LEDOutputConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#aaba1380b847be94f1cb6428ed68efb37">defaultConfig</a> ()</td></tr>
 <tr class="memdesc:aaba1380b847be94f1cb6428ed68efb37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the default config object. <br /></td></tr>
 <tr class="separator:aaba1380b847be94f1cb6428ed68efb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab80918f4e084cc29f120323b4b434b1c"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#ab80918f4e084cc29f120323b4b434b1c">getMagnitude</a> (int x)</td></tr>
-<tr class="separator:ab80918f4e084cc29f120323b4b434b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c903e4f5408eee60896c234807c478b"><td class="memItemLeft" align="right" valign="top"><a id="a0c903e4f5408eee60896c234807c478b"></a>
+<a class="el" href="classaudio__tools_1_1_f_f_t_display.html">FFTDisplay</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>fftDisplay</b> ()</td></tr>
+<tr class="separator:a0c903e4f5408eee60896c234807c478b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53ef9e74ad374547aa7a7092e2801c56"><td class="memItemLeft" align="right" valign="top"><a id="a53ef9e74ad374547aa7a7092e2801c56"></a>
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a53ef9e74ad374547aa7a7092e2801c56">getMaxMagnitude</a> ()</td></tr>
 <tr class="memdesc:a53ef9e74ad374547aa7a7092e2801c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provodes the max magnitude. <br /></td></tr>
@@ -126,31 +126,28 @@ CRGB *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 CRGB &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a205e2d3cf1471979674fd6e5a6441942">ledXY</a> (uint8_t x, uint8_t y)</td></tr>
 <tr class="memdesc:a205e2d3cf1471979674fd6e5a6441942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine the led with the help of the x and y pos. <br /></td></tr>
 <tr class="separator:a205e2d3cf1471979674fd6e5a6441942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b1b3b22e0022d2fdf9621806aa9db6"><td class="memItemLeft" align="right" valign="top"><a id="ae8b1b3b22e0022d2fdf9621806aa9db6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#ae8b1b3b22e0022d2fdf9621806aa9db6">setColumnBar</a> (int currY)</td></tr>
+<tr class="memdesc:ae8b1b3b22e0022d2fdf9621806aa9db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the last column with the indicated bar. <br /></td></tr>
+<tr class="separator:ae8b1b3b22e0022d2fdf9621806aa9db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a151ea8e0fda222a7614ced9265117255"><td class="memItemLeft" align="right" valign="top"><a id="a151ea8e0fda222a7614ced9265117255"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a151ea8e0fda222a7614ced9265117255">setColumnBar</a> (int x, int currY)</td></tr>
+<tr class="memdesc:a151ea8e0fda222a7614ced9265117255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the indicated column with the indicated bar. <br /></td></tr>
+<tr class="separator:a151ea8e0fda222a7614ced9265117255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd36d7881ea8503d5c5824e7a5ad6c7e"><td class="memItemLeft" align="right" valign="top"><a id="acd36d7881ea8503d5c5824e7a5ad6c7e"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#acd36d7881ea8503d5c5824e7a5ad6c7e">update</a> ()</td></tr>
 <tr class="memdesc:acd36d7881ea8503d5c5824e7a5ad6c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the display: call this method in your loop. <br /></td></tr>
 <tr class="separator:acd36d7881ea8503d5c5824e7a5ad6c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5727155f41c2e8d5c14a30f18ec2864b"><td class="memItemLeft" align="right" valign="top"><a id="a5727155f41c2e8d5c14a30f18ec2864b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a5727155f41c2e8d5c14a30f18ec2864b">updateColumn</a> (int currY)</td></tr>
-<tr class="memdesc:a5727155f41c2e8d5c14a30f18ec2864b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the last column with the indicated bar. <br /></td></tr>
-<tr class="separator:a5727155f41c2e8d5c14a30f18ec2864b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d110fad83bb455764370f74526501bc"><td class="memItemLeft" align="right" valign="top"><a id="a5d110fad83bb455764370f74526501bc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a5d110fad83bb455764370f74526501bc">updateColumn</a> (int x, int currY)</td></tr>
-<tr class="memdesc:a5d110fad83bb455764370f74526501bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the indicated column with the indicated bar. <br /></td></tr>
-<tr class="separator:a5d110fad83bb455764370f74526501bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a69df0fad693e4f220447aa53ca24994e"><td class="memItemLeft" align="right" valign="top"><a id="a69df0fad693e4f220447aa53ca24994e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a69df0fad693e4f220447aa53ca24994e">addEmptyColumn</a> ()</td></tr>
+<tr class="memdesc:a69df0fad693e4f220447aa53ca24994e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an empty column to the end shifting the content to the left. <br /></td></tr>
+<tr class="separator:a69df0fad693e4f220447aa53ca24994e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ba51e8e0d49d77033cf669cf79e66ee"><td class="memItemLeft" align="right" valign="top"><a id="a0ba51e8e0d49d77033cf669cf79e66ee"></a>
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>xy</b> (uint8_t x, uint8_t y)</td></tr>
 <tr class="separator:a0ba51e8e0d49d77033cf669cf79e66ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
-Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:a7bdc13b501930dd228e4469fddfe7cdf"><td class="memItemLeft" align="right" valign="top"><a id="a7bdc13b501930dd228e4469fddfe7cdf"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html#a7bdc13b501930dd228e4469fddfe7cdf">fftCallback</a> (<a class="el" href="classaudio__tools_1_1_audio_f_f_t_base.html">AudioFFTBase</a> &amp;fft)</td></tr>
-<tr class="memdesc:a7bdc13b501930dd228e4469fddfe7cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback method which provides updated data from fft <br /></td></tr>
-<tr class="separator:a7bdc13b501930dd228e4469fddfe7cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -163,15 +160,15 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>count</b> = 0</td
 <tr class="memitem:a69f39a8a2ba629a6e799779901e0061d"><td class="memItemLeft" align="right" valign="top"><a id="a69f39a8a2ba629a6e799779901e0061d"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; CRGB &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>leds</b> {0}</td></tr>
 <tr class="separator:a69f39a8a2ba629a6e799779901e0061d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5703bc37b957f2bf97e81584970d70eb"><td class="memItemLeft" align="right" valign="top"><a id="a5703bc37b957f2bf97e81584970d70eb"></a>
-<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>magnitudes</b> {0}</td></tr>
-<tr class="separator:a5703bc37b957f2bf97e81584970d70eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bcb8ee15092699b3a11451d3f1ebb79"><td class="memItemLeft" align="right" valign="top"><a id="a0bcb8ee15092699b3a11451d3f1ebb79"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> = -1</td></tr>
+<tr class="separator:a0bcb8ee15092699b3a11451d3f1ebb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef97ecb0058c14ddc89ca1d7a8e59da4"><td class="memItemLeft" align="right" valign="top"><a id="aef97ecb0058c14ddc89ca1d7a8e59da4"></a>
 CRGB&#160;</td><td class="memItemRight" valign="bottom"><b>not_valid</b></td></tr>
 <tr class="separator:aef97ecb0058c14ddc89ca1d7a8e59da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92500918e341fec52d9e3f1e3a46b81e"><td class="memItemLeft" align="right" valign="top"><a id="a92500918e341fec52d9e3f1e3a46b81e"></a>
-<a class="el" href="classaudio__tools_1_1_audio_f_f_t_base.html">AudioFFTBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_fft</b> = nullptr</td></tr>
-<tr class="separator:a92500918e341fec52d9e3f1e3a46b81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90b54ced0871b573bcbe5648c238c62c"><td class="memItemLeft" align="right" valign="top"><a id="a90b54ced0871b573bcbe5648c238c62c"></a>
+<a class="el" href="classaudio__tools_1_1_f_f_t_display.html">FFTDisplay</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_fft</b> = nullptr</td></tr>
+<tr class="separator:a90b54ced0871b573bcbe5648c238c62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1c941f2dc0be7e773d846b1f7ae40ef"><td class="memItemLeft" align="right" valign="top"><a id="ad1c941f2dc0be7e773d846b1f7ae40ef"></a>
 <a class="el" href="classaudio__tools_1_1_volume_output.html">VolumeOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_vol</b> = nullptr</td></tr>
 <tr class="separator:ad1c941f2dc0be7e773d846b1f7ae40ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,8 +183,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AudioFFTBase</b></td
 <div class="textblock"><p><a class="el" href="classaudio__tools_1_1_l_e_d_output.html" title="LEDOutput using the FastLED library. You write the data to the FFT Stream. This displays the result o...">LEDOutput</a> using the FastLED library. You write the data to the FFT <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a>. This displays the result of the FFT to a LED matrix. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4a12f11173395254da4e87839bc7a05c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a12f11173395254da4e87839bc7a05c">&#9670;&nbsp;</a></span>LEDOutput()</h2>
+<a id="ad3981b01094250b0f62c77640e91fafd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3981b01094250b0f62c77640e91fafd">&#9670;&nbsp;</a></span>LEDOutput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +195,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AudioFFTBase</b></td
         <tr>
           <td class="memname"><a class="el" href="classaudio__tools_1_1_l_e_d_output.html">LEDOutput</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_audio_f_f_t_base.html">AudioFFTBase</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_f_f_t_display.html">FFTDisplay</a> &amp;&#160;</td>
           <td class="paramname"><em>fft</em></td><td>)</td>
           <td></td>
         </tr>
@@ -244,33 +241,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AudioFFTBase</b></td
 </table>
 </div><div class="memdoc">
 <p>Provides access to the actual config object. E.g. to change the update logic </p>
-
-</div>
-</div>
-<a id="ab80918f4e084cc29f120323b4b434b1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab80918f4e084cc29f120323b4b434b1c">&#9670;&nbsp;</a></span>getMagnitude()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual float getMagnitude </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the magnitude for the indicated led x position. We might need to combine values from the magnitudes array if this is much bigger. </p>
 
 </div>
 </div>
