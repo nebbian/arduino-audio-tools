@@ -648,7 +648,7 @@ $(function() {
 <div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;<span class="preprocessor">#define VS1053_DEFINED</span></div>
 <div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;<span class="preprocessor">#define PIN_CS 9</span></div>
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160; </div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;<span class="preprocessor">#ifdef ARDUINO</span></div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;<span class="preprocessor">#if defined(ARDUINO) &amp;&amp; !defined(ARDUINO_MINIMA)</span></div>
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;<span class="preprocessor">#  define USE_WIFI</span></div>
 <div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;<span class="preprocessor">#  define USE_URL_ARDUINO</span></div>
 <div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;<span class="preprocessor">#  define USE_AUDIO_SERVER</span></div>
