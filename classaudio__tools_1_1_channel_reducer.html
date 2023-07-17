@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: ChannelReducer&lt; T &gt; Class Template Reference</title>
+<title>arduino-audio-tools: ChannelReducer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ $(function() {
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_channel_reducer-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ChannelReducer&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__tools.html">Tools</a> &raquo; <a class="el" href="group__convert.html">Converters</a></div></div>  </div>
+<div class="title">ChannelReducer Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__tools.html">Tools</a> &raquo; <a class="el" href="group__convert.html">Converters</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -79,35 +79,32 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_base_converter_8h_source.html">BaseConverter.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for ChannelReducer&lt; T &gt;:</div>
+Inheritance diagram for ChannelReducer:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_channel_reducer.png" usemap="#ChannelReducer_3C_20T_20_3E_map" alt=""/>
-  <map id="ChannelReducer_3C_20T_20_3E_map" name="ChannelReducer_3C_20T_20_3E_map">
-<area href="classaudio__tools_1_1_base_converter.html" title="Abstract Base class for Converters A converter is processing the data in the indicated array." alt="BaseConverter&lt; T &gt;" shape="rect" coords="0,0,138,24"/>
+  <img src="classaudio__tools_1_1_channel_reducer.png" usemap="#ChannelReducer_map" alt=""/>
+  <map id="ChannelReducer_map" name="ChannelReducer_map">
+<area href="classaudio__tools_1_1_base_converter.html" title="Abstract Base class for Converters A converter is processing the data in the indicated array." alt="BaseConverter" shape="rect" coords="0,0,107,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a81115d38cfe59aa530d48f7a8c4d6ea6"><td class="memItemLeft" align="right" valign="top"><a id="a81115d38cfe59aa530d48f7a8c4d6ea6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ChannelReducer</b> (int channelCountOfTarget, int channelCountOfSource)</td></tr>
-<tr class="separator:a81115d38cfe59aa530d48f7a8c4d6ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a616081cb87567abd6eecf0bc9bdd6b85"><td class="memItemLeft" align="right" valign="top"><a id="a616081cb87567abd6eecf0bc9bdd6b85"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ChannelReducer</b> (int channelCountOfTarget, int channelCountOfSource, int bitsPerSample)</td></tr>
+<tr class="separator:a616081cb87567abd6eecf0bc9bdd6b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65ed1c2e44cb48c5294dceeb0d0de040"><td class="memItemLeft" align="right" valign="top"><a id="a65ed1c2e44cb48c5294dceeb0d0de040"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert</b> (uint8_t *src, size_t size)</td></tr>
 <tr class="separator:a65ed1c2e44cb48c5294dceeb0d0de040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab42262038579ccc4e2b40cbbd4034847"><td class="memItemLeft" align="right" valign="top"><a id="ab42262038579ccc4e2b40cbbd4034847"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert</b> (uint8_t *target, uint8_t *src, size_t size)</td></tr>
 <tr class="separator:ab42262038579ccc4e2b40cbbd4034847"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaadb066039089f0c39748da6d1770f5"><td class="memItemLeft" align="right" valign="top"><a id="aeaadb066039089f0c39748da6d1770f5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSourceChannels</b> (int channelCountOfSource)</td></tr>
-<tr class="separator:aeaadb066039089f0c39748da6d1770f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3264691e891226c5388e0fdfac6c1095"><td class="memItemLeft" align="right" valign="top"><a id="a3264691e891226c5388e0fdfac6c1095"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTargetChannels</b> (int channelCountOfTarget)</td></tr>
-<tr class="separator:a3264691e891226c5388e0fdfac6c1095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:ad1e28a1a66a25529b0b61b9ca4e66d44"><td class="memItemLeft" align="right" valign="top"><a id="ad1e28a1a66a25529b0b61b9ca4e66d44"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bits</b></td></tr>
+<tr class="separator:ad1e28a1a66a25529b0b61b9ca4e66d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a710d381d557f2d8c8df5eda4006b452c"><td class="memItemLeft" align="right" valign="top"><a id="a710d381d557f2d8c8df5eda4006b452c"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>from_channels</b></td></tr>
 <tr class="separator:a710d381d557f2d8c8df5eda4006b452c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,16 +113,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>to_channels</b></td></
 <tr class="separator:ad5a2d96ded0e4fd63f4cf392c5f3ba9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-class audio_tools::ChannelReducer&lt; T &gt;</h3>
-
-<p>We combine a datastream which consists of multiple channels into less channels. E.g. 2 to 1 The last target channel will contain the combined values of the exceeding source channels. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
+<div class="textblock"><p>We combine a datastream which consists of multiple channels into less channels. E.g. 2 to 1 The last target channel will contain the combined values of the exceeding source channels. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioTools/<a class="el" href="_base_converter_8h_source.html">BaseConverter.h</a></li>
 </ul>

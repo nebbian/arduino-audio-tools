@@ -340,10 +340,10 @@ $(function() {
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;T&gt;</a> _aucBuffer;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="keywordtype">int</span> _iHead;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <span class="keywordtype">int</span> _iTail;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  <span class="keywordtype">int</span> _numElems;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keywordtype">int</span> max_size = 0;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="keyword">volatile</span> <span class="keywordtype">int</span> _iHead;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <span class="keyword">volatile</span> <span class="keywordtype">int</span> _iTail;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  <span class="keyword">volatile</span> <span class="keywordtype">int</span> _numElems;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keyword">volatile</span> <span class="keywordtype">int</span> max_size = 0;</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <span class="keywordtype">int</span> nextIndex(<span class="keywordtype">int</span> index) { <span class="keywordflow">return</span> (uint32_t)(index + 1) % max_size; }</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;};</div>

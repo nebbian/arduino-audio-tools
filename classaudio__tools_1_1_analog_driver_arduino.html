@@ -114,10 +114,33 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const ui
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a0694917ce1cd32ec87f7c336c6603b61"><td class="memItemLeft" align="right" valign="top"><a id="a0694917ce1cd32ec87f7c336c6603b61"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>decimation</b> ()</td></tr>
+<tr class="separator:a0694917ce1cd32ec87f7c336c6603b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aee67299e632d4905756d880e072a71"><td class="memItemLeft" align="right" valign="top"><a id="a4aee67299e632d4905756d880e072a71"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_arduino.html#a4aee67299e632d4905756d880e072a71">effectiveOutputSampleRate</a> ()</td></tr>
+<tr class="memdesc:a4aee67299e632d4905756d880e072a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the effective output sample rate. <br /></td></tr>
+<tr class="separator:a4aee67299e632d4905756d880e072a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af78e81ad4e230726ec9ffc8b030604"><td class="memItemLeft" align="right" valign="top"><a id="a8af78e81ad4e230726ec9ffc8b030604"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isCombinedChannel</b> ()</td></tr>
+<tr class="separator:a8af78e81ad4e230726ec9ffc8b030604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f783aba1c48dbdaf2d2be77681130e9"><td class="memItemLeft" align="right" valign="top"><a id="a2f783aba1c48dbdaf2d2be77681130e9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_arduino.html#a2f783aba1c48dbdaf2d2be77681130e9">isDecimateActive</a> ()</td></tr>
+<tr class="memdesc:a2f783aba1c48dbdaf2d2be77681130e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The requested sampling rate is too hight: we only process half of the samples so we can half the sampling rate. <br /></td></tr>
+<tr class="separator:a2f783aba1c48dbdaf2d2be77681130e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747439a6bd344c3720f2fb2bcba7301c"><td class="memItemLeft" align="right" valign="top"><a id="a747439a6bd344c3720f2fb2bcba7301c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>setupBuffer</b> ()</td></tr>
+<tr class="separator:a747439a6bd344c3720f2fb2bcba7301c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31d554847ae8fdeaba2460e0395cb75f"><td class="memItemLeft" align="right" valign="top"><a id="a31d554847ae8fdeaba2460e0395cb75f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_arduino.html#a31d554847ae8fdeaba2460e0395cb75f">setupPins</a> ()</td></tr>
 <tr class="memdesc:a31d554847ae8fdeaba2460e0395cb75f"><td class="mdescLeft">&#160;</td><td class="mdescRight">pinmode input for defined analog pins <br /></td></tr>
 <tr class="separator:a31d554847ae8fdeaba2460e0395cb75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeea6cbd1b809d911bfa922bb63eb84f"><td class="memItemLeft" align="right" valign="top"><a id="adeea6cbd1b809d911bfa922bb63eb84f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>setupTimer</b> ()</td></tr>
+<tr class="separator:adeea6cbd1b809d911bfa922bb63eb84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a4c78da19ab96b6fdd3a1750c71ee1"><td class="memItemLeft" align="right" valign="top"><a id="a18a4c78da19ab96b6fdd3a1750c71ee1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>setupTx</b> ()</td></tr>
+<tr class="separator:a18a4c78da19ab96b6fdd3a1750c71ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc86d3311c100c729468cb2dfa8cccd5"><td class="memItemLeft" align="right" valign="top"><a id="abc86d3311c100c729468cb2dfa8cccd5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateAvg</b> ()</td></tr>
 <tr class="separator:abc86d3311c100c729468cb2dfa8cccd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,21 +160,33 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ae88439bc09de5ad49c6a42807bf0f5bc"><td class="memItemLeft" align="right" valign="top"><a id="ae88439bc09de5ad49c6a42807bf0f5bc"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>avg_value</b></td></tr>
 <tr class="separator:ae88439bc09de5ad49c6a42807bf0f5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94d98a92aae52ab417cf8303e6e79a2a"><td class="memItemLeft" align="right" valign="top"><a id="a94d98a92aae52ab417cf8303e6e79a2a"></a>
-<a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; int16_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> = nullptr</td></tr>
-<tr class="separator:a94d98a92aae52ab417cf8303e6e79a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77c00903f0bb2d879d935102fbd0f32e"><td class="memItemLeft" align="right" valign="top"><a id="a77c00903f0bb2d879d935102fbd0f32e"></a>
+<a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; uint8_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> = nullptr</td></tr>
+<tr class="separator:a77c00903f0bb2d879d935102fbd0f32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad74a379f43730367af1ce2b6e6eeb9f3"><td class="memItemLeft" align="right" valign="top"><a id="ad74a379f43730367af1ce2b6e6eeb9f3"></a>
 <a class="el" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>config</b></td></tr>
 <tr class="separator:ad74a379f43730367af1ce2b6e6eeb9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad43c3812e6d13e0518d9f8b8f463ffcf"><td class="memItemLeft" align="right" valign="top"><a id="ad43c3812e6d13e0518d9f8b8f463ffcf"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>count</b></td></tr>
 <tr class="separator:ad43c3812e6d13e0518d9f8b8f463ffcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52f0612c6ec396520d127789390b4e8e"><td class="memItemLeft" align="right" valign="top"><a id="a52f0612c6ec396520d127789390b4e8e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>decim</b> = 1</td></tr>
+<tr class="separator:a52f0612c6ec396520d127789390b4e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1141e345a4b1945a1176d6df0ef9c609"><td class="memItemLeft" align="right" valign="top"><a id="a1141e345a4b1945a1176d6df0ef9c609"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>frame_size</b> = 0</td></tr>
+<tr class="separator:a1141e345a4b1945a1176d6df0ef9c609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa53c4b5a9a5ae2b1da774a13a6bd2e9"><td class="memItemLeft" align="right" valign="top"><a id="afa53c4b5a9a5ae2b1da774a13a6bd2e9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_combined_channels</b> = false</td></tr>
+<tr class="separator:afa53c4b5a9a5ae2b1da774a13a6bd2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1e1dde676c120fa6d10f3bb2c14059e"><td class="memItemLeft" align="right" valign="top"><a id="ae1e1dde676c120fa6d10f3bb2c14059e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>max</b></td></tr>
 <tr class="separator:ae1e1dde676c120fa6d10f3bb2c14059e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e202b201e6255d975cd6d3aff1f5a4d"><td class="memItemLeft" align="right" valign="top"><a id="a3e202b201e6255d975cd6d3aff1f5a4d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>min</b></td></tr>
 <tr class="separator:a3e202b201e6255d975cd6d3aff1f5a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb7d628f676b725373005679fff82ac1"><td class="memItemLeft" align="right" valign="top"><a id="adb7d628f676b725373005679fff82ac1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>result_factor</b> = 1</td></tr>
+<tr class="separator:adb7d628f676b725373005679fff82ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a871a88d476269c96439f02adc0ded977"><td class="memItemLeft" align="right" valign="top"><a id="a871a88d476269c96439f02adc0ded977"></a>
 <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html">TimerAlarmRepeating</a>&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b></td></tr>
 <tr class="separator:a871a88d476269c96439f02adc0ded977"><td class="memSeparator" colspan="2">&#160;</td></tr>

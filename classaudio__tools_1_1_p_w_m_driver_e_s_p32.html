@@ -138,16 +138,28 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>underflowsPerSeco
 <tr class="memitem:acc63d03deb732e3ae252989e42623d90"><td class="memItemLeft" align="right" valign="top"><a id="acc63d03deb732e3ae252989e42623d90"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateStatistics</b> ()</td></tr>
 <tr class="separator:acc63d03deb732e3ae252989e42623d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43c6d24f7228129a22b398abe5d0771f"><td class="memItemLeft" align="right" valign="top"><a id="a43c6d24f7228129a22b398abe5d0771f"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *wrt_buffer, size_t size)</td></tr>
-<tr class="separator:a43c6d24f7228129a22b398abe5d0771f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8543206a6d6253f45de8d884e40c3f1e"><td class="memItemLeft" align="right" valign="top"><a id="a8543206a6d6253f45de8d884e40c3f1e"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *wrt_buffer, size_t bytes)</td></tr>
+<tr class="separator:a8543206a6d6253f45de8d884e40c3f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:ab384cb1f6477fbea20479be533e2c9ec"><td class="memItemLeft" align="right" valign="top"><a id="ab384cb1f6477fbea20479be533e2c9ec"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#ab384cb1f6477fbea20479be533e2c9ec">decimation</a> ()</td></tr>
+<tr class="memdesc:ab384cb1f6477fbea20479be533e2c9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decimation factor to reduce the sample rate. <br /></td></tr>
+<tr class="separator:ab384cb1f6477fbea20479be533e2c9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13eb726740a261b50f38fb0301812631"><td class="memItemLeft" align="right" valign="top"><a id="a13eb726740a261b50f38fb0301812631"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#a13eb726740a261b50f38fb0301812631">effectiveOutputSampleRate</a> ()</td></tr>
+<tr class="memdesc:a13eb726740a261b50f38fb0301812631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the effective sample rate. <br /></td></tr>
+<tr class="separator:a13eb726740a261b50f38fb0301812631"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a630cb46e9a0636a8f424157ae3c13bf5"><td class="memItemLeft" align="right" valign="top"><a id="a630cb46e9a0636a8f424157ae3c13bf5"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#a630cb46e9a0636a8f424157ae3c13bf5">frequency</a> (int resolution)</td></tr>
 <tr class="memdesc:a630cb46e9a0636a8f424157ae3c13bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">determiens the PWM frequency based on the requested resolution <br /></td></tr>
 <tr class="separator:a630cb46e9a0636a8f424157ae3c13bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3bab74611c4c6d7e2334036506444ad"><td class="memItemLeft" align="right" valign="top"><a id="ac3bab74611c4c6d7e2334036506444ad"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#ac3bab74611c4c6d7e2334036506444ad">isDecimateActive</a> ()</td></tr>
+<tr class="memdesc:ac3bab74611c4c6d7e2334036506444ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The requested sampling rate is too hight: we only process half of the samples so we can half the sampling rate. <br /></td></tr>
+<tr class="separator:ac3bab74611c4c6d7e2334036506444ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a685bbafe8bb54cde1660bf9300eef7bf"><td class="memItemLeft" align="right" valign="top"><a id="a685bbafe8bb54cde1660bf9300eef7bf"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>maxChannels</b> ()</td></tr>
 <tr class="separator:a685bbafe8bb54cde1660bf9300eef7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,6 +167,10 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>maxChannels</b
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#ac49269e123b079022b33c93f3941c287">maxOutputValue</a> ()</td></tr>
 <tr class="memdesc:ac49269e123b079022b33c93f3941c287"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the max value for the configured resulution <br /></td></tr>
 <tr class="separator:ac49269e123b079022b33c93f3941c287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ebbdf23886d86a473efc3220ead4cd"><td class="memItemLeft" align="right" valign="top"><a id="a72ebbdf23886d86a473efc3220ead4cd"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#a72ebbdf23886d86a473efc3220ead4cd">maxSampleRate</a> ()</td></tr>
+<tr class="memdesc:a72ebbdf23886d86a473efc3220ead4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the max working sample rate. <br /></td></tr>
+<tr class="separator:a72ebbdf23886d86a473efc3220ead4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb3d02d28c027959746e2cd72e5c2956"><td class="memItemLeft" align="right" valign="top"><a id="acb3d02d28c027959746e2cd72e5c2956"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#acb3d02d28c027959746e2cd72e5c2956">maxUnsignedValue</a> (int resolution)</td></tr>
 <tr class="memdesc:acb3d02d28c027959746e2cd72e5c2956"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the max value for the indicated resulution <br /></td></tr>
@@ -180,12 +196,18 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aafb15a7f56992cf279aec99436e57085"><td class="memItemLeft" align="right" valign="top"><a id="aafb15a7f56992cf279aec99436e57085"></a>
 <a class="el" href="structaudio__tools_1_1_p_w_m_config.html">PWMConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audio_config</b></td></tr>
 <tr class="separator:aafb15a7f56992cf279aec99436e57085"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f79d541909493c7f208f4f40fcb0e5f"><td class="memItemLeft" align="right" valign="top"><a id="a0f79d541909493c7f208f4f40fcb0e5f"></a>
-<a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a>&lt; uint8_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> = nullptr</td></tr>
-<tr class="separator:a0f79d541909493c7f208f4f40fcb0e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77c00903f0bb2d879d935102fbd0f32e"><td class="memItemLeft" align="right" valign="top"><a id="a77c00903f0bb2d879d935102fbd0f32e"></a>
+<a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; uint8_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> = nullptr</td></tr>
+<tr class="separator:a77c00903f0bb2d879d935102fbd0f32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af95335d9d94aa75500d2d81fc447955e"><td class="memItemLeft" align="right" valign="top"><a id="af95335d9d94aa75500d2d81fc447955e"></a>
+<a class="el" href="classaudio__tools_1_1_decimate.html">Decimate</a>&#160;</td><td class="memItemRight" valign="bottom"><b>decimate</b></td></tr>
+<tr class="separator:af95335d9d94aa75500d2d81fc447955e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3e00071db1070451c10872b09360cad"><td class="memItemLeft" align="right" valign="top"><a id="ae3e00071db1070451c10872b09360cad"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>frame_count</b> = 0</td></tr>
 <tr class="separator:ae3e00071db1070451c10872b09360cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0229abcfe4414f86dcf52c5ebf84311c"><td class="memItemLeft" align="right" valign="top"><a id="a0229abcfe4414f86dcf52c5ebf84311c"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>frame_size</b> = 0</td></tr>
+<tr class="separator:a0229abcfe4414f86dcf52c5ebf84311c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3261fea829981d0d1196341fdac9f63f"><td class="memItemLeft" align="right" valign="top"><a id="a3261fea829981d0d1196341fdac9f63f"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>frames_per_second</b> = 0</td></tr>
 <tr class="separator:a3261fea829981d0d1196341fdac9f63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,9 +232,6 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>underflow_count</
 <tr class="memitem:a183148dc0ea7d1de94a6d75acd9332bf"><td class="memItemLeft" align="right" valign="top"><a id="a183148dc0ea7d1de94a6d75acd9332bf"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>underflow_per_second</b> = 0</td></tr>
 <tr class="separator:a183148dc0ea7d1de94a6d75acd9332bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9546f57bd470e36a39ca4849d9dbb84c"><td class="memItemLeft" align="right" valign="top"><a id="a9546f57bd470e36a39ca4849d9dbb84c"></a>
-PWMCallbackType&#160;</td><td class="memItemRight" valign="bottom"><b>user_callback</b> = nullptr</td></tr>
-<tr class="separator:a9546f57bd470e36a39ca4849d9dbb84c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Audio output to PWM pins for the ESP32. The ESP32 supports up to 16 channels. </p>
