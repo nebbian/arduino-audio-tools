@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: ConverterAutoCenter&lt; T &gt; Class Template Reference</title>
+<title>arduino-audio-tools: ConverterAutoCenter Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,11 +67,10 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_converter_auto_center-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ConverterAutoCenter&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__tools.html">Tools</a> &raquo; <a class="el" href="group__convert.html">Converters</a></div></div>  </div>
+<div class="title">ConverterAutoCenter Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__tools.html">Tools</a> &raquo; <a class="el" href="group__convert.html">Converters</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -80,59 +79,41 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_base_converter_8h_source.html">BaseConverter.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for ConverterAutoCenter&lt; T &gt;:</div>
+Inheritance diagram for ConverterAutoCenter:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_converter_auto_center.png" usemap="#ConverterAutoCenter_3C_20T_20_3E_map" alt=""/>
-  <map id="ConverterAutoCenter_3C_20T_20_3E_map" name="ConverterAutoCenter_3C_20T_20_3E_map">
-<area href="classaudio__tools_1_1_base_converter.html" title="Abstract Base class for Converters A converter is processing the data in the indicated array." alt="BaseConverter" shape="rect" coords="0,0,164,24"/>
+  <img src="classaudio__tools_1_1_converter_auto_center.png" usemap="#ConverterAutoCenter_map" alt=""/>
+  <map id="ConverterAutoCenter_map" name="ConverterAutoCenter_map">
+<area href="classaudio__tools_1_1_base_converter.html" title="Abstract Base class for Converters A converter is processing the data in the indicated array." alt="BaseConverter" shape="rect" coords="0,0,133,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6677d96800156e32266864add9f7fd6e"><td class="memItemLeft" align="right" valign="top"><a id="a6677d96800156e32266864add9f7fd6e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ConverterAutoCenter</b> (int channels=2)</td></tr>
-<tr class="separator:a6677d96800156e32266864add9f7fd6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2f6d46c001ee42beae2fd3ddc79b1c9"><td class="memItemLeft" align="right" valign="top"><a id="aa2f6d46c001ee42beae2fd3ddc79b1c9"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert</b> (uint8_t(*src), size_t byte_count)</td></tr>
-<tr class="separator:aa2f6d46c001ee42beae2fd3ddc79b1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a8e838951c8a97bae46c98e98128f3571"><td class="memItemLeft" align="right" valign="top"><a id="a8e838951c8a97bae46c98e98128f3571"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> (T *src, size_t size)</td></tr>
-<tr class="separator:a8e838951c8a97bae46c98e98128f3571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a8aae93f171ff9c84970b1b4e66cd1"><td class="memItemLeft" align="right" valign="top"><a id="a02a8aae93f171ff9c84970b1b4e66cd1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ConverterAutoCenter</b> (int channels, int bitsPerSample)</td></tr>
+<tr class="separator:a02a8aae93f171ff9c84970b1b4e66cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38a115432c68055199dc4fc631d521e8"><td class="memItemLeft" align="right" valign="top"><a id="a38a115432c68055199dc4fc631d521e8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (int channels, int bitsPerSample)</td></tr>
+<tr class="separator:a38a115432c68055199dc4fc631d521e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f22cb9d0b657ed5e0c6012038b7ae0d"><td class="memItemLeft" align="right" valign="top"><a id="a9f22cb9d0b657ed5e0c6012038b7ae0d"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert</b> (uint8_t *src, size_t size) override</td></tr>
+<tr class="separator:a9f22cb9d0b657ed5e0c6012038b7ae0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a2ae049b225e845689c9bfab94ebbc697"><td class="memItemLeft" align="right" valign="top"><a id="a2ae049b225e845689c9bfab94ebbc697"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bits_per_sample</b></td></tr>
+<tr class="separator:a2ae049b225e845689c9bfab94ebbc697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a178795099d0608972755dfef8d8367e3"><td class="memItemLeft" align="right" valign="top"><a id="a178795099d0608972755dfef8d8367e3"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b></td></tr>
 <tr class="separator:a178795099d0608972755dfef8d8367e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe4d0487b2ac337eed8caeb05a98d857"><td class="memItemLeft" align="right" valign="top"><a id="abe4d0487b2ac337eed8caeb05a98d857"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_setup</b> = false</td></tr>
-<tr class="separator:abe4d0487b2ac337eed8caeb05a98d857"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d10b0c779bad3aabf067d52035f7052"><td class="memItemLeft" align="right" valign="top"><a id="a7d10b0c779bad3aabf067d52035f7052"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>left</b></td></tr>
-<tr class="separator:a7d10b0c779bad3aabf067d52035f7052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2ec27430bd8d935c84ddf8f4d094402"><td class="memItemLeft" align="right" valign="top"><a id="ac2ec27430bd8d935c84ddf8f4d094402"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>offset</b></td></tr>
-<tr class="separator:ac2ec27430bd8d935c84ddf8f4d094402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6202f38a97a1c9eb0142baeb338cf1f1"><td class="memItemLeft" align="right" valign="top"><a id="a6202f38a97a1c9eb0142baeb338cf1f1"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>right</b></td></tr>
-<tr class="separator:a6202f38a97a1c9eb0142baeb338cf1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0390aaa660b4234e21c51df13116da9a"><td class="memItemLeft" align="right" valign="top"><a id="a0390aaa660b4234e21c51df13116da9a"></a>
+<a class="el" href="classaudio__tools_1_1_base_converter.html">BaseConverter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_converter</b> = nullptr</td></tr>
+<tr class="separator:a0390aaa660b4234e21c51df13116da9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-class audio_tools::ConverterAutoCenter&lt; T &gt;</h3>
-
-<p>Makes sure that the avg of the signal is set to 0. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
+<div class="textblock"><p>Makes sure that the avg of the signal is set to 0. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioTools/<a class="el" href="_base_converter_8h_source.html">BaseConverter.h</a></li>
 </ul>
