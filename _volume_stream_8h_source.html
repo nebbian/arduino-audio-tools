@@ -301,7 +301,7 @@ $(function() {
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    applyVolume16((int16_t*)buffer, size/2);</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                <span class="keywordflow">case</span> 24:</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                    applyVolume24((int24_t*)buffer, size/3);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                    applyVolume24((<a class="code" href="classaudio__tools_1_1int24x__t.html">int24_t</a>*)buffer, size/3);</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                <span class="keywordflow">case</span> 32:</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    applyVolume32((int32_t*)buffer, size/4);</div>
@@ -322,7 +322,7 @@ $(function() {
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            }</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        }</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordtype">void</span> applyVolume24(int24_t* data, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordtype">void</span> applyVolume24(<a class="code" href="classaudio__tools_1_1int24x__t.html">int24_t</a>* data, <span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0;j&lt;size;j++){</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                <span class="keywordtype">float</span> result = factorForChannel(j%info.channels) * data[j];</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <span class="keywordflow">if</span> (!info.allow_boost){</div>
@@ -330,7 +330,7 @@ $(function() {
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    <span class="keywordflow">if</span> (result&lt;-max_value) result = -max_value;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                } </div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                int32_t result1 = result;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                data[j]= <span class="keyword">static_cast&lt;</span>int24_t<span class="keyword">&gt;</span>(result1);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                data[j]= <span class="keyword">static_cast&lt;</span><a class="code" href="classaudio__tools_1_1int24x__t.html">int24_t</a><span class="keyword">&gt;</span>(result1);</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            }</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        }</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
@@ -380,6 +380,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_af70e2220bd25b8609cf5386bbcded254"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#af70e2220bd25b8609cf5386bbcded254">audio_tools::VolumeStream::volume</a></div><div class="ttdeci">float volume(int channel)</div><div class="ttdoc">Provides the current volume setting for the indicated channel.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:202</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_afbb59a2f946191d7cf2a5c0a00b29ec2"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#afbb59a2f946191d7cf2a5c0a00b29ec2">audio_tools::VolumeStream::available</a></div><div class="ttdeci">virtual int available() override</div><div class="ttdoc">Provides the nubmer of bytes we can write.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:153</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_volume_stream_html_afcb2a62320edc10770189f42d3b80c86"><div class="ttname"><a href="classaudio__tools_1_1_volume_stream.html#afcb2a62320edc10770189f42d3b80c86">audio_tools::VolumeStream::setStream</a></div><div class="ttdeci">void setStream(Stream &amp;in)</div><div class="ttdoc">Defines/Changes the input &amp; output.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:73</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1int24x__t_html"><div class="ttname"><a href="classaudio__tools_1_1int24x__t.html">audio_tools::int24x_t</a></div><div class="ttdoc">24bit integer which is used for I2S sound processing. The values are really using 3 bytes....</div><div class="ttdef"><b>Definition:</b> Int24x.h:16</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:9</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:43</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_volume_stream_config_html"><div class="ttname"><a href="structaudio__tools_1_1_volume_stream_config.html">audio_tools::VolumeStreamConfig</a></div><div class="ttdoc">Config for VolumeStream.</div><div class="ttdef"><b>Definition:</b> VolumeStream.h:14</div></div>
