@@ -166,15 +166,15 @@ $(function() {
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    TRACED();</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    uint8_t timer_type = GPT_TIMER;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    int8_t tindex = FspTimer::get_available_timer(timer_type);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (tindex==0){</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (tindex &lt; 0){</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      LOGE(<span class="stringliteral">&quot;Using pwm reserved timer&quot;</span>);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      FspTimer::force_use_of_pwm_reserved_timer();</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      tindex = FspTimer::get_available_timer(timer_type);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> (tindex==0){</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      LOGE(<span class="stringliteral">&quot;no timer&quot;</span>);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      tindex = FspTimer::get_available_timer(timer_type, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">if</span> (tindex &lt; 0){</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      LOGE(<span class="stringliteral">&quot;no timer&quot;</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    FspTimer::force_use_of_pwm_reserved_timer();</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    LOGI(<span class="stringliteral">&quot;timer idx: %d&quot;</span>, tindex);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">if</span>(!audio_timer.begin(TIMER_MODE_PERIODIC, timer_type, tindex, rate, 0.0f, staticCallback, <span class="keyword">this</span>)){</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      LOGE(<span class="stringliteral">&quot;error:begin&quot;</span>);</div>
