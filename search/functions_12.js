@@ -154,7 +154,7 @@ var searchData=
   ['setupchorus_2491',['setupChorus',['../classaudio__tools_1_1_simple_chorus.html#a5c7207a63fe15e97e739eb1c9cb2804c',1,'audio_tools::SimpleChorus']]],
   ['setupdecoder_2492',['setupDecoder',['../classaudio__tools_1_1_decoder_helix.html#a769e48866fb0f8e11018bab68e02c08f',1,'audio_tools::DecoderHelix']]],
   ['setupdelayeffectbase_2493',['setupDelayEffectBase',['../classaudio__tools_1_1_delay_effect_base.html#a7ccea2a522b973a56da7c2f0280f9edb',1,'audio_tools::DelayEffectBase']]],
-  ['setupi2spins_2494',['setupI2SPins',['../classaudio__tools_1_1_audio_kit_stream_config.html#ab488c7c7d7d3c547ff56ed932be97db9',1,'audio_tools::AudioKitStreamConfig']]],
+  ['setupi2spins_2494',['setupI2SPins',['../classaudio__tools_1_1_audio_kit_stream_config.html#a567e2afb71a4d538ed517075a55b0802',1,'audio_tools::AudioKitStreamConfig']]],
   ['setuplastsamples_2495',['setupLastSamples',['../classaudio__tools_1_1_resample_stream.html#ae80c7db53037e16c4654f123c8f19a93',1,'audio_tools::ResampleStream']]],
   ['setupmetadata_2496',['setupMetaData',['../classaudio__tools_1_1_meta_data_i_c_y.html#a5522c1d8b9d56e529bcfef31b49c2652',1,'audio_tools::MetaDataICY']]],
   ['setupmodulationbaseclass_2497',['setupModulationBaseClass',['../classaudio__tools_1_1_modulation_base_class.html#a7bdc015afac5f8ef02208dcb2c23f758',1,'audio_tools::ModulationBaseClass']]],
