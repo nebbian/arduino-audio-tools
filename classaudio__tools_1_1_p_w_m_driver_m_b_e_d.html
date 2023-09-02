@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: DriverPWMBase Class Reference</title>
+<title>arduino-audio-tools: PWMDriverMBED Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,35 +61,32 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html">DriverPWMBase</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_m_b_e_d.html">PWMDriverMBED</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classaudio__tools_1_1_driver_p_w_m_base-members.html">List of all members</a>  </div>
+<a href="classaudio__tools_1_1_p_w_m_driver_m_b_e_d-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">DriverPWMBase Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">PWMDriverMBED Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__platform.html">Platform</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Base Class for all PWM drivers.  
- <a href="classaudio__tools_1_1_driver_p_w_m_base.html#details">More...</a></p>
+<p>Audio output to PWM pins for MBED based Arduino implementations.  
+ <a href="classaudio__tools_1_1_p_w_m_driver_m_b_e_d.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_p_w_m_audio_base_8h_source.html">PWMAudioBase.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_p_w_m_audio_m_b_e_d_8h_source.html">PWMAudioMBED.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for DriverPWMBase:</div>
+Inheritance diagram for PWMDriverMBED:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_driver_p_w_m_base.png" usemap="#DriverPWMBase_map" alt=""/>
-  <map id="DriverPWMBase_map" name="DriverPWMBase_map">
-<area href="classaudio__tools_1_1_p_w_m_driver_a_v_r.html" title="Experimental: Audio output to PWM pins for the AVR. The AVR supports only up to 2 channels." alt="PWMDriverAVR" shape="rect" coords="0,56,126,80"/>
-<area href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html" title="Audio output to PWM pins for the ESP32. The ESP32 supports up to 16 channels." alt="PWMDriverESP32" shape="rect" coords="136,56,262,80"/>
-<area href="classaudio__tools_1_1_p_w_m_driver_m_b_e_d.html" title="Audio output to PWM pins for MBED based Arduino implementations." alt="PWMDriverMBED" shape="rect" coords="272,56,398,80"/>
-<area href="classaudio__tools_1_1_p_w_m_driver_renesas.html" title="Audio output to PWM pins for Renesas based Arduino implementations." alt="PWMDriverRenesas" shape="rect" coords="408,56,534,80"/>
-<area href="classaudio__tools_1_1_p_w_m_driver_s_t_m32.html" title="Audio output to PWM pins for STM32. We use one timer to generate the sample rate and one timer for th..." alt="PWMDriverSTM32" shape="rect" coords="544,56,670,80"/>
+  <img src="classaudio__tools_1_1_p_w_m_driver_m_b_e_d.png" usemap="#PWMDriverMBED_map" alt=""/>
+  <map id="PWMDriverMBED_map" name="PWMDriverMBED_map">
+<area href="classaudio__tools_1_1_driver_p_w_m_base.html" title="Base Class for all PWM drivers." alt="DriverPWMBase" shape="rect" coords="0,0,114,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -107,33 +104,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="
 <tr class="memitem:a6d10e013fb3a919c136a88a25386f453"><td class="memItemLeft" align="right" valign="top"><a id="a6d10e013fb3a919c136a88a25386f453"></a>
 virtual <a class="el" href="structaudio__tools_1_1_p_w_m_config.html">PWMConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
 <tr class="separator:a6d10e013fb3a919c136a88a25386f453"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa540e86022c1f72380d1014d98f38f43"><td class="memItemLeft" align="right" valign="top"><a id="aa540e86022c1f72380d1014d98f38f43"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()=0</td></tr>
-<tr class="separator:aa540e86022c1f72380d1014d98f38f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae827632720ddd6f3037ef1ee69aa3f41"><td class="memItemLeft" align="right" valign="top"><a id="ae827632720ddd6f3037ef1ee69aa3f41"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
+<tr class="separator:ae827632720ddd6f3037ef1ee69aa3f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bb801ba554b9e0d8223732389fa82f1"><td class="memItemLeft" align="right" valign="top"><a id="a0bb801ba554b9e0d8223732389fa82f1"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>framesPerSecond</b> ()</td></tr>
 <tr class="separator:a0bb801ba554b9e0d8223732389fa82f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b61d626c5acc93c15defa4e1a16bfb4"><td class="memItemLeft" align="right" valign="top"><a id="a7b61d626c5acc93c15defa4e1a16bfb4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isTimerStarted</b> ()</td></tr>
 <tr class="separator:a7b61d626c5acc93c15defa4e1a16bfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a750efbd826736e8c4b8e6b4deb2e4916"><td class="memItemLeft" align="right" valign="top"><a id="a750efbd826736e8c4b8e6b4deb2e4916"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>maxChannels</b> ()=0</td></tr>
-<tr class="separator:a750efbd826736e8c4b8e6b4deb2e4916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af609d0731ad77e76dfb8924e0f89fcd3"><td class="memItemLeft" align="right" valign="top"><a id="af609d0731ad77e76dfb8924e0f89fcd3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>maxOutputValue</b> ()=0</td></tr>
-<tr class="separator:af609d0731ad77e76dfb8924e0f89fcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ac8697a215811097d21a379479c8384"><td class="memItemLeft" align="right" valign="top"><a id="a0ac8697a215811097d21a379479c8384"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>pwmWrite</b> (int channel, int value)=0</td></tr>
-<tr class="separator:a0ac8697a215811097d21a379479c8384"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb630c4d7b49e3cf59dc4dcd992d3ba6"><td class="memItemLeft" align="right" valign="top"><a id="acb630c4d7b49e3cf59dc4dcd992d3ba6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setupPWM</b> ()=0</td></tr>
-<tr class="separator:acb630c4d7b49e3cf59dc4dcd992d3ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97751a76bfb44aa146b5ec0c47beeec6"><td class="memItemLeft" align="right" valign="top"><a id="a97751a76bfb44aa146b5ec0c47beeec6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setupTimer</b> ()=0</td></tr>
-<tr class="separator:a97751a76bfb44aa146b5ec0c47beeec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a759dff6620c7ea161b1a138c88e42d0e"><td class="memItemLeft" align="right" valign="top"><a id="a759dff6620c7ea161b1a138c88e42d0e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>startTimer</b> ()=0</td></tr>
-<tr class="separator:a759dff6620c7ea161b1a138c88e42d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eeec7b20268d0e62fe9a463132505e9"><td class="memItemLeft" align="right" valign="top"><a id="a2eeec7b20268d0e62fe9a463132505e9"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>underflowsPerSecond</b> ()</td></tr>
 <tr class="separator:a2eeec7b20268d0e62fe9a463132505e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +137,13 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#ac3bab74611c4c6d7e2334036506444ad">isDecimateActive</a> ()</td></tr>
 <tr class="memdesc:ac3bab74611c4c6d7e2334036506444ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The requested sampling rate is too hight: we only process half of the samples so we can half the sampling rate. <br /></td></tr>
 <tr class="separator:ac3bab74611c4c6d7e2334036506444ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685bbafe8bb54cde1660bf9300eef7bf"><td class="memItemLeft" align="right" valign="top"><a id="a685bbafe8bb54cde1660bf9300eef7bf"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>maxChannels</b> ()</td></tr>
+<tr class="separator:a685bbafe8bb54cde1660bf9300eef7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac49269e123b079022b33c93f3941c287"><td class="memItemLeft" align="right" valign="top"><a id="ac49269e123b079022b33c93f3941c287"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_m_b_e_d.html#ac49269e123b079022b33c93f3941c287">maxOutputValue</a> ()</td></tr>
+<tr class="memdesc:ac49269e123b079022b33c93f3941c287"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the max value for the configured resulution <br /></td></tr>
+<tr class="separator:ac49269e123b079022b33c93f3941c287"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72ebbdf23886d86a473efc3220ead4cd"><td class="memItemLeft" align="right" valign="top"><a id="a72ebbdf23886d86a473efc3220ead4cd"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#a72ebbdf23886d86a473efc3220ead4cd">maxSampleRate</a> ()</td></tr>
 <tr class="memdesc:a72ebbdf23886d86a473efc3220ead4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the max working sample rate. <br /></td></tr>
@@ -170,6 +156,29 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#a2d3704eb509af9a335dd6c61edc237c3">playNextFrame</a> ()</td></tr>
 <tr class="memdesc:a2d3704eb509af9a335dd6c61edc237c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes the next frame to the output pins <br /></td></tr>
 <tr class="separator:a2d3704eb509af9a335dd6c61edc237c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2fecd9cd9705ac26cf1a2c4f8398de"><td class="memItemLeft" align="right" valign="top"><a id="acd2fecd9cd9705ac26cf1a2c4f8398de"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_m_b_e_d.html#acd2fecd9cd9705ac26cf1a2c4f8398de">pwmWrite</a> (int channel, int value)</td></tr>
+<tr class="memdesc:acd2fecd9cd9705ac26cf1a2c4f8398de"><td class="mdescLeft">&#160;</td><td class="mdescRight">write a pwm value to the indicated channel. The max value depends on the resolution <br /></td></tr>
+<tr class="separator:acd2fecd9cd9705ac26cf1a2c4f8398de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d89f49874ec6da1534423c364453bf"><td class="memItemLeft" align="right" valign="top"><a id="ab9d89f49874ec6da1534423c364453bf"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_m_b_e_d.html#ab9d89f49874ec6da1534423c364453bf">setupPWM</a> ()</td></tr>
+<tr class="memdesc:ab9d89f49874ec6da1534423c364453bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup PWM Pins. <br /></td></tr>
+<tr class="separator:ab9d89f49874ec6da1534423c364453bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba588f4c4041836e56c7ffb61a04764"><td class="memItemLeft" align="right" valign="top"><a id="adba588f4c4041836e56c7ffb61a04764"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_m_b_e_d.html#adba588f4c4041836e56c7ffb61a04764">setupTimer</a> ()</td></tr>
+<tr class="memdesc:adba588f4c4041836e56c7ffb61a04764"><td class="mdescLeft">&#160;</td><td class="mdescRight">not used -&gt; see <a class="el" href="classaudio__tools_1_1_p_w_m_driver_m_b_e_d.html#a23e8b43798a6b64b48e29f32517efeca" title="when we get the first write -&gt; we activate the timer to start with the output of data">startTimer()</a>; <br /></td></tr>
+<tr class="separator:adba588f4c4041836e56c7ffb61a04764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e8b43798a6b64b48e29f32517efeca"><td class="memItemLeft" align="right" valign="top"><a id="a23e8b43798a6b64b48e29f32517efeca"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_m_b_e_d.html#a23e8b43798a6b64b48e29f32517efeca">startTimer</a> () override</td></tr>
+<tr class="memdesc:a23e8b43798a6b64b48e29f32517efeca"><td class="mdescLeft">&#160;</td><td class="mdescRight">when we get the first write -&gt; we activate the timer to start with the output of data <br /></td></tr>
+<tr class="separator:a23e8b43798a6b64b48e29f32517efeca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:afba856d7d0cf53662bb1432aaaa69ddd"><td class="memItemLeft" align="right" valign="top"><a id="afba856d7d0cf53662bb1432aaaa69ddd"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_m_b_e_d.html#afba856d7d0cf53662bb1432aaaa69ddd">defaultPWMAudioOutputCallback</a> (void *obj)</td></tr>
+<tr class="memdesc:afba856d7d0cf53662bb1432aaaa69ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer callback: write the next frame to the pins <br /></td></tr>
+<tr class="separator:afba856d7d0cf53662bb1432aaaa69ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -197,6 +206,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_blocking_write</b>
 <tr class="memitem:a69aae827f2f2fc4d152c1269bb2641fc"><td class="memItemLeft" align="right" valign="top"><a id="a69aae827f2f2fc4d152c1269bb2641fc"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_timer_started</b> = false</td></tr>
 <tr class="separator:a69aae827f2f2fc4d152c1269bb2641fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae195bdd4aa5fb772ef36fedec7744ce3"><td class="memItemLeft" align="right" valign="top"><a id="ae195bdd4aa5fb772ef36fedec7744ce3"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; mbed::PwmOut * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pins</b></td></tr>
+<tr class="separator:ae195bdd4aa5fb772ef36fedec7744ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bbfad48bddc037369de7df93abe0b1"><td class="memItemLeft" align="right" valign="top"><a id="ab2bbfad48bddc037369de7df93abe0b1"></a>
+<a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html">TimerAlarmRepeating</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ticker</b></td></tr>
+<tr class="separator:ab2bbfad48bddc037369de7df93abe0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfd7f5e8f8688bad4fa8988dc21355b8"><td class="memItemLeft" align="right" valign="top"><a id="adfd7f5e8f8688bad4fa8988dc21355b8"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>time_1_sec</b></td></tr>
 <tr class="separator:adfd7f5e8f8688bad4fa8988dc21355b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,9 +223,11 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>underflow_per_sec
 <tr class="separator:a183148dc0ea7d1de94a6d75acd9332bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base Class for all PWM drivers. </p>
+<div class="textblock"><p>Audio output to PWM pins for MBED based Arduino implementations. </p>
+<dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/AudioPWM/<a class="el" href="_p_w_m_audio_base_8h_source.html">PWMAudioBase.h</a></li>
+<li>src/AudioPWM/<a class="el" href="_p_w_m_audio_m_b_e_d_8h_source.html">PWMAudioMBED.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
