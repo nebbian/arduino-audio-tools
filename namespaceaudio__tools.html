@@ -753,6 +753,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p8266.html">I2SDriverESP8266</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic I2S API - for the ESP8266 Only 16 bits are supported !  <a href="classaudio__tools_1_1_i2_s_driver_e_s_p8266.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_nano_b_l_e.html">I2SDriverNanoBLE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic I2S API - for the Arduino Nano BLE Sense See <a href="https://content.arduino.cc/assets/Nano_BLE_MCU-nRF52840_PS_v1.1.pdf?_gl=1">https://content.arduino.cc/assets/Nano_BLE_MCU-nRF52840_PS_v1.1.pdf?_gl=1</a>*1huxzp5*_ga*MTk1MjI1NjMzOS4xNjc1MzI4MTcx*_ga_NEXN8H46L5*MTY5MzQ5MDg2Ni45NS4xLjE2OTM0OTA4NjguMC4wLjA. Douplex mode (RXTX_MODE) is currently not supported, but it should be quite easy to implement.  <a href="classaudio__tools_1_1_i2_s_driver_nano_b_l_e.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_r_p2040.html">I2SDriverRP2040</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic I2S API - for the ...  <a href="classaudio__tools_1_1_i2_s_driver_r_p2040.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -929,6 +932,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_musical_notes.html">MusicalNotes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determination of the frequency of a music note.  <a href="classaudio__tools_1_1_musical_notes.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_nano___b_l_e__freq__info.html">Nano_BLE_freq_info</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping Frequency constants to available frequencies.  <a href="structaudio__tools_1_1_nano___b_l_e__freq__info.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_nano___b_l_e__ratio__info.html">Nano_BLE_ratio_info</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping from Ratio Constants to frequency ratios.  <a href="structaudio__tools_1_1_nano___b_l_e__ratio__info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lock free N buffer. If count=2 we create a DoubleBuffer, if count=3 a TripleBuffer etc.  <a href="classaudio__tools_1_1_n_buffer.html#details">More...</a><br /></td></tr>
@@ -1789,6 +1798,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="names
 CHSV&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a7788a85ffcebdcf25ea71d8789d60e42">getDefaultColor</a> (int x, int y, int magnitude)</td></tr>
 <tr class="memdesc:a7788a85ffcebdcf25ea71d8789d60e42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default logic to update the color for the indicated x,y position. <br /></td></tr>
 <tr class="separator:a7788a85ffcebdcf25ea71d8789d60e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad663a1188408b698e16703cd27bf955f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#ad663a1188408b698e16703cd27bf955f">I2S_IRQHandler</a> (void)</td></tr>
+<tr class="separator:ad663a1188408b698e16703cd27bf955f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2e2ed9bbfc3a6778916dff5c270980c"><td class="memItemLeft" align="right" valign="top"><a id="aa2e2ed9bbfc3a6778916dff5c270980c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#aa2e2ed9bbfc3a6778916dff5c270980c">ISR</a> (TIMER1_COMPA_vect)</td></tr>
 <tr class="memdesc:aa2e2ed9bbfc3a6778916dff5c270980c"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer callback: write the next frame to the pins <br /></td></tr>
@@ -1978,12 +1989,17 @@ tflite::ErrorReporter *&#160;</td><td class="memItemRight" valign="bottom"><b>er
 <tr class="memitem:a1657e5bc9760514c39cc563553f0b762"><td class="memItemLeft" align="right" valign="top"><a id="a1657e5bc9760514c39cc563553f0b762"></a>
 <a class="el" href="classaudio__tools_1_1_e_s_p_now_stream.html">ESPNowStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ESPNowStreamSelf</b> = nullptr</td></tr>
 <tr class="separator:a1657e5bc9760514c39cc563553f0b762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c126f5da5083180105203584ff7de4e"><td class="memItemLeft" align="right" valign="top">INLINE_VAR const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__freq__info.html">Nano_BLE_freq_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>freq_table</b> []</td></tr>
+<tr class="separator:a1c126f5da5083180105203584ff7de4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56761b0ae50923be178b4ada8d5b7081"><td class="memItemLeft" align="right" valign="top"><a id="a56761b0ae50923be178b4ada8d5b7081"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>genres</b> [] = { &quot;Classic Rock&quot;, &quot;Country&quot;, &quot;Dance&quot;, &quot;Disco&quot;, &quot;Funk&quot;, &quot;Grunge&quot;, &quot;Hip-Hop&quot;, &quot;Jazz&quot;, &quot;Metal&quot;, &quot;New Age&quot;, &quot;Oldies&quot;, &quot;Other&quot;, &quot;Pop&quot;, &quot;R&amp;B&quot;, &quot;Rap&quot;, &quot;Reggae&quot;, &quot;Rock&quot;, &quot;Techno&quot;, &quot;Industrial&quot;, &quot;Alternative&quot;, &quot;Ska&quot;, &quot;Death Metal&quot;, &quot;Pranks&quot;, &quot;Soundtrack&quot;, &quot;Euro-Techno&quot;, &quot;Ambient&quot;, &quot;Trip-Hop&quot;, &quot;Vocal&quot;, &quot;Jazz+Funk&quot;, &quot;Fusion&quot;, &quot;Trance&quot;, &quot;Classical&quot;, &quot;Instrumental&quot;, &quot;Acid&quot;, &quot;House&quot;, &quot;Game&quot;, &quot;Sound Clip&quot;, &quot;Gospel&quot;, &quot;Noise&quot;, &quot;Alternative Rock&quot;, &quot;Bass&quot;, &quot;Soul&quot;, &quot;Punk&quot;, &quot;Space&quot;, &quot;Meditative&quot;, &quot;Instrumental Pop&quot;, &quot;Instrumental Rock&quot;, &quot;Ethnic&quot;, &quot;Gothic&quot;, &quot;Darkwave&quot;, &quot;Techno-Insdustiral&quot;, &quot;Electronic&quot;, &quot;Pop-Folk&quot;, &quot;Eurodance&quot;, &quot;Dream&quot;, &quot;Southern Rock&quot;, &quot;Comedy&quot;, &quot;Cult&quot;, &quot;Gangsta&quot;, &quot;Top 40&quot;, &quot;Christian Rap&quot;, &quot;Pop/Funk&quot;, &quot;Jungle&quot;, &quot;Native US&quot;, &quot;Cabaret&quot;, &quot;New Wave&quot;, &quot;Psychadelic&quot;, &quot;Rave&quot;, &quot;Showtunes&quot;, &quot;Trailer&quot;, &quot;Lo-Fi&quot;, &quot;Tribal&quot;, &quot;Acid Punk&quot;, &quot;Acid Jazz&quot;, &quot;Polka&quot;, &quot;Retro&quot;, &quot;Musical&quot;, &quot;Rock &amp; Roll&quot;, &quot;Hard Rock&quot;, &quot;Folk&quot;, &quot;Folk-Rock&quot;, &quot;National Folk&quot;, &quot;Swing&quot;, &quot;Fast Fusion&quot;, &quot;Bebob&quot;, &quot;Latin&quot;, &quot;Revival&quot;, &quot;Celtic&quot;, &quot;Bluegrass&quot;, &quot;Avantgarde&quot;, &quot;Gothic Rock&quot;, &quot;Progressive Rock&quot;, &quot;Psychedelic Rock&quot;, &quot;Symphonic Rock&quot;, &quot;Slow Rock&quot;, &quot;Big Band&quot;, &quot;Chorus&quot;, &quot;Easy Listening&quot;, &quot;Acoustic&quot;,&quot;Humour&quot;, &quot;Speech&quot;, &quot;Chanson&quot;, &quot;Opera&quot;, &quot;Chamber Music&quot;, &quot;Sonata&quot;, &quot;Symphony&quot;, &quot;Booty Bass&quot;, &quot;Primus&quot;, &quot;Porn Groove&quot;, &quot;Satire&quot;, &quot;Slow Jam&quot;, &quot;Club&quot;, &quot;Tango&quot;, &quot;Samba&quot;, &quot;Folklore&quot;, &quot;Ballad&quot;, &quot;Power Ballad&quot;, &quot;Rhytmic Soul&quot;, &quot;Freestyle&quot;, &quot;Duet&quot;, &quot;Punk Rock&quot;, &quot;Drum Solo&quot;, &quot;Acapella&quot;, &quot;Euro-House&quot;, &quot;Dance Hall&quot;, &quot;Goa&quot;, &quot;Drum &amp; Bass&quot;, &quot;Club-House&quot;, &quot;Hardcore&quot;, &quot;Terror&quot;, &quot;Indie&quot;, &quot;BritPop&quot;, &quot;Negerpunk&quot;, &quot;Polsk Punk&quot;, &quot;Beat&quot;, &quot;Christian Gangsta&quot;, &quot;Heavy Metal&quot;, &quot;Black Metal&quot;, &quot;Crossover&quot;, &quot;Contemporary C&quot;, &quot;Christian Rock&quot;, &quot;Merengue&quot;, &quot;Salsa&quot;, &quot;Thrash Metal&quot;, &quot;Anime&quot;, &quot;JPop&quot;, &quot;SynthPop&quot; }</td></tr>
 <tr class="separator:a56761b0ae50923be178b4ada8d5b7081"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a057cab1bfbc8bf970d27c9844d5b68bf"><td class="memItemLeft" align="right" valign="top"><a id="a057cab1bfbc8bf970d27c9844d5b68bf"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>HOST_C</b> = &quot;Host&quot;</td></tr>
 <tr class="separator:a057cab1bfbc8bf970d27c9844d5b68bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac5ce6c19e6f67dbd4b3cc83a89ba06"><td class="memItemLeft" align="right" valign="top"><a id="adac5ce6c19e6f67dbd4b3cc83a89ba06"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_buffer_size</b> = 0</td></tr>
+<tr class="separator:adac5ce6c19e6f67dbd4b3cc83a89ba06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba6ba92067daa4deab6667b0ba41d8e4"><td class="memItemLeft" align="right" valign="top"><a id="aba6ba92067daa4deab6667b0ba41d8e4"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_formats</b> [] = {&quot;I2S_STD_FORMAT&quot;,&quot;I2S_LSB_FORMAT&quot;,&quot;I2S_MSB_FORMAT&quot;,&quot;I2S_PHILIPS_FORMAT&quot;,&quot;I2S_RIGHT_JUSTIFIED_FORMAT&quot;,&quot;I2S_LEFT_JUSTIFIED_FORMAT&quot;,&quot;I2S_PCM&quot;}</td></tr>
 <tr class="separator:aba6ba92067daa4deab6667b0ba41d8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2007,6 +2023,9 @@ INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ID
 static effectsuite_t **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a6a8099d013ab0669c1f915584b0ed32e">interpolationTable</a> = nullptr</td></tr>
 <tr class="memdesc:a6a8099d013ab0669c1f915584b0ed32e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Table of interpolation values as a 2D array indexed by interpolationTable[pointIndex][alphaIndex]. <br /></td></tr>
 <tr class="separator:a6a8099d013ab0669c1f915584b0ed32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5df7c77ce7bf804c2cfeedbb4c824074"><td class="memItemLeft" align="right" valign="top"><a id="a5df7c77ce7bf804c2cfeedbb4c824074"></a>
+static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>irq_count</b> = 0</td></tr>
+<tr class="separator:a5df7c77ce7bf804c2cfeedbb4c824074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2392d2cf9f9fd71dde3fb54fe41c843f"><td class="memItemLeft" align="right" valign="top"><a id="a2392d2cf9f9fd71dde3fb54fe41c843f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_a2dp_active</b> = false</td></tr>
 <tr class="separator:a2392d2cf9f9fd71dde3fb54fe41c843f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2029,6 +2048,12 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>mod_table</b> [
 <tr class="memitem:gaa6b8a6eeddaa94b45d1658f4b8e43dee"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classaudio__tools_1_1_tf_lite_audio_error_reporter.html">audio_tools::TfLiteAudioErrorReporter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>my_error_reporter</b></td></tr>
 <tr class="separator:gaa6b8a6eeddaa94b45d1658f4b8e43dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c4337e5662744b392f8c2dc75c39257"><td class="memItemLeft" align="right" valign="top"><a id="a3c4337e5662744b392f8c2dc75c39257"></a>
+static uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>p_i2s_array</b> = nullptr</td></tr>
+<tr class="separator:a3c4337e5662744b392f8c2dc75c39257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb163eb15d4082e1741bb33eb3a2bf1b"><td class="memItemLeft" align="right" valign="top"><a id="acb163eb15d4082e1741bb33eb3a2bf1b"></a>
+static <a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a>&lt; uint8_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>p_i2s_buffer</b> = nullptr</td></tr>
+<tr class="separator:acb163eb15d4082e1741bb33eb3a2bf1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47d58653d96b1fb2ec5fce0d2db5ac66"><td class="memItemLeft" align="right" valign="top"><a id="a47d58653d96b1fb2ec5fce0d2db5ac66"></a>
 <a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a>&lt; uint8_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>p_rx_buffer</b> =nullptr</td></tr>
 <tr class="separator:a47d58653d96b1fb2ec5fce0d2db5ac66"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2038,6 +2063,8 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>mod_table</b> [
 <tr class="memitem:aacc13d3b89aaa87d30536028eebb33f7"><td class="memItemLeft" align="right" valign="top"><a id="aacc13d3b89aaa87d30536028eebb33f7"></a>
 <a class="el" href="classaudio__tools_1_1_audio_kit_stream.html">AudioKitStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pt_AudioKitStream</b> = nullptr</td></tr>
 <tr class="separator:aacc13d3b89aaa87d30536028eebb33f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30ba9db01f9c2f61498a2107b0eba834"><td class="memItemLeft" align="right" valign="top">INLINE_VAR const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__ratio__info.html">Nano_BLE_ratio_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ratio_table</b> []</td></tr>
+<tr class="separator:a30ba9db01f9c2f61498a2107b0eba834"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad79aae4ad20c15c6daa69209dc3d0535"><td class="memItemLeft" align="right" valign="top"><a id="ad79aae4ad20c15c6daa69209dc3d0535"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#ad79aae4ad20c15c6daa69209dc3d0535">RxTxModeNames</a> [] ={&quot;UNDEFINED_MODE&quot;,&quot;TX_MODE&quot;,&quot;RX_MODE&quot;,&quot;RXTX_MODE&quot; }</td></tr>
 <tr class="memdesc:ad79aae4ad20c15c6daa69209dc3d0535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text string (description) for RxTxMode. <br /></td></tr>
@@ -2160,6 +2187,25 @@ Norman Ritz </dd></dl>
 
 <p>Opus header. </p>
 <p>Simplified header w/o comments. </p>
+
+</div>
+</div>
+<a id="ad663a1188408b698e16703cd27bf955f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad663a1188408b698e16703cd27bf955f">&#9670;&nbsp;</a></span>I2S_IRQHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void audio_tools::I2S_IRQHandler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>I2S Event handler </p>
 
 </div>
 </div>
@@ -2290,6 +2336,35 @@ Norman Ritz </dd></dl>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a1c126f5da5083180105203584ff7de4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c126f5da5083180105203584ff7de4e">&#9670;&nbsp;</a></span>freq_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INLINE_VAR const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__freq__info.html">Nano_BLE_freq_info</a> freq_table[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV8, 32.0 / 8 },</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV10, 32 / 10  },</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV11, 32.0 / 11 },</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV15, 32.0 / 15 },</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV16, 32.0 / 16 },</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV21, 32.0 / 21 },</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV23, 32.0 / 23 },</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV30, 32.0 / 30 },</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV31, 32.0 / 31 },</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV32, 32.0 / 32 },</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV42, 32.0 / 42 },</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV63, 32.0 / 63 },</div>
+<div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV125, 32.0 / 125 }</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="adcd16d9c878142e5abb1eb957e077319"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adcd16d9c878142e5abb1eb957e077319">&#9670;&nbsp;</a></span>ima_index_table</h2>
 
@@ -2329,6 +2404,31 @@ Norman Ritz </dd></dl>
 <div class="line">    2272, 2499, 2749, 3024, 3327, 3660, 4026, 4428, 4871, 5358,</div>
 <div class="line">    5894, 6484, 7132, 7845, 8630, 9493, 10442, 11487, 12635, 13899,</div>
 <div class="line">    15289, 16818, 18500, 20350, 22385, 24623, 27086, 29794, 32767</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a30ba9db01f9c2f61498a2107b0eba834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ba9db01f9c2f61498a2107b0eba834">&#9670;&nbsp;</a></span>ratio_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INLINE_VAR const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__ratio__info.html">Nano_BLE_ratio_info</a> ratio_table[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  { I2S_CONFIG_RATIO_RATIO_32X, 32.0  },</div>
+<div class="line">  { I2S_CONFIG_RATIO_RATIO_48X, 48.0  },</div>
+<div class="line">  { I2S_CONFIG_RATIO_RATIO_64X, 64.0 },</div>
+<div class="line">  { I2S_CONFIG_RATIO_RATIO_96X, 96.0  },</div>
+<div class="line">  { I2S_CONFIG_RATIO_RATIO_128X, 128.0  },</div>
+<div class="line">  { I2S_CONFIG_RATIO_RATIO_192X, 192.0  },</div>
+<div class="line">  { I2S_CONFIG_RATIO_RATIO_256X, 256.0  },</div>
+<div class="line">  { I2S_CONFIG_RATIO_RATIO_384X, 384.0  },</div>
+<div class="line">  { I2S_CONFIG_RATIO_RATIO_512X, 512.0 }</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

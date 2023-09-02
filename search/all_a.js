@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['jpegopencv_584',['JpegOpenCV',['../classaudio__tools_1_1_jpeg_open_c_v.html',1,'audio_tools']]],
-  ['jpegtft_585',['JpegTFT',['../classaudio__tools_1_1_jpeg_t_f_t.html',1,'audio_tools']]],
-  ['jupyteraudiot_586',['JupyterAudioT',['../classaudio__tools_1_1_jupyter_audio_t.html',1,'audio_tools']]]
+  ['jpegopencv_588',['JpegOpenCV',['../classaudio__tools_1_1_jpeg_open_c_v.html',1,'audio_tools']]],
+  ['jpegtft_589',['JpegTFT',['../classaudio__tools_1_1_jpeg_t_f_t.html',1,'audio_tools']]],
+  ['jupyteraudiot_590',['JupyterAudioT',['../classaudio__tools_1_1_jupyter_audio_t.html',1,'audio_tools']]]
 ];
