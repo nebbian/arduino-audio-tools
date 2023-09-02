@@ -157,7 +157,7 @@ $(function() {
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">// E.g. if we try to write to a server we might not have any output destination yet</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordtype">int</span> to_write = to-&gt;availableForWrite();</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">if</span> (check_available_for_write &amp;&amp; to_write==0){</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                 <a class="code" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a>(500);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                 <a class="code" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a>(delay_on_no_data);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                 <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>

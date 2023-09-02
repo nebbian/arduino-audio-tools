@@ -1803,6 +1803,9 @@ CHSV&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <tr class="separator:a7788a85ffcebdcf25ea71d8789d60e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad663a1188408b698e16703cd27bf955f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#ad663a1188408b698e16703cd27bf955f">I2S_IRQHandler</a> (void)</td></tr>
 <tr class="separator:ad663a1188408b698e16703cd27bf955f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92daeb5f4d48687b3a1d5d46bcefa009"><td class="memItemLeft" align="right" valign="top"><a id="a92daeb5f4d48687b3a1d5d46bcefa009"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>I2S_IRQWrite</b> (void)</td></tr>
+<tr class="separator:a92daeb5f4d48687b3a1d5d46bcefa009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2e2ed9bbfc3a6778916dff5c270980c"><td class="memItemLeft" align="right" valign="top"><a id="aa2e2ed9bbfc3a6778916dff5c270980c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#aa2e2ed9bbfc3a6778916dff5c270980c">ISR</a> (TIMER1_COMPA_vect)</td></tr>
 <tr class="memdesc:aa2e2ed9bbfc3a6778916dff5c270980c"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer callback: write the next frame to the pins <br /></td></tr>
@@ -2009,6 +2012,9 @@ INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2
 <tr class="memitem:a133a7b01aa677c803ef3e250786db6e7"><td class="memItemLeft" align="right" valign="top"><a id="a133a7b01aa677c803ef3e250786db6e7"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_signal_types</b> [] = {&quot;Digital&quot;,&quot;Analog&quot;,&quot;PDM&quot;,&quot;TDM&quot;}</td></tr>
 <tr class="separator:a133a7b01aa677c803ef3e250786db6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2159d8be72a8dd0966b5931fef29d11"><td class="memItemLeft" align="right" valign="top"><a id="ac2159d8be72a8dd0966b5931fef29d11"></a>
+static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_underflow_count</b> = 0</td></tr>
+<tr class="separator:ac2159d8be72a8dd0966b5931fef29d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5bd66f7ba08dad7aa9bb00de8967a04"><td class="memItemLeft" align="right" valign="top"><a id="ac5bd66f7ba08dad7aa9bb00de8967a04"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>id3_v2_tags</b> [] = {&quot;TALB&quot;, &quot;TOPE&quot;, &quot;TPE1&quot;, &quot;TIT2&quot;, &quot;TCON&quot;}</td></tr>
 <tr class="separator:ac5bd66f7ba08dad7aa9bb00de8967a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2026,9 +2032,6 @@ INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ID
 static effectsuite_t **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a6a8099d013ab0669c1f915584b0ed32e">interpolationTable</a> = nullptr</td></tr>
 <tr class="memdesc:a6a8099d013ab0669c1f915584b0ed32e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Table of interpolation values as a 2D array indexed by interpolationTable[pointIndex][alphaIndex]. <br /></td></tr>
 <tr class="separator:a6a8099d013ab0669c1f915584b0ed32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5df7c77ce7bf804c2cfeedbb4c824074"><td class="memItemLeft" align="right" valign="top"><a id="a5df7c77ce7bf804c2cfeedbb4c824074"></a>
-static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>irq_count</b> = 0</td></tr>
-<tr class="separator:a5df7c77ce7bf804c2cfeedbb4c824074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2392d2cf9f9fd71dde3fb54fe41c843f"><td class="memItemLeft" align="right" valign="top"><a id="a2392d2cf9f9fd71dde3fb54fe41c843f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_a2dp_active</b> = false</td></tr>
 <tr class="separator:a2392d2cf9f9fd71dde3fb54fe41c843f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2054,9 +2057,12 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>mod_table</b> [
 <tr class="memitem:a3c4337e5662744b392f8c2dc75c39257"><td class="memItemLeft" align="right" valign="top"><a id="a3c4337e5662744b392f8c2dc75c39257"></a>
 static uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>p_i2s_array</b> = nullptr</td></tr>
 <tr class="separator:a3c4337e5662744b392f8c2dc75c39257"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb163eb15d4082e1741bb33eb3a2bf1b"><td class="memItemLeft" align="right" valign="top"><a id="acb163eb15d4082e1741bb33eb3a2bf1b"></a>
-static <a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a>&lt; uint8_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>p_i2s_buffer</b> = nullptr</td></tr>
-<tr class="separator:acb163eb15d4082e1741bb33eb3a2bf1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc371f71dd7045b39e843b56b6d66cd"><td class="memItemLeft" align="right" valign="top"><a id="aedc371f71dd7045b39e843b56b6d66cd"></a>
+static <a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; uint8_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>p_i2s_buffer</b> = nullptr</td></tr>
+<tr class="separator:aedc371f71dd7045b39e843b56b6d66cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd3112a9b583924f54409cf3b4dda9c"><td class="memItemLeft" align="right" valign="top"><a id="addd3112a9b583924f54409cf3b4dda9c"></a>
+static <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_nano_ble_stream</b> =nullptr</td></tr>
+<tr class="separator:addd3112a9b583924f54409cf3b4dda9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47d58653d96b1fb2ec5fce0d2db5ac66"><td class="memItemLeft" align="right" valign="top"><a id="a47d58653d96b1fb2ec5fce0d2db5ac66"></a>
 <a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a>&lt; uint8_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>p_rx_buffer</b> =nullptr</td></tr>
 <tr class="separator:a47d58653d96b1fb2ec5fce0d2db5ac66"><td class="memSeparator" colspan="2">&#160;</td></tr>
