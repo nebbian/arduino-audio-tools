@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['cmsis_2746',['CMSIS',['../group__fft-cmsis.html',1,'']]],
-  ['codecs_2747',['Codecs',['../group__codecs.html',1,'']]],
-  ['collections_2748',['Collections',['../group__collections.html',1,'']]],
-  ['communications_2749',['Communications',['../group__communications.html',1,'']]],
-  ['converters_2750',['Converters',['../group__convert.html',1,'']]],
-  ['converting_20streams_2751',['Converting Streams',['../group__transform.html',1,'']]]
+  ['cmsis_2743',['CMSIS',['../group__fft-cmsis.html',1,'']]],
+  ['codecs_2744',['Codecs',['../group__codecs.html',1,'']]],
+  ['collections_2745',['Collections',['../group__collections.html',1,'']]],
+  ['communications_2746',['Communications',['../group__communications.html',1,'']]],
+  ['converters_2747',['Converters',['../group__convert.html',1,'']]],
+  ['converting_20streams_2748',['Converting Streams',['../group__transform.html',1,'']]]
 ];
