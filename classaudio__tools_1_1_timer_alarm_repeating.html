@@ -85,15 +85,19 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html#add0f5aed6b7228dd21bd91eae4f3ad44">TimerAlarmRepeating</a> ()=default</td></tr>
 <tr class="memdesc:add0f5aed6b7228dd21bd91eae4f3ad44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
 <tr class="separator:add0f5aed6b7228dd21bd91eae4f3ad44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac27f9ec5013ef8fbf4f1857d0256046e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html#ac27f9ec5013ef8fbf4f1857d0256046e">TimerAlarmRepeating</a> (<a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_base.html">TimerAlarmRepeatingDriverBase</a> &amp;driver)</td></tr>
-<tr class="memdesc:ac27f9ec5013ef8fbf4f1857d0256046e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Timer Alarm Repeating object by passing your object which has been customized with some special platform specific parameters.  <a href="classaudio__tools_1_1_timer_alarm_repeating.html#ac27f9ec5013ef8fbf4f1857d0256046e">More...</a><br /></td></tr>
-<tr class="separator:ac27f9ec5013ef8fbf4f1857d0256046e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a227dfa05f6898d3c069dab2e132a16f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html#a227dfa05f6898d3c069dab2e132a16f7">TimerAlarmRepeating</a> (<a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_base.html">TimerAlarmRepeatingDriverBase</a> &amp;timer)</td></tr>
+<tr class="memdesc:a227dfa05f6898d3c069dab2e132a16f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Timer Alarm Repeating object by passing your object which has been customized with some special platform specific parameters.  <a href="classaudio__tools_1_1_timer_alarm_repeating.html#a227dfa05f6898d3c069dab2e132a16f7">More...</a><br /></td></tr>
+<tr class="separator:a227dfa05f6898d3c069dab2e132a16f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6c6922045b3def7d642cbf1b0362863"><td class="memItemLeft" align="right" valign="top"><a id="ac6c6922045b3def7d642cbf1b0362863"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (repeating_timer_callback_t callback_f, uint32_t time, <a class="el" href="group__basic.html#gadd9fe45e09605eee3e4a39c8a5c4476d">TimeUnit</a> unit=MS)</td></tr>
 <tr class="separator:ac6c6922045b3def7d642cbf1b0362863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a102f2cbffafb79eaa4d846faabdd225b"><td class="memItemLeft" align="right" valign="top"><a id="a102f2cbffafb79eaa4d846faabdd225b"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>callbackParameter</b> ()</td></tr>
 <tr class="separator:a102f2cbffafb79eaa4d846faabdd225b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ccc53ef2743d6add288d2d644f6bf3"><td class="memItemLeft" align="right" valign="top"><a id="a13ccc53ef2743d6add288d2d644f6bf3"></a>
+<a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_base.html">TimerAlarmRepeatingDriverBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html#a13ccc53ef2743d6add288d2d644f6bf3">driver</a> ()</td></tr>
+<tr class="memdesc:a13ccc53ef2743d6add288d2d644f6bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the driver. <br /></td></tr>
+<tr class="separator:a13ccc53ef2743d6add288d2d644f6bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af545ab12986d2fe462f1013c3bafb5f3"><td class="memItemLeft" align="right" valign="top"><a id="af545ab12986d2fe462f1013c3bafb5f3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:af545ab12986d2fe462f1013c3bafb5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,24 +120,24 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimerFunct
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a8c0e721acc08d325c0868bf5c9463f26"><td class="memItemLeft" align="right" valign="top"><a id="a8c0e721acc08d325c0868bf5c9463f26"></a>
-<a class="el" href="namespaceaudio__tools.html#ad26cc1d7714553c807f4592a48647bb2">TimerAlarmRepeatingDriver</a>&#160;</td><td class="memItemRight" valign="bottom"><b>driver</b></td></tr>
-<tr class="separator:a8c0e721acc08d325c0868bf5c9463f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a407c3efba665d276a38229f905bef352"><td class="memItemLeft" align="right" valign="top"><a id="a407c3efba665d276a38229f905bef352"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false</td></tr>
 <tr class="separator:a407c3efba665d276a38229f905bef352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a077376d12464f945e2414d5499c79b3f"><td class="memItemLeft" align="right" valign="top"><a id="a077376d12464f945e2414d5499c79b3f"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>object</b> =nullptr</td></tr>
 <tr class="separator:a077376d12464f945e2414d5499c79b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64586071625f4e1d4d47f949f462aade"><td class="memItemLeft" align="right" valign="top"><a id="a64586071625f4e1d4d47f949f462aade"></a>
-<a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_base.html">TimerAlarmRepeatingDriverBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_driver</b> =&amp;driver</td></tr>
-<tr class="separator:a64586071625f4e1d4d47f949f462aade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae937d71b128b92770abc2e449fdadcef"><td class="memItemLeft" align="right" valign="top"><a id="ae937d71b128b92770abc2e449fdadcef"></a>
+<a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_base.html">TimerAlarmRepeatingDriverBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_timer</b> =&amp;timer</td></tr>
+<tr class="separator:ae937d71b128b92770abc2e449fdadcef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b93411409868cd67bcc9b5dd3c90764"><td class="memItemLeft" align="right" valign="top"><a id="a8b93411409868cd67bcc9b5dd3c90764"></a>
+<a class="el" href="namespaceaudio__tools.html#ad26cc1d7714553c807f4592a48647bb2">TimerAlarmRepeatingDriver</a>&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b></td></tr>
+<tr class="separator:a8b93411409868cd67bcc9b5dd3c90764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common Interface definition for <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html" title="Common Interface definition for TimerAlarmRepeating.">TimerAlarmRepeating</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac27f9ec5013ef8fbf4f1857d0256046e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac27f9ec5013ef8fbf4f1857d0256046e">&#9670;&nbsp;</a></span>TimerAlarmRepeating()</h2>
+<a id="a227dfa05f6898d3c069dab2e132a16f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a227dfa05f6898d3c069dab2e132a16f7">&#9670;&nbsp;</a></span>TimerAlarmRepeating()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +149,7 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><b>object</b> =nullptr
           <td class="memname"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating.html">TimerAlarmRepeating</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_base.html">TimerAlarmRepeatingDriverBase</a> &amp;&#160;</td>
-          <td class="paramname"><em>driver</em></td><td>)</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -159,7 +163,7 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><b>object</b> =nullptr
 <p>Construct a new Timer Alarm Repeating object by passing your object which has been customized with some special platform specific parameters. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">driver</td><td></td></tr>
+    <tr><td class="paramname">timer</td><td></td></tr>
   </table>
   </dd>
 </dl>
