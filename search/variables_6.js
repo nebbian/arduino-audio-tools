@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['i2c_5fretry_5fcount_2688',['i2c_retry_count',['../classaudio__tools_1_1_w_m8960_config.html#abf87d032d525a80cf660a9831b339343',1,'audio_tools::WM8960Config']]],
-  ['iirbuffer_2689',['iirBuffer',['../classaudio__tools_1_1_filter_effect_base.html#a36d5aa51a18cec371e662a4bd00ad73f',1,'audio_tools::FilterEffectBase']]],
-  ['iircoefficients_2690',['iirCoefficients',['../classaudio__tools_1_1_filter_effect_base.html#aa555d7f6c45fdc476c00ac7b3615c3cc',1,'audio_tools::FilterEffectBase']]],
-  ['iirtemp_2691',['iirTemp',['../classaudio__tools_1_1_filter_effect_base.html#a97fe61a525fa1ebad0372c58e828ffa1',1,'audio_tools::FilterEffectBase']]],
-  ['inband_5ffec_2692',['inband_fec',['../structaudio__tools_1_1_opus_encoder_settings.html#a296ff283109f7745b8b1839f7e0aafeb',1,'audio_tools::OpusEncoderSettings']]],
-  ['internal_5fpi_2693',['internal_Pi',['../classaudio__tools_1_1_simple_flanger.html#a4187d5295c8a8a0525d08767b72fa1cb',1,'audio_tools::SimpleFlanger']]],
-  ['interpolationtable_2694',['interpolationTable',['../namespaceaudio__tools.html#a6a8099d013ab0669c1f915584b0ed32e',1,'audio_tools']]],
-  ['invdelayincrement_2695',['invDelayIncrement',['../classaudio__tools_1_1_simple_delay.html#ae4c6bcb89dc7036c4e9628009f5c415d',1,'audio_tools::SimpleDelay']]],
-  ['is_5fencoded_5fdata_2696',['is_encoded_data',['../classaudio__tools_1_1_v_s1053_config.html#a7b14309e060b9f949aaf463b34c71b85',1,'audio_tools::VS1053Config']]],
-  ['is_5fheader_5fatom_2697',['is_header_atom',['../structaudio__tools_1_1_m_p4_atom.html#a4d6da82e71ad7d26f3f75da60f862bad',1,'audio_tools::MP4Atom']]],
-  ['is_5fmidi_2698',['is_midi',['../classaudio__tools_1_1_v_s1053_config.html#aea157fea730d2a87c178d1bc19c6868d',1,'audio_tools::VS1053Config']]],
-  ['is_5fstart_5fspi_2699',['is_start_spi',['../classaudio__tools_1_1_v_s1053_config.html#aa2c844c92e04a703ca54d15d011630ab',1,'audio_tools::VS1053Config']]],
-  ['is_5fstream_2700',['is_stream',['../structaudio__tools_1_1_m_p4_atom.html#aca37a3469c636b99ddd5aee36184f7d5',1,'audio_tools::MP4Atom']]]
+  ['i2c_5fretry_5fcount_2700',['i2c_retry_count',['../classaudio__tools_1_1_w_m8960_config.html#abf87d032d525a80cf660a9831b339343',1,'audio_tools::WM8960Config']]],
+  ['iirbuffer_2701',['iirBuffer',['../classaudio__tools_1_1_filter_effect_base.html#a36d5aa51a18cec371e662a4bd00ad73f',1,'audio_tools::FilterEffectBase']]],
+  ['iircoefficients_2702',['iirCoefficients',['../classaudio__tools_1_1_filter_effect_base.html#aa555d7f6c45fdc476c00ac7b3615c3cc',1,'audio_tools::FilterEffectBase']]],
+  ['iirtemp_2703',['iirTemp',['../classaudio__tools_1_1_filter_effect_base.html#a97fe61a525fa1ebad0372c58e828ffa1',1,'audio_tools::FilterEffectBase']]],
+  ['inband_5ffec_2704',['inband_fec',['../structaudio__tools_1_1_opus_encoder_settings.html#a296ff283109f7745b8b1839f7e0aafeb',1,'audio_tools::OpusEncoderSettings']]],
+  ['internal_5fpi_2705',['internal_Pi',['../classaudio__tools_1_1_simple_flanger.html#a4187d5295c8a8a0525d08767b72fa1cb',1,'audio_tools::SimpleFlanger']]],
+  ['interpolationtable_2706',['interpolationTable',['../namespaceaudio__tools.html#a6a8099d013ab0669c1f915584b0ed32e',1,'audio_tools']]],
+  ['invdelayincrement_2707',['invDelayIncrement',['../classaudio__tools_1_1_simple_delay.html#ae4c6bcb89dc7036c4e9628009f5c415d',1,'audio_tools::SimpleDelay']]],
+  ['is_5fencoded_5fdata_2708',['is_encoded_data',['../classaudio__tools_1_1_v_s1053_config.html#a7b14309e060b9f949aaf463b34c71b85',1,'audio_tools::VS1053Config']]],
+  ['is_5fheader_5fatom_2709',['is_header_atom',['../structaudio__tools_1_1_m_p4_atom.html#a4d6da82e71ad7d26f3f75da60f862bad',1,'audio_tools::MP4Atom']]],
+  ['is_5fmidi_2710',['is_midi',['../classaudio__tools_1_1_v_s1053_config.html#aea157fea730d2a87c178d1bc19c6868d',1,'audio_tools::VS1053Config']]],
+  ['is_5fstart_5fspi_2711',['is_start_spi',['../classaudio__tools_1_1_v_s1053_config.html#aa2c844c92e04a703ca54d15d011630ab',1,'audio_tools::VS1053Config']]],
+  ['is_5fstream_2712',['is_stream',['../structaudio__tools_1_1_m_p4_atom.html#aca37a3469c636b99ddd5aee36184f7d5',1,'audio_tools::MP4Atom']]]
 ];
