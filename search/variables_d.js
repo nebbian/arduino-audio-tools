@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['update_5fcallback_2739',['update_callback',['../structaudio__tools_1_1_l_e_d_output_config.html#a407f72286192d582e451c779a24eee24',1,'audio_tools::LEDOutputConfig::update_callback()'],['../structaudio__tools_1_1_l_e_d_output_uno_r4_config.html#adcd1ef408be5d72c304e5580d82cfb0f',1,'audio_tools::LEDOutputUnoR4Config::update_callback()']]],
-  ['update_5ffrequency_2740',['update_frequency',['../structaudio__tools_1_1_l_e_d_output_config.html#a637858590a54f57f8ce05bb395cc8798',1,'audio_tools::LEDOutputConfig::update_frequency()'],['../structaudio__tools_1_1_l_e_d_output_uno_r4_config.html#a637858590a54f57f8ce05bb395cc8798',1,'audio_tools::LEDOutputUnoR4Config::update_frequency()']]],
-  ['use_5fdtx_2741',['use_dtx',['../structaudio__tools_1_1_opus_encoder_settings.html#a519462b22ce6239e3ec4834229d5361d',1,'audio_tools::OpusEncoderSettings']]]
+  ['update_5fcallback_2741',['update_callback',['../structaudio__tools_1_1_l_e_d_output_config.html#a407f72286192d582e451c779a24eee24',1,'audio_tools::LEDOutputConfig::update_callback()'],['../structaudio__tools_1_1_l_e_d_output_uno_r4_config.html#adcd1ef408be5d72c304e5580d82cfb0f',1,'audio_tools::LEDOutputUnoR4Config::update_callback()']]],
+  ['update_5ffrequency_2742',['update_frequency',['../structaudio__tools_1_1_l_e_d_output_config.html#a637858590a54f57f8ce05bb395cc8798',1,'audio_tools::LEDOutputConfig::update_frequency()'],['../structaudio__tools_1_1_l_e_d_output_uno_r4_config.html#a637858590a54f57f8ce05bb395cc8798',1,'audio_tools::LEDOutputUnoR4Config::update_frequency()']]],
+  ['use_5fdtx_2743',['use_dtx',['../structaudio__tools_1_1_opus_encoder_settings.html#a519462b22ce6239e3ec4834229d5361d',1,'audio_tools::OpusEncoderSettings']]]
 ];
