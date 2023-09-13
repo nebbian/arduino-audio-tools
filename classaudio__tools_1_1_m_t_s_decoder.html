@@ -134,6 +134,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#accee684614189e73bdc9f1b2f7abf919">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
 <tr class="memdesc:accee684614189e73bdc9f1b2f7abf919"><td class="mdescLeft">&#160;</td><td class="mdescRight">for most decoders this is not needed <br /></td></tr>
 <tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec803109f8430cb737532bd5070d9bb2"><td class="memItemLeft" align="right" valign="top"><a id="aec803109f8430cb737532bd5070d9bb2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_t_s_decoder.html#aec803109f8430cb737532bd5070d9bb2">setMemoryAllocationLogging</a> (bool flag)</td></tr>
+<tr class="memdesc:aec803109f8430cb737532bd5070d9bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate logging for memory allocations. <br /></td></tr>
+<tr class="separator:aec803109f8430cb737532bd5070d9bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4626becb07db8422467ad6e787b2b8d4"><td class="memItemLeft" align="right" valign="top"><a id="a4626becb07db8422467ad6e787b2b8d4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#a4626becb07db8422467ad6e787b2b8d4">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;notify) override</td></tr>
 <tr class="memdesc:a4626becb07db8422467ad6e787b2b8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an object that is notified if the audio format is changing. <br /></td></tr>
@@ -192,6 +196,18 @@ Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:ad15476e2d96fbd0693bcb134f7af129b"><td class="memItemLeft" align="right" valign="top"><a id="ad15476e2d96fbd0693bcb134f7af129b"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>event_cb</b> (TSDemuxContext *ctx, uint16_t pid, TSDEventId event_id, void *data)</td></tr>
 <tr class="separator:ad15476e2d96fbd0693bcb134f7af129b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03426e87d59ec235287f43072013836e"><td class="memItemLeft" align="right" valign="top"><a id="a03426e87d59ec235287f43072013836e"></a>
+static void *&#160;</td><td class="memItemRight" valign="bottom"><b>log_calloc</b> (size_t num, size_t size)</td></tr>
+<tr class="separator:a03426e87d59ec235287f43072013836e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cda3d28c117a28ed746b4f28ff081a7"><td class="memItemLeft" align="right" valign="top"><a id="a4cda3d28c117a28ed746b4f28ff081a7"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>log_free</b> (void *mem)</td></tr>
+<tr class="separator:a4cda3d28c117a28ed746b4f28ff081a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45970142b2a58a747cec06e71607e0f7"><td class="memItemLeft" align="right" valign="top"><a id="a45970142b2a58a747cec06e71607e0f7"></a>
+static void *&#160;</td><td class="memItemRight" valign="bottom"><b>log_malloc</b> (size_t size)</td></tr>
+<tr class="separator:a45970142b2a58a747cec06e71607e0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1766771a0eb2b1e16f5e2ecb366467ff"><td class="memItemLeft" align="right" valign="top"><a id="a1766771a0eb2b1e16f5e2ecb366467ff"></a>
+static void *&#160;</td><td class="memItemRight" valign="bottom"><b>log_realloc</b> (void *ptr, size_t size)</td></tr>
+<tr class="separator:a1766771a0eb2b1e16f5e2ecb366467ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -207,6 +223,9 @@ TSDemuxContext&#160;</td><td class="memItemRight" valign="bottom"><b>ctx</b></td
 <tr class="memitem:a407c3efba665d276a38229f905bef352"><td class="memItemLeft" align="right" valign="top"><a id="a407c3efba665d276a38229f905bef352"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false</td></tr>
 <tr class="separator:a407c3efba665d276a38229f905bef352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821e76968ea3971e00895b1977e9a064"><td class="memItemLeft" align="right" valign="top"><a id="a821e76968ea3971e00895b1977e9a064"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_alloc_active</b> = false</td></tr>
+<tr class="separator:a821e76968ea3971e00895b1977e9a064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> = nullptr</td></tr>
 <tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
