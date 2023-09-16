@@ -294,7 +294,7 @@ $(function() {
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        }</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
 <div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_u_r_l_stream.html#a520fbf517da487a5fe9cdd75209554cc">  244</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_u_r_l_stream.html#a520fbf517da487a5fe9cdd75209554cc">waitForData</a>() {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            TRACEI();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            TRACED();</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordflow">if</span>(request.available()==0 ){</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                LOGI(<span class="stringliteral">&quot;Request written ... waiting for reply&quot;</span>)</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                <span class="keywordflow">while</span>(request.available()==0){</div>
@@ -306,7 +306,7 @@ $(function() {
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                    <a class="code" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a>(500);</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                }</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            LOGI(<span class="stringliteral">&quot;available: %d&quot;</span>, request.available());</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            LOGD(<span class="stringliteral">&quot;available: %d&quot;</span>, request.available());</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">return</span> request.available()&gt;0;</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        }</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
