@@ -129,6 +129,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (co
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
 <tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the memory from the request and reply. <br /></td></tr>
 <tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59c94535a606ca71e5c1d0d30275732c"><td class="memItemLeft" align="right" valign="top"><a id="a59c94535a606ca71e5c1d0d30275732c"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>contentLength</b> ()</td></tr>
+<tr class="separator:a59c94535a606ca71e5c1d0d30275732c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae827632720ddd6f3037ef1ee69aa3f41"><td class="memItemLeft" align="right" valign="top"><a id="ae827632720ddd6f3037ef1ee69aa3f41"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
 <tr class="separator:ae827632720ddd6f3037ef1ee69aa3f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,6 +173,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#ae7030d11c7af96d4b7983393817830a9">setConnectionClose</a> (bool close)</td></tr>
 <tr class="memdesc:ae7030d11c7af96d4b7983393817830a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets if the connection should be close automatically. <br /></td></tr>
 <tr class="separator:ae7030d11c7af96d4b7983393817830a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128c19eda4c8e6c68f0cd129cee47b4c"><td class="memItemLeft" align="right" valign="top"><a id="a128c19eda4c8e6c68f0cd129cee47b4c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#a128c19eda4c8e6c68f0cd129cee47b4c">setLogLevel</a> (AudioLogger::LogLevel level)</td></tr>
+<tr class="memdesc:a128c19eda4c8e6c68f0cd129cee47b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the class specific custom log level. <br /></td></tr>
+<tr class="separator:a128c19eda4c8e6c68f0cd129cee47b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75440ced7631cd14125dee528afdd531"><td class="memItemLeft" align="right" valign="top"><a id="a75440ced7631cd14125dee528afdd531"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>setMetadataCallback</b> (void(*fn)(<a class="el" href="group__metadata.html#ga6760f423085f8a63374b1e2db102a6d1">MetaDataType</a> info, const char *str, int len))</td></tr>
 <tr class="separator:a75440ced7631cd14125dee528afdd531"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,9 +206,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#a4576929311e53dfaed4c0c35d201df04">setTimeout</a> (int ms)</td></tr>
 <tr class="memdesc:a4576929311e53dfaed4c0c35d201df04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the client timeout. <br /></td></tr>
 <tr class="separator:a4576929311e53dfaed4c0c35d201df04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb613cca10ca6dd58e43005625daa43"><td class="memItemLeft" align="right" valign="top"><a id="a7cb613cca10ca6dd58e43005625daa43"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWaitForData</b> (bool flag)</td></tr>
+<tr class="separator:a7cb613cca10ca6dd58e43005625daa43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a698be1eb2b2761747295726e406ad4e2"><td class="memItemLeft" align="right" valign="top"><a id="a698be1eb2b2761747295726e406ad4e2"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>totalRead</b> ()</td></tr>
+<tr class="separator:a698be1eb2b2761747295726e406ad4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a989540d43150595fdde26c8f37265069"><td class="memItemLeft" align="right" valign="top"><a id="a989540d43150595fdde26c8f37265069"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> &amp;info)</td></tr>
 <tr class="separator:a989540d43150595fdde26c8f37265069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a520fbf517da487a5fe9cdd75209554cc"><td class="memItemLeft" align="right" valign="top"><a id="a520fbf517da487a5fe9cdd75209554cc"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#a520fbf517da487a5fe9cdd75209554cc">waitForData</a> ()</td></tr>
+<tr class="memdesc:a520fbf517da487a5fe9cdd75209554cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">waits for some data - returns false if the request has failed <br /></td></tr>
+<tr class="separator:a520fbf517da487a5fe9cdd75209554cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afac16b86a5b5821e24beae61dcccefe0"><td class="memItemLeft" align="right" valign="top"><a id="afac16b86a5b5821e24beae61dcccefe0"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *, size_t) override</td></tr>
 <tr class="separator:afac16b86a5b5821e24beae61dcccefe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,13 +255,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
 <tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f1b0c2e6131663280f059ac45c37e6e"><td class="memItemLeft" align="right" valign="top"><a id="a3f1b0c2e6131663280f059ac45c37e6e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeouts</b> ()</td></tr>
-<tr class="separator:a3f1b0c2e6131663280f059ac45c37e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a520fbf517da487a5fe9cdd75209554cc"><td class="memItemLeft" align="right" valign="top"><a id="a520fbf517da487a5fe9cdd75209554cc"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#a520fbf517da487a5fe9cdd75209554cc">waitForData</a> ()</td></tr>
-<tr class="memdesc:a520fbf517da487a5fe9cdd75209554cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">waits for some data - returns false if the request has failed <br /></td></tr>
-<tr class="separator:a520fbf517da487a5fe9cdd75209554cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -260,6 +270,9 @@ WiFiClient *&#160;</td><td class="memItemRight" valign="bottom"><b>clientInsecur
 <tr class="memitem:a99b7e66eae7d71076402dfb5f21ac109"><td class="memItemLeft" align="right" valign="top"><a id="a99b7e66eae7d71076402dfb5f21ac109"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>clientTimeout</b> = 60000</td></tr>
 <tr class="separator:a99b7e66eae7d71076402dfb5f21ac109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26693f5daeab2d1738e2644de233b003"><td class="memItemLeft" align="right" valign="top"><a id="a26693f5daeab2d1738e2644de233b003"></a>
+CustomLogLevel&#160;</td><td class="memItemRight" valign="bottom"><b>custom_log_level</b></td></tr>
+<tr class="separator:a26693f5daeab2d1738e2644de233b003"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2e32f3b1383f71acf65c23f877e6234"><td class="memItemLeft" align="right" valign="top"><a id="ab2e32f3b1383f71acf65c23f877e6234"></a>
 unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>handshakeTimeout</b> = 120000</td></tr>
 <tr class="separator:ab2e32f3b1383f71acf65c23f877e6234"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -308,6 +321,12 @@ long&#160;</td><td class="memItemRight" valign="bottom"><b>total_read</b></td></
 <tr class="memitem:a80c807b920948127b73f36d4d8d89037"><td class="memItemLeft" align="right" valign="top"><a id="a80c807b920948127b73f36d4d8d89037"></a>
 <a class="el" href="classaudio__tools_1_1_url.html">Url</a>&#160;</td><td class="memItemRight" valign="bottom"><b>url</b></td></tr>
 <tr class="separator:a80c807b920948127b73f36d4d8d89037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb6ef763fd80fb6b412a1e26958475d"><td class="memItemLeft" align="right" valign="top"><a id="adfb6ef763fd80fb6b412a1e26958475d"></a>
+<a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>url_str</b></td></tr>
+<tr class="separator:adfb6ef763fd80fb6b412a1e26958475d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a316e5c6847e1aa023476aa9b1596aae7"><td class="memItemLeft" align="right" valign="top"><a id="a316e5c6847e1aa023476aa9b1596aae7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>wait_for_data</b> = true</td></tr>
+<tr class="separator:a316e5c6847e1aa023476aa9b1596aae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the content of a URL as <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a>. We use the WiFi.h API. </p>

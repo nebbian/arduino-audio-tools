@@ -135,6 +135,10 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
 <tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a996e0659179eaad07923ed13e328a6a2"><td class="memItemLeft" align="right" valign="top"><a id="a996e0659179eaad07923ed13e328a6a2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_input_mixer.html#a996e0659179eaad07923ed13e328a6a2">setLimitToAvailableData</a> (bool flag)</td></tr>
+<tr class="memdesc:a996e0659179eaad07923ed13e328a6a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do not wait for all data to be available. <br /></td></tr>
+<tr class="separator:a996e0659179eaad07923ed13e328a6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
 <tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +166,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a901b9bd204a4845e3e7e61ad47ef81a2"><td class="memItemLeft" align="right" valign="top"><a id="a901b9bd204a4845e3e7e61ad47ef81a2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_input_mixer.html#a901b9bd204a4845e3e7e61ad47ef81a2">availableBytes</a> ()</td></tr>
+<tr class="memdesc:a901b9bd204a4845e3e7e61ad47ef81a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the available bytes from the first stream with data. <br /></td></tr>
+<tr class="separator:a901b9bd204a4845e3e7e61ad47ef81a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,6 +198,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>frame_size</b> = 4</td
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a686886a93e878eb46ddb95c27acd9"><td class="memItemLeft" align="right" valign="top"><a id="a12a686886a93e878eb46ddb95c27acd9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>limit_available_data</b> = false</td></tr>
+<tr class="separator:a12a686886a93e878eb46ddb95c27acd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>

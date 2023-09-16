@@ -99,6 +99,9 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> 
 <tr class="memitem:a0b35e6c5d455116b24a2a722cb09efad"><td class="memItemLeft" align="right" valign="top"><a id="a0b35e6c5d455116b24a2a722cb09efad"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>connected</b> ()</td></tr>
 <tr class="separator:a0b35e6c5d455116b24a2a722cb09efad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59c94535a606ca71e5c1d0d30275732c"><td class="memItemLeft" align="right" valign="top"><a id="a59c94535a606ca71e5c1d0d30275732c"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>contentLength</b> ()</td></tr>
+<tr class="separator:a59c94535a606ca71e5c1d0d30275732c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8cd2e3982f338b00a0ec7e4b6733728"><td class="memItemLeft" align="right" valign="top"><a id="af8cd2e3982f338b00a0ec7e4b6733728"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_request.html#af8cd2e3982f338b00a0ec7e4b6733728">del</a> (<a class="el" href="classaudio__tools_1_1_url.html">Url</a> &amp;url, const char *mime=nullptr, const char *data=nullptr, int len=-1)</td></tr>
 <tr class="memdesc:af8cd2e3982f338b00a0ec7e4b6733728"><td class="mdescLeft">&#160;</td><td class="mdescRight">http del <br /></td></tr>
@@ -107,9 +110,6 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_request.html#a23fd1b70c43eb2baa3363b559a8535fb">get</a> (<a class="el" href="classaudio__tools_1_1_url.html">Url</a> &amp;url, const char *acceptMime=nullptr, const char *data=nullptr, int len=-1)</td></tr>
 <tr class="memdesc:a23fd1b70c43eb2baa3363b559a8535fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">http get <br /></td></tr>
 <tr class="separator:a23fd1b70c43eb2baa3363b559a8535fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f47f6fc775eeed89e85f17e47183c82"><td class="memItemLeft" align="right" valign="top"><a id="a5f47f6fc775eeed89e85f17e47183c82"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getReceivedContentLength</b> ()</td></tr>
-<tr class="separator:a5f47f6fc775eeed89e85f17e47183c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad6f1e79f2e71e2e2b620c6b8eb0b8ec"><td class="memItemLeft" align="right" valign="top"><a id="aad6f1e79f2e71e2e2b620c6b8eb0b8ec"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_request.html#aad6f1e79f2e71e2e2b620c6b8eb0b8ec">head</a> (<a class="el" href="classaudio__tools_1_1_url.html">Url</a> &amp;url, const char *acceptMime=nullptr, const char *data=nullptr, int len=-1)</td></tr>
 <tr class="memdesc:aad6f1e79f2e71e2e2b620c6b8eb0b8ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">http head <br /></td></tr>
@@ -194,6 +194,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setHost</b> (const ch
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_request.html#ac4f59d434249e98049f1bf6917a4faec">setOnConnectCallback</a> (void(*callback)(<a class="el" href="classaudio__tools_1_1_http_request.html">HttpRequest</a> &amp;request, <a class="el" href="classaudio__tools_1_1_url.html">Url</a> &amp;url, <a class="el" href="classaudio__tools_1_1_http_request_header.html">HttpRequestHeader</a> &amp;request_header))</td></tr>
 <tr class="memdesc:ac4f59d434249e98049f1bf6917a4faec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback which allows you to add additional paramters dynamically. <br /></td></tr>
 <tr class="separator:ac4f59d434249e98049f1bf6917a4faec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44a6096c42cdb61adc10370ca2a42b6"><td class="memItemLeft" align="right" valign="top"><a id="ae44a6096c42cdb61adc10370ca2a42b6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeout</b> (int timeout)</td></tr>
+<tr class="separator:ae44a6096c42cdb61adc10370ca2a42b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae92ae13a136435391be883fd6f0f5c8c"><td class="memItemLeft" align="right" valign="top"><a id="ae92ae13a136435391be883fd6f0f5c8c"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
 <tr class="separator:ae92ae13a136435391be883fd6f0f5c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>

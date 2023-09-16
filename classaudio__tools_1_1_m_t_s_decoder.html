@@ -120,6 +120,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()</td></tr
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#a2b485ba5b9d96f94384f4a3840f84314">isResultPCM</a> ()</td></tr>
 <tr class="memdesc:a2b485ba5b9d96f94384f4a3840f84314"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the decoding result is PCM data. <br /></td></tr>
 <tr class="separator:a2b485ba5b9d96f94384f4a3840f84314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbb0dc99a19a92ceb2e4c08857cb9db"><td class="memItemLeft" align="right" valign="top"><a id="aabbb0dc99a19a92ceb2e4c08857cb9db"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isStreamTypeActive</b> (TSDPMTStreamType type)</td></tr>
+<tr class="separator:aabbb0dc99a19a92ceb2e4c08857cb9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a270b0b803120d1fd87b919d29e083979"><td class="memItemLeft" align="right" valign="top"><a id="a270b0b803120d1fd87b919d29e083979"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mime</b> ()</td></tr>
 <tr class="separator:a270b0b803120d1fd87b919d29e083979"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,6 +187,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_pat</b> (TSDemu
 <tr class="memitem:a813a4b8ba020bf9751088c6bbee8dc26"><td class="memItemLeft" align="right" valign="top"><a id="a813a4b8ba020bf9751088c6bbee8dc26"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>print_pmt</b> (TSDemuxContext *ctx, void *data)</td></tr>
 <tr class="separator:a813a4b8ba020bf9751088c6bbee8dc26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded8a3e6ddf8327be9789f7db0a6a1ca"><td class="memItemLeft" align="right" valign="top"><a id="aded8a3e6ddf8327be9789f7db0a6a1ca"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_write_active</b> (bool flag)</td></tr>
+<tr class="separator:aded8a3e6ddf8327be9789f7db0a6a1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afedb0674355d64c1f4b4332d25579508"><td class="memItemLeft" align="right" valign="top"><a id="afedb0674355d64c1f4b4332d25579508"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>stream_type_to_str</b> (TSDPESStreamId stream_id)</td></tr>
 <tr class="separator:afedb0674355d64c1f4b4332d25579508"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,6 +232,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false
 <tr class="memitem:a821e76968ea3971e00895b1977e9a064"><td class="memItemLeft" align="right" valign="top"><a id="a821e76968ea3971e00895b1977e9a064"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_alloc_active</b> = false</td></tr>
 <tr class="separator:a821e76968ea3971e00895b1977e9a064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9014f788170afb9a9c07332ae20e0c2"><td class="memItemLeft" align="right" valign="top"><a id="ab9014f788170afb9a9c07332ae20e0c2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_write_active</b> = false</td></tr>
+<tr class="separator:ab9014f788170afb9a9c07332ae20e0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> = nullptr</td></tr>
 <tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
