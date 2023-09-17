@@ -130,14 +130,14 @@ $(function() {
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> logInfo(<span class="keyword">const</span> <span class="keywordtype">char</span>* source=<span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keyword">static</span> <a class="code" href="structaudio__tools_1_1_audio_info.html#aed5ea168bca8ad2991118811c4c83c6d">AudioInfo</a> old;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="keywordflow">if</span> (*<span class="keyword">this</span>!=old){  </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="comment">//static AudioInfo old;</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="comment">//if (*this!=old){  </span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span>(source!=<span class="keyword">nullptr</span>) LOGI(<span class="stringliteral">&quot;Info from %s:&quot;</span>, source);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        LOGI(<span class="stringliteral">&quot;sample_rate: %d&quot;</span>, sample_rate);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        LOGI(<span class="stringliteral">&quot;channels: %d&quot;</span>, channels);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        LOGI(<span class="stringliteral">&quot;bits_per_sample: %d&quot;</span>, bits_per_sample);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        old = *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">//old = *this;</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="comment">//}</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }  </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">// public attributes</span></div>
