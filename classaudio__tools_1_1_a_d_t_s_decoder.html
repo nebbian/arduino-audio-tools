@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: AACDecoderADTS Class Reference</title>
+<title>arduino-audio-tools: ADTSDecoder Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_a_a_c_decoder_a_d_t_s.html">AACDecoderADTS</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_a_d_t_s_decoder.html">ADTSDecoder</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,25 +69,25 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classaudio__tools_1_1_a_a_c_decoder_a_d_t_s-members.html">List of all members</a>  </div>
+<a href="classaudio__tools_1_1_a_d_t_s_decoder-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">AACDecoderADTS Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__codecs.html">Codecs</a> &#124; <a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__codecs.html">Codecs</a> &raquo; <a class="el" href="group__decoder.html">Decoder</a></div></div>  </div>
+<div class="title">ADTSDecoder Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__codecs.html">Codecs</a> &#124; <a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__codecs.html">Codecs</a> &raquo; <a class="el" href="group__decoder.html">Decoder</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Audio Data Transport <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> (ADTS) is a format similar to Audio Data Interchange Format (ADIF), used by MPEG TS or Shoutcast to stream audio defined in MPEG-2 Part 7, usually AAC. This parser extracts all valid ADTS frames from the data stream ignoring other data.  
- <a href="classaudio__tools_1_1_a_a_c_decoder_a_d_t_s.html#details">More...</a></p>
+ <a href="classaudio__tools_1_1_a_d_t_s_decoder.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_codec_a_d_t_s_8h_source.html">CodecADTS.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for AACDecoderADTS:</div>
+Inheritance diagram for ADTSDecoder:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_a_a_c_decoder_a_d_t_s.png" usemap="#AACDecoderADTS_map" alt=""/>
-  <map id="AACDecoderADTS_map" name="AACDecoderADTS_map">
-<area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="65,56,186,80"/>
-<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,121,24"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="131,0,252,24"/>
+  <img src="classaudio__tools_1_1_a_d_t_s_decoder.png" usemap="#ADTSDecoder_map" alt=""/>
+  <map id="ADTSDecoder_map" name="ADTSDecoder_map">
+<area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="58,56,165,80"/>
+<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,107,24"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="117,0,224,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -110,7 +110,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a2b485ba5b9d96f94384f4a3840f84314"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the decoding result is PCM data. <br /></td></tr>
 <tr class="separator:a2b485ba5b9d96f94384f4a3840f84314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90622bd78258a36bbcf63426b28307ac"><td class="memItemLeft" align="right" valign="top"><a id="a90622bd78258a36bbcf63426b28307ac"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_decoder_a_d_t_s.html#a90622bd78258a36bbcf63426b28307ac">operator bool</a> () override</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_d_t_s_decoder.html#a90622bd78258a36bbcf63426b28307ac">operator bool</a> () override</td></tr>
 <tr class="memdesc:a90622bd78258a36bbcf63426b28307ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if the class is active <br /></td></tr>
 <tr class="separator:a90622bd78258a36bbcf63426b28307ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
@@ -134,7 +134,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:accd4a0f8bb385180e8006fd543aef936"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines where the decoded result is written to. <br /></td></tr>
 <tr class="separator:accd4a0f8bb385180e8006fd543aef936"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a770cfd1c8d336bdf8eaea18028db6d"><td class="memItemLeft" align="right" valign="top"><a id="a1a770cfd1c8d336bdf8eaea18028db6d"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_decoder_a_d_t_s.html#a1a770cfd1c8d336bdf8eaea18028db6d">write</a> (const void *dataIn, size_t len) override</td></tr>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_d_t_s_decoder.html#a1a770cfd1c8d336bdf8eaea18028db6d">write</a> (const void *dataIn, size_t len) override</td></tr>
 <tr class="memdesc:a1a770cfd1c8d336bdf8eaea18028db6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write AAC data to decoder. <br /></td></tr>
 <tr class="separator:a1a770cfd1c8d336bdf8eaea18028db6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
