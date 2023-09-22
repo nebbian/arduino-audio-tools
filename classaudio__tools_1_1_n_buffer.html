@@ -154,12 +154,12 @@ template&lt;int rows, int channels&gt; </td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_n_buffer.html#ad20897c5c8bd47f5d4005989bead0e55">reset</a> ()</td></tr>
 <tr class="memdesc:ad20897c5c8bd47f5d4005989bead0e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">clears the buffer <br /></td></tr>
 <tr class="separator:ad20897c5c8bd47f5d4005989bead0e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416708850ce40a4527f9f3c84e97abe5"><td class="memItemLeft" align="right" valign="top"><a id="a416708850ce40a4527f9f3c84e97abe5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (int size, int count)</td></tr>
+<tr class="separator:a416708850ce40a4527f9f3c84e97abe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad713070b5cf8794cf5feb1b054fa3492"><td class="memItemLeft" align="right" valign="top"><a id="ad713070b5cf8794cf5feb1b054fa3492"></a>
 unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>sampleRate</b> ()</td></tr>
 <tr class="separator:ad713070b5cf8794cf5feb1b054fa3492"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad425c4f62bccf271e87b4669994be47b"><td class="memItemLeft" align="right" valign="top"><a id="ad425c4f62bccf271e87b4669994be47b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBufferSize</b> (int size)</td></tr>
-<tr class="separator:ad425c4f62bccf271e87b4669994be47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a7b764c471a4ddcd2ffc3893769c874"><td class="memItemLeft" align="right" valign="top"><a id="a5a7b764c471a4ddcd2ffc3893769c874"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_n_buffer.html#a5a7b764c471a4ddcd2ffc3893769c874">write</a> (T data)</td></tr>
 <tr class="memdesc:a5a7b764c471a4ddcd2ffc3893769c874"><td class="mdescLeft">&#160;</td><td class="mdescRight">write add an entry to the buffer <br /></td></tr>
@@ -184,6 +184,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>addAvailableB
 <tr class="memitem:abdc6ec441f6e3c6217dcbe300ee3c74a"><td class="memItemLeft" align="right" valign="top"><a id="abdc6ec441f6e3c6217dcbe300ee3c74a"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>addFilledBuffer</b> (<a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; T &gt; *buffer)</td></tr>
 <tr class="separator:abdc6ec441f6e3c6217dcbe300ee3c74a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb3812c2de66e8962b6dee5144ffb03"><td class="memItemLeft" align="right" valign="top"><a id="a6fb3812c2de66e8962b6dee5144ffb03"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>freeMemory</b> ()</td></tr>
+<tr class="separator:a6fb3812c2de66e8962b6dee5144ffb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3f21fd083a0331b740d11d6c0b442d4"><td class="memItemLeft" align="right" valign="top"><a id="ad3f21fd083a0331b740d11d6c0b442d4"></a>
 virtual <a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>getNextAvailableBuffer</b> ()</td></tr>
 <tr class="separator:ad3f21fd083a0331b740d11d6c0b442d4"><td class="memSeparator" colspan="2">&#160;</td></tr>

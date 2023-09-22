@@ -88,9 +88,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top"><a id="a601fb7cf1fc15db50c71a826f084f934"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a601fb7cf1fc15db50c71a826f084f934"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9532c80bddb1628992db42274751aa5d"><td class="memItemLeft" align="right" valign="top"><a id="a9532c80bddb1628992db42274751aa5d"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>contentLength</b> ()</td></tr>
-<tr class="separator:a9532c80bddb1628992db42274751aa5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00493e01037c52bf0c68e4fc6d526cd4"><td class="memItemLeft" align="right" valign="top"><a id="a00493e01037c52bf0c68e4fc6d526cd4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>contentLength</b> ()</td></tr>
+<tr class="separator:a00493e01037c52bf0c68e4fc6d526cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90bfaf533d2e31333a61152b1681d40e"><td class="memItemLeft" align="right" valign="top"><a id="a90bfaf533d2e31333a61152b1681d40e"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>contentType</b> ()</td></tr>
 <tr class="separator:a90bfaf533d2e31333a61152b1681d40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,6 +101,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_loader.html#a8920918d9e0a1390082b2e660c954c8b">readBytes</a> (uint8_t *data, size_t len)</td></tr>
 <tr class="memdesc:a8920918d9e0a1390082b2e660c954c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides data from the audio stream. <br /></td></tr>
 <tr class="separator:a8920918d9e0a1390082b2e660c954c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e1ca0ca7001b983aaf0d2a60d2efe8"><td class="memItemLeft" align="right" valign="top"><a id="ad3e1ca0ca7001b983aaf0d2a60d2efe8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setBuffer</b> (int size, int count)</td></tr>
+<tr class="separator:ad3e1ca0ca7001b983aaf0d2a60d2efe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2315b128f5a1599b1b4cdb016792a728"><td class="memItemLeft" align="right" valign="top"><a id="a2315b128f5a1599b1b4cdb016792a728"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_loader.html#a2315b128f5a1599b1b4cdb016792a728">urlCount</a> ()</td></tr>
 <tr class="memdesc:a2315b128f5a1599b1b4cdb016792a728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the number of open urls which can be played. Refills them, when min limit is reached. <br /></td></tr>
@@ -119,8 +122,14 @@ Protected Attributes</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</td></tr>
 <tr class="separator:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73e809d724d25cd0c28533ee9b7a598f"><td class="memItemLeft" align="right" valign="top"><a id="a73e809d724d25cd0c28533ee9b7a598f"></a>
-<a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {DEFAULT_BUFFER_SIZE, 50}</td></tr>
+<a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {DEFAULT_BUFFER_SIZE, 10}</td></tr>
 <tr class="separator:a73e809d724d25cd0c28533ee9b7a598f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1604207c5fe93cc8e5d75e1e1ef1ee46"><td class="memItemLeft" align="right" valign="top"><a id="a1604207c5fe93cc8e5d75e1e1ef1ee46"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_count</b> = 10</td></tr>
+<tr class="separator:a1604207c5fe93cc8e5d75e1e1ef1ee46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22ff4ab7a026e6c3b4b08eafb2df027"><td class="memItemLeft" align="right" valign="top"><a id="af22ff4ab7a026e6c3b4b08eafb2df027"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_size</b> = DEFAULT_BUFFER_SIZE</td></tr>
+<tr class="separator:af22ff4ab7a026e6c3b4b08eafb2df027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a885a3d901e362cdc7286e3cecff96e58"><td class="memItemLeft" align="right" valign="top"><a id="a885a3d901e362cdc7286e3cecff96e58"></a>
 <a class="el" href="classaudio__tools_1_1_u_r_l_stream.html">URLStream</a>&#160;</td><td class="memItemRight" valign="bottom"><b>stream</b></td></tr>
 <tr class="separator:a885a3d901e362cdc7286e3cecff96e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
