@@ -210,10 +210,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_faust_stream.html#a9c778631f8de9fd5597052dd20787c1f">checkChannels</a> ()</td></tr>
 <tr class="memdesc:a9c778631f8de9fd5597052dd20787c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the input and output channels and updates the is_write or is_read scenario flags. <br /></td></tr>
 <tr class="separator:a9c778631f8de9fd5597052dd20787c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41c87bb70f14f4b18281b6814e30df19"><td class="memItemLeft" align="right" valign="top"><a id="a41c87bb70f14f4b18281b6814e30df19"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_faust_stream.html#a41c87bb70f14f4b18281b6814e30df19">convertFloatBufferToInt16</a> (int samples, void *data, FAUSTFLOAT **p_float_out)</td></tr>
-<tr class="memdesc:a41c87bb70f14f4b18281b6814e30df19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the float buffer to int16 values. <br /></td></tr>
-<tr class="separator:a41c87bb70f14f4b18281b6814e30df19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9666116563bb180048bd43ce4b35b9d4"><td class="memTemplParams" colspan="2"><a id="a9666116563bb180048bd43ce4b35b9d4"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a9666116563bb180048bd43ce4b35b9d4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_faust_stream.html#a9666116563bb180048bd43ce4b35b9d4">convertFloatBufferToInt</a> (int samples, FAUSTFLOAT **p_float_in, void *data_out)</td></tr>
+<tr class="memdesc:a9666116563bb180048bd43ce4b35b9d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the float buffer to int values. <br /></td></tr>
+<tr class="separator:a9666116563bb180048bd43ce4b35b9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a705dabc6f28b5a343790a35d1b03b0"><td class="memTemplParams" colspan="2"><a id="a9a705dabc6f28b5a343790a35d1b03b0"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a9a705dabc6f28b5a343790a35d1b03b0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_faust_stream.html#a9a705dabc6f28b5a343790a35d1b03b0">convertIntBufferToFloat</a> (int samples, void *data_in, FAUSTFLOAT **p_float_out)</td></tr>
+<tr class="memdesc:a9a705dabc6f28b5a343790a35d1b03b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the int buffer to float values. <br /></td></tr>
+<tr class="separator:a9a705dabc6f28b5a343790a35d1b03b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9933c36af7028a7f6c90c19cc91e96ab"><td class="memItemLeft" align="right" valign="top"><a id="a9933c36af7028a7f6c90c19cc91e96ab"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteFloatBuffer</b> ()</td></tr>
 <tr class="separator:a9933c36af7028a7f6c90c19cc91e96ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,18 +232,29 @@ FAUSTFLOAT&#160;</td><td class="memItemRight" valign="bottom"><b>noteToFrequency
 <tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
 <tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4da9f76fd157970e06fda582c52008a"><td class="memTemplParams" colspan="2"><a id="ac4da9f76fd157970e06fda582c52008a"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac4da9f76fd157970e06fda582c52008a"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_faust_stream.html#ac4da9f76fd157970e06fda582c52008a">writeT</a> (const uint8_t *write_data, size_t len)</td></tr>
+<tr class="memdesc:ac4da9f76fd157970e06fda582c52008a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used if <a class="el" href="classaudio__tools_1_1_faust_stream.html" title="Integration into Faust DSP see https://faust.grame.fr/ To generate code from faust,...">FaustStream</a> is used as audio sink or filter. <br /></td></tr>
+<tr class="separator:ac4da9f76fd157970e06fda582c52008a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a36955561b84e117d66f2d5287a23f587"><td class="memItemLeft" align="right" valign="top"><a id="a36955561b84e117d66f2d5287a23f587"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_allocated</b></td></tr>
 <tr class="separator:a36955561b84e117d66f2d5287a23f587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeff5997abcf0c88c9434923e2ffd032b"><td class="memItemLeft" align="right" valign="top"><a id="aeff5997abcf0c88c9434923e2ffd032b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bytes_per_frame</b></td></tr>
+<tr class="separator:aeff5997abcf0c88c9434923e2ffd032b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9459b2e7b5be656d4ff28ea1b274e20b"><td class="memItemLeft" align="right" valign="top"><a id="a9459b2e7b5be656d4ff28ea1b274e20b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>bytes_per_sample</b></td></tr>
 <tr class="separator:a9459b2e7b5be656d4ff28ea1b274e20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07fab440d87063e83df0bc30223964c5"><td class="memItemLeft" align="right" valign="top"><a id="a07fab440d87063e83df0bc30223964c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cfg</b></td></tr>
 <tr class="separator:a07fab440d87063e83df0bc30223964c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c18260a0364163ac960d40a35f48b8c"><td class="memItemLeft" align="right" valign="top"><a id="a9c18260a0364163ac960d40a35f48b8c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>float_to_int_factor</b> = 32767</td></tr>
+<tr class="separator:a9c18260a0364163ac960d40a35f48b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a855eba1834e1665f145fd03420a66254"><td class="memItemLeft" align="right" valign="top"><a id="a855eba1834e1665f145fd03420a66254"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>gate_exists</b> = false</td></tr>
 <tr class="separator:a855eba1834e1665f145fd03420a66254"><td class="memSeparator" colspan="2">&#160;</td></tr>
