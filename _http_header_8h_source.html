@@ -219,22 +219,22 @@ $(function() {
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="comment">// reads a single header line </span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordtype">void</span> readLine(Client &amp;in, <span class="keywordtype">char</span>* str, <span class="keywordtype">int</span> len){</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            reader.readlnInternal(in, (uint8_t*) str, len, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            LOGI(<span class="stringliteral">&quot;HttpHeader::readLine -&gt; %s&quot;</span>,str);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            LOGD(<span class="stringliteral">&quot;HttpHeader::readLine -&gt; %s&quot;</span>,str);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="comment">// writes a lingle header line</span></div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">void</span> writeHeaderLine(Client &amp;out,HttpHeaderLine *header ){</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">if</span> (header==<span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                LOGI(<span class="stringliteral">&quot;HttpHeader::writeHeaderLine: the value must not be null&quot;</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                LOGD(<span class="stringliteral">&quot;HttpHeader::writeHeaderLine: the value must not be null&quot;</span>);</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            }</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            LOGD(<span class="stringliteral">&quot;HttpHeader::writeHeaderLine: %s&quot;</span>,header-&gt;key.c_str());</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">if</span> (!header-&gt;active){</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                LOGI(<span class="stringliteral">&quot;HttpHeader::writeHeaderLine - not active&quot;</span>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                LOGD(<span class="stringliteral">&quot;HttpHeader::writeHeaderLine - not active&quot;</span>);</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            }</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">if</span> (header-&gt;value.c_str() == <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                LOGI(<span class="stringliteral">&quot;HttpHeader::writeHeaderLine - ignored because value is null&quot;</span>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                LOGD(<span class="stringliteral">&quot;HttpHeader::writeHeaderLine - ignored because value is null&quot;</span>);</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            }</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
@@ -281,7 +281,7 @@ $(function() {
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        }</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
 <div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_http_header.html#afb7d809e9617f68a1b468aba371c4ef1">  229</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_http_header.html#afb7d809e9617f68a1b468aba371c4ef1">read</a>(<a class="code" href="classaudio__tools_1_1_client.html">Client</a> &amp;in) {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            LOGI(<span class="stringliteral">&quot;HttpHeader::read&quot;</span>);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            LOGD(<span class="stringliteral">&quot;HttpHeader::read&quot;</span>);</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="comment">// remove all existing value</span></div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <a class="code" href="classaudio__tools_1_1_http_header.html#a7c7d6f6063db2f53479f140616be5724">clear</a>();</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
@@ -378,7 +378,7 @@ $(function() {
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                        }</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                    }</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                }</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                <span class="keywordflow">if</span> (create_new_lines){</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                <span class="keywordflow">if</span> (create_new_lines || Str(key).equalsIgnoreCase(CONTENT_LENGTH) || Str(key).equalsIgnoreCase(CONTENT_TYPE)){</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                    HttpHeaderLine *newLine = <span class="keyword">new</span> HttpHeaderLine();</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                    LOGD(<span class="stringliteral">&quot;HttpHeader::headerLine - new line created for %s&quot;</span>, key);</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                    newLine-&gt;active = <span class="keyword">true</span>;</div>
@@ -418,7 +418,7 @@ $(function() {
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            this-&gt;method_id = id;</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            this-&gt;url_path = urlPath;</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            </div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            LOGI(<span class="stringliteral">&quot;HttpRequestHeader::setValues - path: %s&quot;</span>,this-&gt;url_path.c_str());</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            LOGD(<span class="stringliteral">&quot;HttpRequestHeader::setValues - path: %s&quot;</span>,this-&gt;url_path.c_str());</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            <span class="keywordflow">if</span> (protocol!=<span class="keyword">nullptr</span>){</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                this-&gt;protocol_str = protocol;</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            }</div>
@@ -427,7 +427,7 @@ $(function() {
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="comment">// action path protocol</span></div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordtype">void</span> write1stLine(<a class="code" href="classaudio__tools_1_1_client.html">Client</a> &amp;out){</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            LOGI(<span class="stringliteral">&quot;HttpRequestHeader::write1stLine&quot;</span>);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            LOGD(<span class="stringliteral">&quot;HttpRequestHeader::write1stLine&quot;</span>);</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            <span class="keywordtype">char</span> msg[MAX_HTTP_REQ_LEN];</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            <a class="code" href="classaudio__tools_1_1_str.html">Str</a> msg_str(msg, MAX_HTTP_REQ_LEN);</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
@@ -448,7 +448,7 @@ $(function() {
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="comment">// parses the requestline </span></div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="comment">// Request-Line = Method SP Request-URI SP HTTP-Version CRLF</span></div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="keywordtype">void</span> parse1stLine(<span class="keyword">const</span> <span class="keywordtype">char</span> *line){</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            LOGI(<span class="stringliteral">&quot;HttpRequestHeader::parse1stLine %s&quot;</span>, line);</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            LOGD(<span class="stringliteral">&quot;HttpRequestHeader::parse1stLine %s&quot;</span>, line);</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            <a class="code" href="classaudio__tools_1_1_str.html">Str</a> line_str(line);</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            <span class="keywordtype">int</span> space1 = line_str.<a class="code" href="classaudio__tools_1_1_str.html#aee2206b824ab694471714e3fdc981652">indexOf</a>(<span class="stringliteral">&quot; &quot;</span>);</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            <span class="keywordtype">int</span> space2 = line_str.<a class="code" href="classaudio__tools_1_1_str.html#aee2206b824ab694471714e3fdc981652">indexOf</a>(<span class="stringliteral">&quot; &quot;</span>, space1+1);</div>
@@ -458,9 +458,9 @@ $(function() {
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            this-&gt;url_path.substring(line_str,space1+1,space2);</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            this-&gt;url_path.trim();</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  </div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            LOGI(<span class="stringliteral">&quot;-&gt;method %s&quot;</span>, methods[this-&gt;method_id]);</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            LOGI(<span class="stringliteral">&quot;-&gt;protocol %s&quot;</span>, protocol_str.c_str());</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            LOGI(<span class="stringliteral">&quot;-&gt;url_path %s&quot;</span>, url_path.c_str());</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            LOGD(<span class="stringliteral">&quot;-&gt;method %s&quot;</span>, methods[this-&gt;method_id]);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            LOGD(<span class="stringliteral">&quot;-&gt;protocol %s&quot;</span>, protocol_str.c_str());</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            LOGD(<span class="stringliteral">&quot;-&gt;url_path %s&quot;</span>, url_path.c_str());</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        }</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;};</div>
@@ -531,7 +531,7 @@ $(function() {
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;};</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160; </div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;}</div>
-<div class="ttc" id="aclassaudio__tools_1_1_client_html"><div class="ttname"><a href="classaudio__tools_1_1_client.html">audio_tools::Client</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:127</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_client_html"><div class="ttname"><a href="classaudio__tools_1_1_client.html">audio_tools::Client</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:138</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_http_header_html"><div class="ttname"><a href="classaudio__tools_1_1_http_header.html">audio_tools::HttpHeader</a></div><div class="ttdoc">In a http request and reply we need to process header information. With this API we can define and qu...</div><div class="ttdef"><b>Definition:</b> HttpHeader.h:60</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_http_header_html_a7c7d6f6063db2f53479f140616be5724"><div class="ttname"><a href="classaudio__tools_1_1_http_header.html#a7c7d6f6063db2f53479f140616be5724">audio_tools::HttpHeader::clear</a></div><div class="ttdeci">HttpHeader &amp; clear(bool activeFlag=true)</div><div class="ttdoc">clears the data - usually we do not delete but we just set the active flag</div><div class="ttdef"><b>Definition:</b> HttpHeader.h:75</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_http_header_html_a85a50bfb440e119c8740b9f37334a401"><div class="ttname"><a href="classaudio__tools_1_1_http_header.html#a85a50bfb440e119c8740b9f37334a401">audio_tools::HttpHeader::write</a></div><div class="ttdeci">void write(Client &amp;out)</div><div class="ttdoc">writes the full header to the indicated HttpStreamedMultiOutput stream</div><div class="ttdef"><b>Definition:</b> HttpHeader.h:265</div></div>
