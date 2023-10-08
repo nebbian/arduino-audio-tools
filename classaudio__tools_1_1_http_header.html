@@ -67,8 +67,10 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_http_header-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">HttpHeader Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -157,6 +159,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeHeaderLine</b> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;out, <a class="el" href="structaudio__tools_1_1_http_header_line.html">HttpHeaderLine</a> *header)</td></tr>
 <tr class="separator:a651bcaa6e1bbae6aa88d0c811a056b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a37f5b0b22e759383dce4a78ddd05a3d4"><td class="memItemLeft" align="right" valign="top"><a id="a37f5b0b22e759383dce4a78ddd05a3d4"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#a37f5b0b22e759383dce4a78ddd05a3d4">end</a> ()</td></tr>
+<tr class="memdesc:a37f5b0b22e759383dce4a78ddd05a3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">release static temp buffer <br /></td></tr>
+<tr class="separator:a37f5b0b22e759383dce4a78ddd05a3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0cadb70e06bf018fe8a654ec22eda6cd"><td class="memItemLeft" align="right" valign="top"><a id="a0cadb70e06bf018fe8a654ec22eda6cd"></a>
@@ -171,6 +180,9 @@ MethodID&#160;</td><td class="memItemRight" valign="bottom"><b>getMethod</b> (co
 <tr class="memitem:a13f6e15862e987cc361820be99c64d46"><td class="memItemLeft" align="right" valign="top"><a id="a13f6e15862e987cc361820be99c64d46"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>parse1stLine</b> (const char *line)=0</td></tr>
 <tr class="separator:a13f6e15862e987cc361820be99c64d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4735ef219f6af368f52a3b9f2251e92"><td class="memItemLeft" align="right" valign="top"><a id="af4735ef219f6af368f52a3b9f2251e92"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><b>tempBuffer</b> ()</td></tr>
+<tr class="separator:af4735ef219f6af368f52a3b9f2251e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d612e847443001a21f6982f8a1b7bd6"><td class="memItemLeft" align="right" valign="top"><a id="a1d612e847443001a21f6982f8a1b7bd6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>write1stLine</b> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;out)=0</td></tr>
 <tr class="separator:a1d612e847443001a21f6982f8a1b7bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,6 +222,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>status_code</b> = UNDE
 <tr class="memitem:a76f384bd855c7874342d05805d8a0708"><td class="memItemLeft" align="right" valign="top"><a id="a76f384bd855c7874342d05805d8a0708"></a>
 <a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>url_path</b> = <a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a>(70)</td></tr>
 <tr class="separator:a76f384bd855c7874342d05805d8a0708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:ad7198145d82e4e29fdf4937eec078ed7"><td class="memItemLeft" align="right" valign="top"><a id="ad7198145d82e4e29fdf4937eec078ed7"></a>
+static <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>temp_buffer</b></td></tr>
+<tr class="separator:ad7198145d82e4e29fdf4937eec078ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>In a http request and reply we need to process header information. With this API we can define and query the header information. The individual header lines are stored in a vector. This is the common functionality for the <a class="el" href="classaudio__tools_1_1_http_request.html" title="Simple API to process get, put, post, del http requests I tried to use Arduino HttpClient,...">HttpRequest</a> and <a class="el" href="classaudio__tools_1_1_http_reply_header.html" title="Reading and Writing of Http Replys.">HttpReplyHeader</a> subclasses. </p>
