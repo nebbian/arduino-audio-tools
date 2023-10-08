@@ -31,7 +31,7 @@ var searchData=
   ['writefromreceive_1351',['writeFromReceive',['../classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a79908b9928cf48bb309f19dbdf2fa4f9',1,'audio_tools::I2SDriverSTM32']]],
   ['writeheader_1352',['writeHeader',['../classaudio__tools_1_1_w_a_v_header.html#ac012624c961a3cdd2f76933fed3c2f65',1,'audio_tools::WAVHeader']]],
   ['writemeta_1353',['writeMeta',['../classaudio__tools_1_1_binary_container_encoder.html#a43a30da913185727325494f8d559f939',1,'audio_tools::BinaryContainerEncoder']]],
-  ['writesamples_1354',['writeSamples',['../namespaceaudio__tools.html#ad49c9e7326cf6ff739f6ecd1f01ec3c1',1,'audio_tools']]],
+  ['writesamples_1354',['writeSamples',['../namespaceaudio__tools.html#ae4bf1846916254f6051fdf1437159163',1,'audio_tools']]],
   ['writesilence_1355',['writeSilence',['../classaudio__tools_1_1_audio_output.html#ad89418aeb557f65a8f1a0aed755633b1',1,'audio_tools::AudioOutput::writeSilence()'],['../classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1',1,'audio_tools::AudioStream::writeSilence()']]],
   ['writet_1356',['writeT',['../classaudio__tools_1_1_faust_stream.html#ac4da9f76fd157970e06fda582c52008a',1,'audio_tools::FaustStream']]]
 ];
