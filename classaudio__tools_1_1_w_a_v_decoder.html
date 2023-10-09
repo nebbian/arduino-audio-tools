@@ -159,12 +159,21 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a40ccab761fbae35e3eae43acc41be366"><td class="memItemLeft" align="right" valign="top"><a id="a40ccab761fbae35e3eae43acc41be366"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>decodeHeader</b> (uint8_t *in_ptr, size_t in_size)</td></tr>
 <tr class="separator:a40ccab761fbae35e3eae43acc41be366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bca0defee4bd08e828ac7fc93ebc61d"><td class="memItemLeft" align="right" valign="top"><a id="a3bca0defee4bd08e828ac7fc93ebc61d"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>interpret24bitAsInt32</b> (uint8_t *byteArray)</td></tr>
+<tr class="separator:a3bca0defee4bd08e828ac7fc93ebc61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae607080d1d8b4aabe305d60d9bf3d827"><td class="memItemLeft" align="right" valign="top"><a id="ae607080d1d8b4aabe305d60d9bf3d827"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>out</b> ()</td></tr>
 <tr class="separator:ae607080d1d8b4aabe305d60d9bf3d827"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49624bf1f0983f6882e820138ebff1a3"><td class="memItemLeft" align="right" valign="top"><a id="a49624bf1f0983f6882e820138ebff1a3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setupEncodedAudio</b> ()</td></tr>
 <tr class="separator:a49624bf1f0983f6882e820138ebff1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae957826af4049a550e4d458d3df74b7f"><td class="memItemLeft" align="right" valign="top"><a id="ae957826af4049a550e4d458d3df74b7f"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write_out</b> (const uint8_t *in_ptr, size_t in_size)</td></tr>
+<tr class="separator:ae957826af4049a550e4d458d3df74b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1455e90333928621218fea02b8308789"><td class="memItemLeft" align="right" valign="top"><a id="a1455e90333928621218fea02b8308789"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write_out_24</b> (const uint8_t *in_ptr, size_t in_size)</td></tr>
+<tr class="separator:a1455e90333928621218fea02b8308789"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a2e475070d3df18395c90a10c9d38eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,6 +186,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</t
 <tr class="memitem:a86c5c386386197b53bbca522921dc2da"><td class="memItemLeft" align="right" valign="top"><a id="a86c5c386386197b53bbca522921dc2da"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>audioBaseInfoSupport</b> =nullptr</td></tr>
 <tr class="separator:a86c5c386386197b53bbca522921dc2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dbad1ca1e878887c1cffc0861b09c88"><td class="memItemLeft" align="right" valign="top"><a id="a5dbad1ca1e878887c1cffc0861b09c88"></a>
+<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer24</b></td></tr>
+<tr class="separator:a5dbad1ca1e878887c1cffc0861b09c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb88a7977658bc9af3cae6500011adf1"><td class="memItemLeft" align="right" valign="top"><a id="adb88a7977658bc9af3cae6500011adf1"></a>
 <a class="el" href="classaudio__tools_1_1_encoded_audio_output.html">EncodedAudioOutput</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dec_out</b></td></tr>
 <tr class="separator:adb88a7977658bc9af3cae6500011adf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
