@@ -152,6 +152,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_stream_copy_t.html#ac41200bb0abf1703f53e3f5eaf08be9b">getTo</a> ()</td></tr>
 <tr class="memdesc:ac41200bb0abf1703f53e3f5eaf08be9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a pointer to the copy target. Can be used to check if the target is defined. <br /></td></tr>
 <tr class="separator:ac41200bb0abf1703f53e3f5eaf08be9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f512ab0fcc05612f8e3d6a4664ce9a"><td class="memItemLeft" align="right" valign="top"><a id="aa1f512ab0fcc05612f8e3d6a4664ce9a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_stream_copy_t.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">isActive</a> ()</td></tr>
+<tr class="memdesc:aa1f512ab0fcc05612f8e3d6a4664ce9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if copier is active. <br /></td></tr>
+<tr class="separator:aa1f512ab0fcc05612f8e3d6a4664ce9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada93b38d090efbbdb87020aca15f7b37"><td class="memItemLeft" align="right" valign="top"><a id="ada93b38d090efbbdb87020aca15f7b37"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_stream_copy_t.html#ada93b38d090efbbdb87020aca15f7b37">isCheckAvailableForWrite</a> ()</td></tr>
 <tr class="memdesc:ada93b38d090efbbdb87020aca15f7b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is Available for Write check activated ? <br /></td></tr>
@@ -164,6 +168,10 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_stream_copy_t.html#a6038284a43db2e3e343c6f517171e8fe">resize</a> (int len)</td></tr>
 <tr class="memdesc:a6038284a43db2e3e343c6f517171e8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">resizes the copy buffer <br /></td></tr>
 <tr class="separator:a6038284a43db2e3e343c6f517171e8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d4dd65be4e0a27eff3aac48dadd381"><td class="memItemLeft" align="right" valign="top"><a id="ac4d4dd65be4e0a27eff3aac48dadd381"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_stream_copy_t.html#ac4d4dd65be4e0a27eff3aac48dadd381">setActive</a> (bool flag)</td></tr>
+<tr class="memdesc:ac4d4dd65be4e0a27eff3aac48dadd381"><td class="mdescLeft">&#160;</td><td class="mdescRight">deactivate/activate copy - active by default <br /></td></tr>
+<tr class="separator:ac4d4dd65be4e0a27eff3aac48dadd381"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba7dbc8829c1916f43311fc9053fec44"><td class="memItemLeft" align="right" valign="top"><a id="aba7dbc8829c1916f43311fc9053fec44"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_stream_copy_t.html#aba7dbc8829c1916f43311fc9053fec44">setAvailableCallback</a> (int(*callback)(<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *stream))</td></tr>
 <tr class="memdesc:aba7dbc8829c1916f43311fc9053fec44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a callback that provides the available bytes at the source. <br /></td></tr>
@@ -202,6 +210,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memItemLeft" align="right" valign="top"><a id="a03c996f9fcf0e10baeb3e700be0c409a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b></td></tr>
+<tr class="separator:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad64057fa4055bae445d98ef8b300b2ca"><td class="memItemLeft" align="right" valign="top"><a id="ad64057fa4055bae445d98ef8b300b2ca"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>actual_mime</b></td></tr>
 <tr class="separator:ad64057fa4055bae445d98ef8b300b2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
