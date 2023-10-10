@@ -753,18 +753,19 @@ $(function() {
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    <span class="keywordtype">int</span> durationMsEff = <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>() - start_time;</div>
 <div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    <span class="keywordtype">int</span> durationToBe = (samples * 1000) / info.sample_rate;</div>
 <div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    <span class="keywordtype">int</span> waitMs = durationToBe - durationMsEff + info.correction_ms;</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    if (waitMs &gt; 0) {</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;      <a class="code" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a>(waitMs);</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;    }</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;  }</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160; </div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> start_time;</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;  <a class="code" href="structaudio__tools_1_1_throttle_config.html">ThrottleConfig</a> info;</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;  <span class="keywordtype">int</span> bytesPerSample;</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;};</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160; </div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    LOGI(<span class="stringliteral">&quot;wait: %d&quot;</span>, waitMs);</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;    <span class="keywordflow">if</span> (waitMs &gt; 0) {</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;      <a class="code" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a>(waitMs);</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;    }</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;  }</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160; </div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> start_time;</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;  <a class="code" href="structaudio__tools_1_1_throttle_config.html">ThrottleConfig</a> info;</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;  <span class="keywordtype">int</span> bytesPerSample;</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;};</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160; </div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_output_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_output.html">audio_tools::AudioOutput</a></div><div class="ttdoc">Abstract Audio Ouptut class.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:22</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream.html">audio_tools::AudioStream</a></div><div class="ttdoc">Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:47</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_sync_reader_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_sync_reader.html">audio_tools::AudioSyncReader</a></div><div class="ttdoc">Receving Audio Data over the wire and requesting for more data when done to synchronize the processin...</div><div class="ttdef"><b>Definition:</b> Communication.h:630</div></div>
