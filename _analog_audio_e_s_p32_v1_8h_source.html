@@ -223,47 +223,52 @@ $(function() {
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">bool</span> setup_rx(){</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    adc_continuous_handle_cfg_t adc_config = {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        .max_store_buf_size = (uint32_t)cfg.buffer_size * cfg.buffer_count,</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        .conv_frame_size = (uint32_t)cfg.buffer_size,</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    };</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    adc_continuous_new_handle(&amp;adc_config, &amp;adc_handle);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    adc_continuous_config_t dvig_cfg = {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        .sample_freq_hz = (uint32_t)cfg.sample_rate,</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        .conv_mode = (adc_digi_convert_mode_t)cfg.adc_conversion_mode,</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        .format = (adc_digi_output_format_t)cfg.adc_output_type,</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    };</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    adc_digi_pattern_config_t adc_pattern[cfg.channels] = {0};</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    adc_continuous_config_t dig_cfg = {};</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    dig_cfg.pattern_num = cfg.channels;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; cfg.channels; i++) {</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        uint8_t unit = GET_UNIT(cfg.channel[i]);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        uint8_t ch = cfg.channel[i] &amp; 0x7;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        adc_pattern[i].atten = cfg.adc_attenuation;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        adc_pattern[i].channel = ch;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        adc_pattern[i].unit = unit;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        adc_pattern[i].bit_width = cfg.adc_bit_width;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        LOGI(<span class="stringliteral">&quot;adc_pattern[%d].atten is :%x&quot;</span>, i, adc_pattern[i].atten);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        LOGI(<span class="stringliteral">&quot;adc_pattern[%d].channel is :%x&quot;</span>, i, adc_pattern[i].channel);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        LOGI(<span class="stringliteral">&quot;adc_pattern[%d].unit is :%x&quot;</span>, i, adc_pattern[i].unit);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    dig_cfg.adc_pattern = adc_pattern;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">if</span> (adc_continuous_config(adc_handle, &amp;dig_cfg)!=ESP_OK){</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      LOGE(<span class="stringliteral">&quot;adc_continuous_config&quot;</span>);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">int</span> max_channels = <span class="keyword">sizeof</span>(cfg.adc_channels)/<span class="keyword">sizeof</span>(adc_channel_t);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (cfg.channels &gt; max_channels ){</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      LOGE(<span class="stringliteral">&quot;channels: %d, max: %d&quot;</span>, cfg.channels, max_channels);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    adc_continuous_handle_cfg_t adc_config = {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        .max_store_buf_size = (uint32_t)cfg.buffer_size * cfg.buffer_count,</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        .conv_frame_size = (uint32_t)cfg.buffer_size,</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    };</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    adc_continuous_new_handle(&amp;adc_config, &amp;adc_handle);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    adc_continuous_config_t dvig_cfg = {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        .sample_freq_hz = (uint32_t)cfg.sample_rate,</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        .conv_mode = (adc_digi_convert_mode_t)cfg.adc_conversion_mode,</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        .format = (adc_digi_output_format_t)cfg.adc_output_type,</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    };</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    adc_digi_pattern_config_t adc_pattern[cfg.channels] = {0};</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    adc_continuous_config_t dig_cfg = {};</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    dig_cfg.pattern_num = cfg.channels;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; cfg.channels; i++) {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        uint8_t unit = GET_UNIT(cfg.adc_channels[i]);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        uint8_t ch = cfg.adc_channels[i] &amp; 0x7;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        adc_pattern[i].atten = cfg.adc_attenuation;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        adc_pattern[i].channel = ch;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        adc_pattern[i].unit = unit;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        adc_pattern[i].bit_width = cfg.adc_bit_width;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        LOGI(<span class="stringliteral">&quot;adc_pattern[%d].atten is :%x&quot;</span>, i, adc_pattern[i].atten);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        LOGI(<span class="stringliteral">&quot;adc_pattern[%d].channel is :%x&quot;</span>, i, adc_pattern[i].channel);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        LOGI(<span class="stringliteral">&quot;adc_pattern[%d].unit is :%x&quot;</span>, i, adc_pattern[i].unit);</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  }</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;};</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceaudio__tools.html#aed49378ae20ae0db086ef00cb4983f18">AnalogDriver</a> = AnalogDriverESP32V1;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    dig_cfg.adc_pattern = adc_pattern;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">if</span> (adc_continuous_config(adc_handle, &amp;dig_cfg)!=ESP_OK){</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      LOGE(<span class="stringliteral">&quot;adc_continuous_config&quot;</span>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  }</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}  <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;};</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceaudio__tools.html#aed49378ae20ae0db086ef00cb4983f18">AnalogDriver</a> = AnalogDriverESP32V1;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}  <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_analog_config_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_config.html">audio_tools::AnalogConfig</a></div><div class="ttdoc">ESP32 specific configuration for i2s input via adc. The default input pin is GPIO34....</div><div class="ttdef"><b>Definition:</b> AnalogAudioBase.h:40</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_analog_driver_base_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_base.html">audio_tools::AnalogDriverBase</a></div><div class="ttdef"><b>Definition:</b> AnalogAudioBase.h:135</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_analog_driver_e_s_p32_v1_1_1_i_o16_bit_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_e_s_p32_v1_1_1_i_o16_bit.html">audio_tools::AnalogDriverESP32V1::IO16Bit</a></div><div class="ttdoc">writes the int16_t data to the DAC</div><div class="ttdef"><b>Definition:</b> AnalogAudioESP32V1.h:108</div></div>

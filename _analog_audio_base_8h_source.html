@@ -127,13 +127,13 @@ $(function() {
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> adc_attenuation = ADC_ATTEN_DB_0;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> adc_bit_width = SOC_ADC_DIGI_MAX_BITWIDTH;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">    #if CONFIG_IDF_TARGET_ESP32C3 || CONFIG_IDF_TARGET_ESP32S3 || CONFIG_IDF_TARGET_ESP32H2 || CONFIG_IDF_TARGET_ESP32C2</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    adc_channel_t channel[3] = {ADC_CHANNEL_2, ADC_CHANNEL_3, (ADC_CHANNEL_0 | 1 &lt;&lt; 3)};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    adc_channel_t adc_channels[3] = {ADC_CHANNEL_2, ADC_CHANNEL_3, (ADC_CHANNEL_0 | 1 &lt;&lt; 3)};</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">    #if CONFIG_IDF_TARGET_ESP32S2</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    adc_channel_t channel[3] = {ADC_CHANNEL_2, ADC_CHANNEL_3, (ADC_CHANNEL_0 | 1 &lt;&lt; 3)};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    adc_channel_t adc_channels[3] = {ADC_CHANNEL_2, ADC_CHANNEL_3, (ADC_CHANNEL_0 | 1 &lt;&lt; 3)};</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">    #endif  </span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">    #if CONFIG_IDF_TARGET_ESP32</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    adc_channel_t channel[1] = {ADC_CHANNEL_7};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    adc_channel_t adc_channels[1] = {ADC_CHANNEL_7};</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
