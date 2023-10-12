@@ -123,19 +123,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_audio_info.html#a5e283a9495aaf265739336829d45e215">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="memdesc:a5e283a9495aaf265739336829d45e215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as set. <br /></td></tr>
 <tr class="separator:a5e283a9495aaf265739336829d45e215"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bd795f84917bf2fe17941ec405dbd5b"><td class="memItemLeft" align="right" valign="top"><a id="a6bd795f84917bf2fe17941ec405dbd5b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_config.html#a6bd795f84917bf2fe17941ec405dbd5b">setInputPin1</a> (int pin)</td></tr>
-<tr class="memdesc:a6bd795f84917bf2fe17941ec405dbd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an alternative input pin (for the left channel) <br /></td></tr>
-<tr class="separator:a6bd795f84917bf2fe17941ec405dbd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a2e6636cd98125c2e10094dad6aa03fe8"><td class="memItemLeft" align="right" valign="top"><a id="a2e6636cd98125c2e10094dad6aa03fe8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>adc_pin</b></td></tr>
-<tr class="separator:a2e6636cd98125c2e10094dad6aa03fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49416057f62a27364be3b0390cac099f"><td class="memItemLeft" align="right" valign="top"><a id="a49416057f62a27364be3b0390cac099f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>auto_clear</b> = I2S_AUTO_CLEAR</td></tr>
-<tr class="separator:a49416057f62a27364be3b0390cac099f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b477c5f7f28d9518a3afc1f36f7da45"><td class="memItemLeft" align="right" valign="top"><a id="a2b477c5f7f28d9518a3afc1f36f7da45"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>adc_attenuation</b> = ADC_ATTEN_DB_0</td></tr>
+<tr class="separator:a2b477c5f7f28d9518a3afc1f36f7da45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af565657793bc689353a4a8955f470ec8"><td class="memItemLeft" align="right" valign="top"><a id="af565657793bc689353a4a8955f470ec8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>adc_bit_width</b> = SOC_ADC_DIGI_MAX_BITWIDTH</td></tr>
+<tr class="separator:af565657793bc689353a4a8955f470ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3356745adda33d6a260182486439d442"><td class="memItemLeft" align="right" valign="top"><a id="a3356745adda33d6a260182486439d442"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>adc_conversion_mode</b> = ADC_CONV_MODE</td></tr>
+<tr class="separator:a3356745adda33d6a260182486439d442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389e07a3f4ec2f441350e802ebe27d1b"><td class="memItemLeft" align="right" valign="top"><a id="a389e07a3f4ec2f441350e802ebe27d1b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>adc_output_type</b> = ADC_OUTPUT_TYPE</td></tr>
+<tr class="separator:a389e07a3f4ec2f441350e802ebe27d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ae049b225e845689c9bfab94ebbc697"><td class="memItemLeft" align="right" valign="top"><a id="a2ae049b225e845689c9bfab94ebbc697"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>bits_per_sample</b> =16</td></tr>
 <tr class="separator:a2ae049b225e845689c9bfab94ebbc697"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,21 +156,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_auto_center_read</
 <tr class="memitem:a9bc83e076440bdc7e9c2ceb1f8c62617"><td class="memItemLeft" align="right" valign="top"><a id="a9bc83e076440bdc7e9c2ceb1f8c62617"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_blocking_write</b> = true</td></tr>
 <tr class="separator:a9bc83e076440bdc7e9c2ceb1f8c62617"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a572af6438a3abd3227ccebaddf5af845"><td class="memItemLeft" align="right" valign="top"><a id="a572af6438a3abd3227ccebaddf5af845"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mode_internal</b></td></tr>
-<tr class="separator:a572af6438a3abd3227ccebaddf5af845"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea70f90b3f75458c59ec410ddeabe096"><td class="memItemLeft" align="right" valign="top"><a id="aea70f90b3f75458c59ec410ddeabe096"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>port_no</b> = I2S_NUM_0</td></tr>
-<tr class="separator:aea70f90b3f75458c59ec410ddeabe096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31a454d24fb1f4d74779a0ff668d54cc"><td class="memItemLeft" align="right" valign="top"><a id="a31a454d24fb1f4d74779a0ff668d54cc"></a>
 <a class="el" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rx_tx_mode</b></td></tr>
 <tr class="separator:a31a454d24fb1f4d74779a0ff668d54cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527325650d66abd9626499785b3bafd2"><td class="memItemLeft" align="right" valign="top"><a id="a527325650d66abd9626499785b3bafd2"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>sample_rate</b> = 0</td></tr>
 <tr class="separator:a527325650d66abd9626499785b3bafd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a307f823a3f1283552dc9ea798f56d4f2"><td class="memItemLeft" align="right" valign="top"><a id="a307f823a3f1283552dc9ea798f56d4f2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>uninstall_driver_on_end</b> = true</td></tr>
-<tr class="separator:a307f823a3f1283552dc9ea798f56d4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95b999db5e77bee2c8ceeaf97d52669a"><td class="memItemLeft" align="right" valign="top"><a id="a95b999db5e77bee2c8ceeaf97d52669a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_apll</b> = false</td></tr>
 <tr class="separator:a95b999db5e77bee2c8ceeaf97d52669a"><td class="memSeparator" colspan="2">&#160;</td></tr>

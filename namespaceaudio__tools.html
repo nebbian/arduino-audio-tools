@@ -149,8 +149,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_base.html">AnalogDriverBase</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_e_s_p32.html">AnalogDriverESP32</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Please use <a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>: A very fast ADC and DAC using the ESP32 I2S interface.  <a href="classaudio__tools_1_1_analog_driver_e_s_p32.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_e_s_p32_v1.html">AnalogDriverESP32V1</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>: A very fast DAC using DMA using the new dac_continuous API.  <a href="classaudio__tools_1_1_analog_driver_e_s_p32_v1.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_p_t_x_decoder.html">APTXDecoder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decoder for OpenAptx. Depends on <a href="https://github.com/pschatzmann/libopenaptx">https://github.com/pschatzmann/libopenaptx</a>.  <a href="classaudio__tools_1_1_a_p_t_x_decoder.html#details">More...</a><br /></td></tr>
@@ -769,8 +769,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_config.html">I2SConfig</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration for all common i2s settings  <a href="classaudio__tools_1_1_i2_s_config.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html">I2SDriverESP32</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic I2S API - for the ESP32. If we receive 1 channel, we expand the result to 2 channels.  <a href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html">I2SDriverESP32V1</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic I2S API for the ESP32 (using the new API). <a href="https://docs.espressif.com/projects/esp-idf/en/v5.0.1/esp32/api-reference/peripherals/i2s.html#i2s-communication-mode">https://docs.espressif.com/projects/esp-idf/en/v5.0.1/esp32/api-reference/peripherals/i2s.html#i2s-communication-mode</a>.  <a href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p8266.html">I2SDriverESP8266</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic I2S API - for the ESP8266 Only 16 bits are supported !  <a href="classaudio__tools_1_1_i2_s_driver_e_s_p8266.html#details">More...</a><br /></td></tr>
@@ -1473,10 +1473,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ab063b4b8a473fcf62db503efd2cfafec"><td class="memItemLeft" align="right" valign="top"><a id="ab063b4b8a473fcf62db503efd2cfafec"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#ab063b4b8a473fcf62db503efd2cfafec">AnalogDriver</a> = <a class="el" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a></td></tr>
-<tr class="memdesc:ab063b4b8a473fcf62db503efd2cfafec"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>. <br /></td></tr>
-<tr class="separator:ab063b4b8a473fcf62db503efd2cfafec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed49378ae20ae0db086ef00cb4983f18"><td class="memItemLeft" align="right" valign="top"><a id="aed49378ae20ae0db086ef00cb4983f18"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#aed49378ae20ae0db086ef00cb4983f18">AnalogDriver</a> = <a class="el" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a></td></tr>
+<tr class="memdesc:aed49378ae20ae0db086ef00cb4983f18"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>. <br /></td></tr>
+<tr class="separator:aed49378ae20ae0db086ef00cb4983f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adceec2c2bb56cdaa41df59466d7f6c5e"><td class="memItemLeft" align="right" valign="top"><a id="adceec2c2bb56cdaa41df59466d7f6c5e"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>AudioBaseInfo</b> = <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a></td></tr>
 <tr class="separator:adceec2c2bb56cdaa41df59466d7f6c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1520,7 +1520,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>FOURCC</b> = char[4]
 using&#160;</td><td class="memItemRight" valign="bottom"><b>HexDumpStream</b> = <a class="el" href="classaudio__tools_1_1_hex_dump_output.html">HexDumpOutput</a></td></tr>
 <tr class="separator:ab153133bcff1dff07472661853d55a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30ff45a62e6edbdd3a21e381904c49fb"><td class="memItemLeft" align="right" valign="top"><a id="a30ff45a62e6edbdd3a21e381904c49fb"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>I2SDriver</b> = <a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html">I2SDriverESP32</a></td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>I2SDriver</b> = <a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html">I2SDriverESP32V1</a></td></tr>
 <tr class="separator:a30ff45a62e6edbdd3a21e381904c49fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a184bf51287a8c402f96cc495530559d1"><td class="memItemLeft" align="right" valign="top"><a id="a184bf51287a8c402f96cc495530559d1"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>JupyterAudio</b> = <a class="el" href="classaudio__tools_1_1_jupyter_audio_t.html">JupyterAudioT</a>&lt; int16_t &gt;</td></tr>
@@ -1805,9 +1805,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_stream_sink_soun
 <tr class="memitem:aa1ece901456a47e0104f93a9daba8c9f"><td class="memItemLeft" align="right" valign="top"><a id="aa1ece901456a47e0104f93a9daba8c9f"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_stream_source_sound_data</b> (Frame *data, int32_t len)</td></tr>
 <tr class="separator:aa1ece901456a47e0104f93a9daba8c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79ff6c2e174837e1331dbd20573e4667"><td class="memItemLeft" align="right" valign="top"><a id="a79ff6c2e174837e1331dbd20573e4667"></a>
-static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert8DAC</b> (int64_t value, int value_bits_per_sample)</td></tr>
-<tr class="separator:a79ff6c2e174837e1331dbd20573e4667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55868847c0ef334611f3ffa71a64619e"><td class="memItemLeft" align="right" valign="top"><a id="a55868847c0ef334611f3ffa71a64619e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a55868847c0ef334611f3ffa71a64619e">defaultPWMAudioOutputCallback</a> ()</td></tr>
 <tr class="memdesc:a55868847c0ef334611f3ffa71a64619e"><td class="mdescLeft">&#160;</td><td class="mdescRight">separate method that can be defined as friend so that we can access protected information <br /></td></tr>
@@ -2137,7 +2134,7 @@ static <a class="el" href="classaudio__tools_1_1_hardware_serial.html">HardwareS
 static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>spdif_buf</b> [(((192 *(64/8) *2)/2)/sizeof(uint32_t))]</td></tr>
 <tr class="separator:a1907eabaa69c704094d43f1a3c67475a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96c16fb7fd1d71bb7d650ccea9fb7255"><td class="memItemLeft" align="right" valign="top"><a id="a96c16fb7fd1d71bb7d650ccea9fb7255"></a>
-static uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><b>spdif_ptr</b></td></tr>
+static uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><b>spdif_ptr</b> = nullptr</td></tr>
 <tr class="separator:a96c16fb7fd1d71bb7d650ccea9fb7255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a352aa77d7fc2e022e5ca2cc38bc92806"><td class="memItemLeft" align="right" valign="top"><a id="a352aa77d7fc2e022e5ca2cc38bc92806"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>SUCCESS</b> = &quot;Success&quot;</td></tr>
