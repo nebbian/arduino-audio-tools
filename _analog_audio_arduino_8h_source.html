@@ -72,7 +72,7 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;AudioConfig.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifdef USE_ANALOG_ARDUINO</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#if defined(USE_ANALOG_ARDUINO) || defined(DOXYGEN)</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;AudioAnalog/AnalogAudioBase.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;AudioTimer/AudioTimer.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;AudioTools/AudioStreams.h&quot;</span></div>
@@ -85,7 +85,7 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">bool</span> begin(<a class="code" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html">AnalogConfig</a> cfg) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">bool</span> begin(<a class="code" href="classaudio__tools_1_1_analog_config_e_s_p32.html">AnalogConfig</a> cfg) {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    TRACED();</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    config = cfg;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (config.rx_tx_mode == RXTX_MODE) {</div>
@@ -312,12 +312,12 @@ $(function() {
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;};</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#aed49378ae20ae0db086ef00cb4983f18">  257</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriver</a> = <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a>;</div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a91ca8c40ca55c1fbc577d0fa03ba527d">  257</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriver</a> = <a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a>;</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassaudio__tools_1_1_analog_config_e_s_p32_v1_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html">audio_tools::AnalogConfigESP32V1</a></div><div class="ttdoc">ESP32 specific configuration for i2s input via adc using the adc_continuous API.</div><div class="ttdef"><b>Definition:</b> AnalogConfigESP32V1.h:32</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_config_e_s_p32_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_config_e_s_p32.html">audio_tools::AnalogConfigESP32</a></div><div class="ttdoc">ESP32 specific configuration for i2s input via adc. The default input pin is GPIO34....</div><div class="ttdef"><b>Definition:</b> AnalogConfigESP32.h:21</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_analog_driver_arduino_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_arduino.html">audio_tools::AnalogDriverArduino</a></div><div class="ttdoc">Please use the AnalogAudioStream: Reading Analog Data using a timer and the Arduino analogRead() meth...</div><div class="ttdef"><b>Definition:</b> AnalogAudioArduino.h:21</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_analog_driver_arduino_html_a1f6728aa34c4d7f0743160574e03d594"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_arduino.html#a1f6728aa34c4d7f0743160574e03d594">audio_tools::AnalogDriverArduino::callback</a></div><div class="ttdeci">static void callback(void *arg)</div><div class="ttdoc">Sample data and write to buffer.</div><div class="ttdef"><b>Definition:</b> AnalogAudioArduino.h:154</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_analog_driver_arduino_html_a2f783aba1c48dbdaf2d2be77681130e9"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_arduino.html#a2f783aba1c48dbdaf2d2be77681130e9">audio_tools::AnalogDriverArduino::isDecimateActive</a></div><div class="ttdeci">bool isDecimateActive()</div><div class="ttdoc">The requested sampling rate is too hight: we only process half of the samples so we can half the samp...</div><div class="ttdef"><b>Definition:</b> AnalogAudioArduino.h:229</div></div>

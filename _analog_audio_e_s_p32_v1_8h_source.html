@@ -72,7 +72,7 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;AudioConfig.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#if defined(ESP32) &amp;&amp; defined(USE_ANALOG) &amp;&amp;  ESP_IDF_VERSION &gt;= ESP_IDF_VERSION_VAL(5, 0, 0)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#if defined(ESP32) &amp;&amp; defined(USE_ANALOG) &amp;&amp;  ESP_IDF_VERSION &gt;= ESP_IDF_VERSION_VAL(5, 0, 0) || defined(DOXYGEN)</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;AudioAnalog/AnalogAudioBase.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;AudioTools/AudioStreams.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;AudioTools/AudioStreamsConverter.h&quot;</span></div>
@@ -264,7 +264,7 @@ $(function() {
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;};</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceaudio__tools.html#aed49378ae20ae0db086ef00cb4983f18">AnalogDriver</a> = AnalogDriverESP32V1;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceaudio__tools.html#a91ca8c40ca55c1fbc577d0fa03ba527d">AnalogDriver</a> = AnalogDriverESP32V1;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}  <span class="comment">// namespace</span></div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
@@ -281,7 +281,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream.html">audio_tools::AudioStream</a></div><div class="ttdoc">Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:47</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_number_format_converter_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_number_format_converter_stream.html">audio_tools::NumberFormatConverterStream</a></div><div class="ttdoc">Converter which converts between bits_per_sample and 16 bits. The templated NumberFormatConverterStre...</div><div class="ttdef"><b>Definition:</b> AudioStreamsConverter.h:356</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_aed49378ae20ae0db086ef00cb4983f18"><div class="ttname"><a href="namespaceaudio__tools.html#aed49378ae20ae0db086ef00cb4983f18">audio_tools::AnalogDriver</a></div><div class="ttdeci">AnalogDriverArduino AnalogDriver</div><div class="ttdoc">AnalogAudioStream.</div><div class="ttdef"><b>Definition:</b> AnalogAudioArduino.h:257</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_a91ca8c40ca55c1fbc577d0fa03ba527d"><div class="ttname"><a href="namespaceaudio__tools.html#a91ca8c40ca55c1fbc577d0fa03ba527d">audio_tools::AnalogDriver</a></div><div class="ttdeci">AnalogDriverArduino AnalogDriver</div><div class="ttdoc">AnalogAudioStream.</div><div class="ttdef"><b>Definition:</b> AnalogAudioArduino.h:257</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
