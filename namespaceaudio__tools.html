@@ -141,8 +141,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html">AnalogAudioStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support reading of audio only using analog input with a timer.  <a href="classaudio__tools_1_1_analog_audio_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_config.html">AnalogConfig</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32 specific configuration for i2s input via adc. The default input pin is GPIO34. We always use int16_t values. The default output pins are GPIO25 and GPIO26!  <a href="classaudio__tools_1_1_analog_config.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html">AnalogConfigESP32V1</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32 specific configuration for i2s input via adc using the adc_continuous API.  <a href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_config_std.html">AnalogConfigStd</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic ADC and DAC configuration.  <a href="classaudio__tools_1_1_analog_config_std.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Please use the <a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>: Reading Analog Data using a timer and the Arduino analogRead() method and writing using analogWrite();.  <a href="classaudio__tools_1_1_analog_driver_arduino.html#details">More...</a><br /></td></tr>
@@ -1473,6 +1476,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:af976b2e6530625999211f5d27d9e1b99"><td class="memItemLeft" align="right" valign="top"><a id="af976b2e6530625999211f5d27d9e1b99"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>AnalogConfig</b> = <a class="el" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html">AnalogConfigESP32V1</a></td></tr>
+<tr class="separator:af976b2e6530625999211f5d27d9e1b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed49378ae20ae0db086ef00cb4983f18"><td class="memItemLeft" align="right" valign="top"><a id="aed49378ae20ae0db086ef00cb4983f18"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#aed49378ae20ae0db086ef00cb4983f18">AnalogDriver</a> = <a class="el" href="classaudio__tools_1_1_analog_driver_arduino.html">AnalogDriverArduino</a></td></tr>
 <tr class="memdesc:aed49378ae20ae0db086ef00cb4983f18"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ...">AnalogAudioStream</a>. <br /></td></tr>
