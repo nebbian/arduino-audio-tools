@@ -715,9 +715,9 @@ $(function() {
 <div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160; </div>
 <div class="line"><a name="l00737"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_throttle_config.html">  737</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structaudio__tools_1_1_throttle_config.html">ThrottleConfig</a> : <span class="keyword">public</span> <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> {</div>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;  <a class="code" href="structaudio__tools_1_1_throttle_config.html">ThrottleConfig</a>() {</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    sample_rate = 44100;</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    bits_per_sample = 16;</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    channels = 2;</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = 44100;</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = 16;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = 2;</div>
 <div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;  }</div>
 <div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;  <span class="keywordtype">int</span> correction_ms = 0;</div>
 <div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;};</div>
@@ -739,7 +739,7 @@ $(function() {
 <div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160; </div>
 <div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;  <span class="keywordtype">void</span> begin(<a class="code" href="structaudio__tools_1_1_throttle_config.html">ThrottleConfig</a> info) {</div>
 <div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;    this-&gt;info = info;</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    bytesPerSample = info.bits_per_sample / 8 * info.channels;</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    bytesPerSample = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> / 8 * info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
 <div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;  }</div>
 <div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160; </div>
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;  <span class="comment">// starts the timing</span></div>
@@ -751,7 +751,7 @@ $(function() {
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;  <span class="comment">// delay</span></div>
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;  <span class="keywordtype">void</span> delaySamples(<span class="keywordtype">size_t</span> samples) {</div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    <span class="keywordtype">int</span> durationMsEff = <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>() - start_time;</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    <span class="keywordtype">int</span> durationToBe = (samples * 1000) / info.sample_rate;</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    <span class="keywordtype">int</span> durationToBe = (samples * 1000) / info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>;</div>
 <div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    <span class="keywordtype">int</span> waitMs = durationToBe - durationMsEff + info.correction_ms;</div>
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    LOGI(<span class="stringliteral">&quot;wait: %d&quot;</span>, waitMs);</div>
 <div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;    <span class="keywordflow">if</span> (waitMs &gt; 0) {</div>
@@ -818,6 +818,9 @@ $(function() {
 <div class="ttc" id="astructaudio__tools_1_1_audio_header_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_header.html">audio_tools::AudioHeader</a></div><div class="ttdoc">Common Header for all records.</div><div class="ttdef"><b>Definition:</b> Communication.h:516</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a029ace15f5ede8def0a6ab5c97a81b25"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a029ace15f5ede8def0a6ab5c97a81b25">audio_tools::AudioInfo::copyFrom</a></div><div class="ttdeci">void copyFrom(AudioInfo info)</div><div class="ttdoc">Same as set.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:83</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:106</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:108</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:104</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_send_data_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_send_data.html">audio_tools::AudioSendData</a></div><div class="ttdoc">Protocol Record for Data.</div><div class="ttdef"><b>Definition:</b> Communication.h:536</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_e_s_p_now_stream_config_html"><div class="ttname"><a href="structaudio__tools_1_1_e_s_p_now_stream_config.html">audio_tools::ESPNowStreamConfig</a></div><div class="ttdoc">Configuration for ESP-NOW protocol.</div><div class="ttdef"><b>Definition:</b> Communication.h:47</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_e_s_p_now_stream_config_html_a4574b7c5bb954f02512bab0493b16955"><div class="ttname"><a href="structaudio__tools_1_1_e_s_p_now_stream_config.html#a4574b7c5bb954f02512bab0493b16955">audio_tools::ESPNowStreamConfig::primary_master_key</a></div><div class="ttdeci">const char * primary_master_key</div><div class="ttdoc">to encrypt set primary_master_key and local_master_key to 16 byte strings</div><div class="ttdef"><b>Definition:</b> Communication.h:62</div></div>

@@ -86,9 +86,9 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config_std.html#a3f8c35d87f8bbda58b32c8860a9e08ea">   23</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_config_std.html#a3f8c35d87f8bbda58b32c8860a9e08ea">AnalogConfigStd</a>(<span class="keyword">const</span> <a class="code" href="classaudio__tools_1_1_analog_config_std.html">AnalogConfigStd</a> &amp;cfg) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_config_std.html">AnalogConfigStd</a>() {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        sample_rate = 44100;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        bits_per_sample = 16;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        channels = 2;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = 44100;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = 16;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = 2;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        buffer_size = ANALOG_BUFFER_SIZE;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        buffer_count = ANALOG_BUFFERS;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        rx_tx_mode = RX_MODE;</div>
@@ -111,6 +111,9 @@ $(function() {
 <div class="ttc" id="agroup__basic_html_ga8cbd91a8bac9b5ab425112be1620eb49"><div class="ttname"><a href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">audio_tools::RxTxMode</a></div><div class="ttdeci">RxTxMode</div><div class="ttdoc">Audio Source (TX_MODE) or Audio Sink (RX_MODE). RXTX_MODE is Source and Sink at the same time!</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:24</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:106</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:108</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:104</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

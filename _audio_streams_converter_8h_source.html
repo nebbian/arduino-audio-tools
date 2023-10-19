@@ -124,7 +124,7 @@ $(function() {
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    AudioStream::setAudioInfo(cfg);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    to_channels = cfg.channels;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    to_channels = cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> available()<span class="keyword"> override </span>{</div>
@@ -186,9 +186,9 @@ $(function() {
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg, <span class="keywordtype">int</span> toChannels) {</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    AudioStream::setAudioInfo(cfg);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    LOGI(<span class="stringliteral">&quot;begin %d -&gt; %d channels&quot;</span>, cfg.channels, toChannels);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    bits_per_sample = cfg.bits_per_sample;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">bool</span> result = setupConverter(cfg.channels, toChannels);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    LOGI(<span class="stringliteral">&quot;begin %d -&gt; %d channels&quot;</span>, cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>, toChannels);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    bits_per_sample = cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">bool</span> result = setupConverter(cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>, toChannels);</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">if</span> (!result) {</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      TRACEE()</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
@@ -397,13 +397,13 @@ $(function() {
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <a class="code" href="classaudio__tools_1_1_number_format_converter_stream.html">NumberFormatConverterStream</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;print) { setStream(print); }</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keywordtype">void</span> setAudioInfo (<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    this-&gt;from_bit_per_samples = info.sample_rate;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    this-&gt;from_bit_per_samples = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>;</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    AudioStream::setAudioInfo(info);</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  }</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info, <span class="keywordtype">int</span> to_bit_per_samples) {</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    AudioStream::setAudioInfo(info);</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">return</span> begin(info.bits_per_sample, to_bit_per_samples);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">return</span> begin(info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>, to_bit_per_samples);</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  }</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  <span class="keywordtype">bool</span> begin(<span class="keywordtype">int</span> from_bit_per_samples, <span class="keywordtype">int</span> to_bit_per_samples) {</div>
@@ -649,19 +649,19 @@ $(function() {
 <div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    channelFormatConverter.setStream(numberFormatConverter);</div>
 <div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160; </div>
 <div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    <span class="comment">// start individual converters</span></div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="keywordtype">bool</span> result = channelFormatConverter.begin(from_cfg, to_cfg.channels);</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="keywordtype">bool</span> result = channelFormatConverter.begin(from_cfg, to_cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>);</div>
 <div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160; </div>
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    AudioInfo from_actual_cfg(from_cfg);</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;    from_actual_cfg.channels = to_cfg.channels;</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;    from_actual_cfg.channels = to_cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    result &amp;= numberFormatConverter.begin(from_actual_cfg.bits_per_sample,</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                                          to_cfg.bits_per_sample);</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                                          to_cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>);</div>
 <div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160; </div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    numberFormatConverter.setBuffered(is_buffered);</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    sampleRateConverter.<a class="code" href="classaudio__tools_1_1_resample_stream.html#a5a08430ad7efc8359dfd18b010cbc63d">setBuffered</a>(is_buffered);</div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160; </div>
 <div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160; </div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    from_actual_cfg.bits_per_sample = to_cfg.bits_per_sample;</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    result &amp;= sampleRateConverter.begin(from_actual_cfg, to_cfg.sample_rate);</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    from_actual_cfg.bits_per_sample = to_cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>;</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    result &amp;= sampleRateConverter.begin(from_actual_cfg, to_cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>);</div>
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160; </div>
 <div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    <span class="comment">// setup reader to support readBytes()</span></div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    <span class="keywordflow">if</span> (getStream()!=<span class="keyword">nullptr</span>){</div>
@@ -692,8 +692,8 @@ $(function() {
 <div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;  <span class="keywordtype">bool</span> is_buffered = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160; </div>
 <div class="line"><a name="l00670"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_format_converter_stream.html#a7ed464c23066e6abb70174360d2acc6c">  670</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classaudio__tools_1_1_format_converter_stream.html#a7ed464c23066e6abb70174360d2acc6c">byteFactor</a>() {</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)from_cfg.channels / (float)to_cfg.channels *</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;           (<span class="keywordtype">float</span>)from_cfg.bits_per_sample / (float)to_cfg.bits_per_sample;</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)from_cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> / (float)to_cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> *</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;           (<span class="keywordtype">float</span>)from_cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> / (float)to_cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>;</div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;  }</div>
 <div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;};</div>
 <div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160; </div>
@@ -722,6 +722,9 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html"><div class="ttname"><a href="classaudio__tools_1_1_vector.html">audio_tools::Vector</a></div><div class="ttdoc">Vector implementation which provides the most important methods as defined by std::vector....</div><div class="ttdef"><b>Definition:</b> Vector.h:18</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:106</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:108</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:104</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

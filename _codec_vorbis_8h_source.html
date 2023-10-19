@@ -174,9 +174,9 @@ $(function() {
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> currentInfo() {</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> result;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    vorbis_info *info = ov_info(&amp;file, -1);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    result.sample_rate = info-&gt;rate;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    result.channels = info-&gt;channels;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    result.bits_per_sample = 2;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    result.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = info-&gt;rate;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    result.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = info-&gt;channels;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    result.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = 2;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
@@ -225,7 +225,7 @@ $(function() {
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;};</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_info_support_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_support.html">audio_tools::AudioInfoSupport</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:114</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_info_support_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_support.html">audio_tools::AudioInfoSupport</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:116</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:58</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_stream.html">audio_tools::Stream</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:125</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_streaming_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_streaming_decoder.html">audio_tools::StreamingDecoder</a></div><div class="ttdoc">A Streaming Decoder where we provide both the input and output as streams.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:141</div></div>
@@ -242,6 +242,9 @@ $(function() {
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html_a504241b61d3595ad9356f8fccef71c20"><div class="ttname"><a href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">audio_tools::delay</a></div><div class="ttdeci">void delay(uint64_t ms)</div><div class="ttdoc">Waits for the indicated milliseconds.</div><div class="ttdef"><b>Definition:</b> Millis.h:10</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:106</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:108</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:104</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

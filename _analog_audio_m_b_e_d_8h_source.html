@@ -85,31 +85,31 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_driver_m_b_e_d.html#a5b57d1fefbbb011e8e8672dcc6750895">   25</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_analog_driver_m_b_e_d.html#a5b57d1fefbbb011e8e8672dcc6750895">begin</a>(<a class="code" href="classaudio__tools_1_1_analog_config_e_s_p32.html">AnalogConfig</a> cfg) {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    TRACEI();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (cfg.bits_per_sample != 16) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> != 16) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      LOGE(<span class="stringliteral">&quot;Only 16 bits_per_sample supported&quot;</span>);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (cfg.channels &gt; 2) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> &gt; 2) {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      LOGE(<span class="stringliteral">&quot;max channels: 2&quot;</span>);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span> (cfg.channels &lt;= 0) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span> (cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> &lt;= 0) {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      LOGE(<span class="stringliteral">&quot;no channels&quot;</span>);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    info = cfg;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    auto_center.begin(config.channels, config.bits_per.sample);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> n_samples = cfg.buffer_size / (cfg.bits_per_sample / 8);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> n_samples = cfg.buffer_size / (cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> / 8);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ring_buffer.resize(n_samples);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">switch</span> (info.channels) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">switch</span> (info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>) {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      dac1.begin(AN_RESOLUTION_12, info.sample_rate, n_samples,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      dac1.begin(AN_RESOLUTION_12, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>, n_samples,</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                 cfg.buffer_count);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      dac1.begin(AN_RESOLUTION_12, info.sample_rate, n_samples / 2,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      dac1.begin(AN_RESOLUTION_12, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>, n_samples / 2,</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                 cfg.buffer_count);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      dac2.begin(AN_RESOLUTION_12, info.sample_rate, n_samples / 2,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      dac2.begin(AN_RESOLUTION_12, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>, n_samples / 2,</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                 cfg.buffer_count);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
@@ -159,7 +159,7 @@ $(function() {
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">size_t</span> result = 0;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    int16_t *data = (int16_t *)dest;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">size_t</span> samples = size_bytes / 2;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">switch</span> (info.channels) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">switch</span> (info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>) {</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">case</span> 1:</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; samples; j++) {</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        data[j] = adc1.read();</div>
@@ -244,6 +244,9 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_ring_buffer_html_aac0ab007845c29d8d4c9b96a3cbbe2c9"><div class="ttname"><a href="classaudio__tools_1_1_ring_buffer.html#aac0ab007845c29d8d4c9b96a3cbbe2c9">audio_tools::RingBuffer::isFull</a></div><div class="ttdeci">virtual bool isFull()</div><div class="ttdoc">checks if the buffer is full</div><div class="ttdef"><b>Definition:</b> Buffers.h:331</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html_a91ca8c40ca55c1fbc577d0fa03ba527d"><div class="ttname"><a href="namespaceaudio__tools.html#a91ca8c40ca55c1fbc577d0fa03ba527d">audio_tools::AnalogDriver</a></div><div class="ttdeci">AnalogDriverArduino AnalogDriver</div><div class="ttdoc">AnalogAudioStream.</div><div class="ttdef"><b>Definition:</b> AnalogAudioArduino.h:257</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:106</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:108</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:104</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

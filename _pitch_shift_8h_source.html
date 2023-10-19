@@ -81,9 +81,9 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_pitch_shift_info.html">   15</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structaudio__tools_1_1_pitch_shift_info.html">PitchShiftInfo</a> : <span class="keyword">public</span> <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="structaudio__tools_1_1_pitch_shift_info.html">PitchShiftInfo</a>() {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    channels = 2;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    sample_rate = 44100;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    bits_per_sample = 16;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = 2;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = 44100;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = 16;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">float</span> pitch_shift = 1.4f;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">int</span> buffer_size = 1000;</div>
@@ -418,7 +418,7 @@ $(function() {
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160; </div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  <a class="code" href="structaudio__tools_1_1_pitch_shift_info.html">PitchShiftInfo</a> defaultConfig() {</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <a class="code" href="structaudio__tools_1_1_pitch_shift_info.html">PitchShiftInfo</a> result;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    result.bits_per_sample = <span class="keyword">sizeof</span>(T) * 8;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    result.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = <span class="keyword">sizeof</span>(T) * 8;</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  }</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
@@ -439,7 +439,7 @@ $(function() {
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;      <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keywordtype">size_t</span> result = 0;</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordtype">int</span> channels = cfg.channels;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordtype">int</span> channels = cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    T *p_in = (T *)data;</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keywordtype">int</span> sample_count = len / <span class="keyword">sizeof</span>(T);</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
@@ -449,7 +449,7 @@ $(function() {
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        value += p_in[j + ch];</div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;      }</div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;      <span class="comment">// calculate avg sample value</span></div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;      value /= cfg.channels;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;      value /= cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;      <span class="comment">// output values</span></div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      T out_value = pitchShift(value);</div>
@@ -523,6 +523,9 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html"><div class="ttname"><a href="classaudio__tools_1_1_vector.html">audio_tools::Vector</a></div><div class="ttdoc">Vector implementation which provides the most important methods as defined by std::vector....</div><div class="ttdef"><b>Definition:</b> Vector.h:18</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:106</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:108</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:104</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_pitch_shift_info_html"><div class="ttname"><a href="structaudio__tools_1_1_pitch_shift_info.html">audio_tools::PitchShiftInfo</a></div><div class="ttdoc">Configuration for PitchShiftOutput: set the pitch_shift to define the shift.</div><div class="ttdef"><b>Definition:</b> PitchShift.h:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

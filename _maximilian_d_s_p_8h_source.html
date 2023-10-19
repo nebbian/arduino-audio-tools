@@ -97,7 +97,7 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_maximilian.html#afd420696e82e3c9725541a0dbab9c767">   32</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_maximilian.html#afd420696e82e3c9725541a0dbab9c767">begin</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg){</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            this-&gt;cfg = cfg;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            maxiSettings::setup(cfg.sample_rate, cfg.channels, DEFAULT_BUFFER_SIZE);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            maxiSettings::setup(cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>, cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>, DEFAULT_BUFFER_SIZE);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_maximilian.html#a12c2fba1888a04d3e954c1eda3a56c34">   38</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_maximilian.html#a12c2fba1888a04d3e954c1eda3a56c34">setVolume</a>(<span class="keywordtype">float</span> f){</div>
@@ -112,13 +112,13 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_maximilian.html#aaa6c087511a52e64fc9ad92820c7c0a8">   49</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_maximilian.html#aaa6c087511a52e64fc9ad92820c7c0a8">copy</a>() {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">// fill buffer with data</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            maxi_float_t out[cfg.channels];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            maxi_float_t out[cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>];</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            uint16_t samples = buffer_size / <span class="keyword">sizeof</span>(uint16_t);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            int16_t *p_samples = (int16_t *)p_buffer;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">for</span> (uint16_t j=0;j&lt;samples;j+=cfg.channels){</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">for</span> (uint16_t j=0;j&lt;samples;j+=cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>){</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                callback(out);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="comment">// convert all channels to int16</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch=0;ch&lt;cfg.channels;ch++){</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch=0;ch&lt;cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;ch++){</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    p_samples[j+ch] = out[ch]*32767*volume;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
@@ -145,6 +145,8 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:58</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:106</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:104</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

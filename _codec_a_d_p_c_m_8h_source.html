@@ -78,9 +78,9 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html">ADPCMDecoder</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_decoder_ext.html">AudioDecoderExt</a> {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html">ADPCMDecoder</a>(AVCodecID <span class="keywordtype">id</span>, <span class="keywordtype">int</span> blockSize = ADAPCM_DEFAULT_BLOCK_SIZE) {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    info.sample_rate = 44100;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    info.channels = 2;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    info.bits_per_sample = 16;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = 44100;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = 2;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = 16;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    decoder.setCodecID(<span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    decoder.setBlockSize(blockSize);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  }</div>
@@ -93,7 +93,7 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">void</span> begin()<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    TRACEI();</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    current_byte = 0;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    decoder.begin(info.sample_rate, info.channels);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    decoder.begin(info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    LOGI(<span class="stringliteral">&quot;frameSize: %d&quot;</span>, (<span class="keywordtype">int</span>)decoder.frameSize());</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    block_size = decoder.blockSize();</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    assert(block_size &gt; 0);</div>
@@ -144,7 +144,7 @@ $(function() {
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      AVFrame &amp;frame = decoder.decode(&amp;adpcm_block[0], block_size);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="comment">// print the result</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      int16_t *data = (int16_t *)frame.data[0];</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordtype">size_t</span> byte_count = frame.nb_samples * <span class="keyword">sizeof</span>(int16_t) * info.channels;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordtype">size_t</span> byte_count = frame.nb_samples * <span class="keyword">sizeof</span>(int16_t) * info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordtype">size_t</span> written = p_print-&gt;write((uint8_t *)data, byte_count);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordflow">if</span> (written != byte_count) {</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        LOGE(<span class="stringliteral">&quot;encode %d-&gt;%d&quot;</span>, (<span class="keywordtype">int</span>)byte_count, (<span class="keywordtype">int</span>)written);</div>
@@ -160,9 +160,9 @@ $(function() {
 <div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html">  103</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html">ADPCMEncoder</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_encoder_ext.html">AudioEncoderExt</a> {</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html">ADPCMEncoder</a>(AVCodecID <span class="keywordtype">id</span>, <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#acce57d9e9018d5ce183ede161c776b6d">blockSize</a> = ADAPCM_DEFAULT_BLOCK_SIZE) {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    info.sample_rate = 44100;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    info.channels = 2;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    info.bits_per_sample = 16;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = 44100;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = 2;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = 16;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    encoder.setCodecID(<span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    encoder.setBlockSize(<a class="code" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#acce57d9e9018d5ce183ede161c776b6d">blockSize</a>);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  }</div>
@@ -178,11 +178,11 @@ $(function() {
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">void</span> begin()<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    TRACEI();</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    encoder.begin(info.sample_rate, info.channels);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    encoder.begin(info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>);</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    LOGI(<span class="stringliteral">&quot;frameSize: %d&quot;</span>, (<span class="keywordtype">int</span>)encoder.frameSize());</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    assert(info.sample_rate != 0);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    assert(info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> != 0);</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    assert(encoder.frameSize() != 0);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    total_samples = encoder.frameSize()*info.channels;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    total_samples = encoder.frameSize()*info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    pcm_block.resize(total_samples);</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    current_sample = 0;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
@@ -252,6 +252,9 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:58</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:106</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:108</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:104</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

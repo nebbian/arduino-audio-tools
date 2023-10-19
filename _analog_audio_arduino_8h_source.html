@@ -93,7 +93,7 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    frame_size = config.channels*(config.bits_per_sample/8);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    frame_size = config.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>*(config.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>/8);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    result_factor = 1;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> (!setupTx()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -131,13 +131,13 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    len = len / frame_size * frame_size;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span> (isCombinedChannel()){</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        ChannelReducer cr(1, 2, config.bits_per_sample);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        ChannelReducer cr(1, 2, config.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        len = cr.convert((uint8_t*)data, len);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        LOGD(<span class="stringliteral">&quot;ChannelReducer len: %d&quot;</span>, (<span class="keywordtype">int</span>) len);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classaudio__tools_1_1_analog_driver_arduino.html#a2f783aba1c48dbdaf2d2be77681130e9">isDecimateActive</a>()){</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        Decimate dec(decim, 1, config.bits_per_sample);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        Decimate dec(decim, 1, config.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        len = dec.convert((uint8_t*)data, len);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        LOGD(<span class="stringliteral">&quot;Decimate len: %d for factor %d&quot;</span>, (<span class="keywordtype">int</span>) len, decim);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
@@ -172,7 +172,7 @@ $(function() {
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keywordflow">if</span> (config.channels&gt;ANALOG_MAX_OUT_CHANNELS){</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">if</span> (config.channels == 2){</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;          is_combined_channels = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;          config.channels = 1;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;          config.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = 1;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;          LOGE(<span class="stringliteral">&quot;Unsupported channels&quot;</span>);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -220,7 +220,7 @@ $(function() {
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">// Logic for reading audio data</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">if</span> (self-&gt;config.rx_tx_mode == RX_MODE) {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <span class="keywordtype">int</span> channels = <span class="keyword">self</span>-&gt;config.channels;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <span class="keywordtype">int</span> channels = <span class="keyword">self</span>-&gt;config.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; channels; j++) {</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="comment">// provides value in range 0…4095</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        value = analogRead(self-&gt;config.start_pin + j);</div>
@@ -332,6 +332,8 @@ $(function() {
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html_a07f83b0475b1f3c98eccd9b1642dd1cb"><div class="ttname"><a href="namespaceaudio__tools.html#a07f83b0475b1f3c98eccd9b1642dd1cb">audio_tools::map</a></div><div class="ttdeci">long map(long x, long in_min, long in_max, long out_min, long out_max)</div><div class="ttdoc">Maps input to output values.</div><div class="ttdef"><b>Definition:</b> NoArduino.h:161</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html_a504241b61d3595ad9356f8fccef71c20"><div class="ttname"><a href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">audio_tools::delay</a></div><div class="ttdeci">void delay(uint64_t ms)</div><div class="ttdoc">Waits for the indicated milliseconds.</div><div class="ttdef"><b>Definition:</b> Millis.h:10</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:106</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:108</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

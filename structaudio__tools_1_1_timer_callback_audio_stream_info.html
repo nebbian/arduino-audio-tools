@@ -118,7 +118,9 @@ Public Attributes</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>adapt_sample_rate</b> = false</td></tr>
 <tr class="separator:ada2fe629d95988a2015c80da60dcbbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ae049b225e845689c9bfab94ebbc697"><td class="memItemLeft" align="right" valign="top"><a id="a2ae049b225e845689c9bfab94ebbc697"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>bits_per_sample</b> =16</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = DEFAULT_BITS_PER_SAMPLE</td></tr>
+<tr class="memdesc:a2ae049b225e845689c9bfab94ebbc697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bits per sample (int16_t = 16 bits) <br  />
+ <br /></td></tr>
 <tr class="separator:a2ae049b225e845689c9bfab94ebbc697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adae708b20ac4fe01990712c8041e560a"><td class="memItemLeft" align="right" valign="top"><a id="adae708b20ac4fe01990712c8041e560a"></a>
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_size</b> = DEFAULT_BUFFER_SIZE</td></tr>
@@ -127,13 +129,15 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_size</b> =
 uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>callback</b> )(uint8_t *data, uint16_t len) = nullptr</td></tr>
 <tr class="separator:a6b5d96a862494ebebe8b199a8266453b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a178795099d0608972755dfef8d8367e3"><td class="memItemLeft" align="right" valign="top"><a id="a178795099d0608972755dfef8d8367e3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b> = 0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = DEFAULT_CHANNELS</td></tr>
+<tr class="memdesc:a178795099d0608972755dfef8d8367e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of channels: 2=stereo, 1=mono. <br /></td></tr>
 <tr class="separator:a178795099d0608972755dfef8d8367e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31a454d24fb1f4d74779a0ff668d54cc"><td class="memItemLeft" align="right" valign="top"><a id="a31a454d24fb1f4d74779a0ff668d54cc"></a>
 <a class="el" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rx_tx_mode</b> = RX_MODE</td></tr>
 <tr class="separator:a31a454d24fb1f4d74779a0ff668d54cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527325650d66abd9626499785b3bafd2"><td class="memItemLeft" align="right" valign="top"><a id="a527325650d66abd9626499785b3bafd2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>sample_rate</b> = 0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = DEFAULT_SAMPLE_RATE</td></tr>
+<tr class="memdesc:a527325650d66abd9626499785b3bafd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample Rate: e.g 44100. <br /></td></tr>
 <tr class="separator:a527325650d66abd9626499785b3bafd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a166da3f202f9eef0db2dbd2f0e6235ad"><td class="memItemLeft" align="right" valign="top"><a id="a166da3f202f9eef0db2dbd2f0e6235ad"></a>
 TimerFunction&#160;</td><td class="memItemRight" valign="bottom"><b>timer_function</b> = DirectTimerCallback</td></tr>

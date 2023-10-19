@@ -102,7 +102,7 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            TRACED();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            timer.end();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            is_timer_started = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j&lt;audio_config.channels;j++){</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j&lt;audio_config.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;j++){</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#if ESP_IDF_VERSION &gt; ESP_IDF_VERSION_VAL(5, 0 , 0)</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                ledcDetach(pins[j].gpio);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#else</span></div>
@@ -115,7 +115,7 @@ $(function() {
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span> (!timer){</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                TRACEI();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                audio_config = audioInfo();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                timer.begin(<a class="code" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#ad01c3142af5779554e93ef32d81ac71c">pwm_callback</a>, audio_config.sample_rate, HZ);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                timer.begin(<a class="code" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#ad01c3142af5779554e93ef32d81ac71c">pwm_callback</a>, audio_config.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>, HZ);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                is_timer_started = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
@@ -124,8 +124,8 @@ $(function() {
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="comment">// frequency is driven by selected resolution</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            audio_config.pwm_frequency = <a class="code" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#a630cb46e9a0636a8f424157ae3c13bf5">frequency</a>(audio_config.resolution) * 1000;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            pins.resize(audio_config.channels);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j&lt;audio_config.channels;j++){</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            pins.resize(audio_config.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j&lt;audio_config.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;j++){</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                pins[j].gpio = audio_config.pins()[j];</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#if ESP_IDF_VERSION &gt; ESP_IDF_VERSION_VAL(5, 0 , 0)</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                ledcAttach(pins[j].gpio, audio_config.pwm_frequency, audio_config.resolution);</div>
@@ -210,6 +210,8 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_timer_alarm_repeating_html"><div class="ttname"><a href="classaudio__tools_1_1_timer_alarm_repeating.html">audio_tools::TimerAlarmRepeating</a></div><div class="ttdoc">Common Interface definition for TimerAlarmRepeating.</div><div class="ttdef"><b>Definition:</b> AudioTimer.h:25</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html"><div class="ttname"><a href="classaudio__tools_1_1_vector.html">audio_tools::Vector</a></div><div class="ttdoc">Vector implementation which provides the most important methods as defined by std::vector....</div><div class="ttdef"><b>Definition:</b> Vector.h:18</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:106</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:104</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_pin_info_e_s_p32_html"><div class="ttname"><a href="structaudio__tools_1_1_pin_info_e_s_p32.html">audio_tools::PinInfoESP32</a></div><div class="ttdoc">Information for a PIN.</div><div class="ttdef"><b>Definition:</b> PWMAudioESP32.h:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

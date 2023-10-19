@@ -78,15 +78,15 @@ $(function() {
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_port_audio_config.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_port_audio_config.html">PortAudioConfig</a> : <span class="keyword">public</span> <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="classaudio__tools_1_1_port_audio_config.html">PortAudioConfig</a>() {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            sample_rate = 44100;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            channels = 2;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            bits_per_sample = 16;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = 44100;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = 2;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = 16;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        };</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="classaudio__tools_1_1_port_audio_config.html">PortAudioConfig</a>(<span class="keyword">const</span> <a class="code" href="classaudio__tools_1_1_port_audio_config.html">PortAudioConfig</a>&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classaudio__tools_1_1_port_audio_config.html">PortAudioConfig</a>(<span class="keyword">const</span> <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&amp; in) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            sample_rate = in.sample_rate;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            channels = in.channels;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            bits_per_sample = in.bits_per_sample;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = in.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = in.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = in.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">bool</span> is_input = <span class="keyword">false</span>;</div>
@@ -136,9 +136,9 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_port_audio_stream.html#ac7aeb791011c8430ad1b3907d0b5c62f">   80</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_port_audio_stream.html#ac7aeb791011c8430ad1b3907d0b5c62f">setAudioInfo</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> in)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            TRACEI();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            info.channels = in.channels;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            info.sample_rate = in.sample_rate;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            info.bits_per_sample = in.bits_per_sample;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = in.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = in.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = in.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            info.logInfo();</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            begin(info);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        };</div>
@@ -153,7 +153,7 @@ $(function() {
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            TRACED();</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            this-&gt;info = info;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">if</span> (info.channels&gt;0 &amp;&amp; info.sample_rate &amp;&amp; info.bits_per_sample&gt;0){</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">if</span> (info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>&gt;0 &amp;&amp; info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> &amp;&amp; info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>&gt;0){</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                LOGD(<span class="stringliteral">&quot;Pa_Initialize&quot;</span>);</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                err = Pa_Initialize();</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                LOGD(<span class="stringliteral">&quot;Pa_Initialize - done&quot;</span>);</div>
@@ -168,10 +168,10 @@ $(function() {
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="comment">// Open an audio I/O stream. </span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                LOGD(<span class="stringliteral">&quot;Pa_OpenDefaultStream&quot;</span>);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                err = Pa_OpenDefaultStream( &amp;stream,</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    info.is_input ? info.channels : 0,    <span class="comment">// no input channels </span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    info.is_output ? info.channels : 0,   <span class="comment">// no output </span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    info.is_input ? info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> : 0,    <span class="comment">// no input channels </span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    info.is_output ? info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> : 0,   <span class="comment">// no output </span></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    getFormat(),      <span class="comment">// format  </span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    info.sample_rate,                     <span class="comment">// sample rate</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>,                     <span class="comment">// sample rate</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    buffer_frames,                        <span class="comment">// frames per buffer </span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    <span class="keyword">nullptr</span>,   </div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    <span class="keyword">nullptr</span> ); </div>
@@ -212,7 +212,7 @@ $(function() {
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordtype">size_t</span> result = 0;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">if</span> (stream!=<span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <span class="keywordtype">int</span> frames = len / bytesPerSample() / info.channels;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <span class="keywordtype">int</span> frames = len / bytesPerSample() / info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                err = Pa_WriteStream( stream, data, frames);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                <span class="keywordflow">if</span>( err == paNoError ) {</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                    LOGD(<span class="stringliteral">&quot;Pa_WriteStream: %zu&quot;</span>, len);</div>
@@ -230,7 +230,7 @@ $(function() {
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            LOGD(<span class="stringliteral">&quot;readBytes: %zu&quot;</span>, len);</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordtype">size_t</span> result = 0;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">if</span> (stream!=<span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="keywordtype">int</span> frames = len / bytesPerSample() / info.channels;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="keywordtype">int</span> frames = len / bytesPerSample() / info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                err = Pa_ReadStream( stream, data, frames );</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keywordflow">if</span>( err == paNoError ) {</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                    result = len;</div>
@@ -253,7 +253,7 @@ $(function() {
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordtype">int</span> bytesPerSample(){</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="comment">//return info.bits_per_sample / 8;</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">return</span> info.bits_per_sample==24 ? <span class="keyword">sizeof</span>(<a class="code" href="classaudio__tools_1_1int24__4bytes__t.html">int24_t</a>): info.bits_per_sample / 8;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">return</span> info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>==24 ? <span class="keyword">sizeof</span>(<a class="code" href="classaudio__tools_1_1int24__4bytes__t.html">int24_t</a>): info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> / 8;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
@@ -300,6 +300,9 @@ $(function() {
 <div class="ttc" id="agroup__basic_html_ga8cbd91a8bac9b5ab425112be1620eb49"><div class="ttname"><a href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">audio_tools::RxTxMode</a></div><div class="ttdeci">RxTxMode</div><div class="ttdoc">Audio Source (TX_MODE) or Audio Sink (RX_MODE). RXTX_MODE is Source and Sink at the same time!</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:24</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:106</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:108</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:104</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
