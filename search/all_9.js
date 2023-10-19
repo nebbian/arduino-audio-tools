@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['i2c_5fretry_5fcount_514',['i2c_retry_count',['../classaudio__tools_1_1_w_m8960_config.html#abf87d032d525a80cf660a9831b339343',1,'audio_tools::WM8960Config']]],
-  ['i2s_5firqhandler_515',['I2S_IRQHandler',['../namespaceaudio__tools.html#ad663a1188408b698e16703cd27bf955f',1,'audio_tools']]],
-  ['i2sconfig_516',['I2SConfig',['../classaudio__tools_1_1_i2_s_config.html',1,'I2SConfig'],['../classaudio__tools_1_1_i2_s_config.html#ab3b2f124f03d7d586841c2ce12ccc35c',1,'audio_tools::I2SConfig::I2SConfig(RxTxMode mode)'],['../classaudio__tools_1_1_i2_s_config.html#a121806f3861b13229ad26d0b33497cab',1,'audio_tools::I2SConfig::I2SConfig(const I2SConfig &amp;cfg)=default']]],
+  ['i2c_5fretry_5fcount_513',['i2c_retry_count',['../classaudio__tools_1_1_w_m8960_config.html#abf87d032d525a80cf660a9831b339343',1,'audio_tools::WM8960Config']]],
+  ['i2s_5firqhandler_514',['I2S_IRQHandler',['../namespaceaudio__tools.html#ad663a1188408b698e16703cd27bf955f',1,'audio_tools']]],
+  ['i2sconfig_515',['I2SConfig',['../classaudio__tools_1_1_i2_s_config.html',1,'I2SConfig'],['../classaudio__tools_1_1_i2_s_config.html#ab3b2f124f03d7d586841c2ce12ccc35c',1,'audio_tools::I2SConfig::I2SConfig(RxTxMode mode)'],['../classaudio__tools_1_1_i2_s_config.html#a121806f3861b13229ad26d0b33497cab',1,'audio_tools::I2SConfig::I2SConfig(const I2SConfig &amp;cfg)=default']]],
+  ['i2sdriveresp32_516',['I2SDriverESP32',['../classaudio__tools_1_1_i2_s_driver_e_s_p32.html',1,'audio_tools']]],
   ['i2sdriveresp32v1_517',['I2SDriverESP32V1',['../classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html',1,'audio_tools']]],
   ['i2sdriveresp8266_518',['I2SDriverESP8266',['../classaudio__tools_1_1_i2_s_driver_e_s_p8266.html',1,'audio_tools']]],
   ['i2sdrivernanoble_519',['I2SDriverNanoBLE',['../classaudio__tools_1_1_i2_s_driver_nano_b_l_e.html',1,'audio_tools']]],
