@@ -96,10 +96,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_compressor.html#aab865fd787ef6b2149736a248d0857a3">Compressor</a> (const <a class="el" href="classaudio__tools_1_1_compressor.html">Compressor</a> &amp;copy)=default</td></tr>
 <tr class="memdesc:aab865fd787ef6b2149736a248d0857a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy Constructor. <br /></td></tr>
 <tr class="separator:aab865fd787ef6b2149736a248d0857a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90086c83b6f8e18a019d51f7b37e38a6"><td class="memItemLeft" align="right" valign="top"><a id="a90086c83b6f8e18a019d51f7b37e38a6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_compressor.html#a90086c83b6f8e18a019d51f7b37e38a6">Compressor</a> (uint32_t sampleRate=44100, int32_t attackMs=30, int32_t releaseMs=20, int32_t holdMs=10, uint8_t thresholdPercent=10, float compressionRatio=0.5)</td></tr>
-<tr class="memdesc:a90086c83b6f8e18a019d51f7b37e38a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor. <br /></td></tr>
-<tr class="separator:a90086c83b6f8e18a019d51f7b37e38a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99bcea167878342b636ed584a588e9a7"><td class="memItemLeft" align="right" valign="top"><a id="a99bcea167878342b636ed584a588e9a7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_compressor.html#a99bcea167878342b636ed584a588e9a7">Compressor</a> (uint32_t sampleRate=44100, uint16_t attackMs=30, uint16_t releaseMs=20, uint16_t holdMs=10, uint8_t thresholdPercent=10, float compressionRatio=0.5)</td></tr>
+<tr class="memdesc:a99bcea167878342b636ed584a588e9a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor. <br /></td></tr>
+<tr class="separator:a99bcea167878342b636ed584a588e9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3708b79a6e03c964327c2988b2a70668"><td class="memItemLeft" align="right" valign="top"><a id="a3708b79a6e03c964327c2988b2a70668"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect.html#a3708b79a6e03c964327c2988b2a70668">active</a> ()</td></tr>
 <tr class="memdesc:a3708b79a6e03c964327c2988b2a70668"><td class="mdescLeft">&#160;</td><td class="mdescRight">determines if the effect is active <br /></td></tr>
@@ -119,26 +119,26 @@ effect_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect.html#a392adf5d7d03b5339b77ec58bca5f9a9">setActive</a> (bool value)</td></tr>
 <tr class="memdesc:a392adf5d7d03b5339b77ec58bca5f9a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the effect active/inactive <br /></td></tr>
 <tr class="separator:a392adf5d7d03b5339b77ec58bca5f9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee8a89695b54e655d3e62d683d0fd3d5"><td class="memItemLeft" align="right" valign="top"><a id="aee8a89695b54e655d3e62d683d0fd3d5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_compressor.html#aee8a89695b54e655d3e62d683d0fd3d5">setAttack</a> (int32_t attackMs)</td></tr>
-<tr class="memdesc:aee8a89695b54e655d3e62d683d0fd3d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the attack duration in ms. <br /></td></tr>
-<tr class="separator:aee8a89695b54e655d3e62d683d0fd3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27061cfaaa7b2023482764b226337776"><td class="memItemLeft" align="right" valign="top"><a id="a27061cfaaa7b2023482764b226337776"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_compressor.html#a27061cfaaa7b2023482764b226337776">setAttack</a> (uint16_t attackMs)</td></tr>
+<tr class="memdesc:a27061cfaaa7b2023482764b226337776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the attack duration in ms. <br /></td></tr>
+<tr class="separator:a27061cfaaa7b2023482764b226337776"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1f6194d1a670310cb303458c44eedf0"><td class="memItemLeft" align="right" valign="top"><a id="ab1f6194d1a670310cb303458c44eedf0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_compressor.html#ab1f6194d1a670310cb303458c44eedf0">setCompressionRatio</a> (float compressionRatio)</td></tr>
 <tr class="memdesc:ab1f6194d1a670310cb303458c44eedf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the compression ratio from 0 to 1. <br /></td></tr>
 <tr class="separator:ab1f6194d1a670310cb303458c44eedf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada71dd4cd7afad13f895a3028fb08976"><td class="memItemLeft" align="right" valign="top"><a id="ada71dd4cd7afad13f895a3028fb08976"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_compressor.html#ada71dd4cd7afad13f895a3028fb08976">setHold</a> (int32_t holdMs)</td></tr>
-<tr class="memdesc:ada71dd4cd7afad13f895a3028fb08976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the hold duration in ms. <br /></td></tr>
-<tr class="separator:ada71dd4cd7afad13f895a3028fb08976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c9c106f1b8084028e598fabb64518d"><td class="memItemLeft" align="right" valign="top"><a id="aa0c9c106f1b8084028e598fabb64518d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_compressor.html#aa0c9c106f1b8084028e598fabb64518d">setHold</a> (uint16_t holdMs)</td></tr>
+<tr class="memdesc:aa0c9c106f1b8084028e598fabb64518d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the hold duration in ms. <br /></td></tr>
+<tr class="separator:aa0c9c106f1b8084028e598fabb64518d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d929477fef71d52c9c6df2ba2d50841"><td class="memItemLeft" align="right" valign="top"><a id="a3d929477fef71d52c9c6df2ba2d50841"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect.html#a3d929477fef71d52c9c6df2ba2d50841">setId</a> (int <a class="el" href="classaudio__tools_1_1_audio_effect.html#a4a716406d3d9d4fdbbe46f100e648f3b">id</a>)</td></tr>
 <tr class="memdesc:a3d929477fef71d52c9c6df2ba2d50841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to identify an effect. <br /></td></tr>
 <tr class="separator:a3d929477fef71d52c9c6df2ba2d50841"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d6cba839271825c4297e64f808cfc54"><td class="memItemLeft" align="right" valign="top"><a id="a3d6cba839271825c4297e64f808cfc54"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_compressor.html#a3d6cba839271825c4297e64f808cfc54">setRelease</a> (int32_t releaseMs)</td></tr>
-<tr class="memdesc:a3d6cba839271825c4297e64f808cfc54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the release duration in ms. <br /></td></tr>
-<tr class="separator:a3d6cba839271825c4297e64f808cfc54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a794a1c8a05779649b1061a7f9321e2af"><td class="memItemLeft" align="right" valign="top"><a id="a794a1c8a05779649b1061a7f9321e2af"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_compressor.html#a794a1c8a05779649b1061a7f9321e2af">setRelease</a> (uint16_t releaseMs)</td></tr>
+<tr class="memdesc:a794a1c8a05779649b1061a7f9321e2af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the release duration in ms. <br /></td></tr>
+<tr class="separator:a794a1c8a05779649b1061a7f9321e2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed07638c31d319b81b9532e787840077"><td class="memItemLeft" align="right" valign="top"><a id="aed07638c31d319b81b9532e787840077"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_compressor.html#aed07638c31d319b81b9532e787840077">setThresholdPercent</a> (uint8_t thresholdPercent)</td></tr>
 <tr class="memdesc:aed07638c31d319b81b9532e787840077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the threshod in %. <br /></td></tr>
