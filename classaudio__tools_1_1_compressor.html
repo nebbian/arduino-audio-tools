@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: AudioEffect Class Reference</title>
+<title>arduino-audio-tools: Compressor Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,48 +61,32 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_audio_effect.html">AudioEffect</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_compressor.html">Compressor</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classaudio__tools_1_1_audio_effect-members.html">List of all members</a>  </div>
+<a href="classaudio__tools_1_1_compressor-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">AudioEffect Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__dsp.html">DSP</a> &raquo; <a class="el" href="group__effects.html">Effects</a></div></div>  </div>
+<div class="title">Compressor Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__dsp.html">DSP</a> &raquo; <a class="el" href="group__effects.html">Effects</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Abstract Base class for Sound Effects.  
- <a href="classaudio__tools_1_1_audio_effect.html#details">More...</a></p>
+<p><a class="el" href="classaudio__tools_1_1_compressor.html" title="Compressor inspired by https://github.com/YetAnotherElectronicsChannel/STM32_DSP_COMPRESSOR/blob/mast...">Compressor</a> inspired by <a href="https://github.com/YetAnotherElectronicsChannel/STM32_DSP_COMPRESSOR/blob/master/code/Src/main.c">https://github.com/YetAnotherElectronicsChannel/STM32_DSP_COMPRESSOR/blob/master/code/Src/main.c</a>.  
+ <a href="classaudio__tools_1_1_compressor.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_audio_effect_8h_source.html">AudioEffect.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for AudioEffect:</div>
+Inheritance diagram for Compressor:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_audio_effect.png" usemap="#AudioEffect_map" alt=""/>
-  <map id="AudioEffect_map" name="AudioEffect_map">
-<area href="classaudio__tools_1_1_a_d_s_r_gain.html" title="ADSR Envelope: Attack, Decay, Sustain and Release. Attack is the time taken for initial run-up oeffec..." alt="ADSRGain" shape="rect" coords="142,56,274,80"/>
-<area href="classaudio__tools_1_1_boost.html" title="Boost AudioEffect." alt="Boost" shape="rect" coords="142,112,274,136"/>
-<area href="classaudio__tools_1_1_compressor.html" title="Compressor inspired by https://github.com/YetAnotherElectronicsChannel/STM32_DSP_COMPRESSOR/blob/mast..." alt="Compressor" shape="rect" coords="142,168,274,192"/>
-<area href="classaudio__tools_1_1_delay.html" title="Delay/Echo AudioEffect. See https://wiki.analog.com/resources/tools-software/sharc-audio-module/barem..." alt="Delay" shape="rect" coords="142,224,274,248"/>
-<area href="classaudio__tools_1_1_distortion.html" title="Distortion AudioEffect." alt="Distortion" shape="rect" coords="142,280,274,304"/>
-<area href="classaudio__tools_1_1_effect_suite_base.html" title="Base Class for Effects." alt="EffectSuiteBase" shape="rect" coords="142,336,274,360"/>
-<area href="classaudio__tools_1_1_fuzz.html" title="Fuzz AudioEffect." alt="Fuzz" shape="rect" coords="142,392,274,416"/>
-<area href="classaudio__tools_1_1_pitch_shift.html" title="Shifts the pitch by the indicated step size: e.g. 2 doubles the pitch." alt="PitchShift" shape="rect" coords="142,448,274,472"/>
-<area href="classaudio__tools_1_1_s_t_k_chorus.html" title="Chorus Effect." alt="STKChorus" shape="rect" coords="142,504,274,528"/>
-<area href="classaudio__tools_1_1_s_t_k_chowning_reverb.html" title="John Chowning&#39;s reverberator class." alt="STKChowningReverb" shape="rect" coords="142,560,274,584"/>
-<area href="classaudio__tools_1_1_s_t_k_echo.html" title="Echo Effect." alt="STKEcho" shape="rect" coords="142,616,274,640"/>
-<area href="classaudio__tools_1_1_s_t_k_effect.html" title="Use any effect from the STK framework: e.g. Chorus, Echo, FreeVerb, JCRev, PitShift...." alt="STKEffect" shape="rect" coords="142,672,274,696"/>
-<area href="classaudio__tools_1_1_s_t_k_free_verb.html" title="Jezar at Dreampoint&#39;s FreeVerb, implemented in STK." alt="STKFreeVerb" shape="rect" coords="142,728,274,752"/>
-<area href="classaudio__tools_1_1_s_t_k_lent_pit_shift.html" title="Pitch shifter effect class based on the Lent algorithm." alt="STKLentPitShift" shape="rect" coords="142,784,274,808"/>
-<area href="classaudio__tools_1_1_s_t_k_n_reverb.html" title="CCRMA&#39;s NRev reverberator class." alt="STKNReverb" shape="rect" coords="142,840,274,864"/>
-<area href="classaudio__tools_1_1_s_t_k_perry_reverb.html" title="Perry&#39;s simple reverberator class." alt="STKPerryReverb" shape="rect" coords="142,896,274,920"/>
-<area href="classaudio__tools_1_1_s_t_k_pit_shift.html" title="Simple Pitch shifter effect class: This class implements a simple pitch shifter using a delay line." alt="STKPitShift" shape="rect" coords="142,952,274,976"/>
-<area href="classaudio__tools_1_1_tremolo.html" title="Tremolo AudioEffect." alt="Tremolo" shape="rect" coords="142,1008,274,1032"/>
+  <img src="classaudio__tools_1_1_compressor.png" usemap="#Compressor_map" alt=""/>
+  <map id="Compressor_map" name="Compressor_map">
+<area href="classaudio__tools_1_1_audio_effect.html" title="Abstract Base class for Sound Effects." alt="AudioEffect" shape="rect" coords="0,0,80,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -112,17 +96,10 @@ Public Member Functions</h2></td></tr>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect.html#a3708b79a6e03c964327c2988b2a70668">active</a> ()</td></tr>
 <tr class="memdesc:a3708b79a6e03c964327c2988b2a70668"><td class="mdescLeft">&#160;</td><td class="mdescRight">determines if the effect is active <br /></td></tr>
 <tr class="separator:a3708b79a6e03c964327c2988b2a70668"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa80f6251a20600cf6da083a627c401df"><td class="memItemLeft" align="right" valign="top"><a id="aa80f6251a20600cf6da083a627c401df"></a>
-virtual <a class="el" href="classaudio__tools_1_1_audio_effect.html">AudioEffect</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> ()=0</td></tr>
-<tr class="separator:aa80f6251a20600cf6da083a627c401df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a716406d3d9d4fdbbe46f100e648f3b"><td class="memItemLeft" align="right" valign="top"><a id="a4a716406d3d9d4fdbbe46f100e648f3b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect.html#a4a716406d3d9d4fdbbe46f100e648f3b">id</a> ()</td></tr>
 <tr class="memdesc:a4a716406d3d9d4fdbbe46f100e648f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to identify an effect. <br /></td></tr>
 <tr class="separator:a4a716406d3d9d4fdbbe46f100e648f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cf482bd34a9ababb1115c6b64c7179f"><td class="memItemLeft" align="right" valign="top"><a id="a4cf482bd34a9ababb1115c6b64c7179f"></a>
-virtual effect_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect.html#a4cf482bd34a9ababb1115c6b64c7179f">process</a> (effect_t in)=0</td></tr>
-<tr class="memdesc:a4cf482bd34a9ababb1115c6b64c7179f"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates the effect output from the input <br /></td></tr>
-<tr class="separator:a4cf482bd34a9ababb1115c6b64c7179f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a392adf5d7d03b5339b77ec58bca5f9a9"><td class="memItemLeft" align="right" valign="top"><a id="a392adf5d7d03b5339b77ec58bca5f9a9"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect.html#a392adf5d7d03b5339b77ec58bca5f9a9">setActive</a> (bool value)</td></tr>
 <tr class="memdesc:a392adf5d7d03b5339b77ec58bca5f9a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the effect active/inactive <br /></td></tr>
@@ -131,6 +108,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effect.html#a3d929477fef71d52c9c6df2ba2d50841">setId</a> (int <a class="el" href="classaudio__tools_1_1_audio_effect.html#a4a716406d3d9d4fdbbe46f100e648f3b">id</a>)</td></tr>
 <tr class="memdesc:a3d929477fef71d52c9c6df2ba2d50841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to identify an effect. <br /></td></tr>
 <tr class="separator:a3d929477fef71d52c9c6df2ba2d50841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a40fae54087c28f0b289691c9f1f2749e"><td class="memItemLeft" align="right" valign="top"><a id="a40fae54087c28f0b289691c9f1f2749e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>CompStates</b> { <b>S_NoOperation</b>
+, <b>S_Attack</b>
+, <b>S_GainReduction</b>
+, <b>S_Release</b>
+ }</td></tr>
+<tr class="separator:a40fae54087c28f0b289691c9f1f2749e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -141,19 +127,55 @@ int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:ab09618ef5ecbce364b46a4a0b44de2ef"><td class="memItemLeft" align="right" valign="top"><a id="ab09618ef5ecbce364b46a4a0b44de2ef"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>copyParent</b> (<a class="el" href="classaudio__tools_1_1_audio_effect.html">AudioEffect</a> *copy)</td></tr>
 <tr class="separator:ab09618ef5ecbce364b46a4a0b44de2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467a786be42a2165aa15a26709674547"><td class="memItemLeft" align="right" valign="top"><a id="a467a786be42a2165aa15a26709674547"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>recalculate</b> ()</td></tr>
+<tr class="separator:a467a786be42a2165aa15a26709674547"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a7816e2085c1adaae2c69ed5f65f1d212"><td class="memItemLeft" align="right" valign="top"><a id="a7816e2085c1adaae2c69ed5f65f1d212"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>active_flag</b> = true</td></tr>
 <tr class="separator:a7816e2085c1adaae2c69ed5f65f1d212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63c5500102aae2af644f4ab973fcf95"><td class="memItemLeft" align="right" valign="top"><a id="aa63c5500102aae2af644f4ab973fcf95"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>attack_count</b></td></tr>
+<tr class="separator:aa63c5500102aae2af644f4ab973fcf95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3852dab23cf0066809ecc1997fb58b"><td class="memItemLeft" align="right" valign="top"><a id="aca3852dab23cf0066809ecc1997fb58b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>gain</b></td></tr>
+<tr class="separator:aca3852dab23cf0066809ecc1997fb58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c283706867526fcc04b62a2a2ab6b85"><td class="memItemLeft" align="right" valign="top"><a id="a5c283706867526fcc04b62a2a2ab6b85"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>gain_step_attack</b></td></tr>
+<tr class="separator:a5c283706867526fcc04b62a2a2ab6b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93a4c745f329a54dfdff579d55c66fcb"><td class="memItemLeft" align="right" valign="top"><a id="a93a4c745f329a54dfdff579d55c66fcb"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>gain_step_release</b></td></tr>
+<tr class="separator:a93a4c745f329a54dfdff579d55c66fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b56ecd9dcb36dd9bbdc08d466a625f4"><td class="memItemLeft" align="right" valign="top"><a id="a2b56ecd9dcb36dd9bbdc08d466a625f4"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>gainreduce</b></td></tr>
+<tr class="separator:a2b56ecd9dcb36dd9bbdc08d466a625f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038d4ecdd0cff856b86d7bb5a701e2ed"><td class="memItemLeft" align="right" valign="top"><a id="a038d4ecdd0cff856b86d7bb5a701e2ed"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>hold_count</b></td></tr>
+<tr class="separator:a038d4ecdd0cff856b86d7bb5a701e2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55d6269c0eac19475dd606fe07eb8a48"><td class="memItemLeft" align="right" valign="top"><a id="a55d6269c0eac19475dd606fe07eb8a48"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>id_value</b> = -1</td></tr>
 <tr class="separator:a55d6269c0eac19475dd606fe07eb8a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc4e181ba91f172946baacd5f6423d1"><td class="memItemLeft" align="right" valign="top"><a id="afdc4e181ba91f172946baacd5f6423d1"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>release_count</b></td></tr>
+<tr class="separator:afdc4e181ba91f172946baacd5f6423d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fba55d9442e7dba4623825cd737e520"><td class="memItemLeft" align="right" valign="top"><a id="a2fba55d9442e7dba4623825cd737e520"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>sample_rate</b></td></tr>
+<tr class="separator:a2fba55d9442e7dba4623825cd737e520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0de9c68f4b9f0d6a3912adcb640a3fa"><td class="memItemLeft" align="right" valign="top"><a id="ac0de9c68f4b9f0d6a3912adcb640a3fa"></a>
+enum CompStates&#160;</td><td class="memItemRight" valign="bottom"><b>State</b> = S_NoOperation</td></tr>
+<tr class="separator:ac0de9c68f4b9f0d6a3912adcb640a3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a376acef8954eadc70f4b55e8e0588e13"><td class="memItemLeft" align="right" valign="top"><a id="a376acef8954eadc70f4b55e8e0588e13"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>threshold</b></td></tr>
+<tr class="separator:a376acef8954eadc70f4b55e8e0588e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bd2b0741bcd9a9e324e2af56c3c6fe4"><td class="memItemLeft" align="right" valign="top"><a id="a0bd2b0741bcd9a9e324e2af56c3c6fe4"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>timeout</b></td></tr>
+<tr class="separator:a0bd2b0741bcd9a9e324e2af56c3c6fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract Base class for Sound Effects. </p>
-<dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
+<div class="textblock"><p><a class="el" href="classaudio__tools_1_1_compressor.html" title="Compressor inspired by https://github.com/YetAnotherElectronicsChannel/STM32_DSP_COMPRESSOR/blob/mast...">Compressor</a> inspired by <a href="https://github.com/YetAnotherElectronicsChannel/STM32_DSP_COMPRESSOR/blob/master/code/Src/main.c">https://github.com/YetAnotherElectronicsChannel/STM32_DSP_COMPRESSOR/blob/master/code/Src/main.c</a>. </p>
+<dl class="section author"><dt>Author</dt><dd>Phil Schatzmann</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioEffects/<a class="el" href="_audio_effect_8h_source.html">AudioEffect.h</a></li>
