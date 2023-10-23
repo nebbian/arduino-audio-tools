@@ -159,13 +159,13 @@ $(function() {
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordflow">if</span> (signal_type==Digital){</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        LOGI(<span class="stringliteral">&quot;i2s_format: %s&quot;</span>, i2s_formats[i2s_format]);      </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      } </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="comment">//LOGI(&quot;auto_clear: %s&quot;,auto_clear? &quot;true&quot; : &quot;false&quot;);</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      LOGI(<span class="stringliteral">&quot;auto_clear: %s&quot;</span>,auto_clear? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">if</span> (use_apll) {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        LOGI(<span class="stringliteral">&quot;use_apll: %s&quot;</span>, use_apll ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="comment">//if (fixed_mclk){</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="comment">//  LOGI(&quot;fixed_mclk: %d&quot;, (int) fixed_mclk);</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="comment">//}</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keywordflow">if</span> (fixed_mclk){</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;       LOGI(<span class="stringliteral">&quot;fixed_mclk: %d&quot;</span>, (<span class="keywordtype">int</span>) fixed_mclk);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      LOGI(<span class="stringliteral">&quot;buffer_count:%d&quot;</span>,buffer_count);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      LOGI(<span class="stringliteral">&quot;buffer_size:%d&quot;</span>,buffer_size);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
@@ -188,7 +188,7 @@ $(function() {
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_e_s_p32_html"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config_e_s_p32.html">audio_tools::I2SConfigESP32</a></div><div class="ttdoc">configuration for USE_ALT_PIN_SUPPORT i2s</div><div class="ttdef"><b>Definition:</b> I2SConfigESP32.h:33</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_e_s_p32_html"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config_e_s_p32.html">audio_tools::I2SConfigESP32</a></div><div class="ttdoc">Configuration for ESP32 legacy i2s.</div><div class="ttdef"><b>Definition:</b> I2SConfigESP32.h:33</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_e_s_p32_html_a1ddd1b79e68377493f56758498cff9f9"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config_e_s_p32.html#a1ddd1b79e68377493f56758498cff9f9">audio_tools::I2SConfigESP32::I2SConfigESP32</a></div><div class="ttdeci">I2SConfigESP32(const I2SConfigESP32 &amp;cfg)=default</div><div class="ttdoc">Default Copy Constructor.</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_e_s_p32_html_a31a454d24fb1f4d74779a0ff668d54cc"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config_e_s_p32.html#a31a454d24fb1f4d74779a0ff668d54cc">audio_tools::I2SConfigESP32::rx_tx_mode</a></div><div class="ttdeci">RxTxMode rx_tx_mode</div><div class="ttdoc">public settings</div><div class="ttdef"><b>Definition:</b> I2SConfigESP32.h:69</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_e_s_p32_html_a6e46d5906cde70e2f38951817282c3c5"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config_e_s_p32.html#a6e46d5906cde70e2f38951817282c3c5">audio_tools::I2SConfigESP32::I2SConfigESP32</a></div><div class="ttdeci">I2SConfigESP32(RxTxMode mode)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> I2SConfigESP32.h:46</div></div>
