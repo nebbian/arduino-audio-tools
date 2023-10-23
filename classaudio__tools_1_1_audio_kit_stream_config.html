@@ -77,7 +77,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Configuration for <a class="el" href="classaudio__tools_1_1_audio_kit_stream.html" title="AudioKit Stream which uses the https://github.com/pschatzmann/arduino-audiokit library.">AudioKitStream</a>: we use as subclass of <a class="el" href="classaudio__tools_1_1_i2_s_config.html" title="configuration for all common i2s settings">I2SConfig</a>.  
+<p>Configuration for <a class="el" href="classaudio__tools_1_1_audio_kit_stream.html" title="AudioKit Stream which uses the https://github.com/pschatzmann/arduino-audiokit library.">AudioKitStream</a>: we use as subclass of I2SConfig.  
  <a href="classaudio__tools_1_1_audio_kit_stream_config.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_audio_kit_8h_source.html">AudioKit.h</a>&gt;</code></p>
@@ -87,7 +87,7 @@ Inheritance diagram for AudioKitStreamConfig:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_audio_kit_stream_config.png" usemap="#AudioKitStreamConfig_map" alt=""/>
   <map id="AudioKitStreamConfig_map" name="AudioKitStreamConfig_map">
-<area href="classaudio__tools_1_1_i2_s_config.html" title="configuration for all common i2s settings" alt="I2SConfig" shape="rect" coords="0,56,135,80"/>
+<area href="classaudio__tools_1_1_i2_s_config_e_s_p32.html" title="configuration for USE_ALT_PIN_SUPPORT i2s" alt="I2SConfigESP32" shape="rect" coords="0,56,135,80"/>
 <area href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S." alt="AudioInfo" shape="rect" coords="0,0,135,24"/>
   </map>
 </div></div>
@@ -125,6 +125,9 @@ AudioKitConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a49416057f62a27364be3b0390cac099f"><td class="memItemLeft" align="right" valign="top"><a id="a49416057f62a27364be3b0390cac099f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>auto_clear</b> = I2S_AUTO_CLEAR</td></tr>
+<tr class="separator:a49416057f62a27364be3b0390cac099f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ae049b225e845689c9bfab94ebbc697"><td class="memItemLeft" align="right" valign="top"><a id="a2ae049b225e845689c9bfab94ebbc697"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = DEFAULT_BITS_PER_SAMPLE</td></tr>
 <tr class="memdesc:a2ae049b225e845689c9bfab94ebbc697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bits per sample (int16_t = 16 bits) <br  />
@@ -146,6 +149,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>default_actions_activ
 <tr class="memitem:a80336ac7095495778f32414c6b6cee0c"><td class="memItemLeft" align="right" valign="top"><a id="a80336ac7095495778f32414c6b6cee0c"></a>
 audio_hal_func_t&#160;</td><td class="memItemRight" valign="bottom"><b>driver</b> = AUDIO_DRIVER</td></tr>
 <tr class="separator:a80336ac7095495778f32414c6b6cee0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff92a87ef2ae2c31128bf9b3f96efd7"><td class="memItemLeft" align="right" valign="top"><a id="adff92a87ef2ae2c31128bf9b3f96efd7"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>fixed_mclk</b> = 0</td></tr>
+<tr class="separator:adff92a87ef2ae2c31128bf9b3f96efd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2791dbe8924ab5361b38691d22c718a"><td class="memItemLeft" align="right" valign="top"><a id="ad2791dbe8924ab5361b38691d22c718a"></a>
 <a class="el" href="namespaceaudio__tools.html#a720616ce211566d808f3e441f9b18cda">I2SFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_format</b> = I2S_STD_FORMAT</td></tr>
 <tr class="separator:ad2791dbe8924ab5361b38691d22c718a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,7 +186,7 @@ audio_kit_pins&#160;</td><td class="memItemRight" valign="bottom"><b>pins</b></t
 int&#160;</td><td class="memItemRight" valign="bottom"><b>port_no</b> = 0</td></tr>
 <tr class="separator:aea70f90b3f75458c59ec410ddeabe096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31a454d24fb1f4d74779a0ff668d54cc"><td class="memItemLeft" align="right" valign="top"><a id="a31a454d24fb1f4d74779a0ff668d54cc"></a>
-<a class="el" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_config.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a> = TX_MODE</td></tr>
+<a class="el" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_config_e_s_p32.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a> = TX_MODE</td></tr>
 <tr class="memdesc:a31a454d24fb1f4d74779a0ff668d54cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">public settings <br /></td></tr>
 <tr class="separator:a31a454d24fb1f4d74779a0ff668d54cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527325650d66abd9626499785b3bafd2"><td class="memItemLeft" align="right" valign="top"><a id="a527325650d66abd9626499785b3bafd2"></a>
@@ -190,6 +196,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struc
 <tr class="memitem:ac585b3449d271276f8b679e8ab01b2ec"><td class="memItemLeft" align="right" valign="top"><a id="ac585b3449d271276f8b679e8ab01b2ec"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>sd_active</b> = true</td></tr>
 <tr class="separator:ac585b3449d271276f8b679e8ab01b2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a517c511d2224bbda8b8b562821923c90"><td class="memItemLeft" align="right" valign="top"><a id="a517c511d2224bbda8b8b562821923c90"></a>
+I2SSignalType&#160;</td><td class="memItemRight" valign="bottom"><b>signal_type</b> = Digital</td></tr>
+<tr class="separator:a517c511d2224bbda8b8b562821923c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b999db5e77bee2c8ceeaf97d52669a"><td class="memItemLeft" align="right" valign="top"><a id="a95b999db5e77bee2c8ceeaf97d52669a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_apll</b> = I2S_USE_APLL</td></tr>
+<tr class="separator:a95b999db5e77bee2c8ceeaf97d52669a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -231,7 +243,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AudioKitStream</b></
 <tr class="separator:a558830ee4d6a7e56e8f3a598813456e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Configuration for <a class="el" href="classaudio__tools_1_1_audio_kit_stream.html" title="AudioKit Stream which uses the https://github.com/pschatzmann/arduino-audiokit library.">AudioKitStream</a>: we use as subclass of <a class="el" href="classaudio__tools_1_1_i2_s_config.html" title="configuration for all common i2s settings">I2SConfig</a>. </p>
+<div class="textblock"><p>Configuration for <a class="el" href="classaudio__tools_1_1_audio_kit_stream.html" title="AudioKit Stream which uses the https://github.com/pschatzmann/arduino-audiokit library.">AudioKitStream</a>: we use as subclass of I2SConfig. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>

@@ -85,8 +85,8 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a72661c546cdee7de3302d7d3fda10332">   27</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_i2_s_config.html">I2SConfig</a> <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a72661c546cdee7de3302d7d3fda10332">defaultConfig</a>(<a class="code" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> mode = TX_MODE) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classaudio__tools_1_1_i2_s_config.html">I2SConfig</a> c(mode);</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a72661c546cdee7de3302d7d3fda10332">   27</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32.html">I2SConfig</a> <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a72661c546cdee7de3302d7d3fda10332">defaultConfig</a>(<a class="code" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> mode = TX_MODE) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32.html">I2SConfig</a> c(mode);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span> c;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
@@ -95,7 +95,7 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#af260c77cb6124c2c07117a870ce06c0c">begin</a>(<a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a72661c546cdee7de3302d7d3fda10332">defaultConfig</a>(mode));</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#ab5eefc9d5f5c0ebd0b205d09985de96c">   39</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#ab5eefc9d5f5c0ebd0b205d09985de96c">begin</a>(<a class="code" href="classaudio__tools_1_1_i2_s_config.html">I2SConfig</a> cfg) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#ab5eefc9d5f5c0ebd0b205d09985de96c">   39</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#ab5eefc9d5f5c0ebd0b205d09985de96c">begin</a>(<a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32.html">I2SConfig</a> cfg) {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      TRACED();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      deleteBuffers();</div>
@@ -111,7 +111,7 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      setupDefaultI2SParameters();</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordflow">switch</span>(cfg.<a class="code" href="classaudio__tools_1_1_i2_s_config.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a>){</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordflow">switch</span>(cfg.<a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a>){</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">case</span> RX_MODE:</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          p_rx_buffer = <span class="keyword">new</span> <a class="code" href="classaudio__tools_1_1_n_buffer.html">NBuffer&lt;uint8_t&gt;</a>(cfg.buffer_size, cfg.buffer_count);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            result = startI2SReceive(&amp;i2s_stm32, <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a79908b9928cf48bb309f19dbdf2fa4f9">writeFromReceive</a>, cfg.buffer_size);</div>
@@ -147,7 +147,7 @@ $(function() {
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">return</span> I2S_BUFFER_SIZE;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a95eae20920cd36e37ffadbc2783de718">   95</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_i2_s_config.html">I2SConfig</a> <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a95eae20920cd36e37ffadbc2783de718">config</a>() {</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a95eae20920cd36e37ffadbc2783de718">   95</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32.html">I2SConfig</a> <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a95eae20920cd36e37ffadbc2783de718">config</a>() {</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordflow">return</span> cfg;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
@@ -197,7 +197,7 @@ $(function() {
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="classaudio__tools_1_1_i2_s_config.html">I2SConfig</a> cfg;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32.html">I2SConfig</a> cfg;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    I2SSettingsSTM32 i2s_stm32;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span> deleteBuffers() {</div>
@@ -215,7 +215,7 @@ $(function() {
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      i2s_stm32.sample_rate = getSampleRate(cfg);</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      i2s_stm32.mode = getMode(cfg);</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      i2s_stm32.standard = getStandard(cfg);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      i2s_stm32.fullduplexmode = cfg.<a class="code" href="classaudio__tools_1_1_i2_s_config.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a> == RXTX_MODE ? I2S_FULLDUPLEXMODE_ENABLE : I2S_FULLDUPLEXMODE_DISABLE;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      i2s_stm32.fullduplexmode = cfg.<a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a> == RXTX_MODE ? I2S_FULLDUPLEXMODE_ENABLE : I2S_FULLDUPLEXMODE_DISABLE;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      i2s_stm32.i2s = &amp;hi2s3;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
@@ -312,8 +312,8 @@ $(function() {
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_a163c69bc2b88421988d60f4efddb1f3f"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">audio_tools::BaseBuffer::readArray</a></div><div class="ttdeci">virtual int readArray(T data[], int len)</div><div class="ttdoc">reads multiple values</div><div class="ttdef"><b>Definition:</b> Buffers.h:40</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_a2b6c561aac2af64aafac1946b6e46393"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#a2b6c561aac2af64aafac1946b6e46393">audio_tools::BaseBuffer::writeArray</a></div><div class="ttdeci">virtual int writeArray(const T data[], int len)</div><div class="ttdoc">Fills the buffer data.</div><div class="ttdef"><b>Definition:</b> Buffers.h:60</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_html"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config.html">audio_tools::I2SConfig</a></div><div class="ttdoc">configuration for all common i2s settings</div><div class="ttdef"><b>Definition:</b> I2SConfig.h:52</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_html_a31a454d24fb1f4d74779a0ff668d54cc"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config.html#a31a454d24fb1f4d74779a0ff668d54cc">audio_tools::I2SConfig::rx_tx_mode</a></div><div class="ttdeci">RxTxMode rx_tx_mode</div><div class="ttdoc">public settings</div><div class="ttdef"><b>Definition:</b> I2SConfig.h:94</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_e_s_p32_html"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config_e_s_p32.html">audio_tools::I2SConfigESP32</a></div><div class="ttdoc">configuration for USE_ALT_PIN_SUPPORT i2s</div><div class="ttdef"><b>Definition:</b> I2SConfigESP32.h:31</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_e_s_p32_html_a31a454d24fb1f4d74779a0ff668d54cc"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config_e_s_p32.html#a31a454d24fb1f4d74779a0ff668d54cc">audio_tools::I2SConfigESP32::rx_tx_mode</a></div><div class="ttdeci">RxTxMode rx_tx_mode</div><div class="ttdoc">public settings</div><div class="ttdef"><b>Definition:</b> I2SConfigESP32.h:67</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_driver_s_t_m32_html"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html">audio_tools::I2SDriverSTM32</a></div><div class="ttdoc">Basic I2S API - for the STM32 Depends on https://github.com/pschatzmann/stm32f411-i2s We just add a w...</div><div class="ttdef"><b>Definition:</b> I2SSTM32.h:21</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_driver_s_t_m32_html_a4549a76725f2e4c013e4d57018366109"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a4549a76725f2e4c013e4d57018366109">audio_tools::I2SDriverSTM32::available</a></div><div class="ttdeci">int available()</div><div class="ttdoc">we assume the data is already available in the buffer</div><div class="ttdef"><b>Definition:</b> I2SSTM32.h:85</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_driver_s_t_m32_html_a72661c546cdee7de3302d7d3fda10332"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a72661c546cdee7de3302d7d3fda10332">audio_tools::I2SDriverSTM32::defaultConfig</a></div><div class="ttdeci">I2SConfig defaultConfig(RxTxMode mode=TX_MODE)</div><div class="ttdoc">Provides the default configuration.</div><div class="ttdef"><b>Definition:</b> I2SSTM32.h:27</div></div>

@@ -307,74 +307,90 @@ $(function() {
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;};</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a4ce58b1cf7c8f2758bd2f7ac29d8bd5d">  296</a></span>&#160;T <a class="code" href="namespaceaudio__tools.html#a4ce58b1cf7c8f2758bd2f7ac29d8bd5d">readSample</a>(<a class="code" href="classaudio__tools_1_1_stream.html">Stream</a>* p_stream){</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  T result=0;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  uint8_t *p_result = (uint8_t*) &amp;result;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="keywordtype">int</span> open = <span class="keyword">sizeof</span>(T);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keywordtype">int</span> total = 0;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="comment">// copy missing data</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <span class="keywordflow">while</span> (open&gt;0){</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">int</span> read = p_stream-&gt;readBytes(p_result+total, open);</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    open -= read;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    total += read;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  }</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a1d8000e66a6b1df22bc01638f587b32c">  312</a></span>&#160;<span class="keywordtype">size_t</span>  <a class="code" href="namespaceaudio__tools.html#a1d8000e66a6b1df22bc01638f587b32c">readSamples</a>(<a class="code" href="classaudio__tools_1_1_stream.html">Stream</a>* p_stream, T* data, <span class="keywordtype">int</span> samples){</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  uint8_t *p_result = (uint8_t*) data;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordtype">int</span> open = samples*<span class="keyword">sizeof</span>(T);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordtype">int</span> total = 0;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="comment">// copy missing data</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keywordflow">while</span> (open&gt;0){</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordtype">int</span> read = p_stream-&gt;readBytes(p_result+total, open);</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    open -= read;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    total += read;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  }</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <span class="comment">// convert bytes to samples</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  <span class="keywordflow">return</span> samples / <span class="keyword">sizeof</span>(T);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#ae4bf1846916254f6051fdf1437159163">  328</a></span>&#160;<span class="keywordtype">size_t</span>  <a class="code" href="namespaceaudio__tools.html#ae4bf1846916254f6051fdf1437159163">writeSamples</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a>* p_out, T* data, <span class="keywordtype">int</span> samples, <span class="keywordtype">int</span> maxSamples=512){</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  uint8_t *p_result = (uint8_t*) data;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keywordtype">int</span> open = samples*<span class="keyword">sizeof</span>(T);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  <span class="keywordtype">int</span> total = 0;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  <span class="comment">// copy missing data</span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  <span class="keywordflow">while</span> (open&gt;0){</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordtype">int</span> to_write = min(open, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(maxSamples*<span class="keyword">sizeof</span>(T)));</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordtype">int</span> written = p_out-&gt;write(p_result+total, to_write );</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    open -= written;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    total += written;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  }</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  <span class="comment">// convert bytes to samples</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <span class="keywordflow">return</span> total / <span class="keyword">sizeof</span>(T);</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;}</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
-<div class="line"><a name="l00351"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a2320e2f14f2ac363a4eb3fafd8c5afa7">  351</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespaceaudio__tools.html#a2320e2f14f2ac363a4eb3fafd8c5afa7">mapFloat</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> in_min, <span class="keywordtype">float</span> in_max, <span class="keywordtype">float</span> out_min, <span class="keywordtype">float</span> out_max) {</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  <span class="keywordflow">return</span> (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;}</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
-<div class="line"><a name="l00356"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a3961afb9c2a414e91d5687346be60285">  356</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="namespaceaudio__tools.html#a3961afb9c2a414e91d5687346be60285">mime_pcm</a> = <span class="stringliteral">&quot;audio/pcm&quot;</span>;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="preprocessor">#ifndef IS_DESKTOP</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__basic.html#ga83c0970d946a0c48474620352453b903">waitFor</a>(<a class="code" href="classaudio__tools_1_1_hardware_serial.html">HardwareSerial</a> &amp;out){</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordflow">while</span>(!out);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;}</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
-<div class="line"><a name="l00367"></a><span class="lineno"><a class="line" href="group__basic.html#ga83c0970d946a0c48474620352453b903">  367</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__basic.html#ga83c0970d946a0c48474620352453b903">waitFor</a>(<span class="keywordtype">bool</span> &amp;flag){</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">while</span>(!flag);</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;}</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
-<div class="line"><a name="l00372"></a><span class="lineno"><a class="line" href="group__basic.html#ga869d6ee1c77c17df29cad21068f647cc">  372</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classaudio__tools_1_1_vector.html">Pins</a> = <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;int&gt;</a>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="preprocessor">#if defined(USE_I2S) </span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a720616ce211566d808f3e441f9b18cda">  299</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="namespaceaudio__tools.html#a720616ce211566d808f3e441f9b18cda">I2SFormat</a> {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  I2S_STD_FORMAT,</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  I2S_LSB_FORMAT,</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  I2S_MSB_FORMAT,</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  I2S_PHILIPS_FORMAT,</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  I2S_RIGHT_JUSTIFIED_FORMAT,</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  I2S_LEFT_JUSTIFIED_FORMAT,</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  I2S_PCM,</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;};</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;INLINE_VAR <span class="keyword">const</span> <span class="keywordtype">char</span>* i2s_formats[] = {<span class="stringliteral">&quot;I2S_STD_FORMAT&quot;</span>,<span class="stringliteral">&quot;I2S_LSB_FORMAT&quot;</span>,<span class="stringliteral">&quot;I2S_MSB_FORMAT&quot;</span>,<span class="stringliteral">&quot;I2S_PHILIPS_FORMAT&quot;</span>,<span class="stringliteral">&quot;I2S_RIGHT_JUSTIFIED_FORMAT&quot;</span>,<span class="stringliteral">&quot;I2S_LEFT_JUSTIFIED_FORMAT&quot;</span>,<span class="stringliteral">&quot;I2S_PCM&quot;</span>};</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a4ce58b1cf7c8f2758bd2f7ac29d8bd5d">  315</a></span>&#160;T <a class="code" href="namespaceaudio__tools.html#a4ce58b1cf7c8f2758bd2f7ac29d8bd5d">readSample</a>(<a class="code" href="classaudio__tools_1_1_stream.html">Stream</a>* p_stream){</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  T result=0;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  uint8_t *p_result = (uint8_t*) &amp;result;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <span class="keywordtype">int</span> open = <span class="keyword">sizeof</span>(T);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="keywordtype">int</span> total = 0;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="comment">// copy missing data</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="keywordflow">while</span> (open&gt;0){</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">int</span> read = p_stream-&gt;readBytes(p_result+total, open);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    open -= read;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    total += read;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a1d8000e66a6b1df22bc01638f587b32c">  331</a></span>&#160;<span class="keywordtype">size_t</span>  <a class="code" href="namespaceaudio__tools.html#a1d8000e66a6b1df22bc01638f587b32c">readSamples</a>(<a class="code" href="classaudio__tools_1_1_stream.html">Stream</a>* p_stream, T* data, <span class="keywordtype">int</span> samples){</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  uint8_t *p_result = (uint8_t*) data;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  <span class="keywordtype">int</span> open = samples*<span class="keyword">sizeof</span>(T);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <span class="keywordtype">int</span> total = 0;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="comment">// copy missing data</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <span class="keywordflow">while</span> (open&gt;0){</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordtype">int</span> read = p_stream-&gt;readBytes(p_result+total, open);</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    open -= read;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    total += read;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  <span class="comment">// convert bytes to samples</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  <span class="keywordflow">return</span> samples / <span class="keyword">sizeof</span>(T);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;}</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00347"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#ae4bf1846916254f6051fdf1437159163">  347</a></span>&#160;<span class="keywordtype">size_t</span>  <a class="code" href="namespaceaudio__tools.html#ae4bf1846916254f6051fdf1437159163">writeSamples</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a>* p_out, T* data, <span class="keywordtype">int</span> samples, <span class="keywordtype">int</span> maxSamples=512){</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  uint8_t *p_result = (uint8_t*) data;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  <span class="keywordtype">int</span> open = samples*<span class="keyword">sizeof</span>(T);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  <span class="keywordtype">int</span> total = 0;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  <span class="comment">// copy missing data</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  <span class="keywordflow">while</span> (open&gt;0){</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordtype">int</span> to_write = min(open, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(maxSamples*<span class="keyword">sizeof</span>(T)));</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordtype">int</span> written = p_out-&gt;write(p_result+total, to_write );</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    open -= written;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    total += written;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;  }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  <span class="comment">// convert bytes to samples</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  <span class="keywordflow">return</span> total / <span class="keyword">sizeof</span>(T);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;}</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00370"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a2320e2f14f2ac363a4eb3fafd8c5afa7">  370</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespaceaudio__tools.html#a2320e2f14f2ac363a4eb3fafd8c5afa7">mapFloat</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> in_min, <span class="keywordtype">float</span> in_max, <span class="keywordtype">float</span> out_min, <span class="keywordtype">float</span> out_max) {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  <span class="keywordflow">return</span> (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;}</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;}</div>
+<div class="line"><a name="l00375"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a3961afb9c2a414e91d5687346be60285">  375</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="namespaceaudio__tools.html#a3961afb9c2a414e91d5687346be60285">mime_pcm</a> = <span class="stringliteral">&quot;audio/pcm&quot;</span>;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">#ifndef IS_DESKTOP</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__basic.html#ga83c0970d946a0c48474620352453b903">waitFor</a>(<a class="code" href="classaudio__tools_1_1_hardware_serial.html">HardwareSerial</a> &amp;out){</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordflow">while</span>(!out);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno"><a class="line" href="group__basic.html#ga83c0970d946a0c48474620352453b903">  386</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__basic.html#ga83c0970d946a0c48474620352453b903">waitFor</a>(<span class="keywordtype">bool</span> &amp;flag){</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordflow">while</span>(!flag);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;}</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160; </div>
+<div class="line"><a name="l00391"></a><span class="lineno"><a class="line" href="group__basic.html#ga869d6ee1c77c17df29cad21068f647cc">  391</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classaudio__tools_1_1_vector.html">Pins</a> = <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;int&gt;</a>;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;}</div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_source_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_source.html">audio_tools::AudioInfoSource</a></div><div class="ttdoc">Supports the subscription to audio change notifications.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:135</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_support_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_support.html">audio_tools::AudioInfoSupport</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:116</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_time_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_time.html">audio_tools::AudioTime</a></div><div class="ttdoc">Tools for calculating timer values.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:174</div></div>
@@ -395,17 +411,18 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1int24__4bytes__t_html_ab5de9df15c4ca32db1246fd57eb79e40"><div class="ttname"><a href="classaudio__tools_1_1int24__4bytes__t.html#ab5de9df15c4ca32db1246fd57eb79e40">audio_tools::int24_4bytes_t::scale16</a></div><div class="ttdeci">int16_t scale16() const</div><div class="ttdoc">provides value between -32767 and 32767</div><div class="ttdef"><b>Definition:</b> Int24_4bytes_t.h:110</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1int24__4bytes__t_html_ad3f975477e832379629a455ed04bae0c"><div class="ttname"><a href="classaudio__tools_1_1int24__4bytes__t.html#ad3f975477e832379629a455ed04bae0c">audio_tools::int24_4bytes_t::scaleFloat</a></div><div class="ttdeci">float scaleFloat() const</div><div class="ttdoc">provides value between -1.0 and 1.0</div><div class="ttdef"><b>Definition:</b> Int24_4bytes_t.h:120</div></div>
 <div class="ttc" id="agroup__basic_html_ga462bfa9dfea81692463ecb192183dd01"><div class="ttname"><a href="group__basic.html#ga462bfa9dfea81692463ecb192183dd01">audio_tools::MemoryType</a></div><div class="ttdeci">MemoryType</div><div class="ttdoc">Memory types.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:31</div></div>
-<div class="ttc" id="agroup__basic_html_ga83c0970d946a0c48474620352453b903"><div class="ttname"><a href="group__basic.html#ga83c0970d946a0c48474620352453b903">audio_tools::waitFor</a></div><div class="ttdeci">void waitFor(bool &amp;flag)</div><div class="ttdoc">wait for flag to be active</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:367</div></div>
+<div class="ttc" id="agroup__basic_html_ga83c0970d946a0c48474620352453b903"><div class="ttname"><a href="group__basic.html#ga83c0970d946a0c48474620352453b903">audio_tools::waitFor</a></div><div class="ttdeci">void waitFor(bool &amp;flag)</div><div class="ttdoc">wait for flag to be active</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:386</div></div>
 <div class="ttc" id="agroup__basic_html_ga8cbd91a8bac9b5ab425112be1620eb49"><div class="ttname"><a href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">audio_tools::RxTxMode</a></div><div class="ttdeci">RxTxMode</div><div class="ttdoc">Audio Source (TX_MODE) or Audio Sink (RX_MODE). RXTX_MODE is Source and Sink at the same time!</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:24</div></div>
 <div class="ttc" id="agroup__basic_html_gadd9fe45e09605eee3e4a39c8a5c4476d"><div class="ttname"><a href="group__basic.html#gadd9fe45e09605eee3e4a39c8a5c4476d">audio_tools::TimeUnit</a></div><div class="ttdeci">TimeUnit</div><div class="ttdoc">Time Units.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:41</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_a1d8000e66a6b1df22bc01638f587b32c"><div class="ttname"><a href="namespaceaudio__tools.html#a1d8000e66a6b1df22bc01638f587b32c">audio_tools::readSamples</a></div><div class="ttdeci">size_t readSamples(Stream *p_stream, T *data, int samples)</div><div class="ttdoc">guaranteed to return the requested data</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:312</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_a2320e2f14f2ac363a4eb3fafd8c5afa7"><div class="ttname"><a href="namespaceaudio__tools.html#a2320e2f14f2ac363a4eb3fafd8c5afa7">audio_tools::mapFloat</a></div><div class="ttdeci">float mapFloat(float x, float in_min, float in_max, float out_min, float out_max)</div><div class="ttdoc">Similar to Arduino map function but using floats.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:351</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_a3961afb9c2a414e91d5687346be60285"><div class="ttname"><a href="namespaceaudio__tools.html#a3961afb9c2a414e91d5687346be60285">audio_tools::mime_pcm</a></div><div class="ttdeci">static const char * mime_pcm</div><div class="ttdoc">Mime type for PCM.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:356</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_a4ce58b1cf7c8f2758bd2f7ac29d8bd5d"><div class="ttname"><a href="namespaceaudio__tools.html#a4ce58b1cf7c8f2758bd2f7ac29d8bd5d">audio_tools::readSample</a></div><div class="ttdeci">T readSample(Stream *p_stream)</div><div class="ttdoc">guaranteed to return the requested data</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:296</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_a1d8000e66a6b1df22bc01638f587b32c"><div class="ttname"><a href="namespaceaudio__tools.html#a1d8000e66a6b1df22bc01638f587b32c">audio_tools::readSamples</a></div><div class="ttdeci">size_t readSamples(Stream *p_stream, T *data, int samples)</div><div class="ttdoc">guaranteed to return the requested data</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:331</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_a2320e2f14f2ac363a4eb3fafd8c5afa7"><div class="ttname"><a href="namespaceaudio__tools.html#a2320e2f14f2ac363a4eb3fafd8c5afa7">audio_tools::mapFloat</a></div><div class="ttdeci">float mapFloat(float x, float in_min, float in_max, float out_min, float out_max)</div><div class="ttdoc">Similar to Arduino map function but using floats.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:370</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_a3961afb9c2a414e91d5687346be60285"><div class="ttname"><a href="namespaceaudio__tools.html#a3961afb9c2a414e91d5687346be60285">audio_tools::mime_pcm</a></div><div class="ttdeci">static const char * mime_pcm</div><div class="ttdoc">Mime type for PCM.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:375</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_a4ce58b1cf7c8f2758bd2f7ac29d8bd5d"><div class="ttname"><a href="namespaceaudio__tools.html#a4ce58b1cf7c8f2758bd2f7ac29d8bd5d">audio_tools::readSample</a></div><div class="ttdeci">T readSample(Stream *p_stream)</div><div class="ttdoc">guaranteed to return the requested data</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:315</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html_a51ca22f5e92260d1d3f69724a51c551a"><div class="ttname"><a href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">audio_tools::millis</a></div><div class="ttdeci">uint64_t millis()</div><div class="ttdoc">Returns the milliseconds since the start.</div><div class="ttdef"><b>Definition:</b> Millis.h:17</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_a720616ce211566d808f3e441f9b18cda"><div class="ttname"><a href="namespaceaudio__tools.html#a720616ce211566d808f3e441f9b18cda">audio_tools::I2SFormat</a></div><div class="ttdeci">I2SFormat</div><div class="ttdoc">I2S Formats.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:299</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html_ad79aae4ad20c15c6daa69209dc3d0535"><div class="ttname"><a href="namespaceaudio__tools.html#ad79aae4ad20c15c6daa69209dc3d0535">audio_tools::RxTxModeNames</a></div><div class="ttdeci">INLINE_VAR const char * RxTxModeNames[]</div><div class="ttdoc">Text string (description) for RxTxMode.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:36</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_ae4bf1846916254f6051fdf1437159163"><div class="ttname"><a href="namespaceaudio__tools.html#ae4bf1846916254f6051fdf1437159163">audio_tools::writeSamples</a></div><div class="ttdeci">size_t writeSamples(Print *p_out, T *data, int samples, int maxSamples=512)</div><div class="ttdoc">guaranteed to return the requested data</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:328</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_ae4bf1846916254f6051fdf1437159163"><div class="ttname"><a href="namespaceaudio__tools.html#ae4bf1846916254f6051fdf1437159163">audio_tools::writeSamples</a></div><div class="ttdeci">size_t writeSamples(Print *p_out, T *data, int samples, int maxSamples=512)</div><div class="ttdoc">guaranteed to return the requested data</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:347</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a029ace15f5ede8def0a6ab5c97a81b25"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a029ace15f5ede8def0a6ab5c97a81b25">audio_tools::AudioInfo::copyFrom</a></div><div class="ttdeci">void copyFrom(AudioInfo info)</div><div class="ttdoc">Same as set.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:83</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:106</div></div>

@@ -253,7 +253,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">AudioKit <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> which uses the <a href="https://github.com/pschatzmann/arduino-audiokit">https://github.com/pschatzmann/arduino-audiokit</a> library.  <a href="classaudio__tools_1_1_audio_kit_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_kit_stream_config.html">AudioKitStreamConfig</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for <a class="el" href="classaudio__tools_1_1_audio_kit_stream.html" title="AudioKit Stream which uses the https://github.com/pschatzmann/arduino-audiokit library.">AudioKitStream</a>: we use as subclass of <a class="el" href="classaudio__tools_1_1_i2_s_config.html" title="configuration for all common i2s settings">I2SConfig</a>.  <a href="classaudio__tools_1_1_audio_kit_stream_config.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for <a class="el" href="classaudio__tools_1_1_audio_kit_stream.html" title="AudioKit Stream which uses the https://github.com/pschatzmann/arduino-audiokit library.">AudioKitStream</a>: we use as subclass of I2SConfig.  <a href="classaudio__tools_1_1_audio_kit_stream_config.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_m_p34_d_t05.html">AudioMP34DT05</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MP34DT05 Microphone of Nano BLE Sense. We provide a proper <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> implementation. See <a href="https://github.com/arduino/ArduinoCore-nRF528x-mbedos">https://github.com/arduino/ArduinoCore-nRF528x-mbedos</a>.  <a href="classaudio__tools_1_1_audio_m_p34_d_t05.html#details">More...</a><br /></td></tr>
@@ -788,8 +788,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_request_header.html">HttpRequestHeader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reading and writing of Http Requests.  <a href="classaudio__tools_1_1_http_request_header.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_config.html">I2SConfig</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration for all common i2s settings  <a href="classaudio__tools_1_1_i2_s_config.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_config_e_s_p32.html">I2SConfigESP32</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration for USE_ALT_PIN_SUPPORT i2s  <a href="classaudio__tools_1_1_i2_s_config_e_s_p32.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html">I2SConfigESP32V1</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration for ESP32 i2s for IDF &gt; 5.0  <a href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_config_std.html">I2SConfigStd</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration for all common i2s settings  <a href="classaudio__tools_1_1_i2_s_config_std.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html">I2SDriverESP32</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic I2S API - for the ESP32. If we receive 1 channel, we expand the result to 2 channels.  <a href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html#details">More...</a><br /></td></tr>
@@ -1550,6 +1556,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>FOURCC</b> = char[4]
 <tr class="memitem:ab153133bcff1dff07472661853d55a8d"><td class="memItemLeft" align="right" valign="top"><a id="ab153133bcff1dff07472661853d55a8d"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>HexDumpStream</b> = <a class="el" href="classaudio__tools_1_1_hex_dump_output.html">HexDumpOutput</a></td></tr>
 <tr class="separator:ab153133bcff1dff07472661853d55a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a550a8b9d4b54cf784404f3514ddf80a8"><td class="memItemLeft" align="right" valign="top"><a id="a550a8b9d4b54cf784404f3514ddf80a8"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>I2SConfig</b> = <a class="el" href="classaudio__tools_1_1_i2_s_config_e_s_p32.html">I2SConfigESP32</a></td></tr>
+<tr class="separator:a550a8b9d4b54cf784404f3514ddf80a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30ff45a62e6edbdd3a21e381904c49fb"><td class="memItemLeft" align="right" valign="top"><a id="a30ff45a62e6edbdd3a21e381904c49fb"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>I2SDriver</b> = <a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html">I2SDriverESP32</a></td></tr>
 <tr class="separator:a30ff45a62e6edbdd3a21e381904c49fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1709,12 +1718,29 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a720616ce211566d808f3e441f9b18cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2S Formats. <br /></td></tr>
 <tr class="separator:a720616ce211566d808f3e441f9b18cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d3846b210a1698eaf7cdb7258fcc3e1"><td class="memItemLeft" align="right" valign="top"><a id="a1d3846b210a1698eaf7cdb7258fcc3e1"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a1d3846b210a1698eaf7cdb7258fcc3e1">I2SSignalType</a> { <b>Digital</b>
+<tr class="memitem:a1d3846b210a1698eaf7cdb7258fcc3e1"><td class="memItemLeft" align="right" valign="top"><a id="a1d3846b210a1698eaf7cdb7258fcc3e1"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>I2SSignalType</b> { <br />
+&#160;&#160;<b>Digital</b>
 , <b>Analog</b>
 , <b>PDM</b>
+, <b>Digital</b>
+, <br />
+&#160;&#160;<b>Analog</b>
+, <b>PDM</b>
 , <b>TDM</b>
+<br />
  }</td></tr>
-<tr class="memdesc:a1d3846b210a1698eaf7cdb7258fcc3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2S Signal Types: Digital, Analog, PDM. <br /></td></tr>
+<tr class="separator:a1d3846b210a1698eaf7cdb7258fcc3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d3846b210a1698eaf7cdb7258fcc3e1"><td class="memItemLeft" align="right" valign="top"><a id="a1d3846b210a1698eaf7cdb7258fcc3e1"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>I2SSignalType</b> { <br />
+&#160;&#160;<b>Digital</b>
+, <b>Analog</b>
+, <b>PDM</b>
+, <b>Digital</b>
+, <br />
+&#160;&#160;<b>Analog</b>
+, <b>PDM</b>
+, <b>TDM</b>
+<br />
+ }</td></tr>
 <tr class="separator:a1d3846b210a1698eaf7cdb7258fcc3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga27477aa4d162c65da12c7ffd964f5779"><td class="memItemLeft" align="right" valign="top"><a id="ga27477aa4d162c65da12c7ffd964f5779"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__metadata.html#ga27477aa4d162c65da12c7ffd964f5779">ID3TypeSelection</a> { <br />
 &#160;&#160;<b>SELECT_ID3V1</b> =0b001
@@ -2074,9 +2100,9 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_buffer_size
 <tr class="memitem:aba6ba92067daa4deab6667b0ba41d8e4"><td class="memItemLeft" align="right" valign="top"><a id="aba6ba92067daa4deab6667b0ba41d8e4"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_formats</b> [] = {&quot;I2S_STD_FORMAT&quot;,&quot;I2S_LSB_FORMAT&quot;,&quot;I2S_MSB_FORMAT&quot;,&quot;I2S_PHILIPS_FORMAT&quot;,&quot;I2S_RIGHT_JUSTIFIED_FORMAT&quot;,&quot;I2S_LEFT_JUSTIFIED_FORMAT&quot;,&quot;I2S_PCM&quot;}</td></tr>
 <tr class="separator:aba6ba92067daa4deab6667b0ba41d8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a133a7b01aa677c803ef3e250786db6e7"><td class="memItemLeft" align="right" valign="top"><a id="a133a7b01aa677c803ef3e250786db6e7"></a>
+<tr class="memitem:a6a50d3a91bcc25150bf1ed64e8f7aef1"><td class="memItemLeft" align="right" valign="top"><a id="a6a50d3a91bcc25150bf1ed64e8f7aef1"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_signal_types</b> [] = {&quot;Digital&quot;,&quot;Analog&quot;,&quot;PDM&quot;,&quot;TDM&quot;}</td></tr>
-<tr class="separator:a133a7b01aa677c803ef3e250786db6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a6a50d3a91bcc25150bf1ed64e8f7aef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2159d8be72a8dd0966b5931fef29d11"><td class="memItemLeft" align="right" valign="top"><a id="ac2159d8be72a8dd0966b5931fef29d11"></a>
 static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_underflow_count</b> = 0</td></tr>
 <tr class="separator:ac2159d8be72a8dd0966b5931fef29d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
