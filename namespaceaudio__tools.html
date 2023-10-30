@@ -1446,7 +1446,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_vector.html" title="Vector implementation which provides the most important methods as defined by std::vector....">Vector</a> implementation which provides the most important methods as defined by std::vector. This class it is quite handy to have and most of the times quite better then dealing with raw c arrays.  <a href="classaudio__tools_1_1_vector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_video_audio_buffered_sync.html">VideoAudioBufferedSync</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logic to Synchronize video and audio output: we use a buffer to store the audio and instead of delaying the frames with <a class="el" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20" title="Waits for the indicated milliseconds.">delay()</a> we play audio. The bufferSize defines the audio buffer in bytes. The correctionMs is used to slow down or speed up the playback of the video to prevent any audio buffer underflows.  <a href="classaudio__tools_1_1_video_audio_buffered_sync.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logic to Synchronize video and audio output: we use a buffer to store the audio and instead of delaying the frames with <a class="el" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800" title="Waits for the indicated milliseconds.">delay()</a> we play audio. The bufferSize defines the audio buffer in bytes. The correctionMs is used to slow down or speed up the playback of the video to prevent any audio buffer underflows.  <a href="classaudio__tools_1_1_video_audio_buffered_sync.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_video_audio_sync.html">VideoAudioSync</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logic to Synchronize video and audio output: This is the minimum implementatin which actually does not synchronize, but directly processes the data. No additinal memory is used! Provide your own optimized platform specific implementation.  <a href="classaudio__tools_1_1_video_audio_sync.html#details">More...</a><br /></td></tr>
@@ -1883,10 +1883,14 @@ static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert8DA
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a55868847c0ef334611f3ffa71a64619e">defaultPWMAudioOutputCallback</a> ()</td></tr>
 <tr class="memdesc:a55868847c0ef334611f3ffa71a64619e"><td class="mdescLeft">&#160;</td><td class="mdescRight">separate method that can be defined as friend so that we can access protected information <br /></td></tr>
 <tr class="separator:a55868847c0ef334611f3ffa71a64619e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a504241b61d3595ad9356f8fccef71c20"><td class="memItemLeft" align="right" valign="top"><a id="a504241b61d3595ad9356f8fccef71c20"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a> (uint64_t ms)</td></tr>
-<tr class="memdesc:a504241b61d3595ad9356f8fccef71c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the indicated milliseconds. <br /></td></tr>
-<tr class="separator:a504241b61d3595ad9356f8fccef71c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2aa00330b2018c3480d5688fa1cc800"><td class="memItemLeft" align="right" valign="top"><a id="ac2aa00330b2018c3480d5688fa1cc800"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">delay</a> (uint32_t ms)</td></tr>
+<tr class="memdesc:ac2aa00330b2018c3480d5688fa1cc800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the indicated milliseconds. <br /></td></tr>
+<tr class="separator:ac2aa00330b2018c3480d5688fa1cc800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac134f8ec27dfbb4813d22f1fb76b2a5c"><td class="memItemLeft" align="right" valign="top"><a id="ac134f8ec27dfbb4813d22f1fb76b2a5c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#ac134f8ec27dfbb4813d22f1fb76b2a5c">delay</a> (uint64_t ms)</td></tr>
+<tr class="memdesc:ac134f8ec27dfbb4813d22f1fb76b2a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the indicated milliseconds. <br /></td></tr>
+<tr class="separator:ac134f8ec27dfbb4813d22f1fb76b2a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95b23c6de7556f7c41facc4fa6994c81"><td class="memItemLeft" align="right" valign="top"><a id="a95b23c6de7556f7c41facc4fa6994c81"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a95b23c6de7556f7c41facc4fa6994c81">fftLEDOutput</a> (<a class="el" href="structaudio__tools_1_1_l_e_d_output_config.html">LEDOutputConfig</a> *cfg, <a class="el" href="classaudio__tools_1_1_l_e_d_output.html">LEDOutput</a> *matrix)</td></tr>
 <tr class="memdesc:a95b23c6de7556f7c41facc4fa6994c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default update implementation which provides the fft result as "barchart". <br /></td></tr>
@@ -1923,7 +1927,7 @@ long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <tr class="memdesc:a2320e2f14f2ac363a4eb3fafd8c5afa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to Arduino map function but using floats.  <a href="namespaceaudio__tools.html#a2320e2f14f2ac363a4eb3fafd8c5afa7">More...</a><br /></td></tr>
 <tr class="separator:a2320e2f14f2ac363a4eb3fafd8c5afa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51ca22f5e92260d1d3f69724a51c551a"><td class="memItemLeft" align="right" valign="top"><a id="a51ca22f5e92260d1d3f69724a51c551a"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a> ()</td></tr>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a> ()</td></tr>
 <tr class="memdesc:a51ca22f5e92260d1d3f69724a51c551a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the milliseconds since the start. <br /></td></tr>
 <tr class="separator:a51ca22f5e92260d1d3f69724a51c551a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe34e0e8f138e800abdd86473231520d"><td class="memItemLeft" align="right" valign="top"><a id="abe34e0e8f138e800abdd86473231520d"></a>

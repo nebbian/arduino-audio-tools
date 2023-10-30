@@ -77,13 +77,13 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceaudio__tools.html">audio_tools</a> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a>(uint64_t ms) {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">delay</a>(uint32_t ms) {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">//std::this_thread::sleep_for(std::chrono::milliseconds(ms));    </span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">auto</span> end = <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>()+ms;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>()&lt;=end);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">   17</a></span>&#160;uint64_t <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>(){</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">   17</a></span>&#160;uint32_t <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>(){</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">using namespace </span>std::chrono;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// Get current time with precision of milliseconds</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">auto</span> now = time_point_cast&lt;milliseconds&gt;(system_clock::now());</div>
@@ -96,8 +96,8 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="ttc" id="a_no_arduino_8h_html"><div class="ttname"><a href="_no_arduino_8h.html">NoArduino.h</a></div><div class="ttdoc">If you want to use the framework w/o Arduino you need to provide the implementation of a couple of cl...</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_a504241b61d3595ad9356f8fccef71c20"><div class="ttname"><a href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">audio_tools::delay</a></div><div class="ttdeci">void delay(uint64_t ms)</div><div class="ttdoc">Waits for the indicated milliseconds.</div><div class="ttdef"><b>Definition:</b> Millis.h:10</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_a51ca22f5e92260d1d3f69724a51c551a"><div class="ttname"><a href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">audio_tools::millis</a></div><div class="ttdeci">uint64_t millis()</div><div class="ttdoc">Returns the milliseconds since the start.</div><div class="ttdef"><b>Definition:</b> Millis.h:17</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_a51ca22f5e92260d1d3f69724a51c551a"><div class="ttname"><a href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">audio_tools::millis</a></div><div class="ttdeci">uint32_t millis()</div><div class="ttdoc">Returns the milliseconds since the start.</div><div class="ttdef"><b>Definition:</b> Millis.h:17</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_ac2aa00330b2018c3480d5688fa1cc800"><div class="ttname"><a href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">audio_tools::delay</a></div><div class="ttdeci">void delay(uint32_t ms)</div><div class="ttdoc">Waits for the indicated milliseconds.</div><div class="ttdef"><b>Definition:</b> Millis.h:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

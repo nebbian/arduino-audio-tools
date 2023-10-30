@@ -784,10 +784,10 @@ $(function() {
 <div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;  }</div>
 <div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160; </div>
 <div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;  uint64_t start_time;</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;  uint64_t sum_samples = 0;</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;  uint32_t start_time = 0;</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;  uint32_t sum_samples = 0;</div>
 <div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;  <a class="code" href="structaudio__tools_1_1_throttle_config.html">ThrottleConfig</a> info;</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;  <span class="keywordtype">int</span> bytesPerSample;</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;  <span class="keywordtype">int</span> bytesPerSample = 0;</div>
 <div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;  <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *p_out = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;};</div>
 <div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160; </div>

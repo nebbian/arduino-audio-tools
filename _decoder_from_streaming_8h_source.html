@@ -79,64 +79,64 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_decoder_from_streaming.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_decoder_from_streaming.html">DecoderFromStreaming</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_decoder_from_streaming.html#ae8b6f6deb5c2ef1212892381df00c541">   23</a></span>&#160;  <a class="code" href="classaudio__tools_1_1_decoder_from_streaming.html#ae8b6f6deb5c2ef1212892381df00c541">DecoderFromStreaming</a>(<a class="code" href="classaudio__tools_1_1_streaming_decoder.html">StreamingDecoder</a> &amp;dec, <span class="keywordtype">int</span> bufferSize) {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    p_dec = &amp;dec;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classaudio__tools_1_1_decoder_from_streaming.html#ada388d17b93c54a1a0f6edddbe0953ab">resize</a>(bufferSize);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_decoder_from_streaming.html#a05ff4cf361d54457ed8586e8c14aa922">   30</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_decoder_from_streaming.html#a05ff4cf361d54457ed8586e8c14aa922">setOutput</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    p_dec-&gt;<a class="code" href="classaudio__tools_1_1_streaming_decoder.html#a951eeb2b651188b0727c989dc5d8e567">setInputStream</a>(queue);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    p_dec-&gt;<a class="code" href="classaudio__tools_1_1_streaming_decoder.html#a8f0e458c434c843a5a9f4d5ff87acc71">setOutput</a>(out);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">void</span> begin()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    active = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">void</span> end()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    active = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_decoder_from_streaming.html#ada388d17b93c54a1a0f6edddbe0953ab">   46</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_decoder_from_streaming.html#ada388d17b93c54a1a0f6edddbe0953ab">resize</a>(<span class="keywordtype">int</span> size){</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    rbuffer.resize(size);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> <span class="keywordtype">void</span> *data, <span class="keywordtype">size_t</span> byteCount)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (p_out == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">size_t</span> result = queue.write((uint8_t *)data, byteCount);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// trigger processing</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">while</span>(p_dec-&gt;<a class="code" href="classaudio__tools_1_1_streaming_decoder.html#a09b4fd0a2bd2c7c07c01fd12ae456c98">copy</a>()) <a class="code" href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">delay</a>(1);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">operator</span> bool()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> active; }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">bool</span> active = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  StreamingDecoder *p_dec = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  RingBuffer&lt;uint8_t&gt; rbuffer{0};</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  QueueStream&lt;uint8_t&gt; queue{rbuffer}; <span class="comment">// convert Buffer to Stream</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  Print *p_out = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_decoder_from_streaming.html#ae8b6f6deb5c2ef1212892381df00c541">   19</a></span>&#160;  <a class="code" href="classaudio__tools_1_1_decoder_from_streaming.html#ae8b6f6deb5c2ef1212892381df00c541">DecoderFromStreaming</a>(<a class="code" href="classaudio__tools_1_1_streaming_decoder.html">StreamingDecoder</a> &amp;dec, <span class="keywordtype">int</span> bufferSize) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    p_dec = &amp;dec;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classaudio__tools_1_1_decoder_from_streaming.html#ada388d17b93c54a1a0f6edddbe0953ab">resize</a>(bufferSize);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_decoder_from_streaming.html#a05ff4cf361d54457ed8586e8c14aa922">   26</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_decoder_from_streaming.html#a05ff4cf361d54457ed8586e8c14aa922">setOutput</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    p_dec-&gt;<a class="code" href="classaudio__tools_1_1_streaming_decoder.html#a951eeb2b651188b0727c989dc5d8e567">setInputStream</a>(queue);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    p_dec-&gt;<a class="code" href="classaudio__tools_1_1_streaming_decoder.html#a8f0e458c434c843a5a9f4d5ff87acc71">setOutput</a>(out);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">void</span> begin()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    active = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> end()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    active = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_decoder_from_streaming.html#ada388d17b93c54a1a0f6edddbe0953ab">   42</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_decoder_from_streaming.html#ada388d17b93c54a1a0f6edddbe0953ab">resize</a>(<span class="keywordtype">int</span> size){</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    rbuffer.resize(size);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> <span class="keywordtype">void</span> *data, <span class="keywordtype">size_t</span> byteCount)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (p_out == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">size_t</span> result = queue.write((uint8_t *)data, byteCount);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// trigger processing</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">while</span>(p_dec-&gt;<a class="code" href="classaudio__tools_1_1_streaming_decoder.html#a09b4fd0a2bd2c7c07c01fd12ae456c98">copy</a>()) <a class="code" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">delay</a>(1);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">operator</span> bool()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> active; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">bool</span> active = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  StreamingDecoder *p_dec = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  RingBuffer&lt;uint8_t&gt; rbuffer{0};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  QueueStream&lt;uint8_t&gt; queue{rbuffer}; <span class="comment">// convert Buffer to Stream</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  Print *p_out = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:17</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_decoder_from_streaming_html"><div class="ttname"><a href="classaudio__tools_1_1_decoder_from_streaming.html">audio_tools::DecoderFromStreaming</a></div><div class="ttdoc">Adapter class which allows the AudioDecoder API on a StreamingDecoder.</div><div class="ttdef"><b>Definition:</b> DecoderFromStreaming.h:16</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_decoder_from_streaming_html_a05ff4cf361d54457ed8586e8c14aa922"><div class="ttname"><a href="classaudio__tools_1_1_decoder_from_streaming.html#a05ff4cf361d54457ed8586e8c14aa922">audio_tools::DecoderFromStreaming::setOutput</a></div><div class="ttdeci">void setOutput(Print &amp;out) override</div><div class="ttdoc">Defines the output Stream.</div><div class="ttdef"><b>Definition:</b> DecoderFromStreaming.h:30</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_decoder_from_streaming_html_ada388d17b93c54a1a0f6edddbe0953ab"><div class="ttname"><a href="classaudio__tools_1_1_decoder_from_streaming.html#ada388d17b93c54a1a0f6edddbe0953ab">audio_tools::DecoderFromStreaming::resize</a></div><div class="ttdeci">void resize(int size)</div><div class="ttdoc">resize the buffer</div><div class="ttdef"><b>Definition:</b> DecoderFromStreaming.h:46</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_decoder_from_streaming_html_ae8b6f6deb5c2ef1212892381df00c541"><div class="ttname"><a href="classaudio__tools_1_1_decoder_from_streaming.html#ae8b6f6deb5c2ef1212892381df00c541">audio_tools::DecoderFromStreaming::DecoderFromStreaming</a></div><div class="ttdeci">DecoderFromStreaming(StreamingDecoder &amp;dec, int bufferSize)</div><div class="ttdoc">Constructor for a new DecoderBase64 object.</div><div class="ttdef"><b>Definition:</b> DecoderFromStreaming.h:23</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_decoder_from_streaming_html_a05ff4cf361d54457ed8586e8c14aa922"><div class="ttname"><a href="classaudio__tools_1_1_decoder_from_streaming.html#a05ff4cf361d54457ed8586e8c14aa922">audio_tools::DecoderFromStreaming::setOutput</a></div><div class="ttdeci">void setOutput(Print &amp;out) override</div><div class="ttdoc">Defines the output Stream.</div><div class="ttdef"><b>Definition:</b> DecoderFromStreaming.h:26</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_decoder_from_streaming_html_ada388d17b93c54a1a0f6edddbe0953ab"><div class="ttname"><a href="classaudio__tools_1_1_decoder_from_streaming.html#ada388d17b93c54a1a0f6edddbe0953ab">audio_tools::DecoderFromStreaming::resize</a></div><div class="ttdeci">void resize(int size)</div><div class="ttdoc">resize the buffer</div><div class="ttdef"><b>Definition:</b> DecoderFromStreaming.h:42</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_decoder_from_streaming_html_ae8b6f6deb5c2ef1212892381df00c541"><div class="ttname"><a href="classaudio__tools_1_1_decoder_from_streaming.html#ae8b6f6deb5c2ef1212892381df00c541">audio_tools::DecoderFromStreaming::DecoderFromStreaming</a></div><div class="ttdeci">DecoderFromStreaming(StreamingDecoder &amp;dec, int bufferSize)</div><div class="ttdoc">Default Constructor.</div><div class="ttdef"><b>Definition:</b> DecoderFromStreaming.h:19</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:58</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_streaming_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_streaming_decoder.html">audio_tools::StreamingDecoder</a></div><div class="ttdoc">A Streaming Decoder where we provide both the input and output as streams.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:141</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_streaming_decoder_html_a09b4fd0a2bd2c7c07c01fd12ae456c98"><div class="ttname"><a href="classaudio__tools_1_1_streaming_decoder.html#a09b4fd0a2bd2c7c07c01fd12ae456c98">audio_tools::StreamingDecoder::copy</a></div><div class="ttdeci">virtual bool copy()=0</div><div class="ttdoc">Process a single read operation - to be called in the loop.</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_streaming_decoder_html_a8f0e458c434c843a5a9f4d5ff87acc71"><div class="ttname"><a href="classaudio__tools_1_1_streaming_decoder.html#a8f0e458c434c843a5a9f4d5ff87acc71">audio_tools::StreamingDecoder::setOutput</a></div><div class="ttdeci">virtual void setOutput(Print &amp;outStream)=0</div><div class="ttdoc">Defines the output Stream.</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_streaming_decoder_html_a951eeb2b651188b0727c989dc5d8e567"><div class="ttname"><a href="classaudio__tools_1_1_streaming_decoder.html#a951eeb2b651188b0727c989dc5d8e567">audio_tools::StreamingDecoder::setInputStream</a></div><div class="ttdeci">virtual void setInputStream(Stream &amp;inStream)=0</div><div class="ttdoc">Defines the input data stream.</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_a504241b61d3595ad9356f8fccef71c20"><div class="ttname"><a href="namespaceaudio__tools.html#a504241b61d3595ad9356f8fccef71c20">audio_tools::delay</a></div><div class="ttdeci">void delay(uint64_t ms)</div><div class="ttdoc">Waits for the indicated milliseconds.</div><div class="ttdef"><b>Definition:</b> Millis.h:10</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_ac2aa00330b2018c3480d5688fa1cc800"><div class="ttname"><a href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">audio_tools::delay</a></div><div class="ttdeci">void delay(uint32_t ms)</div><div class="ttdoc">Waits for the indicated milliseconds.</div><div class="ttdef"><b>Definition:</b> Millis.h:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
