@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['sample_5frate_2901',['sample_rate',['../structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2',1,'audio_tools::AudioInfo']]],
-  ['samplerate_2902',['sampleRate',['../classaudio__tools_1_1_modulation_base_class.html#ad16762d495115c2606417076f062c39d',1,'audio_tools::ModulationBaseClass']]],
-  ['silence_5fon_5fnodata_2903',['silence_on_nodata',['../classaudio__tools_1_1_a2_d_p_config.html#a092bc928d6fab7ae135685c8c7ae0256',1,'audio_tools::A2DPConfig']]],
-  ['singal_2904',['singal',['../structaudio__tools_1_1_opus_encoder_settings.html#aeb5762dddeaf976bef20625f7e665f5c',1,'audio_tools::OpusEncoderSettings']]],
-  ['ssid_2905',['ssid',['../classaudio__tools_1_1_v_b_a_n_config.html#a587ba0cb07f02913598610049a3bbb79',1,'audio_tools::VBANConfig']]],
-  ['stream_5fname_2906',['stream_name',['../classaudio__tools_1_1_v_b_a_n_config.html#ad44f4c7166311eca430e05cb1d485807',1,'audio_tools::VBANConfig']]],
-  ['swing_2907',['swing',['../classaudio__tools_1_1_simple_chorus.html#a97f5a92ad2c16f85ca305be30ba8477b',1,'audio_tools::SimpleChorus']]]
+  ['rate_2980',['rate',['../structaudio__tools_1_1_e_s_p_now_stream_config.html#add99443712e271bc9d643939e9d1eab7',1,'audio_tools::ESPNowStreamConfig']]],
+  ['rmsbuffer_2981',['rmsBuffer',['../classaudio__tools_1_1_filter_effect_base.html#af98d43bb141b7271517441be89776234',1,'audio_tools::FilterEffectBase']]],
+  ['rmsbufferindex_2982',['rmsBufferIndex',['../classaudio__tools_1_1_filter_effect_base.html#aaa8caba16ab06d8a73dd5a2e4c31d4dc',1,'audio_tools::FilterEffectBase']]],
+  ['rmswindowsize_2983',['rmsWindowSize',['../classaudio__tools_1_1_filter_effect_base.html#ab547c2a820df89e5452b595bf9a17df5',1,'audio_tools::FilterEffectBase']]],
+  ['rx_5ftx_5fmode_2984',['rx_tx_mode',['../classaudio__tools_1_1_i2_s_config_e_s_p32.html#a31a454d24fb1f4d74779a0ff668d54cc',1,'audio_tools::I2SConfigESP32::rx_tx_mode()'],['../classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html#a31a454d24fb1f4d74779a0ff668d54cc',1,'audio_tools::I2SConfigESP32V1::rx_tx_mode()'],['../classaudio__tools_1_1_i2_s_config_std.html#a31a454d24fb1f4d74779a0ff668d54cc',1,'audio_tools::I2SConfigStd::rx_tx_mode()']]],
+  ['rxtxmodenames_2985',['RxTxModeNames',['../namespaceaudio__tools.html#ad79aae4ad20c15c6daa69209dc3d0535',1,'audio_tools']]]
 ];
