@@ -187,6 +187,12 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>getMTU</b> ()<
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc75b85238ec5577f6f237593bc23924"><td class="memItemLeft" align="right" valign="top"><a id="acc75b85238ec5577f6f237593bc23924"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onConnect</b> (BLEClient *pClient)</td></tr>
+<tr class="separator:acc75b85238ec5577f6f237593bc23924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf63c554113fa6444760dbd8f8015cc"><td class="memItemLeft" align="right" valign="top"><a id="accf63c554113fa6444760dbd8f8015cc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onDisconnect</b> (BLEClient *pClient)</td></tr>
+<tr class="separator:accf63c554113fa6444760dbd8f8015cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6070f47c7f19463c974bf955e65c7fb8"><td class="memItemLeft" align="right" valign="top"><a id="a6070f47c7f19463c974bf955e65c7fb8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>onResult</b> (BLEAdvertisedDevice advertisedDevice) override</td></tr>
 <tr class="separator:a6070f47c7f19463c974bf955e65c7fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,9 +256,12 @@ BLERemoteCharacteristic *&#160;</td><td class="memItemRight" valign="bottom"><b>
 <tr class="memitem:ad230cf39a3ccdb6fe2090052845914d9"><td class="memItemLeft" align="right" valign="top"><a id="ad230cf39a3ccdb6fe2090052845914d9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_audio_info_active</b> = false</td></tr>
 <tr class="separator:ad230cf39a3ccdb6fe2090052845914d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51cb667a40156ec3a9dbf2f236ff45a4"><td class="memItemLeft" align="right" valign="top"><a id="a51cb667a40156ec3a9dbf2f236ff45a4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_client_connected</b> = false</td></tr>
-<tr class="separator:a51cb667a40156ec3a9dbf2f236ff45a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c94fcce72c8896d77ca325cf615a59a"><td class="memItemLeft" align="right" valign="top"><a id="a3c94fcce72c8896d77ca325cf615a59a"></a>
+volatile bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_client_connected</b> = false</td></tr>
+<tr class="separator:a3c94fcce72c8896d77ca325cf615a59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622ab5e954b34e4716ec0defdb22fab4"><td class="memItemLeft" align="right" valign="top"><a id="a622ab5e954b34e4716ec0defdb22fab4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_client_set_up</b> = false</td></tr>
+<tr class="separator:a622ab5e954b34e4716ec0defdb22fab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae325496b78a6eb08612dd37555ff47c7"><td class="memItemLeft" align="right" valign="top"><a id="ae325496b78a6eb08612dd37555ff47c7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_framed</b> = false</td></tr>
 <tr class="separator:ae325496b78a6eb08612dd37555ff47c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
