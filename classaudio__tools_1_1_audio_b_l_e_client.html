@@ -97,9 +97,9 @@ Inheritance diagram for AudioBLEClient:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acea5d3c1c22e4a2b7e905973808586d7"><td class="memItemLeft" align="right" valign="top"><a id="acea5d3c1c22e4a2b7e905973808586d7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AudioBLEClient</b> (int mtu=512)</td></tr>
-<tr class="separator:acea5d3c1c22e4a2b7e905973808586d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5ef85d47cfbcc1316abb7ea29e03860"><td class="memItemLeft" align="right" valign="top"><a id="aa5ef85d47cfbcc1316abb7ea29e03860"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AudioBLEClient</b> (int mtu=517)</td></tr>
+<tr class="separator:aa5ef85d47cfbcc1316abb7ea29e03860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
 <tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,13 +112,16 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> 
 <tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a816f1eda71588c0d7290665f49dd3615"><td class="memItemLeft" align="right" valign="top"><a id="a816f1eda71588c0d7290665f49dd3615"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_b_l_e_client.html#a816f1eda71588c0d7290665f49dd3615">begin</a> (const char *serverName, int seconds)</td></tr>
-<tr class="memdesc:a816f1eda71588c0d7290665f49dd3615"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts a BLE client <br /></td></tr>
-<tr class="separator:a816f1eda71588c0d7290665f49dd3615"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac42fa6dc79fcbe982597c1a584c46b85"><td class="memItemLeft" align="right" valign="top"><a id="ac42fa6dc79fcbe982597c1a584c46b85"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>connected</b> () override</td></tr>
-<tr class="separator:ac42fa6dc79fcbe982597c1a584c46b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b96dc076334afbbc624f41ea1a22786"><td class="memItemLeft" align="right" valign="top"><a id="a6b96dc076334afbbc624f41ea1a22786"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_b_l_e_client.html#a6b96dc076334afbbc624f41ea1a22786">begin</a> (const char *localName, int seconds)</td></tr>
+<tr class="memdesc:a6b96dc076334afbbc624f41ea1a22786"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts a BLE client <br /></td></tr>
+<tr class="separator:a6b96dc076334afbbc624f41ea1a22786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9936606c2333071cb3f8cab0591c3380"><td class="memItemLeft" align="right" valign="top"><a id="a9936606c2333071cb3f8cab0591c3380"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>connected</b> () override</td></tr>
+<tr class="separator:a9936606c2333071cb3f8cab0591c3380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ee9280c3692bb64624dbc933acae273"><td class="memItemLeft" align="right" valign="top"><a id="a4ee9280c3692bb64624dbc933acae273"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>doLoop</b> ()</td></tr>
+<tr class="separator:a4ee9280c3692bb64624dbc933acae273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memItemLeft" align="right" valign="top"><a id="a64e9fa75beda50a9e8400ee0d4e61984"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
 <tr class="separator:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,12 +190,12 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>getMTU</b> ()<
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc75b85238ec5577f6f237593bc23924"><td class="memItemLeft" align="right" valign="top"><a id="acc75b85238ec5577f6f237593bc23924"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onConnect</b> (BLEClient *pClient)</td></tr>
-<tr class="separator:acc75b85238ec5577f6f237593bc23924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accf63c554113fa6444760dbd8f8015cc"><td class="memItemLeft" align="right" valign="top"><a id="accf63c554113fa6444760dbd8f8015cc"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onDisconnect</b> (BLEClient *pClient)</td></tr>
-<tr class="separator:accf63c554113fa6444760dbd8f8015cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e886374beb545e97df8b60b70a2bab"><td class="memItemLeft" align="right" valign="top"><a id="ab9e886374beb545e97df8b60b70a2bab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>onConnect</b> (BLEClient *pClient) override</td></tr>
+<tr class="separator:ab9e886374beb545e97df8b60b70a2bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace9801f964d9628e51d1edaaa863f19"><td class="memItemLeft" align="right" valign="top"><a id="aace9801f964d9628e51d1edaaa863f19"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>onDisconnect</b> (BLEClient *pClient) override</td></tr>
+<tr class="separator:aace9801f964d9628e51d1edaaa863f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6070f47c7f19463c974bf955e65c7fb8"><td class="memItemLeft" align="right" valign="top"><a id="a6070f47c7f19463c974bf955e65c7fb8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>onResult</b> (BLEAdvertisedDevice advertisedDevice) override</td></tr>
 <tr class="separator:a6070f47c7f19463c974bf955e65c7fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,6 +229,9 @@ BLEAdvertisedDevice&#160;</td><td class="memItemRight" valign="bottom"><b>advert
 <tr class="memitem:a975cf3c692ce46f8716f87999d508eb1"><td class="memItemLeft" align="right" valign="top"><a id="a975cf3c692ce46f8716f87999d508eb1"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>audio_info_str</b> [40]</td></tr>
 <tr class="separator:a975cf3c692ce46f8716f87999d508eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac874db85099c73656d8a5bd4806e54d2"><td class="memItemLeft" align="right" valign="top"><a id="ac874db85099c73656d8a5bd4806e54d2"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>BLE_AUDIO_SERVICE_UUID</b> = &quot;6e400001-b5a3-f393-e0a9-e50e24dcca9e&quot;</td></tr>
+<tr class="separator:ac874db85099c73656d8a5bd4806e54d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade638a64d8518e39cf8aefcbd842f2b9"><td class="memItemLeft" align="right" valign="top"><a id="ade638a64d8518e39cf8aefcbd842f2b9"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>BLE_CH1_UUID</b> = &quot;6e400002-b5a3-f393-e0a9-e50e24dcca9e&quot;</td></tr>
 <tr class="separator:ade638a64d8518e39cf8aefcbd842f2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,12 +241,21 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>BLE_CH2_UUID<
 <tr class="memitem:a4346edc726b61825c9fbb94ee2af6ce1"><td class="memItemLeft" align="right" valign="top"><a id="a4346edc726b61825c9fbb94ee2af6ce1"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>BLE_INFO_UUID</b> = &quot;6e400004-b5a3-f393-e0a9-e50e24dcca9e&quot;</td></tr>
 <tr class="separator:a4346edc726b61825c9fbb94ee2af6ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b93a7d1cb83a0e92ca66b23492487e3"><td class="memItemLeft" align="right" valign="top"><a id="a2b93a7d1cb83a0e92ca66b23492487e3"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>BLE_SERIAL_SERVICE_UUID</b> = &quot;6e400001-b5a3-f393-e0a9-e50e24dcca9e&quot;</td></tr>
-<tr class="separator:a2b93a7d1cb83a0e92ca66b23492487e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaa076d44e45bbf35d8389fb007c12e9"><td class="memItemLeft" align="right" valign="top"><a id="abaa076d44e45bbf35d8389fb007c12e9"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ble_server_name</b> = nullptr</td></tr>
 <tr class="separator:abaa076d44e45bbf35d8389fb007c12e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9e21414e8a7e820001191a9f2d3e1d"><td class="memItemLeft" align="right" valign="top"><a id="a6a9e21414e8a7e820001191a9f2d3e1d"></a>
+BLEUUID&#160;</td><td class="memItemRight" valign="bottom"><b>BLUEID_AUDIO_SERVICE_UUID</b> {BLE_AUDIO_SERVICE_UUID}</td></tr>
+<tr class="separator:a6a9e21414e8a7e820001191a9f2d3e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a811767698719f81f37746ad8671eccee"><td class="memItemLeft" align="right" valign="top"><a id="a811767698719f81f37746ad8671eccee"></a>
+BLEUUID&#160;</td><td class="memItemRight" valign="bottom"><b>BLUEID_CH1_UUID</b> {BLE_CH1_UUID}</td></tr>
+<tr class="separator:a811767698719f81f37746ad8671eccee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956a46b2865f058be7d775faa5df6e51"><td class="memItemLeft" align="right" valign="top"><a id="a956a46b2865f058be7d775faa5df6e51"></a>
+BLEUUID&#160;</td><td class="memItemRight" valign="bottom"><b>BLUEID_CH2_UUID</b> {BLE_CH2_UUID}</td></tr>
+<tr class="separator:a956a46b2865f058be7d775faa5df6e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff296d04f543dd839904c827d2d47a6"><td class="memItemLeft" align="right" valign="top"><a id="a8ff296d04f543dd839904c827d2d47a6"></a>
+BLEUUID&#160;</td><td class="memItemRight" valign="bottom"><b>BLUEID_INFO_UUID</b> {BLE_INFO_UUID}</td></tr>
+<tr class="separator:a8ff296d04f543dd839904c827d2d47a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a249aa17e84247a39083d3c2dab072096"><td class="memItemLeft" align="right" valign="top"><a id="a249aa17e84247a39083d3c2dab072096"></a>
 BLERemoteCharacteristic *&#160;</td><td class="memItemRight" valign="bottom"><b>ch01_char</b> = nullptr</td></tr>
 <tr class="separator:a249aa17e84247a39083d3c2dab072096"><td class="memSeparator" colspan="2">&#160;</td></tr>
