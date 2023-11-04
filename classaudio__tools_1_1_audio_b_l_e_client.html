@@ -119,9 +119,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a9936606c2333071cb3f8cab0591c3380"><td class="memItemLeft" align="right" valign="top"><a id="a9936606c2333071cb3f8cab0591c3380"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>connected</b> () override</td></tr>
 <tr class="separator:a9936606c2333071cb3f8cab0591c3380"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ee9280c3692bb64624dbc933acae273"><td class="memItemLeft" align="right" valign="top"><a id="a4ee9280c3692bb64624dbc933acae273"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>doLoop</b> ()</td></tr>
-<tr class="separator:a4ee9280c3692bb64624dbc933acae273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memItemLeft" align="right" valign="top"><a id="a64e9fa75beda50a9e8400ee0d4e61984"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
 <tr class="separator:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +144,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfoActive</b
 <tr class="memitem:ae998874903ee6ae9e356ee24f08884ea"><td class="memItemLeft" align="right" valign="top"><a id="ae998874903ee6ae9e356ee24f08884ea"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfoUUID</b> (const char *uuid)</td></tr>
 <tr class="separator:ae998874903ee6ae9e356ee24f08884ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c41e796134f21bb7b7462203f0c9a2f"><td class="memItemLeft" align="right" valign="top"><a id="a4c41e796134f21bb7b7462203f0c9a2f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setConfirmWrite</b> (bool flag)</td></tr>
+<tr class="separator:a4c41e796134f21bb7b7462203f0c9a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2adbbb700bf6e54b9fa975474b6c6299"><td class="memItemLeft" align="right" valign="top"><a id="a2adbbb700bf6e54b9fa975474b6c6299"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setFramed</b> (bool flag)</td></tr>
 <tr class="separator:a2adbbb700bf6e54b9fa975474b6c6299"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +162,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setServiceUUID</b> (c
 <tr class="memitem:ab7865b88db5394627bbe5096c146c530"><td class="memItemLeft" align="right" valign="top"><a id="ab7865b88db5394627bbe5096c146c530"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setTxUUID</b> (const char *uuid)</td></tr>
 <tr class="separator:ab7865b88db5394627bbe5096c146c530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8838b4ba502d2ff1435394eae1b08e5"><td class="memItemLeft" align="right" valign="top"><a id="af8838b4ba502d2ff1435394eae1b08e5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWriteThrottle</b> (int ms)</td></tr>
+<tr class="separator:af8838b4ba502d2ff1435394eae1b08e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cba182fad58774ac7843d20e214bad5"><td class="memItemLeft" align="right" valign="top"><a id="a3cba182fad58774ac7843d20e214bad5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toInfo</b> (const uint8_t *str)</td></tr>
 <tr class="separator:a3cba182fad58774ac7843d20e214bad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,6 +217,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>setupBLEClient</b> ()
 <tr class="memitem:a5913d4625803ed181af486ccf3d1d229"><td class="memItemLeft" align="right" valign="top"><a id="a5913d4625803ed181af486ccf3d1d229"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeAudioInfoCharacteristic</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
 <tr class="separator:a5913d4625803ed181af486ccf3d1d229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1059d656f89cbda859fb96fad882d4"><td class="memItemLeft" align="right" valign="top"><a id="a2e1059d656f89cbda859fb96fad882d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>writeChannel2Characteristic</b> (const uint8_t *data, size_t len)</td></tr>
+<tr class="separator:a2e1059d656f89cbda859fb96fad882d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
@@ -310,6 +316,15 @@ BLEAddress *&#160;</td><td class="memItemRight" valign="bottom"><b>p_server_addr
 <tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
 <tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be49aec6d7df1c39da1ee259cc74fec"><td class="memItemLeft" align="right" valign="top"><a id="a0be49aec6d7df1c39da1ee259cc74fec"></a>
+<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>write_buffer</b> {0}</td></tr>
+<tr class="separator:a0be49aec6d7df1c39da1ee259cc74fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add96759c5a9fb63f0c1ca6bb52d2f132"><td class="memItemLeft" align="right" valign="top"><a id="add96759c5a9fb63f0c1ca6bb52d2f132"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>write_confirmation_flag</b> = false</td></tr>
+<tr class="separator:add96759c5a9fb63f0c1ca6bb52d2f132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74cc0987d74478e27a8020a5c8e8b805"><td class="memItemLeft" align="right" valign="top"><a id="a74cc0987d74478e27a8020a5c8e8b805"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>write_throttle</b> = 0</td></tr>
+<tr class="separator:a74cc0987d74478e27a8020a5c8e8b805"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A simple BLE client that implements the serial protocol, so that it can be used to send and recevie audio. In BLE terminology this is a Central. </p>

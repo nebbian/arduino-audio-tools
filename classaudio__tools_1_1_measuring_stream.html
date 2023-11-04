@@ -117,6 +117,9 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1a0fe2d8421c464e2b0d0fe10690fb1"><td class="memItemLeft" align="right" valign="top"><a id="af1a0fe2d8421c464e2b0d0fe10690fb1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:af1a0fe2d8421c464e2b0d0fe10690fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8e4bd4a3ed944b9b3d49001690aeb85"><td class="memItemLeft" align="right" valign="top"><a id="af8e4bd4a3ed944b9b3d49001690aeb85"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_measuring_stream.html#af8e4bd4a3ed944b9b3d49001690aeb85">bytesPerSecond</a> ()</td></tr>
 <tr class="memdesc:af8e4bd4a3ed944b9b3d49001690aeb85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the actual thrughput in bytes per second. <br /></td></tr>
@@ -138,12 +141,12 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#a36e26f40121eda38b0042dcba026ab82">readSilence</a> (uint8_t *buffer, size_t length)</td></tr>
 <tr class="memdesc:a36e26f40121eda38b0042dcba026ab82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source to generate silence: just sets the buffer to 0. <br /></td></tr>
 <tr class="separator:a36e26f40121eda38b0042dcba026ab82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
-<tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f4b3984d888c94b3cdaef84264f3749"><td class="memItemLeft" align="right" valign="top"><a id="a4f4b3984d888c94b3cdaef84264f3749"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBytesPerSample</b> (int size)</td></tr>
-<tr class="separator:a4f4b3984d888c94b3cdaef84264f3749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e283a9495aaf265739336829d45e215"><td class="memItemLeft" align="right" valign="top"><a id="a5e283a9495aaf265739336829d45e215"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a5e283a9495aaf265739336829d45e215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b855aa8df6888b7ac4e64f3295d7b1a"><td class="memItemLeft" align="right" valign="top"><a id="a8b855aa8df6888b7ac4e64f3295d7b1a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFrameSize</b> (int size)</td></tr>
+<tr class="separator:a8b855aa8df6888b7ac4e64f3295d7b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
 <tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,6 +195,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>bytes_per_second</b> =
 <tr class="memitem:ad43c3812e6d13e0518d9f8b8f463ffcf"><td class="memItemLeft" align="right" valign="top"><a id="ad43c3812e6d13e0518d9f8b8f463ffcf"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>count</b> =0</td></tr>
 <tr class="separator:ad43c3812e6d13e0518d9f8b8f463ffcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad662aa56c1696f09c0ac6b97abafac6d"><td class="memItemLeft" align="right" valign="top"><a id="ad662aa56c1696f09c0ac6b97abafac6d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>frame_size</b> = 0</td></tr>
+<tr class="separator:ad662aa56c1696f09c0ac6b97abafac6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,9 +219,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>max_count</b> =0</td><
 <tr class="memitem:a7c87619d514c8c9627dc94e5e278a530"><td class="memItemLeft" align="right" valign="top"><a id="a7c87619d514c8c9627dc94e5e278a530"></a>
 <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> =nullptr</td></tr>
 <tr class="separator:a7c87619d514c8c9627dc94e5e278a530"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21f00a49646ba9dd1fe7edf1e448a0d6"><td class="memItemLeft" align="right" valign="top"><a id="a21f00a49646ba9dd1fe7edf1e448a0d6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>sample_div</b> = 0</td></tr>
-<tr class="separator:a21f00a49646ba9dd1fe7edf1e448a0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42ff89d25c12a3302f87202d760ac1df"><td class="memItemLeft" align="right" valign="top"><a id="a42ff89d25c12a3302f87202d760ac1df"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>start_time</b></td></tr>
 <tr class="separator:a42ff89d25c12a3302f87202d760ac1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
