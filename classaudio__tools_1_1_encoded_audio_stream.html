@@ -149,6 +149,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memItemLeft" align="right" valign="top"><a id="af654b48544c195ab99fe27e7bc3ed5fe"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
 <tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada93b38d090efbbdb87020aca15f7b37"><td class="memItemLeft" align="right" valign="top"><a id="ada93b38d090efbbdb87020aca15f7b37"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_output.html#ada93b38d090efbbdb87020aca15f7b37">isCheckAvailableForWrite</a> ()</td></tr>
+<tr class="memdesc:ada93b38d090efbbdb87020aca15f7b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is Available for Write check activated ? <br /></td></tr>
+<tr class="separator:ada93b38d090efbbdb87020aca15f7b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_output.html#a9b3baad8c612d81b96e46f84d7e97580">operator bool</a> ()</td></tr>
 <tr class="memdesc:a9b3baad8c612d81b96e46f84d7e97580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if status is active and we still have data to be processed. <br /></td></tr>
@@ -237,8 +241,11 @@ Protected Attributes</h2></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td></tr>
 <tr class="separator:aa66a35e5edf58ce00047afcd1d4f455e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memItemLeft" align="right" valign="top"><a id="a03c996f9fcf0e10baeb3e700be0c409a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</td></tr>
 <tr class="separator:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e9a529d02b39604f694552653b3da11"><td class="memItemLeft" align="right" valign="top"><a id="a8e9a529d02b39604f694552653b3da11"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_available_for_write</b> = false</td></tr>
+<tr class="separator:a8e9a529d02b39604f694552653b3da11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a692c364638763bf5479f9050033cafdb"><td class="memItemLeft" align="right" valign="top"><a id="a692c364638763bf5479f9050033cafdb"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>copy_buffer</b> {DEFAULT_BUFFER_SIZE}</td></tr>
 <tr class="separator:a692c364638763bf5479f9050033cafdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
