@@ -1292,7 +1292,7 @@ $(function() {
 <div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;    uint64_t durationUsEff = micros() - start_time;</div>
 <div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;    uint64_t durationUsToBe = getDelayUs(sum_frames);</div>
 <div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;    int64_t waitUs = durationUsToBe - durationUsEff + cfg.correction_us;</div>
-<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;    LOGI(<span class="stringliteral">&quot;wait us: %ld&quot;</span>, waitUs);</div>
+<div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;    LOGI(<span class="stringliteral">&quot;wait us: %ld&quot;</span>, (<span class="keywordtype">long</span>) waitUs);</div>
 <div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;    <span class="keywordflow">if</span> (waitUs &gt; 0) {</div>
 <div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;      int64_t waitMs = waitUs / 1000;</div>
 <div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;      <span class="keywordflow">if</span> (waitMs &gt; 0) <a class="code" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">delay</a>(waitMs);</div>
