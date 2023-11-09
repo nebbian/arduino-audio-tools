@@ -99,6 +99,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html#a88bb3966d8d45a746454c48d2c3ff655">AnalogAudioStream</a> ()=default</td></tr>
 <tr class="memdesc:a88bb3966d8d45a746454c48d2c3ff655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
 <tr class="separator:a88bb3966d8d45a746454c48d2c3ff655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f3a99558189fe3719ce1f1d2ef3b4c0"><td class="memItemLeft" align="right" valign="top"><a id="a6f3a99558189fe3719ce1f1d2ef3b4c0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html#a6f3a99558189fe3719ce1f1d2ef3b4c0">AnalogAudioStream</a> (<a class="el" href="classaudio__tools_1_1_analog_driver_base.html">AnalogDriverBase</a> &amp;<a class="el" href="classaudio__tools_1_1_analog_audio_stream.html#a5b6458a937995ceb2551157a9cebb7d2">driver</a>)</td></tr>
+<tr class="memdesc:a6f3a99558189fe3719ce1f1d2ef3b4c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to define a custom driver. <br /></td></tr>
+<tr class="separator:a6f3a99558189fe3719ce1f1d2ef3b4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba931b0caac2fb7d903fc6ed41dedf55"><td class="memItemLeft" align="right" valign="top"><a id="aba931b0caac2fb7d903fc6ed41dedf55"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html#aba931b0caac2fb7d903fc6ed41dedf55">~AnalogAudioStream</a> ()</td></tr>
 <tr class="memdesc:aba931b0caac2fb7d903fc6ed41dedf55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
@@ -127,10 +131,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classaudio__tools_1_1_analog_config_e_s_p32.html">AnalogConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html#ac4b262f441e13eb8054c879d9dd57edd">defaultConfig</a> (<a class="el" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> mode=TX_MODE)</td></tr>
 <tr class="memdesc:ac4b262f441e13eb8054c879d9dd57edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the default configuration. <br /></td></tr>
 <tr class="separator:ac4b262f441e13eb8054c879d9dd57edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8bcb0b11d13b5c5bc739c6f759bf8cc"><td class="memItemLeft" align="right" valign="top"><a id="ab8bcb0b11d13b5c5bc739c6f759bf8cc"></a>
-<a class="el" href="namespaceaudio__tools.html#a91ca8c40ca55c1fbc577d0fa03ba527d">AnalogDriver</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html#ab8bcb0b11d13b5c5bc739c6f759bf8cc">driver</a> ()</td></tr>
-<tr class="memdesc:ab8bcb0b11d13b5c5bc739c6f759bf8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the driver. <br /></td></tr>
-<tr class="separator:ab8bcb0b11d13b5c5bc739c6f759bf8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b6458a937995ceb2551157a9cebb7d2"><td class="memItemLeft" align="right" valign="top"><a id="a5b6458a937995ceb2551157a9cebb7d2"></a>
+<a class="el" href="classaudio__tools_1_1_analog_driver_base.html">AnalogDriverBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html#a5b6458a937995ceb2551157a9cebb7d2">driver</a> ()</td></tr>
+<tr class="memdesc:a5b6458a937995ceb2551157a9cebb7d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the driver. <br /></td></tr>
+<tr class="separator:a5b6458a937995ceb2551157a9cebb7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memItemLeft" align="right" valign="top"><a id="a64e9fa75beda50a9e8400ee0d4e61984"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html#a64e9fa75beda50a9e8400ee0d4e61984">end</a> () override</td></tr>
 <tr class="memdesc:a64e9fa75beda50a9e8400ee0d4e61984"><td class="mdescLeft">&#160;</td><td class="mdescRight">stops the I2S and unistalls the analog <br /></td></tr>
@@ -187,12 +191,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td>
 <tr class="memitem:a111b6313dd8036c9fd6f0831812110b1"><td class="memItemLeft" align="right" valign="top"><a id="a111b6313dd8036c9fd6f0831812110b1"></a>
 <a class="el" href="classaudio__tools_1_1_analog_config_e_s_p32.html">AnalogConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>adc_config</b></td></tr>
 <tr class="separator:a111b6313dd8036c9fd6f0831812110b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a881de1cf382152a5a01a12ac3b22de9a"><td class="memItemLeft" align="right" valign="top"><a id="a881de1cf382152a5a01a12ac3b22de9a"></a>
-<a class="el" href="namespaceaudio__tools.html#a91ca8c40ca55c1fbc577d0fa03ba527d">AnalogDriver</a>&#160;</td><td class="memItemRight" valign="bottom"><b>analog</b></td></tr>
-<tr class="separator:a881de1cf382152a5a01a12ac3b22de9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783d9489a42e9289c56a3fd6f4476b45"><td class="memItemLeft" align="right" valign="top"><a id="a783d9489a42e9289c56a3fd6f4476b45"></a>
+<a class="el" href="namespaceaudio__tools.html#a91ca8c40ca55c1fbc577d0fa03ba527d">AnalogDriver</a>&#160;</td><td class="memItemRight" valign="bottom"><b>default_analog</b></td></tr>
+<tr class="separator:a783d9489a42e9289c56a3fd6f4476b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1bcc20b18d0d28bc10f0571156b12f"><td class="memItemLeft" align="right" valign="top"><a id="a4e1bcc20b18d0d28bc10f0571156b12f"></a>
+<a class="el" href="classaudio__tools_1_1_analog_driver_base.html">AnalogDriverBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_analog</b> = &amp;default_analog</td></tr>
+<tr class="separator:a4e1bcc20b18d0d28bc10f0571156b12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
