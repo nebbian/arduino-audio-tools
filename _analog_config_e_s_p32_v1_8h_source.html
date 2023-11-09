@@ -121,48 +121,47 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    uint8_t adc_bit_width = SOC_ADC_DIGI_MAX_BITWIDTH;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    uint32_t sample_rate = SOC_ADC_SAMPLE_FREQ_THRES_LOW;</div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#a3f7103207800e4f0cb1d4c541b8f3408">   61</a></span>&#160;    adc_channel_t <a class="code" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#a3f7103207800e4f0cb1d4c541b8f3408">adc_channels</a>[2] = ADC_CHANNELS;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    uint32_t channels = 2;    </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> bits_per_sample = 16;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#ifdef HAS_ESP32_DAC</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    dac_channel_mask_t dac_mono_channel = DAC_CHANNEL_MASK_CH0;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#af45b2259737bc97bfb6a9ee8739d09ea">   70</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#af45b2259737bc97bfb6a9ee8739d09ea">AnalogConfigESP32V1</a>(<a class="code" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> rxtxMode=TX_MODE) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      sample_rate = 44100;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      adc_bit_width  = 12;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      channels =  2;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      rx_tx_mode = rxtxMode;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">if</span> (rx_tx_mode == RX_MODE) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        LOGI(<span class="stringliteral">&quot;I2S_MODE_ADC_BUILT_IN&quot;</span>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        LOGI(<span class="stringliteral">&quot;I2S_MODE_DAC_BUILT_IN&quot;</span>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#afabfeccd924838e872cc4ede1733c5e4">   83</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#afabfeccd924838e872cc4ede1733c5e4">AnalogConfigESP32V1</a>(<span class="keyword">const</span> <a class="code" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html">AnalogConfigESP32V1</a> &amp;cfg) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> logInfo() {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      AudioInfo::logInfo();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">if</span> (rx_tx_mode == TX_MODE){</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        LOGI(<span class="stringliteral">&quot;analog left output pin: %d&quot;</span>, 25);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        LOGI(<span class="stringliteral">&quot;analog right output pin: %d&quot;</span>, 26);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      } </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#ifdef HAS_ESP32_DAC</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    dac_channel_mask_t dac_mono_channel = DAC_CHANNEL_MASK_CH0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#af45b2259737bc97bfb6a9ee8739d09ea">   68</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#af45b2259737bc97bfb6a9ee8739d09ea">AnalogConfigESP32V1</a>(<a class="code" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> rxtxMode=TX_MODE) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      sample_rate = 44100;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      adc_bit_width  = 12;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> =  2;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      rx_tx_mode = rxtxMode;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">if</span> (rx_tx_mode == RX_MODE) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        LOGI(<span class="stringliteral">&quot;I2S_MODE_ADC_BUILT_IN&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        LOGI(<span class="stringliteral">&quot;I2S_MODE_DAC_BUILT_IN&quot;</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#afabfeccd924838e872cc4ede1733c5e4">   81</a></span>&#160;    <a class="code" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#afabfeccd924838e872cc4ede1733c5e4">AnalogConfigESP32V1</a>(<span class="keyword">const</span> <a class="code" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html">AnalogConfigESP32V1</a> &amp;cfg) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> logInfo() {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      AudioInfo::logInfo();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordflow">if</span> (rx_tx_mode == TX_MODE){</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        LOGI(<span class="stringliteral">&quot;analog left output pin: %d&quot;</span>, 25);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        LOGI(<span class="stringliteral">&quot;analog right output pin: %d&quot;</span>, 26);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      } </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">using</span> AnalogConfig = AnalogConfigESP32V1;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">using</span> AnalogConfig = AnalogConfigESP32V1;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;} <span class="comment">// ns</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;} <span class="comment">// ns</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_analog_config_e_s_p32_v1_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html">audio_tools::AnalogConfigESP32V1</a></div><div class="ttdoc">ESP32 specific configuration for i2s input via adc using the adc_continuous API.</div><div class="ttdef"><b>Definition:</b> AnalogConfigESP32V1.h:42</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_analog_config_e_s_p32_v1_html_a3f7103207800e4f0cb1d4c541b8f3408"><div class="ttname"><a href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#a3f7103207800e4f0cb1d4c541b8f3408">audio_tools::AnalogConfigESP32V1::adc_channels</a></div><div class="ttdeci">adc_channel_t adc_channels[2]</div><div class="ttdoc">ESP32: ADC_CHANNEL_6, ADC_CHANNEL_7; others ADC_CHANNEL_2, ADC_CHANNEL_3.</div><div class="ttdef"><b>Definition:</b> AnalogConfigESP32V1.h:61</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_analog_config_e_s_p32_v1_html_af45b2259737bc97bfb6a9ee8739d09ea"><div class="ttname"><a href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#af45b2259737bc97bfb6a9ee8739d09ea">audio_tools::AnalogConfigESP32V1::AnalogConfigESP32V1</a></div><div class="ttdeci">AnalogConfigESP32V1(RxTxMode rxtxMode=TX_MODE)</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> AnalogConfigESP32V1.h:70</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_analog_config_e_s_p32_v1_html_af45b2259737bc97bfb6a9ee8739d09ea"><div class="ttname"><a href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#af45b2259737bc97bfb6a9ee8739d09ea">audio_tools::AnalogConfigESP32V1::AnalogConfigESP32V1</a></div><div class="ttdeci">AnalogConfigESP32V1(RxTxMode rxtxMode=TX_MODE)</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> AnalogConfigESP32V1.h:68</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_analog_config_e_s_p32_v1_html_afabfeccd924838e872cc4ede1733c5e4"><div class="ttname"><a href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#afabfeccd924838e872cc4ede1733c5e4">audio_tools::AnalogConfigESP32V1::AnalogConfigESP32V1</a></div><div class="ttdeci">AnalogConfigESP32V1(const AnalogConfigESP32V1 &amp;cfg)=default</div><div class="ttdoc">Copy constructor.</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_analog_driver_e_s_p32_html"><div class="ttname"><a href="classaudio__tools_1_1_analog_driver_e_s_p32.html">audio_tools::AnalogDriverESP32</a></div><div class="ttdoc">Please use AnalogAudioStream: A very fast ADC and DAC using the ESP32 I2S interface.</div><div class="ttdef"><b>Definition:</b> AnalogAudioESP32.h:35</div></div>
 <div class="ttc" id="agroup__basic_html_ga8cbd91a8bac9b5ab425112be1620eb49"><div class="ttname"><a href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">audio_tools::RxTxMode</a></div><div class="ttdeci">RxTxMode</div><div class="ttdoc">Audio Source (TX_MODE) or Audio Sink (RX_MODE). RXTX_MODE is Source and Sink at the same time!</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:24</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
