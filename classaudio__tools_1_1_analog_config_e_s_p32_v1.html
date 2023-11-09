@@ -126,26 +126,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a2b477c5f7f28d9518a3afc1f36f7da45"><td class="memItemLeft" align="right" valign="top"><a id="a2b477c5f7f28d9518a3afc1f36f7da45"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>adc_attenuation</b> = ADC_ATTEN_DB_0</td></tr>
-<tr class="separator:a2b477c5f7f28d9518a3afc1f36f7da45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af565657793bc689353a4a8955f470ec8"><td class="memItemLeft" align="right" valign="top"><a id="af565657793bc689353a4a8955f470ec8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>adc_bit_width</b> = SOC_ADC_DIGI_MAX_BITWIDTH</td></tr>
-<tr class="separator:af565657793bc689353a4a8955f470ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62bdd7cfbf7f5c4ea2ae321b8b208657"><td class="memItemLeft" align="right" valign="top"><a id="a62bdd7cfbf7f5c4ea2ae321b8b208657"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_attenuation</b> = ADC_ATTEN_DB_0</td></tr>
+<tr class="separator:a62bdd7cfbf7f5c4ea2ae321b8b208657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2192c3984245440841d0b8b8464c9baa"><td class="memItemLeft" align="right" valign="top"><a id="a2192c3984245440841d0b8b8464c9baa"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_bit_width</b> = SOC_ADC_DIGI_MAX_BITWIDTH</td></tr>
+<tr class="separator:a2192c3984245440841d0b8b8464c9baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f7103207800e4f0cb1d4c541b8f3408"><td class="memItemLeft" align="right" valign="top"><a id="a3f7103207800e4f0cb1d4c541b8f3408"></a>
 adc_channel_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_config_e_s_p32_v1.html#a3f7103207800e4f0cb1d4c541b8f3408">adc_channels</a> [2] = ADC_CHANNELS</td></tr>
 <tr class="memdesc:a3f7103207800e4f0cb1d4c541b8f3408"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32: ADC_CHANNEL_6, ADC_CHANNEL_7; others ADC_CHANNEL_2, ADC_CHANNEL_3. <br /></td></tr>
 <tr class="separator:a3f7103207800e4f0cb1d4c541b8f3408"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3356745adda33d6a260182486439d442"><td class="memItemLeft" align="right" valign="top"><a id="a3356745adda33d6a260182486439d442"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>adc_conversion_mode</b> = ADC_CONV_MODE</td></tr>
-<tr class="separator:a3356745adda33d6a260182486439d442"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a389e07a3f4ec2f441350e802ebe27d1b"><td class="memItemLeft" align="right" valign="top"><a id="a389e07a3f4ec2f441350e802ebe27d1b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>adc_output_type</b> = ADC_OUTPUT_TYPE</td></tr>
-<tr class="separator:a389e07a3f4ec2f441350e802ebe27d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a363f2e4afdd2b47fee76810b7dc957cb"><td class="memItemLeft" align="right" valign="top"><a id="a363f2e4afdd2b47fee76810b7dc957cb"></a>
+adc_digi_convert_mode_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_conversion_mode</b> = ADC_CONV_MODE</td></tr>
+<tr class="separator:a363f2e4afdd2b47fee76810b7dc957cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a86198d1293d24f28ae58e23a30a65"><td class="memItemLeft" align="right" valign="top"><a id="ad5a86198d1293d24f28ae58e23a30a65"></a>
+adc_digi_output_format_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_output_type</b> = ADC_OUTPUT_TYPE</td></tr>
+<tr class="separator:ad5a86198d1293d24f28ae58e23a30a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ae049b225e845689c9bfab94ebbc697"><td class="memItemLeft" align="right" valign="top"><a id="a2ae049b225e845689c9bfab94ebbc697"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = DEFAULT_BITS_PER_SAMPLE</td></tr>
-<tr class="memdesc:a2ae049b225e845689c9bfab94ebbc697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bits per sample (int16_t = 16 bits) <br  />
- <br /></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bits_per_sample</b> = 16</td></tr>
 <tr class="separator:a2ae049b225e845689c9bfab94ebbc697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1604207c5fe93cc8e5d75e1e1ef1ee46"><td class="memItemLeft" align="right" valign="top"><a id="a1604207c5fe93cc8e5d75e1e1ef1ee46"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_count</b> = ANALOG_BUFFER_COUNT</td></tr>
@@ -153,10 +151,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_count</b> = ANA
 <tr class="memitem:af22ff4ab7a026e6c3b4b08eafb2df027"><td class="memItemLeft" align="right" valign="top"><a id="af22ff4ab7a026e6c3b4b08eafb2df027"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_size</b> = ANALOG_BUFFER_SIZE</td></tr>
 <tr class="separator:af22ff4ab7a026e6c3b4b08eafb2df027"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a178795099d0608972755dfef8d8367e3"><td class="memItemLeft" align="right" valign="top"><a id="a178795099d0608972755dfef8d8367e3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = DEFAULT_CHANNELS</td></tr>
-<tr class="memdesc:a178795099d0608972755dfef8d8367e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of channels: 2=stereo, 1=mono. <br /></td></tr>
-<tr class="separator:a178795099d0608972755dfef8d8367e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1737d218e1dba038f181b31e0c529241"><td class="memItemLeft" align="right" valign="top"><a id="a1737d218e1dba038f181b31e0c529241"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b> = 2</td></tr>
+<tr class="separator:a1737d218e1dba038f181b31e0c529241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e7fd60dc7789d4e39a7edaaf028bba5"><td class="memItemLeft" align="right" valign="top"><a id="a3e7fd60dc7789d4e39a7edaaf028bba5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_auto_center_read</b> = true</td></tr>
 <tr class="separator:a3e7fd60dc7789d4e39a7edaaf028bba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,10 +163,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_blocking_write</b>
 <tr class="memitem:a31a454d24fb1f4d74779a0ff668d54cc"><td class="memItemLeft" align="right" valign="top"><a id="a31a454d24fb1f4d74779a0ff668d54cc"></a>
 <a class="el" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rx_tx_mode</b></td></tr>
 <tr class="separator:a31a454d24fb1f4d74779a0ff668d54cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a527325650d66abd9626499785b3bafd2"><td class="memItemLeft" align="right" valign="top"><a id="a527325650d66abd9626499785b3bafd2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = DEFAULT_SAMPLE_RATE</td></tr>
-<tr class="memdesc:a527325650d66abd9626499785b3bafd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample Rate: e.g 44100. <br /></td></tr>
-<tr class="separator:a527325650d66abd9626499785b3bafd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fba55d9442e7dba4623825cd737e520"><td class="memItemLeft" align="right" valign="top"><a id="a2fba55d9442e7dba4623825cd737e520"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>sample_rate</b> = SOC_ADC_SAMPLE_FREQ_THRES_LOW</td></tr>
+<tr class="separator:a2fba55d9442e7dba4623825cd737e520"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95b999db5e77bee2c8ceeaf97d52669a"><td class="memItemLeft" align="right" valign="top"><a id="a95b999db5e77bee2c8ceeaf97d52669a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_apll</b> = false</td></tr>
 <tr class="separator:a95b999db5e77bee2c8ceeaf97d52669a"><td class="memSeparator" colspan="2">&#160;</td></tr>
