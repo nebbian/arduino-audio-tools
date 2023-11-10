@@ -78,7 +78,7 @@ $(function() {
 <p>Base class for all Audio Streams. It support the boolean operator to test if the object is ready with data.  
  <a href="classaudio__tools_1_1_audio_stream.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_audio_streams_8h_source.html">AudioStreams.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_audio_tools_2_audio_streams_8h_source.html">AudioStreams.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for AudioStream:</div>
 <div class="dyncontent">
@@ -88,67 +88,91 @@ Inheritance diagram for AudioStream:</div>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,213,80"/>
 <area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="223,56,436,80"/>
 <area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="446,56,659,80"/>
+<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="669,56,882,80"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="892,56,1105,80"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="1115,56,1328,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,213,24"/>
-<area href="classaudio__tools_1_1_file_loop_t.html" alt="FileLoopT&lt; File &gt;" shape="rect" coords="446,168,659,192"/>
-<area href="classaudio__tools_1_1_filtered_stream.html" alt="FilteredStream&lt; T, float &gt;" shape="rect" coords="446,224,659,248"/>
-<area href="classaudio__tools_1_1_generated_sound_stream.html" alt="GeneratedSoundStream&lt; int16_t &gt;" shape="rect" coords="446,280,659,304"/>
-<area href="classaudio__tools_1_1_queue_stream.html" alt="QueueStream&lt; uint8_t &gt;" shape="rect" coords="446,336,659,360"/>
-<area href="classaudio__tools_1_1_a2_d_p_stream.html" title="Stream support for A2DP: begin(TX_MODE) uses a2dp_source - begin(RX_MODE) a a2dp_sink The data is in ..." alt="A2DPStream" shape="rect" coords="446,392,659,416"/>
-<area href="classaudio__tools_1_1_abstract_u_r_l_stream.html" title="Abstract Base class for all URLStream implementations." alt="AbstractURLStream" shape="rect" coords="446,448,659,472"/>
-<area href="classaudio__tools_1_1_adapter_audio_output_to_audio_stream.html" title="Wrapper which converts a AudioStream to a AudioOutput." alt="AdapterAudioOutputToAudioStream" shape="rect" coords="446,504,659,528"/>
-<area href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ..." alt="AnalogAudioStream" shape="rect" coords="446,560,659,584"/>
-<area href="classaudio__tools_1_1_analog_driver_e_s_p32_v1_1_1_i_o16_bit.html" title="writes the int16_t data to the DAC" alt="AnalogDriverESP32V1::IO16Bit" shape="rect" coords="446,616,659,640"/>
-<area href="classaudio__tools_1_1_audio_b_l_e_stream.html" title="Transmit and receive data via BLE using a Serial API. The following additional experimental features ..." alt="AudioBLEStream" shape="rect" coords="446,672,659,696"/>
-<area href="classaudio__tools_1_1_audio_effect_stream.html" title="EffectsStream supporting variable bits_per_sample. This class is only available when __cplusplus &gt;= 2..." alt="AudioEffectStream" shape="rect" coords="446,728,659,752"/>
-<area href="classaudio__tools_1_1_audio_effect_stream_t.html" title="EffectsStreamT: the template class describes an input or output stream to which one or multiple effec..." alt="AudioEffectStreamT&lt; T &gt;" shape="rect" coords="446,784,659,808"/>
-<area href="classaudio__tools_1_1_audio_kit_stream.html" title="AudioKit Stream which uses the https://github.com/pschatzmann/arduino-audiokit library." alt="AudioKitStream" shape="rect" coords="446,840,659,864"/>
-<area href="classaudio__tools_1_1_audio_m_p34_d_t05.html" title="MP34DT05 Microphone of Nano BLE Sense. We provide a proper Stream implementation. See https://github...." alt="AudioMP34DT05" shape="rect" coords="446,896,659,920"/>
-<area href="classaudio__tools_1_1_audio_stream_wrapper.html" title="To be used to support implementations where the readBytes is not virtual." alt="AudioStreamWrapper" shape="rect" coords="446,952,659,976"/>
-<area href="classaudio__tools_1_1_audio_sync_reader.html" title="Receving Audio Data over the wire and requesting for more data when done to synchronize the processin..." alt="AudioSyncReader" shape="rect" coords="446,1008,659,1032"/>
-<area href="classaudio__tools_1_1_buffered_stream.html" title="The Arduino Stream supports operations on single characters. This is usually not the best way to push..." alt="BufferedStream" shape="rect" coords="446,1064,659,1088"/>
-<area href="classaudio__tools_1_1_buffered_task_stream.html" title="A FreeRTOS task is filling the buffer from the indicated stream. Only to be used on the ESP32." alt="BufferedTaskStream" shape="rect" coords="446,1120,659,1144"/>
-<area href="classaudio__tools_1_1_callback_stream.html" title="CallbackStream: A Stream that allows to register callback methods for accessing and providing data." alt="CallbackStream" shape="rect" coords="446,1176,659,1200"/>
-<area href="classaudio__tools_1_1_cat_stream.html" title="Provides data from a concatenation of Streams. Please note that the provided Streams can be played on..." alt="CatStream" shape="rect" coords="446,1232,659,1256"/>
-<area href="classaudio__tools_1_1_converter_stream.html" title="Both the data of the read or write operations will be converted with the help of the indicated conver..." alt="ConverterStream&lt; T &gt;" shape="rect" coords="446,1288,659,1312"/>
-<area href="classaudio__tools_1_1_decimation_stream_ext.html" title="Deciates an sample stream by the indicated factor: Decimation counts the number of set bits...." alt="DecimationStreamExt&lt; T &gt;" shape="rect" coords="446,1344,659,1368"/>
-<area href="classaudio__tools_1_1_dynamic_memory_stream.html" title="MemoryStream which is written and read using the internal RAM. For each write the data is allocated o..." alt="DynamicMemoryStream" shape="rect" coords="446,1400,659,1424"/>
-<area href="classaudio__tools_1_1_e_s_p3288_audio_output.html" title="Stream Adapter for ESP8288-Audio AudioOutput." alt="ESP3288AudioOutput" shape="rect" coords="446,1456,659,1480"/>
-<area href="classaudio__tools_1_1_e_s_p_now_stream.html" title="ESPNow as Arduino Stream." alt="ESPNowStream" shape="rect" coords="446,1512,659,1536"/>
-<area href="classaudio__tools_1_1_encoded_audio_output.html" title="A more natural Print class to process encoded data (aac, wav, mp3...). Just define the output and the..." alt="EncodedAudioOutput" shape="rect" coords="446,1568,659,1592"/>
-<area href="classaudio__tools_1_1_equilizer3_bands.html" title="3 Band Equilizer inspired from https://www.musicdsp.org/en/latest/Filters/236-3-band-equaliser...." alt="Equilizer3Bands" shape="rect" coords="446,1624,659,1648"/>
-<area href="classaudio__tools_1_1_fade_stream.html" title="Stream which can be used to manage fade in and fade out. Before you read or write data you need to ca..." alt="FadeStream" shape="rect" coords="446,1680,659,1704"/>
-<area href="classaudio__tools_1_1_faust_stream.html" title="Integration into Faust DSP see https://faust.grame.fr/ To generate code from faust,..." alt="FaustStream&lt; DSP &gt;" shape="rect" coords="446,1736,659,1760"/>
-<area href="classaudio__tools_1_1_file_loop_t.html" title="A simple class which implements a automatic looping file. In order to support different file implemen..." alt="FileLoopT&lt; FileType &gt;" shape="rect" coords="446,1792,659,1816"/>
-<area href="classaudio__tools_1_1_filtered_stream.html" title="Stream to which we can apply Filters for each channel. The filter might change the result size!" alt="FilteredStream&lt; T, TF &gt;" shape="rect" coords="446,1848,659,1872"/>
-<area href="classaudio__tools_1_1_frequncy_auto_correlation_stream.html" title="Determine Frequency using Audio Correlation. based on https://github.com/akellyirl/AutoCorr_Freq_dete..." alt="FrequncyAutoCorrelationStream" shape="rect" coords="446,1904,659,1928"/>
-<area href="classaudio__tools_1_1_frequncy_zero_crossing_stream.html" title="Determine Frequency using upward 0 crossings." alt="FrequncyZeroCrossingStream" shape="rect" coords="446,1960,659,1984"/>
-<area href="classaudio__tools_1_1_generated_sound_stream.html" title="Source for reading generated tones. Please note." alt="GeneratedSoundStream&lt; T &gt;" shape="rect" coords="446,2016,659,2040"/>
-<area href="classaudio__tools_1_1_h_l_s_stream.html" title="HTTP Live Streaming using HLS: The result is a MPEG-TS data stream that must be decoded e...." alt="HLSStream" shape="rect" coords="446,2072,659,2096"/>
-<area href="classaudio__tools_1_1_i2_s_bit_bang.html" title="I2S emulated with the help of the Arduion SPI api." alt="I2SBitBang" shape="rect" coords="446,2128,659,2152"/>
-<area href="classaudio__tools_1_1_i2_s_stream.html" title="We support the Stream interface for the I2S access. In addition we allow a separate mute pin which mi..." alt="I2SStream" shape="rect" coords="446,2184,659,2208"/>
-<area href="classaudio__tools_1_1_input_merge.html" title="Merges multiple input channels. The input must be mono! So if you provide 2 mono channels you get a s..." alt="InputMerge&lt; T &gt;" shape="rect" coords="446,2240,659,2264"/>
-<area href="classaudio__tools_1_1_input_mixer.html" title="MixerStream is mixing the input from Multiple Input Streams. All streams must have the same audo form..." alt="InputMixer&lt; T &gt;" shape="rect" coords="446,2296,659,2320"/>
-<area href="classaudio__tools_1_1_jupyter_audio_t.html" title="Output to Jupyter. We write the data just to a file from where we can load the data again for differe..." alt="JupyterAudioT&lt; T &gt;" shape="rect" coords="446,2352,659,2376"/>
-<area href="classaudio__tools_1_1_measuring_stream.html" title="Class which measures the truput." alt="MeasuringStream" shape="rect" coords="446,2408,659,2432"/>
-<area href="classaudio__tools_1_1_memory_stream.html" title="A simple Stream implementation which is backed by allocated memory." alt="MemoryStream" shape="rect" coords="446,2464,659,2488"/>
-<area href="classaudio__tools_1_1_mini_audio_stream.html" title="MiniAudio: https://miniaud.io/." alt="MiniAudioStream" shape="rect" coords="446,2520,659,2544"/>
-<area href="classaudio__tools_1_1_mozzi_stream.html" title="We use the output functionality of Mozzi to output audio data. We expect the data as array of int16_t..." alt="MozziStream" shape="rect" coords="446,2576,659,2600"/>
-<area href="classaudio__tools_1_1_null_stream.html" title="The Arduino Stream which provides silence and simulates a null device when used as audio target or au..." alt="NullStream" shape="rect" coords="446,2632,659,2656"/>
-<area href="classaudio__tools_1_1_p_d_m_mono_stream_t.html" title="Applies low pass filter to a decimated pdm signal to convert it to pcm." alt="PDMMonoStreamT&lt; T &gt;" shape="rect" coords="446,2688,659,2712"/>
-<area href="classaudio__tools_1_1_port_audio_stream.html" title="Arduino Audio Stream using PortAudio." alt="PortAudioStream" shape="rect" coords="446,2744,659,2768"/>
-<area href="classaudio__tools_1_1_progress_stream.html" title="Generic calss to measure the the total bytes which were processed in order to calculate the progress ..." alt="ProgressStream" shape="rect" coords="446,2800,659,2824"/>
-<area href="classaudio__tools_1_1_queue_stream.html" title="AudioStream class which stores the data in a temporary queue buffer. The queue can be consumed e...." alt="QueueStream&lt; T &gt;" shape="rect" coords="446,2856,659,2880"/>
-<area href="classaudio__tools_1_1_reformat_base_stream.html" title="Base class for chained converting streams." alt="ReformatBaseStream" shape="rect" coords="446,2912,659,2936"/>
-<area href="classaudio__tools_1_1_ring_buffer_stream.html" title="A Stream backed by a Ringbuffer. We can write to the end and read from the beginning of the stream." alt="RingBufferStream" shape="rect" coords="446,2968,659,2992"/>
-<area href="classaudio__tools_1_1_s_p_d_i_f_output.html" title="Output as 16 bit stereo SPDIF on the I2S data output pin." alt="SPDIFOutput" shape="rect" coords="446,3024,659,3048"/>
-<area href="classaudio__tools_1_1_stdio_stream.html" alt="StdioStream" shape="rect" coords="446,3080,659,3104"/>
-<area href="classaudio__tools_1_1_tf_lite_audio_stream_base.html" title="Astract TfLiteAudioStream to provide access to TfLiteAudioStream for Reader and Writers." alt="TfLiteAudioStreamBase" shape="rect" coords="446,3136,659,3160"/>
-<area href="classaudio__tools_1_1_throttle.html" title="Throttle the sending or receiving of the audio data to limit it to the indicated sample rate." alt="Throttle" shape="rect" coords="446,3192,659,3216"/>
-<area href="classaudio__tools_1_1_timed_stream.html" title="AudioStream class that can define a start and (an optional) stop time Usually it is used to wrap an A..." alt="TimedStream" shape="rect" coords="446,3248,659,3272"/>
-<area href="classaudio__tools_1_1_v_b_a_n_stream.html" title="VBAN Audio Source and Sink for the ESP32. For further details please see https://vb-audio...." alt="VBANStream" shape="rect" coords="446,3304,659,3328"/>
-<area href="classaudio__tools_1_1_v_s1053_stream.html" title="VS1053 Output Interface which processes PCM data by default. If you want to write encoded data set is..." alt="VS1053Stream" shape="rect" coords="446,3360,659,3384"/>
-<area href="classaudio__tools_1_1_volume_stream.html" title="Adjust the volume of the related input or output: To work properly the class needs to know the bits p..." alt="VolumeStream" shape="rect" coords="446,3416,659,3440"/>
-<area href="classaudio__tools_1_1_w_m8960_stream.html" title="Stream for reading and writing audio data using the WM8960 Codec Chip You need to install https://git..." alt="WM8960Stream" shape="rect" coords="446,3472,659,3496"/>
+<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="669,0,882,24"/>
+<area href="classaudio__tools_1_1_file_loop_t.html" alt="FileLoopT&lt; File &gt;" shape="rect" coords="780,168,993,192"/>
+<area href="classaudio__tools_1_1_filtered_stream.html" alt="FilteredStream&lt; T, float &gt;" shape="rect" coords="780,224,993,248"/>
+<area href="classaudio__tools_1_1_filtered_stream.html" alt="FilteredStream&lt; T, float &gt;" shape="rect" coords="780,280,993,304"/>
+<area href="classaudio__tools_1_1_generated_sound_stream.html" alt="GeneratedSoundStream&lt; int16_t &gt;" shape="rect" coords="780,336,993,360"/>
+<area href="classaudio__tools_1_1_generated_sound_stream.html" alt="GeneratedSoundStream&lt; int16_t &gt;" shape="rect" coords="780,392,993,416"/>
+<area href="classaudio__tools_1_1_queue_stream.html" alt="QueueStream&lt; uint8_t &gt;" shape="rect" coords="780,448,993,472"/>
+<area href="classaudio__tools_1_1_queue_stream.html" alt="QueueStream&lt; uint8_t &gt;" shape="rect" coords="780,504,993,528"/>
+<area href="classaudio__tools_1_1_a2_d_p_stream.html" title="Stream support for A2DP: begin(TX_MODE) uses a2dp_source - begin(RX_MODE) a a2dp_sink The data is in ..." alt="A2DPStream" shape="rect" coords="780,560,993,584"/>
+<area href="classaudio__tools_1_1_abstract_u_r_l_stream.html" title="Abstract Base class for all URLStream implementations." alt="AbstractURLStream" shape="rect" coords="780,616,993,640"/>
+<area href="classaudio__tools_1_1_adapter_audio_output_to_audio_stream.html" title="Wrapper which converts a AudioStream to a AudioOutput." alt="AdapterAudioOutputToAudioStream" shape="rect" coords="780,672,993,696"/>
+<area href="classaudio__tools_1_1_analog_audio_stream.html" title="ESP32: A very fast ADC and DAC using the ESP32 I2S interface. For all other architectures we support ..." alt="AnalogAudioStream" shape="rect" coords="780,728,993,752"/>
+<area href="classaudio__tools_1_1_analog_driver_e_s_p32_v1_1_1_i_o16_bit.html" title="writes the int16_t data to the DAC" alt="AnalogDriverESP32V1::IO16Bit" shape="rect" coords="780,784,993,808"/>
+<area href="classaudio__tools_1_1_audio_b_l_e_stream.html" title="Transmit and receive data via BLE using a Serial API. The following additional experimental features ..." alt="AudioBLEStream" shape="rect" coords="780,840,993,864"/>
+<area href="classaudio__tools_1_1_audio_effect_stream.html" title="EffectsStream supporting variable bits_per_sample. This class is only available when __cplusplus &gt;= 2..." alt="AudioEffectStream" shape="rect" coords="780,896,993,920"/>
+<area href="classaudio__tools_1_1_audio_effect_stream_t.html" title="EffectsStreamT: the template class describes an input or output stream to which one or multiple effec..." alt="AudioEffectStreamT&lt; T &gt;" shape="rect" coords="780,952,993,976"/>
+<area href="classaudio__tools_1_1_audio_kit_stream.html" title="AudioKit Stream which uses the https://github.com/pschatzmann/arduino-audiokit library." alt="AudioKitStream" shape="rect" coords="780,1008,993,1032"/>
+<area href="classaudio__tools_1_1_audio_m_p34_d_t05.html" title="MP34DT05 Microphone of Nano BLE Sense. We provide a proper Stream implementation. See https://github...." alt="AudioMP34DT05" shape="rect" coords="780,1064,993,1088"/>
+<area href="classaudio__tools_1_1_audio_stream_wrapper.html" title="To be used to support implementations where the readBytes is not virtual." alt="AudioStreamWrapper" shape="rect" coords="780,1120,993,1144"/>
+<area href="classaudio__tools_1_1_audio_stream_wrapper.html" title="To be used to support implementations where the readBytes is not virtual." alt="AudioStreamWrapper" shape="rect" coords="780,1176,993,1200"/>
+<area href="classaudio__tools_1_1_audio_sync_reader.html" title="Receving Audio Data over the wire and requesting for more data when done to synchronize the processin..." alt="AudioSyncReader" shape="rect" coords="780,1232,993,1256"/>
+<area href="classaudio__tools_1_1_buffered_stream.html" title="The Arduino Stream supports operations on single characters. This is usually not the best way to push..." alt="BufferedStream" shape="rect" coords="780,1288,993,1312"/>
+<area href="classaudio__tools_1_1_buffered_stream.html" title="The Arduino Stream supports operations on single characters. This is usually not the best way to push..." alt="BufferedStream" shape="rect" coords="780,1344,993,1368"/>
+<area href="classaudio__tools_1_1_buffered_task_stream.html" title="A FreeRTOS task is filling the buffer from the indicated stream. Only to be used on the ESP32." alt="BufferedTaskStream" shape="rect" coords="780,1400,993,1424"/>
+<area href="classaudio__tools_1_1_callback_stream.html" title="CallbackStream: A Stream that allows to register callback methods for accessing and providing data." alt="CallbackStream" shape="rect" coords="780,1456,993,1480"/>
+<area href="classaudio__tools_1_1_callback_stream.html" title="CallbackStream: A Stream that allows to register callback methods for accessing and providing data." alt="CallbackStream" shape="rect" coords="780,1512,993,1536"/>
+<area href="classaudio__tools_1_1_cat_stream.html" title="Provides data from a concatenation of Streams. Please note that the provided Streams can be played on..." alt="CatStream" shape="rect" coords="780,1568,993,1592"/>
+<area href="classaudio__tools_1_1_cat_stream.html" title="Provides data from a concatenation of Streams. Please note that the provided Streams can be played on..." alt="CatStream" shape="rect" coords="780,1624,993,1648"/>
+<area href="classaudio__tools_1_1_converter_stream.html" title="Both the data of the read or write operations will be converted with the help of the indicated conver..." alt="ConverterStream&lt; T &gt;" shape="rect" coords="780,1680,993,1704"/>
+<area href="classaudio__tools_1_1_converter_stream.html" title="Both the data of the read or write operations will be converted with the help of the indicated conver..." alt="ConverterStream&lt; T &gt;" shape="rect" coords="780,1736,993,1760"/>
+<area href="classaudio__tools_1_1_decimation_stream_ext.html" title="Deciates an sample stream by the indicated factor: Decimation counts the number of set bits...." alt="DecimationStreamExt&lt; T &gt;" shape="rect" coords="780,1792,993,1816"/>
+<area href="classaudio__tools_1_1_dynamic_memory_stream.html" title="MemoryStream which is written and read using the internal RAM. For each write the data is allocated o..." alt="DynamicMemoryStream" shape="rect" coords="780,1848,993,1872"/>
+<area href="classaudio__tools_1_1_dynamic_memory_stream.html" title="MemoryStream which is written and read using the internal RAM. For each write the data is allocated o..." alt="DynamicMemoryStream" shape="rect" coords="780,1904,993,1928"/>
+<area href="classaudio__tools_1_1_e_s_p3288_audio_output.html" title="Stream Adapter for ESP8288-Audio AudioOutput." alt="ESP3288AudioOutput" shape="rect" coords="780,1960,993,1984"/>
+<area href="classaudio__tools_1_1_e_s_p_now_stream.html" title="ESPNow as Arduino Stream." alt="ESPNowStream" shape="rect" coords="780,2016,993,2040"/>
+<area href="classaudio__tools_1_1_encoded_audio_output.html" title="A more natural Print class to process encoded data (aac, wav, mp3...). Just define the output and the..." alt="EncodedAudioOutput" shape="rect" coords="780,2072,993,2096"/>
+<area href="classaudio__tools_1_1_equilizer3_bands.html" title="3 Band Equilizer inspired from https://www.musicdsp.org/en/latest/Filters/236-3-band-equaliser...." alt="Equilizer3Bands" shape="rect" coords="780,2128,993,2152"/>
+<area href="classaudio__tools_1_1_fade_stream.html" title="Stream which can be used to manage fade in and fade out. Before you read or write data you need to ca..." alt="FadeStream" shape="rect" coords="780,2184,993,2208"/>
+<area href="classaudio__tools_1_1_faust_stream.html" title="Integration into Faust DSP see https://faust.grame.fr/ To generate code from faust,..." alt="FaustStream&lt; DSP &gt;" shape="rect" coords="780,2240,993,2264"/>
+<area href="classaudio__tools_1_1_file_loop_t.html" title="A simple class which implements a automatic looping file. In order to support different file implemen..." alt="FileLoopT&lt; FileType &gt;" shape="rect" coords="780,2296,993,2320"/>
+<area href="classaudio__tools_1_1_filtered_stream.html" title="Stream to which we can apply Filters for each channel. The filter might change the result size!" alt="FilteredStream&lt; T, TF &gt;" shape="rect" coords="780,2352,993,2376"/>
+<area href="classaudio__tools_1_1_filtered_stream.html" title="Stream to which we can apply Filters for each channel. The filter might change the result size!" alt="FilteredStream&lt; T, TF &gt;" shape="rect" coords="780,2408,993,2432"/>
+<area href="classaudio__tools_1_1_frequncy_auto_correlation_stream.html" title="Determine Frequency using Audio Correlation. based on https://github.com/akellyirl/AutoCorr_Freq_dete..." alt="FrequncyAutoCorrelationStream" shape="rect" coords="780,2464,993,2488"/>
+<area href="classaudio__tools_1_1_frequncy_zero_crossing_stream.html" title="Determine Frequency using upward 0 crossings." alt="FrequncyZeroCrossingStream" shape="rect" coords="780,2520,993,2544"/>
+<area href="classaudio__tools_1_1_generated_sound_stream.html" title="Source for reading generated tones. Please note." alt="GeneratedSoundStream&lt; T &gt;" shape="rect" coords="780,2576,993,2600"/>
+<area href="classaudio__tools_1_1_generated_sound_stream.html" title="Source for reading generated tones. Please note." alt="GeneratedSoundStream&lt; T &gt;" shape="rect" coords="780,2632,993,2656"/>
+<area href="classaudio__tools_1_1_h_l_s_stream.html" title="HTTP Live Streaming using HLS: The result is a MPEG-TS data stream that must be decoded e...." alt="HLSStream" shape="rect" coords="780,2688,993,2712"/>
+<area href="classaudio__tools_1_1_i2_s_bit_bang.html" title="I2S emulated with the help of the Arduion SPI api." alt="I2SBitBang" shape="rect" coords="780,2744,993,2768"/>
+<area href="classaudio__tools_1_1_i2_s_stream.html" title="We support the Stream interface for the I2S access. In addition we allow a separate mute pin which mi..." alt="I2SStream" shape="rect" coords="780,2800,993,2824"/>
+<area href="classaudio__tools_1_1_input_merge.html" title="Merges multiple input channels. The input must be mono! So if you provide 2 mono channels you get a s..." alt="InputMerge&lt; T &gt;" shape="rect" coords="780,2856,993,2880"/>
+<area href="classaudio__tools_1_1_input_merge.html" title="Merges multiple input channels. The input must be mono! So if you provide 2 mono channels you get a s..." alt="InputMerge&lt; T &gt;" shape="rect" coords="780,2912,993,2936"/>
+<area href="classaudio__tools_1_1_input_mixer.html" title="MixerStream is mixing the input from Multiple Input Streams. All streams must have the same audo form..." alt="InputMixer&lt; T &gt;" shape="rect" coords="780,2968,993,2992"/>
+<area href="classaudio__tools_1_1_input_mixer.html" title="MixerStream is mixing the input from Multiple Input Streams. All streams must have the same audo form..." alt="InputMixer&lt; T &gt;" shape="rect" coords="780,3024,993,3048"/>
+<area href="classaudio__tools_1_1_jupyter_audio_t.html" title="Output to Jupyter. We write the data just to a file from where we can load the data again for differe..." alt="JupyterAudioT&lt; T &gt;" shape="rect" coords="780,3080,993,3104"/>
+<area href="classaudio__tools_1_1_measuring_stream.html" title="Class which measures the truput." alt="MeasuringStream" shape="rect" coords="780,3136,993,3160"/>
+<area href="classaudio__tools_1_1_measuring_stream.html" title="Class which measures the truput." alt="MeasuringStream" shape="rect" coords="780,3192,993,3216"/>
+<area href="classaudio__tools_1_1_memory_stream.html" title="A simple Stream implementation which is backed by allocated memory." alt="MemoryStream" shape="rect" coords="780,3248,993,3272"/>
+<area href="classaudio__tools_1_1_memory_stream.html" title="A simple Stream implementation which is backed by allocated memory." alt="MemoryStream" shape="rect" coords="780,3304,993,3328"/>
+<area href="classaudio__tools_1_1_mini_audio_stream.html" title="MiniAudio: https://miniaud.io/." alt="MiniAudioStream" shape="rect" coords="780,3360,993,3384"/>
+<area href="classaudio__tools_1_1_mozzi_stream.html" title="We use the output functionality of Mozzi to output audio data. We expect the data as array of int16_t..." alt="MozziStream" shape="rect" coords="780,3416,993,3440"/>
+<area href="classaudio__tools_1_1_null_stream.html" title="The Arduino Stream which provides silence and simulates a null device when used as audio target or au..." alt="NullStream" shape="rect" coords="780,3472,993,3496"/>
+<area href="classaudio__tools_1_1_null_stream.html" title="The Arduino Stream which provides silence and simulates a null device when used as audio target or au..." alt="NullStream" shape="rect" coords="780,3528,993,3552"/>
+<area href="classaudio__tools_1_1_p_d_m_mono_stream_t.html" title="Applies low pass filter to a decimated pdm signal to convert it to pcm." alt="PDMMonoStreamT&lt; T &gt;" shape="rect" coords="780,3584,993,3608"/>
+<area href="classaudio__tools_1_1_port_audio_stream.html" title="Arduino Audio Stream using PortAudio." alt="PortAudioStream" shape="rect" coords="780,3640,993,3664"/>
+<area href="classaudio__tools_1_1_progress_stream.html" title="Generic calss to measure the the total bytes which were processed in order to calculate the progress ..." alt="ProgressStream" shape="rect" coords="780,3696,993,3720"/>
+<area href="classaudio__tools_1_1_progress_stream.html" title="Generic calss to measure the the total bytes which were processed in order to calculate the progress ..." alt="ProgressStream" shape="rect" coords="780,3752,993,3776"/>
+<area href="classaudio__tools_1_1_queue_stream.html" title="AudioStream class which stores the data in a temporary queue buffer. The queue can be consumed e...." alt="QueueStream&lt; T &gt;" shape="rect" coords="780,3808,993,3832"/>
+<area href="classaudio__tools_1_1_queue_stream.html" title="AudioStream class which stores the data in a temporary queue buffer. The queue can be consumed e...." alt="QueueStream&lt; T &gt;" shape="rect" coords="780,3864,993,3888"/>
+<area href="classaudio__tools_1_1_reformat_base_stream.html" title="Base class for chained converting streams." alt="ReformatBaseStream" shape="rect" coords="780,3920,993,3944"/>
+<area href="classaudio__tools_1_1_ring_buffer_stream.html" title="A Stream backed by a Ringbuffer. We can write to the end and read from the beginning of the stream." alt="RingBufferStream" shape="rect" coords="780,3976,993,4000"/>
+<area href="classaudio__tools_1_1_ring_buffer_stream.html" title="A Stream backed by a Ringbuffer. We can write to the end and read from the beginning of the stream." alt="RingBufferStream" shape="rect" coords="780,4032,993,4056"/>
+<area href="classaudio__tools_1_1_s_p_d_i_f_output.html" title="Output as 16 bit stereo SPDIF on the I2S data output pin." alt="SPDIFOutput" shape="rect" coords="780,4088,993,4112"/>
+<area href="classaudio__tools_1_1_stdio_stream.html" alt="StdioStream" shape="rect" coords="780,4144,993,4168"/>
+<area href="classaudio__tools_1_1_tf_lite_audio_stream_base.html" title="Astract TfLiteAudioStream to provide access to TfLiteAudioStream for Reader and Writers." alt="TfLiteAudioStreamBase" shape="rect" coords="780,4200,993,4224"/>
+<area href="classaudio__tools_1_1_throttle.html" title="Throttle the sending or receiving of the audio data to limit it to the indicated sample rate." alt="Throttle" shape="rect" coords="780,4256,993,4280"/>
+<area href="classaudio__tools_1_1_timed_stream.html" title="AudioStream class that can define a start and (an optional) stop time Usually it is used to wrap an A..." alt="TimedStream" shape="rect" coords="780,4312,993,4336"/>
+<area href="classaudio__tools_1_1_v_b_a_n_stream.html" title="VBAN Audio Source and Sink for the ESP32. For further details please see https://vb-audio...." alt="VBANStream" shape="rect" coords="780,4368,993,4392"/>
+<area href="classaudio__tools_1_1_v_s1053_stream.html" title="VS1053 Output Interface which processes PCM data by default. If you want to write encoded data set is..." alt="VS1053Stream" shape="rect" coords="780,4424,993,4448"/>
+<area href="classaudio__tools_1_1_volume_stream.html" title="Adjust the volume of the related input or output: To work properly the class needs to know the bits p..." alt="VolumeStream" shape="rect" coords="780,4480,993,4504"/>
+<area href="classaudio__tools_1_1_w_m8960_stream.html" title="Stream for reading and writing audio data using the WM8960 Codec Chip You need to install https://git..." alt="WM8960Stream" shape="rect" coords="780,4536,993,4560"/>
+<area href="classaudio__tools_1_1on_scan_result.html" title="onScanResult the sending or receiving of the audio data to limit it to the indicated sample rate." alt="onScanResult" shape="rect" coords="780,4592,993,4616"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -157,30 +181,60 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa809637bb4d773c7bfc1d408283e42bc"><td class="memItemLeft" align="right" valign="top"><a id="aa809637bb4d773c7bfc1d408283e42bc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AudioStream</b> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> const &amp;)=delete</td></tr>
 <tr class="separator:aa809637bb4d773c7bfc1d408283e42bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa809637bb4d773c7bfc1d408283e42bc"><td class="memItemLeft" align="right" valign="top"><a id="aa809637bb4d773c7bfc1d408283e42bc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AudioStream</b> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> const &amp;)=delete</td></tr>
+<tr class="separator:aa809637bb4d773c7bfc1d408283e42bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
+virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
+<tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
 <tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbb59a2f946191d7cf2a5c0a00b29ec2"><td class="memItemLeft" align="right" valign="top"><a id="afbb59a2f946191d7cf2a5c0a00b29ec2"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> () override</td></tr>
 <tr class="separator:afbb59a2f946191d7cf2a5c0a00b29ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb59a2f946191d7cf2a5c0a00b29ec2"><td class="memItemLeft" align="right" valign="top"><a id="afbb59a2f946191d7cf2a5c0a00b29ec2"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> () override</td></tr>
+<tr class="separator:afbb59a2f946191d7cf2a5c0a00b29ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff0d6d1b0f3f9b652c9d5298ed0863c"><td class="memItemLeft" align="right" valign="top"><a id="a6ff0d6d1b0f3f9b652c9d5298ed0863c"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> () override</td></tr>
+<tr class="separator:a6ff0d6d1b0f3f9b652c9d5298ed0863c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ff0d6d1b0f3f9b652c9d5298ed0863c"><td class="memItemLeft" align="right" valign="top"><a id="a6ff0d6d1b0f3f9b652c9d5298ed0863c"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> () override</td></tr>
 <tr class="separator:a6ff0d6d1b0f3f9b652c9d5298ed0863c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
+<tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
+<tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memItemLeft" align="right" valign="top"><a id="af654b48544c195ab99fe27e7bc3ed5fe"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
 <tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memItemLeft" align="right" valign="top"><a id="af654b48544c195ab99fe27e7bc3ed5fe"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
+<tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
+<tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b33821c012632d0fce6ae7210d549b5"><td class="memItemLeft" align="right" valign="top"><a id="a3b33821c012632d0fce6ae7210d549b5"></a>
 <a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> const &amp;)=delete</td></tr>
 <tr class="separator:a3b33821c012632d0fce6ae7210d549b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b33821c012632d0fce6ae7210d549b5"><td class="memItemLeft" align="right" valign="top"><a id="a3b33821c012632d0fce6ae7210d549b5"></a>
+<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> const &amp;)=delete</td></tr>
+<tr class="separator:a3b33821c012632d0fce6ae7210d549b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca0929fe29faa64b2b39af2b5527013"><td class="memItemLeft" align="right" valign="top"><a id="a6ca0929fe29faa64b2b39af2b5527013"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *buffer, size_t length)</td></tr>
+<tr class="separator:a6ca0929fe29faa64b2b39af2b5527013"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca0929fe29faa64b2b39af2b5527013"><td class="memItemLeft" align="right" valign="top"><a id="a6ca0929fe29faa64b2b39af2b5527013"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *buffer, size_t length)</td></tr>
 <tr class="separator:a6ca0929fe29faa64b2b39af2b5527013"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,9 +242,19 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#a36e26f40121eda38b0042dcba026ab82">readSilence</a> (uint8_t *buffer, size_t length)</td></tr>
 <tr class="memdesc:a36e26f40121eda38b0042dcba026ab82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source to generate silence: just sets the buffer to 0. <br /></td></tr>
 <tr class="separator:a36e26f40121eda38b0042dcba026ab82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e26f40121eda38b0042dcba026ab82"><td class="memItemLeft" align="right" valign="top"><a id="a36e26f40121eda38b0042dcba026ab82"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#a36e26f40121eda38b0042dcba026ab82">readSilence</a> (uint8_t *buffer, size_t length)</td></tr>
+<tr class="memdesc:a36e26f40121eda38b0042dcba026ab82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source to generate silence: just sets the buffer to 0. <br /></td></tr>
+<tr class="separator:a36e26f40121eda38b0042dcba026ab82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
 <tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
+<tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
+<tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
 <tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,9 +264,19 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> 
 <tr class="memitem:ae74e483484f1f059fc9ee780b1a7cc29"><td class="memItemLeft" align="right" valign="top"><a id="ae74e483484f1f059fc9ee780b1a7cc29"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t size) override</td></tr>
 <tr class="separator:ae74e483484f1f059fc9ee780b1a7cc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74e483484f1f059fc9ee780b1a7cc29"><td class="memItemLeft" align="right" valign="top"><a id="ae74e483484f1f059fc9ee780b1a7cc29"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t size) override</td></tr>
+<tr class="separator:ae74e483484f1f059fc9ee780b1a7cc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
 <tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
+<tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad89418aeb557f65a8f1a0aed755633b1"><td class="memItemLeft" align="right" valign="top"><a id="ad89418aeb557f65a8f1a0aed755633b1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1">writeSilence</a> (size_t len)</td></tr>
+<tr class="memdesc:ad89418aeb557f65a8f1a0aed755633b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes len bytes of silence (=0). <br /></td></tr>
+<tr class="separator:ad89418aeb557f65a8f1a0aed755633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad89418aeb557f65a8f1a0aed755633b1"><td class="memItemLeft" align="right" valign="top"><a id="ad89418aeb557f65a8f1a0aed755633b1"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1">writeSilence</a> (size_t len)</td></tr>
 <tr class="memdesc:ad89418aeb557f65a8f1a0aed755633b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes len bytes of silence (=0). <br /></td></tr>
@@ -213,6 +287,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
+<tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
+<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
 <tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,22 +305,22 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td>
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
+<tr class="memitem:ac367a1d54437cca3877a910baf936f4b"><td class="memItemLeft" align="right" valign="top"><a id="ac367a1d54437cca3877a910baf936f4b"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
-<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
+<tr class="separator:ac367a1d54437cca3877a910baf936f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1c1138410abe4a0b2e7d80eb425003f"><td class="memItemLeft" align="right" valign="top"><a id="ad1c1138410abe4a0b2e7d80eb425003f"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
-<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
+<tr class="separator:ad1c1138410abe4a0b2e7d80eb425003f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02259b7e8b05e57f89af8e8736a70fdf"><td class="memItemLeft" align="right" valign="top"><a id="a02259b7e8b05e57f89af8e8736a70fdf"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
-<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a02259b7e8b05e57f89af8e8736a70fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for all Audio Streams. It support the boolean operator to test if the object is ready with data. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/AudioTools/<a class="el" href="_audio_streams_8h_source.html">AudioStreams.h</a></li>
+<li>src/AudioTools/<a class="el" href="_audio_tools_2_audio_streams_8h_source.html">AudioStreams.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
