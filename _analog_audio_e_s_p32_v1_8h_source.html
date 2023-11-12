@@ -473,7 +473,7 @@ $(function() {
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        cali_config.unit_id  = (adc_unit_t) unit;</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        cali_config.atten    = (adc_atten_t) cfg.adc_attenuation;</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        cali_config.bitwidth = (adc_bitwidth_t) cfg.adc_bit_width;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        err = adc_cali_create_scheme_line_fitting(&amp;cali_config, &amp;adc_cali_handle);</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <span class="keyword">auto</span> err = adc_cali_create_scheme_line_fitting(&amp;cali_config, &amp;adc_cali_handle);</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="preprocessor">      #endif</span></div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <span class="keywordflow">if</span>(err != ESP_OK){</div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            LOGE(<span class="stringliteral">&quot;creating cali handle failed for ADC%d with atten %d and bitwidth %d&quot;</span>, </div>
