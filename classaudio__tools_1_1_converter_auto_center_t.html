@@ -91,9 +91,9 @@ Inheritance diagram for ConverterAutoCenterT&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af3e95218c6c7970bf89d8491613254df"><td class="memItemLeft" align="right" valign="top"><a id="af3e95218c6c7970bf89d8491613254df"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ConverterAutoCenterT</b> (int channels=2, int initCount=1)</td></tr>
-<tr class="separator:af3e95218c6c7970bf89d8491613254df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5812962a64db9dc8b885a09a568b4454"><td class="memItemLeft" align="right" valign="top"><a id="a5812962a64db9dc8b885a09a568b4454"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ConverterAutoCenterT</b> (int channels=2, bool isDynamic=false)</td></tr>
+<tr class="separator:a5812962a64db9dc8b885a09a568b4454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2f6d46c001ee42beae2fd3ddc79b1c9"><td class="memItemLeft" align="right" valign="top"><a id="aa2f6d46c001ee42beae2fd3ddc79b1c9"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert</b> (uint8_t(*src), size_t byte_count)</td></tr>
 <tr class="separator:aa2f6d46c001ee42beae2fd3ddc79b1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,21 +109,30 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a178795099d0608972755dfef8d8367e3"><td class="memItemLeft" align="right" valign="top"><a id="a178795099d0608972755dfef8d8367e3"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b></td></tr>
 <tr class="separator:a178795099d0608972755dfef8d8367e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40ca994ffbfad9b35b2c2f44df3e38b5"><td class="memItemLeft" align="right" valign="top"><a id="a40ca994ffbfad9b35b2c2f44df3e38b5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>init_count</b> = 1</td></tr>
-<tr class="separator:a40ca994ffbfad9b35b2c2f44df3e38b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23807e3d3cd2e3be8eb6ad013c4ad7b9"><td class="memItemLeft" align="right" valign="top"><a id="a23807e3d3cd2e3be8eb6ad013c4ad7b9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_dynamic</b></td></tr>
+<tr class="separator:a23807e3d3cd2e3be8eb6ad013c4ad7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe4d0487b2ac337eed8caeb05a98d857"><td class="memItemLeft" align="right" valign="top"><a id="abe4d0487b2ac337eed8caeb05a98d857"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_setup</b> = false</td></tr>
 <tr class="separator:abe4d0487b2ac337eed8caeb05a98d857"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d10b0c779bad3aabf067d52035f7052"><td class="memItemLeft" align="right" valign="top"><a id="a7d10b0c779bad3aabf067d52035f7052"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>left</b> = 0.0</td></tr>
 <tr class="separator:a7d10b0c779bad3aabf067d52035f7052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2ec27430bd8d935c84ddf8f4d094402"><td class="memItemLeft" align="right" valign="top"><a id="ac2ec27430bd8d935c84ddf8f4d094402"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>offset</b> = 0</td></tr>
-<tr class="separator:ac2ec27430bd8d935c84ddf8f4d094402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adccd0d678e082bd1f37411a3b943d6a9"><td class="memItemLeft" align="right" valign="top"><a id="adccd0d678e082bd1f37411a3b943d6a9"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>offset_from</b> {0}</td></tr>
+<tr class="separator:adccd0d678e082bd1f37411a3b943d6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3469c45350935984f16731b925c6d33"><td class="memItemLeft" align="right" valign="top"><a id="ac3469c45350935984f16731b925c6d33"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>offset_step</b> {0}</td></tr>
+<tr class="separator:ac3469c45350935984f16731b925c6d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3e69e360d1977c42a94d1aaa49d75b"><td class="memItemLeft" align="right" valign="top"><a id="a7a3e69e360d1977c42a94d1aaa49d75b"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>offset_to</b> {0}</td></tr>
+<tr class="separator:a7a3e69e360d1977c42a94d1aaa49d75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6202f38a97a1c9eb0142baeb338cf1f1"><td class="memItemLeft" align="right" valign="top"><a id="a6202f38a97a1c9eb0142baeb338cf1f1"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>right</b> = 0.0</td></tr>
 <tr class="separator:a6202f38a97a1c9eb0142baeb338cf1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefbdc7e0cfefa3b0cab8cbdb72dffec5"><td class="memItemLeft" align="right" valign="top"><a id="aefbdc7e0cfefa3b0cab8cbdb72dffec5"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>total</b> {0}</td></tr>
+<tr class="separator:aefbdc7e0cfefa3b0cab8cbdb72dffec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
