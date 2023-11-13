@@ -105,7 +105,7 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#  define ADC_CHANNELS        {ADC_CHANNEL_2, ADC_CHANNEL_3} </span><span class="comment">// These are the I2C SDA and SCL pins on Adafruit ESP32-S3 feather , Channel 4&amp;5 might be better</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define GET_UNIT(x) ((x &gt;&gt; 3) &amp; 0x1)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define GET_ADC_UNIT_FROM_CHANNEL(x) ((x &gt;&gt; 3) &amp; 0x1)</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifdef HAS_ESP32_DAC</span></div>
