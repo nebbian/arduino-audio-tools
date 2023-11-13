@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A simple BLE server that implements the serial protocol, so that it can be used to send and recevie audio. In BLE terminologiy this is a Peripheral. This implementation uses the ArduinoBLE library!  
+<p>A simple BLE server that implements the serial protocol, so that it can be used to send and recevie audio. In BLE terminologiy this is a Peripheral. This implementation uses the ArduinoBLE library! This is working only correctly if the client sets the max MTU to a value &gt;= 256. Otherwise some of the transmitted information gets silently dropped.  
  <a href="classaudio__tools_1_1_audio_b_l_e_server.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_audio_b_l_e_server_8h_source.html">AudioBLEServer.h</a>&gt;</code></p>
@@ -86,36 +86,29 @@ Inheritance diagram for AudioBLEServer:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_audio_b_l_e_server.png" usemap="#AudioBLEServer_map" alt=""/>
   <map id="AudioBLEServer_map" name="AudioBLEServer_map">
-<area href="classaudio__tools_1_1_audio_b_l_e_stream.html" title="Transmit and receive data via BLE using a Serial API. The following additional experimental features ..." alt="AudioBLEStream" shape="rect" coords="0,392,169,416"/>
-<area href="classaudio__tools_1_1_audio_b_l_e_stream.html" title="Transmit and receive data via BLE using a Serial API. The following additional experimental features ..." alt="AudioBLEStream" shape="rect" coords="358,392,527,416"/>
-<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="0,336,169,360"/>
-<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="358,336,527,360"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="537,280,706,304"/>
-<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="537,224,706,248"/>
-<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="537,168,706,192"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="537,112,706,136"/>
-<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="537,56,706,80"/>
-<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="537,0,706,24"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="179,280,348,304"/>
-<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="179,224,348,248"/>
-<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="179,168,348,192"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="179,112,348,136"/>
+<area href="classaudio__tools_1_1_audio_b_l_e_stream.html" title="Transmit and receive data via BLE using a Serial API. The following additional experimental features ..." alt="AudioBLEStream" shape="rect" coords="179,168,348,192"/>
+<area href="classaudio__tools_1_1_audio_b_l_e_stream.html" title="Transmit and receive data via BLE using a Serial API. The following additional experimental features ..." alt="AudioBLEStream" shape="rect" coords="716,168,885,192"/>
+<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="179,112,348,136"/>
+<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="716,112,885,136"/>
+<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,169,80"/>
 <area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="179,56,348,80"/>
-<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="179,0,348,24"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="358,56,527,80"/>
+<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="537,56,706,80"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="716,56,885,80"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="895,56,1064,80"/>
+<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,169,24"/>
+<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="537,0,706,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ac68c7842af7bada19219378e60a56e18"><td class="memItemLeft" align="right" valign="top"><a id="ac68c7842af7bada19219378e60a56e18"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AudioBLEServer</b> (int mtu=0)</td></tr>
+<tr class="separator:ac68c7842af7bada19219378e60a56e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a0309038b06e1aa290844673ca4bca9"><td class="memItemLeft" align="right" valign="top"><a id="a4a0309038b06e1aa290844673ca4bca9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AudioBLEServer</b> (int mtu=517)</td></tr>
 <tr class="separator:a4a0309038b06e1aa290844673ca4bca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a0309038b06e1aa290844673ca4bca9"><td class="memItemLeft" align="right" valign="top"><a id="a4a0309038b06e1aa290844673ca4bca9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AudioBLEServer</b> (int mtu=517)</td></tr>
-<tr class="separator:a4a0309038b06e1aa290844673ca4bca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
-virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
-<tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
 <tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,9 +148,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</
 <tr class="memitem:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memItemLeft" align="right" valign="top"><a id="af654b48544c195ab99fe27e7bc3ed5fe"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
 <tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memItemLeft" align="right" valign="top"><a id="af654b48544c195ab99fe27e7bc3ed5fe"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
-<tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,10 +157,6 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint
 <tr class="memitem:a96157b310dac8512c932737c2390eaf8"><td class="memItemLeft" align="right" valign="top"><a id="a96157b310dac8512c932737c2390eaf8"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *data, size_t dataSize) override</td></tr>
 <tr class="separator:a96157b310dac8512c932737c2390eaf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36e26f40121eda38b0042dcba026ab82"><td class="memItemLeft" align="right" valign="top"><a id="a36e26f40121eda38b0042dcba026ab82"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#a36e26f40121eda38b0042dcba026ab82">readSilence</a> (uint8_t *buffer, size_t length)</td></tr>
-<tr class="memdesc:a36e26f40121eda38b0042dcba026ab82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source to generate silence: just sets the buffer to 0. <br /></td></tr>
-<tr class="separator:a36e26f40121eda38b0042dcba026ab82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e26f40121eda38b0042dcba026ab82"><td class="memItemLeft" align="right" valign="top"><a id="a36e26f40121eda38b0042dcba026ab82"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#a36e26f40121eda38b0042dcba026ab82">readSilence</a> (uint8_t *buffer, size_t length)</td></tr>
 <tr class="memdesc:a36e26f40121eda38b0042dcba026ab82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source to generate silence: just sets the buffer to 0. <br /></td></tr>
@@ -187,9 +173,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfoUUID</b> 
 <tr class="memitem:a2adbbb700bf6e54b9fa975474b6c6299"><td class="memItemLeft" align="right" valign="top"><a id="a2adbbb700bf6e54b9fa975474b6c6299"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setFramed</b> (bool flag)</td></tr>
 <tr class="separator:a2adbbb700bf6e54b9fa975474b6c6299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
-<tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
 <tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,10 +207,6 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1">writeSilence</a> (size_t len)</td></tr>
 <tr class="memdesc:ad89418aeb557f65a8f1a0aed755633b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes len bytes of silence (=0). <br /></td></tr>
 <tr class="separator:ad89418aeb557f65a8f1a0aed755633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad89418aeb557f65a8f1a0aed755633b1"><td class="memItemLeft" align="right" valign="top"><a id="ad89418aeb557f65a8f1a0aed755633b1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#ad89418aeb557f65a8f1a0aed755633b1">writeSilence</a> (size_t len)</td></tr>
-<tr class="memdesc:ad89418aeb557f65a8f1a0aed755633b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes len bytes of silence (=0). <br /></td></tr>
-<tr class="separator:ad89418aeb557f65a8f1a0aed755633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -246,9 +225,6 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getReadSize</b> (si
 <tr class="memitem:a7181b4a31b43e9593b90813cd509f687"><td class="memItemLeft" align="right" valign="top"><a id="a7181b4a31b43e9593b90813cd509f687"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getReadSize</b> (size_t dataSize)</td></tr>
 <tr class="separator:a7181b4a31b43e9593b90813cd509f687"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
-<tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -286,9 +262,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>receiveAudio<
 <tr class="memitem:a20877b9036e1aec785bd1dc5024f5fe6"><td class="memItemLeft" align="right" valign="top"><a id="a20877b9036e1aec785bd1dc5024f5fe6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>receiveAudio</b> (const uint8_t *data, size_t size)</td></tr>
 <tr class="separator:a20877b9036e1aec785bd1dc5024f5fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
-<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
 <tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -358,7 +331,11 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>BLE_INFO_UUID
 <tr class="memitem:abaa076d44e45bbf35d8389fb007c12e9"><td class="memItemLeft" align="right" valign="top"><a id="abaa076d44e45bbf35d8389fb007c12e9"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ble_server_name</b> = nullptr</td></tr>
 <tr class="separator:abaa076d44e45bbf35d8389fb007c12e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27213f288ea25bfcd893119d6bbd347e"><td class="memItemLeft" align="right" valign="top">BLECharacteristic&#160;</td><td class="memItemRight" valign="bottom"><b>ch01_char</b></td></tr>
+<tr class="memitem:aca2215cd7e1a452faa882328d911a992"><td class="memItemLeft" align="right" valign="top"><a id="aca2215cd7e1a452faa882328d911a992"></a>
+BLEDevice&#160;</td><td class="memItemRight" valign="bottom"><b>central</b></td></tr>
+<tr class="separator:aca2215cd7e1a452faa882328d911a992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27213f288ea25bfcd893119d6bbd347e"><td class="memItemLeft" align="right" valign="top"><a id="a27213f288ea25bfcd893119d6bbd347e"></a>
+BLECharacteristic&#160;</td><td class="memItemRight" valign="bottom"><b>ch01_char</b> {BLE_CH1_UUID, BLERead, getMTU()}</td></tr>
 <tr class="separator:a27213f288ea25bfcd893119d6bbd347e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1d07e3570fc527f36d44616b6755c8f"><td class="memItemLeft" align="right" valign="top"><a id="ac1d07e3570fc527f36d44616b6755c8f"></a>
 BLECharacteristic *&#160;</td><td class="memItemRight" valign="bottom"><b>ch01_char</b></td></tr>
@@ -366,7 +343,8 @@ BLECharacteristic *&#160;</td><td class="memItemRight" valign="bottom"><b>ch01_c
 <tr class="memitem:a6b340a6192bf260d61a255d753d918ab"><td class="memItemLeft" align="right" valign="top"><a id="a6b340a6192bf260d61a255d753d918ab"></a>
 BLEDescriptor&#160;</td><td class="memItemRight" valign="bottom"><b>ch01_desc</b> {&quot;2901&quot;, &quot;channel 1&quot;}</td></tr>
 <tr class="separator:a6b340a6192bf260d61a255d753d918ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f719a083e6771bf84ae57b9007c3802"><td class="memItemLeft" align="right" valign="top">BLECharacteristic&#160;</td><td class="memItemRight" valign="bottom"><b>ch02_char</b></td></tr>
+<tr class="memitem:a3f719a083e6771bf84ae57b9007c3802"><td class="memItemLeft" align="right" valign="top"><a id="a3f719a083e6771bf84ae57b9007c3802"></a>
+BLECharacteristic&#160;</td><td class="memItemRight" valign="bottom"><b>ch02_char</b> {BLE_CH2_UUID, BLEWrite, getMTU()}</td></tr>
 <tr class="separator:a3f719a083e6771bf84ae57b9007c3802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8172ef681d8e4330848d42debff4f75b"><td class="memItemLeft" align="right" valign="top"><a id="a8172ef681d8e4330848d42debff4f75b"></a>
 BLECharacteristic *&#160;</td><td class="memItemRight" valign="bottom"><b>ch02_char</b></td></tr>
@@ -400,9 +378,9 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_transfer_size
 <tr class="memitem:ae294886970faaad6c62c38d437440dfd"><td class="memItemLeft" align="right" valign="top"><a id="ae294886970faaad6c62c38d437440dfd"></a>
 BLEAdvertising *&#160;</td><td class="memItemRight" valign="bottom"><b>p_advertising</b> = nullptr</td></tr>
 <tr class="separator:ae294886970faaad6c62c38d437440dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac367a1d54437cca3877a910baf936f4b"><td class="memItemLeft" align="right" valign="top"><a id="ac367a1d54437cca3877a910baf936f4b"></a>
+<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
-<tr class="separator:ac367a1d54437cca3877a910baf936f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3199582aa1cc31af2d7632b5b7b8730"><td class="memItemLeft" align="right" valign="top"><a id="ac3199582aa1cc31af2d7632b5b7b8730"></a>
 BLEServer *&#160;</td><td class="memItemRight" valign="bottom"><b>p_server</b> = nullptr</td></tr>
 <tr class="separator:ac3199582aa1cc31af2d7632b5b7b8730"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -418,12 +396,12 @@ BLEService *&#160;</td><td class="memItemRight" valign="bottom"><b>p_service</b>
 <tr class="memitem:a031ca7c7bef3af51140a4b2e5af677f2"><td class="memItemLeft" align="right" valign="top"><a id="a031ca7c7bef3af51140a4b2e5af677f2"></a>
 BLEService&#160;</td><td class="memItemRight" valign="bottom"><b>service</b> {BLE_AUDIO_SERVICE_UUID}</td></tr>
 <tr class="separator:a031ca7c7bef3af51140a4b2e5af677f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1c1138410abe4a0b2e7d80eb425003f"><td class="memItemLeft" align="right" valign="top"><a id="ad1c1138410abe4a0b2e7d80eb425003f"></a>
+<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
-<tr class="separator:ad1c1138410abe4a0b2e7d80eb425003f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02259b7e8b05e57f89af8e8736a70fdf"><td class="memItemLeft" align="right" valign="top"><a id="a02259b7e8b05e57f89af8e8736a70fdf"></a>
+<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
-<tr class="separator:a02259b7e8b05e57f89af8e8736a70fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a645c04f21e48841817c0ca96630ab3d3"><td class="memItemLeft" align="right" valign="top"><a id="a645c04f21e48841817c0ca96630ab3d3"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>transmit_buffer</b> {0}</td></tr>
 <tr class="separator:a645c04f21e48841817c0ca96630ab3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -432,59 +410,11 @@ BLEService&#160;</td><td class="memItemRight" valign="bottom"><b>service</b> {BL
 <tr class="separator:ad99e46af70da92490097daf61f4962e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A simple BLE server that implements the serial protocol, so that it can be used to send and recevie audio. In BLE terminologiy this is a Peripheral. This implementation uses the ArduinoBLE library! </p>
+<div class="textblock"><p>A simple BLE server that implements the serial protocol, so that it can be used to send and recevie audio. In BLE terminologiy this is a Peripheral. This implementation uses the ArduinoBLE library! This is working only correctly if the client sets the max MTU to a value &gt;= 256. Otherwise some of the transmitted information gets silently dropped. </p>
 <p>A simple BLE server that implements the serial protocol, so that it can be used to send and recevie audio. In BLE terminologiy this is a Peripheral.</p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a27213f288ea25bfcd893119d6bbd347e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27213f288ea25bfcd893119d6bbd347e">&#9670;&nbsp;</a></span>ch01_char</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">BLECharacteristic ch01_char</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{BLE_CH1_UUID, BLERead,</div>
-<div class="line">                               517  -  5 }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a3f719a083e6771bf84ae57b9007c3802"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f719a083e6771bf84ae57b9007c3802">&#9670;&nbsp;</a></span>ch02_char</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">BLECharacteristic ch02_char</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{BLE_CH2_UUID, BLEWrite,</div>
-<div class="line">                               517  -  5 }</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="ad0a243f1e6171c5b48ad021927e38e17"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0a243f1e6171c5b48ad021927e38e17">&#9670;&nbsp;</a></span>info_char</h2>
 

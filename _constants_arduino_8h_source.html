@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: DynamicMemoryStream::DataNode Struct Reference</title>
+<title>arduino-audio-tools: src/Sandbox/BLE/ConstantsArduino.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,39 +61,24 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_dynamic_memory_stream.html">DynamicMemoryStream</a></li><li class="navelem"><a class="el" href="structaudio__tools_1_1_dynamic_memory_stream_1_1_data_node.html">DataNode</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_34af0959eb28c822354cf2f8de93f1a0.html">Sandbox</a></li><li class="navelem"><a class="el" href="dir_094146fa2f7b4f25c44c274b765ba09a.html">BLE</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structaudio__tools_1_1_dynamic_memory_stream_1_1_data_node-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">DynamicMemoryStream::DataNode Struct Reference</div>  </div>
+<div class="title">ConstantsArduino.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a291f181d7085deac74711e35106a5ff4"><td class="memItemLeft" align="right" valign="top"><a id="a291f181d7085deac74711e35106a5ff4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_dynamic_memory_stream_1_1_data_node.html#a291f181d7085deac74711e35106a5ff4">DataNode</a> (void *inData, int len)</td></tr>
-<tr class="memdesc:a291f181d7085deac74711e35106a5ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
-<tr class="separator:a291f181d7085deac74711e35106a5ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:abe222f6d3581e7920dcad5306cc906a8"><td class="memItemLeft" align="right" valign="top"><a id="abe222f6d3581e7920dcad5306cc906a8"></a>
-uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> =nullptr</td></tr>
-<tr class="separator:abe222f6d3581e7920dcad5306cc906a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7360b55975153b822efc5217b7734e6a"><td class="memItemLeft" align="right" valign="top"><a id="a7360b55975153b822efc5217b7734e6a"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>len</b> =0</td></tr>
-<tr class="separator:a7360b55975153b822efc5217b7734e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/AudioTools/<a class="el" href="_audio_streams_8h_source.html">AudioStreams.h</a></li>
-</ul>
-</div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// must be greater than MTU, less than ESP_GATT_MAX_ATTR_LEN</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define BLE_MTU 242</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define BLE_MTU_OVERHEAD 5</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define RX_BUFFER_SIZE 4096</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define RX_COUNT 100</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define TX_BUFFER_SIZE 4096</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define TX_COUNT 100</span></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
