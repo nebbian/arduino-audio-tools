@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['base_2915',['base',['../classaudio__tools_1_1_simple_chorus.html#a4b9d927a352137ca958022a72f253d11',1,'audio_tools::SimpleChorus']]],
-  ['bitrate_2916',['bitrate',['../structaudio__tools_1_1_opus_encoder_settings.html#ab5d8e1788d02d0e52941a0778776e289',1,'audio_tools::OpusEncoderSettings']]],
-  ['bits_5fper_5fsample_2917',['bits_per_sample',['../structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697',1,'audio_tools::AudioInfo']]],
-  ['bufferindex_2918',['bufferIndex',['../classaudio__tools_1_1_filter_effect_base.html#a73b963945a418c57630c1b66ce2aa74f',1,'audio_tools::FilterEffectBase']]]
+  ['base_2914',['base',['../classaudio__tools_1_1_simple_chorus.html#a4b9d927a352137ca958022a72f253d11',1,'audio_tools::SimpleChorus']]],
+  ['bitrate_2915',['bitrate',['../structaudio__tools_1_1_opus_encoder_settings.html#ab5d8e1788d02d0e52941a0778776e289',1,'audio_tools::OpusEncoderSettings']]],
+  ['bits_5fper_5fsample_2916',['bits_per_sample',['../structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697',1,'audio_tools::AudioInfo']]],
+  ['bufferindex_2917',['bufferIndex',['../classaudio__tools_1_1_filter_effect_base.html#a73b963945a418c57630c1b66ce2aa74f',1,'audio_tools::FilterEffectBase']]]
 ];
