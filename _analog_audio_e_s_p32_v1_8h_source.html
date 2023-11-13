@@ -437,11 +437,11 @@ $(function() {
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="comment">// Boundary checks</span></div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">if</span> ((sample_rate &lt; SOC_ADC_SAMPLE_FREQ_THRES_LOW) ||</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        (sample_rate &gt; SOC_ADC_SAMPLE_FREQ_THRES_HIGH)) {</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      LOGE(<span class="stringliteral">&quot;sample rate: %u can not be set, range: %u to %u&quot;</span>,</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      LOGE(<span class="stringliteral">&quot;sample rate eff: %u can not be set, range: %u to %u&quot;</span>,sample_rate,</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;           SOC_ADC_SAMPLE_FREQ_THRES_LOW, SOC_ADC_SAMPLE_FREQ_THRES_HIGH);</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      LOGI(<span class="stringliteral">&quot;sample rate: %u, range: %u to %u&quot;</span>, sample_rate,</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      LOGI(<span class="stringliteral">&quot;sample rate eff: %u, range: %u to %u&quot;</span>, sample_rate,</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;           SOC_ADC_SAMPLE_FREQ_THRES_LOW, SOC_ADC_SAMPLE_FREQ_THRES_HIGH);</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    }</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
