@@ -207,7 +207,7 @@ $(function() {
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
 <div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a68911cf564f74f1ced8081a3ad465438">  160</a></span>&#160;  <span class="keyword">static</span> FLAC__StreamDecoderReadStatus <a class="code" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a68911cf564f74f1ced8081a3ad465438">read_callback</a>(<span class="keyword">const</span> FLAC__StreamDecoder *decoder, FLAC__byte result_buffer[],<span class="keywordtype">size_t</span> *bytes, <span class="keywordtype">void</span> *client_data) {</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    FLAC__StreamDecoderReadStatus result = FLAC__STREAM_DECODER_READ_STATUS_CONTINUE;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    LOGI(<span class="stringliteral">&quot;read_callback: %d&quot;</span>, *bytes);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    LOGI(<span class="stringliteral">&quot;read_callback: %d&quot;</span>, (<span class="keywordtype">int</span>) *bytes);</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="classaudio__tools_1_1_f_l_a_c_decoder.html">FLACDecoder</a> *<span class="keyword">self</span> = (<a class="code" href="classaudio__tools_1_1_f_l_a_c_decoder.html">FLACDecoder</a> *)client_data;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">self</span> == <span class="keyword">nullptr</span> || !self-&gt;is_active) {</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <span class="keywordflow">return</span> FLAC__STREAM_DECODER_READ_STATUS_ABORT;</div>
@@ -215,7 +215,7 @@ $(function() {
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment">// get data directly from stream</span></div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    *bytes = <span class="keyword">self</span>-&gt;readBytes(result_buffer, *bytes);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    LOGD(<span class="stringliteral">&quot;-&gt; %d&quot;</span>, *bytes);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    LOGD(<span class="stringliteral">&quot;-&gt; %d&quot;</span>, (<span class="keywordtype">int</span>) *bytes);</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">if</span> (self-&gt;isEof(*bytes)){</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        result = FLAC__STREAM_DECODER_READ_STATUS_END_OF_STREAM;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">self</span>-&gt;is_active = <span class="keyword">false</span>;</div>
@@ -237,7 +237,7 @@ $(function() {
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  }</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
 <div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_f_l_a_c_decoder.html#ad65b9acb1c0c9401aacf5e711c2c6cf7">  193</a></span>&#160;  <span class="keyword">static</span> FLAC__StreamDecoderWriteStatus <a class="code" href="classaudio__tools_1_1_f_l_a_c_decoder.html#ad65b9acb1c0c9401aacf5e711c2c6cf7">write_callback</a>(<span class="keyword">const</span> FLAC__StreamDecoder *decoder, <span class="keyword">const</span> FLAC__Frame *frame,<span class="keyword">const</span> FLAC__int32 *<span class="keyword">const</span> buffer[], <span class="keywordtype">void</span> *client_data) {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    LOGI(<span class="stringliteral">&quot;write_callback: %d&quot;</span>, frame-&gt;header.blocksize);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    LOGI(<span class="stringliteral">&quot;write_callback: %d&quot;</span>, (<span class="keywordtype">int</span>) frame-&gt;header.blocksize);</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="classaudio__tools_1_1_f_l_a_c_decoder.html">FLACDecoder</a> *<span class="keyword">self</span> = (<a class="code" href="classaudio__tools_1_1_f_l_a_c_decoder.html">FLACDecoder</a> *)client_data;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> actual_info = <span class="keyword">self</span>-&gt;audioInfo();</div>
@@ -246,7 +246,7 @@ $(function() {
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keyword">self</span>-&gt;info.logInfo();</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="keywordtype">int</span> bps = FLAC__stream_decoder_get_bits_per_sample(decoder);</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      <span class="keywordflow">if</span> (bps!=16){</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        LOGI(<span class="stringliteral">&quot;Converting from %d bits&quot;</span>, bps);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        LOGI(<span class="stringliteral">&quot;Converting from %d bits&quot;</span>, (<span class="keywordtype">int</span>) bps);</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      }</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="keywordflow">if</span> (self-&gt;p_notify != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keyword">self</span>-&gt;info = actual_info;</div>
@@ -295,7 +295,7 @@ $(function() {
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        }</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        LOGE(<span class="stringliteral">&quot;Unsupported bps: %d&quot;</span>, bps);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        LOGE(<span class="stringliteral">&quot;Unsupported bps: %d&quot;</span>, (<span class="keywordtype">int</span>) bps);</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  </div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">return</span> FLAC__STREAM_DECODER_WRITE_STATUS_CONTINUE;</div>
@@ -390,7 +390,7 @@ $(function() {
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
 <div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_f_l_a_c_encoder.html#a1b29912258e11751cfa24707a4e328ca">  359</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_f_l_a_c_encoder.html#a1b29912258e11751cfa24707a4e328ca">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *in_ptr, <span class="keywordtype">size_t</span> in_size)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">if</span> (!is_open || p_print == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    LOGD(<span class="stringliteral">&quot;write: %u&quot;</span>, in_size);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    LOGD(<span class="stringliteral">&quot;write: %zu&quot;</span>, in_size);</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordtype">size_t</span> result = 0;</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">int</span> samples=0;</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordtype">int</span> frames=0;</div>
@@ -410,7 +410,7 @@ $(function() {
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        LOGE(<span class="stringliteral">&quot;bits_per_sample not supported: %d&quot;</span>, cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        LOGE(<span class="stringliteral">&quot;bits_per_sample not supported: %d&quot;</span>, (<span class="keywordtype">int</span>) cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>);</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    }</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
@@ -444,7 +444,7 @@ $(function() {
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordflow">if</span> (self-&gt;p_print!=<span class="keyword">nullptr</span>){</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;      <span class="keywordtype">size_t</span> written = <span class="keyword">self</span>-&gt;p_print-&gt;write((uint8_t*)buffer, bytes);</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;      <span class="keywordflow">if</span> (written!=bytes){</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        LOGE(<span class="stringliteral">&quot;write_callback %d -&gt; %d&quot;</span>, bytes, written);</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        LOGE(<span class="stringliteral">&quot;write_callback %zu -&gt; %zu&quot;</span>, bytes, written);</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        <span class="keywordflow">return</span> FLAC__STREAM_ENCODER_WRITE_STATUS_FATAL_ERROR;</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;      }</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    }</div>
