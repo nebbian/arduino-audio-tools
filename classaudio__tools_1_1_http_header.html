@@ -127,10 +127,10 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>protocol</b> 
 <a class="el" href="classaudio__tools_1_1_http_header.html">HttpHeader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#acc4cbfd8106ea75ee97ad8cdbd991f83">put</a> (const char *line)</td></tr>
 <tr class="memdesc:acc4cbfd8106ea75ee97ad8cdbd991f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds a received new line to the header <br /></td></tr>
 <tr class="separator:acc4cbfd8106ea75ee97ad8cdbd991f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb7d809e9617f68a1b468aba371c4ef1"><td class="memItemLeft" align="right" valign="top"><a id="afb7d809e9617f68a1b468aba371c4ef1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#afb7d809e9617f68a1b468aba371c4ef1">read</a> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;in)</td></tr>
-<tr class="memdesc:afb7d809e9617f68a1b468aba371c4ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads the full header from the request (stream) <br /></td></tr>
-<tr class="separator:afb7d809e9617f68a1b468aba371c4ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6a96bc1717a2149db3a537261ccead4"><td class="memItemLeft" align="right" valign="top"><a id="ab6a96bc1717a2149db3a537261ccead4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#ab6a96bc1717a2149db3a537261ccead4">read</a> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;in)</td></tr>
+<tr class="memdesc:ab6a96bc1717a2149db3a537261ccead4"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads the full header from the request (stream) <br /></td></tr>
+<tr class="separator:ab6a96bc1717a2149db3a537261ccead4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8caab7f20230d6c549cd1bb5c0e5c31"><td class="memItemLeft" align="right" valign="top"><a id="ae8caab7f20230d6c549cd1bb5c0e5c31"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>readLine</b> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;in, char *str, int len)</td></tr>
 <tr class="separator:ae8caab7f20230d6c549cd1bb5c0e5c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,6 +141,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a32fb92dea8368c3c4c8238838c029f00"><td class="memItemLeft" align="right" valign="top"><a id="a32fb92dea8368c3c4c8238838c029f00"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setProcessed</b> ()</td></tr>
 <tr class="separator:a32fb92dea8368c3c4c8238838c029f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0568dfd33619b44c33f3fb1a5fdb820a"><td class="memItemLeft" align="right" valign="top"><a id="a0568dfd33619b44c33f3fb1a5fdb820a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeout</b> (int timeoutMs)</td></tr>
+<tr class="separator:a0568dfd33619b44c33f3fb1a5fdb820a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ce43a0c493e35ecae0c09e620113679"><td class="memItemLeft" align="right" valign="top"><a id="a3ce43a0c493e35ecae0c09e620113679"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>statusCode</b> ()</td></tr>
 <tr class="separator:a3ce43a0c493e35ecae0c09e620113679"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,6 +221,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>status_code</b> = UNDE
 <tr class="memitem:af84d968ccfa8f520508abb768f10e39c"><td class="memItemLeft" align="right" valign="top"><a id="af84d968ccfa8f520508abb768f10e39c"></a>
 <a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>status_msg</b> = <a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a>(20)</td></tr>
 <tr class="separator:af84d968ccfa8f520508abb768f10e39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac40f0d7764cb6514014567911484f925"><td class="memItemLeft" align="right" valign="top"><a id="ac40f0d7764cb6514014567911484f925"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>timeout_ms</b> = URL_CLIENT_TIMEOUT</td></tr>
+<tr class="separator:ac40f0d7764cb6514014567911484f925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76f384bd855c7874342d05805d8a0708"><td class="memItemLeft" align="right" valign="top"><a id="a76f384bd855c7874342d05805d8a0708"></a>
 <a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>url_path</b> = <a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a>(70)</td></tr>
 <tr class="separator:a76f384bd855c7874342d05805d8a0708"><td class="memSeparator" colspan="2">&#160;</td></tr>
