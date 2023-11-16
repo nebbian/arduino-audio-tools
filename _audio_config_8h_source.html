@@ -748,28 +748,33 @@ $(function() {
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;<span class="preprocessor">#  define ANALOG_MAX_SAMPLE_RATE 44000</span></div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160; </div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;<span class="comment">// select int24 implementation</span></div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;<span class="preprocessor">#include &quot;AudioBasic/Int24_3bytes_t.h&quot;</span></div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;<span class="preprocessor">#include &quot;AudioBasic/Int24_4bytes_t.h&quot;</span></div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;<span class="preprocessor">#ifdef USE_3BYTE_INT24</span></div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;<span class="keyword">using</span> <a class="code" href="classaudio__tools_1_1int24__4bytes__t.html">int24_t</a> = <a class="code" href="classaudio__tools_1_1int24__3bytes__t.html">audio_tools::int24_3bytes_t</a>;</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;<span class="keyword">using</span> <a class="code" href="classaudio__tools_1_1int24__4bytes__t.html">int24_t</a> = <a class="code" href="classaudio__tools_1_1int24__4bytes__t.html">audio_tools::int24_4bytes_t</a>;</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160; </div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;<span class="preprocessor">#ifndef ESP32</span></div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;<span class="preprocessor">#define ESP_IDF_VERSION_VAL(a, b , c) 0</span></div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160; </div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wunused-variable&quot;</span></div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wunused-function&quot;</span></div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wvla&quot;</span></div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wsign-compare&quot;</span></div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="preprocessor">#ifdef USE_INITIALIZER_LIST</span></div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wnarrowing&quot;</span></div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160; </div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="preprocessor">#undef rewind</span></div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;<span class="preprocessor">#ifndef URL_CLIENT_TIMEOUT</span></div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;<span class="preprocessor">#  define URL_CLIENT_TIMEOUT 60000;</span></div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;<span class="preprocessor">#  define URL_HANDSHAKE_TIMEOUT 120000</span></div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160; </div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;<span class="comment">// select int24 implementation</span></div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;<span class="preprocessor">#include &quot;AudioBasic/Int24_3bytes_t.h&quot;</span></div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;<span class="preprocessor">#include &quot;AudioBasic/Int24_4bytes_t.h&quot;</span></div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;<span class="preprocessor">#ifdef USE_3BYTE_INT24</span></div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;<span class="keyword">using</span> <a class="code" href="classaudio__tools_1_1int24__4bytes__t.html">int24_t</a> = <a class="code" href="classaudio__tools_1_1int24__3bytes__t.html">audio_tools::int24_3bytes_t</a>;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;<span class="keyword">using</span> <a class="code" href="classaudio__tools_1_1int24__4bytes__t.html">int24_t</a> = <a class="code" href="classaudio__tools_1_1int24__4bytes__t.html">audio_tools::int24_4bytes_t</a>;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160; </div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="preprocessor">#ifndef ESP32</span></div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="preprocessor">#define ESP_IDF_VERSION_VAL(a, b , c) 0</span></div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160; </div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wunused-variable&quot;</span></div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wunused-function&quot;</span></div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wvla&quot;</span></div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wsign-compare&quot;</span></div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;<span class="preprocessor">#ifdef USE_INITIALIZER_LIST</span></div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;<span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wnarrowing&quot;</span></div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160; </div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;<span class="preprocessor">#undef rewind</span></div>
 <div class="ttc" id="a_no_arduino_8h_html"><div class="ttname"><a href="_no_arduino_8h.html">NoArduino.h</a></div><div class="ttdoc">If you want to use the framework w/o Arduino you need to provide the implementation of a couple of cl...</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1int24__3bytes__t_html"><div class="ttname"><a href="classaudio__tools_1_1int24__3bytes__t.html">audio_tools::int24_3bytes_t</a></div><div class="ttdoc">24bit integer which is used for I2S sound processing. The values are really using 3 bytes....</div><div class="ttdef"><b>Definition:</b> Int24_3bytes_t.h:16</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1int24__4bytes__t_html"><div class="ttname"><a href="classaudio__tools_1_1int24__4bytes__t.html">audio_tools::int24_4bytes_t</a></div><div class="ttdoc">24bit integer which is used for I2S sound processing. The values are represented as int32_t,...</div><div class="ttdef"><b>Definition:</b> Int24_4bytes_t.h:16</div></div>
