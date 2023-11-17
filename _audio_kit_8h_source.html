@@ -137,7 +137,7 @@ $(function() {
 <div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_audio_kit_stream_config.html#a567e2afb71a4d538ed517075a55b0802">   74</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_audio_kit_stream_config.html#a567e2afb71a4d538ed517075a55b0802">setupI2SPins</a>(<a class="code" href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">RxTxMode</a> rxtx_mode) {</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    TRACED();</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    this-&gt;<a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a> = rxtx_mode;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    i2s_pin_config_t i2s_pins;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    i2s_pin_config_t i2s_pins = {};</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    board.setup(pins);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    board.get_i2s_pins((i2s_port_t)port_no, &amp;i2s_pins);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    pin_mck = i2s_pins.mck_io_num;</div>

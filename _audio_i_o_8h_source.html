@@ -213,133 +213,138 @@ $(function() {
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
 <div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html">  183</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_timed_stream.html">TimedStream</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> {</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <a class="code" href="classaudio__tools_1_1_timed_stream.html">TimedStream</a>(<a class="code" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;io, <span class="keywordtype">long</span> startSeconds = 0, <span class="keywordtype">long</span> endSeconds = -1) {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    p_stream = &amp;io;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    p_print = &amp;io;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    p_info = &amp;io;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="classaudio__tools_1_1_timed_stream.html#a4eeb415430fb66ca9aecaa8e403ac804">setStartSec</a>(startSeconds);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="classaudio__tools_1_1_timed_stream.html#a247a086bf3ecff7aabdfd767bfbbc6c1">setEndSec</a>(endSeconds);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <a class="code" href="classaudio__tools_1_1_timed_stream.html">TimedStream</a>(<a class="code" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> &amp;o, <span class="keywordtype">long</span> startSeconds = 0, <span class="keywordtype">long</span> endSeconds = -1) {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    p_print = &amp;o;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    p_info = &amp;o;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="classaudio__tools_1_1_timed_stream.html#a4eeb415430fb66ca9aecaa8e403ac804">setStartSec</a>(startSeconds);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="classaudio__tools_1_1_timed_stream.html#a247a086bf3ecff7aabdfd767bfbbc6c1">setEndSec</a>(endSeconds);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  }</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a4eeb415430fb66ca9aecaa8e403ac804">  202</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a4eeb415430fb66ca9aecaa8e403ac804">setStartSec</a>(uint32_t startSeconds) { start_ms = startSeconds*1000; }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a81838aa5c18050f46bd16dac9083a960">  205</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a81838aa5c18050f46bd16dac9083a960">setStartMs</a>(uint32_t ms) { start_ms = ms; }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a247a086bf3ecff7aabdfd767bfbbc6c1">  209</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a247a086bf3ecff7aabdfd767bfbbc6c1">setEndSec</a>(uint32_t endSeconds) { end_ms = endSeconds*1000; }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a28382b4bfa331ab5ed0dc3c0805efe73">  212</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a28382b4bfa331ab5ed0dc3c0805efe73">setEndMs</a>(uint32_t ms) { end_ms = ms; }</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a8438e3403946accc1986a05b89ee7b03">  215</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a8438e3403946accc1986a05b89ee7b03">isPlaying</a>() {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">if</span> (current_bytes &lt; start_bytes)</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">if</span> (end_bytes &gt; 0 &amp;&amp; current_bytes &gt; end_bytes)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <a class="code" href="classaudio__tools_1_1_timed_stream.html">TimedStream</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <a class="code" href="classaudio__tools_1_1_timed_stream.html">TimedStream</a>(<a class="code" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;io, <span class="keywordtype">long</span> startSeconds = 0, <span class="keywordtype">long</span> endSeconds = -1) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    p_stream = &amp;io;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    p_print = &amp;io;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    p_info = &amp;io;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="classaudio__tools_1_1_timed_stream.html#a4eeb415430fb66ca9aecaa8e403ac804">setStartSec</a>(startSeconds);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <a class="code" href="classaudio__tools_1_1_timed_stream.html#a247a086bf3ecff7aabdfd767bfbbc6c1">setEndSec</a>(endSeconds);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <a class="code" href="classaudio__tools_1_1_timed_stream.html">TimedStream</a>(<a class="code" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> &amp;o, <span class="keywordtype">long</span> startSeconds = 0, <span class="keywordtype">long</span> endSeconds = -1) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    p_print = &amp;o;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    p_info = &amp;o;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="classaudio__tools_1_1_timed_stream.html#a4eeb415430fb66ca9aecaa8e403ac804">setStartSec</a>(startSeconds);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="classaudio__tools_1_1_timed_stream.html#a247a086bf3ecff7aabdfd767bfbbc6c1">setEndSec</a>(endSeconds);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a4eeb415430fb66ca9aecaa8e403ac804">  204</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a4eeb415430fb66ca9aecaa8e403ac804">setStartSec</a>(uint32_t startSeconds) { start_ms = startSeconds*1000; }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a81838aa5c18050f46bd16dac9083a960">  207</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a81838aa5c18050f46bd16dac9083a960">setStartMs</a>(uint32_t ms) { start_ms = ms; }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a247a086bf3ecff7aabdfd767bfbbc6c1">  211</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a247a086bf3ecff7aabdfd767bfbbc6c1">setEndSec</a>(uint32_t endSeconds) { end_ms = endSeconds*1000; }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a28382b4bfa331ab5ed0dc3c0805efe73">  214</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a28382b4bfa331ab5ed0dc3c0805efe73">setEndMs</a>(uint32_t ms) { end_ms = ms; }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a8438e3403946accc1986a05b89ee7b03">  217</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a8438e3403946accc1986a05b89ee7b03">isPlaying</a>() {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">if</span> (current_bytes &lt; start_bytes)</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">  224</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">isActive</a>() {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">return</span> (current_bytes &lt; end_bytes &amp;&amp; current_bytes &gt; start_bytes);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  }</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="code" href="classaudio__tools_1_1_timed_stream.html#ad1fdd56031f1195cb221ab855fb6a102">setAudioInfo</a>(info);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">return</span> begin();</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordtype">bool</span> begin()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    calculateByteLimits();</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    current_bytes = 0;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  }</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keyword">operator</span> bool() { <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">isActive</a>(); }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">if</span> (end_bytes &gt; 0 &amp;&amp; current_bytes &gt; end_bytes)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">  226</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">isActive</a>() {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">return</span> (current_bytes &lt; end_bytes &amp;&amp; current_bytes &gt; start_bytes);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="classaudio__tools_1_1_timed_stream.html#ad1fdd56031f1195cb221ab855fb6a102">setAudioInfo</a>(info);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">return</span> begin();</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keywordtype">bool</span> begin()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    calculateByteLimits();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    current_bytes = 0;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  }</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a5a28841c35da456c0ccccbe9623c00a1">  244</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a5a28841c35da456c0ccccbe9623c00a1">readBytes</a>(uint8_t *buffer, <span class="keywordtype">size_t</span> length)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">// if reading is not supported we stop</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">if</span> (p_stream == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="comment">// if we are past the end we stop</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">isActive</a>())</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">// read the data now</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordtype">size_t</span> result = 0;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">do</span> {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      result = p_stream-&gt;readBytes(buffer, length);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      current_bytes += length;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <span class="comment">// ignore data before start time</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    } <span class="keywordflow">while</span> (result &gt; 0 &amp;&amp; current_bytes &lt; start_bytes);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a8438e3403946accc1986a05b89ee7b03">isPlaying</a>() ? result : 0;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#af39b27e52134485635e8d670c47ab365">  262</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#af39b27e52134485635e8d670c47ab365">write</a>(<span class="keyword">const</span> uint8_t *buffer, <span class="keywordtype">size_t</span> length)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    current_bytes += length;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a8438e3403946accc1986a05b89ee7b03">isPlaying</a>() ? p_print-&gt;write(buffer, length) : length;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  }</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
-<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a692e2b18b3c2452e38e3f558ad87e9a5">  268</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a692e2b18b3c2452e38e3f558ad87e9a5">available</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">if</span> (p_stream == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">isActive</a>() ? p_stream-&gt;available() : 0;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  }</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
-<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#ad1fdd56031f1195cb221ab855fb6a102">  275</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#ad1fdd56031f1195cb221ab855fb6a102">setAudioInfo</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    AudioStream::setAudioInfo(info);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    p_info-&gt;setAudioInfo(info);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    calculateByteLimits();</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordtype">int</span> availableForWrite()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> p_print-&gt;availableForWrite(); }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="keyword">operator</span> bool() { <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">isActive</a>(); }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a5a28841c35da456c0ccccbe9623c00a1">  246</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a5a28841c35da456c0ccccbe9623c00a1">readBytes</a>(uint8_t *buffer, <span class="keywordtype">size_t</span> length)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="comment">// if reading is not supported we stop</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">if</span> (p_stream == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="comment">// if we are past the end we stop</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">isActive</a>())</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="comment">// read the data now</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">size_t</span> result = 0;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      result = p_stream-&gt;readBytes(buffer, length);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      current_bytes += length;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      <span class="comment">// ignore data before start time</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    } <span class="keywordflow">while</span> (result &gt; 0 &amp;&amp; current_bytes &lt; start_bytes);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a8438e3403946accc1986a05b89ee7b03">isPlaying</a>() ? result : 0;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#af39b27e52134485635e8d670c47ab365">  264</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#af39b27e52134485635e8d670c47ab365">write</a>(<span class="keyword">const</span> uint8_t *buffer, <span class="keywordtype">size_t</span> length)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    current_bytes += length;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a8438e3403946accc1986a05b89ee7b03">isPlaying</a>() ? p_print-&gt;write(buffer, length) : length;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a692e2b18b3c2452e38e3f558ad87e9a5">  270</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a692e2b18b3c2452e38e3f558ad87e9a5">available</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">if</span> (p_stream == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">isActive</a>() ? p_stream-&gt;available() : 0;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#ad1fdd56031f1195cb221ab855fb6a102">  277</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#ad1fdd56031f1195cb221ab855fb6a102">setAudioInfo</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    AudioStream::setAudioInfo(info);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">if</span> (p_info) p_info-&gt;setAudioInfo(info);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    calculateByteLimits();</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  }</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
-<div class="line"><a name="l00285"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a35eacaff37b4c207f816e9b1a35e4f7b">  285</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a35eacaff37b4c207f816e9b1a35e4f7b">setCompressionRatio</a>(<span class="keywordtype">float</span> ratio) { compression_ratio = ratio; }</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#af8e4bd4a3ed944b9b3d49001690aeb85">  288</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#af8e4bd4a3ed944b9b3d49001690aeb85">bytesPerSecond</a>() {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">return</span> info.sample_rate * info.channels * info.bits_per_sample / 8;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keywordtype">void</span> setOutput(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out){</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    p_print = &amp;out;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  }</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keywordtype">void</span> setStream(Print &amp;out){</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    p_print = &amp;out;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  }</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keywordtype">void</span> setStream(Stream &amp;stream){</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    p_print = &amp;stream;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    p_stream = &amp;stream;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  }</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  Stream *p_stream = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  Print *p_print = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  AudioInfoSupport *p_info = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  uint32_t start_ms = 0;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  uint32_t end_ms = UINT32_MAX;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  uint32_t start_bytes = 0;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  uint32_t end_bytes = UINT32_MAX;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  uint32_t current_bytes = 0;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordtype">float</span> compression_ratio = 1.0;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordtype">void</span> calculateByteLimits() {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordtype">float</span> bytes_per_second = <a class="code" href="classaudio__tools_1_1_timed_stream.html#af8e4bd4a3ed944b9b3d49001690aeb85">bytesPerSecond</a>();</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordflow">if</span> (bytes_per_second &gt; 0) {</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      start_bytes = bytes_per_second * start_ms / compression_ratio / 1000;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      end_bytes = bytes_per_second * end_ms / compression_ratio / 1000;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;      LOGE(<span class="stringliteral">&quot;AudioInfo not defined&quot;</span>);</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  }</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;};</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keywordtype">int</span> availableForWrite()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> p_print-&gt;availableForWrite(); }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#a35eacaff37b4c207f816e9b1a35e4f7b">  287</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#a35eacaff37b4c207f816e9b1a35e4f7b">setCompressionRatio</a>(<span class="keywordtype">float</span> ratio) { compression_ratio = ratio; }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timed_stream.html#af8e4bd4a3ed944b9b3d49001690aeb85">  290</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_timed_stream.html#af8e4bd4a3ed944b9b3d49001690aeb85">bytesPerSecond</a>() {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">return</span> info.sample_rate * info.channels * info.bits_per_sample / 8;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keywordtype">void</span> setOutput(<a class="code" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> &amp;out){</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    p_print = &amp;out;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    p_info = &amp;out;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="keywordtype">void</span> setStream(AudioOutput &amp;out){</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    p_print = &amp;out;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    p_info = &amp;out;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  <span class="keywordtype">void</span> setStream(AudioStream &amp;stream){</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    p_print = &amp;stream;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    p_stream = &amp;stream;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    p_info = &amp;stream;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  Stream *p_stream = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  Print *p_print = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  AudioInfoSupport *p_info = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  uint32_t start_ms = 0;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  uint32_t end_ms = UINT32_MAX;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  uint32_t start_bytes = 0;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  uint32_t end_bytes = UINT32_MAX;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  uint32_t current_bytes = 0;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="keywordtype">float</span> compression_ratio = 1.0;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="keywordtype">void</span> calculateByteLimits() {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">float</span> bytes_per_second = <a class="code" href="classaudio__tools_1_1_timed_stream.html#af8e4bd4a3ed944b9b3d49001690aeb85">bytesPerSecond</a>();</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">if</span> (bytes_per_second &gt; 0) {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      start_bytes = bytes_per_second * start_ms / compression_ratio / 1000;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      end_bytes = bytes_per_second * end_ms / compression_ratio / 1000;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      LOGE(<span class="stringliteral">&quot;AudioInfo not defined&quot;</span>);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;};</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_adapter_audio_output_to_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_adapter_audio_output_to_audio_stream.html">audio_tools::AdapterAudioOutputToAudioStream</a></div><div class="ttdoc">Wrapper which converts a AudioStream to a AudioOutput.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:59</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_adapter_audio_output_to_audio_stream_html_a33c6511baf83796cbba956c97935ae39"><div class="ttname"><a href="classaudio__tools_1_1_adapter_audio_output_to_audio_stream.html#a33c6511baf83796cbba956c97935ae39">audio_tools::AdapterAudioOutputToAudioStream::isDeletable</a></div><div class="ttdeci">virtual bool isDeletable()</div><div class="ttdoc">If true we need to release the related memory in the destructor.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:73</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_adapter_audio_stream_to_audio_output_html"><div class="ttname"><a href="classaudio__tools_1_1_adapter_audio_stream_to_audio_output.html">audio_tools::AdapterAudioStreamToAudioOutput</a></div><div class="ttdoc">Wrapper which converts a AudioStream to a AudioOutput.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:35</div></div>
@@ -359,18 +364,18 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_multi_output_html_afbfb0ac2b640d4c0b83727daa3743529"><div class="ttname"><a href="classaudio__tools_1_1_multi_output.html#afbfb0ac2b640d4c0b83727daa3743529">audio_tools::MultiOutput::MultiOutput</a></div><div class="ttdeci">MultiOutput()=default</div><div class="ttdoc">Defines a MultiOutput with no final output: Define your outputs with add()</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:58</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html">audio_tools::TimedStream</a></div><div class="ttdoc">AudioStream class that can define a start and (an optional) stop time Usually it is used to wrap an A...</div><div class="ttdef"><b>Definition:</b> AudioIO.h:183</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a247a086bf3ecff7aabdfd767bfbbc6c1"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a247a086bf3ecff7aabdfd767bfbbc6c1">audio_tools::TimedStream::setEndSec</a></div><div class="ttdeci">void setEndSec(uint32_t endSeconds)</div><div class="ttdef"><b>Definition:</b> AudioIO.h:209</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a28382b4bfa331ab5ed0dc3c0805efe73"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a28382b4bfa331ab5ed0dc3c0805efe73">audio_tools::TimedStream::setEndMs</a></div><div class="ttdeci">void setEndMs(uint32_t ms)</div><div class="ttdoc">Defines the (optional) end time in milliseconds.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:212</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a35eacaff37b4c207f816e9b1a35e4f7b"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a35eacaff37b4c207f816e9b1a35e4f7b">audio_tools::TimedStream::setCompressionRatio</a></div><div class="ttdeci">void setCompressionRatio(float ratio)</div><div class="ttdef"><b>Definition:</b> AudioIO.h:285</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a4eeb415430fb66ca9aecaa8e403ac804"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a4eeb415430fb66ca9aecaa8e403ac804">audio_tools::TimedStream::setStartSec</a></div><div class="ttdeci">void setStartSec(uint32_t startSeconds)</div><div class="ttdef"><b>Definition:</b> AudioIO.h:202</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a5a28841c35da456c0ccccbe9623c00a1"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a5a28841c35da456c0ccccbe9623c00a1">audio_tools::TimedStream::readBytes</a></div><div class="ttdeci">size_t readBytes(uint8_t *buffer, size_t length) override</div><div class="ttdef"><b>Definition:</b> AudioIO.h:244</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a692e2b18b3c2452e38e3f558ad87e9a5"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a692e2b18b3c2452e38e3f558ad87e9a5">audio_tools::TimedStream::available</a></div><div class="ttdeci">int available() override</div><div class="ttdoc">Provides the available bytes until the end time has reached.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:268</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a81838aa5c18050f46bd16dac9083a960"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a81838aa5c18050f46bd16dac9083a960">audio_tools::TimedStream::setStartMs</a></div><div class="ttdeci">void setStartMs(uint32_t ms)</div><div class="ttdoc">Defines the start time in milliseconds.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:205</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a8438e3403946accc1986a05b89ee7b03"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a8438e3403946accc1986a05b89ee7b03">audio_tools::TimedStream::isPlaying</a></div><div class="ttdeci">bool isPlaying()</div><div class="ttdoc">Returns true if we are in a valid time range and are still playing sound.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:215</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_aa1f512ab0fcc05612f8e3d6a4664ce9a"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">audio_tools::TimedStream::isActive</a></div><div class="ttdeci">bool isActive()</div><div class="ttdoc">Returns true if we are not past the end time;.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:224</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_ad1fdd56031f1195cb221ab855fb6a102"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#ad1fdd56031f1195cb221ab855fb6a102">audio_tools::TimedStream::setAudioInfo</a></div><div class="ttdeci">void setAudioInfo(AudioInfo info) override</div><div class="ttdoc">Updates the AudioInfo in the current object and in the source or target.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:275</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_af39b27e52134485635e8d670c47ab365"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#af39b27e52134485635e8d670c47ab365">audio_tools::TimedStream::write</a></div><div class="ttdeci">size_t write(const uint8_t *buffer, size_t length) override</div><div class="ttdoc">Plays only data for the indiated start and end time.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:262</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_af8e4bd4a3ed944b9b3d49001690aeb85"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#af8e4bd4a3ed944b9b3d49001690aeb85">audio_tools::TimedStream::bytesPerSecond</a></div><div class="ttdeci">int bytesPerSecond()</div><div class="ttdoc">Calculates the bytes per second from the AudioInfo.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:288</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a247a086bf3ecff7aabdfd767bfbbc6c1"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a247a086bf3ecff7aabdfd767bfbbc6c1">audio_tools::TimedStream::setEndSec</a></div><div class="ttdeci">void setEndSec(uint32_t endSeconds)</div><div class="ttdef"><b>Definition:</b> AudioIO.h:211</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a28382b4bfa331ab5ed0dc3c0805efe73"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a28382b4bfa331ab5ed0dc3c0805efe73">audio_tools::TimedStream::setEndMs</a></div><div class="ttdeci">void setEndMs(uint32_t ms)</div><div class="ttdoc">Defines the (optional) end time in milliseconds.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:214</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a35eacaff37b4c207f816e9b1a35e4f7b"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a35eacaff37b4c207f816e9b1a35e4f7b">audio_tools::TimedStream::setCompressionRatio</a></div><div class="ttdeci">void setCompressionRatio(float ratio)</div><div class="ttdef"><b>Definition:</b> AudioIO.h:287</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a4eeb415430fb66ca9aecaa8e403ac804"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a4eeb415430fb66ca9aecaa8e403ac804">audio_tools::TimedStream::setStartSec</a></div><div class="ttdeci">void setStartSec(uint32_t startSeconds)</div><div class="ttdef"><b>Definition:</b> AudioIO.h:204</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a5a28841c35da456c0ccccbe9623c00a1"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a5a28841c35da456c0ccccbe9623c00a1">audio_tools::TimedStream::readBytes</a></div><div class="ttdeci">size_t readBytes(uint8_t *buffer, size_t length) override</div><div class="ttdef"><b>Definition:</b> AudioIO.h:246</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a692e2b18b3c2452e38e3f558ad87e9a5"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a692e2b18b3c2452e38e3f558ad87e9a5">audio_tools::TimedStream::available</a></div><div class="ttdeci">int available() override</div><div class="ttdoc">Provides the available bytes until the end time has reached.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:270</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a81838aa5c18050f46bd16dac9083a960"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a81838aa5c18050f46bd16dac9083a960">audio_tools::TimedStream::setStartMs</a></div><div class="ttdeci">void setStartMs(uint32_t ms)</div><div class="ttdoc">Defines the start time in milliseconds.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:207</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_a8438e3403946accc1986a05b89ee7b03"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#a8438e3403946accc1986a05b89ee7b03">audio_tools::TimedStream::isPlaying</a></div><div class="ttdeci">bool isPlaying()</div><div class="ttdoc">Returns true if we are in a valid time range and are still playing sound.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:217</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_aa1f512ab0fcc05612f8e3d6a4664ce9a"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">audio_tools::TimedStream::isActive</a></div><div class="ttdeci">bool isActive()</div><div class="ttdoc">Returns true if we are not past the end time;.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:226</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_ad1fdd56031f1195cb221ab855fb6a102"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#ad1fdd56031f1195cb221ab855fb6a102">audio_tools::TimedStream::setAudioInfo</a></div><div class="ttdeci">void setAudioInfo(AudioInfo info) override</div><div class="ttdoc">Updates the AudioInfo in the current object and in the source or target.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:277</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_af39b27e52134485635e8d670c47ab365"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#af39b27e52134485635e8d670c47ab365">audio_tools::TimedStream::write</a></div><div class="ttdeci">size_t write(const uint8_t *buffer, size_t length) override</div><div class="ttdoc">Plays only data for the indiated start and end time.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:264</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_timed_stream_html_af8e4bd4a3ed944b9b3d49001690aeb85"><div class="ttname"><a href="classaudio__tools_1_1_timed_stream.html#af8e4bd4a3ed944b9b3d49001690aeb85">audio_tools::TimedStream::bytesPerSecond</a></div><div class="ttdeci">int bytesPerSecond()</div><div class="ttdoc">Calculates the bytes per second from the AudioInfo.</div><div class="ttdef"><b>Definition:</b> AudioIO.h:290</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
 </div><!-- fragment --></div><!-- contents -->
