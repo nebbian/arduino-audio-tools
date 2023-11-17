@@ -1087,9 +1087,47 @@ $(function() {
 <div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;        }</div>
 <div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;};</div>
 <div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160; </div>
-<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160; </div>
-<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160; </div>
-<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;}</div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keywordtype">size_t</span> Cn, <span class="keywordtype">size_t</span> Cx, <span class="keywordtype">size_t</span> S&gt;</div>
+<div class="line"><a name="l01174"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_copy_channels.html"> 1174</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_copy_channels.html">CopyChannels</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_base_converter.html">BaseConverter</a> {</div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;  <a class="code" href="classaudio__tools_1_1_copy_channels.html">CopyChannels</a>() : _max_val(0), _counter(0), _prev_ms(0) {}</div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160; </div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;  <span class="keywordtype">size_t</span> convert(uint8_t *src, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;    T *chan = (T*)src;</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;    <span class="keywordtype">size_t</span> samples = (size / Cn) / <span class="keyword">sizeof</span>(T);</div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> s=0; s&lt;samples; s++ ) {</div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;      chan[s*Cn+Cx] = (Cx &lt; Cn) ? chan[s*Cn+Cx] &lt;&lt; S : 0;</div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160; </div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;      <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> c=0; c&lt;Cn; c++ ) {</div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;        <span class="keywordflow">if</span>( c != Cx ) {</div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;          chan[s*Cn+c] = chan[s*Cn+Cx];</div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;        }</div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;      }</div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160; </div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;      <span class="keywordflow">if</span>( _max_val &lt; chan[s*Cn] ) { </div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;          _max_val = chan[s*Cn];</div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;      }</div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160; </div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;      _counter++;</div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;      uint32_t now = <a class="code" href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">millis</a>();</div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;      <span class="keywordflow">if</span>( now - _prev_ms &gt; 1000 ) { </div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;        _prev_ms = now;</div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;        LOGI(<span class="stringliteral">&quot;CopyChannels samples: %u, amplitude: %d&quot;</span>, _counter, _max_val);</div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;        _max_val = 0;</div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;      }</div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;    }</div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;    <span class="keywordflow">return</span> samples * Cn * <span class="keyword">sizeof</span>(T);</div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;  }</div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160; </div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;  T _max_val;</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;  uint32_t _counter;</div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;  uint32_t _prev_ms;</div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;};</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160; </div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160; </div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160; </div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;}</div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_converter_html"><div class="ttname"><a href="classaudio__tools_1_1_base_converter.html">audio_tools::BaseConverter</a></div><div class="ttdoc">Abstract Base class for Converters A converter is processing the data in the indicated array.</div><div class="ttdef"><b>Definition:</b> BaseConverter.h:25</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_channel_converter_html"><div class="ttname"><a href="classaudio__tools_1_1_channel_converter.html">audio_tools::ChannelConverter</a></div><div class="ttdoc">Increasing or decreasing the number of channels.</div><div class="ttdef"><b>Definition:</b> BaseConverter.h:664</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_channel_enhancer_html"><div class="ttname"><a href="classaudio__tools_1_1_channel_enhancer.html">audio_tools::ChannelEnhancer</a></div><div class="ttdoc">Increases the channel count.</div><div class="ttdef"><b>Definition:</b> BaseConverter.h:609</div></div>
@@ -1111,6 +1149,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_converter_scaler_html_afc140cf8223a4144dc9755af85bf2d8f"><div class="ttname"><a href="classaudio__tools_1_1_converter_scaler.html#afc140cf8223a4144dc9755af85bf2d8f">audio_tools::ConverterScaler::setFactor</a></div><div class="ttdeci">void setFactor(T factor)</div><div class="ttdoc">Defines the factor (volume)</div><div class="ttdef"><b>Definition:</b> BaseConverter.h:83</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_converter_switch_left_and_right_html"><div class="ttname"><a href="classaudio__tools_1_1_converter_switch_left_and_right.html">audio_tools::ConverterSwitchLeftAndRight</a></div><div class="ttdoc">Switches the left and right channel.</div><div class="ttdef"><b>Definition:</b> BaseConverter.h:250</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_converter_to_internal_d_a_c_format_html"><div class="ttname"><a href="classaudio__tools_1_1_converter_to_internal_d_a_c_format.html">audio_tools::ConverterToInternalDACFormat</a></div><div class="ttdoc">special case for internal DAC output, the incomming PCM buffer needs to be converted from signed 16bi...</div><div class="ttdef"><b>Definition:</b> BaseConverter.h:370</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_copy_channels_html"><div class="ttname"><a href="classaudio__tools_1_1_copy_channels.html">audio_tools::CopyChannels</a></div><div class="ttdoc">Copy channel Cx value of type T shifted by S bits to all Cn channels.</div><div class="ttdef"><b>Definition:</b> BaseConverter.h:1174</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_decimate_html"><div class="ttname"><a href="classaudio__tools_1_1_decimate.html">audio_tools::Decimate</a></div><div class="ttdoc">Provides reduced the sampling rates.</div><div class="ttdef"><b>Definition:</b> BaseConverter.h:552</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_decimate_html_a2dc524acc6d34135c4fcbd44aa62b8e6"><div class="ttname"><a href="classaudio__tools_1_1_decimate.html#a2dc524acc6d34135c4fcbd44aa62b8e6">audio_tools::Decimate::setFactor</a></div><div class="ttdeci">void setFactor(int factor)</div><div class="ttdoc">Sets the factor: e.g. with 4 we keep every forth sample.</div><div class="ttdef"><b>Definition:</b> BaseConverter.h:568</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_decimate_html_ab5a7ba68d6c150f9643e74f3838270a5"><div class="ttname"><a href="classaudio__tools_1_1_decimate.html#ab5a7ba68d6c150f9643e74f3838270a5">audio_tools::Decimate::setChannels</a></div><div class="ttdeci">void setChannels(int channels)</div><div class="ttdoc">Defines the number of channels.</div><div class="ttdef"><b>Definition:</b> BaseConverter.h:561</div></div>
@@ -1130,6 +1169,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_stream.html">audio_tools::Stream</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:125</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html"><div class="ttname"><a href="classaudio__tools_1_1_vector.html">audio_tools::Vector&lt; float &gt;</a></div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_a51ca22f5e92260d1d3f69724a51c551a"><div class="ttname"><a href="namespaceaudio__tools.html#a51ca22f5e92260d1d3f69724a51c551a">audio_tools::millis</a></div><div class="ttdeci">uint32_t millis()</div><div class="ttdoc">Returns the milliseconds since the start.</div><div class="ttdef"><b>Definition:</b> Millis.h:17</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:53</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:55</div></div>
