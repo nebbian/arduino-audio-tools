@@ -218,7 +218,7 @@ $(function() {
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        uint16_t *result16 = (uint16_t *)dest;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        uint16_t *end = (uint16_t *)(dest + size_bytes);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">int</span> result_count = result_cont / <span class="keyword">sizeof</span>(adc_digi_output_data_t);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        LOGD(<span class="stringliteral">&quot;adc_continuous_read -&gt; %d bytes / %d samples&quot;</span>, result_cont,</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        LOGD(<span class="stringliteral">&quot;adc_continuous_read -&gt; %u bytes / %d samples&quot;</span>, (<span class="keywordtype">unsigned</span>) result_cont,</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;             result_count);</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; result_count; i++) {</div>
@@ -227,7 +227,7 @@ $(function() {
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;          uint32_t data = AUDIO_ADC_GET_DATA(p);</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;          <span class="keywordflow">if</span> (isValidADCChannel((adc_channel_t)chan_num)) {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            LOGD(<span class="stringliteral">&quot;Idx: %d, channel: %d, data: %u&quot;</span>, i, chan_num, data);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            LOGD(<span class="stringliteral">&quot;Idx: %d, channel: %d, data: %u&quot;</span>, i, chan_num, (<span class="keywordtype">unsigned</span>) data);</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            assert(result16 &lt; end); <span class="comment">// make sure we dont write past the end</span></div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordflow">if</span> (self-&gt;cfg.adc_calibration_active) {</div>
@@ -255,7 +255,7 @@ $(function() {
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            }</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;          } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            LOGD(<span class="stringliteral">&quot;invalid channel: %d, data: %u&quot;</span>, chan_num, data);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            LOGD(<span class="stringliteral">&quot;invalid channel: %d, data: %u&quot;</span>, chan_num, (<span class="keywordtype">unsigned</span>) data);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;          }</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="comment">// make sure that the center is at 0, so the result will be int16_t</span></div>
@@ -371,7 +371,7 @@ $(function() {
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    }</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    dig_cfg.adc_pattern = adc_pattern;</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    LOGI(<span class="stringliteral">&quot;dig_cfg.sample_freq_hz: %u&quot;</span>, dig_cfg.sample_freq_hz);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    LOGI(<span class="stringliteral">&quot;dig_cfg.sample_freq_hz: %u&quot;</span>, (<span class="keywordtype">unsigned</span>) dig_cfg.sample_freq_hz);</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    LOGI(<span class="stringliteral">&quot;dig_cfg.conv_mode: %u&quot;</span>, dig_cfg.conv_mode);</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    LOGI(<span class="stringliteral">&quot;dig_cfg.format: %u&quot;</span>, dig_cfg.format);</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; cfg.channels; i++) {</div>
@@ -414,12 +414,12 @@ $(function() {
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  <span class="keywordtype">bool</span> checkADCBitWidth() {</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">if</span> ((cfg.adc_bit_width &lt; SOC_ADC_DIGI_MIN_BITWIDTH) ||</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        (cfg.adc_bit_width &gt; SOC_ADC_DIGI_MAX_BITWIDTH)) {</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;      LOGE(<span class="stringliteral">&quot;adc bit width: %u cannot be set, range: %u to %u&quot;</span>,</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;           SOC_ADC_DIGI_MIN_BITWIDTH, SOC_ADC_DIGI_MAX_BITWIDTH);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;      LOGE(<span class="stringliteral">&quot;adc bit width: %u cannot be set, range: %u to %u&quot;</span>, cfg.adc_bit_width,</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;           (<span class="keywordtype">unsigned</span>)SOC_ADC_DIGI_MIN_BITWIDTH, (<span class="keywordtype">unsigned</span>)SOC_ADC_DIGI_MAX_BITWIDTH);</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    } </div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    LOGI(<span class="stringliteral">&quot;adc bit width: %u, range: %u to %u&quot;</span>, cfg.adc_bit_width,</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;           SOC_ADC_DIGI_MIN_BITWIDTH, SOC_ADC_DIGI_MAX_BITWIDTH);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;           (<span class="keywordtype">unsigned</span>)SOC_ADC_DIGI_MIN_BITWIDTH, (<span class="keywordtype">unsigned</span>)SOC_ADC_DIGI_MAX_BITWIDTH);</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  }</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>

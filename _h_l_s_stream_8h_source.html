@@ -194,9 +194,9 @@ $(function() {
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="comment">//assert(urls[0]!=url);</span></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#ifdef ESP32</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      LOGI(<span class="stringliteral">&quot;Free heap: %d&quot;</span>, ESP.getFreeHeap());</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      LOGI(<span class="stringliteral">&quot;Free heap: %u&quot;</span>, (<span class="keywordtype">unsigned</span>) ESP.getFreeHeap());</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      LOGI(<span class="stringliteral">&quot;Playing %s of %d&quot;</span>, p_stream-&gt;urlStr(), urls.size());</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      LOGI(<span class="stringliteral">&quot;Playing %s of %zu&quot;</span>, p_stream-&gt;urlStr(), urls.size());</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">int</span> to_write = min(buffer.<a class="code" href="classaudio__tools_1_1_n_buffer.html#a86aa7db83a28e2662e01c57a36681cb0">availableForWrite</a>(),DEFAULT_BUFFER_SIZE);</div>

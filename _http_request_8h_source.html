@@ -287,7 +287,7 @@ $(function() {
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            }</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#if defined(ESP32) &amp;&amp; defined(ARDUINO)</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            LOGI(<span class="stringliteral">&quot;Free heap: %u&quot;</span>, ESP.getFreeHeap());</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            LOGI(<span class="stringliteral">&quot;Free heap: %u&quot;</span>, (<span class="keywordtype">unsigned</span>)ESP.getFreeHeap());</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            reply_header.setProcessed();</div>
