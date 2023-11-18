@@ -112,8 +112,8 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> p_stream-&gt;begin();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">bool</span> end()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> p_stream-&gt;end();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">void</span> end()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    p_stream-&gt;end();</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_adapter_audio_stream_to_audio_output.html#a33c6511baf83796cbba956c97935ae39">   62</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_adapter_audio_stream_to_audio_output.html#a33c6511baf83796cbba956c97935ae39">isDeletable</a>() { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
