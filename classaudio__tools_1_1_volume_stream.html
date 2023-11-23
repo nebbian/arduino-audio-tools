@@ -184,14 +184,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_stream.html#afcb2a62320edc10770189f42d3b80c86">setStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;in)</td></tr>
 <tr class="memdesc:afcb2a62320edc10770189f42d3b80c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/Changes the input &amp; output. <br /></td></tr>
 <tr class="separator:afcb2a62320edc10770189f42d3b80c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35c7533999826a3706e97f99442d4c7e"><td class="memItemLeft" align="right" valign="top"><a id="a35c7533999826a3706e97f99442d4c7e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_stream.html#a35c7533999826a3706e97f99442d4c7e">setVolume</a> (float vol)</td></tr>
-<tr class="memdesc:a35c7533999826a3706e97f99442d4c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the volume for all channels: needs to be in the range of 0 to 1.0. <br /></td></tr>
-<tr class="separator:a35c7533999826a3706e97f99442d4c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28c83db3d78661d6e35b248d73006314"><td class="memItemLeft" align="right" valign="top"><a id="a28c83db3d78661d6e35b248d73006314"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_stream.html#a28c83db3d78661d6e35b248d73006314">setVolume</a> (float vol, int channel)</td></tr>
-<tr class="memdesc:a28c83db3d78661d6e35b248d73006314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the volume for one channel. <br /></td></tr>
-<tr class="separator:a28c83db3d78661d6e35b248d73006314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3076da1d31412e3f1ed8677494df700"><td class="memItemLeft" align="right" valign="top"><a id="ae3076da1d31412e3f1ed8677494df700"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_stream.html#ae3076da1d31412e3f1ed8677494df700">setVolume</a> (float vol)</td></tr>
+<tr class="memdesc:ae3076da1d31412e3f1ed8677494df700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the volume for all channels: needs to be in the range of 0 to 1.0. <br /></td></tr>
+<tr class="separator:ae3076da1d31412e3f1ed8677494df700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af34e9abce0029e430a56bbd3cafae535"><td class="memItemLeft" align="right" valign="top"><a id="af34e9abce0029e430a56bbd3cafae535"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_stream.html#af34e9abce0029e430a56bbd3cafae535">setVolume</a> (float vol, int channel)</td></tr>
+<tr class="memdesc:af34e9abce0029e430a56bbd3cafae535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the volume for one channel. <br /></td></tr>
+<tr class="separator:af34e9abce0029e430a56bbd3cafae535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af563fb27e0137b006c62af82654083fb"><td class="memItemLeft" align="right" valign="top"><a id="af563fb27e0137b006c62af82654083fb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_stream.html#af563fb27e0137b006c62af82654083fb">setVolumeControl</a> (<a class="el" href="classaudio__tools_1_1_volume_control.html">VolumeControl</a> &amp;vc)</td></tr>
 <tr class="memdesc:af563fb27e0137b006c62af82654083fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the volume control logic. <br /></td></tr>
@@ -236,6 +236,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>applyVolume32</b> (in
 <tr class="memitem:a006b1e9240e602ca418de6140a724e4a"><td class="memItemLeft" align="right" valign="top"><a id="a006b1e9240e602ca418de6140a724e4a"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>factorForChannel</b> (int channel)</td></tr>
 <tr class="separator:a006b1e9240e602ca418de6140a724e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c7139d497bfe39b1e329db16135221b"><td class="memItemLeft" align="right" valign="top"><a id="a3c7139d497bfe39b1e329db16135221b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isAllChannelsFullVolume</b> ()</td></tr>
+<tr class="separator:a3c7139d497bfe39b1e329db16135221b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d98d63b716d45bf73d23623ac4959df"><td class="memItemLeft" align="right" valign="top"><a id="a2d98d63b716d45bf73d23623ac4959df"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isVolumeUpdate</b> ()</td></tr>
+<tr class="separator:a2d98d63b716d45bf73d23623ac4959df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,7 +288,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_started</b> = fals
 <a class="el" href="classaudio__tools_1_1_linear_volume_control.html">LinearVolumeControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>linear_vc</b> {true}</td></tr>
 <tr class="separator:aa0d710c5fa93b57e0c606c57dda163ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade80a1307c60b56d040abb38337e2168"><td class="memItemLeft" align="right" valign="top"><a id="ade80a1307c60b56d040abb38337e2168"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>max_channels</b> =0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>max_channels</b> = 0</td></tr>
 <tr class="separator:ade80a1307c60b56d040abb38337e2168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab57d4076e7e499e5da8c1ae500170a02"><td class="memItemLeft" align="right" valign="top"><a id="ab57d4076e7e499e5da8c1ae500170a02"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>max_value</b> = 32767</td></tr>
