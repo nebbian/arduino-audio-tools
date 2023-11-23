@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classaudio__tools_1_1_callback_stream.html" title="CallbackStream: A Stream that allows to register callback methods for accessing and providing data.">CallbackStream</a>: A <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> that allows to register callback methods for accessing and providing data.  
+<p><a class="el" href="classaudio__tools_1_1_callback_stream.html" title="CallbackStream: A Stream that allows to register callback methods for accessing and providing data....">CallbackStream</a>: A <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> that allows to register callback methods for accessing and providing data. The callbacks can be lambda expressions.  
  <a href="classaudio__tools_1_1_callback_stream.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_audio_streams_8h_source.html">AudioStreams.h</a>&gt;</code></p>
@@ -95,9 +95,17 @@ Inheritance diagram for CallbackStream:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a26db4536e60bd0efb6a924cefe9147f8"><td class="memItemLeft" align="right" valign="top"><a id="a26db4536e60bd0efb6a924cefe9147f8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_callback_stream.html#a26db4536e60bd0efb6a924cefe9147f8">CallbackStream</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out, size_t(*cb_update)(uint8_t *data, size_t len))</td></tr>
+<tr class="memdesc:a26db4536e60bd0efb6a924cefe9147f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to change the audio before sending it to the output. <br /></td></tr>
+<tr class="separator:a26db4536e60bd0efb6a924cefe9147f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77c7187b6d08b64a51e1ebcb281e73d0"><td class="memItemLeft" align="right" valign="top"><a id="a77c7187b6d08b64a51e1ebcb281e73d0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CallbackStream</b> (size_t(*cb_read)(uint8_t *data, size_t len), size_t(*cb_write)(const uint8_t *data, size_t len))</td></tr>
 <tr class="separator:a77c7187b6d08b64a51e1ebcb281e73d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee006910b0fa814eeac61cf80907131f"><td class="memItemLeft" align="right" valign="top"><a id="aee006910b0fa814eeac61cf80907131f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_callback_stream.html#aee006910b0fa814eeac61cf80907131f">CallbackStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;io, size_t(*cb_update)(uint8_t *data, size_t len))</td></tr>
+<tr class="memdesc:aee006910b0fa814eeac61cf80907131f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to change the audio before sending it to the output or before getting it from the original input. <br /></td></tr>
+<tr class="separator:aee006910b0fa814eeac61cf80907131f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
 <tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,9 +143,29 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo<
 <tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
 <tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1220e7e3542f5a84c21fe2f7cef194c"><td class="memItemLeft" align="right" valign="top"><a id="ae1220e7e3542f5a84c21fe2f7cef194c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_callback_stream.html#ae1220e7e3542f5a84c21fe2f7cef194c">setOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
+<tr class="memdesc:ae1220e7e3542f5a84c21fe2f7cef194c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/Changes the output target. <br /></td></tr>
+<tr class="separator:ae1220e7e3542f5a84c21fe2f7cef194c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee69b0f2ea0f1314434519ad6b09039"><td class="memItemLeft" align="right" valign="top"><a id="a1ee69b0f2ea0f1314434519ad6b09039"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_callback_stream.html#a1ee69b0f2ea0f1314434519ad6b09039">setOutput</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;in)</td></tr>
+<tr class="memdesc:a1ee69b0f2ea0f1314434519ad6b09039"><td class="mdescLeft">&#160;</td><td class="mdescRight">same as setStream <br  />
+ <br /></td></tr>
+<tr class="separator:a1ee69b0f2ea0f1314434519ad6b09039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a8ba54559382edfa45a917ffda73e10"><td class="memItemLeft" align="right" valign="top"><a id="a5a8ba54559382edfa45a917ffda73e10"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setReadCallback</b> (size_t(*cb_read)(uint8_t *data, size_t len))</td></tr>
 <tr class="separator:a5a8ba54559382edfa45a917ffda73e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a8f00bb71dfd838f849ec2759968c8"><td class="memItemLeft" align="right" valign="top"><a id="a69a8f00bb71dfd838f849ec2759968c8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_callback_stream.html#a69a8f00bb71dfd838f849ec2759968c8">setStream</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
+<tr class="memdesc:a69a8f00bb71dfd838f849ec2759968c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">same as set Output <br /></td></tr>
+<tr class="separator:a69a8f00bb71dfd838f849ec2759968c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb2a62320edc10770189f42d3b80c86"><td class="memItemLeft" align="right" valign="top"><a id="afcb2a62320edc10770189f42d3b80c86"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_callback_stream.html#afcb2a62320edc10770189f42d3b80c86">setStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;in)</td></tr>
+<tr class="memdesc:afcb2a62320edc10770189f42d3b80c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/Changes the input &amp; output. <br /></td></tr>
+<tr class="separator:afcb2a62320edc10770189f42d3b80c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afafa2da83f59a25aefe42c18e69fb06b"><td class="memItemLeft" align="right" valign="top"><a id="afafa2da83f59a25aefe42c18e69fb06b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUpdateCallback</b> (size_t(*cb_update)(uint8_t *data, size_t len))</td></tr>
+<tr class="separator:afafa2da83f59a25aefe42c18e69fb06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee0a36dc0db969d659de289d0cb34d59"><td class="memItemLeft" align="right" valign="top"><a id="aee0a36dc0db969d659de289d0cb34d59"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setWriteCallback</b> (size_t(*cb_write)(const uint8_t *data, size_t len))</td></tr>
 <tr class="separator:aee0a36dc0db969d659de289d0cb34d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,6 +203,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> =true</td>
 <tr class="memitem:a36038a928c57455c4c053d30ab3e640a"><td class="memItemLeft" align="right" valign="top"><a id="a36038a928c57455c4c053d30ab3e640a"></a>
 size_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>cb_read</b> )(uint8_t *data, size_t len) = nullptr</td></tr>
 <tr class="separator:a36038a928c57455c4c053d30ab3e640a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae229dae43ee9265736c15c1ee1de1f05"><td class="memItemLeft" align="right" valign="top"><a id="ae229dae43ee9265736c15c1ee1de1f05"></a>
+size_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>cb_update</b> )(uint8_t *data, size_t len) = nullptr</td></tr>
+<tr class="separator:ae229dae43ee9265736c15c1ee1de1f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fe130c7375093430366a0f05872cdf4"><td class="memItemLeft" align="right" valign="top"><a id="a6fe130c7375093430366a0f05872cdf4"></a>
 size_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>cb_write</b> )(const uint8_t *data, size_t len) = nullptr</td></tr>
 <tr class="separator:a6fe130c7375093430366a0f05872cdf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,6 +215,12 @@ size_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>cb_write</b> )(co
 <tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memItemLeft" align="right" valign="top"><a id="aa42c30e02e51ec7cc38ea4ab215e0db4"></a>
+<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_out</b> = nullptr</td></tr>
+<tr class="separator:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c87619d514c8c9627dc94e5e278a530"><td class="memItemLeft" align="right" valign="top"><a id="a7c87619d514c8c9627dc94e5e278a530"></a>
+<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> = nullptr</td></tr>
+<tr class="separator:a7c87619d514c8c9627dc94e5e278a530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
 <tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,7 +229,7 @@ size_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>cb_write</b> )(co
 <tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classaudio__tools_1_1_callback_stream.html" title="CallbackStream: A Stream that allows to register callback methods for accessing and providing data.">CallbackStream</a>: A <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> that allows to register callback methods for accessing and providing data. </p>
+<div class="textblock"><p><a class="el" href="classaudio__tools_1_1_callback_stream.html" title="CallbackStream: A Stream that allows to register callback methods for accessing and providing data....">CallbackStream</a>: A <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> that allows to register callback methods for accessing and providing data. The callbacks can be lambda expressions. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
