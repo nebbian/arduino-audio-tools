@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: Hamming&lt; bytecount, block_t &gt; Class Template Reference</title>
+<title>arduino-audio-tools: Hamming Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ $(function() {
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_hamming-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Hamming&lt; bytecount, block_t &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__fec.html">FEC</a></div></div>  </div>
+<div class="title">Hamming Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -80,31 +80,17 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_f_f_t_windows_8h_source.html">FFTWindows.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Hamming&lt; bytecount, block_t &gt;:</div>
+Inheritance diagram for Hamming:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_hamming.png" usemap="#Hamming_3C_20bytecount_2C_20block_5Ft_20_3E_map" alt=""/>
-  <map id="Hamming_3C_20bytecount_2C_20block_5Ft_20_3E_map" name="Hamming_3C_20bytecount_2C_20block_5Ft_20_3E_map">
-<area href="classaudio__tools_1_1_window_function.html" title="FFT Window Function." alt="WindowFunction" shape="rect" coords="0,56,191,80"/>
-<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="201,56,392,80"/>
-<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="201,0,392,24"/>
+  <img src="classaudio__tools_1_1_hamming.png" usemap="#Hamming_map" alt=""/>
+  <map id="Hamming_map" name="Hamming_map">
+<area href="classaudio__tools_1_1_window_function.html" title="FFT Window Function." alt="WindowFunction" shape="rect" coords="0,0,105,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a30cbad73cb5b7b7f345c2bfdc3a6b44c"><td class="memItemLeft" align="right" valign="top"><a id="a30cbad73cb5b7b7f345c2bfdc3a6b44c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Hamming</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;print)</td></tr>
-<tr class="separator:a30cbad73cb5b7b7f345c2bfdc3a6b44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41f1281448f6915cc1f947c3f1126c65"><td class="memItemLeft" align="right" valign="top"><a id="a41f1281448f6915cc1f947c3f1126c65"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Hamming</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream)</td></tr>
-<tr class="separator:a41f1281448f6915cc1f947c3f1126c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="memItemLeft" align="right" valign="top"><a id="a692e2b18b3c2452e38e3f558ad87e9a5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> () override</td></tr>
-<tr class="separator:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87b51853b7bf1bc90d9efa9f3b8d4fea"><td class="memItemLeft" align="right" valign="top"><a id="a87b51853b7bf1bc90d9efa9f3b8d4fea"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> () override</td></tr>
-<tr class="separator:a87b51853b7bf1bc90d9efa9f3b8d4fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a838612f9ae4330b86d40ebbd7018b8a3"><td class="memItemLeft" align="right" valign="top"><a id="a838612f9ae4330b86d40ebbd7018b8a3"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_window_function.html#a838612f9ae4330b86d40ebbd7018b8a3">begin</a> (int <a class="el" href="classaudio__tools_1_1_window_function.html#a296d0d8ff81677d81815bd49551fdaad">samples</a>)</td></tr>
 <tr class="memdesc:a838612f9ae4330b86d40ebbd7018b8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the window function providing the fft length. <br /></td></tr>
@@ -116,82 +102,19 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="memitem:ad2536974ab43f28225375535fd08a282"><td class="memItemLeft" align="right" valign="top"><a id="ad2536974ab43f28225375535fd08a282"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>factor_internal</b> (int idx)</td></tr>
 <tr class="separator:ad2536974ab43f28225375535fd08a282"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memItemLeft" align="right" valign="top"><a id="ad3aed50bc3b4459454ccb8c64f5ced5a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()</td></tr>
-<tr class="separator:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
-<tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5064eb1b12f6c5d12940259c4312b81b"><td class="memItemLeft" align="right" valign="top"><a id="a5064eb1b12f6c5d12940259c4312b81b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_hamming.html#a5064eb1b12f6c5d12940259c4312b81b">peek</a> () override</td></tr>
-<tr class="memdesc:a5064eb1b12f6c5d12940259c4312b81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be avoided. <br /></td></tr>
-<tr class="separator:a5064eb1b12f6c5d12940259c4312b81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0852e3297f3743332e629b9924c9375"><td class="memItemLeft" align="right" valign="top"><a id="ad0852e3297f3743332e629b9924c9375"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_hamming.html#ad0852e3297f3743332e629b9924c9375">read</a> () override</td></tr>
-<tr class="memdesc:ad0852e3297f3743332e629b9924c9375"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be avoided. <br /></td></tr>
-<tr class="separator:ad0852e3297f3743332e629b9924c9375"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c5c6275ddee80eb02839356b6185c0b"><td class="memItemLeft" align="right" valign="top"><a id="a4c5c6275ddee80eb02839356b6185c0b"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *data, size_t len) override</td></tr>
-<tr class="separator:a4c5c6275ddee80eb02839356b6185c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a296d0d8ff81677d81815bd49551fdaad"><td class="memItemLeft" align="right" valign="top"><a id="a296d0d8ff81677d81815bd49551fdaad"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_window_function.html#a296d0d8ff81677d81815bd49551fdaad">samples</a> ()</td></tr>
 <tr class="memdesc:a296d0d8ff81677d81815bd49551fdaad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the number of samples (fft length) <br /></td></tr>
 <tr class="separator:a296d0d8ff81677d81815bd49551fdaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7597ef706dd1aa590903ce9e095db20a"><td class="memItemLeft" align="right" valign="top"><a id="a7597ef706dd1aa590903ce9e095db20a"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *data, size_t len) override</td></tr>
-<tr class="separator:a7597ef706dd1aa590903ce9e095db20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e40195a444e7f20508961cfeacc9b04"><td class="memItemLeft" align="right" valign="top"><a id="a1e40195a444e7f20508961cfeacc9b04"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_hamming.html#a1e40195a444e7f20508961cfeacc9b04">write</a> (uint8_t c) override</td></tr>
-<tr class="memdesc:a1e40195a444e7f20508961cfeacc9b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be avoided. <br /></td></tr>
-<tr class="separator:a1e40195a444e7f20508961cfeacc9b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:adc6a8b9f11b227f7f8ec07c1cfe79e1b"><td class="memItemLeft" align="right" valign="top"><a id="adc6a8b9f11b227f7f8ec07c1cfe79e1b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>decode</b> (block_t input[], int len)</td></tr>
-<tr class="separator:adc6a8b9f11b227f7f8ec07c1cfe79e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5beaa6e9507926e5ebb8ad0ef73d2ca2"><td class="memItemLeft" align="right" valign="top"><a id="a5beaa6e9507926e5ebb8ad0ef73d2ca2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>encode</b> (uint8_t *input, int len)</td></tr>
-<tr class="separator:a5beaa6e9507926e5ebb8ad0ef73d2ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ee1f6dcaeed26bfdd5c74fa582eedf3"><td class="memItemLeft" align="right" valign="top"><a id="a3ee1f6dcaeed26bfdd5c74fa582eedf3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>encodedSize</b> ()</td></tr>
-<tr class="separator:a3ee1f6dcaeed26bfdd5c74fa582eedf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5772b1d74e289a9be3152aee501f885"><td class="memItemLeft" align="right" valign="top"><a id="ab5772b1d74e289a9be3152aee501f885"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getBit</b> (block_t b, int i)</td></tr>
-<tr class="separator:ab5772b1d74e289a9be3152aee501f885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb81c3e9cacaae382a00988d590f44c6"><td class="memItemLeft" align="right" valign="top"><a id="abb81c3e9cacaae382a00988d590f44c6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getBlocks</b> ()</td></tr>
-<tr class="separator:abb81c3e9cacaae382a00988d590f44c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f379c663188c1a714ceb6d41011f988"><td class="memItemLeft" align="right" valign="top"><a id="a9f379c663188c1a714ceb6d41011f988"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getCharBit</b> (uint8_t b, int i)</td></tr>
-<tr class="separator:a9f379c663188c1a714ceb6d41011f988"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9de9b0db1907b85588b13cfb1ecaee82"><td class="memItemLeft" align="right" valign="top"><a id="a9de9b0db1907b85588b13cfb1ecaee82"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>inList</b> (uint8_t **list, uint8_t *testString, int listLen)</td></tr>
-<tr class="separator:a9de9b0db1907b85588b13cfb1ecaee82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6b256aef5701b56adca9a6c44513d60"><td class="memItemLeft" align="right" valign="top"><a id="af6b256aef5701b56adca9a6c44513d60"></a>
-block_t&#160;</td><td class="memItemRight" valign="bottom"><b>modifyBit</b> (block_t n, int p, bool b)</td></tr>
-<tr class="separator:af6b256aef5701b56adca9a6c44513d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6cc432de283c6a96cb441fe3757dc7c"><td class="memItemLeft" align="right" valign="top"><a id="ad6cc432de283c6a96cb441fe3757dc7c"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>modifyCharBit</b> (uint8_t n, int p, bool b)</td></tr>
-<tr class="separator:ad6cc432de283c6a96cb441fe3757dc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e9e562cb3f19598c5c73147a21a62f0"><td class="memItemLeft" align="right" valign="top"><a id="a5e9e562cb3f19598c5c73147a21a62f0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>multipleXor</b> (int *indicies, int len)</td></tr>
-<tr class="separator:a5e9e562cb3f19598c5c73147a21a62f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57a2b37940b48f5e8ea9ffd1fea79e48"><td class="memItemLeft" align="right" valign="top"><a id="a57a2b37940b48f5e8ea9ffd1fea79e48"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>ratio</b> (int idx)</td></tr>
 <tr class="separator:a57a2b37940b48f5e8ea9ffd1fea79e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab73c3523a0b326d979c2e6ea54affda4"><td class="memItemLeft" align="right" valign="top"><a id="ab73c3523a0b326d979c2e6ea54affda4"></a>
-block_t&#160;</td><td class="memItemRight" valign="bottom"><b>toggleBit</b> (block_t b, int i)</td></tr>
-<tr class="separator:ab73c3523a0b326d979c2e6ea54affda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aa66a35e5edf58ce00047afcd1d4f455e"><td class="memItemLeft" align="right" valign="top"><a id="aa66a35e5edf58ce00047afcd1d4f455e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td></tr>
-<tr class="separator:aa66a35e5edf58ce00047afcd1d4f455e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59fcbf9affcd52f52496c081e294b777"><td class="memItemLeft" align="right" valign="top"><a id="a59fcbf9affcd52f52496c081e294b777"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>encoded</b> {encodedSize()}</td></tr>
-<tr class="separator:a59fcbf9affcd52f52496c081e294b777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c00ef0d6a75a4709ae8cc30798573d7"><td class="memItemLeft" align="right" valign="top"><a id="a9c00ef0d6a75a4709ae8cc30798573d7"></a>
 const float&#160;</td><td class="memItemRight" valign="bottom"><b>fourPi</b> = 12.56637061f</td></tr>
 <tr class="separator:a9c00ef0d6a75a4709ae8cc30798573d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,15 +124,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>i_half_samples</b> = 0
 <tr class="memitem:ac6b2af2448f8ff9b3328ed4e98323a29"><td class="memItemLeft" align="right" valign="top"><a id="ac6b2af2448f8ff9b3328ed4e98323a29"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>i_samples</b> = 0</td></tr>
 <tr class="separator:ac6b2af2448f8ff9b3328ed4e98323a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
-<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>
-<tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c87619d514c8c9627dc94e5e278a530"><td class="memItemLeft" align="right" valign="top"><a id="a7c87619d514c8c9627dc94e5e278a530"></a>
-<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> = nullptr</td></tr>
-<tr class="separator:a7c87619d514c8c9627dc94e5e278a530"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe8c5ab1c7374aa227f393efbcffc265"><td class="memItemLeft" align="right" valign="top"><a id="afe8c5ab1c7374aa227f393efbcffc265"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>raw</b> {bytecount}</td></tr>
-<tr class="separator:afe8c5ab1c7374aa227f393efbcffc265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97175aba2ced807d61008513bc1b795d"><td class="memItemLeft" align="right" valign="top"><a id="a97175aba2ced807d61008513bc1b795d"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>samples_minus_1</b> = 0.0f</td></tr>
 <tr class="separator:a97175aba2ced807d61008513bc1b795d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,18 +135,11 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>twoPi</b> = 6.
 <tr class="separator:a9d1b7d3bb900175ee122fd20b62906d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;int bytecount, class block_t&gt;<br />
-class audio_tools::Hamming&lt; bytecount, block_t &gt;</h3>
-
-<p><a class="el" href="classaudio__tools_1_1_hamming.html" title="Hamming FFT Window function.">Hamming</a> FFT Window function. </p>
-<p><a class="el" href="classaudio__tools_1_1_hamming.html" title="Hamming FFT Window function.">Hamming</a> forware error correction. Inspired by <a href="https://github.com/nasserkessas/hamming-codes">https://github.com/nasserkessas/hamming-codes</a>.</p>
+<div class="textblock"><p><a class="el" href="classaudio__tools_1_1_hamming.html" title="Hamming FFT Window function.">Hamming</a> FFT Window function. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>GPLv3</dd></dl>
-<p>Hamming&lt;1024,uint16_t&gt; hamming; // block_ts of 1k with block_tsize 16bits = 31.25% redundency</p>
-<p>Block size (bits) Redundant bits Redundancy percentage 4 3 75% 8 4 50% 16 5 31.25% 32 6 18.75% 64 7 10.94% </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioLibs/FFT/<a class="el" href="_f_f_t_windows_8h_source.html">FFTWindows.h</a></li>
-<li>src/AudioTools/AudioFEC/<a class="el" href="_f_e_c_hamming_8h_source.html">FECHamming.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
