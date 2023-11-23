@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: src/AudioTools/AudioFEC/FECReedSolomon.h Source File</title>
+<title>arduino-audio-tools: src/Communication/ReedSolomonFEC.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,12 +61,12 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d5cb8525404b047b9954b2bda6b3d0c1.html">AudioTools</a></li><li class="navelem"><a class="el" href="dir_e9be7d141a67af836936eac0ccb4bb85.html">AudioFEC</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fb35f8d28c5a1c2121d46772e18e7ebe.html">Communication</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">FECReedSolomon.h</div>  </div>
+<div class="title">ReedSolomonFEC.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
@@ -78,15 +78,15 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceaudio__tools.html">audio_tools</a> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> <span class="keywordtype">byte</span>count, <span class="keywordtype">int</span> additional_<span class="keywordtype">byte</span>s&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_f_e_c_reed_solomon.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_f_e_c_reed_solomon.html">FECReedSolomon</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_reed_solomon_f_e_c.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_reed_solomon_f_e_c.html">ReedSolomonFEC</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classaudio__tools_1_1_f_e_c_reed_solomon.html">FECReedSolomon</a>(<a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream){</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classaudio__tools_1_1_reed_solomon_f_e_c.html">ReedSolomonFEC</a>(<a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream){</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        p_stream = &amp;stream;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        p_print = &amp;stream;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classaudio__tools_1_1_f_e_c_reed_solomon.html">FECReedSolomon</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;print){</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classaudio__tools_1_1_reed_solomon_f_e_c.html">ReedSolomonFEC</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;print){</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        p_print = &amp;print;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
@@ -121,16 +121,16 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> encoded.<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>(data, len);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_f_e_c_reed_solomon.html#a1e40195a444e7f20508961cfeacc9b04">   61</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_f_e_c_reed_solomon.html#a1e40195a444e7f20508961cfeacc9b04">write</a>(uint8_t c)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_reed_solomon_f_e_c.html#a1e40195a444e7f20508961cfeacc9b04">   61</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_reed_solomon_f_e_c.html#a1e40195a444e7f20508961cfeacc9b04">write</a>(uint8_t c)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> write(&amp;c, 1);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_f_e_c_reed_solomon.html#ad0852e3297f3743332e629b9924c9375">   66</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_f_e_c_reed_solomon.html#ad0852e3297f3743332e629b9924c9375">read</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_reed_solomon_f_e_c.html#ad0852e3297f3743332e629b9924c9375">   66</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_reed_solomon_f_e_c.html#ad0852e3297f3743332e629b9924c9375">read</a>()<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        uint8_t ch;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">size_t</span> len = readBytes(&amp;ch, 1);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> len == 1 ? ch : -1;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;     }</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_f_e_c_reed_solomon.html#a5064eb1b12f6c5d12940259c4312b81b">   72</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_f_e_c_reed_solomon.html#a5064eb1b12f6c5d12940259c4312b81b">peek</a>()<span class="keyword"> override </span>{<span class="keywordflow">return</span> -1;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_reed_solomon_f_e_c.html#a5064eb1b12f6c5d12940259c4312b81b">   72</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_reed_solomon_f_e_c.html#a5064eb1b12f6c5d12940259c4312b81b">peek</a>()<span class="keyword"> override </span>{<span class="keywordflow">return</span> -1;}</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">protected</span>:</div>
@@ -145,11 +145,11 @@ $(function() {
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
 <div class="ttc" id="aclass_r_s_1_1_reed_solomon_html"><div class="ttname"><a href="class_r_s_1_1_reed_solomon.html">RS::ReedSolomon&lt; bytecount, additional_bytes &gt;</a></div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_a163c69bc2b88421988d60f4efddb1f3f"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">audio_tools::BaseBuffer::readArray</a></div><div class="ttdeci">virtual int readArray(T data[], int len)</div><div class="ttdoc">reads multiple values</div><div class="ttdef"><b>Definition:</b> Buffers.h:40</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_f_e_c_reed_solomon_html"><div class="ttname"><a href="classaudio__tools_1_1_f_e_c_reed_solomon.html">audio_tools::FECReedSolomon</a></div><div class="ttdoc">Forward error correction using Reed-Solomon: write is encoding and readBytes does the decoding.</div><div class="ttdef"><b>Definition:</b> FECReedSolomon.h:17</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_f_e_c_reed_solomon_html_a1e40195a444e7f20508961cfeacc9b04"><div class="ttname"><a href="classaudio__tools_1_1_f_e_c_reed_solomon.html#a1e40195a444e7f20508961cfeacc9b04">audio_tools::FECReedSolomon::write</a></div><div class="ttdeci">size_t write(uint8_t c) override</div><div class="ttdoc">To be avoided.</div><div class="ttdef"><b>Definition:</b> FECReedSolomon.h:61</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_f_e_c_reed_solomon_html_a5064eb1b12f6c5d12940259c4312b81b"><div class="ttname"><a href="classaudio__tools_1_1_f_e_c_reed_solomon.html#a5064eb1b12f6c5d12940259c4312b81b">audio_tools::FECReedSolomon::peek</a></div><div class="ttdeci">int peek() override</div><div class="ttdoc">To be avoided.</div><div class="ttdef"><b>Definition:</b> FECReedSolomon.h:72</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_f_e_c_reed_solomon_html_ad0852e3297f3743332e629b9924c9375"><div class="ttname"><a href="classaudio__tools_1_1_f_e_c_reed_solomon.html#ad0852e3297f3743332e629b9924c9375">audio_tools::FECReedSolomon::read</a></div><div class="ttdeci">int read() override</div><div class="ttdoc">To be avoided.</div><div class="ttdef"><b>Definition:</b> FECReedSolomon.h:66</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:58</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_reed_solomon_f_e_c_html"><div class="ttname"><a href="classaudio__tools_1_1_reed_solomon_f_e_c.html">audio_tools::ReedSolomonFEC</a></div><div class="ttdoc">Forward error correction using Reed-Solomon: write is encoding and readBytes does the decoding.</div><div class="ttdef"><b>Definition:</b> ReedSolomonFEC.h:17</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_reed_solomon_f_e_c_html_a1e40195a444e7f20508961cfeacc9b04"><div class="ttname"><a href="classaudio__tools_1_1_reed_solomon_f_e_c.html#a1e40195a444e7f20508961cfeacc9b04">audio_tools::ReedSolomonFEC::write</a></div><div class="ttdeci">size_t write(uint8_t c) override</div><div class="ttdoc">To be avoided.</div><div class="ttdef"><b>Definition:</b> ReedSolomonFEC.h:61</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_reed_solomon_f_e_c_html_a5064eb1b12f6c5d12940259c4312b81b"><div class="ttname"><a href="classaudio__tools_1_1_reed_solomon_f_e_c.html#a5064eb1b12f6c5d12940259c4312b81b">audio_tools::ReedSolomonFEC::peek</a></div><div class="ttdeci">int peek() override</div><div class="ttdoc">To be avoided.</div><div class="ttdef"><b>Definition:</b> ReedSolomonFEC.h:72</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_reed_solomon_f_e_c_html_ad0852e3297f3743332e629b9924c9375"><div class="ttname"><a href="classaudio__tools_1_1_reed_solomon_f_e_c.html#ad0852e3297f3743332e629b9924c9375">audio_tools::ReedSolomonFEC::read</a></div><div class="ttdeci">int read() override</div><div class="ttdoc">To be avoided.</div><div class="ttdef"><b>Definition:</b> ReedSolomonFEC.h:66</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_single_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_single_buffer.html">audio_tools::SingleBuffer&lt; uint8_t &gt;</a></div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_single_buffer_html_a1699472936b80a88d3fc8096975d21b2"><div class="ttname"><a href="classaudio__tools_1_1_single_buffer.html#a1699472936b80a88d3fc8096975d21b2">audio_tools::SingleBuffer::data</a></div><div class="ttdeci">T * data()</div><div class="ttdoc">Provides address of actual data.</div><div class="ttdef"><b>Definition:</b> Buffers.h:243</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_single_buffer_html_a1df5849973bb084c9d25289359ae6e57"><div class="ttname"><a href="classaudio__tools_1_1_single_buffer.html#a1df5849973bb084c9d25289359ae6e57">audio_tools::SingleBuffer::setAvailable</a></div><div class="ttdeci">size_t setAvailable(size_t available_size)</div><div class="ttdef"><b>Definition:</b> Buffers.h:255</div></div>

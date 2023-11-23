@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: FECReedSolomon&lt; bytecount, additional_bytes &gt; Class Template Reference</title>
+<title>arduino-audio-tools: HDLCStream Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,48 +61,54 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_f_e_c_reed_solomon.html">FECReedSolomon</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_h_d_l_c_stream.html">HDLCStream</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classaudio__tools_1_1_f_e_c_reed_solomon-members.html">List of all members</a>  </div>
+<a href="classaudio__tools_1_1_h_d_l_c_stream-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">FECReedSolomon&lt; bytecount, additional_bytes &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__fec.html">FEC</a></div></div>  </div>
+<div class="title">HDLCStream Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__communications.html">Communications</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Forward error correction using Reed-Solomon: write is encoding and readBytes does the decoding.  
- <a href="classaudio__tools_1_1_f_e_c_reed_solomon.html#details">More...</a></p>
+<p>High-Level Data Link Control (HDLC) is a bit-oriented code-transparent synchronous data link layer protocol.  
+ <a href="classaudio__tools_1_1_h_d_l_c_stream.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_f_e_c_reed_solomon_8h_source.html">FECReedSolomon.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_h_d_l_c_stream_8h_source.html">HDLCStream.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for FECReedSolomon&lt; bytecount, additional_bytes &gt;:</div>
+Inheritance diagram for HDLCStream:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_f_e_c_reed_solomon.png" usemap="#FECReedSolomon_3C_20bytecount_2C_20additional_5Fbytes_20_3E_map" alt=""/>
-  <map id="FECReedSolomon_3C_20bytecount_2C_20additional_5Fbytes_20_3E_map" name="FECReedSolomon_3C_20bytecount_2C_20additional_5Fbytes_20_3E_map">
-<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,293,80"/>
-<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,293,24"/>
+  <img src="classaudio__tools_1_1_h_d_l_c_stream.png" usemap="#HDLCStream_map" alt=""/>
+  <map id="HDLCStream_map" name="HDLCStream_map">
+<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,85,80"/>
+<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,85,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa7823c3c5d4c3d5462c58aaf93a0ab35"><td class="memItemLeft" align="right" valign="top"><a id="aa7823c3c5d4c3d5462c58aaf93a0ab35"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FECReedSolomon</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;print)</td></tr>
-<tr class="separator:aa7823c3c5d4c3d5462c58aaf93a0ab35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72dd5cdefb9b1996b18361565bff7c57"><td class="memItemLeft" align="right" valign="top"><a id="a72dd5cdefb9b1996b18361565bff7c57"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FECReedSolomon</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream)</td></tr>
-<tr class="separator:a72dd5cdefb9b1996b18361565bff7c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2952b385a1e5270b8527e4337456f2c4"><td class="memItemLeft" align="right" valign="top"><a id="a2952b385a1e5270b8527e4337456f2c4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HDLCStream</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out, uint16_t max_frame_length)</td></tr>
+<tr class="separator:a2952b385a1e5270b8527e4337456f2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5d8153e67d66275a1db28fb5dd4b5a"><td class="memItemLeft" align="right" valign="top"><a id="a2f5d8153e67d66275a1db28fb5dd4b5a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HDLCStream</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;io, uint16_t max_frame_length)</td></tr>
+<tr class="separator:a2f5d8153e67d66275a1db28fb5dd4b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="memItemLeft" align="right" valign="top"><a id="a692e2b18b3c2452e38e3f558ad87e9a5"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> () override</td></tr>
 <tr class="separator:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87b51853b7bf1bc90d9efa9f3b8d4fea"><td class="memItemLeft" align="right" valign="top"><a id="a87b51853b7bf1bc90d9efa9f3b8d4fea"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> () override</td></tr>
 <tr class="separator:a87b51853b7bf1bc90d9efa9f3b8d4fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top"><a id="a601fb7cf1fc15db50c71a826f084f934"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
+<tr class="separator:a601fb7cf1fc15db50c71a826f084f934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf81d3fdaf258088d7692fa70cece087"><td class="memItemLeft" align="right" valign="top"><a id="aaf81d3fdaf258088d7692fa70cece087"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
+<tr class="separator:aaf81d3fdaf258088d7692fa70cece087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memItemLeft" align="right" valign="top"><a id="ad3aed50bc3b4459454ccb8c64f5ced5a"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()</td></tr>
 <tr class="separator:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,54 +116,41 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()<
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5064eb1b12f6c5d12940259c4312b81b"><td class="memItemLeft" align="right" valign="top"><a id="a5064eb1b12f6c5d12940259c4312b81b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_f_e_c_reed_solomon.html#a5064eb1b12f6c5d12940259c4312b81b">peek</a> () override</td></tr>
-<tr class="memdesc:a5064eb1b12f6c5d12940259c4312b81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be avoided. <br /></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_h_d_l_c_stream.html#a5064eb1b12f6c5d12940259c4312b81b">peek</a> () override</td></tr>
+<tr class="memdesc:a5064eb1b12f6c5d12940259c4312b81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">not supported <br /></td></tr>
 <tr class="separator:a5064eb1b12f6c5d12940259c4312b81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0852e3297f3743332e629b9924c9375"><td class="memItemLeft" align="right" valign="top"><a id="ad0852e3297f3743332e629b9924c9375"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_f_e_c_reed_solomon.html#ad0852e3297f3743332e629b9924c9375">read</a> () override</td></tr>
-<tr class="memdesc:ad0852e3297f3743332e629b9924c9375"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be avoided. <br /></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> () override</td></tr>
 <tr class="separator:ad0852e3297f3743332e629b9924c9375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c5c6275ddee80eb02839356b6185c0b"><td class="memItemLeft" align="right" valign="top"><a id="a4c5c6275ddee80eb02839356b6185c0b"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *data, size_t len) override</td></tr>
 <tr class="separator:a4c5c6275ddee80eb02839356b6185c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1220e7e3542f5a84c21fe2f7cef194c"><td class="memItemLeft" align="right" valign="top"><a id="ae1220e7e3542f5a84c21fe2f7cef194c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutput</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
+<tr class="separator:ae1220e7e3542f5a84c21fe2f7cef194c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a8f00bb71dfd838f849ec2759968c8"><td class="memItemLeft" align="right" valign="top"><a id="a69a8f00bb71dfd838f849ec2759968c8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
+<tr class="separator:a69a8f00bb71dfd838f849ec2759968c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb6431a52f960531984ed824b2ac91b4"><td class="memItemLeft" align="right" valign="top"><a id="adb6431a52f960531984ed824b2ac91b4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;io)</td></tr>
+<tr class="separator:adb6431a52f960531984ed824b2ac91b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7597ef706dd1aa590903ce9e095db20a"><td class="memItemLeft" align="right" valign="top"><a id="a7597ef706dd1aa590903ce9e095db20a"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *data, size_t len) override</td></tr>
 <tr class="separator:a7597ef706dd1aa590903ce9e095db20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e40195a444e7f20508961cfeacc9b04"><td class="memItemLeft" align="right" valign="top"><a id="a1e40195a444e7f20508961cfeacc9b04"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_f_e_c_reed_solomon.html#a1e40195a444e7f20508961cfeacc9b04">write</a> (uint8_t c) override</td></tr>
-<tr class="memdesc:a1e40195a444e7f20508961cfeacc9b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be avoided. <br /></td></tr>
-<tr class="separator:a1e40195a444e7f20508961cfeacc9b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a1df0136f5e211583b4c1f462fe29af"><td class="memItemLeft" align="right" valign="top"><a id="a5a1df0136f5e211583b4c1f462fe29af"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
+<tr class="separator:a5a1df0136f5e211583b4c1f462fe29af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aa66a35e5edf58ce00047afcd1d4f455e"><td class="memItemLeft" align="right" valign="top"><a id="aa66a35e5edf58ce00047afcd1d4f455e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td></tr>
 <tr class="separator:aa66a35e5edf58ce00047afcd1d4f455e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59fcbf9affcd52f52496c081e294b777"><td class="memItemLeft" align="right" valign="top"><a id="a59fcbf9affcd52f52496c081e294b777"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>encoded</b> {bytecount+additional_bytes}</td></tr>
-<tr class="separator:a59fcbf9affcd52f52496c081e294b777"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
-<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>
-<tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c87619d514c8c9627dc94e5e278a530"><td class="memItemLeft" align="right" valign="top"><a id="a7c87619d514c8c9627dc94e5e278a530"></a>
-<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> = nullptr</td></tr>
-<tr class="separator:a7c87619d514c8c9627dc94e5e278a530"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe8c5ab1c7374aa227f393efbcffc265"><td class="memItemLeft" align="right" valign="top"><a id="afe8c5ab1c7374aa227f393efbcffc265"></a>
-<a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>raw</b> {bytecount}</td></tr>
-<tr class="separator:afe8c5ab1c7374aa227f393efbcffc265"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb3570aa19a7d886276f01d968e5b7b2"><td class="memItemLeft" align="right" valign="top"><a id="aeb3570aa19a7d886276f01d968e5b7b2"></a>
-<a class="el" href="class_r_s_1_1_reed_solomon.html">RS::ReedSolomon</a>&lt; bytecount, additional_bytes &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>rs</b></td></tr>
-<tr class="separator:aeb3570aa19a7d886276f01d968e5b7b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;int bytecount, int additional_bytes&gt;<br />
-class audio_tools::FECReedSolomon&lt; bytecount, additional_bytes &gt;</h3>
-
-<p>Forward error correction using Reed-Solomon: write is encoding and readBytes does the decoding. </p>
-<dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
+<div class="textblock"><p>High-Level Data Link Control (HDLC) is a bit-oriented code-transparent synchronous data link layer protocol. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/AudioTools/AudioFEC/<a class="el" href="_f_e_c_reed_solomon_8h_source.html">FECReedSolomon.h</a></li>
+<li>src/Communication/<a class="el" href="_h_d_l_c_stream_8h_source.html">HDLCStream.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

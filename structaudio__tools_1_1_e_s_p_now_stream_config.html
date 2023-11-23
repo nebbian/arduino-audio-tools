@@ -73,10 +73,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Configuration for ESP-NOW protocol.  
+<p>Configuration for ESP-NOW protocolö.W.  
  <a href="structaudio__tools_1_1_e_s_p_now_stream_config.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_communication_8h_source.html">Communication.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_e_s_p_now_stream_8h_source.html">ESPNowStream.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -112,9 +112,9 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 wifi_phy_rate_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_e_s_p_now_stream_config.html#add99443712e271bc9d643939e9d1eab7">rate</a> = WIFI_PHY_RATE_2M_S</td></tr>
 <tr class="memdesc:add99443712e271bc9d643939e9d1eab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">esp-now bit rate <br /></td></tr>
 <tr class="separator:add99443712e271bc9d643939e9d1eab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66ca8bc92745f069326db9e8edc171b4"><td class="memItemLeft" align="right" valign="top"><a id="a66ca8bc92745f069326db9e8edc171b4"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>recveive_cb</b> )(const uint8_t *mac_addr, const uint8_t *data, int data_len) = nullptr</td></tr>
-<tr class="separator:a66ca8bc92745f069326db9e8edc171b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9134422688b4cf6b01a9fb1509429ae"><td class="memItemLeft" align="right" valign="top"><a id="ab9134422688b4cf6b01a9fb1509429ae"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><b>recveive_cb</b> )(const esp_now_recv_info *info, const uint8_t *data, int data_len) = nullptr</td></tr>
+<tr class="separator:ab9134422688b4cf6b01a9fb1509429ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a587ba0cb07f02913598610049a3bbb79"><td class="memItemLeft" align="right" valign="top"><a id="a587ba0cb07f02913598610049a3bbb79"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ssid</b> = nullptr</td></tr>
 <tr class="separator:a587ba0cb07f02913598610049a3bbb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,11 +129,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>write_retry_count</b> 
 <tr class="separator:ac4015338f31222e2bd9a8a6c5ad97247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Configuration for ESP-NOW protocol. </p>
+<div class="textblock"><p>Configuration for ESP-NOW protocolö.W. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/AudioLibs/<a class="el" href="_communication_8h_source.html">Communication.h</a></li>
+<li>src/Communication/<a class="el" href="_e_s_p_now_stream_8h_source.html">ESPNowStream.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

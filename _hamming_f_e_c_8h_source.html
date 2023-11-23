@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: src/AudioTools/AudioFEC/FECHamming.h Source File</title>
+<title>arduino-audio-tools: src/Communication/HammingFEC.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,12 +61,12 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d5cb8525404b047b9954b2bda6b3d0c1.html">AudioTools</a></li><li class="navelem"><a class="el" href="dir_e9be7d141a67af836936eac0ccb4bb85.html">AudioFEC</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fb35f8d28c5a1c2121d46772e18e7ebe.html">Communication</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">FECHamming.h</div>  </div>
+<div class="title">HammingFEC.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
@@ -82,14 +82,14 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceaudio__tools.html">audio_tools</a> {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> <span class="keywordtype">byte</span>count, <span class="keyword">class</span> block_t&gt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_f_e_c_hamming.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_f_e_c_hamming.html">FECHamming</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_hamming_f_e_c.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_hamming_f_e_c.html">HammingFEC</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classaudio__tools_1_1_f_e_c_hamming.html">FECHamming</a>(<a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classaudio__tools_1_1_hamming_f_e_c.html">HammingFEC</a>(<a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream){</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        p_stream = &amp;stream;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        p_print = &amp;stream;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classaudio__tools_1_1_f_e_c_hamming.html">FECHamming</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;print){</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classaudio__tools_1_1_hamming_f_e_c.html">HammingFEC</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;print){</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        p_print = &amp;print;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
@@ -127,16 +127,16 @@ $(function() {
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> raw.<a class="code" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">readArray</a>(data, len);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_f_e_c_hamming.html#a1e40195a444e7f20508961cfeacc9b04">   76</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_f_e_c_hamming.html#a1e40195a444e7f20508961cfeacc9b04">write</a>(uint8_t c)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_hamming_f_e_c.html#a1e40195a444e7f20508961cfeacc9b04">   76</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classaudio__tools_1_1_hamming_f_e_c.html#a1e40195a444e7f20508961cfeacc9b04">write</a>(uint8_t c)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> write(&amp;c, 1);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_f_e_c_hamming.html#ad0852e3297f3743332e629b9924c9375">   81</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_f_e_c_hamming.html#ad0852e3297f3743332e629b9924c9375">read</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_hamming_f_e_c.html#ad0852e3297f3743332e629b9924c9375">   81</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_hamming_f_e_c.html#ad0852e3297f3743332e629b9924c9375">read</a>()<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        uint8_t ch;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">size_t</span> len = readBytes(&amp;ch, 1);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> len == 1 ? ch : -1;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;     }</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_f_e_c_hamming.html#a5064eb1b12f6c5d12940259c4312b81b">   87</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_f_e_c_hamming.html#a5064eb1b12f6c5d12940259c4312b81b">peek</a>()<span class="keyword"> override </span>{<span class="keywordflow">return</span> -1;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_hamming_f_e_c.html#a5064eb1b12f6c5d12940259c4312b81b">   87</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_hamming_f_e_c.html#a5064eb1b12f6c5d12940259c4312b81b">peek</a>()<span class="keyword"> override </span>{<span class="keywordflow">return</span> -1;}</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">protected</span>:</div>
@@ -382,10 +382,10 @@ $(function() {
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;} <span class="comment">// ns</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_a163c69bc2b88421988d60f4efddb1f3f"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">audio_tools::BaseBuffer::readArray</a></div><div class="ttdeci">virtual int readArray(T data[], int len)</div><div class="ttdoc">reads multiple values</div><div class="ttdef"><b>Definition:</b> Buffers.h:40</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_f_e_c_hamming_html"><div class="ttname"><a href="classaudio__tools_1_1_f_e_c_hamming.html">audio_tools::FECHamming</a></div><div class="ttdoc">Hamming forware error correction. Inspired by https://github.com/nasserkessas/hamming-codes.</div><div class="ttdef"><b>Definition:</b> FECHamming.h:30</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_f_e_c_hamming_html_a1e40195a444e7f20508961cfeacc9b04"><div class="ttname"><a href="classaudio__tools_1_1_f_e_c_hamming.html#a1e40195a444e7f20508961cfeacc9b04">audio_tools::FECHamming::write</a></div><div class="ttdeci">size_t write(uint8_t c) override</div><div class="ttdoc">To be avoided.</div><div class="ttdef"><b>Definition:</b> FECHamming.h:76</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_f_e_c_hamming_html_a5064eb1b12f6c5d12940259c4312b81b"><div class="ttname"><a href="classaudio__tools_1_1_f_e_c_hamming.html#a5064eb1b12f6c5d12940259c4312b81b">audio_tools::FECHamming::peek</a></div><div class="ttdeci">int peek() override</div><div class="ttdoc">To be avoided.</div><div class="ttdef"><b>Definition:</b> FECHamming.h:87</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_f_e_c_hamming_html_ad0852e3297f3743332e629b9924c9375"><div class="ttname"><a href="classaudio__tools_1_1_f_e_c_hamming.html#ad0852e3297f3743332e629b9924c9375">audio_tools::FECHamming::read</a></div><div class="ttdeci">int read() override</div><div class="ttdoc">To be avoided.</div><div class="ttdef"><b>Definition:</b> FECHamming.h:81</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_hamming_f_e_c_html"><div class="ttname"><a href="classaudio__tools_1_1_hamming_f_e_c.html">audio_tools::HammingFEC</a></div><div class="ttdoc">Hamming forware error correction. Inspired by https://github.com/nasserkessas/hamming-codes.</div><div class="ttdef"><b>Definition:</b> HammingFEC.h:30</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_hamming_f_e_c_html_a1e40195a444e7f20508961cfeacc9b04"><div class="ttname"><a href="classaudio__tools_1_1_hamming_f_e_c.html#a1e40195a444e7f20508961cfeacc9b04">audio_tools::HammingFEC::write</a></div><div class="ttdeci">size_t write(uint8_t c) override</div><div class="ttdoc">To be avoided.</div><div class="ttdef"><b>Definition:</b> HammingFEC.h:76</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_hamming_f_e_c_html_a5064eb1b12f6c5d12940259c4312b81b"><div class="ttname"><a href="classaudio__tools_1_1_hamming_f_e_c.html#a5064eb1b12f6c5d12940259c4312b81b">audio_tools::HammingFEC::peek</a></div><div class="ttdeci">int peek() override</div><div class="ttdoc">To be avoided.</div><div class="ttdef"><b>Definition:</b> HammingFEC.h:87</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_hamming_f_e_c_html_ad0852e3297f3743332e629b9924c9375"><div class="ttname"><a href="classaudio__tools_1_1_hamming_f_e_c.html#ad0852e3297f3743332e629b9924c9375">audio_tools::HammingFEC::read</a></div><div class="ttdeci">int read() override</div><div class="ttdoc">To be avoided.</div><div class="ttdef"><b>Definition:</b> HammingFEC.h:81</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:58</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_single_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_single_buffer.html">audio_tools::SingleBuffer&lt; uint8_t &gt;</a></div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_single_buffer_html_a1699472936b80a88d3fc8096975d21b2"><div class="ttname"><a href="classaudio__tools_1_1_single_buffer.html#a1699472936b80a88d3fc8096975d21b2">audio_tools::SingleBuffer::data</a></div><div class="ttdeci">T * data()</div><div class="ttdoc">Provides address of actual data.</div><div class="ttdef"><b>Definition:</b> Buffers.h:243</div></div>

@@ -79,7 +79,7 @@ $(function() {
 <p>ESPNow as Arduino <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a>.  
  <a href="classaudio__tools_1_1_e_s_p_now_stream.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_communication_8h_source.html">Communication.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_e_s_p_now_stream_8h_source.html">ESPNowStream.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ESPNowStream:</div>
 <div class="dyncontent">
@@ -214,9 +214,9 @@ Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:a9f4af95298c102aa38d63040428e0eb8"><td class="memItemLeft" align="right" valign="top"><a id="a9f4af95298c102aa38d63040428e0eb8"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>bufferAvailableForWrite</b> ()</td></tr>
 <tr class="separator:a9f4af95298c102aa38d63040428e0eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbecb17de51b796ad9b43c4c26a13944"><td class="memItemLeft" align="right" valign="top"><a id="abbecb17de51b796ad9b43c4c26a13944"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>default_recv_cb</b> (const uint8_t *mac_addr, const uint8_t *data, int data_len)</td></tr>
-<tr class="separator:abbecb17de51b796ad9b43c4c26a13944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac10cf0126b6f26eb1d066122ea74f72a"><td class="memItemLeft" align="right" valign="top"><a id="ac10cf0126b6f26eb1d066122ea74f72a"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>default_recv_cb</b> (const esp_now_recv_info *info, const uint8_t *data, int data_len)</td></tr>
+<tr class="separator:ac10cf0126b6f26eb1d066122ea74f72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76f977f4ec9013868e0034675851d653"><td class="memItemLeft" align="right" valign="top"><a id="a76f977f4ec9013868e0034675851d653"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>default_send_cb</b> (const uint8_t *mac_addr, esp_now_send_status_t status)</td></tr>
 <tr class="separator:a76f977f4ec9013868e0034675851d653"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,7 +296,7 @@ _lock_t&#160;</td><td class="memItemRight" valign="bottom"><b>write_lock</b></td
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/AudioLibs/<a class="el" href="_communication_8h_source.html">Communication.h</a></li>
+<li>src/Communication/<a class="el" href="_e_s_p_now_stream_8h_source.html">ESPNowStream.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
