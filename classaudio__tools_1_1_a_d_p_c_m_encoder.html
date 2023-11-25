@@ -104,11 +104,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a
 <tr class="separator:a6c23593971c66b1fee16958a3ad1b0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acce57d9e9018d5ce183ede161c776b6d"><td class="memItemLeft" align="right" valign="top"><a id="acce57d9e9018d5ce183ede161c776b6d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#acce57d9e9018d5ce183ede161c776b6d">blockSize</a> () override</td></tr>
-<tr class="memdesc:acce57d9e9018d5ce183ede161c776b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the block size (only available after calling begin) <br /></td></tr>
+<tr class="memdesc:acce57d9e9018d5ce183ede161c776b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the block size (size of encoded frame) (only available after calling begin) <br /></td></tr>
 <tr class="separator:acce57d9e9018d5ce183ede161c776b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memItemLeft" align="right" valign="top"><a id="a64e9fa75beda50a9e8400ee0d4e61984"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
 <tr class="separator:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7e0415ab9d167f9f1e57c3762be6e0"><td class="memItemLeft" align="right" valign="top"><a id="a0f7e0415ab9d167f9f1e57c3762be6e0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#a0f7e0415ab9d167f9f1e57c3762be6e0">frameSize</a> ()</td></tr>
+<tr class="memdesc:a0f7e0415ab9d167f9f1e57c3762be6e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the frame size (size of decoded frame) (only available after calling begin) <br /></td></tr>
+<tr class="separator:a0f7e0415ab9d167f9f1e57c3762be6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d63922f6bdb7c371286ca453ae18f9c"><td class="memItemLeft" align="right" valign="top"><a id="a5d63922f6bdb7c371286ca453ae18f9c"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#a5d63922f6bdb7c371286ca453ae18f9c">mime</a> () override</td></tr>
 <tr class="memdesc:a5d63922f6bdb7c371286ca453ae18f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the mime type of the encoded result. <br /></td></tr>
@@ -129,9 +133,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const vo
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a24e0732b9c56c00cd4fd06cdaf1f3744"><td class="memItemLeft" align="right" valign="top"><a id="a24e0732b9c56c00cd4fd06cdaf1f3744"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>encode</b> (int16_t sample)</td></tr>
-<tr class="separator:a24e0732b9c56c00cd4fd06cdaf1f3744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0791ad16201ffc957f8cf2d3b49fefc1"><td class="memItemLeft" align="right" valign="top"><a id="a0791ad16201ffc957f8cf2d3b49fefc1"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>encode</b> (int16_t sample)</td></tr>
+<tr class="separator:a0791ad16201ffc957f8cf2d3b49fefc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a2e475070d3df18395c90a10c9d38eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>

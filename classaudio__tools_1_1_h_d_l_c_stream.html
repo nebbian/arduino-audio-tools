@@ -92,10 +92,12 @@ Inheritance diagram for HDLCStream:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2952b385a1e5270b8527e4337456f2c4"><td class="memItemLeft" align="right" valign="top"><a id="a2952b385a1e5270b8527e4337456f2c4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>HDLCStream</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out, uint16_t max_frame_length)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_h_d_l_c_stream.html#a2952b385a1e5270b8527e4337456f2c4">HDLCStream</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out, uint16_t max_frame_length)</td></tr>
+<tr class="memdesc:a2952b385a1e5270b8527e4337456f2c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the output for the hdlc encoding. <br /></td></tr>
 <tr class="separator:a2952b385a1e5270b8527e4337456f2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f5d8153e67d66275a1db28fb5dd4b5a"><td class="memItemLeft" align="right" valign="top"><a id="a2f5d8153e67d66275a1db28fb5dd4b5a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>HDLCStream</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;io, uint16_t max_frame_length)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_h_d_l_c_stream.html#a2f5d8153e67d66275a1db28fb5dd4b5a">HDLCStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;io, uint16_t max_frame_length)</td></tr>
+<tr class="memdesc:a2f5d8153e67d66275a1db28fb5dd4b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the input for the hdlc decoding. <br /></td></tr>
 <tr class="separator:a2f5d8153e67d66275a1db28fb5dd4b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="memItemLeft" align="right" valign="top"><a id="a692e2b18b3c2452e38e3f558ad87e9a5"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> () override</td></tr>
@@ -123,7 +125,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> () override</td></tr>
 <tr class="separator:ad0852e3297f3743332e629b9924c9375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c5c6275ddee80eb02839356b6185c0b"><td class="memItemLeft" align="right" valign="top"><a id="a4c5c6275ddee80eb02839356b6185c0b"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *data, size_t len) override</td></tr>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_h_d_l_c_stream.html#a4c5c6275ddee80eb02839356b6185c0b">readBytes</a> (uint8_t *data, size_t len) override</td></tr>
+<tr class="memdesc:a4c5c6275ddee80eb02839356b6185c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the decoded data. <br /></td></tr>
 <tr class="separator:a4c5c6275ddee80eb02839356b6185c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1220e7e3542f5a84c21fe2f7cef194c"><td class="memItemLeft" align="right" valign="top"><a id="ae1220e7e3542f5a84c21fe2f7cef194c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutput</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
@@ -135,7 +138,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b> (<a cla
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;io)</td></tr>
 <tr class="separator:adb6431a52f960531984ed824b2ac91b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7597ef706dd1aa590903ce9e095db20a"><td class="memItemLeft" align="right" valign="top"><a id="a7597ef706dd1aa590903ce9e095db20a"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *data, size_t len) override</td></tr>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_h_d_l_c_stream.html#a7597ef706dd1aa590903ce9e095db20a">write</a> (const uint8_t *data, size_t len) override</td></tr>
+<tr class="memdesc:a7597ef706dd1aa590903ce9e095db20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the encoded data to the defined output. <br /></td></tr>
 <tr class="separator:a7597ef706dd1aa590903ce9e095db20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a1df0136f5e211583b4c1f462fe29af"><td class="memItemLeft" align="right" valign="top"><a id="a5a1df0136f5e211583b4c1f462fe29af"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
@@ -150,7 +154,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>High-Level Data Link Control (HDLC) is a bit-oriented code-transparent synchronous data link layer protocol. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Communication/<a class="el" href="_h_d_l_c_stream_8h_source.html">HDLCStream.h</a></li>
+<li>src/Sandbox/<a class="el" href="_h_d_l_c_stream_8h_source.html">HDLCStream.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

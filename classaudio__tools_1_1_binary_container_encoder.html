@@ -138,9 +138,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a83d3556c550ee70078cc4d5f3518a077"><td class="memItemLeft" align="right" valign="top"><a id="a83d3556c550ee70078cc4d5f3518a077"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>output</b> (const uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a83d3556c550ee70078cc4d5f3518a077"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef1185334fe334f379d9c1862fb419b8"><td class="memItemLeft" align="right" valign="top"><a id="aef1185334fe334f379d9c1862fb419b8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setupIntialOutputStream</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;outStream)</td></tr>
-<tr class="separator:aef1185334fe334f379d9c1862fb419b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81ce3e0845da39bab8b3ba06a8b2a276"><td class="memItemLeft" align="right" valign="top"><a id="a81ce3e0845da39bab8b3ba06a8b2a276"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeAudio</b> (const uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a81ce3e0845da39bab8b3ba06a8b2a276"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,33 +159,21 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aa3de28cc1401a7913306c2f47b4d1a1e"><td class="memItemLeft" align="right" valign="top"><a id="aa3de28cc1401a7913306c2f47b4d1a1e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_beginning</b> = true</td></tr>
 <tr class="separator:aa3de28cc1401a7913306c2f47b4d1a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86634b37f7bef2f03060e0e8aec60470"><td class="memItemLeft" align="right" valign="top"><a id="a86634b37f7bef2f03060e0e8aec60470"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_initial_output</b> = true</td></tr>
-<tr class="separator:a86634b37f7bef2f03060e0e8aec60470"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20474c170471f9b3d24b915be857f3aa"><td class="memItemLeft" align="right" valign="top"><a id="a20474c170471f9b3d24b915be857f3aa"></a>
 <a class="el" href="structaudio__tools_1_1_simple_container_meta_data_header.html">SimpleContainerMetaDataHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>meta</b></td></tr>
 <tr class="separator:a20474c170471f9b3d24b915be857f3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a125b8f635f2405b891164572c2a578cd"><td class="memItemLeft" align="right" valign="top"><a id="a125b8f635f2405b891164572c2a578cd"></a>
 <a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_codec</b> = nullptr</td></tr>
 <tr class="separator:a125b8f635f2405b891164572c2a578cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45f8f97d0a3c4f5ae62987c4bfc84523"><td class="memItemLeft" align="right" valign="top"><a id="a45f8f97d0a3c4f5ae62987c4bfc84523"></a>
-<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_final_print</b> = nullptr</td></tr>
-<tr class="separator:a45f8f97d0a3c4f5ae62987c4bfc84523"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ea3a20c69ac9d8cb9487f3a0ba97f9c"><td class="memItemLeft" align="right" valign="top"><a id="a7ea3a20c69ac9d8cb9487f3a0ba97f9c"></a>
-<a class="el" href="classaudio__tools_1_1_audio_writer.html">AudioWriter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print1</b> = nullptr</td></tr>
-<tr class="separator:a7ea3a20c69ac9d8cb9487f3a0ba97f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac706771ebcd45705b744f485151b2d46"><td class="memItemLeft" align="right" valign="top"><a id="ac706771ebcd45705b744f485151b2d46"></a>
-<a class="el" href="classaudio__tools_1_1_audio_writer.html">AudioWriter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print2</b> = nullptr</td></tr>
-<tr class="separator:ac706771ebcd45705b744f485151b2d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memItemLeft" align="right" valign="top"><a id="aa42c30e02e51ec7cc38ea4ab215e0db4"></a>
+<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_out</b> = nullptr</td></tr>
+<tr class="separator:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac533968d25054bb4834354d63a27d1b8"><td class="memItemLeft" align="right" valign="top"><a id="ac533968d25054bb4834354d63a27d1b8"></a>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>packet_count</b> = 0</td></tr>
 <tr class="separator:ac533968d25054bb4834354d63a27d1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65552e693ebce50b934496e2c76dc935"><td class="memItemLeft" align="right" valign="top"><a id="a65552e693ebce50b934496e2c76dc935"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>repeat_header</b></td></tr>
 <tr class="separator:a65552e693ebce50b934496e2c76dc935"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb96f236c94c70adb27f95b09b2b6c9e"><td class="memItemLeft" align="right" valign="top"><a id="afb96f236c94c70adb27f95b09b2b6c9e"></a>
-<a class="el" href="classaudio__tools_1_1_container_target_print.html">ContainerTargetPrint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>target</b></td></tr>
-<tr class="separator:afb96f236c94c70adb27f95b09b2b6c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Wraps the encoded data into Config, Data, and <a class="el" href="class_meta.html" title="minimial implementtion of Meta which just ignores the data">Meta</a> segments so that we can recover the audio configuration and orignial segments if this is relevant. We assume that a full segment is written with each call of <a class="el" href="classaudio__tools_1_1_binary_container_encoder.html#a2685d88d9d964c749bce462858634b6e" title="Add data segment. On first write we also add a AudioInfo header.">write()</a>; The segments are separated with a new line character. </p>

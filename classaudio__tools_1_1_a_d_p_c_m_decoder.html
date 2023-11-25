@@ -95,7 +95,7 @@ Inheritance diagram for ADPCMDecoder:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a95173f2e6e02305a9b2c6917ac1b8d22"><td class="memItemLeft" align="right" valign="top"><a id="a95173f2e6e02305a9b2c6917ac1b8d22"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ADPCMDecoder</b> (AVCodecID id, int blockSize=ADAPCM_DEFAULT_BLOCK_SIZE)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ADPCMDecoder</b> (AVCodecID id, int <a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html#a2815303f369be3f443fa8ce5cd7a8fb6">blockSize</a>=ADAPCM_DEFAULT_BLOCK_SIZE)</td></tr>
 <tr class="separator:a95173f2e6e02305a9b2c6917ac1b8d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada56eff2516fb0a4f5091ce06805411a"><td class="memItemLeft" align="right" valign="top"><a id="ada56eff2516fb0a4f5091ce06805411a"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
@@ -106,9 +106,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () override
 <tr class="memitem:a6c23593971c66b1fee16958a3ad1b0a6"><td class="memItemLeft" align="right" valign="top"><a id="a6c23593971c66b1fee16958a3ad1b0a6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="separator:a6c23593971c66b1fee16958a3ad1b0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2815303f369be3f443fa8ce5cd7a8fb6"><td class="memItemLeft" align="right" valign="top"><a id="a2815303f369be3f443fa8ce5cd7a8fb6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html#a2815303f369be3f443fa8ce5cd7a8fb6">blockSize</a> ()</td></tr>
+<tr class="memdesc:a2815303f369be3f443fa8ce5cd7a8fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the block size (size of encoded frame) (only available after calling begin) <br /></td></tr>
+<tr class="separator:a2815303f369be3f443fa8ce5cd7a8fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memItemLeft" align="right" valign="top"><a id="a64e9fa75beda50a9e8400ee0d4e61984"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
 <tr class="separator:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7e0415ab9d167f9f1e57c3762be6e0"><td class="memItemLeft" align="right" valign="top"><a id="a0f7e0415ab9d167f9f1e57c3762be6e0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html#a0f7e0415ab9d167f9f1e57c3762be6e0">frameSize</a> ()</td></tr>
+<tr class="memdesc:a0f7e0415ab9d167f9f1e57c3762be6e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the frame size (size of decoded frame) (only available after calling begin) <br /></td></tr>
+<tr class="separator:a0f7e0415ab9d167f9f1e57c3762be6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b485ba5b9d96f94384f4a3840f84314"><td class="memItemLeft" align="right" valign="top"><a id="a2b485ba5b9d96f94384f4a3840f84314"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#a2b485ba5b9d96f94384f4a3840f84314">isResultPCM</a> ()</td></tr>
 <tr class="memdesc:a2b485ba5b9d96f94384f4a3840f84314"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the decoding result is PCM data. <br /></td></tr>
@@ -121,7 +129,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:accee684614189e73bdc9f1b2f7abf919"><td class="mdescLeft">&#160;</td><td class="mdescRight">for most decoders this is not needed <br /></td></tr>
 <tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e353ab993dc4c3e2f5336026922784c"><td class="memItemLeft" align="right" valign="top"><a id="a5e353ab993dc4c3e2f5336026922784c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlockSize</b> (int blockSize) override</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlockSize</b> (int <a class="el" href="classaudio__tools_1_1_a_d_p_c_m_decoder.html#a2815303f369be3f443fa8ce5cd7a8fb6">blockSize</a>) override</td></tr>
 <tr class="separator:a5e353ab993dc4c3e2f5336026922784c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4626becb07db8422467ad6e787b2b8d4"><td class="memItemLeft" align="right" valign="top"><a id="a4626becb07db8422467ad6e787b2b8d4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#a4626becb07db8422467ad6e787b2b8d4">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;notify) override</td></tr>
@@ -145,9 +153,9 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a48587e26605724dc8a80151f936c4abc"><td class="memItemLeft" align="right" valign="top"><a id="a48587e26605724dc8a80151f936c4abc"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>decode</b> (uint8_t byte)</td></tr>
-<tr class="separator:a48587e26605724dc8a80151f936c4abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f09a046d8ea172713352cb54d2f293"><td class="memItemLeft" align="right" valign="top"><a id="ae0f09a046d8ea172713352cb54d2f293"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>decode</b> (uint8_t byte)</td></tr>
+<tr class="separator:ae0f09a046d8ea172713352cb54d2f293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a2e475070d3df18395c90a10c9d38eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>

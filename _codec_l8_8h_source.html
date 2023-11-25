@@ -142,10 +142,10 @@ $(function() {
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        buffer[j] = convertSample(pt8[j]);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      }</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">size_t</span> result =</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        p_print-&gt;write((uint8_t *)buffer.data(), in_size * <span class="keyword">sizeof</span>(int16_t));</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    LOGD(<span class="stringliteral">&quot;DecoderL8 %d -&gt; %d&quot;</span>, (<span class="keywordtype">int</span>)in_size, (<span class="keywordtype">int</span>)result);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> result * <span class="keyword">sizeof</span>(int16_t);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">int</span> write_byte_count = in_size * <span class="keyword">sizeof</span>(int16_t);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">size_t</span> result = p_print-&gt;write((uint8_t *)buffer.data(), write_byte_count);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    LOGD(<span class="stringliteral">&quot;DecoderL8 %d -&gt; %d -&gt; %d&quot;</span>, (<span class="keywordtype">int</span>)in_size, write_byte_count, (<span class="keywordtype">int</span>)result);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> result / <span class="keyword">sizeof</span>(int16_t);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  int16_t convertSample(int16_t in) {</div>
@@ -203,8 +203,8 @@ $(function() {
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">size_t</span> result = p_print-&gt;write((uint8_t *)buffer.data(), samples);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    LOGD(<span class="stringliteral">&quot;EncoderL8 %d -&gt; %d&quot;</span>, (<span class="keywordtype">int</span>)in_size, (<span class="keywordtype">int</span>)result);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">return</span> result / <span class="keyword">sizeof</span>(int16_t);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    LOGD(<span class="stringliteral">&quot;EncoderL8 %d -&gt; %d -&gt; %d&quot;</span>, (<span class="keywordtype">int</span>)in_size,(<span class="keywordtype">int</span>) samples, (<span class="keywordtype">int</span>)result);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">return</span> result * <span class="keyword">sizeof</span>(int16_t);</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  }</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keyword">operator</span> bool()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> is_open; }</div>

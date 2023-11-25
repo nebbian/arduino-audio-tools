@@ -68,7 +68,8 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ContainerBinary.h File Reference</div>  </div>
 </div><!--header-->
@@ -91,8 +92,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_common_header.html">CommonHeader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_processed_result.html">ProcessedResult</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_simple_container_config.html">SimpleContainerConfig</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_simple_container_data_header.html">SimpleContainerDataHeader</a></td></tr>
@@ -114,6 +113,13 @@ Enumerations</h2></td></tr>
 , <b>Undefined</b> = 0
  }</td></tr>
 <tr class="separator:a4dd4453d1994a706c0eb2350ffa55372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a2d2bc66062c3f87c3d4e92962b737814"><td class="memItemLeft" align="right" valign="top"><a id="a2d2bc66062c3f87c3d4e92962b737814"></a>
+static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a2d2bc66062c3f87c3d4e92962b737814">checkSum</a> (const uint8_t *data, size_t len)</td></tr>
+<tr class="memdesc:a2d2bc66062c3f87c3d4e92962b737814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the checksum. <br /></td></tr>
+<tr class="separator:a2d2bc66062c3f87c3d4e92962b737814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A lean and efficient container format which provides Header records with audio info, Audio records with the audio and <a class="el" href="class_meta.html" title="minimial implementtion of Meta which just ignores the data">Meta</a> which can contain any additional information. This can be used together with a codec which does not transmit the audio information or has variable frame lengths. We expect that a single write() is providing full frames. </p>
