@@ -19,7 +19,7 @@ var searchData=
   ['vector_3c_20audio_5ftools_3a_3achannelsplitoutput_3a_3achannelselectionoutputdef_20_3e_2076',['Vector&lt; audio_tools::ChannelSplitOutput::ChannelSelectionOutputDef &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
   ['vector_3c_20audio_5ftools_3a_3ahttpheaderline_20_2a_20_3e_2077',['Vector&lt; audio_tools::HttpHeaderLine * &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
   ['vector_3c_20audio_5ftools_3a_3aint24_5f4bytes_5ft_20_3e_2078',['Vector&lt; audio_tools::int24_4bytes_t &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
-  ['vector_3c_20audio_5ftools_3a_3amedianfilter_3a_3asmediannode_5ft_20_3e_2079',['Vector&lt; audio_tools::MedianFilter::sMedianNode_t &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
+  ['vector_3c_20audio_5ftools_3a_3amedianfilter_3a_3amediannode_5ft_20_3e_2079',['Vector&lt; audio_tools::MedianFilter::MedianNode_t &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
   ['vector_3c_20audio_5ftools_3a_3apininfoesp32_20_3e_2080',['Vector&lt; audio_tools::PinInfoESP32 &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
   ['vector_3c_20audio_5ftools_3a_3aringbuffer_3c_20t_20_3e_20_2a_20_3e_2081',['Vector&lt; audio_tools::RingBuffer&lt; T &gt; * &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
   ['vector_3c_20audio_5ftools_3a_3asoundgenerator_3c_20t_20_3e_20_2a_20_3e_2082',['Vector&lt; audio_tools::SoundGenerator&lt; T &gt; * &gt;',['../classaudio__tools_1_1_vector.html',1,'audio_tools']]],
