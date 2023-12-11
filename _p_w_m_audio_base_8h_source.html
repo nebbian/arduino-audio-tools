@@ -109,7 +109,7 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    uint8_t buffers = PWM_BUFFER_COUNT; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// additinal info which might not be used by all processors</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    uint16_t pwm_frequency = PWM_AUDIO_FREQUENCY;  <span class="comment">// audable range is from 20 to 20,000Hz (not used by ESP32)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    uint32_t pwm_frequency = PWM_AUDIO_FREQUENCY;  <span class="comment">// audable range is from 20 to 20,000Hz (not used by ESP32)</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    uint8_t resolution = 8;     <span class="comment">// Only used by ESP32: must be between 8 and 11 -&gt; drives pwm frequency</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    uint8_t timer_id = 0;       <span class="comment">// Only used by ESP32 must be between 0 and 3</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
