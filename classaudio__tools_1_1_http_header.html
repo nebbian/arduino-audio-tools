@@ -93,10 +93,10 @@ Inheritance diagram for HttpHeader:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7c7d6f6063db2f53479f140616be5724"><td class="memItemLeft" align="right" valign="top"><a id="a7c7d6f6063db2f53479f140616be5724"></a>
-<a class="el" href="classaudio__tools_1_1_http_header.html">HttpHeader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#a7c7d6f6063db2f53479f140616be5724">clear</a> (bool activeFlag=true)</td></tr>
-<tr class="memdesc:a7c7d6f6063db2f53479f140616be5724"><td class="mdescLeft">&#160;</td><td class="mdescRight">clears the data - usually we do not delete but we just set the active flag <br /></td></tr>
-<tr class="separator:a7c7d6f6063db2f53479f140616be5724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2e33c7d190679b4d7d3041004ee7f22"><td class="memItemLeft" align="right" valign="top"><a id="ae2e33c7d190679b4d7d3041004ee7f22"></a>
+<a class="el" href="classaudio__tools_1_1_http_header.html">HttpHeader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#ae2e33c7d190679b4d7d3041004ee7f22">clear</a> ()</td></tr>
+<tr class="memdesc:ae2e33c7d190679b4d7d3041004ee7f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">clears the data <br /></td></tr>
+<tr class="separator:ae2e33c7d190679b4d7d3041004ee7f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a734851852611a16f17cd730bffd5a649"><td class="memItemLeft" align="right" valign="top"><a id="a734851852611a16f17cd730bffd5a649"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (const char *key)</td></tr>
 <tr class="separator:a734851852611a16f17cd730bffd5a649"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,9 +131,9 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>protocol</b> 
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#ab6a96bc1717a2149db3a537261ccead4">read</a> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;in)</td></tr>
 <tr class="memdesc:ab6a96bc1717a2149db3a537261ccead4"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads the full header from the request (stream) <br /></td></tr>
 <tr class="separator:ab6a96bc1717a2149db3a537261ccead4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8caab7f20230d6c549cd1bb5c0e5c31"><td class="memItemLeft" align="right" valign="top"><a id="ae8caab7f20230d6c549cd1bb5c0e5c31"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>readLine</b> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;in, char *str, int len)</td></tr>
-<tr class="separator:ae8caab7f20230d6c549cd1bb5c0e5c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad90c3c05948c75147df93217dae5ec3"><td class="memItemLeft" align="right" valign="top"><a id="aad90c3c05948c75147df93217dae5ec3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>readLine</b> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;in, char *str, int len)</td></tr>
+<tr class="separator:aad90c3c05948c75147df93217dae5ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaff16011b9bf3abcaef5270fbb78857a"><td class="memItemLeft" align="right" valign="top"><a id="aaff16011b9bf3abcaef5270fbb78857a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#aaff16011b9bf3abcaef5270fbb78857a">setAutoCreateLines</a> (bool is_auto_line)</td></tr>
 <tr class="memdesc:aaff16011b9bf3abcaef5270fbb78857a"><td class="mdescLeft">&#160;</td><td class="mdescRight">automatically create new lines <br /></td></tr>
@@ -157,9 +157,9 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>urlPath</b> (
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#a85a50bfb440e119c8740b9f37334a401">write</a> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;out)</td></tr>
 <tr class="memdesc:a85a50bfb440e119c8740b9f37334a401"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes the full header to the indicated HttpStreamedMultiOutput stream <br /></td></tr>
 <tr class="separator:a85a50bfb440e119c8740b9f37334a401"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a651bcaa6e1bbae6aa88d0c811a056b62"><td class="memItemLeft" align="right" valign="top"><a id="a651bcaa6e1bbae6aa88d0c811a056b62"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>writeHeaderLine</b> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;out, <a class="el" href="structaudio__tools_1_1_http_header_line.html">HttpHeaderLine</a> *header)</td></tr>
-<tr class="separator:a651bcaa6e1bbae6aa88d0c811a056b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6603cf69c6f36bae07179f15c85ccd"><td class="memItemLeft" align="right" valign="top"><a id="a6d6603cf69c6f36bae07179f15c85ccd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>writeHeaderLine</b> (<a class="el" href="classaudio__tools_1_1_client.html">Client</a> &amp;out, <a class="el" href="structaudio__tools_1_1_http_header_line.html">HttpHeaderLine</a> &amp;header)</td></tr>
+<tr class="separator:a6d6603cf69c6f36bae07179f15c85ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -203,9 +203,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_chunked</b> = fals
 <tr class="memitem:ae83eb0d3cd77f7ecd5ff95ee00ebc3e9"><td class="memItemLeft" align="right" valign="top"><a id="ae83eb0d3cd77f7ecd5ff95ee00ebc3e9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_written</b> = false</td></tr>
 <tr class="separator:ae83eb0d3cd77f7ecd5ff95ee00ebc3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24891b9e0f908cc99ea3018fb701d249"><td class="memItemLeft" align="right" valign="top"><a id="a24891b9e0f908cc99ea3018fb701d249"></a>
-<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="structaudio__tools_1_1_http_header_line.html">HttpHeaderLine</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>lines</b></td></tr>
-<tr class="separator:a24891b9e0f908cc99ea3018fb701d249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1568e360560e33f08a8d24cfae773abd"><td class="memItemLeft" align="right" valign="top"><a id="a1568e360560e33f08a8d24cfae773abd"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="structaudio__tools_1_1_http_header_line.html">HttpHeaderLine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>lines</b></td></tr>
+<tr class="separator:a1568e360560e33f08a8d24cfae773abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ad7a5883726a02d69febc79f7b17883"><td class="memItemLeft" align="right" valign="top"><a id="a6ad7a5883726a02d69febc79f7b17883"></a>
 MethodID&#160;</td><td class="memItemRight" valign="bottom"><b>method_id</b></td></tr>
 <tr class="separator:a6ad7a5883726a02d69febc79f7b17883"><td class="memSeparator" colspan="2">&#160;</td></tr>
