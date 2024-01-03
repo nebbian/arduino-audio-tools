@@ -135,47 +135,50 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            }</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            protocolStr.<a class="code" href="classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed">substring</a>(urlStr, 0,protocolEnd);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordtype">int</span> portStart = urlStr.<a class="code" href="classaudio__tools_1_1_str.html#aee2206b824ab694471714e3fdc981652">indexOf</a>(<span class="stringliteral">&quot;:&quot;</span>,protocolEnd+3);            </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordtype">int</span> hostEnd = portStart!=-1 ? portStart : urlStr.<a class="code" href="classaudio__tools_1_1_str.html#aee2206b824ab694471714e3fdc981652">indexOf</a>(<span class="stringliteral">&quot;/&quot;</span>,protocolEnd+4);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">// we have not path -&gt; so then host end is the end of string</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span> (hostEnd==-1){</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                hostEnd = urlStr.<a class="code" href="classaudio__tools_1_1_str.html#a4c78c47ce1c204f9d233485b8036ac0e">length</a>();                </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            hostStr.<a class="code" href="classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed">substring</a>(urlStr, protocolEnd+3,hostEnd);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">if</span> (portStart&gt;0){</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                portInt = atoi(urlStr.<a class="code" href="classaudio__tools_1_1_str.html#a9ccdbd62a9a4ce6642622d748894728e">c_str</a>()+portStart+1);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">if</span> (protocolStr.<a class="code" href="classaudio__tools_1_1_str.html#a59cd76cd53162d7d050c437663352bc5">startsWith</a>(<span class="stringliteral">&quot;https&quot;</span>))</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    portInt = 443;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (protocolStr.<a class="code" href="classaudio__tools_1_1_str.html#a59cd76cd53162d7d050c437663352bc5">startsWith</a>(<span class="stringliteral">&quot;http&quot;</span>))</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    portInt = 80;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (protocolStr.<a class="code" href="classaudio__tools_1_1_str.html#a59cd76cd53162d7d050c437663352bc5">startsWith</a>(<span class="stringliteral">&quot;ftp&quot;</span>))</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                    portInt = 21;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    portInt = -1; <span class="comment">// undefined</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordtype">int</span> pathStart = urlStr.<a class="code" href="classaudio__tools_1_1_str.html#aee2206b824ab694471714e3fdc981652">indexOf</a>(<span class="stringliteral">&quot;/&quot;</span>,protocolEnd+4);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">if</span> (pathStart==0){</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="comment">// we have no path</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                pathStr = <span class="stringliteral">&quot;/&quot;</span>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                urlRootStr = urlStr;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                pathStr.<a class="code" href="classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed">substring</a>(urlStr, pathStart, urlStr.<a class="code" href="classaudio__tools_1_1_str.html#a4c78c47ce1c204f9d233485b8036ac0e">length</a>());</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                pathStr.<a class="code" href="classaudio__tools_1_1_str.html#a956b07c2f06dbbd4a45bc77be5085932">trim</a>();</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                urlRootStr.<a class="code" href="classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed">substring</a>(urlStr, 0, pathStart);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            LOGI(<span class="stringliteral">&quot;url-&gt;%s&quot;</span>,url());</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            LOGI(<span class="stringliteral">&quot;host-&gt;%s&quot;</span>,host());</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            LOGI(<span class="stringliteral">&quot;protocol-&gt;%s&quot;</span>,protocol());</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            LOGI(<span class="stringliteral">&quot;path-&gt;%s&quot;</span>,path());</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            LOGI(<span class="stringliteral">&quot;port-&gt;%d&quot;</span>,port());</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;           </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordtype">int</span> pathStart = urlStr.<a class="code" href="classaudio__tools_1_1_str.html#aee2206b824ab694471714e3fdc981652">indexOf</a>(<span class="stringliteral">&quot;/&quot;</span>,protocolEnd+4);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordtype">int</span> portStart = urlStr.<a class="code" href="classaudio__tools_1_1_str.html#aee2206b824ab694471714e3fdc981652">indexOf</a>(<span class="stringliteral">&quot;:&quot;</span>,protocolEnd+3);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">// check if the found portStart isn&#39;t part of the path</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            portStart = portStart &lt; pathStart ? portStart : -1;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordtype">int</span> hostEnd = portStart != -1 ? portStart : pathStart;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="comment">// we have not path -&gt; so then host end is the end of string</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">if</span> (hostEnd==-1){</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                hostEnd = urlStr.<a class="code" href="classaudio__tools_1_1_str.html#a4c78c47ce1c204f9d233485b8036ac0e">length</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            hostStr.<a class="code" href="classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed">substring</a>(urlStr, protocolEnd+3,hostEnd);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">if</span> (portStart&gt;0){</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                portInt = atoi(urlStr.<a class="code" href="classaudio__tools_1_1_str.html#a9ccdbd62a9a4ce6642622d748894728e">c_str</a>()+portStart+1);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">if</span> (protocolStr.<a class="code" href="classaudio__tools_1_1_str.html#a59cd76cd53162d7d050c437663352bc5">startsWith</a>(<span class="stringliteral">&quot;https&quot;</span>))</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    portInt = 443;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (protocolStr.<a class="code" href="classaudio__tools_1_1_str.html#a59cd76cd53162d7d050c437663352bc5">startsWith</a>(<span class="stringliteral">&quot;http&quot;</span>))</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    portInt = 80;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (protocolStr.<a class="code" href="classaudio__tools_1_1_str.html#a59cd76cd53162d7d050c437663352bc5">startsWith</a>(<span class="stringliteral">&quot;ftp&quot;</span>))</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    portInt = 21;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    portInt = -1; <span class="comment">// undefined</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordtype">int</span> pathStart = urlStr.<a class="code" href="classaudio__tools_1_1_str.html#aee2206b824ab694471714e3fdc981652">indexOf</a>(<span class="stringliteral">&quot;/&quot;</span>,protocolEnd+4);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">if</span> (pathStart&lt;=0){</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="comment">// we have no path</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                pathStr = <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                urlRootStr = urlStr;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                pathStr.<a class="code" href="classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed">substring</a>(urlStr, pathStart, urlStr.<a class="code" href="classaudio__tools_1_1_str.html#a4c78c47ce1c204f9d233485b8036ac0e">length</a>());</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                pathStr.<a class="code" href="classaudio__tools_1_1_str.html#a956b07c2f06dbbd4a45bc77be5085932">trim</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                urlRootStr.<a class="code" href="classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed">substring</a>(urlStr, 0, pathStart);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            LOGI(<span class="stringliteral">&quot;url-&gt;%s&quot;</span>,url());</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            LOGI(<span class="stringliteral">&quot;host-&gt;%s&quot;</span>,host());</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            LOGI(<span class="stringliteral">&quot;protocol-&gt;%s&quot;</span>,protocol());</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            LOGI(<span class="stringliteral">&quot;path-&gt;%s&quot;</span>,path());</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            LOGI(<span class="stringliteral">&quot;port-&gt;%d&quot;</span>,port());</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;           </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
 <div class="ttc" id="aclassaudio__tools_1_1_str_ext_html"><div class="ttname"><a href="classaudio__tools_1_1_str_ext.html">audio_tools::StrExt</a></div><div class="ttdoc">Str which keeps the data on the heap. We grow the allocated memory only if the copy source is not fit...</div><div class="ttdef"><b>Definition:</b> StrExt.h:23</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_str_html_a4c78c47ce1c204f9d233485b8036ac0e"><div class="ttname"><a href="classaudio__tools_1_1_str.html#a4c78c47ce1c204f9d233485b8036ac0e">audio_tools::Str::length</a></div><div class="ttdeci">virtual int length()</div><div class="ttdoc">provides the current length (filled with characters) of the string - excluding the terminating 0</div><div class="ttdef"><b>Definition:</b> Str.h:417</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_str_html_a59cd76cd53162d7d050c437663352bc5"><div class="ttname"><a href="classaudio__tools_1_1_str.html#a59cd76cd53162d7d050c437663352bc5">audio_tools::Str::startsWith</a></div><div class="ttdeci">virtual bool startsWith(const char *str)</div><div class="ttdoc">checks if the string starts with the indicated substring</div><div class="ttdef"><b>Definition:</b> Str.h:176</div></div>
