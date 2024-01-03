@@ -157,28 +157,27 @@ $(function() {
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">else</span> </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    portInt = -1; <span class="comment">// undefined</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordtype">int</span> pathStart = urlStr.<a class="code" href="classaudio__tools_1_1_str.html#aee2206b824ab694471714e3fdc981652">indexOf</a>(<span class="stringliteral">&quot;/&quot;</span>,protocolEnd+4);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">if</span> (pathStart&lt;=0){</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="comment">// we have no path</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                pathStr = <span class="stringliteral">&quot;/&quot;</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                urlRootStr = urlStr;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                pathStr.<a class="code" href="classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed">substring</a>(urlStr, pathStart, urlStr.<a class="code" href="classaudio__tools_1_1_str.html#a4c78c47ce1c204f9d233485b8036ac0e">length</a>());</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                pathStr.<a class="code" href="classaudio__tools_1_1_str.html#a956b07c2f06dbbd4a45bc77be5085932">trim</a>();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                urlRootStr.<a class="code" href="classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed">substring</a>(urlStr, 0, pathStart);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            LOGI(<span class="stringliteral">&quot;url-&gt;%s&quot;</span>,url());</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            LOGI(<span class="stringliteral">&quot;host-&gt;%s&quot;</span>,host());</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            LOGI(<span class="stringliteral">&quot;protocol-&gt;%s&quot;</span>,protocol());</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            LOGI(<span class="stringliteral">&quot;path-&gt;%s&quot;</span>,path());</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            LOGI(<span class="stringliteral">&quot;port-&gt;%d&quot;</span>,port());</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;           </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">if</span> (pathStart&lt;=0){</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="comment">// we have no path</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                pathStr = <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                urlRootStr = urlStr;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                pathStr.<a class="code" href="classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed">substring</a>(urlStr, pathStart, urlStr.<a class="code" href="classaudio__tools_1_1_str.html#a4c78c47ce1c204f9d233485b8036ac0e">length</a>());</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                pathStr.<a class="code" href="classaudio__tools_1_1_str.html#a956b07c2f06dbbd4a45bc77be5085932">trim</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                urlRootStr.<a class="code" href="classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed">substring</a>(urlStr, 0, pathStart);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            LOGI(<span class="stringliteral">&quot;url-&gt;%s&quot;</span>,url());</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            LOGI(<span class="stringliteral">&quot;host-&gt;%s&quot;</span>,host());</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            LOGI(<span class="stringliteral">&quot;protocol-&gt;%s&quot;</span>,protocol());</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            LOGI(<span class="stringliteral">&quot;path-&gt;%s&quot;</span>,path());</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            LOGI(<span class="stringliteral">&quot;port-&gt;%d&quot;</span>,port());</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;           </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
 <div class="ttc" id="aclassaudio__tools_1_1_str_ext_html"><div class="ttname"><a href="classaudio__tools_1_1_str_ext.html">audio_tools::StrExt</a></div><div class="ttdoc">Str which keeps the data on the heap. We grow the allocated memory only if the copy source is not fit...</div><div class="ttdef"><b>Definition:</b> StrExt.h:23</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_str_html_a4c78c47ce1c204f9d233485b8036ac0e"><div class="ttname"><a href="classaudio__tools_1_1_str.html#a4c78c47ce1c204f9d233485b8036ac0e">audio_tools::Str::length</a></div><div class="ttdeci">virtual int length()</div><div class="ttdoc">provides the current length (filled with characters) of the string - excluding the terminating 0</div><div class="ttdef"><b>Definition:</b> Str.h:417</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_str_html_a59cd76cd53162d7d050c437663352bc5"><div class="ttname"><a href="classaudio__tools_1_1_str.html#a59cd76cd53162d7d050c437663352bc5">audio_tools::Str::startsWith</a></div><div class="ttdeci">virtual bool startsWith(const char *str)</div><div class="ttdoc">checks if the string starts with the indicated substring</div><div class="ttdef"><b>Definition:</b> Str.h:176</div></div>
