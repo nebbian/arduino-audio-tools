@@ -116,6 +116,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> 
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue_stream.html#a4d2a8f208d69989c8676b0c632c9ea5c">begin</a> () override</td></tr>
 <tr class="memdesc:a4d2a8f208d69989c8676b0c632c9ea5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates the output. <br /></td></tr>
 <tr class="separator:a4d2a8f208d69989c8676b0c632c9ea5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e935d9eef41dd22eb92a6f570de4eda"><td class="memItemLeft" align="right" valign="top"><a id="a5e935d9eef41dd22eb92a6f570de4eda"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue_stream.html#a5e935d9eef41dd22eb92a6f570de4eda">begin</a> (size_t activeWhenPercentFilled)</td></tr>
+<tr class="memdesc:a5e935d9eef41dd22eb92a6f570de4eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate only when filled buffer reached %. <br /></td></tr>
+<tr class="separator:a5e935d9eef41dd22eb92a6f570de4eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top"><a id="ac8bb3912a3ce86b15842e79d0b421204"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue_stream.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
 <tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the data in the buffer. <br /></td></tr>
@@ -175,6 +179,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td>
 <tr class="memitem:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memItemLeft" align="right" valign="top"><a id="a03c996f9fcf0e10baeb3e700be0c409a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b></td></tr>
 <tr class="separator:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7408a2971325ed3ea34ee54c8b4286b6"><td class="memItemLeft" align="right" valign="top"><a id="a7408a2971325ed3ea34ee54c8b4286b6"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>active_limit</b> = 0</td></tr>
+<tr class="separator:a7408a2971325ed3ea34ee54c8b4286b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11e7fe40b7c8588f3111374e9e8c0bc4"><td class="memItemLeft" align="right" valign="top"><a id="a11e7fe40b7c8588f3111374e9e8c0bc4"></a>
 <a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>callback_buffer_ptr</b></td></tr>
 <tr class="separator:a11e7fe40b7c8588f3111374e9e8c0bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
