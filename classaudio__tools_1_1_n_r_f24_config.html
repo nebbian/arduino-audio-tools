@@ -90,9 +90,9 @@ rf24_gpio_pin_t&#160;</td><td class="memItemRight" valign="bottom"><b>cs_pin</b>
 <tr class="memitem:a652d2e2b87a9d17d6a3579281e19c38f"><td class="memItemLeft" align="right" valign="top"><a id="a652d2e2b87a9d17d6a3579281e19c38f"></a>
 rf24_datarate_e&#160;</td><td class="memItemRight" valign="bottom"><b>data_rate</b> = RF24_2MBPS</td></tr>
 <tr class="separator:a652d2e2b87a9d17d6a3579281e19c38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07c206a08f7003823322e85d9e3f8702"><td class="memItemLeft" align="right" valign="top"><a id="a07c206a08f7003823322e85d9e3f8702"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>default_address</b> [][6] = {&quot;1Node&quot;, &quot;2Node&quot;}</td></tr>
-<tr class="separator:a07c206a08f7003823322e85d9e3f8702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a99d3072a5c9415eb3adebe39f8b70b"><td class="memItemLeft" align="right" valign="top"><a id="a6a99d3072a5c9415eb3adebe39f8b70b"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>default_address</b> [2][6] = {&quot;1Node&quot;, &quot;2Node&quot;}</td></tr>
+<tr class="separator:a6a99d3072a5c9415eb3adebe39f8b70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0db7710273d69e0c205ea33405adb11"><td class="memItemLeft" align="right" valign="top"><a id="ad0db7710273d69e0c205ea33405adb11"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>default_number</b> = 0</td></tr>
 <tr class="separator:ad0db7710273d69e0c205ea33405adb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,7 +103,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>default_number</b>
 rf24_pa_dbm_e&#160;</td><td class="memItemRight" valign="bottom"><b>pa_level</b> = RF24_PA_MAX</td></tr>
 <tr class="separator:ade35fdff23a6fe3e751350c21b338000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b309f49c2573650171f9aad758ff3be"><td class="memItemLeft" align="right" valign="top"><a id="a9b309f49c2573650171f9aad758ff3be"></a>
-NRF24Role&#160;</td><td class="memItemRight" valign="bottom"><b>role</b> = Unidirectional</td></tr>
+NRF24Role&#160;</td><td class="memItemRight" valign="bottom"><b>role</b> = NRF24Role::Unidirectional</td></tr>
 <tr class="separator:a9b309f49c2573650171f9aad758ff3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42faa41bb5de62399d1e9d44f8703f76"><td class="memItemLeft" align="right" valign="top"><a id="a42faa41bb5de62399d1e9d44f8703f76"></a>
 _SPI *&#160;</td><td class="memItemRight" valign="bottom"><b>spi</b> = &amp;SPI</td></tr>
