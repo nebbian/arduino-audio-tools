@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['g7xxcodec_5fe_3037',['G7xxCODEC_e',['../namespaceaudio__tools.html#a44f4d7d26b9f81198ebefe8c302ee30c',1,'audio_tools']]]
+  ['fillleftandrightstatus_3038',['FillLeftAndRightStatus',['../group__convert.html#ga077b71bccfdb0bda598c8ec04372c474',1,'audio_tools']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['i2sformat_3038',['I2SFormat',['../namespaceaudio__tools.html#a720616ce211566d808f3e441f9b18cda',1,'audio_tools']]],
-  ['id3typeselection_3039',['ID3TypeSelection',['../group__metadata.html#ga27477aa4d162c65da12c7ffd964f5779',1,'audio_tools']]]
+  ['g7xxcodec_5fe_3039',['G7xxCODEC_e',['../namespaceaudio__tools.html#a44f4d7d26b9f81198ebefe8c302ee30c',1,'audio_tools']]]
 ];
