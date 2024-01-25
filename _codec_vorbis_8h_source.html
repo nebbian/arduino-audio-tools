@@ -138,7 +138,7 @@ $(function() {
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span> (is_first){</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="comment">// wait for some data</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">if</span>(p_in-&gt;available()&lt;VORBIS_HEADER_OPEN_LIMIT){</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">delay</a>(20);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="namespaceaudio__tools.html#a7f2dfce1046bdd2a2b753643726c2346">delay</a>(20);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      }</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      LOGI(<span class="stringliteral">&quot;available: %d&quot;</span>, p_in-&gt;available());</div>
@@ -173,7 +173,7 @@ $(function() {
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      }</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      p_out-&gt;write(pcm.data(), result);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <a class="code" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">delay</a>(1);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <a class="code" href="namespaceaudio__tools.html#a7f2dfce1046bdd2a2b753643726c2346">delay</a>(1);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keywordflow">if</span> (result==-3){</div>
@@ -280,7 +280,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_vorbis_decoder_html_a7c3e14d99bd3dc0e3670d6956dafcaf2"><div class="ttname"><a href="classaudio__tools_1_1_vorbis_decoder.html#a7c3e14d99bd3dc0e3670d6956dafcaf2">audio_tools::VorbisDecoder::begin</a></div><div class="ttdeci">void begin() override</div><div class="ttdoc">Starts the processing.</div><div class="ttdef"><b>Definition:</b> CodecVorbis.h:43</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vorbis_decoder_html_aed4bf0d5ce93f27242be485943d0b37d"><div class="ttname"><a href="classaudio__tools_1_1_vorbis_decoder.html#aed4bf0d5ce93f27242be485943d0b37d">audio_tools::VorbisDecoder::audioInfo</a></div><div class="ttdeci">AudioInfo audioInfo() override</div><div class="ttdoc">Provides the last available MP3FrameInfo.</div><div class="ttdef"><b>Definition:</b> CodecVorbis.h:75</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_ac2aa00330b2018c3480d5688fa1cc800"><div class="ttname"><a href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">audio_tools::delay</a></div><div class="ttdeci">void delay(uint32_t ms)</div><div class="ttdoc">Waits for the indicated milliseconds.</div><div class="ttdef"><b>Definition:</b> Millis.h:10</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_a7f2dfce1046bdd2a2b753643726c2346"><div class="ttname"><a href="namespaceaudio__tools.html#a7f2dfce1046bdd2a2b753643726c2346">audio_tools::delay</a></div><div class="ttdeci">void delay(uint32_t ms)</div><div class="ttdoc">Waits for the indicated milliseconds.</div><div class="ttdef"><b>Definition:</b> Millis.h:10</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -172,7 +172,7 @@ $(function() {
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      WiFi.begin(cfg.ssid, cfg.password);</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">while</span> (WiFi.status() != WL_CONNECTED) {</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        Serial.print(<span class="charliteral">&#39;.&#39;</span>);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">delay</a>(1000);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="namespaceaudio__tools.html#a7f2dfce1046bdd2a2b753643726c2346">delay</a>(1000);</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
@@ -260,7 +260,7 @@ $(function() {
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="comment">// wait for confirmation</span></div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">if</span> (cfg.use_send_ack) {</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;          <span class="keywordflow">while</span> (available_to_write == 0) {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <a class="code" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">delay</a>(1);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <a class="code" href="namespaceaudio__tools.html#a7f2dfce1046bdd2a2b753643726c2346">delay</a>(1);</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;          }</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;          is_write_ok = <span class="keyword">true</span>;</div>
@@ -280,12 +280,12 @@ $(function() {
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        }</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="comment">// if we do have no partner to write we stall and retry later</span></div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <a class="code" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">delay</a>(cfg.delay_after_write_ms);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <a class="code" href="namespaceaudio__tools.html#a7f2dfce1046bdd2a2b753643726c2346">delay</a>(cfg.delay_after_write_ms);</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      }</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="comment">// Wait some time before we retry</span></div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      <span class="keywordflow">if</span> (!is_write_ok) {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">delay</a>(cfg.delay_after_failed_write_ms);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="namespaceaudio__tools.html#a7f2dfce1046bdd2a2b753643726c2346">delay</a>(cfg.delay_after_failed_write_ms);</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      }</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">return</span> result;</div>
@@ -406,7 +406,7 @@ $(function() {
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    ESPNowStreamSelf-&gt;setupReceiveBuffer();</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="comment">// blocking write</span></div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">while</span> (bufferAvailableForWrite() &lt; data_len) {</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <a class="code" href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">delay</a>(2);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <a class="code" href="namespaceaudio__tools.html#a7f2dfce1046bdd2a2b753643726c2346">delay</a>(2);</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    }</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    Lock lock(ESPNowStreamSelf-&gt;write_lock);</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordtype">size_t</span> result = ESPNowStreamSelf-&gt;p_buffer-&gt;<a class="code" href="classaudio__tools_1_1_base_buffer.html#a2b6c561aac2af64aafac1946b6e46393">writeArray</a>(data, data_len);</div>
@@ -460,7 +460,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_lock_html"><div class="ttname"><a href="classaudio__tools_1_1_lock.html">audio_tools::Lock</a></div><div class="ttdoc">A simple RIA locking class for the ESP32 using _lock_t.</div><div class="ttdef"><b>Definition:</b> ESPNowStream.h:23</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_str_html"><div class="ttname"><a href="classaudio__tools_1_1_str.html">audio_tools::Str</a></div><div class="ttdoc">A simple wrapper to provide string functions on char*. If the underlying char* is a const we do not a...</div><div class="ttdef"><b>Definition:</b> Str.h:26</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
-<div class="ttc" id="anamespaceaudio__tools_html_ac2aa00330b2018c3480d5688fa1cc800"><div class="ttname"><a href="namespaceaudio__tools.html#ac2aa00330b2018c3480d5688fa1cc800">audio_tools::delay</a></div><div class="ttdeci">void delay(uint32_t ms)</div><div class="ttdoc">Waits for the indicated milliseconds.</div><div class="ttdef"><b>Definition:</b> Millis.h:10</div></div>
+<div class="ttc" id="anamespaceaudio__tools_html_a7f2dfce1046bdd2a2b753643726c2346"><div class="ttname"><a href="namespaceaudio__tools.html#a7f2dfce1046bdd2a2b753643726c2346">audio_tools::delay</a></div><div class="ttdeci">void delay(uint32_t ms)</div><div class="ttdoc">Waits for the indicated milliseconds.</div><div class="ttdef"><b>Definition:</b> Millis.h:10</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_e_s_p_now_stream_config_html"><div class="ttname"><a href="structaudio__tools_1_1_e_s_p_now_stream_config.html">audio_tools::ESPNowStreamConfig</a></div><div class="ttdoc">Configuration for ESP-NOW protocolö.W.</div><div class="ttdef"><b>Definition:</b> ESPNowStream.h:42</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_e_s_p_now_stream_config_html_a4574b7c5bb954f02512bab0493b16955"><div class="ttname"><a href="structaudio__tools_1_1_e_s_p_now_stream_config.html#a4574b7c5bb954f02512bab0493b16955">audio_tools::ESPNowStreamConfig::primary_master_key</a></div><div class="ttdeci">const char * primary_master_key</div><div class="ttdoc">to encrypt set primary_master_key and local_master_key to 16 byte strings</div><div class="ttdef"><b>Definition:</b> ESPNowStream.h:62</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_e_s_p_now_stream_config_html_add99443712e271bc9d643939e9d1eab7"><div class="ttname"><a href="structaudio__tools_1_1_e_s_p_now_stream_config.html#add99443712e271bc9d643939e9d1eab7">audio_tools::ESPNowStreamConfig::rate</a></div><div class="ttdeci">wifi_phy_rate_t rate</div><div class="ttdoc">esp-now bit rate</div><div class="ttdef"><b>Definition:</b> ESPNowStream.h:65</div></div>
