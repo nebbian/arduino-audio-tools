@@ -954,7 +954,7 @@ $(function() {
 <div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;        }</div>
 <div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160; </div>
 <div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;        <span class="keywordtype">size_t</span> readBytes(uint8_t *data, <span class="keywordtype">size_t</span> length)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;           <span class="keywordtype">size_t</span> result; p_stream-&gt;readBytes(data, length);</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;           <span class="keywordtype">size_t</span> result = p_stream-&gt;readBytes(data, length);</div>
 <div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;           <span class="keywordflow">return</span> p_converter-&gt;convert(data, result); </div>
 <div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;        }</div>
 <div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160; </div>
