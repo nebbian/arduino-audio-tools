@@ -237,7 +237,7 @@ $(function() {
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;              LOGI(<span class="stringliteral">&quot;setVolume: %f&quot;</span>, volume_value);</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;              <span class="keywordtype">float</span> factor = volumeControl().<a class="code" href="classaudio__tools_1_1_volume_control.html#ab9c01325a5a52a051934968f66b4a04c">getVolumeFactor</a>(volume_value);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;              volume_values[channel]=volume_value;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">              #ifdef PREFER_FIXEDPOINT</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">              #if PREFER_FIXEDPOINT</span></div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <span class="comment">//convert float to fixed point 2.6</span></div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                <span class="comment">//Fixedpoint-Math from https://github.com/earlephilhower/ESP8266Audio/blob/0abcf71012f6128d52a6bcd155ed1404d6cc6dcd/src/AudioOutput.h#L67</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                <span class="keywordflow">if</span>(factor &gt; 4.0) factor = 4.0;<span class="comment">//factor can only be &gt;1 if allow_boost == true TODO: should we update volume_values[channel] if factor got clipped to 4.0?</span></div>
@@ -277,7 +277,7 @@ $(function() {
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        SimulatedAudioPot pot_vc;</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        CachedVolumeControl cached_volume{pot_vc};</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        Vector&lt;float&gt; volume_values;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">        #ifdef PREFER_FIXEDPOINT</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">        #if PREFER_FIXEDPOINT</span></div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            Vector&lt;uint8_t&gt; factor_for_channel; <span class="comment">//Fixed point 2.6</span></div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">        #else</span></div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            Vector&lt;float&gt; factor_for_channel;</div>
@@ -337,7 +337,7 @@ $(function() {
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="keywordflow">return</span> cached_volume;</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        }</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="preprocessor">        #ifdef PREFER_FIXEDPOINT</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="preprocessor">        #if PREFER_FIXEDPOINT</span></div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        uint8_t factorForChannel(<span class="keywordtype">int</span> channel){</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">        #else</span></div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordtype">float</span> factorForChannel(<span class="keywordtype">int</span> channel){</div>
@@ -363,7 +363,7 @@ $(function() {
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordtype">void</span> applyVolume16(int16_t* data, <span class="keywordtype">size_t</span> size){</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0;j&lt;size;j++){</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="preprocessor">                #ifdef PREFER_FIXEDPOINT</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="preprocessor">                #if PREFER_FIXEDPOINT</span></div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                int32_t result = (data[j] * factorForChannel(j%info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>)) &gt;&gt; 6; <span class="comment">//Fixedpoint-Math from https://github.com/earlephilhower/ESP8266Audio/blob/0abcf71012f6128d52a6bcd155ed1404d6cc6dcd/src/AudioOutput.h#L67</span></div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="preprocessor">                #else</span></div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                <span class="keywordtype">float</span> result = factorForChannel(j%info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>) * data[j];</div>
@@ -378,7 +378,7 @@ $(function() {
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordtype">void</span> applyVolume24(<a class="code" href="classaudio__tools_1_1int24__4bytes__t.html">int24_t</a>* data, <span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0;j&lt;size;j++){</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="preprocessor">                #ifdef PREFER_FIXEDPOINT</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="preprocessor">                #if PREFER_FIXEDPOINT</span></div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                int32_t result = (data[j] * factorForChannel(j%info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>)) &gt;&gt; 6; <span class="comment">//8bits * 24bits = fits into 32</span></div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="preprocessor">                #else</span></div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                <span class="keywordtype">float</span> result = factorForChannel(j%info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>) * data[j];</div>
@@ -394,7 +394,7 @@ $(function() {
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordtype">void</span> applyVolume32(int32_t* data, <span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0;j&lt;size;j++){</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">                #ifdef PREFER_FIXEDPOINT</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">                #if PREFER_FIXEDPOINT</span></div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                int64_t result = (<span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(data[j]) * <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(factorForChannel(j%info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>))) &gt;&gt; 6;</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">                #else</span></div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                <span class="keywordtype">float</span> result = factorForChannel(j%info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>) * data[j];</div>
