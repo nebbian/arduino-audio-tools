@@ -195,9 +195,9 @@ $(function() {
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="comment">// Content</span></div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *content_type=<span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <a class="code" href="namespaceaudio__tools.html#ae6d40783cdf760069729786896fc23b2">AudioServerDataCallback</a> callback = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <a class="code" href="classaudio__tools_1_1_stream.html">Stream</a> *in = <span class="keyword">nullptr</span>;                    </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <a class="code" href="classaudio__tools_1_1_stream_copy.html">StreamCopy</a> copier;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <a class="code" href="classaudio__tools_1_1_base_converter.html">BaseConverter</a> *converter_ptr = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        Stream *in = <span class="keyword">nullptr</span>;                    </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        StreamCopy copier;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        BaseConverter *converter_ptr = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordtype">void</span> setupServer(<span class="keywordtype">int</span> port) {</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            WiFiServer tmp(port);</div>
@@ -242,7 +242,7 @@ $(function() {
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (in!=<span class="keyword">nullptr</span>){</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                <span class="comment">// provide data for stream</span></div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                LOGI(<span class="stringliteral">&quot;sendReply - Returning audio stream...&quot;</span>);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                copier.<a class="code" href="classaudio__tools_1_1_stream_copy_t.html#ab0bdf5cca484fb2ba637c39384b27fb2">begin</a>(client_obj, *in);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                copier.begin(client_obj, *in);</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            }</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        }</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
@@ -354,9 +354,9 @@ $(function() {
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="comment">// Sound Generation</span></div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <a class="code" href="classaudio__tools_1_1_encoded_audio_stream.html">EncodedAudioStream</a>  encoded_stream;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> audio_info;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <a class="code" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *encoder = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        EncodedAudioStream  encoded_stream;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        AudioInfo audio_info;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        AudioEncoder *encoder = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> sendReplyContent() {</div>
@@ -369,9 +369,9 @@ $(function() {
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            <span class="keywordflow">if</span> (callback!=<span class="keyword">nullptr</span>){</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                <span class="comment">//encoded_stream.begin(out_ptr(), encoder);</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                encoded_stream.<a class="code" href="classaudio__tools_1_1_encoded_audio_output.html#af2416b6284de657da2d08005d10413e7">setOutput</a>(<a class="code" href="classaudio__tools_1_1_audio_server.html#a2fae28752423eb0af249f1bcca7936ca">out_ptr</a>());</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                encoded_stream.setOutput(<a class="code" href="classaudio__tools_1_1_audio_server.html#a2fae28752423eb0af249f1bcca7936ca">out_ptr</a>());</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                encoded_stream.setEncoder(encoder);</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                encoded_stream.<a class="code" href="classaudio__tools_1_1_encoded_audio_output.html#acba365cc28eb702040c382646cfb0a7a">begin</a>();</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                encoded_stream.begin();</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                <span class="comment">// provide data via Callback to encoded_stream</span></div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                LOGI(<span class="stringliteral">&quot;sendReply - calling callback&quot;</span>);</div>
@@ -381,11 +381,11 @@ $(function() {
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                <span class="comment">// provide data for stream: in -copy&gt;  encoded_stream -&gt; out</span></div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                LOGI(<span class="stringliteral">&quot;sendReply - Returning encoded stream...&quot;</span>);</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                <span class="comment">//encoded_stream.begin(out_ptr(), encoder);</span></div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                encoded_stream.<a class="code" href="classaudio__tools_1_1_encoded_audio_output.html#af2416b6284de657da2d08005d10413e7">setOutput</a>(<a class="code" href="classaudio__tools_1_1_audio_server.html#a2fae28752423eb0af249f1bcca7936ca">out_ptr</a>());</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                encoded_stream.setOutput(<a class="code" href="classaudio__tools_1_1_audio_server.html#a2fae28752423eb0af249f1bcca7936ca">out_ptr</a>());</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                encoded_stream.setEncoder(encoder);</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                encoded_stream.<a class="code" href="classaudio__tools_1_1_encoded_audio_output.html#acba365cc28eb702040c382646cfb0a7a">begin</a>();</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                encoded_stream.begin();</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                copier.<a class="code" href="classaudio__tools_1_1_stream_copy_t.html#ab0bdf5cca484fb2ba637c39384b27fb2">begin</a>(encoded_stream, *in);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                copier.begin(encoded_stream, *in);</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            }</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        }</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;};</div>
@@ -442,13 +442,9 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_audio_w_a_v_server_html_ac74ed9f26576493d517f58d26137b28f"><div class="ttname"><a href="classaudio__tools_1_1_audio_w_a_v_server.html#ac74ed9f26576493d517f58d26137b28f">audio_tools::AudioWAVServer::AudioWAVServer</a></div><div class="ttdeci">AudioWAVServer(int port=80)</div><div class="ttdoc">Construct a new Audio W A V Server object We assume that the WiFi is already connected.</div><div class="ttdef"><b>Definition:</b> AudioServer.h:432</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_converter_html"><div class="ttname"><a href="classaudio__tools_1_1_base_converter.html">audio_tools::BaseConverter</a></div><div class="ttdoc">Abstract Base class for Converters A converter is processing the data in the indicated array.</div><div class="ttdef"><b>Definition:</b> BaseConverter.h:25</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_output_html_acba365cc28eb702040c382646cfb0a7a"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_output.html#acba365cc28eb702040c382646cfb0a7a">audio_tools::EncodedAudioOutput::begin</a></div><div class="ttdeci">bool begin() override</div><div class="ttdoc">Starts the processing - sets the status to active.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:327</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_output_html_af2416b6284de657da2d08005d10413e7"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_output.html#af2416b6284de657da2d08005d10413e7">audio_tools::EncodedAudioOutput::setOutput</a></div><div class="ttdeci">void setOutput(Print *outputStream)</div><div class="ttdoc">Defines the output.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:291</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html">audio_tools::EncodedAudioStream</a></div><div class="ttdoc">A more natural Stream class to process encoded data (aac, wav, mp3...) which also supports the decodi...</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:438</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_encoded_audio_stream_html_af8124372afa43e8a096c4c63a2a99182"><div class="ttname"><a href="classaudio__tools_1_1_encoded_audio_stream.html#af8124372afa43e8a096c4c63a2a99182">audio_tools::EncodedAudioStream::setInput</a></div><div class="ttdeci">void setInput(Stream *ioStream)</div><div class="ttdoc">Same as setStream()</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:473</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:58</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_stream_copy_html"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy.html">audio_tools::StreamCopy</a></div><div class="ttdoc">We provide the typeless StreamCopy as a subclass of StreamCopyT.</div><div class="ttdef"><b>Definition:</b> StreamCopy.h:392</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_copy_html_a226bbd7cd5d674fabacfb94711178728"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy.html#a226bbd7cd5d674fabacfb94711178728">audio_tools::StreamCopy::copy</a></div><div class="ttdeci">size_t copy(BaseConverter &amp;converter)</div><div class="ttdoc">copies a buffer length of data and applies the converter</div><div class="ttdef"><b>Definition:</b> StreamCopy.h:407</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html_ab0bdf5cca484fb2ba637c39384b27fb2"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html#ab0bdf5cca484fb2ba637c39384b27fb2">audio_tools::StreamCopyT::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">(Re)starts the processing</div><div class="ttdef"><b>Definition:</b> StreamCopy.h:58</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_copy_t_html_af2beb219bcf28b64c8da8b2021d3513b"><div class="ttname"><a href="classaudio__tools_1_1_stream_copy_t.html#af2beb219bcf28b64c8da8b2021d3513b">audio_tools::StreamCopyT::setCheckAvailableForWrite</a></div><div class="ttdeci">void setCheckAvailableForWrite(bool flag)</div><div class="ttdoc">Activates the check that we copy only if available for write returns a value.</div><div class="ttdef"><b>Definition:</b> StreamCopy.h:267</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_stream.html">audio_tools::Stream</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:125</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_w_a_v_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_w_a_v_encoder.html">audio_tools::WAVEncoder</a></div><div class="ttdoc">A simple WAV file encoder. If no AudioEncoderExt is specified the WAV file contains PCM data,...</div><div class="ttdef"><b>Definition:</b> CodecWAV.h:484</div></div>
