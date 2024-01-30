@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: AudioSourceURL Class Reference</title>
+<title>arduino-audio-tools: AudioSourceDynamicURL Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_audio_source_u_r_l.html">AudioSourceURL</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_audio_source_dynamic_u_r_l.html">AudioSourceDynamicURL</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,37 +69,47 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classaudio__tools_1_1_audio_source_u_r_l-members.html">List of all members</a>  </div>
+<a href="classaudio__tools_1_1_audio_source_dynamic_u_r_l-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">AudioSourceURL Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__player.html">Player</a></div></div>  </div>
+<div class="title">AudioSourceDynamicURL Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__player.html">Player</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Audio Source which provides the data via the network from an URL.  
- <a href="classaudio__tools_1_1_audio_source_u_r_l.html#details">More...</a></p>
+<p>Audio Source which provides the data via the network from an URL. The URLs are stored in an <a class="el" href="classaudio__tools_1_1_vector.html" title="Vector implementation which provides the most important methods as defined by std::vector....">Vector</a> of dynamically allocated strings.  
+ <a href="classaudio__tools_1_1_audio_source_dynamic_u_r_l.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_audio_source_8h_source.html">AudioSource.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for AudioSourceURL:</div>
+Inheritance diagram for AudioSourceDynamicURL:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_audio_source_u_r_l.png" usemap="#AudioSourceURL_map" alt=""/>
-  <map id="AudioSourceURL_map" name="AudioSourceURL_map">
+  <img src="classaudio__tools_1_1_audio_source_dynamic_u_r_l.png" usemap="#AudioSourceDynamicURL_map" alt=""/>
+  <map id="AudioSourceDynamicURL_map" name="AudioSourceDynamicURL_map">
+<area href="classaudio__tools_1_1_audio_source_u_r_l.html" title="Audio Source which provides the data via the network from an URL." alt="AudioSourceURL" shape="rect" coords="0,56,158,80"/>
 <area href="classaudio__tools_1_1_audio_source.html" title="Abstract Audio Data Source for the AudioPlayer which is used by the Audio Players." alt="AudioSource" shape="rect" coords="0,0,158,24"/>
-<area href="classaudio__tools_1_1_audio_source_dynamic_u_r_l.html" title="Audio Source which provides the data via the network from an URL. The URLs are stored in an Vector of..." alt="AudioSourceDynamicURL" shape="rect" coords="0,112,158,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aae478424e9ddf5e41819e56e56732143"><td class="memTemplParams" colspan="2"><a id="aae478424e9ddf5e41819e56e56732143"></a>
+<tr class="memitem:a82fdfddfe970aba6fbdff17df28c9de7"><td class="memItemLeft" align="right" valign="top"><a id="a82fdfddfe970aba6fbdff17df28c9de7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AudioSourceDynamicURL</b> (<a class="el" href="classaudio__tools_1_1_abstract_u_r_l_stream.html">AbstractURLStream</a> &amp;urlStream, const char *mime, int startPos=0)</td></tr>
+<tr class="separator:a82fdfddfe970aba6fbdff17df28c9de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb70a059ecfac358fed3735beaca9d58"><td class="memTemplParams" colspan="2"><a id="abb70a059ecfac358fed3735beaca9d58"></a>
 template&lt;typename T , size_t N&gt; </td></tr>
-<tr class="memitem:aae478424e9ddf5e41819e56e56732143"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>AudioSourceURL</b> (<a class="el" href="classaudio__tools_1_1_abstract_u_r_l_stream.html">AbstractURLStream</a> &amp;urlStream, T(&amp;urlArray)[N], const char *mime, int startPos=0)</td></tr>
-<tr class="separator:aae478424e9ddf5e41819e56e56732143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb70a059ecfac358fed3735beaca9d58"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>AudioSourceDynamicURL</b> (<a class="el" href="classaudio__tools_1_1_abstract_u_r_l_stream.html">AbstractURLStream</a> &amp;urlStream, T(&amp;urlArray)[N], const char *mime, int startPos=0)</td></tr>
+<tr class="separator:abb70a059ecfac358fed3735beaca9d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91e2dc3e370b5eaa7d2758abba2b1d31"><td class="memItemLeft" align="right" valign="top"><a id="a91e2dc3e370b5eaa7d2758abba2b1d31"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_source_dynamic_u_r_l.html#a91e2dc3e370b5eaa7d2758abba2b1d31">addURL</a> (const char *url)</td></tr>
+<tr class="memdesc:a91e2dc3e370b5eaa7d2758abba2b1d31"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new url: a copy of the string will be stored on the heap <br /></td></tr>
+<tr class="separator:a91e2dc3e370b5eaa7d2758abba2b1d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a862ecf2b78cdb7877f997db8393c9825"><td class="memItemLeft" align="right" valign="top"><a id="a862ecf2b78cdb7877f997db8393c9825"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_source_u_r_l.html#a862ecf2b78cdb7877f997db8393c9825">begin</a> () override</td></tr>
 <tr class="memdesc:a862ecf2b78cdb7877f997db8393c9825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup Wifi URL. <br /></td></tr>
 <tr class="separator:a862ecf2b78cdb7877f997db8393c9825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top"><a id="ac8bb3912a3ce86b15842e79d0b421204"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a019749328da42c4814af71d3e3b647ad"><td class="memItemLeft" align="right" valign="top"><a id="a019749328da42c4814af71d3e3b647ad"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>index</b> ()</td></tr>
 <tr class="separator:a019749328da42c4814af71d3e3b647ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,16 +158,12 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>toStr</b> ()<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:afd3a264dfb5f4dce7048d9cb7f117e78"><td class="memItemLeft" align="right" valign="top"><a id="afd3a264dfb5f4dce7048d9cb7f117e78"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_source_u_r_l.html#afd3a264dfb5f4dce7048d9cb7f117e78">AudioSourceURL</a> ()=default</td></tr>
-<tr class="memdesc:afd3a264dfb5f4dce7048d9cb7f117e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">allow use with empty constructor in subclasses <br /></td></tr>
-<tr class="separator:afd3a264dfb5f4dce7048d9cb7f117e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7edc9fae01093617967fd7c9df18a2a2"><td class="memItemLeft" align="right" valign="top"><a id="a7edc9fae01093617967fd7c9df18a2a2"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> ()</td></tr>
-<tr class="separator:a7edc9fae01093617967fd7c9df18a2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade9d62d8a2a504a2f71ffc674b638564"><td class="memItemLeft" align="right" valign="top"><a id="ade9d62d8a2a504a2f71ffc674b638564"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> (int pos)</td></tr>
-<tr class="separator:ade9d62d8a2a504a2f71ffc674b638564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a808525013fd8f811fabce39491042118"><td class="memItemLeft" align="right" valign="top"><a id="a808525013fd8f811fabce39491042118"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () override</td></tr>
+<tr class="separator:a808525013fd8f811fabce39491042118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8419530458ad40e6e598b3ffbb03a373"><td class="memItemLeft" align="right" valign="top"><a id="a8419530458ad40e6e598b3ffbb03a373"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> (int pos) override</td></tr>
+<tr class="separator:a8419530458ad40e6e598b3ffbb03a373"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -179,12 +185,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>started</b> = false</
 <tr class="memitem:ac7062b1e31e4db9ec0ba01f27e7ebc67"><td class="memItemLeft" align="right" valign="top"><a id="ac7062b1e31e4db9ec0ba01f27e7ebc67"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>timeout_auto_next_value</b> = 500</td></tr>
 <tr class="separator:ac7062b1e31e4db9ec0ba01f27e7ebc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42082d27700720d554165578ff75522"><td class="memItemLeft" align="right" valign="top"><a id="ad42082d27700720d554165578ff75522"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>url_vector</b></td></tr>
+<tr class="separator:ad42082d27700720d554165578ff75522"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb679f3f64940aa8366df26d0123bba7"><td class="memItemLeft" align="right" valign="top"><a id="adb679f3f64940aa8366df26d0123bba7"></a>
 const char **&#160;</td><td class="memItemRight" valign="bottom"><b>urlArray</b></td></tr>
 <tr class="separator:adb679f3f64940aa8366df26d0123bba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Audio Source which provides the data via the network from an URL. </p>
+<div class="textblock"><p>Audio Source which provides the data via the network from an URL. The URLs are stored in an <a class="el" href="classaudio__tools_1_1_vector.html" title="Vector implementation which provides the most important methods as defined by std::vector....">Vector</a> of dynamically allocated strings. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
