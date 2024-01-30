@@ -148,10 +148,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (s
 <tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
 <tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a808d67693c38dccdc6b4692c65d6c36f"><td class="memItemLeft" align="right" valign="top"><a id="a808d67693c38dccdc6b4692c65d6c36f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_memory_stream.html#a808d67693c38dccdc6b4692c65d6c36f">setLoop</a> (bool loop)</td></tr>
-<tr class="memdesc:a808d67693c38dccdc6b4692c65d6c36f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatically rewinds to the beginning when reaching the end. <br /></td></tr>
-<tr class="separator:a808d67693c38dccdc6b4692c65d6c36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeacd857fc0661f07d56197ead3654949"><td class="memItemLeft" align="right" valign="top"><a id="aeacd857fc0661f07d56197ead3654949"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_memory_stream.html#aeacd857fc0661f07d56197ead3654949">setLoop</a> (bool loop, int rewindPos=0)</td></tr>
+<tr class="memdesc:aeacd857fc0661f07d56197ead3654949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatically rewinds to the beginning when reaching the end. <br /></td></tr>
+<tr class="separator:aeacd857fc0661f07d56197ead3654949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
 <tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,6 +218,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>read_pos</b> = 0</td><
 <tr class="memitem:aa8018eac8572790c86a9dd67a22bb15e"><td class="memItemLeft" align="right" valign="top"><a id="aa8018eac8572790c86a9dd67a22bb15e"></a>
 void(*&#160;</td><td class="memItemRight" valign="bottom"><b>rewind</b> )() = nullptr</td></tr>
 <tr class="separator:aa8018eac8572790c86a9dd67a22bb15e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab47df03c38e223e1a3a7f397e17d98f6"><td class="memItemLeft" align="right" valign="top"><a id="ab47df03c38e223e1a3a7f397e17d98f6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>rewind_pos</b> = 0</td></tr>
+<tr class="separator:ab47df03c38e223e1a3a7f397e17d98f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
 <tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
