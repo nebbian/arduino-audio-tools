@@ -95,11 +95,13 @@ Inheritance diagram for MemoryStream:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a53e1aabf54d88e766f6d437e88b80ff1"><td class="memItemLeft" align="right" valign="top"><a id="a53e1aabf54d88e766f6d437e88b80ff1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MemoryStream</b> (const uint8_t *buffer, int buffer_size, <a class="el" href="group__basic.html#ga462bfa9dfea81692463ecb192183dd01">MemoryType</a> memoryType=FLASH_RAM)</td></tr>
-<tr class="separator:a53e1aabf54d88e766f6d437e88b80ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7f958e5b7bc7f5a3c165ad2dcbe330"><td class="memItemLeft" align="right" valign="top"><a id="a0c7f958e5b7bc7f5a3c165ad2dcbe330"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_memory_stream.html#a0c7f958e5b7bc7f5a3c165ad2dcbe330">MemoryStream</a> (const uint8_t *buffer, int buffer_size, bool isActive=true, <a class="el" href="group__basic.html#ga462bfa9dfea81692463ecb192183dd01">MemoryType</a> memoryType=FLASH_RAM)</td></tr>
+<tr class="memdesc:a0c7f958e5b7bc7f5a3c165ad2dcbe330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for data from Progmem, active is set to true automatically by default. <br /></td></tr>
+<tr class="separator:a0c7f958e5b7bc7f5a3c165ad2dcbe330"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace288acea516ab062c21da9789bd8de0"><td class="memItemLeft" align="right" valign="top"><a id="ace288acea516ab062c21da9789bd8de0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MemoryStream</b> (int buffer_size=512, <a class="el" href="group__basic.html#ga462bfa9dfea81692463ecb192183dd01">MemoryType</a> memoryType=RAM)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_memory_stream.html#ace288acea516ab062c21da9789bd8de0">MemoryStream</a> (int buffer_size=512, <a class="el" href="group__basic.html#ga462bfa9dfea81692463ecb192183dd01">MemoryType</a> memoryType=RAM)</td></tr>
+<tr class="memdesc:ace288acea516ab062c21da9789bd8de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for alloction in RAM. <br /></td></tr>
 <tr class="separator:ace288acea516ab062c21da9789bd8de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
@@ -208,7 +210,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_size</b> = 0</t
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a407c3efba665d276a38229f905bef352"><td class="memItemLeft" align="right" valign="top"><a id="a407c3efba665d276a38229f905bef352"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = true</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false</td></tr>
 <tr class="separator:a407c3efba665d276a38229f905bef352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa06a21732b374cd57f15dc3ffa51e8b"><td class="memItemLeft" align="right" valign="top"><a id="afa06a21732b374cd57f15dc3ffa51e8b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_loop</b> = false</td></tr>
