@@ -103,7 +103,8 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (cons
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isChunked</b> ()</td></tr>
 <tr class="separator:a146ddf9fbf86955a2ce5071b912a4e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa72848d637371588dbabbd1635639a0d"><td class="memItemLeft" align="right" valign="top"><a id="aa72848d637371588dbabbd1635639a0d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isRedirectStatus</b> ()</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#aa72848d637371588dbabbd1635639a0d">isRedirectStatus</a> ()</td></tr>
+<tr class="memdesc:aa72848d637371588dbabbd1635639a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if the status code is &gt;=300 and &lt; 400 <br /></td></tr>
 <tr class="separator:aa72848d637371588dbabbd1635639a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6ee85054d80b78c9e7fa09fce598523"><td class="memItemLeft" align="right" valign="top"><a id="ab6ee85054d80b78c9e7fa09fce598523"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#ab6ee85054d80b78c9e7fa09fce598523">isValidStatus</a> ()</td></tr>
@@ -116,7 +117,8 @@ MethodID&#160;</td><td class="memItemRight" valign="bottom"><b>method</b> ()</td
 void&#160;</td><td class="memItemRight" valign="bottom"><b>parse1stLine</b> (const char *line)</td></tr>
 <tr class="separator:a21277d65d2e80099d823e4250cd1a089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad05b9b9c413d95ff2f2e86ea340b297f"><td class="memItemLeft" align="right" valign="top"><a id="ad05b9b9c413d95ff2f2e86ea340b297f"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>protocol</b> ()</td></tr>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#ad05b9b9c413d95ff2f2e86ea340b297f">protocol</a> ()</td></tr>
+<tr class="memdesc:ad05b9b9c413d95ff2f2e86ea340b297f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide the protocol. <br /></td></tr>
 <tr class="separator:ad05b9b9c413d95ff2f2e86ea340b297f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f964aa85a4e13c850ad68c136dc0e42"><td class="memItemLeft" align="right" valign="top"><a id="a5f964aa85a4e13c850ad68c136dc0e42"></a>
 <a class="el" href="classaudio__tools_1_1_http_header.html">HttpHeader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>put</b> (const char *key, const char *value)</td></tr>
@@ -146,11 +148,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a32fb92dea8368c3c4c8238838c029f00"><td class="memItemLeft" align="right" valign="top"><a id="a32fb92dea8368c3c4c8238838c029f00"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setProcessed</b> ()</td></tr>
 <tr class="separator:a32fb92dea8368c3c4c8238838c029f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a822e549b933bb8e842232bc77a4c0"><td class="memItemLeft" align="right" valign="top"><a id="a45a822e549b933bb8e842232bc77a4c0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#a45a822e549b933bb8e842232bc77a4c0">setProtocol</a> (const char *protocal)</td></tr>
+<tr class="memdesc:a45a822e549b933bb8e842232bc77a4c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the protocol: e.g. HTTP/1.1. <br /></td></tr>
+<tr class="separator:a45a822e549b933bb8e842232bc77a4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0568dfd33619b44c33f3fb1a5fdb820a"><td class="memItemLeft" align="right" valign="top"><a id="a0568dfd33619b44c33f3fb1a5fdb820a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeout</b> (int timeoutMs)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_http_header.html#a0568dfd33619b44c33f3fb1a5fdb820a">setTimeout</a> (int timeoutMs)</td></tr>
+<tr class="memdesc:a0568dfd33619b44c33f3fb1a5fdb820a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the timout. <br /></td></tr>
 <tr class="separator:a0568dfd33619b44c33f3fb1a5fdb820a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adced1df5f219cba61ebdfb2b03b5cebd"><td class="memItemLeft" align="right" valign="top"><a id="adced1df5f219cba61ebdfb2b03b5cebd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setValues</b> (int statusCode, const char *msg=&quot;&quot;, const char *protocol=nullptr)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setValues</b> (int statusCode, const char *msg=&quot;&quot;, const char *<a class="el" href="classaudio__tools_1_1_http_header.html#ad05b9b9c413d95ff2f2e86ea340b297f">protocol</a>=nullptr)</td></tr>
 <tr class="separator:adced1df5f219cba61ebdfb2b03b5cebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ce43a0c493e35ecae0c09e620113679"><td class="memItemLeft" align="right" valign="top"><a id="a3ce43a0c493e35ecae0c09e620113679"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>statusCode</b> ()</td></tr>
