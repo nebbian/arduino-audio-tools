@@ -118,13 +118,13 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_codec_stream.html#a6ff0d6d1b0f3f9b652c9d5298ed0863c">availableForWrite</a> () override</td></tr>
 <tr class="memdesc:a6ff0d6d1b0f3f9b652c9d5298ed0863c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the available audio data. <br /></td></tr>
 <tr class="separator:a6ff0d6d1b0f3f9b652c9d5298ed0863c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top"><a id="a601fb7cf1fc15db50c71a826f084f934"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="separator:a601fb7cf1fc15db50c71a826f084f934"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae84e3e53a9d2f6e5166ffedbb3bacfd8"><td class="memItemLeft" align="right" valign="top"><a id="ae84e3e53a9d2f6e5166ffedbb3bacfd8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_codec_stream.html#ae84e3e53a9d2f6e5166ffedbb3bacfd8">begin</a> (<a class="el" href="structaudio__tools_1_1_i2_s_codec_config.html">I2SCodecConfig</a> cfg)</td></tr>
-<tr class="memdesc:ae84e3e53a9d2f6e5166ffedbb3bacfd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the I2S interface. <br /></td></tr>
-<tr class="separator:ae84e3e53a9d2f6e5166ffedbb3bacfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba365cc28eb702040c382646cfb0a7a"><td class="memItemLeft" align="right" valign="top"><a id="acba365cc28eb702040c382646cfb0a7a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () override</td></tr>
+<tr class="separator:acba365cc28eb702040c382646cfb0a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61557dc282cd11030598a02dd7c9f300"><td class="memItemLeft" align="right" valign="top"><a id="a61557dc282cd11030598a02dd7c9f300"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_board_stream.html#a61557dc282cd11030598a02dd7c9f300">begin</a> (<a class="el" href="structaudio__tools_1_1_i2_s_codec_config.html">I2SCodecConfig</a> cfg) override</td></tr>
+<tr class="memdesc:a61557dc282cd11030598a02dd7c9f300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the I2S interface. <br /></td></tr>
+<tr class="separator:a61557dc282cd11030598a02dd7c9f300"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a896ab86ed22240433abf907dc6bd89"><td class="memItemLeft" align="right" valign="top"><a id="a6a896ab86ed22240433abf907dc6bd89"></a>
 AudioBoard &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>board</b> ()</td></tr>
 <tr class="separator:a6a896ab86ed22240433abf907dc6bd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -228,10 +228,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudi
 <tr class="memitem:ac515c630cf8bddf7e5238601cb60393f"><td class="memItemLeft" align="right" valign="top"><a id="ac515c630cf8bddf7e5238601cb60393f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>setPAPower</b> (bool active)</td></tr>
 <tr class="separator:ac515c630cf8bddf7e5238601cb60393f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedbf4c710632446b15adff31c25a25ee"><td class="memItemLeft" align="right" valign="top"><a id="aedbf4c710632446b15adff31c25a25ee"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_board_stream.html#aedbf4c710632446b15adff31c25a25ee">setSDActive</a> (bool active)</td></tr>
-<tr class="memdesc:aedbf4c710632446b15adff31c25a25ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform this object that SD is active. <br /></td></tr>
-<tr class="separator:aedbf4c710632446b15adff31c25a25ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fdd798e6ae46c5c0bd4b3f42bf18220"><td class="memItemLeft" align="right" valign="top"><a id="a1fdd798e6ae46c5c0bd4b3f42bf18220"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_board_stream.html#a1fdd798e6ae46c5c0bd4b3f42bf18220">setSpeakerActive</a> (bool active)</td></tr>
 <tr class="memdesc:a1fdd798e6ae46c5c0bd4b3f42bf18220"><td class="mdescLeft">&#160;</td><td class="mdescRight">the same as setPAPower() <br /></td></tr>
@@ -347,9 +343,6 @@ AudioBoard *&#160;</td><td class="memItemRight" valign="bottom"><b>p_board</b> =
 <tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
 <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
 <tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac585b3449d271276f8b679e8ab01b2ec"><td class="memItemLeft" align="right" valign="top"><a id="ac585b3449d271276f8b679e8ab01b2ec"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>sd_active</b> = false</td></tr>
-<tr class="separator:ac585b3449d271276f8b679e8ab01b2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
 <tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
