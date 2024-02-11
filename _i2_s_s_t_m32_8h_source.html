@@ -114,15 +114,15 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordflow">switch</span>(cfg.<a class="code" href="classaudio__tools_1_1_i2_s_config_std.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a>){</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">case</span> RX_MODE:</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          p_rx_buffer = <span class="keyword">new</span> <a class="code" href="classaudio__tools_1_1_n_buffer.html">NBuffer&lt;uint8_t&gt;</a>(cfg.buffer_size, cfg.buffer_count);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            result = startI2SReceive(&amp;i2s_stm32, <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a79908b9928cf48bb309f19dbdf2fa4f9">writeFromReceive</a>, cfg.buffer_size);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            result = I2S.startI2SReceive(i2s_stm32, <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a79908b9928cf48bb309f19dbdf2fa4f9">writeFromReceive</a>, cfg.buffer_size);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">case</span> TX_MODE:</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;          p_tx_buffer = <span class="keyword">new</span> <a class="code" href="classaudio__tools_1_1_n_buffer.html">NBuffer&lt;uint8_t&gt;</a>(cfg.buffer_size, cfg.buffer_count);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;          result =  startI2STransmit(&amp;i2s_stm32, <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a9ff6fcdbaad2f9bdb767e3a0ec479d7f">readToTransmit</a>, cfg.buffer_size);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;          result =  I2S.startI2STransmit(i2s_stm32, <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a9ff6fcdbaad2f9bdb767e3a0ec479d7f">readToTransmit</a>, cfg.buffer_size);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">case</span> RXTX_MODE:</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          p_tx_buffer = <span class="keyword">new</span> <a class="code" href="classaudio__tools_1_1_n_buffer.html">NBuffer&lt;uint8_t&gt;</a>(cfg.buffer_size, cfg.buffer_count);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            result = startI2STransmitReceive(&amp;i2s_stm32, <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a9ff6fcdbaad2f9bdb767e3a0ec479d7f">readToTransmit</a>, <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a79908b9928cf48bb309f19dbdf2fa4f9">writeFromReceive</a>, cfg.buffer_size);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            result = I2S.startI2STransmitReceive(i2s_stm32, <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a9ff6fcdbaad2f9bdb767e3a0ec479d7f">readToTransmit</a>, <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#a79908b9928cf48bb309f19dbdf2fa4f9">writeFromReceive</a>, cfg.buffer_size);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">default</span>:</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;          LOGE(<span class="stringliteral">&quot;Unsupported mode&quot;</span>);</div>
@@ -135,7 +135,7 @@ $(function() {
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#aaf81d3fdaf258088d7692fa70cece087">   78</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#aaf81d3fdaf258088d7692fa70cece087">end</a>(){</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      TRACED();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      stopI2S();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      I2S.stopI2S();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      deleteBuffers();</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
@@ -216,7 +216,7 @@ $(function() {
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      i2s_stm32.mode = getMode(cfg);</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      i2s_stm32.standard = getStandard(cfg);</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      i2s_stm32.fullduplexmode = cfg.<a class="code" href="classaudio__tools_1_1_i2_s_config_std.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a> == RXTX_MODE ? I2S_FULLDUPLEXMODE_ENABLE : I2S_FULLDUPLEXMODE_DISABLE;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      i2s_stm32.i2s = &amp;hi2s3;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="comment">//i2s_stm32.i2s = &amp;hi2s3;</span></div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    uint32_t getMode(I2SConfigStd &amp;cfg){</div>
