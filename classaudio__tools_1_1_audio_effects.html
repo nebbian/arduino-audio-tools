@@ -145,9 +145,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 GeneratorT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effects.html#a1ecabc1b15ae58dc67d30659959104ac">generator</a> ()</td></tr>
 <tr class="memdesc:a1ecabc1b15ae58dc67d30659959104ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the sound generator. <br /></td></tr>
 <tr class="separator:a1ecabc1b15ae58dc67d30659959104ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62eb104f87ff88c21fa01af29dbf0ee2"><td class="memItemLeft" align="right" valign="top"><a id="a62eb104f87ff88c21fa01af29dbf0ee2"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_sound_generator.html#a62eb104f87ff88c21fa01af29dbf0ee2">isActive</a> ()</td></tr>
-<tr class="memdesc:a62eb104f87ff88c21fa01af29dbf0ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the begin method has been called - after <a class="el" href="classaudio__tools_1_1_sound_generator.html#adc34417a19a7b70626d19c41072d72a5" title="ends the processing">end()</a> isActive returns false. <br /></td></tr>
+<tr class="memitem:a62eb104f87ff88c21fa01af29dbf0ee2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_sound_generator.html#a62eb104f87ff88c21fa01af29dbf0ee2">isActive</a> ()</td></tr>
 <tr class="separator:a62eb104f87ff88c21fa01af29dbf0ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a722144d124c35931c637345566824441"><td class="memItemLeft" align="right" valign="top"><a id="a722144d124c35931c637345566824441"></a>
 <a class="el" href="classaudio__tools_1_1_audio_effect.html">AudioEffect</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_effects.html#a722144d124c35931c637345566824441">operator[]</a> (int idx)</td></tr>
@@ -261,6 +259,33 @@ class audio_tools::AudioEffects&lt; GeneratorT &gt;</h3>
 </table>
 </div><div class="memdoc">
 <p>Constructor which is assigning a <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> as input. The stream must consist of int16_t values with the indicated number of channels. Type type parameter is e.g. &lt;GeneratorFromStream&lt;effect_t&gt; </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a62eb104f87ff88c21fa01af29dbf0ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62eb104f87ff88c21fa01af29dbf0ee2">&#9670;&nbsp;</a></span>isActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool isActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if the begin method has been called - after <a class="el" href="classaudio__tools_1_1_sound_generator.html#adc34417a19a7b70626d19c41072d72a5" title="ends the processing">end()</a> isActive returns false </p>
 
 </div>
 </div>

@@ -110,9 +110,7 @@ virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_sound_generator.html#adc34417a19a7b70626d19c41072d72a5">end</a> ()</td></tr>
 <tr class="memdesc:adc34417a19a7b70626d19c41072d72a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ends the processing <br /></td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62eb104f87ff88c21fa01af29dbf0ee2"><td class="memItemLeft" align="right" valign="top"><a id="a62eb104f87ff88c21fa01af29dbf0ee2"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_sound_generator.html#a62eb104f87ff88c21fa01af29dbf0ee2">isActive</a> ()</td></tr>
-<tr class="memdesc:a62eb104f87ff88c21fa01af29dbf0ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the begin method has been called - after <a class="el" href="classaudio__tools_1_1_sound_generator.html#adc34417a19a7b70626d19c41072d72a5" title="ends the processing">end()</a> isActive returns false. <br /></td></tr>
+<tr class="memitem:a62eb104f87ff88c21fa01af29dbf0ee2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_sound_generator.html#a62eb104f87ff88c21fa01af29dbf0ee2">isActive</a> ()</td></tr>
 <tr class="separator:a62eb104f87ff88c21fa01af29dbf0ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ad7d4c01bd1e7045b7ee0027e5051c1"><td class="memItemLeft" align="right" valign="top"><a id="a0ad7d4c01bd1e7045b7ee0027e5051c1"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_sound_generator.html#a0ad7d4c01bd1e7045b7ee0027e5051c1">readBytes</a> (uint8_t *buffer, size_t lengthBytes)</td></tr>
@@ -158,7 +156,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</t
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>activeWarningIssued</b> = false</td></tr>
 <tr class="separator:a2386b2282ef45b8c242209254044090c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a178795099d0608972755dfef8d8367e3"><td class="memItemLeft" align="right" valign="top"><a id="a178795099d0608972755dfef8d8367e3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b> =1</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b> = 1</td></tr>
 <tr class="separator:a178795099d0608972755dfef8d8367e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
@@ -176,7 +174,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>output_channels</b> = 
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ring_buffer</b> {0}</td></tr>
 <tr class="separator:af9870079e2dc48a291a15a41b6ecffbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed48ca0bcd2162fd4fd495873e2631f5"><td class="memItemLeft" align="right" valign="top"><a id="aed48ca0bcd2162fd4fd495873e2631f5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>volume</b> =1.0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>volume</b> = 1.0</td></tr>
 <tr class="separator:aed48ca0bcd2162fd4fd495873e2631f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -242,6 +240,33 @@ class audio_tools::GeneratorFromStream&lt; T &gt;</h3>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a62eb104f87ff88c21fa01af29dbf0ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62eb104f87ff88c21fa01af29dbf0ee2">&#9670;&nbsp;</a></span>isActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool isActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if the begin method has been called - after <a class="el" href="classaudio__tools_1_1_sound_generator.html#adc34417a19a7b70626d19c41072d72a5" title="ends the processing">end()</a> isActive returns false </p>
 
 </div>
 </div>
