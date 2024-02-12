@@ -123,9 +123,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:aecdbea3a6aff480653df559eb8097559"><td class="memItemLeft" align="right" valign="top"><a id="aecdbea3a6aff480653df559eb8097559"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (void *dest, size_t size_bytes)</td></tr>
 <tr class="separator:aecdbea3a6aff480653df559eb8097559"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04dfa96328a6c82f37ba4a89b3324ecc"><td class="memItemLeft" align="right" valign="top"><a id="a04dfa96328a6c82f37ba4a89b3324ecc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setWaitTimeMs</b> (TickType_t ms)</td></tr>
-<tr class="separator:a04dfa96328a6c82f37ba4a89b3324ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44eae9de9900595d04eb4f40eba61eb4"><td class="memItemLeft" align="right" valign="top"><a id="a44eae9de9900595d04eb4f40eba61eb4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWaitTimeReadMs</b> (TickType_t ms)</td></tr>
+<tr class="separator:a44eae9de9900595d04eb4f40eba61eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b6f103898cc1e88478d35a5a2c31d0"><td class="memItemLeft" align="right" valign="top"><a id="a20b6f103898cc1e88478d35a5a2c31d0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWaitTimeWriteMs</b> (TickType_t ms)</td></tr>
+<tr class="separator:a20b6f103898cc1e88478d35a5a2c31d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2a2bf0126c0c1fd4baa01f858ffd4d0"><td class="memItemLeft" align="right" valign="top"><a id="ae2a2bf0126c0c1fd4baa01f858ffd4d0"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#ae2a2bf0126c0c1fd4baa01f858ffd4d0">writeBytes</a> (const void *src, size_t size_bytes)</td></tr>
 <tr class="memdesc:ae2a2bf0126c0c1fd4baa01f858ffd4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes the data to the I2S interface <br /></td></tr>
@@ -161,9 +164,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_started</b> = fals
 <tr class="memitem:a2e7fb8b374ed50c13becffe6d5fb9cc7"><td class="memItemLeft" align="right" valign="top"><a id="a2e7fb8b374ed50c13becffe6d5fb9cc7"></a>
 i2s_chan_handle_t&#160;</td><td class="memItemRight" valign="bottom"><b>rx_chan</b></td></tr>
 <tr class="separator:a2e7fb8b374ed50c13becffe6d5fb9cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb0ee3facb91da49a4d9c1af71c16be0"><td class="memItemLeft" align="right" valign="top"><a id="afb0ee3facb91da49a4d9c1af71c16be0"></a>
-TickType_t&#160;</td><td class="memItemRight" valign="bottom"><b>ticks_to_wait</b> = portMAX_DELAY</td></tr>
-<tr class="separator:afb0ee3facb91da49a4d9c1af71c16be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d8caee358b4ae4050ccede1c32bdb1a"><td class="memItemLeft" align="right" valign="top"><a id="a3d8caee358b4ae4050ccede1c32bdb1a"></a>
+TickType_t&#160;</td><td class="memItemRight" valign="bottom"><b>ticks_to_wait_read</b> = portMAX_DELAY</td></tr>
+<tr class="separator:a3d8caee358b4ae4050ccede1c32bdb1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad39d9e052cb518794e6d534d8450a993"><td class="memItemLeft" align="right" valign="top"><a id="ad39d9e052cb518794e6d534d8450a993"></a>
+TickType_t&#160;</td><td class="memItemRight" valign="bottom"><b>ticks_to_wait_write</b> = portMAX_DELAY</td></tr>
+<tr class="separator:ad39d9e052cb518794e6d534d8450a993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a728fd31256e227816f5c551fc564e2bd"><td class="memItemLeft" align="right" valign="top"><a id="a728fd31256e227816f5c551fc564e2bd"></a>
 i2s_chan_handle_t&#160;</td><td class="memItemRight" valign="bottom"><b>tx_chan</b></td></tr>
 <tr class="separator:a728fd31256e227816f5c551fc564e2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
