@@ -872,7 +872,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic I2S API - for the SAMD.  <a href="classaudio__tools_1_1_i2_s_driver_s_a_m_d.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html">I2SDriverSTM32</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic I2S API - for the STM32 Depends on <a href="https://github.com/pschatzmann/stm32f411-i2s">https://github.com/pschatzmann/stm32f411-i2s</a> We just add a write and read buffer and pass some parameters to the STM32 API!  <a href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic I2S API - for the STM32 Depends on <a href="https://github.com/pschatzmann/stm32f411-i2s">https://github.com/pschatzmann/stm32f411-i2s</a> We provide a direct and a DMA implementation. When using DMA, we just add a write and read buffer and pass some parameters to the STM32 API! Alternatively we can define the input stream or the output.  <a href="classaudio__tools_1_1_i2_s_driver_s_t_m32.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_stream.html">I2SStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">We support the <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> interface for the I2S access. In addition we allow a separate mute pin which might also be used to drive a LED...  <a href="classaudio__tools_1_1_i2_s_stream.html#details">More...</a><br /></td></tr>
@@ -2440,12 +2440,6 @@ static <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;
 <tr class="memitem:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memItemLeft" align="right" valign="top"><a id="aa42c30e02e51ec7cc38ea4ab215e0db4"></a>
 static <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_out</b> = nullptr</td></tr>
 <tr class="separator:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47d58653d96b1fb2ec5fce0d2db5ac66"><td class="memItemLeft" align="right" valign="top"><a id="a47d58653d96b1fb2ec5fce0d2db5ac66"></a>
-<a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a>&lt; uint8_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>p_rx_buffer</b> =nullptr</td></tr>
-<tr class="separator:a47d58653d96b1fb2ec5fce0d2db5ac66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfe04fe37d5137cad04d9072a7e93ef2"><td class="memItemLeft" align="right" valign="top"><a id="adfe04fe37d5137cad04d9072a7e93ef2"></a>
-<a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a>&lt; uint8_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>p_tx_buffer</b> =nullptr</td></tr>
-<tr class="separator:adfe04fe37d5137cad04d9072a7e93ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacc13d3b89aaa87d30536028eebb33f7"><td class="memItemLeft" align="right" valign="top"><a id="aacc13d3b89aaa87d30536028eebb33f7"></a>
 static <a class="el" href="classaudio__tools_1_1_audio_kit_stream.html">AudioKitStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pt_AudioKitStream</b> = nullptr</td></tr>
 <tr class="separator:aacc13d3b89aaa87d30536028eebb33f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
