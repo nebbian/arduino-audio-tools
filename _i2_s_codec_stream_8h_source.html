@@ -126,7 +126,7 @@ $(function() {
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    is_active = i2s.begin(cfg);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">// if setvolume was called before begin</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (is_active &amp;&amp; volume &gt; 0.0f) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (is_active &amp;&amp; volume &gt;= 0.0f) {</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <a class="code" href="classaudio__tools_1_1_i2_s_codec_stream.html#ae3076da1d31412e3f1ed8677494df700">setVolume</a>(volume);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> is_active;</div>
