@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['wavaudioinfo_2162',['WAVAudioInfo',['../structaudio__tools_1_1_w_a_v_audio_info.html',1,'audio_tools']]],
-  ['wavdecoder_2163',['WAVDecoder',['../classaudio__tools_1_1_w_a_v_decoder.html',1,'audio_tools']]],
-  ['wavencoder_2164',['WAVEncoder',['../classaudio__tools_1_1_w_a_v_encoder.html',1,'audio_tools']]],
-  ['wavformatx_2165',['WAVFormatX',['../structaudio__tools_1_1_w_a_v_format_x.html',1,'audio_tools']]],
-  ['wavheader_2166',['WAVHeader',['../classaudio__tools_1_1_w_a_v_header.html',1,'audio_tools']]],
-  ['wavimaaudioinfo_2167',['WavIMAAudioInfo',['../structaudio__tools_1_1_wav_i_m_a_audio_info.html',1,'audio_tools']]],
-  ['wavimadecoder_2168',['WavIMADecoder',['../classaudio__tools_1_1_wav_i_m_a_decoder.html',1,'audio_tools']]],
-  ['wavimaheader_2169',['WavIMAHeader',['../classaudio__tools_1_1_wav_i_m_a_header.html',1,'audio_tools']]],
-  ['welch_2170',['Welch',['../classaudio__tools_1_1_welch.html',1,'audio_tools']]],
-  ['whitenoisegenerator_2171',['WhiteNoiseGenerator',['../classaudio__tools_1_1_white_noise_generator.html',1,'audio_tools']]],
-  ['windowfunction_2172',['WindowFunction',['../classaudio__tools_1_1_window_function.html',1,'audio_tools']]],
-  ['wm8960config_2173',['WM8960Config',['../classaudio__tools_1_1_w_m8960_config.html',1,'audio_tools']]],
-  ['wm8960stream_2174',['WM8960Stream',['../classaudio__tools_1_1_w_m8960_stream.html',1,'audio_tools']]]
+  ['wavaudioinfo_2163',['WAVAudioInfo',['../structaudio__tools_1_1_w_a_v_audio_info.html',1,'audio_tools']]],
+  ['wavdecoder_2164',['WAVDecoder',['../classaudio__tools_1_1_w_a_v_decoder.html',1,'audio_tools']]],
+  ['wavencoder_2165',['WAVEncoder',['../classaudio__tools_1_1_w_a_v_encoder.html',1,'audio_tools']]],
+  ['wavformatx_2166',['WAVFormatX',['../structaudio__tools_1_1_w_a_v_format_x.html',1,'audio_tools']]],
+  ['wavheader_2167',['WAVHeader',['../classaudio__tools_1_1_w_a_v_header.html',1,'audio_tools']]],
+  ['wavimaaudioinfo_2168',['WavIMAAudioInfo',['../structaudio__tools_1_1_wav_i_m_a_audio_info.html',1,'audio_tools']]],
+  ['wavimadecoder_2169',['WavIMADecoder',['../classaudio__tools_1_1_wav_i_m_a_decoder.html',1,'audio_tools']]],
+  ['wavimaheader_2170',['WavIMAHeader',['../classaudio__tools_1_1_wav_i_m_a_header.html',1,'audio_tools']]],
+  ['welch_2171',['Welch',['../classaudio__tools_1_1_welch.html',1,'audio_tools']]],
+  ['whitenoisegenerator_2172',['WhiteNoiseGenerator',['../classaudio__tools_1_1_white_noise_generator.html',1,'audio_tools']]],
+  ['windowfunction_2173',['WindowFunction',['../classaudio__tools_1_1_window_function.html',1,'audio_tools']]],
+  ['wm8960config_2174',['WM8960Config',['../classaudio__tools_1_1_w_m8960_config.html',1,'audio_tools']]],
+  ['wm8960stream_2175',['WM8960Stream',['../classaudio__tools_1_1_w_m8960_stream.html',1,'audio_tools']]]
 ];
