@@ -418,60 +418,70 @@ $(function() {
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;      uint8_t vbanSampleRateIdx = udpIncomingPacket[4] &amp; VBAN_SR_MASK;</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;      uint8_t vbchannels = udpIncomingPacket[6] + 1;</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      uint8_t vbframes = udpIncomingPacket[5] + 1;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      uint8_t vbformat = udpIncomingPacket[4] &amp; VBAN_PROTOCOL_MASK;;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      uint32_t vbanSampleRate = VBanSRList[vbanSampleRateIdx];</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      </div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      LOGD(<span class="stringliteral">&quot;sample_count: %d -  frames: %d&quot;</span>, vban_rx_sample_count, vbframes);</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      assert (vban_rx_sample_count == vbframes*vbchannels);</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      uint8_t vbformat = udpIncomingPacket[7] &amp; VBAN_PROTOCOL_MASK;;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      uint8_t vbformat_bits = udpIncomingPacket[7] &amp; VBAN_BIT_RESOLUTION_MASK;;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      uint32_t vbanSampleRate = VBanSRList[vbanSampleRateIdx];</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      </div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      <span class="comment">//LOGD(&quot;sample_count: %d -  frames: %d&quot;, vban_rx_sample_count, vbframes);</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      <span class="comment">//assert (vban_rx_sample_count == vbframes*vbchannels);</span></div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      <span class="keywordflow">if</span> (vbformat != cfg.format){</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        LOGE(<span class="stringliteral">&quot;Format ignored: 0x%x&quot;</span>, vbformat);</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;      }</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      <span class="comment">// Just to be safe, re-check sample count against max sample count to</span></div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;      <span class="comment">// avoid overrunning outBuf later</span></div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;      <span class="keywordflow">if</span> (vban_rx_sample_count &gt; VBAN_PACKET_MAX_SAMPLES) {</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        LOGE(<span class="stringliteral">&quot;unexpected packet size: %u&quot;</span>, vban_rx_sample_count);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      <span class="comment">// E.g. do not process any text</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      <span class="keywordflow">if</span> (vbformat != cfg.format){</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        LOGE(<span class="stringliteral">&quot;Format ignored: 0x%x&quot;</span>, vbformat);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;      }</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;      <span class="comment">// Currently we support only 16 bits.</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;      <span class="keywordflow">if</span> (vbformat_bits != VBAN_BITFMT_16_INT){</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        LOGE(<span class="stringliteral">&quot;Format only 16 bits supported&quot;</span>);</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;      }</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;      <span class="comment">// update sample rate</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;      <span class="keywordflow">if</span> (cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> != vbanSampleRate || cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> != vbchannels) {</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = vbanSampleRate;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = vbchannels;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        setAudioInfo(cfg);</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;      <span class="comment">// Just to be safe, re-check sample count against max sample count to</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;      <span class="comment">// avoid overrunning outBuf later</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;      <span class="keywordflow">if</span> (vban_rx_sample_count &gt; VBAN_PACKET_MAX_SAMPLES) {</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        LOGE(<span class="stringliteral">&quot;unexpected packet size: %u&quot;</span>, vban_rx_sample_count);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;      }</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      <span class="keywordflow">if</span> (p_out!=<span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordtype">int</span> size_written = p_out-&gt;write((uint8_t*)vban_rx_data, vban_rx_data_bytes);</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <span class="keywordflow">if</span> (size_written != vban_rx_data_bytes) {</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;          LOGE(<span class="stringliteral">&quot;buffer overflow %d -&gt; %d&quot;</span>, vban_rx_data_bytes, size_written);</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        }</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;      }</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;      <span class="comment">// write data to buffer</span></div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;      TRACED();</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;      <span class="keywordtype">int</span> size_written = rx_buffer.writeArray((uint8_t*)vban_rx_data, vban_rx_data_bytes);</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;      <span class="keywordflow">if</span> (size_written != vban_rx_data_bytes) {</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        LOGE(<span class="stringliteral">&quot;buffer overflow %d -&gt; %d&quot;</span>, vban_rx_data_bytes, size_written);</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;      }</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;      <span class="comment">// report available bytes only when buffer is 50% full</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;      <span class="keywordflow">if</span> (!available_active) {</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        bytes_received += vban_rx_data_bytes;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        <span class="keywordflow">if</span> (bytes_received &gt;= cfg.rx_buffer_count * DEFAULT_BUFFER_SIZE * 0.75){</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;          available_active = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;          LOGI(<span class="stringliteral">&quot;Activating vban&quot;</span>);</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        }</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;      }</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    }</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  }</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;};</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      <span class="comment">// update sample rate</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      <span class="keywordflow">if</span> (cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> != vbanSampleRate || cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> != vbchannels) {</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <span class="comment">// update audio info</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = vbanSampleRate;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = vbchannels;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        setAudioInfo(cfg);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="comment">// remove any buffered data</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        rx_buffer.reset();</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        available_active = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;      }</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;      <span class="keywordflow">if</span> (p_out!=<span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <span class="keywordtype">int</span> size_written = p_out-&gt;write((uint8_t*)vban_rx_data, vban_rx_data_bytes);</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">if</span> (size_written != vban_rx_data_bytes) {</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;          LOGE(<span class="stringliteral">&quot;buffer overflow %d -&gt; %d&quot;</span>, vban_rx_data_bytes, size_written);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;      }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160; </div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;      <span class="comment">// write data to buffer</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;      <span class="keywordtype">int</span> size_written = rx_buffer.writeArray((uint8_t*)vban_rx_data, vban_rx_data_bytes);</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;      <span class="keywordflow">if</span> (size_written != vban_rx_data_bytes) {</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        LOGE(<span class="stringliteral">&quot;buffer overflow %d -&gt; %d&quot;</span>, vban_rx_data_bytes, size_written);</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      }</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      <span class="comment">// report available bytes only when buffer is 50% full</span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;      <span class="keywordflow">if</span> (!available_active) {</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        bytes_received += vban_rx_data_bytes;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="keywordflow">if</span> (bytes_received &gt;= cfg.rx_buffer_count * DEFAULT_BUFFER_SIZE * 0.75){</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;          available_active = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;          LOGI(<span class="stringliteral">&quot;Activating vban&quot;</span>);</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        }</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;      }</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    }</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  }</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;};</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_stream.html">audio_tools::AudioStream</a></div><div class="ttdoc">Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...</div><div class="ttdef"><b>Definition:</b> AudioStreams.h:40</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_n_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_n_buffer.html">audio_tools::NBuffer&lt; uint8_t &gt;</a></div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:58</div></div>
