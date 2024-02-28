@@ -19,12 +19,13 @@ var searchData=
   ['printable_1962',['Printable',['../class_printable.html',1,'']]],
   ['progressstream_1963',['ProgressStream',['../classaudio__tools_1_1_progress_stream.html',1,'audio_tools']]],
   ['progressstreaminfo_1964',['ProgressStreamInfo',['../classaudio__tools_1_1_progress_stream_info.html',1,'audio_tools']]],
-  ['pwmaudiooutput_1965',['PWMAudioOutput',['../classaudio__tools_1_1_p_w_m_audio_output.html',1,'audio_tools']]],
-  ['pwmconfig_1966',['PWMConfig',['../structaudio__tools_1_1_p_w_m_config.html',1,'audio_tools']]],
-  ['pwmdac_1967',['PWMDAC',['../classaudio__tools_1_1_p_w_m_d_a_c.html',1,'audio_tools']]],
-  ['pwmdriveravr_1968',['PWMDriverAVR',['../classaudio__tools_1_1_p_w_m_driver_a_v_r.html',1,'audio_tools']]],
-  ['pwmdriveresp32_1969',['PWMDriverESP32',['../classaudio__tools_1_1_p_w_m_driver_e_s_p32.html',1,'audio_tools']]],
-  ['pwmdrivermbed_1970',['PWMDriverMBED',['../classaudio__tools_1_1_p_w_m_driver_m_b_e_d.html',1,'audio_tools']]],
-  ['pwmdriverrenesas_1971',['PWMDriverRenesas',['../classaudio__tools_1_1_p_w_m_driver_renesas.html',1,'audio_tools']]],
-  ['pwmdriverstm32_1972',['PWMDriverSTM32',['../classaudio__tools_1_1_p_w_m_driver_s_t_m32.html',1,'audio_tools']]]
+  ['puredatastream_1965',['PureDataStream',['../class_pure_data_stream.html',1,'']]],
+  ['pwmaudiooutput_1966',['PWMAudioOutput',['../classaudio__tools_1_1_p_w_m_audio_output.html',1,'audio_tools']]],
+  ['pwmconfig_1967',['PWMConfig',['../structaudio__tools_1_1_p_w_m_config.html',1,'audio_tools']]],
+  ['pwmdac_1968',['PWMDAC',['../classaudio__tools_1_1_p_w_m_d_a_c.html',1,'audio_tools']]],
+  ['pwmdriveravr_1969',['PWMDriverAVR',['../classaudio__tools_1_1_p_w_m_driver_a_v_r.html',1,'audio_tools']]],
+  ['pwmdriveresp32_1970',['PWMDriverESP32',['../classaudio__tools_1_1_p_w_m_driver_e_s_p32.html',1,'audio_tools']]],
+  ['pwmdrivermbed_1971',['PWMDriverMBED',['../classaudio__tools_1_1_p_w_m_driver_m_b_e_d.html',1,'audio_tools']]],
+  ['pwmdriverrenesas_1972',['PWMDriverRenesas',['../classaudio__tools_1_1_p_w_m_driver_renesas.html',1,'audio_tools']]],
+  ['pwmdriverstm32_1973',['PWMDriverSTM32',['../classaudio__tools_1_1_p_w_m_driver_s_t_m32.html',1,'audio_tools']]]
 ];
