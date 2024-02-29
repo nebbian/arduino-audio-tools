@@ -96,6 +96,10 @@ Inheritance diagram for ESPNowStream:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a727a24459787e1eeeb7a37ba888394a6"><td class="memItemLeft" align="right" valign="top"><a id="a727a24459787e1eeeb7a37ba888394a6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a727a24459787e1eeeb7a37ba888394a6">addNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:a727a24459787e1eeeb7a37ba888394a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds target to be notified about audio changes. <br /></td></tr>
+<tr class="separator:a727a24459787e1eeeb7a37ba888394a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a698e82ab7c77d5d37805864f7db3f07b"><td class="memItemLeft" align="right" valign="top"><a id="a698e82ab7c77d5d37805864f7db3f07b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_e_s_p_now_stream.html#a698e82ab7c77d5d37805864f7db3f07b">addPeer</a> (const char *address)</td></tr>
 <tr class="memdesc:a698e82ab7c77d5d37805864f7db3f07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a peer to which we can send info or from which we can receive info. <br /></td></tr>
@@ -126,6 +130,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_e_s_p_now_stream.html#ad3f942324662d935f8a90233ed43a252">begin</a> (<a class="el" href="structaudio__tools_1_1_e_s_p_now_stream_config.html">ESPNowStreamConfig</a> cfg)</td></tr>
 <tr class="memdesc:ad3f942324662d935f8a90233ed43a252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization of ESPNow incl WIFI. <br /></td></tr>
 <tr class="separator:ad3f942324662d935f8a90233ed43a252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd15675a5e391c34cccefa7181354bb"><td class="memItemLeft" align="right" valign="top"><a id="affd15675a5e391c34cccefa7181354bb"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#affd15675a5e391c34cccefa7181354bb">clearNotifyAudioChange</a> ()</td></tr>
+<tr class="memdesc:affd15675a5e391c34cccefa7181354bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes all change notify subscriptions. <br /></td></tr>
+<tr class="separator:affd15675a5e391c34cccefa7181354bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8df58f79959ad5b058312a03193ec88"><td class="memItemLeft" align="right" valign="top"><a id="ad8df58f79959ad5b058312a03193ec88"></a>
 <a class="el" href="structaudio__tools_1_1_e_s_p_now_stream_config.html">ESPNowStreamConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
 <tr class="separator:ad8df58f79959ad5b058312a03193ec88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,21 +159,23 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#a36e26f40121eda38b0042dcba026ab82">readSilence</a> (uint8_t *buffer, size_t length)</td></tr>
 <tr class="memdesc:a36e26f40121eda38b0042dcba026ab82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source to generate silence: just sets the buffer to 0. <br /></td></tr>
 <tr class="separator:a36e26f40121eda38b0042dcba026ab82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="memItemLeft" align="right" valign="top"><a id="aa5b1cdb06807ff2dc37acbaff63410b9"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#aa5b1cdb06807ff2dc37acbaff63410b9">removeNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a target in order not to be notified about audio changes. <br /></td></tr>
+<tr class="separator:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
 <tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
-<tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e0825fad7a777d93e43602670010c7"><td class="memItemLeft" align="right" valign="top"><a id="a64e0825fad7a777d93e43602670010c7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
+<tr class="separator:a64e0825fad7a777d93e43602670010c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a2ce66666bf4387e15a7c619946b601"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_e_s_p_now_stream.html#a8a2ce66666bf4387e15a7c619946b601">setReceiveCallback</a> (esp_now_recv_cb_t cb)</td></tr>
 <tr class="separator:a8a2ce66666bf4387e15a7c619946b601"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19b2f79c6278f469fceebf0696a7d5c7"><td class="memItemLeft" align="right" valign="top"><a id="a19b2f79c6278f469fceebf0696a7d5c7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_e_s_p_now_stream.html#a19b2f79c6278f469fceebf0696a7d5c7">setSendCallback</a> (esp_now_send_cb_t cb)</td></tr>
 <tr class="memdesc:a19b2f79c6278f469fceebf0696a7d5c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an alternative send callback. <br /></td></tr>
 <tr class="separator:a19b2f79c6278f469fceebf0696a7d5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a989540d43150595fdde26c8f37265069"><td class="memItemLeft" align="right" valign="top"><a id="a989540d43150595fdde26c8f37265069"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> &amp;info)</td></tr>
-<tr class="separator:a989540d43150595fdde26c8f37265069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7597ef706dd1aa590903ce9e095db20a"><td class="memItemLeft" align="right" valign="top"><a id="a7597ef706dd1aa590903ce9e095db20a"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_e_s_p_now_stream.html#a7597ef706dd1aa590903ce9e095db20a">write</a> (const uint8_t *data, size_t len) override</td></tr>
 <tr class="memdesc:a7597ef706dd1aa590903ce9e095db20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the data - sends it to all the peers. <br /></td></tr>
@@ -180,6 +190,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a4c33a04426f36f7209536901dcd58544"><td class="memItemLeft" align="right" valign="top"><a id="a4c33a04426f36f7209536901dcd58544"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="separator:a4c33a04426f36f7209536901dcd58544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d7886c84d21eca2a14eb0b303aa1ac2"><td class="memItemLeft" align="right" valign="top"><a id="a3d7886c84d21eca2a14eb0b303aa1ac2"></a>
 wifi_interface_t&#160;</td><td class="memItemRight" valign="bottom"><b>getInterface</b> ()</td></tr>
 <tr class="separator:a3d7886c84d21eca2a14eb0b303aa1ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,6 +205,9 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>mac2str</b> (
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memItemLeft" align="right" valign="top"><a id="a6a9a665a387a8c4fbf7fed14bbbfc093"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyAudioChange</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
 <tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,12 +257,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_init</b> = false</
 <tr class="memitem:a794c5741f82a93bc9f600109e8b61ad3"><td class="memItemLeft" align="right" valign="top"><a id="a794c5741f82a93bc9f600109e8b61ad3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_write_ok</b> = false</td></tr>
 <tr class="separator:a794c5741f82a93bc9f600109e8b61ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memItemLeft" align="right" valign="top"><a id="ad35c4e2ef458c36e8d36676958cc9cd3"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notify_vector</b></td></tr>
+<tr class="separator:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23dcc8cc0d1809b6ec0e94343a2ac7a4"><td class="memItemLeft" align="right" valign="top"><a id="a23dcc8cc0d1809b6ec0e94343a2ac7a4"></a>
 <a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; uint8_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>p_buffer</b> = nullptr</td></tr>
 <tr class="separator:a23dcc8cc0d1809b6ec0e94343a2ac7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
-<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6fe0090cb57736a043e9e706248fa2f"><td class="memItemLeft" align="right" valign="top"><a id="ac6fe0090cb57736a043e9e706248fa2f"></a>
 esp_now_recv_cb_t&#160;</td><td class="memItemRight" valign="bottom"><b>receive</b> = default_recv_cb</td></tr>
 <tr class="separator:ac6fe0090cb57736a043e9e706248fa2f"><td class="memSeparator" colspan="2">&#160;</td></tr>

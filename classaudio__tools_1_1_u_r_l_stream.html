@@ -108,6 +108,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9dc1b38118b47e4dedd80c3bac2a41d6"><td class="memItemLeft" align="right" valign="top"><a id="a9dc1b38118b47e4dedd80c3bac2a41d6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URLStream</b> (int readBufferSize=DEFAULT_BUFFER_SIZE)</td></tr>
 <tr class="separator:a9dc1b38118b47e4dedd80c3bac2a41d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727a24459787e1eeeb7a37ba888394a6"><td class="memItemLeft" align="right" valign="top"><a id="a727a24459787e1eeeb7a37ba888394a6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a727a24459787e1eeeb7a37ba888394a6">addNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:a727a24459787e1eeeb7a37ba888394a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds target to be notified about audio changes. <br /></td></tr>
+<tr class="separator:a727a24459787e1eeeb7a37ba888394a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3dc068c14d312a8315248f59675ace3"><td class="memItemLeft" align="right" valign="top"><a id="ad3dc068c14d312a8315248f59675ace3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#ad3dc068c14d312a8315248f59675ace3">addRequestHeader</a> (const char *header, const char *value)</td></tr>
 <tr class="memdesc:ad3dc068c14d312a8315248f59675ace3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds/Updates a request header. <br /></td></tr>
@@ -137,6 +141,10 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
 <tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the memory from the request and reply. <br /></td></tr>
 <tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd15675a5e391c34cccefa7181354bb"><td class="memItemLeft" align="right" valign="top"><a id="affd15675a5e391c34cccefa7181354bb"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#affd15675a5e391c34cccefa7181354bb">clearNotifyAudioChange</a> ()</td></tr>
+<tr class="memdesc:affd15675a5e391c34cccefa7181354bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes all change notify subscriptions. <br /></td></tr>
+<tr class="separator:affd15675a5e391c34cccefa7181354bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00493e01037c52bf0c68e4fc6d526cd4"><td class="memItemLeft" align="right" valign="top"><a id="a00493e01037c52bf0c68e4fc6d526cd4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>contentLength</b> ()</td></tr>
 <tr class="separator:a00493e01037c52bf0c68e4fc6d526cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +174,10 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#a36e26f40121eda38b0042dcba026ab82">readSilence</a> (uint8_t *buffer, size_t length)</td></tr>
 <tr class="memdesc:a36e26f40121eda38b0042dcba026ab82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source to generate silence: just sets the buffer to 0. <br /></td></tr>
 <tr class="separator:a36e26f40121eda38b0042dcba026ab82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="memItemLeft" align="right" valign="top"><a id="aa5b1cdb06807ff2dc37acbaff63410b9"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#aa5b1cdb06807ff2dc37acbaff63410b9">removeNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a target in order not to be notified about audio changes. <br /></td></tr>
+<tr class="separator:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
 <tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,9 +200,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a75440ced7631cd14125dee528afdd531"><td class="memItemLeft" align="right" valign="top"><a id="a75440ced7631cd14125dee528afdd531"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>setMetadataCallback</b> (void(*fn)(<a class="el" href="group__metadata.html#ga6760f423085f8a63374b1e2db102a6d1">MetaDataType</a> info, const char *str, int len))</td></tr>
 <tr class="separator:a75440ced7631cd14125dee528afdd531"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15dab246db3fa023265ce8854ea866ab"><td class="memItemLeft" align="right" valign="top"><a id="a15dab246db3fa023265ce8854ea866ab"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi) override</td></tr>
-<tr class="separator:a15dab246db3fa023265ce8854ea866ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e0825fad7a777d93e43602670010c7"><td class="memItemLeft" align="right" valign="top"><a id="a64e0825fad7a777d93e43602670010c7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
+<tr class="separator:a64e0825fad7a777d93e43602670010c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4f59d434249e98049f1bf6917a4faec"><td class="memItemLeft" align="right" valign="top"><a id="ac4f59d434249e98049f1bf6917a4faec"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#ac4f59d434249e98049f1bf6917a4faec">setOnConnectCallback</a> (void(*callback)(<a class="el" href="classaudio__tools_1_1_http_request.html">HttpRequest</a> &amp;request, <a class="el" href="classaudio__tools_1_1_url.html">Url</a> &amp;url, <a class="el" href="classaudio__tools_1_1_http_request_header.html">HttpRequestHeader</a> &amp;request_header))</td></tr>
 <tr class="memdesc:ac4f59d434249e98049f1bf6917a4faec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback which allows you to add additional paramters dynamically. <br /></td></tr>
@@ -223,9 +236,6 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>totalRead</b> ()</t
 <tr class="memitem:ae70d024dc49fa6f62d0b2d4d7f50d9c1"><td class="memItemLeft" align="right" valign="top"><a id="ae70d024dc49fa6f62d0b2d4d7f50d9c1"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>urlStr</b> ()</td></tr>
 <tr class="separator:ae70d024dc49fa6f62d0b2d4d7f50d9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a989540d43150595fdde26c8f37265069"><td class="memItemLeft" align="right" valign="top"><a id="a989540d43150595fdde26c8f37265069"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>validate</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> &amp;info)</td></tr>
-<tr class="separator:a989540d43150595fdde26c8f37265069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3ce77011ad910987e5354c5654e3d0e"><td class="memItemLeft" align="right" valign="top"><a id="ab3ce77011ad910987e5354c5654e3d0e"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#ab3ce77011ad910987e5354c5654e3d0e">waitForData</a> (int timeout)</td></tr>
 <tr class="memdesc:ab3ce77011ad910987e5354c5654e3d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">waits for some data - returns false if the request has failed <br /></td></tr>
@@ -243,6 +253,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a4c33a04426f36f7209536901dcd58544"><td class="memItemLeft" align="right" valign="top"><a id="a4c33a04426f36f7209536901dcd58544"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="separator:a4c33a04426f36f7209536901dcd58544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c49b91fc6b4c626a41b94e3032ea46c"><td class="memItemLeft" align="right" valign="top"><a id="a1c49b91fc6b4c626a41b94e3032ea46c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>fillBuffer</b> ()</td></tr>
 <tr class="separator:a1c49b91fc6b4c626a41b94e3032ea46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -259,6 +272,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>login</b> ()</td></tr
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memItemLeft" align="right" valign="top"><a id="a6a9a665a387a8c4fbf7fed14bbbfc093"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyAudioChange</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cabdc3cfa3efa52e6737f3a73bf73e2"><td class="memItemLeft" align="right" valign="top"><a id="a2cabdc3cfa3efa52e6737f3a73bf73e2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>preProcess</b> (const char *urlStr, const char *acceptMime)</td></tr>
 <tr class="separator:a2cabdc3cfa3efa52e6737f3a73bf73e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -303,9 +319,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_power_save</b> = f
 <tr class="memitem:a401098f5aef1991a0444deeaeee4084d"><td class="memItemLeft" align="right" valign="top"><a id="a401098f5aef1991a0444deeaeee4084d"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>network</b> =nullptr</td></tr>
 <tr class="separator:a401098f5aef1991a0444deeaeee4084d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> =nullptr</td></tr>
-<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memItemLeft" align="right" valign="top"><a id="ad35c4e2ef458c36e8d36676958cc9cd3"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notify_vector</b></td></tr>
+<tr class="separator:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4a2ebcb494493f648ae1e6975672575"><td class="memItemLeft" align="right" valign="top"><a id="aa4a2ebcb494493f648ae1e6975672575"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>password</b> =nullptr</td></tr>
 <tr class="separator:aa4a2ebcb494493f648ae1e6975672575"><td class="memSeparator" colspan="2">&#160;</td></tr>

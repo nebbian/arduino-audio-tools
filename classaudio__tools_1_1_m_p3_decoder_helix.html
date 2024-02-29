@@ -104,6 +104,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a4e3ff218051614b352b28ff3ccf8703a">~MP3DecoderHelix</a> ()</td></tr>
 <tr class="memdesc:a4e3ff218051614b352b28ff3ccf8703a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classaudio__tools_1_1_m_p3_decoder_mini.html" title="MP3 Decoder using https://github.com/pschatzmann/minimp3. This decoder does not provide any good resu...">MP3DecoderMini</a> object. <br /></td></tr>
 <tr class="separator:a4e3ff218051614b352b28ff3ccf8703a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f5c037390e7b8d3b6ae15c52601dbf"><td class="memItemLeft" align="right" valign="top"><a id="a64f5c037390e7b8d3b6ae15c52601dbf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a64f5c037390e7b8d3b6ae15c52601dbf">addNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:a64f5c037390e7b8d3b6ae15c52601dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the callback object to which the Audio information change is provided. <br /></td></tr>
+<tr class="separator:a64f5c037390e7b8d3b6ae15c52601dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
 <tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +121,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a6c23593971c66b1fee16958a3ad1b0a6"><td class="memItemLeft" align="right" valign="top"><a id="a6c23593971c66b1fee16958a3ad1b0a6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="separator:a6c23593971c66b1fee16958a3ad1b0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd15675a5e391c34cccefa7181354bb"><td class="memItemLeft" align="right" valign="top"><a id="affd15675a5e391c34cccefa7181354bb"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#affd15675a5e391c34cccefa7181354bb">clearNotifyAudioChange</a> ()</td></tr>
+<tr class="memdesc:affd15675a5e391c34cccefa7181354bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes all change notify subscriptions. <br /></td></tr>
+<tr class="separator:affd15675a5e391c34cccefa7181354bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b44471c98e90edaf2110e0dfe861a95"><td class="memItemLeft" align="right" valign="top"><a id="a4b44471c98e90edaf2110e0dfe861a95"></a>
 libhelix::MP3DecoderHelix *&#160;</td><td class="memItemRight" valign="bottom"><b>driver</b> ()</td></tr>
 <tr class="separator:a4b44471c98e90edaf2110e0dfe861a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,6 +152,10 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a9b3baad8c612d81b96e46f84d7e97580">operator bool</a> ()</td></tr>
 <tr class="memdesc:a9b3baad8c612d81b96e46f84d7e97580"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if the class is active <br /></td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="memItemLeft" align="right" valign="top"><a id="aa5b1cdb06807ff2dc37acbaff63410b9"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#aa5b1cdb06807ff2dc37acbaff63410b9">removeNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a target in order not to be notified about audio changes. <br /></td></tr>
+<tr class="separator:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accee684614189e73bdc9f1b2f7abf919"><td class="memItemLeft" align="right" valign="top"><a id="accee684614189e73bdc9f1b2f7abf919"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#accee684614189e73bdc9f1b2f7abf919">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
 <tr class="memdesc:accee684614189e73bdc9f1b2f7abf919"><td class="mdescLeft">&#160;</td><td class="mdescRight">for most decoders this is not needed <br /></td></tr>
@@ -160,10 +172,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a00f9dda211e2236d718c7c68bf610ea7">setMaxPCMSize</a> (size_t len)</td></tr>
 <tr class="memdesc:a00f9dda211e2236d718c7c68bf610ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define your optimized maximum pwm buffer size. <br /></td></tr>
 <tr class="separator:a00f9dda211e2236d718c7c68bf610ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48f731a1a7698c73ac736b17066dcf51"><td class="memItemLeft" align="right" valign="top"><a id="a48f731a1a7698c73ac736b17066dcf51"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_helix.html#a48f731a1a7698c73ac736b17066dcf51">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
-<tr class="memdesc:a48f731a1a7698c73ac736b17066dcf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the callback object to which the Audio information change is provided. <br /></td></tr>
-<tr class="separator:a48f731a1a7698c73ac736b17066dcf51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e0825fad7a777d93e43602670010c7"><td class="memItemLeft" align="right" valign="top"><a id="a64e0825fad7a777d93e43602670010c7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
+<tr class="separator:a64e0825fad7a777d93e43602670010c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf58dd0aedd8748b499ca948bd2cdf5d"><td class="memItemLeft" align="right" valign="top"><a id="acf58dd0aedd8748b499ca948bd2cdf5d"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#acf58dd0aedd8748b499ca948bd2cdf5d">setOutput</a> (<a class="el" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> &amp;out_stream)</td></tr>
 <tr class="memdesc:acf58dd0aedd8748b499ca948bd2cdf5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines where the decoded result is written to. <br /></td></tr>
@@ -190,15 +202,18 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a4c33a04426f36f7209536901dcd58544"><td class="memItemLeft" align="right" valign="top"><a id="a4c33a04426f36f7209536901dcd58544"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="separator:a4c33a04426f36f7209536901dcd58544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memItemLeft" align="right" valign="top"><a id="a6a9a665a387a8c4fbf7fed14bbbfc093"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyAudioChange</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e475070d3df18395c90a10c9d38eb0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e475070d3df18395c90a10c9d38eb0a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out, uint8_t *data, size_t len)</td></tr>
 <tr class="separator:a2e475070d3df18395c90a10c9d38eb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aae34c5d38422b8aeed9590fefe954f51"><td class="memItemLeft" align="right" valign="top"><a id="aae34c5d38422b8aeed9590fefe954f51"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>audioChangeMP3Helix</b> =nullptr</td></tr>
-<tr class="separator:aae34c5d38422b8aeed9590fefe954f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a997eec2d5e498694668a5fcd96d3f5ff"><td class="memItemLeft" align="right" valign="top"><a id="a997eec2d5e498694668a5fcd96d3f5ff"></a>
 <a class="el" href="classaudio__tools_1_1_meta_data_filter.html">MetaDataFilter</a>&lt; libhelix::MP3DecoderHelix &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>filter</b></td></tr>
 <tr class="separator:a997eec2d5e498694668a5fcd96d3f5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,9 +223,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ae2d27079396f2f636999934311f2d75b"><td class="memItemLeft" align="right" valign="top"><a id="ae2d27079396f2f636999934311f2d75b"></a>
 libhelix::MP3DecoderHelix *&#160;</td><td class="memItemRight" valign="bottom"><b>mp3</b> =nullptr</td></tr>
 <tr class="separator:ae2d27079396f2f636999934311f2d75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memItemLeft" align="right" valign="top"><a id="a5056725bc83c694a5d14eeeb7ee4bb5b"></a>
-<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_notify</b> = nullptr</td></tr>
-<tr class="separator:a5056725bc83c694a5d14eeeb7ee4bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memItemLeft" align="right" valign="top"><a id="ad35c4e2ef458c36e8d36676958cc9cd3"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notify_vector</b></td></tr>
+<tr class="separator:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>
 <tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>

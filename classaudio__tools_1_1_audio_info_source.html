@@ -67,9 +67,11 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classaudio__tools_1_1_audio_info_source-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">AudioInfoSource Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__basic.html">Basic</a></div></div>  </div>
+<div class="title">AudioInfoSource Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__basic.html">Basic</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -86,6 +88,7 @@ Inheritance diagram for AudioInfoSource:</div>
 <area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="0,56,213,80"/>
 <area href="classaudio__tools_1_1_audio_output.html" title="Abstract Audio Ouptut class." alt="AudioOutput" shape="rect" coords="446,56,659,80"/>
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="892,56,1105,80"/>
+<area href="classaudio__tools_1_1_streaming_decoder.html" title="A Streaming Decoder where we provide both the input and output as streams." alt="StreamingDecoder" shape="rect" coords="1338,56,1551,80"/>
 <area href="classaudio__tools_1_1_a_a_c_decoder_f_a_a_d.html" title="AAC Decoder using faad: https://github.com/pschatzmann/arduino-libfaad This needs a stack of around 6..." alt="AACDecoderFAAD" shape="rect" coords="223,112,436,136"/>
 <area href="classaudio__tools_1_1_a_a_c_decoder_f_d_k.html" title="Audio Decoder which decodes AAC into a PCM stream This is basically just a wrapper using https://gith..." alt="AACDecoderFDK" shape="rect" coords="223,168,436,192"/>
 <area href="classaudio__tools_1_1_a_a_c_decoder_helix.html" title="AAC Decoder using libhelix: https://github.com/pschatzmann/arduino-libhelix This is basically just a ..." alt="AACDecoderHelix" shape="rect" coords="223,224,436,248"/>
@@ -134,12 +137,11 @@ Inheritance diagram for AudioInfoSource:</div>
 <area href="classaudio__tools_1_1_meta_data_output.html" title="ID3 and Icecast/Shoutcast metadata output support. Just write the audio data to an object of this cla..." alt="MetaDataOutput" shape="rect" coords="669,616,882,640"/>
 <area href="classaudio__tools_1_1_multi_output.html" title="Replicates the output to multiple destinations." alt="MultiOutput" shape="rect" coords="669,672,882,696"/>
 <area href="classaudio__tools_1_1_ogg_container_output.html" title="Output class for the OggContainerEncoder. Each write is ending up as container entry." alt="OggContainerOutput" shape="rect" coords="669,728,882,752"/>
-<area href="classaudio__tools_1_1_on_off_output.html" title="Switched Output class. Class which can be used to filter the output out based on a switch: If the swi..." alt="OnOffOutput" shape="rect" coords="669,784,882,808"/>
-<area href="classaudio__tools_1_1_oversampling_d_a_c.html" title="Abstract Software Implementation of an Oversampling DAC." alt="OversamplingDAC" shape="rect" coords="669,840,882,864"/>
-<area href="classaudio__tools_1_1_p_w_m_audio_output.html" title="Common functionality for PWM output. Please use the PWMAudioOutput typedef instead which references t..." alt="PWMAudioOutput" shape="rect" coords="669,896,882,920"/>
-<area href="classaudio__tools_1_1_pitch_shift_output.html" title="Pitch Shift: Shifts the frequency up or down w/o impacting the length! We reduce the channels to 1 to..." alt="PitchShiftOutput&lt; T, BufferT &gt;" shape="rect" coords="669,952,882,976"/>
-<area href="classaudio__tools_1_1_r_t_s_p_output.html" title="We can write PCM data to the RTSPOutput. This is encoded by the indicated encoder (e...." alt="RTSPOutput" shape="rect" coords="669,1008,882,1032"/>
-<area href="classaudio__tools_1_1_volume_output.html" title="A simple class to determine the volume." alt="VolumeOutput" shape="rect" coords="669,1064,882,1088"/>
+<area href="classaudio__tools_1_1_oversampling_d_a_c.html" title="Abstract Software Implementation of an Oversampling DAC." alt="OversamplingDAC" shape="rect" coords="669,784,882,808"/>
+<area href="classaudio__tools_1_1_p_w_m_audio_output.html" title="Common functionality for PWM output. Please use the PWMAudioOutput typedef instead which references t..." alt="PWMAudioOutput" shape="rect" coords="669,840,882,864"/>
+<area href="classaudio__tools_1_1_pitch_shift_output.html" title="Pitch Shift: Shifts the frequency up or down w/o impacting the length! We reduce the channels to 1 to..." alt="PitchShiftOutput&lt; T, BufferT &gt;" shape="rect" coords="669,896,882,920"/>
+<area href="classaudio__tools_1_1_r_t_s_p_output.html" title="We can write PCM data to the RTSPOutput. This is encoded by the indicated encoder (e...." alt="RTSPOutput" shape="rect" coords="669,952,882,976"/>
+<area href="classaudio__tools_1_1_volume_output.html" title="A simple class to determine the volume." alt="VolumeOutput" shape="rect" coords="669,1008,882,1032"/>
 <area href="classaudio__tools_1_1_file_loop_t.html" alt="FileLoopT&lt; File &gt;" shape="rect" coords="1115,112,1328,136"/>
 <area href="classaudio__tools_1_1_filtered_stream.html" alt="FilteredStream&lt; T, float &gt;" shape="rect" coords="1115,168,1328,192"/>
 <area href="classaudio__tools_1_1_generated_sound_stream.html" alt="GeneratedSoundStream&lt; int16_t &gt;" shape="rect" coords="1115,224,1328,248"/>
@@ -189,26 +191,57 @@ Inheritance diagram for AudioInfoSource:</div>
 <area href="classaudio__tools_1_1_p_d_m_mono_stream_t.html" title="Applies low pass filter to a decimated pdm signal to convert it to pcm." alt="PDMMonoStreamT&lt; T &gt;" shape="rect" coords="1115,2688,1328,2712"/>
 <area href="classaudio__tools_1_1_port_audio_stream.html" title="Arduino Audio Stream using PortAudio." alt="PortAudioStream" shape="rect" coords="1115,2744,1328,2768"/>
 <area href="classaudio__tools_1_1_progress_stream.html" title="Generic calss to measure the the total bytes which were processed in order to calculate the progress ..." alt="ProgressStream" shape="rect" coords="1115,2800,1328,2824"/>
-<area href="classaudio__tools_1_1_queue_stream.html" title="AudioStream class which stores the data in a temporary queue buffer. The queue can be consumed e...." alt="QueueStream&lt; T &gt;" shape="rect" coords="1115,2856,1328,2880"/>
-<area href="classaudio__tools_1_1_reformat_base_stream.html" title="Base class for chained converting streams." alt="ReformatBaseStream" shape="rect" coords="1115,2912,1328,2936"/>
-<area href="classaudio__tools_1_1_ring_buffer_stream.html" title="A Stream backed by a Ringbuffer. We can write to the end and read from the beginning of the stream." alt="RingBufferStream" shape="rect" coords="1115,2968,1328,2992"/>
-<area href="classaudio__tools_1_1_s_p_d_i_f_output.html" title="Output as 16 bit stereo SPDIF on the I2S data output pin." alt="SPDIFOutput" shape="rect" coords="1115,3024,1328,3048"/>
-<area href="classaudio__tools_1_1_stdio_stream.html" alt="StdioStream" shape="rect" coords="1115,3080,1328,3104"/>
-<area href="classaudio__tools_1_1_tf_lite_audio_stream_base.html" title="Astract TfLiteAudioStream to provide access to TfLiteAudioStream for Reader and Writers." alt="TfLiteAudioStreamBase" shape="rect" coords="1115,3136,1328,3160"/>
-<area href="classaudio__tools_1_1_throttle.html" title="Throttle the sending or receiving of the audio data to limit it to the indicated sample rate." alt="Throttle" shape="rect" coords="1115,3192,1328,3216"/>
-<area href="classaudio__tools_1_1_timed_stream.html" title="AudioStream class that can define a start and (an optional) stop time Usually it is used to wrap an A..." alt="TimedStream" shape="rect" coords="1115,3248,1328,3272"/>
-<area href="classaudio__tools_1_1_v_b_a_n_stream.html" title="VBAN Audio Source and Sink for the ESP32. For further details please see https://vb-audio...." alt="VBANStream" shape="rect" coords="1115,3304,1328,3328"/>
-<area href="classaudio__tools_1_1_v_s1053_stream.html" title="VS1053 Output Interface which processes PCM data by default. If you want to write encoded data set is..." alt="VS1053Stream" shape="rect" coords="1115,3360,1328,3384"/>
-<area href="classaudio__tools_1_1_volume_stream.html" title="Adjust the volume of the related input or output: To work properly the class needs to know the bits p..." alt="VolumeStream" shape="rect" coords="1115,3416,1328,3440"/>
-<area href="classaudio__tools_1_1_w_m8960_stream.html" title="Stream for reading and writing audio data using the WM8960 Codec Chip You need to install https://git..." alt="WM8960Stream" shape="rect" coords="1115,3472,1328,3496"/>
+<area href="classaudio__tools_1_1_pure_data_stream.html" title="Input and output of Pure Data PD using code generated by the hvcc compiler." alt="PureDataStream" shape="rect" coords="1115,2856,1328,2880"/>
+<area href="classaudio__tools_1_1_queue_stream.html" title="AudioStream class which stores the data in a temporary queue buffer. The queue can be consumed e...." alt="QueueStream&lt; T &gt;" shape="rect" coords="1115,2912,1328,2936"/>
+<area href="classaudio__tools_1_1_reformat_base_stream.html" title="Base class for chained converting streams." alt="ReformatBaseStream" shape="rect" coords="1115,2968,1328,2992"/>
+<area href="classaudio__tools_1_1_ring_buffer_stream.html" title="A Stream backed by a Ringbuffer. We can write to the end and read from the beginning of the stream." alt="RingBufferStream" shape="rect" coords="1115,3024,1328,3048"/>
+<area href="classaudio__tools_1_1_s_p_d_i_f_output.html" title="Output as 16 bit stereo SPDIF on the I2S data output pin." alt="SPDIFOutput" shape="rect" coords="1115,3080,1328,3104"/>
+<area href="classaudio__tools_1_1_stdio_stream.html" alt="StdioStream" shape="rect" coords="1115,3136,1328,3160"/>
+<area href="classaudio__tools_1_1_tf_lite_audio_stream_base.html" title="Astract TfLiteAudioStream to provide access to TfLiteAudioStream for Reader and Writers." alt="TfLiteAudioStreamBase" shape="rect" coords="1115,3192,1328,3216"/>
+<area href="classaudio__tools_1_1_throttle.html" title="Throttle the sending or receiving of the audio data to limit it to the indicated sample rate." alt="Throttle" shape="rect" coords="1115,3248,1328,3272"/>
+<area href="classaudio__tools_1_1_timed_stream.html" title="AudioStream class that can define a start and (an optional) stop time Usually it is used to wrap an A..." alt="TimedStream" shape="rect" coords="1115,3304,1328,3328"/>
+<area href="classaudio__tools_1_1_v_b_a_n_stream.html" title="VBAN Audio Source and Sink for the ESP32. For further details please see https://vb-audio...." alt="VBANStream" shape="rect" coords="1115,3360,1328,3384"/>
+<area href="classaudio__tools_1_1_v_s1053_stream.html" title="VS1053 Output Interface which processes PCM data by default. If you want to write encoded data set is..." alt="VS1053Stream" shape="rect" coords="1115,3416,1328,3440"/>
+<area href="classaudio__tools_1_1_volume_stream.html" title="Adjust the volume of the related input or output: To work properly the class needs to know the bits p..." alt="VolumeStream" shape="rect" coords="1115,3472,1328,3496"/>
+<area href="classaudio__tools_1_1_w_m8960_stream.html" title="Stream for reading and writing audio data using the WM8960 Codec Chip You need to install https://git..." alt="WM8960Stream" shape="rect" coords="1115,3528,1328,3552"/>
+<area href="classaudio__tools_1_1_f_l_a_c_decoder.html" title="Decoder for FLAC. Depends on https://github.com/pschatzmann/arduino-libflac. We support an efficient ..." alt="FLACDecoder" shape="rect" coords="1561,112,1774,136"/>
+<area href="classaudio__tools_1_1_vorbis_decoder.html" title="Vorbis Streaming Decoder using https://github.com/pschatzmann/arduino-libvorbis-tremor." alt="VorbisDecoder" shape="rect" coords="1561,168,1774,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8c677cf9ee88f52f9f48ef79988eb908"><td class="memItemLeft" align="right" valign="top"><a id="a8c677cf9ee88f52f9f48ef79988eb908"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyAudioChange</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)=0</td></tr>
-<tr class="separator:a8c677cf9ee88f52f9f48ef79988eb908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727a24459787e1eeeb7a37ba888394a6"><td class="memItemLeft" align="right" valign="top"><a id="a727a24459787e1eeeb7a37ba888394a6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a727a24459787e1eeeb7a37ba888394a6">addNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:a727a24459787e1eeeb7a37ba888394a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds target to be notified about audio changes. <br /></td></tr>
+<tr class="separator:a727a24459787e1eeeb7a37ba888394a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd15675a5e391c34cccefa7181354bb"><td class="memItemLeft" align="right" valign="top"><a id="affd15675a5e391c34cccefa7181354bb"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#affd15675a5e391c34cccefa7181354bb">clearNotifyAudioChange</a> ()</td></tr>
+<tr class="memdesc:affd15675a5e391c34cccefa7181354bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes all change notify subscriptions. <br /></td></tr>
+<tr class="separator:affd15675a5e391c34cccefa7181354bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="memItemLeft" align="right" valign="top"><a id="aa5b1cdb06807ff2dc37acbaff63410b9"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#aa5b1cdb06807ff2dc37acbaff63410b9">removeNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a target in order not to be notified about audio changes. <br /></td></tr>
+<tr class="separator:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e0825fad7a777d93e43602670010c7"><td class="memItemLeft" align="right" valign="top"><a id="a64e0825fad7a777d93e43602670010c7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
+<tr class="separator:a64e0825fad7a777d93e43602670010c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a4c33a04426f36f7209536901dcd58544"><td class="memItemLeft" align="right" valign="top"><a id="a4c33a04426f36f7209536901dcd58544"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
+<tr class="separator:a4c33a04426f36f7209536901dcd58544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memItemLeft" align="right" valign="top"><a id="a6a9a665a387a8c4fbf7fed14bbbfc093"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyAudioChange</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memItemLeft" align="right" valign="top"><a id="ad35c4e2ef458c36e8d36676958cc9cd3"></a>
+<a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notify_vector</b></td></tr>
+<tr class="separator:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Supports the subscription to audio change notifications. </p>
