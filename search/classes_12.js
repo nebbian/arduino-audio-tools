@@ -62,7 +62,8 @@ var searchData=
   ['streamcopyt_2065',['StreamCopyT',['../classaudio__tools_1_1_stream_copy_t.html',1,'audio_tools']]],
   ['streamcopyt_3c_20uint8_5ft_20_3e_2066',['StreamCopyT&lt; uint8_t &gt;',['../classaudio__tools_1_1_stream_copy_t.html',1,'audio_tools']]],
   ['streamingdecoder_2067',['StreamingDecoder',['../classaudio__tools_1_1_streaming_decoder.html',1,'audio_tools']]],
-  ['strext_2068',['StrExt',['../classaudio__tools_1_1_str_ext.html',1,'audio_tools']]],
-  ['synthesizer_2069',['Synthesizer',['../classaudio__tools_1_1_synthesizer.html',1,'audio_tools']]],
-  ['synthesizerkey_2070',['SynthesizerKey',['../structaudio__tools_1_1_synthesizer_key.html',1,'audio_tools']]]
+  ['streamingdecoderadapter_2068',['StreamingDecoderAdapter',['../classaudio__tools_1_1_streaming_decoder_adapter.html',1,'audio_tools']]],
+  ['strext_2069',['StrExt',['../classaudio__tools_1_1_str_ext.html',1,'audio_tools']]],
+  ['synthesizer_2070',['Synthesizer',['../classaudio__tools_1_1_synthesizer.html',1,'audio_tools']]],
+  ['synthesizerkey_2071',['SynthesizerKey',['../structaudio__tools_1_1_synthesizer_key.html',1,'audio_tools']]]
 ];
