@@ -88,9 +88,10 @@ Inheritance diagram for ContainerMP4:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_container_m_p4.png" usemap="#ContainerMP4_map" alt=""/>
   <map id="ContainerMP4_map" name="ContainerMP4_map">
-<area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="58,56,165,80"/>
-<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,107,24"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="117,0,224,24"/>
+<area href="classaudio__tools_1_1_container_decoder.html" title="Parent class for all container formats." alt="ContainerDecoder" shape="rect" coords="63,112,179,136"/>
+<area href="classaudio__tools_1_1_audio_decoder.html" title="Docoding of encoded audio into PCM data." alt="AudioDecoder" shape="rect" coords="63,56,179,80"/>
+<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,116,24"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="126,0,242,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -131,10 +132,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#abb16a11e1a07b94615c8ee63c9c9e7f9">isHeader</a> (<a class="el" href="structaudio__tools_1_1_m_p4_atom.html">MP4Atom</a> *atom, const uint8_t *data)</td></tr>
 <tr class="memdesc:abb16a11e1a07b94615c8ee63c9c9e7f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the indicated atom is a header atom: you can define your custom method with <a class="el" href="classaudio__tools_1_1_container_m_p4.html#ac5da9b5e3d1406eefa81e4b602364f0a" title="Defines the callback which is used to determine if an atom is a header atom.">setIsHeaderCallback()</a> <br /></td></tr>
 <tr class="separator:abb16a11e1a07b94615c8ee63c9c9e7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b485ba5b9d96f94384f4a3840f84314"><td class="memItemLeft" align="right" valign="top"><a id="a2b485ba5b9d96f94384f4a3840f84314"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#a2b485ba5b9d96f94384f4a3840f84314">isResultPCM</a> ()</td></tr>
-<tr class="memdesc:a2b485ba5b9d96f94384f4a3840f84314"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the decoding result is PCM data. <br /></td></tr>
-<tr class="separator:a2b485ba5b9d96f94384f4a3840f84314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad27b458e3f25d8febbea264749b6347b"><td class="memItemLeft" align="right" valign="top"><a id="ad27b458e3f25d8febbea264749b6347b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_container_m_p4.html#ad27b458e3f25d8febbea264749b6347b">maxSize</a> ()</td></tr>
 <tr class="memdesc:ad27b458e3f25d8febbea264749b6347b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the maximum size. <br /></td></tr>
