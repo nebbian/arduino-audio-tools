@@ -212,10 +212,10 @@ $(function() {
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAudioInfo(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) = 0;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> setOutput(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream) = 0;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">operator</span> bool() = 0;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> begin() = 0;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> begin() = 0;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> begin(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) {</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            setAudioInfo(info);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            begin();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">return</span> begin();</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> end() = 0;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">protected</span>:</div>

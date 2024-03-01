@@ -230,54 +230,55 @@ $(function() {
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classdsp__memory__manager.html">dsp_memory_manager</a>() {}</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classdsp__memory__manager.html#a7ee293e5f1dab88ca6cbce71cecaf750">  188</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classdsp__memory__manager.html#a7ee293e5f1dab88ca6cbce71cecaf750">begin</a>(<span class="keywordtype">size_t</span> count){</div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classdsp__memory__manager.html#ab94148f992379eaba25a59886979d713">  188</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classdsp__memory__manager.html#ab94148f992379eaba25a59886979d713">begin</a>(<span class="keywordtype">size_t</span> count){</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        this-&gt;count = count;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        total = 0;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classdsp__memory__manager.html#a68eb98597cd2ad0dbbfb268ffd54cc39">  199</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classdsp__memory__manager.html#a68eb98597cd2ad0dbbfb268ffd54cc39">info</a>(<span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> reads, <span class="keywordtype">size_t</span> writes) {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        LOGD(<span class="stringliteral">&quot;info %d&quot;</span>, size);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        total+=size;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="classdsp__memory__manager.html#adc34417a19a7b70626d19c41072d72a5">  208</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classdsp__memory__manager.html#adc34417a19a7b70626d19c41072d72a5">end</a>(){</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">#ifdef ESP32</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        is_psram = total&gt;2000 &amp;&amp; ESP.getFreePsram()&gt;0;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        LOGI(<span class="stringliteral">&quot;use PSRAM: %s&quot;</span>, is_psram?<span class="stringliteral">&quot;true&quot;</span>:<span class="stringliteral">&quot;false&quot;</span>);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="classdsp__memory__manager.html#a61444acca87cb94cc35f366fa09bcc46">  219</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code" href="classdsp__memory__manager.html#a61444acca87cb94cc35f366fa09bcc46">allocate</a>(<span class="keywordtype">size_t</span> size) {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        LOGD(<span class="stringliteral">&quot;allocate %d&quot;</span>, size);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor">#ifdef ESP32</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordtype">void</span>* result = is_psram &amp;&amp; size &gt; PSRAM_LIMIT ? ps_malloc(size) : malloc(size);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordtype">void</span>* result = malloc(size);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">if</span> (result!=<span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            memset(result, size, 0);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            LOGE(<span class="stringliteral">&quot;allocate %u bytes - failed&quot;</span>, (<span class="keywordtype">unsigned</span>) size);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        }</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    };</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="classdsp__memory__manager.html#a105a00e96586f86c11e457b26ffa588f">  239</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classdsp__memory__manager.html#a105a00e96586f86c11e457b26ffa588f">destroy</a>(<span class="keywordtype">void</span>* ptr) {</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        LOGD(<span class="stringliteral">&quot;destroy&quot;</span>);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        free(ptr);</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    };</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">size_t</span> count;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">size_t</span> total;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">bool</span> is_psram = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classdsp__memory__manager.html#a68eb98597cd2ad0dbbfb268ffd54cc39">  200</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classdsp__memory__manager.html#a68eb98597cd2ad0dbbfb268ffd54cc39">info</a>(<span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> reads, <span class="keywordtype">size_t</span> writes) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        LOGD(<span class="stringliteral">&quot;info %d&quot;</span>, size);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        total+=size;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="classdsp__memory__manager.html#adc34417a19a7b70626d19c41072d72a5">  209</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classdsp__memory__manager.html#adc34417a19a7b70626d19c41072d72a5">end</a>(){</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#ifdef ESP32</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        is_psram = total&gt;2000 &amp;&amp; ESP.getFreePsram()&gt;0;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        LOGI(<span class="stringliteral">&quot;use PSRAM: %s&quot;</span>, is_psram?<span class="stringliteral">&quot;true&quot;</span>:<span class="stringliteral">&quot;false&quot;</span>);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classdsp__memory__manager.html#a61444acca87cb94cc35f366fa09bcc46">  220</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code" href="classdsp__memory__manager.html#a61444acca87cb94cc35f366fa09bcc46">allocate</a>(<span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        LOGD(<span class="stringliteral">&quot;allocate %d&quot;</span>, size);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">#ifdef ESP32</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordtype">void</span>* result = is_psram &amp;&amp; size &gt; PSRAM_LIMIT ? ps_malloc(size) : malloc(size);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordtype">void</span>* result = malloc(size);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">if</span> (result!=<span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            memset(result, size, 0);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            LOGE(<span class="stringliteral">&quot;allocate %u bytes - failed&quot;</span>, (<span class="keywordtype">unsigned</span>) size);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    };</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="classdsp__memory__manager.html#a105a00e96586f86c11e457b26ffa588f">  240</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classdsp__memory__manager.html#a105a00e96586f86c11e457b26ffa588f">destroy</a>(<span class="keywordtype">void</span>* ptr) {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        LOGD(<span class="stringliteral">&quot;destroy&quot;</span>);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        free(ptr);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    };</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">size_t</span> count;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">size_t</span> total;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">bool</span> is_psram = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;};</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;};</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
 <div class="ttc" id="aclass_meta_html"><div class="ttname"><a href="class_meta.html">Meta</a></div><div class="ttdoc">minimial implementtion of Meta which just ignores the data</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:39</div></div>
 <div class="ttc" id="aclass_u_i_html"><div class="ttname"><a href="class_u_i.html">UI</a></div><div class="ttdoc">Minimum implementation of UI parameters. We only support the setting and getting of values.</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:51</div></div>
 <div class="ttc" id="aclass_u_i_html_a33e750cdf3390bcf14077e72fa3c3744"><div class="ttname"><a href="class_u_i.html#a33e750cdf3390bcf14077e72fa3c3744">UI::exists</a></div><div class="ttdeci">virtual bool exists(const char *label)</div><div class="ttdoc">checks if a label exists</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:129</div></div>
@@ -285,11 +286,11 @@ $(function() {
 <div class="ttc" id="aclass_u_i_html_aa9f75f74bf982c82dce89ffb658d22e6"><div class="ttname"><a href="class_u_i.html#aa9f75f74bf982c82dce89ffb658d22e6">UI::label</a></div><div class="ttdeci">const char * label(int idx)</div><div class="ttdoc">Returns the label at the indicated position. nullptr is returned if the index is too big.</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:139</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html"><div class="ttname"><a href="classaudio__tools_1_1_vector.html">audio_tools::Vector&lt; Entry &gt;</a></div></div>
 <div class="ttc" id="aclassdsp__memory__manager_html"><div class="ttname"><a href="classdsp__memory__manager.html">dsp_memory_manager</a></div><div class="ttdoc">Memory manager which uses psram when it is available.</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:180</div></div>
-<div class="ttc" id="aclassdsp__memory__manager_html_a105a00e96586f86c11e457b26ffa588f"><div class="ttname"><a href="classdsp__memory__manager.html#a105a00e96586f86c11e457b26ffa588f">dsp_memory_manager::destroy</a></div><div class="ttdeci">virtual void destroy(void *ptr)</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:239</div></div>
-<div class="ttc" id="aclassdsp__memory__manager_html_a61444acca87cb94cc35f366fa09bcc46"><div class="ttname"><a href="classdsp__memory__manager.html#a61444acca87cb94cc35f366fa09bcc46">dsp_memory_manager::allocate</a></div><div class="ttdeci">virtual void * allocate(size_t size)</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:219</div></div>
-<div class="ttc" id="aclassdsp__memory__manager_html_a68eb98597cd2ad0dbbfb268ffd54cc39"><div class="ttname"><a href="classdsp__memory__manager.html#a68eb98597cd2ad0dbbfb268ffd54cc39">dsp_memory_manager::info</a></div><div class="ttdeci">virtual void info(size_t size, size_t reads, size_t writes)</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:199</div></div>
-<div class="ttc" id="aclassdsp__memory__manager_html_a7ee293e5f1dab88ca6cbce71cecaf750"><div class="ttname"><a href="classdsp__memory__manager.html#a7ee293e5f1dab88ca6cbce71cecaf750">dsp_memory_manager::begin</a></div><div class="ttdeci">virtual void begin(size_t count)</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:188</div></div>
-<div class="ttc" id="aclassdsp__memory__manager_html_adc34417a19a7b70626d19c41072d72a5"><div class="ttname"><a href="classdsp__memory__manager.html#adc34417a19a7b70626d19c41072d72a5">dsp_memory_manager::end</a></div><div class="ttdeci">virtual void end()</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:208</div></div>
+<div class="ttc" id="aclassdsp__memory__manager_html_a105a00e96586f86c11e457b26ffa588f"><div class="ttname"><a href="classdsp__memory__manager.html#a105a00e96586f86c11e457b26ffa588f">dsp_memory_manager::destroy</a></div><div class="ttdeci">virtual void destroy(void *ptr)</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:240</div></div>
+<div class="ttc" id="aclassdsp__memory__manager_html_a61444acca87cb94cc35f366fa09bcc46"><div class="ttname"><a href="classdsp__memory__manager.html#a61444acca87cb94cc35f366fa09bcc46">dsp_memory_manager::allocate</a></div><div class="ttdeci">virtual void * allocate(size_t size)</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:220</div></div>
+<div class="ttc" id="aclassdsp__memory__manager_html_a68eb98597cd2ad0dbbfb268ffd54cc39"><div class="ttname"><a href="classdsp__memory__manager.html#a68eb98597cd2ad0dbbfb268ffd54cc39">dsp_memory_manager::info</a></div><div class="ttdeci">virtual void info(size_t size, size_t reads, size_t writes)</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:200</div></div>
+<div class="ttc" id="aclassdsp__memory__manager_html_ab94148f992379eaba25a59886979d713"><div class="ttname"><a href="classdsp__memory__manager.html#ab94148f992379eaba25a59886979d713">dsp_memory_manager::begin</a></div><div class="ttdeci">virtual bool begin(size_t count)</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:188</div></div>
+<div class="ttc" id="aclassdsp__memory__manager_html_adc34417a19a7b70626d19c41072d72a5"><div class="ttname"><a href="classdsp__memory__manager.html#adc34417a19a7b70626d19c41072d72a5">dsp_memory_manager::end</a></div><div class="ttdeci">virtual void end()</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:209</div></div>
 <div class="ttc" id="aclassdsp_html"><div class="ttname"><a href="classdsp.html">dsp</a></div><div class="ttdoc">minimal dsp base class needed by Faust</div><div class="ttdef"><b>Definition:</b> AudioFaustDSP.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
