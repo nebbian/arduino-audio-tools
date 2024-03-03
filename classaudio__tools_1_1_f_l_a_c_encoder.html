@@ -86,20 +86,24 @@ Inheritance diagram for FLACEncoder:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_f_l_a_c_encoder.png" usemap="#FLACEncoder_map" alt=""/>
   <map id="FLACEncoder_map" name="FLACEncoder_map">
-<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="0,56,93,80"/>
-<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,93,24"/>
+<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="60,56,170,80"/>
+<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,110,24"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="120,0,230,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d2a8f208d69989c8676b0c632c9ea5c"><td class="memItemLeft" align="right" valign="top"><a id="a4d2a8f208d69989c8676b0c632c9ea5c"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_f_l_a_c_encoder.html#a4d2a8f208d69989c8676b0c632c9ea5c">begin</a> () override</td></tr>
 <tr class="memdesc:a4d2a8f208d69989c8676b0c632c9ea5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the processing using the actual <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> <br /></td></tr>
 <tr class="separator:a4d2a8f208d69989c8676b0c632c9ea5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49fa9b7daf0bb810fcd311901e5c8873"><td class="memItemLeft" align="right" valign="top"><a id="a49fa9b7daf0bb810fcd311901e5c8873"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from)</td></tr>
-<tr class="separator:a49fa9b7daf0bb810fcd311901e5c8873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memItemLeft" align="right" valign="top"><a id="a419d5bfacb0a1e5bf46b5fbd8d94f446"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e82619a0a3aa2c31962d9a26bb11de0"><td class="memItemLeft" align="right" valign="top"><a id="a6e82619a0a3aa2c31962d9a26bb11de0"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_f_l_a_c_encoder.html#a6e82619a0a3aa2c31962d9a26bb11de0">begin</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
 <tr class="memdesc:a6e82619a0a3aa2c31962d9a26bb11de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the processing <br /></td></tr>
@@ -178,6 +182,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>flac_block_size</b> = 
 <tr class="memitem:a4e8be19be6d3abd7ffe475da0db1177a"><td class="memItemLeft" align="right" valign="top"><a id="a4e8be19be6d3abd7ffe475da0db1177a"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>flac_compression_level</b> = 8</td></tr>
 <tr class="separator:a4e8be19be6d3abd7ffe475da0db1177a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e8890faca1eae1a85fbbf98e9e38d40"><td class="memItemLeft" align="right" valign="top"><a id="a9e8890faca1eae1a85fbbf98e9e38d40"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_ogg</b></td></tr>
 <tr class="separator:a9e8890faca1eae1a85fbbf98e9e38d40"><td class="memSeparator" colspan="2">&#160;</td></tr>

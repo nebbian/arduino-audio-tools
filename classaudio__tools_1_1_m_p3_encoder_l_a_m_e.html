@@ -85,8 +85,9 @@ Inheritance diagram for MP3EncoderLAME:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_m_p3_encoder_l_a_m_e.png" usemap="#MP3EncoderLAME_map" alt=""/>
   <map id="MP3EncoderLAME_map" name="MP3EncoderLAME_map">
-<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="0,56,121,80"/>
+<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="65,56,186,80"/>
 <area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,121,24"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="131,0,252,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -95,19 +96,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a38092aa6c15da5cce002bca1047f16a6"><td class="memItemLeft" align="right" valign="top"><a id="a38092aa6c15da5cce002bca1047f16a6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MP3EncoderLAME</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
 <tr class="separator:a38092aa6c15da5cce002bca1047f16a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a379d691263dd930a245780266e1a39c6"><td class="memItemLeft" align="right" valign="top"><a id="a379d691263dd930a245780266e1a39c6"></a>
-<a class="el" href="structaudio__tools_1_1_audio_info_l_a_m_e.html">AudioInfoLAME</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
-<tr class="separator:a379d691263dd930a245780266e1a39c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4035de4ebe480a14e4f171ed788d350"><td class="memItemLeft" align="right" valign="top"><a id="ac4035de4ebe480a14e4f171ed788d350"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info_l_a_m_e.html">AudioInfoLAME</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfoExt</b> ()</td></tr>
+<tr class="separator:ac4035de4ebe480a14e4f171ed788d350"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top"><a id="a601fb7cf1fc15db50c71a826f084f934"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a601fb7cf1fc15db50c71a826f084f934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memItemLeft" align="right" valign="top"><a id="a419d5bfacb0a1e5bf46b5fbd8d94f446"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="separator:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8c7aa4f35b49fd8f2a32ee8c2eb0711"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_encoder_l_a_m_e.html#ac8c7aa4f35b49fd8f2a32ee8c2eb0711">begin</a> (<a class="el" href="structaudio__tools_1_1_audio_info_l_a_m_e.html">AudioInfoLAME</a> info)</td></tr>
-<tr class="memdesc:ac8c7aa4f35b49fd8f2a32ee8c2eb0711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the encoder <br  />
-  <a href="classaudio__tools_1_1_m_p3_encoder_l_a_m_e.html#ac8c7aa4f35b49fd8f2a32ee8c2eb0711">More...</a><br /></td></tr>
-<tr class="separator:ac8c7aa4f35b49fd8f2a32ee8c2eb0711"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d2f723fc3dd3256863cfd6840629c42"><td class="memItemLeft" align="right" valign="top"><a id="a8d2f723fc3dd3256863cfd6840629c42"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info_l_a_m_e.html">AudioInfoLAME</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
 <tr class="separator:a8d2f723fc3dd3256863cfd6840629c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,9 +154,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a81cc6334285d0b8cd395776e1b0590ec"><td class="memItemLeft" align="right" valign="top"><a id="a81cc6334285d0b8cd395776e1b0590ec"></a>
 liblame::MP3EncoderLAME *&#160;</td><td class="memItemRight" valign="bottom"><b>enc</b> =nullptr</td></tr>
 <tr class="separator:a81cc6334285d0b8cd395776e1b0590ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3af119dba7e7b8ef9929fde21a44fe15"><td class="memItemLeft" align="right" valign="top"><a id="a3af119dba7e7b8ef9929fde21a44fe15"></a>
-<a class="el" href="structaudio__tools_1_1_audio_info_l_a_m_e.html">AudioInfoLAME</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
-<tr class="separator:a3af119dba7e7b8ef9929fde21a44fe15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5f14ec3789ff02292937cd2c6251935"><td class="memItemLeft" align="right" valign="top"><a id="ab5f14ec3789ff02292937cd2c6251935"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info_l_a_m_e.html">AudioInfoLAME</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lame_info</b></td></tr>
+<tr class="separator:ab5f14ec3789ff02292937cd2c6251935"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> =nullptr</td></tr>
 <tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,44 +168,7 @@ liblame::MP3EncoderLAME *&#160;</td><td class="memItemRight" valign="bottom"><b>
 <div class="textblock"><p>Encodes PCM data to the MP3 format and writes the result to a stream This is basically just a wrapper using <a href="https://github.com/pschatzmann/arduino-liblame">https://github.com/pschatzmann/arduino-liblame</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac8c7aa4f35b49fd8f2a32ee8c2eb0711"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8c7aa4f35b49fd8f2a32ee8c2eb0711">&#9670;&nbsp;</a></span>begin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool begin </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structaudio__tools_1_1_audio_info_l_a_m_e.html">AudioInfoLAME</a>&#160;</td>
-          <td class="paramname"><em>info</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Opens the encoder <br  />
- </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">info</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioCodecs/<a class="el" href="_codec_m_p3_l_a_m_e_8h_source.html">CodecMP3LAME.h</a></li>
 </ul>
 </div><!-- contents -->

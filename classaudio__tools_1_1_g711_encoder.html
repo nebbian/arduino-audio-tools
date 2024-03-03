@@ -87,7 +87,8 @@ Inheritance diagram for G711Encoder:</div>
   <map id="G711Encoder_map" name="G711Encoder_map">
 <area href="classaudio__tools_1_1_g7xx_encoder.html" title="g723_24, g721, g723_40 Encoder based on https://github.com/pschatzmann/arduino-libg7xx" alt="G7xxEncoder" shape="rect" coords="71,112,204,136"/>
 <area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="71,56,204,80"/>
-<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="71,0,204,24"/>
+<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,133,24"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="143,0,276,24"/>
 <area href="classaudio__tools_1_1_g711___a_l_a_w_encoder.html" title="64 kbit/s g711 ALOW Encoder based on https://github.com/pschatzmann/arduino-libg7xx" alt="G711_ALAWEncoder" shape="rect" coords="0,224,133,248"/>
 <area href="classaudio__tools_1_1_g711___u_l_a_w_encoder.html" title="64 kbit/s g711 ULOW Encoder based on https://github.com/pschatzmann/arduino-libg7xx" alt="G711_ULAWEncoder" shape="rect" coords="143,224,276,248"/>
   </map>
@@ -98,12 +99,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a920f5425b15198a584956dd901098207"><td class="memItemLeft" align="right" valign="top"><a id="a920f5425b15198a584956dd901098207"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>G711Encoder</b> (uint8_t(*enc)(int))</td></tr>
 <tr class="separator:a920f5425b15198a584956dd901098207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acba365cc28eb702040c382646cfb0a7a"><td class="memItemLeft" align="right" valign="top"><a id="acba365cc28eb702040c382646cfb0a7a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () override</td></tr>
 <tr class="separator:acba365cc28eb702040c382646cfb0a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02457ac6962f89abc10bb870d3870a34"><td class="memItemLeft" align="right" valign="top"><a id="a02457ac6962f89abc10bb870d3870a34"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> bi)</td></tr>
-<tr class="separator:a02457ac6962f89abc10bb870d3870a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memItemLeft" align="right" valign="top"><a id="a419d5bfacb0a1e5bf46b5fbd8d94f446"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memItemLeft" align="right" valign="top"><a id="a64e9fa75beda50a9e8400ee0d4e61984"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
 <tr class="separator:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,10 +118,10 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac16dce708c8231391f220f847b8d05df"><td class="memItemLeft" align="right" valign="top"><a id="ac16dce708c8231391f220f847b8d05df"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_g7xx_encoder.html#ac16dce708c8231391f220f847b8d05df">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg)</td></tr>
-<tr class="memdesc:ac16dce708c8231391f220f847b8d05df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the sample rate, number of channels and bits per sample. <br /></td></tr>
-<tr class="separator:ac16dce708c8231391f220f847b8d05df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87feead15897a49c7dccb043ac9fcddc"><td class="memItemLeft" align="right" valign="top"><a id="a87feead15897a49c7dccb043ac9fcddc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_g7xx_encoder.html#a87feead15897a49c7dccb043ac9fcddc">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="memdesc:a87feead15897a49c7dccb043ac9fcddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the sample rate, number of channels and bits per sample. <br /></td></tr>
+<tr class="separator:a87feead15897a49c7dccb043ac9fcddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a065fe4c0d3543644ab523a5d9b5fb9c0"><td class="memItemLeft" align="right" valign="top"><a id="a065fe4c0d3543644ab523a5d9b5fb9c0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutput</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream) override</td></tr>
 <tr class="separator:a065fe4c0d3543644ab523a5d9b5fb9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,9 +137,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeBlocking</b> (<a
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a07fab440d87063e83df0bc30223964c5"><td class="memItemLeft" align="right" valign="top"><a id="a07fab440d87063e83df0bc30223964c5"></a>
-<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cfg</b></td></tr>
-<tr class="separator:a07fab440d87063e83df0bc30223964c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25108e20586c2620d92686b25b0c984b"><td class="memItemLeft" align="right" valign="top"><a id="a25108e20586c2620d92686b25b0c984b"></a>
 unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>code</b></td></tr>
 <tr class="separator:a25108e20586c2620d92686b25b0c984b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,6 +149,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>enc_bits</b></td></tr>
 <tr class="memitem:aabe839fe1194e21a480f4ae081514b8a"><td class="memItemLeft" align="right" valign="top"><a id="aabe839fe1194e21a480f4ae081514b8a"></a>
 int(*&#160;</td><td class="memItemRight" valign="bottom"><b>enc_routine</b> )(int sample, int in_coding, struct g72x_state *state_ptr)</td></tr>
 <tr class="separator:aabe839fe1194e21a480f4ae081514b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a407c3efba665d276a38229f905bef352"><td class="memItemLeft" align="right" valign="top"><a id="a407c3efba665d276a38229f905bef352"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false</td></tr>
 <tr class="separator:a407c3efba665d276a38229f905bef352"><td class="memSeparator" colspan="2">&#160;</td></tr>

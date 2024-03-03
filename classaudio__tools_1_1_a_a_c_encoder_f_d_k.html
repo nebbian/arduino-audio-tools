@@ -85,8 +85,9 @@ Inheritance diagram for AACEncoderFDK:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_a_a_c_encoder_f_d_k.png" usemap="#AACEncoderFDK_map" alt=""/>
   <map id="AACEncoderFDK_map" name="AACEncoderFDK_map">
-<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="0,56,112,80"/>
+<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="61,56,173,80"/>
 <area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,112,24"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="122,0,234,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -95,6 +96,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9376c23ce1dcdc5066274b33d4072979"><td class="memItemLeft" align="right" valign="top"><a id="a9376c23ce1dcdc5066274b33d4072979"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AACEncoderFDK</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
 <tr class="separator:a9376c23ce1dcdc5066274b33d4072979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top"><a id="a601fb7cf1fc15db50c71a826f084f934"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a601fb7cf1fc15db50c71a826f084f934"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,10 +128,10 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64ce099fbc88f6d2586160be0f6666e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_encoder_f_d_k.html#a64ce099fbc88f6d2586160be0f6666e7">setAfterburner</a> (bool afterburner)</td></tr>
 <tr class="separator:a64ce099fbc88f6d2586160be0f6666e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9dd0258a562852d9334cd71ab9ab9c1"><td class="memItemLeft" align="right" valign="top"><a id="ae9dd0258a562852d9334cd71ab9ab9c1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_encoder_f_d_k.html#ae9dd0258a562852d9334cd71ab9ab9c1">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from)</td></tr>
-<tr class="memdesc:ae9dd0258a562852d9334cd71ab9ab9c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the Audio Info. <br /></td></tr>
-<tr class="separator:ae9dd0258a562852d9334cd71ab9ab9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c749802992efec8bc20ba4a522b027f"><td class="memItemLeft" align="right" valign="top"><a id="a5c749802992efec8bc20ba4a522b027f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_encoder_f_d_k.html#a5c749802992efec8bc20ba4a522b027f">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
+<tr class="memdesc:a5c749802992efec8bc20ba4a522b027f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the Audio Info. <br /></td></tr>
+<tr class="separator:a5c749802992efec8bc20ba4a522b027f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4551d43d99fc493544d13d654689cfa7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_encoder_f_d_k.html#a4551d43d99fc493544d13d654689cfa7">setAudioObjectType</a> (int aot)</td></tr>
 <tr class="separator:a4551d43d99fc493544d13d654689cfa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9326490ebc307c9a274d5b4efa48d4f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_a_a_c_encoder_f_d_k.html#a9326490ebc307c9a274d5b4efa48d4f4">setBitrate</a> (int bitrate)</td></tr>
@@ -160,6 +164,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a73f585ee9d45a7cbaf41463ae4ffe27b"><td class="memItemLeft" align="right" valign="top"><a id="a73f585ee9d45a7cbaf41463ae4ffe27b"></a>
 aac_fdk::AACEncoderFDK *&#160;</td><td class="memItemRight" valign="bottom"><b>enc</b> =nullptr</td></tr>
 <tr class="separator:a73f585ee9d45a7cbaf41463ae4ffe27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Encodes PCM data to the AAC format and writes the result to a stream This is basically just a wrapper using <a href="https://github.com/pschatzmann/arduino-fdk-aac">https://github.com/pschatzmann/arduino-fdk-aac</a>. </p>

@@ -85,19 +85,23 @@ Inheritance diagram for G722Encoder:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_g722_encoder.png" usemap="#G722Encoder_map" alt=""/>
   <map id="G722Encoder_map" name="G722Encoder_map">
-<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="0,56,93,80"/>
-<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,93,24"/>
+<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="60,56,170,80"/>
+<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,110,24"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="120,0,230,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top"><a id="a601fb7cf1fc15db50c71a826f084f934"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a601fb7cf1fc15db50c71a826f084f934"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acae641f28fb6cd7c48fa8a5ac9dc021c"><td class="memItemLeft" align="right" valign="top"><a id="acae641f28fb6cd7c48fa8a5ac9dc021c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> bi)</td></tr>
-<tr class="separator:acae641f28fb6cd7c48fa8a5ac9dc021c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memItemLeft" align="right" valign="top"><a id="a419d5bfacb0a1e5bf46b5fbd8d94f446"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -108,10 +112,10 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac16dce708c8231391f220f847b8d05df"><td class="memItemLeft" align="right" valign="top"><a id="ac16dce708c8231391f220f847b8d05df"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_g722_encoder.html#ac16dce708c8231391f220f847b8d05df">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> cfg)</td></tr>
-<tr class="memdesc:ac16dce708c8231391f220f847b8d05df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the sample rate, number of channels and bits per sample. <br /></td></tr>
-<tr class="separator:ac16dce708c8231391f220f847b8d05df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c749802992efec8bc20ba4a522b027f"><td class="memItemLeft" align="right" valign="top"><a id="a5c749802992efec8bc20ba4a522b027f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_encoder.html#a5c749802992efec8bc20ba4a522b027f">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
+<tr class="memdesc:a5c749802992efec8bc20ba4a522b027f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the sample rate, number of channels and bits per sample. <br /></td></tr>
+<tr class="separator:a5c749802992efec8bc20ba4a522b027f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfff0a5c7d4142ab77da6f8ca276ecf4"><td class="memItemLeft" align="right" valign="top"><a id="acfff0a5c7d4142ab77da6f8ca276ecf4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_g722_encoder.html#acfff0a5c7d4142ab77da6f8ca276ecf4">setOptions</a> (int options)</td></tr>
 <tr class="memdesc:acfff0a5c7d4142ab77da6f8ca276ecf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the options for the G.722 Codec: G722_SAMPLE_RATE_8000,G722_PACKED. <br /></td></tr>
@@ -137,12 +141,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a8a37d41b7b076eced766d7418450477d"><td class="memItemLeft" align="right" valign="top"><a id="a8a37d41b7b076eced766d7418450477d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_pos</b> = 0</td></tr>
 <tr class="separator:a8a37d41b7b076eced766d7418450477d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07fab440d87063e83df0bc30223964c5"><td class="memItemLeft" align="right" valign="top"><a id="a07fab440d87063e83df0bc30223964c5"></a>
-<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cfg</b></td></tr>
-<tr class="separator:a07fab440d87063e83df0bc30223964c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9132c46a8b42a7a10bc1d7267f3965f7"><td class="memItemLeft" align="right" valign="top"><a id="a9132c46a8b42a7a10bc1d7267f3965f7"></a>
 G722_ENC_CTX *&#160;</td><td class="memItemRight" valign="bottom"><b>g722_ectx</b> = nullptr</td></tr>
 <tr class="separator:a9132c46a8b42a7a10bc1d7267f3965f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfb16e7a13d6ef570abb92ecdb760705"><td class="memItemLeft" align="right" valign="top"><a id="adfb16e7a13d6ef570abb92ecdb760705"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>input_buffer</b></td></tr>
 <tr class="separator:adfb16e7a13d6ef570abb92ecdb760705"><td class="memSeparator" colspan="2">&#160;</td></tr>

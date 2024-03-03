@@ -85,8 +85,9 @@ Inheritance diagram for EncoderBasic:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_encoder_basic.png" usemap="#EncoderBasic_map" alt=""/>
   <map id="EncoderBasic_map" name="EncoderBasic_map">
-<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="0,56,93,80"/>
-<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,93,24"/>
+<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="60,56,170,80"/>
+<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,110,24"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="120,0,230,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -95,6 +96,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a7b1639eb6da705c20c3de8e26bee79"><td class="memItemLeft" align="right" valign="top"><a id="a3a7b1639eb6da705c20c3de8e26bee79"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>EncoderBasic</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
 <tr class="separator:a3a7b1639eb6da705c20c3de8e26bee79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acba365cc28eb702040c382646cfb0a7a"><td class="memItemLeft" align="right" valign="top"><a id="acba365cc28eb702040c382646cfb0a7a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoder_basic.html#acba365cc28eb702040c382646cfb0a7a">begin</a> () override</td></tr>
 <tr class="memdesc:acba365cc28eb702040c382646cfb0a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the processing using the actual RAWAudioInfo <br /></td></tr>
@@ -140,6 +144,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a6616ccf93c2f094f73da5e33ee4ff248"><td class="memItemLeft" align="right" valign="top"><a id="a6616ccf93c2f094f73da5e33ee4ff248"></a>
 <a class="el" href="classaudio__tools_1_1_g711___u_l_a_w_encoder.html">G711_ULAWEncoder</a>&#160;</td><td class="memItemRight" valign="bottom"><b>encoder</b></td></tr>
 <tr class="separator:a6616ccf93c2f094f73da5e33ee4ff248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classaudio__tools_1_1_encoder_basic.html" title="EncoderBasic - supports mime type audio/basic. The content of the &quot;audio/basic&quot; subtype is single cha...">EncoderBasic</a> - supports mime type audio/basic. The content of the "audio/basic" subtype is single channel audio encoded using 8bit ISDN mu-law [PCM] at a sample rate of 8000 Hz. Requires <a href="https://github.com/pschatzmann/arduino-libg7xx">https://github.com/pschatzmann/arduino-libg7xx</a>. </p>

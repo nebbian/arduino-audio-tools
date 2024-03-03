@@ -214,51 +214,48 @@ $(function() {
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
 <div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#a5d63922f6bdb7c371286ca453ae18f9c">  162</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#a5d63922f6bdb7c371286ca453ae18f9c">mime</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;audio/adpcm&quot;</span>; }</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#ad1fdd56031f1195cb221ab855fb6a102">  164</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#ad1fdd56031f1195cb221ab855fb6a102">setAudioInfo</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)<span class="keyword"> override </span>{ this-&gt;info = info; }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordtype">void</span> setOutput(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)<span class="keyword"> override </span>{ p_print = &amp;out_stream; }</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">void</span> setOutput(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)<span class="keyword"> override </span>{ p_print = &amp;out_stream; }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keyword">operator</span> bool()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> is_started; }</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keyword">operator</span> bool()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> is_started; }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> <span class="keywordtype">void</span> *in_ptr, <span class="keywordtype">size_t</span> in_size)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    LOGD(<span class="stringliteral">&quot;write: %d&quot;</span>, (<span class="keywordtype">int</span>)in_size);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    int16_t *data16 = (int16_t *)in_ptr;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; in_size / 2; j++) {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      encode(data16[j]);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> in_size;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  }</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  AudioInfo info;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  adpcm_ffmpeg::ADPCMEncoder encoder;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  Vector&lt;int16_t&gt; pcm_block;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  Print *p_print = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keywordtype">bool</span> is_started = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordtype">int</span> current_sample = 0;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordtype">int</span> total_samples=0;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> encode(int16_t sample) {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    pcm_block[current_sample++] = sample;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">if</span> (current_sample &gt;= total_samples) {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      TRACED();</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      AVPacket &amp;packet = encoder.encode(&amp;pcm_block[0], total_samples);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keywordflow">if</span> (packet.size &gt; 0) {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordtype">size_t</span> written = p_print-&gt;write(packet.data, packet.size);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">if</span> (written != packet.size) {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;          LOGE(<span class="stringliteral">&quot;encode %d-&gt;%d-&gt;%d&quot;</span>,2*total_samples, (<span class="keywordtype">int</span>)packet.size, (<span class="keywordtype">int</span>)written);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;          LOGD(<span class="stringliteral">&quot;encode %d-&gt;%d-&gt;%d&quot;</span>,2*total_samples, (<span class="keywordtype">int</span>)packet.size, (<span class="keywordtype">int</span>)written);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        }</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      }</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="comment">// restart from array begin</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      current_sample = 0;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;};</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> <span class="keywordtype">void</span> *in_ptr, <span class="keywordtype">size_t</span> in_size)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    LOGD(<span class="stringliteral">&quot;write: %d&quot;</span>, (<span class="keywordtype">int</span>)in_size);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    int16_t *data16 = (int16_t *)in_ptr;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; in_size / 2; j++) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      encode(data16[j]);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">return</span> in_size;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  adpcm_ffmpeg::ADPCMEncoder encoder;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  Vector&lt;int16_t&gt; pcm_block;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  Print *p_print = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keywordtype">bool</span> is_started = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordtype">int</span> current_sample = 0;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordtype">int</span> total_samples=0;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> encode(int16_t sample) {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    pcm_block[current_sample++] = sample;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">if</span> (current_sample &gt;= total_samples) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      TRACED();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      AVPacket &amp;packet = encoder.encode(&amp;pcm_block[0], total_samples);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      <span class="keywordflow">if</span> (packet.size &gt; 0) {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordtype">size_t</span> written = p_print-&gt;write(packet.data, packet.size);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">if</span> (written != packet.size) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;          LOGE(<span class="stringliteral">&quot;encode %d-&gt;%d-&gt;%d&quot;</span>,2*total_samples, (<span class="keywordtype">int</span>)packet.size, (<span class="keywordtype">int</span>)written);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;          LOGD(<span class="stringliteral">&quot;encode %d-&gt;%d-&gt;%d&quot;</span>,2*total_samples, (<span class="keywordtype">int</span>)packet.size, (<span class="keywordtype">int</span>)written);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <span class="comment">// restart from array begin</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      current_sample = 0;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;};</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_a_d_p_c_m_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_a_d_p_c_m_decoder.html">audio_tools::ADPCMDecoder</a></div><div class="ttdoc">Decoder for ADPCM. Depends on https://github.com/pschatzmann/adpcm.</div><div class="ttdef"><b>Definition:</b> CodecADPCM.h:14</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_a_d_p_c_m_decoder_html_a0f7e0415ab9d167f9f1e57c3762be6e0"><div class="ttname"><a href="classaudio__tools_1_1_a_d_p_c_m_decoder.html#a0f7e0415ab9d167f9f1e57c3762be6e0">audio_tools::ADPCMDecoder::frameSize</a></div><div class="ttdeci">int frameSize()</div><div class="ttdoc">Provides the frame size (size of decoded frame) (only available after calling begin)</div><div class="ttdef"><b>Definition:</b> CodecADPCM.h:35</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_a_d_p_c_m_decoder_html_a2815303f369be3f443fa8ce5cd7a8fb6"><div class="ttname"><a href="classaudio__tools_1_1_a_d_p_c_m_decoder.html#a2815303f369be3f443fa8ce5cd7a8fb6">audio_tools::ADPCMDecoder::blockSize</a></div><div class="ttdeci">int blockSize()</div><div class="ttdoc">Provides the block size (size of encoded frame) (only available after calling begin)</div><div class="ttdef"><b>Definition:</b> CodecADPCM.h:30</div></div>
@@ -267,12 +264,10 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_a_d_p_c_m_encoder_html_a0f7e0415ab9d167f9f1e57c3762be6e0"><div class="ttname"><a href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#a0f7e0415ab9d167f9f1e57c3762be6e0">audio_tools::ADPCMEncoder::frameSize</a></div><div class="ttdeci">int frameSize()</div><div class="ttdoc">Provides the frame size (size of decoded frame) (only available after calling begin)</div><div class="ttdef"><b>Definition:</b> CodecADPCM.h:134</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_a_d_p_c_m_encoder_html_a5d63922f6bdb7c371286ca453ae18f9c"><div class="ttname"><a href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#a5d63922f6bdb7c371286ca453ae18f9c">audio_tools::ADPCMEncoder::mime</a></div><div class="ttdeci">const char * mime() override</div><div class="ttdoc">Provides the mime type of the encoded result.</div><div class="ttdef"><b>Definition:</b> CodecADPCM.h:162</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_a_d_p_c_m_encoder_html_acce57d9e9018d5ce183ede161c776b6d"><div class="ttname"><a href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#acce57d9e9018d5ce183ede161c776b6d">audio_tools::ADPCMEncoder::blockSize</a></div><div class="ttdeci">int blockSize() override</div><div class="ttdoc">Provides the block size (size of encoded frame) (only available after calling begin)</div><div class="ttdef"><b>Definition:</b> CodecADPCM.h:129</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_a_d_p_c_m_encoder_html_ad1fdd56031f1195cb221ab855fb6a102"><div class="ttname"><a href="classaudio__tools_1_1_a_d_p_c_m_encoder.html#ad1fdd56031f1195cb221ab855fb6a102">audio_tools::ADPCMEncoder::setAudioInfo</a></div><div class="ttdeci">void setAudioInfo(AudioInfo info) override</div><div class="ttdoc">Defines the sample rate, number of channels and bits per sample.</div><div class="ttdef"><b>Definition:</b> CodecADPCM.h:164</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_ext_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder_ext.html">audio_tools::AudioDecoderExt</a></div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:91</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_audio_encoder_ext_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_encoder_ext.html">audio_tools::AudioEncoderExt</a></div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:96</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_ext_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder_ext.html">audio_tools::AudioDecoderExt</a></div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:96</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_encoder_ext_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_encoder_ext.html">audio_tools::AudioEncoderExt</a></div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:101</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:58</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:53</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:55</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:51</div></div>

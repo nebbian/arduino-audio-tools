@@ -85,8 +85,9 @@ Inheritance diagram for LC3Encoder:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_l_c3_encoder.png" usemap="#LC3Encoder_map" alt=""/>
   <map id="LC3Encoder_map" name="LC3Encoder_map">
-<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="0,56,93,80"/>
-<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,93,24"/>
+<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="60,56,170,80"/>
+<area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,110,24"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="120,0,230,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -95,12 +96,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7670cc5e83cb7f4f2948467686d4d9b"><td class="memItemLeft" align="right" valign="top"><a id="ad7670cc5e83cb7f4f2948467686d4d9b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LC3Encoder</b> (int dt_us=7500, uint16_t outputByteCount=40)</td></tr>
 <tr class="separator:ad7670cc5e83cb7f4f2948467686d4d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top"><a id="a601fb7cf1fc15db50c71a826f084f934"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a601fb7cf1fc15db50c71a826f084f934"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acae641f28fb6cd7c48fa8a5ac9dc021c"><td class="memItemLeft" align="right" valign="top"><a id="acae641f28fb6cd7c48fa8a5ac9dc021c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> bi)</td></tr>
-<tr class="separator:acae641f28fb6cd7c48fa8a5ac9dc021c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memItemLeft" align="right" valign="top"><a id="a419d5bfacb0a1e5bf46b5fbd8d94f446"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,10 +115,10 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87feead15897a49c7dccb043ac9fcddc"><td class="memItemLeft" align="right" valign="top"><a id="a87feead15897a49c7dccb043ac9fcddc"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_l_c3_encoder.html#a87feead15897a49c7dccb043ac9fcddc">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
-<tr class="memdesc:a87feead15897a49c7dccb043ac9fcddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the sample rate, number of channels and bits per sample. <br /></td></tr>
-<tr class="separator:a87feead15897a49c7dccb043ac9fcddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c749802992efec8bc20ba4a522b027f"><td class="memItemLeft" align="right" valign="top"><a id="a5c749802992efec8bc20ba4a522b027f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_encoder.html#a5c749802992efec8bc20ba4a522b027f">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> from) override</td></tr>
+<tr class="memdesc:a5c749802992efec8bc20ba4a522b027f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the sample rate, number of channels and bits per sample. <br /></td></tr>
+<tr class="separator:a5c749802992efec8bc20ba4a522b027f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33190106b1d5de89d6af68ad5924f7be"><td class="memItemLeft" align="right" valign="top"><a id="a33190106b1d5de89d6af68ad5924f7be"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutput</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
 <tr class="separator:a33190106b1d5de89d6af68ad5924f7be"><td class="memSeparator" colspan="2">&#160;</td></tr>

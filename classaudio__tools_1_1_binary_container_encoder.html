@@ -85,8 +85,9 @@ Inheritance diagram for BinaryContainerEncoder:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_binary_container_encoder.png" usemap="#BinaryContainerEncoder_map" alt=""/>
   <map id="BinaryContainerEncoder_map" name="BinaryContainerEncoder_map">
-<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="0,56,152,80"/>
+<area href="classaudio__tools_1_1_audio_encoder.html" title="Encoding of PCM data." alt="AudioEncoder" shape="rect" coords="81,56,233,80"/>
 <area href="classaudio__tools_1_1_audio_writer.html" title="E.g. used by Encoders and Decoders." alt="AudioWriter" shape="rect" coords="0,0,152,24"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="162,0,314,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -98,15 +99,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acdcc00f685b80d97e280d38b76471665"><td class="memItemLeft" align="right" valign="top"><a id="acdcc00f685b80d97e280d38b76471665"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BinaryContainerEncoder</b> (<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *encoder)</td></tr>
 <tr class="separator:acdcc00f685b80d97e280d38b76471665"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
-<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
-<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed4bf0d5ce93f27242be485943d0b37d"><td class="memItemLeft" align="right" valign="top"><a id="aed4bf0d5ce93f27242be485943d0b37d"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
+<tr class="separator:aed4bf0d5ce93f27242be485943d0b37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acba365cc28eb702040c382646cfb0a7a"><td class="memItemLeft" align="right" valign="top"><a id="acba365cc28eb702040c382646cfb0a7a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () override</td></tr>
 <tr class="separator:acba365cc28eb702040c382646cfb0a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1a0fe2d8421c464e2b0d0fe10690fb1"><td class="memItemLeft" align="right" valign="top"><a id="af1a0fe2d8421c464e2b0d0fe10690fb1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
-<tr class="separator:af1a0fe2d8421c464e2b0d0fe10690fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memItemLeft" align="right" valign="top"><a id="a419d5bfacb0a1e5bf46b5fbd8d94f446"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf81d3fdaf258088d7692fa70cece087"><td class="memItemLeft" align="right" valign="top"><a id="aaf81d3fdaf258088d7692fa70cece087"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:aaf81d3fdaf258088d7692fa70cece087"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,6 +157,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ab1c079a1be1bb4fc9f4fb4fbe988fdbf"><td class="memItemLeft" align="right" valign="top"><a id="ab1c079a1be1bb4fc9f4fb4fbe988fdbf"></a>
 <a class="el" href="structaudio__tools_1_1_simple_container_data_header.html">SimpleContainerDataHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dh</b></td></tr>
 <tr class="separator:ab1c079a1be1bb4fc9f4fb4fbe988fdbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3de28cc1401a7913306c2f47b4d1a1e"><td class="memItemLeft" align="right" valign="top"><a id="aa3de28cc1401a7913306c2f47b4d1a1e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_beginning</b> = true</td></tr>
 <tr class="separator:aa3de28cc1401a7913306c2f47b4d1a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>

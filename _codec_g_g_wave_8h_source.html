@@ -231,145 +231,140 @@ $(function() {
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    pt_print=&amp;out_stream;</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;   }</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_g_g_wave_encoder.html#ace04239ef879aeae1e1b4b49cc537666">  188</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_g_g_wave_encoder.html#ace04239ef879aeae1e1b4b49cc537666">setAudioInfo</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> ai) { info = ai; }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keywordtype">void</span> setOutput(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream) {pt_print=&amp;out_stream;}</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordtype">void</span> setOutput(<a class="code" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream) {pt_print=&amp;out_stream;}</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keywordtype">void</span> setSamplesFormatInput(ggwave_SampleFormat fmt){</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    samples_format_input = fmt;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">void</span> setSamplesFromatOutput(ggwave_SampleFormat fmt) {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    samples_format_output = fmt;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  }</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordtype">void</span> setSamplesPerFrame(<span class="keywordtype">int</span> samples){</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;   samples_per_frame = samples;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">void</span> setPayloadLen(<span class="keywordtype">int</span> len){</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    playload_len = len;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  }</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keywordtype">void</span> setProtocol(ggwave_ProtocolId protocol){</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    protocolId = protocol;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  }</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keywordtype">void</span> setSampleByteSize(<span class="keywordtype">int</span> size){</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    sample_byte_size = size;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  }</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="keywordtype">void</span> begin() {</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    TRACEI();</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    ggwave.setLogFile(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">if</span> (pt_print==<span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      LOGE(<span class="stringliteral">&quot;final destination not defined&quot;</span>);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    sine_wave.begin(info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>, 0);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">auto</span> parameters = GGWave::getDefaultParameters();</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    parameters.payloadLength   = playload_len;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    parameters.sampleRateInp   = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    parameters.sampleRateOut   = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    parameters.sampleRate      = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    parameters.samplesPerFrame = samples_per_frame;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    parameters.sampleFormatInp = samples_format_input;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    parameters.sampleFormatOut = samples_format_output;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    parameters.operatingMode   = GGWAVE_OPERATING_MODE_TX | GGWAVE_OPERATING_MODE_USE_DSS;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">// Remove the ones that you don&#39;t need to reduce memory usage</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    GGWave::Protocols::tx().only(protocolId);</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">// Sometimes, the speaker might not be able to produce frequencies in the Mono-tone range of 1-2 kHz.</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="comment">// In such cases, you can shift the base frequency up by changing the &quot;freqStart&quot; parameter of the protocol.</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">// Make sure that in the receiver (for example, the &quot;Waver&quot; app) the base frequency is shifted by the same amount.</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">// Here we shift the frequency by +48 bins. Each bin is equal to 48000/1024 = 46.875 Hz.</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="comment">// So the base frequency is shifted by +2250 Hz.</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="comment">//GGWave::Protocols::tx()[protocolId].freqStart += 48;</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    ggwave.prepare(parameters);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    active = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keywordtype">void</span> end() {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    TRACEI();</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    active = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  }</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  AudioInfo audioInfo() { <span class="keywordflow">return</span> info; }</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> <span class="keywordtype">void</span> *data, <span class="keywordtype">size_t</span> len) { </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">if</span> (!active) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">if</span> (!ggwave.init(len, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)data, protocolId)){</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      LOGE(<span class="stringliteral">&quot;init faild&quot;</span>);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordtype">size_t</span> bytes = ggwave.encode();</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    LOGI(<span class="stringliteral">&quot;write %d&quot;</span>, bytes);</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">//int written = pt_print-&gt;write((uint8_t*)ggwave.txWaveform(), bytes);</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    </div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> &amp;protocol = GGWave::Protocols::tx()[protocolId];</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> tones = ggwave.txTones();</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> duration_ms = protocol.txDuration_ms(ggwave.samplesPerFrame(), ggwave.sampleRateOut());</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; curTone : tones) {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> freq_hz = (protocol.freqStart + curTone)*ggwave.hzPerSample();</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        play(freq_hz, duration_ms);</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordtype">void</span> setSamplesFormatInput(ggwave_SampleFormat fmt){</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    samples_format_input = fmt;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordtype">void</span> setSamplesFromatOutput(ggwave_SampleFormat fmt) {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    samples_format_output = fmt;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">void</span> setSamplesPerFrame(<span class="keywordtype">int</span> samples){</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;   samples_per_frame = samples;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keywordtype">void</span> setPayloadLen(<span class="keywordtype">int</span> len){</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    playload_len = len;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordtype">void</span> setProtocol(ggwave_ProtocolId protocol){</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    protocolId = protocol;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keywordtype">void</span> setSampleByteSize(<span class="keywordtype">int</span> size){</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    sample_byte_size = size;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keywordtype">void</span> begin() {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    TRACEI();</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    ggwave.setLogFile(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">if</span> (pt_print==<span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      LOGE(<span class="stringliteral">&quot;final destination not defined&quot;</span>);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    sine_wave.begin(info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>, 0);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">auto</span> parameters = GGWave::getDefaultParameters();</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    parameters.payloadLength   = playload_len;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    parameters.sampleRateInp   = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    parameters.sampleRateOut   = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    parameters.sampleRate      = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    parameters.samplesPerFrame = samples_per_frame;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    parameters.sampleFormatInp = samples_format_input;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    parameters.sampleFormatOut = samples_format_output;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    parameters.operatingMode   = GGWAVE_OPERATING_MODE_TX | GGWAVE_OPERATING_MODE_USE_DSS;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">// Remove the ones that you don&#39;t need to reduce memory usage</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    GGWave::Protocols::tx().only(protocolId);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="comment">// Sometimes, the speaker might not be able to produce frequencies in the Mono-tone range of 1-2 kHz.</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="comment">// In such cases, you can shift the base frequency up by changing the &quot;freqStart&quot; parameter of the protocol.</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">// Make sure that in the receiver (for example, the &quot;Waver&quot; app) the base frequency is shifted by the same amount.</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="comment">// Here we shift the frequency by +48 bins. Each bin is equal to 48000/1024 = 46.875 Hz.</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">// So the base frequency is shifted by +2250 Hz.</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">//GGWave::Protocols::tx()[protocolId].freqStart += 48;</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    ggwave.prepare(parameters);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    active = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordtype">void</span> end() {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    TRACEI();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    active = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="keywordtype">size_t</span> write(<span class="keyword">const</span> <span class="keywordtype">void</span> *data, <span class="keywordtype">size_t</span> len) { </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">if</span> (!active) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">if</span> (!ggwave.init(len, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)data, protocolId)){</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      LOGE(<span class="stringliteral">&quot;init faild&quot;</span>);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">size_t</span> bytes = ggwave.encode();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    LOGI(<span class="stringliteral">&quot;write %d&quot;</span>, bytes);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="comment">//int written = pt_print-&gt;write((uint8_t*)ggwave.txWaveform(), bytes);</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> &amp;protocol = GGWave::Protocols::tx()[protocolId];</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> tones = ggwave.txTones();</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> duration_ms = protocol.txDuration_ms(ggwave.samplesPerFrame(), ggwave.sampleRateOut());</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp; curTone : tones) {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> freq_hz = (protocol.freqStart + curTone)*ggwave.hzPerSample();</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        play(freq_hz, duration_ms);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    silence(info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> / 2); <span class="comment">// 500 ms</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">return</span> len;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  }</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    silence(info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> / 2); <span class="comment">// 500 ms</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">return</span> len;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keyword">operator</span> bool(){</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">return</span> active;</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  }</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keyword">operator</span> bool(){</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">return</span> active;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  }</div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_g_g_wave_encoder.html#ae25cee0d848eeb729a79fd46347a70da">  279</a></span>&#160;   <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classaudio__tools_1_1_g_g_wave_encoder.html#ae25cee0d848eeb729a79fd46347a70da">mime</a>() {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;audio/pcm&quot;</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;   }</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
-<div class="line"><a name="l00283"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_g_g_wave_encoder.html#ae25cee0d848eeb729a79fd46347a70da">  283</a></span>&#160;   <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classaudio__tools_1_1_g_g_wave_encoder.html#ae25cee0d848eeb729a79fd46347a70da">mime</a>() {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;audio/pcm&quot;</span>;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;   }</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *pt_print=<span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  GGWave ggwave;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  ggwave_ProtocolId protocolId = GGWAVE_DEFAULT_PROTOCOL; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keywordtype">int</span> samples_per_frame = GGWAVE_DEFAULT_SAMPLES_PER_FRAME;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  ggwave_SampleFormat samples_format_input = GGWAVE_SAMPLE_FORMAT_I16;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  ggwave_SampleFormat samples_format_output = GGWAVE_SAMPLE_FORMAT_U8;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="keywordtype">int</span> playload_len = GGWAVE_DEFAULT_PAYLOAD_LEN;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keywordtype">int</span> volume = GGWave::kDefaultVolume;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <span class="keywordtype">int</span> sample_byte_size = GGWAVE_DEFAULT_SAMPLE_BYTESIZE;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keywordtype">bool</span> active = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="comment">//SineFromTable&lt;int16_t&gt; sine_wave;</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <a class="code" href="classaudio__tools_1_1_fast_sine_generator.html">FastSineGenerator&lt;int16_t&gt;</a> sine_wave; </div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> play(<span class="keywordtype">int</span> freq, <span class="keywordtype">int</span> ms){</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">// adjust amplitude by pitch bcause high values are too loud</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">int</span> amplitude = 10000; <span class="comment">// / (freq/1000);</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    sine_wave.setAmplitude(amplitude);</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    sine_wave.<a class="code" href="classaudio__tools_1_1_sine_wave_generator.html#a0517b8e9504478c5d7f9c5b39d2853bf">setFrequency</a>(freq);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    uint64_t end = <a class="code" href="namespaceaudio__tools.html#adb94fbd930038e1510574dd4bcf07fe1">millis</a>()+ms;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="namespaceaudio__tools.html#adb94fbd930038e1510574dd4bcf07fe1">millis</a>()&lt;end){</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      int16_t sample = sine_wave.<a class="code" href="classaudio__tools_1_1_fast_sine_generator.html#a45b168302ee30ce87241d8987e5f9adf">readSample</a>();</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch=0;ch&lt;info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;ch++){</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        pt_print-&gt;write((uint8_t*)&amp;sample,2);</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      }</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    }</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  }</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> silence(<span class="keywordtype">int</span> samples){</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="comment">// adjust amplitude by pitch bcause high values are too loud</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    int16_t sample = 0;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch=0;ch&lt;info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;ch++){</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      pt_print-&gt;write((uint8_t*)&amp;sample,2);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    }    </div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  }</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;};</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *pt_print=<span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  GGWave ggwave;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  ggwave_ProtocolId protocolId = GGWAVE_DEFAULT_PROTOCOL; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keywordtype">int</span> samples_per_frame = GGWAVE_DEFAULT_SAMPLES_PER_FRAME;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  ggwave_SampleFormat samples_format_input = GGWAVE_SAMPLE_FORMAT_I16;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  ggwave_SampleFormat samples_format_output = GGWAVE_SAMPLE_FORMAT_U8;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keywordtype">int</span> playload_len = GGWAVE_DEFAULT_PAYLOAD_LEN;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keywordtype">int</span> volume = GGWave::kDefaultVolume;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keywordtype">int</span> sample_byte_size = GGWAVE_DEFAULT_SAMPLE_BYTESIZE;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="keywordtype">bool</span> active = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="comment">//SineFromTable&lt;int16_t&gt; sine_wave;</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <a class="code" href="classaudio__tools_1_1_fast_sine_generator.html">FastSineGenerator&lt;int16_t&gt;</a> sine_wave; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> play(<span class="keywordtype">int</span> freq, <span class="keywordtype">int</span> ms){</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="comment">// adjust amplitude by pitch bcause high values are too loud</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">int</span> amplitude = 10000; <span class="comment">// / (freq/1000);</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    sine_wave.setAmplitude(amplitude);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    sine_wave.<a class="code" href="classaudio__tools_1_1_sine_wave_generator.html#a0517b8e9504478c5d7f9c5b39d2853bf">setFrequency</a>(freq);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    uint64_t end = <a class="code" href="namespaceaudio__tools.html#adb94fbd930038e1510574dd4bcf07fe1">millis</a>()+ms;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="namespaceaudio__tools.html#adb94fbd930038e1510574dd4bcf07fe1">millis</a>()&lt;end){</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      int16_t sample = sine_wave.<a class="code" href="classaudio__tools_1_1_fast_sine_generator.html#a45b168302ee30ce87241d8987e5f9adf">readSample</a>();</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch=0;ch&lt;info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;ch++){</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        pt_print-&gt;write((uint8_t*)&amp;sample,2);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> silence(<span class="keywordtype">int</span> samples){</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="comment">// adjust amplitude by pitch bcause high values are too loud</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    int16_t sample = 0;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch=0;ch&lt;info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;ch++){</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      pt_print-&gt;write((uint8_t*)&amp;sample,2);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }    </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;};</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;}</div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_decoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_decoder.html">audio_tools::AudioDecoder</a></div><div class="ttdoc">Docoding of encoded audio into PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:18</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_encoder.html">audio_tools::AudioEncoder</a></div><div class="ttdoc">Encoding of PCM data.</div><div class="ttdef"><b>Definition:</b> AudioEncoded.h:79</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_fast_sine_generator_html"><div class="ttname"><a href="classaudio__tools_1_1_fast_sine_generator.html">audio_tools::FastSineGenerator&lt; int16_t &gt;</a></div></div>
@@ -380,8 +375,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_g_g_wave_decoder_html_a33190106b1d5de89d6af68ad5924f7be"><div class="ttname"><a href="classaudio__tools_1_1_g_g_wave_decoder.html#a33190106b1d5de89d6af68ad5924f7be">audio_tools::GGWaveDecoder::setOutput</a></div><div class="ttdeci">virtual void setOutput(Print &amp;out_stream)</div><div class="ttdoc">Defines where the decoded result is written to.</div><div class="ttdef"><b>Definition:</b> CodecGGWave.h:44</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_g_g_wave_decoder_html_ace04239ef879aeae1e1b4b49cc537666"><div class="ttname"><a href="classaudio__tools_1_1_g_g_wave_decoder.html#ace04239ef879aeae1e1b4b49cc537666">audio_tools::GGWaveDecoder::setAudioInfo</a></div><div class="ttdeci">void setAudioInfo(AudioInfo ai)</div><div class="ttdoc">for most decoders this is not needed</div><div class="ttdef"><b>Definition:</b> CodecGGWave.h:48</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_g_g_wave_encoder_html"><div class="ttname"><a href="classaudio__tools_1_1_g_g_wave_encoder.html">audio_tools::GGWaveEncoder</a></div><div class="ttdoc">GGWaveEncoder: Translates text into audio Codec using https://github.com/ggerganov/ggwave-arduino.</div><div class="ttdef"><b>Definition:</b> CodecGGWave.h:177</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_g_g_wave_encoder_html_ace04239ef879aeae1e1b4b49cc537666"><div class="ttname"><a href="classaudio__tools_1_1_g_g_wave_encoder.html#ace04239ef879aeae1e1b4b49cc537666">audio_tools::GGWaveEncoder::setAudioInfo</a></div><div class="ttdeci">void setAudioInfo(AudioInfo ai)</div><div class="ttdoc">Defines the sample rate, number of channels and bits per sample.</div><div class="ttdef"><b>Definition:</b> CodecGGWave.h:188</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_g_g_wave_encoder_html_ae25cee0d848eeb729a79fd46347a70da"><div class="ttname"><a href="classaudio__tools_1_1_g_g_wave_encoder.html#ae25cee0d848eeb729a79fd46347a70da">audio_tools::GGWaveEncoder::mime</a></div><div class="ttdeci">virtual const char * mime()</div><div class="ttdoc">Provides the mime type of the encoded result.</div><div class="ttdef"><b>Definition:</b> CodecGGWave.h:283</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_g_g_wave_encoder_html_ae25cee0d848eeb729a79fd46347a70da"><div class="ttname"><a href="classaudio__tools_1_1_g_g_wave_encoder.html#ae25cee0d848eeb729a79fd46347a70da">audio_tools::GGWaveEncoder::mime</a></div><div class="ttdeci">virtual const char * mime()</div><div class="ttdoc">Provides the mime type of the encoded result.</div><div class="ttdef"><b>Definition:</b> CodecGGWave.h:279</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:58</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_sine_wave_generator_html_a0517b8e9504478c5d7f9c5b39d2853bf"><div class="ttname"><a href="classaudio__tools_1_1_sine_wave_generator.html#a0517b8e9504478c5d7f9c5b39d2853bf">audio_tools::SineWaveGenerator::setFrequency</a></div><div class="ttdeci">void setFrequency(float frequency) override</div><div class="ttdoc">Defines the frequency - after the processing has been started.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:193</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_single_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_single_buffer.html">audio_tools::SingleBuffer&lt; uint8_t &gt;</a></div></div>
