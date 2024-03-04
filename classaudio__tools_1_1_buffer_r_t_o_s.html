@@ -91,9 +91,9 @@ Inheritance diagram for BufferRTOS&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4f47b3160fb81fca478cd1634ef886dd"><td class="memItemLeft" align="right" valign="top"><a id="a4f47b3160fb81fca478cd1634ef886dd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BufferRTOS</b> (size_t xStreamBufferSizeBytes, size_t xTriggerLevel=1, TickType_t writeMaxWait=portMAX_DELAY, TickType_t readMaxWait=portMAX_DELAY)</td></tr>
-<tr class="separator:a4f47b3160fb81fca478cd1634ef886dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae5a16723ae901f45b00da0655cc3ba"><td class="memItemLeft" align="right" valign="top"><a id="a5ae5a16723ae901f45b00da0655cc3ba"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BufferRTOS</b> (size_t xStreamBufferSizeBytes, size_t xTriggerLevel=1, TickType_t writeMaxWait=portMAX_DELAY, TickType_t readMaxWait=portMAX_DELAY, <a class="el" href="classaudio__tools_1_1_allocator.html">Allocator</a> &amp;allocator=DefaultAllocator)</td></tr>
+<tr class="separator:a5ae5a16723ae901f45b00da0655cc3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a001493d22a88d48242cc331551def442"><td class="memItemLeft" align="right" valign="top"><a id="a001493d22a88d48242cc331551def442"></a>
 T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html#a001493d22a88d48242cc331551def442">address</a> () override</td></tr>
 <tr class="memdesc:a001493d22a88d48242cc331551def442"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the address of the start of the physical read buffer <br /></td></tr>
@@ -197,12 +197,21 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>current_size</b> = 
 <tr class="memitem:abd7d9af99b1d6c8219c7e87507fec2e7"><td class="memItemLeft" align="right" valign="top"><a id="abd7d9af99b1d6c8219c7e87507fec2e7"></a>
 friend&#160;</td><td class="memItemRight" valign="bottom"><b>NBuffer&lt; T &gt;</b></td></tr>
 <tr class="separator:abd7d9af99b1d6c8219c7e87507fec2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4bdc4efb8ed50fea52af4107cdf545"><td class="memItemLeft" align="right" valign="top"><a id="a2f4bdc4efb8ed50fea52af4107cdf545"></a>
+<a class="el" href="classaudio__tools_1_1_allocator.html">Allocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_allocator</b> = nullptr</td></tr>
+<tr class="separator:a2f4bdc4efb8ed50fea52af4107cdf545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8304c4af5da6e830b86d7199dc9a22e6"><td class="memItemLeft" align="right" valign="top"><a id="a8304c4af5da6e830b86d7199dc9a22e6"></a>
+uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>p_data</b> = nullptr</td></tr>
+<tr class="separator:a8304c4af5da6e830b86d7199dc9a22e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6f67a06e50f87fedb988628f8e2b72f"><td class="memItemLeft" align="right" valign="top"><a id="aa6f67a06e50f87fedb988628f8e2b72f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>read_from_isr</b> = false</td></tr>
 <tr class="separator:aa6f67a06e50f87fedb988628f8e2b72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a02327e413b3696c5944c5ee11aacd2"><td class="memItemLeft" align="right" valign="top"><a id="a9a02327e413b3696c5944c5ee11aacd2"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>readWait</b> = portMAX_DELAY</td></tr>
 <tr class="separator:a9a02327e413b3696c5944c5ee11aacd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17bb2ff172a338a93d87534baeeadec0"><td class="memItemLeft" align="right" valign="top"><a id="a17bb2ff172a338a93d87534baeeadec0"></a>
+StaticStreamBuffer_t&#160;</td><td class="memItemRight" valign="bottom"><b>static_stream_buffer</b></td></tr>
+<tr class="separator:a17bb2ff172a338a93d87534baeeadec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa75bad1f2707f138aff57bf2fc0788a4"><td class="memItemLeft" align="right" valign="top"><a id="aa75bad1f2707f138aff57bf2fc0788a4"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>trigger_level</b> = 0</td></tr>
 <tr class="separator:aa75bad1f2707f138aff57bf2fc0788a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
