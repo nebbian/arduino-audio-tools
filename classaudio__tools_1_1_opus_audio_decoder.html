@@ -95,10 +95,10 @@ Inheritance diagram for OpusAudioDecoder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a41456d8a19ed63bd28132ac0926a0143"><td class="memItemLeft" align="right" valign="top"><a id="a41456d8a19ed63bd28132ac0926a0143"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_opus_audio_decoder.html#a41456d8a19ed63bd28132ac0926a0143">OpusAudioDecoder</a> ()</td></tr>
-<tr class="memdesc:a41456d8a19ed63bd28132ac0926a0143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new OpusDecoder object. <br /></td></tr>
-<tr class="separator:a41456d8a19ed63bd28132ac0926a0143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4915dc20c66e772d50d802a9fa67926"><td class="memItemLeft" align="right" valign="top"><a id="ad4915dc20c66e772d50d802a9fa67926"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_opus_audio_decoder.html#ad4915dc20c66e772d50d802a9fa67926">OpusAudioDecoder</a> ()=default</td></tr>
+<tr class="memdesc:ad4915dc20c66e772d50d802a9fa67926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new OpusDecoder object. <br /></td></tr>
+<tr class="separator:ad4915dc20c66e772d50d802a9fa67926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02aff987ee199275e34bd196f20f0c0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_opus_audio_decoder.html#a02aff987ee199275e34bd196f20f0c0e">OpusAudioDecoder</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out_stream)</td></tr>
 <tr class="memdesc:a02aff987ee199275e34bd196f20f0c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new OpusDecoder object.  <a href="classaudio__tools_1_1_opus_audio_decoder.html#a02aff987ee199275e34bd196f20f0c0e">More...</a><br /></td></tr>
 <tr class="separator:a02aff987ee199275e34bd196f20f0c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,6 +179,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4c33a04426f36f7209536901dcd58544"><td class="memItemLeft" align="right" valign="top"><a id="a4c33a04426f36f7209536901dcd58544"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="separator:a4c33a04426f36f7209536901dcd58544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99fd834d6eb65a95eb567cb67ea73501"><td class="memItemLeft" align="right" valign="top"><a id="a99fd834d6eb65a95eb567cb67ea73501"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValidRate</b> (int rate)</td></tr>
+<tr class="separator:a99fd834d6eb65a95eb567cb67ea73501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memItemLeft" align="right" valign="top"><a id="a6a9a665a387a8c4fbf7fed14bbbfc093"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyAudioChange</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="separator:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,6 +215,9 @@ OpusDecoder *&#160;</td><td class="memItemRight" valign="bottom"><b>dec</b></td>
 <tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>
 <tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e12062f208c230a58d050c997ba93cc"><td class="memItemLeft" align="right" valign="top"><a id="a8e12062f208c230a58d050c997ba93cc"></a>
+const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>valid_rates</b> [5] = {8000, 12000, 16000, 24000, 48000}</td></tr>
+<tr class="separator:a8e12062f208c230a58d050c997ba93cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classaudio__tools_1_1_opus_audio_decoder.html" title="OpusAudioDecoder: Depends on https://github.com/pschatzmann/arduino-libopus.git.">OpusAudioDecoder</a>: Depends on <a href="https://github.com/pschatzmann/arduino-libopus.git">https://github.com/pschatzmann/arduino-libopus.git</a>. </p>

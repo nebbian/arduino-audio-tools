@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['output_5fbits_3099',['output_bits',['../classaudio__tools_1_1_d_a_c_info.html#a322c94b3f3bcc25b4cfc71f95d72028f',1,'audio_tools::DACInfo']]],
-  ['oversample_5ffactor_3100',['oversample_factor',['../classaudio__tools_1_1_d_a_c_info.html#a8eababb23d2315e425ef28fa947f5cd7',1,'audio_tools::DACInfo']]]
+  ['output_5fbits_3101',['output_bits',['../classaudio__tools_1_1_d_a_c_info.html#a322c94b3f3bcc25b4cfc71f95d72028f',1,'audio_tools::DACInfo']]],
+  ['oversample_5ffactor_3102',['oversample_factor',['../classaudio__tools_1_1_d_a_c_info.html#a8eababb23d2315e425ef28fa947f5cd7',1,'audio_tools::DACInfo']]]
 ];
