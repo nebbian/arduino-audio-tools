@@ -139,6 +139,14 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_a_d_t_s_parser.html">ADTSParser</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_allocator.html">Allocator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory allocateator which uses malloc.  <a href="classaudio__tools_1_1_allocator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_allocator_ext.html">AllocatorExt</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory allocateator which uses ps_malloc (on the ESP32) and if this fails it resorts to malloc.  <a href="classaudio__tools_1_1_allocator_ext.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_allocator_p_s_r_a_m.html">AllocatorPSRAM</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_alloc_size.html">AllocSize</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_analog_audio_stream.html">AnalogAudioStream</a></td></tr>
@@ -422,6 +430,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_buffered_window.html">BufferedWindow</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffered window function, so that we do not need to re-calculate the values.  <a href="classaudio__tools_1_1_buffered_window.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html">BufferRTOS</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer implementation which is using a FreeRTOS StreamBuffer. The default allocator uses psram is available.  <a href="classaudio__tools_1_1_buffer_r_t_o_s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_cached_volume_control.html">CachedVolumeControl</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">In order to optimize the processing time we cache the last input &amp; factor and recalculate the new factor only if the input has changed.  <a href="classaudio__tools_1_1_cached_volume_control.html#details">More...</a><br /></td></tr>
@@ -1416,6 +1427,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_str.html" title="A simple wrapper to provide string functions on char*. If the underlying char* is a const we do not a...">Str</a> which keeps the data on the heap. We grow the allocated memory only if the copy source is not fitting.  <a href="classaudio__tools_1_1_str_ext.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_synchronized_buffer.html">SynchronizedBuffer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper class that can turn any Buffer into a thread save implementation.  <a href="classaudio__tools_1_1_synchronized_buffer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_synchronized_n_buffer.html">SynchronizedNBuffer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_n_buffer.html" title="A lock free N buffer. If count=2 we create a DoubleBuffer, if count=3 a TripleBuffer etc.">NBuffer</a> which uses some RTOS queues to manage the available and filled buffers.  <a href="classaudio__tools_1_1_synchronized_n_buffer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_synthesizer.html">Synthesizer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple <a class="el" href="classaudio__tools_1_1_synthesizer.html" title="A simple Synthesizer which can generate sound having multiple keys pressed. The main purpose of this ...">Synthesizer</a> which can generate sound having multiple keys pressed. The main purpose of this class is managing the synthezizer channels.  <a href="classaudio__tools_1_1_synthesizer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1717,6 +1734,10 @@ typedef sdfat::SdSpiConfig&#160;</td><td class="memItemRight" valign="bottom"><b
 <tr class="memitem:a4faf021140b432b9c282f7cd72026390"><td class="memItemLeft" align="right" valign="top"><a id="a4faf021140b432b9c282f7cd72026390"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>SPDIFStream</b> = <a class="el" href="classaudio__tools_1_1_s_p_d_i_f_output.html">SPDIFOutput</a></td></tr>
 <tr class="separator:a4faf021140b432b9c282f7cd72026390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73d6ed323f5db62aed8229aba3bb7e3"><td class="memTemplParams" colspan="2"><a id="ab73d6ed323f5db62aed8229aba3bb7e3"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ab73d6ed323f5db62aed8229aba3bb7e3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SynchronizedBufferRTOS</b> = <a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html">BufferRTOS</a>&lt; T &gt;</td></tr>
+<tr class="separator:ab73d6ed323f5db62aed8229aba3bb7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26cc1d7714553c807f4592a48647bb2"><td class="memItemLeft" align="right" valign="top"><a id="ad26cc1d7714553c807f4592a48647bb2"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#ad26cc1d7714553c807f4592a48647bb2">TimerAlarmRepeatingDriver</a> = <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.html">TimerAlarmRepeatingDriverAVR</a></td></tr>
 <tr class="memdesc:ad26cc1d7714553c807f4592a48647bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">use TimerAlarmRepeating! <br /></td></tr>
@@ -2299,7 +2320,7 @@ Variables</h2></td></tr>
 static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>_desc_str</b> [32]</td></tr>
 <tr class="separator:af2de154bf5687cf263c1f1683aa9a4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a142a50ac852c3b35cdb5a39b10d7a53b"><td class="memItemLeft" align="right" valign="top"><a id="a142a50ac852c3b35cdb5a39b10d7a53b"></a>
-static BufferRTOS&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_buffer</b> {A2DP_BUFFER_SIZE * A2DP_BUFFER_COUNT, A2DP_BUFFER_SIZE, portMAX_DELAY, portMAX_DELAY}</td></tr>
+static <a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html">BufferRTOS</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_buffer</b> {A2DP_BUFFER_SIZE * A2DP_BUFFER_COUNT, A2DP_BUFFER_SIZE, portMAX_DELAY, portMAX_DELAY}</td></tr>
 <tr class="separator:a142a50ac852c3b35cdb5a39b10d7a53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae49dcee0fc374b24fca8634e3f50a8a6"><td class="memItemLeft" align="right" valign="top"><a id="ae49dcee0fc374b24fca8634e3f50a8a6"></a>
 static <a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html">A2DPStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>A2DPStream_self</b> =nullptr</td></tr>
@@ -2366,6 +2387,9 @@ INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>CO
 <tr class="memitem:adb4e1a9fb882f53625e527b900e036f9"><td class="memItemLeft" align="right" valign="top"><a id="adb4e1a9fb882f53625e527b900e036f9"></a>
 INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_AGENT</b> = &quot;Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)&quot;</td></tr>
 <tr class="separator:adb4e1a9fb882f53625e527b900e036f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c81a6f0b03132731d7358736559cb15"><td class="memItemLeft" align="right" valign="top"><a id="a8c81a6f0b03132731d7358736559cb15"></a>
+static <a class="el" href="classaudio__tools_1_1_allocator_ext.html">AllocatorExt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DefaultAllocator</b></td></tr>
+<tr class="separator:a8c81a6f0b03132731d7358736559cb15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31b42d3930e60a3d64e4880015ab4212"><td class="memItemLeft" align="right" valign="top">uint8_t const&#160;</td><td class="memItemRight" valign="bottom"><b>desc_configuration</b> []</td></tr>
 <tr class="separator:a31b42d3930e60a3d64e4880015ab4212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4653a41146db1badedb5a6126e6b6b7"><td class="memItemLeft" align="right" valign="top">tusb_desc_device_t const&#160;</td><td class="memItemRight" valign="bottom"><b>desc_device</b></td></tr>

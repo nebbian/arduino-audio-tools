@@ -69,6 +69,7 @@ $(function() {
 , <a class="el" href="classaudio__tools_1_1_base_buffer.html#a7b3c05b1c2e4d61cad5f02afba4691cc">BaseBuffer&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_buffered_stream.html#a31e8f8111a9c57b7a2be72337ab07e0e">BufferedStream</a>
 , <a class="el" href="classaudio__tools_1_1_buffered_task_stream.html#a31e8f8111a9c57b7a2be72337ab07e0e">BufferedTaskStream</a>
+, <a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html#af0249cac32fffc33491daa627905febf">BufferRTOS&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_hamming_f_e_c.html#ad0852e3297f3743332e629b9924c9375">HammingFEC&lt; bytecount, block_t &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_http_header.html#ab6a96bc1717a2149db3a537261ccead4">HttpHeader</a>
 , <a class="el" href="classaudio__tools_1_1_n_buffer.html#a97acc37c2fc08fa60479ac5b9c36e40a">NBuffer&lt; T &gt;</a>
@@ -76,6 +77,7 @@ $(function() {
 , <a class="el" href="classaudio__tools_1_1_ring_buffer.html#a1b28d39faccd30992c1b64ddc6e21fe9">RingBuffer&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_ring_buffer_file.html#af0249cac32fffc33491daa627905febf">RingBufferFile&lt; File, T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_single_buffer.html#af0249cac32fffc33491daa627905febf">SingleBuffer&lt; T &gt;</a>
+, <a class="el" href="classaudio__tools_1_1_synchronized_buffer.html#af0249cac32fffc33491daa627905febf">SynchronizedBuffer&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_variable_speed_ring_buffer180.html#a97acc37c2fc08fa60479ac5b9c36e40a">VariableSpeedRingBuffer180&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_variable_speed_ring_buffer.html#a97acc37c2fc08fa60479ac5b9c36e40a">VariableSpeedRingBuffer&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_variable_speed_ring_buffer_simple.html#a97acc37c2fc08fa60479ac5b9c36e40a">VariableSpeedRingBufferSimple&lt; T &gt;</a>
@@ -85,7 +87,9 @@ $(function() {
 </li>
 <li>readArray()
 : <a class="el" href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">BaseBuffer&lt; T &gt;</a>
+, <a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html#af64689a1afcd0edd6cd5a85bc43e323d">BufferRTOS&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_ring_buffer_file.html#a0747fdde42125f2dbddd4d84ad124678">RingBufferFile&lt; File, T &gt;</a>
+, <a class="el" href="classaudio__tools_1_1_synchronized_buffer.html#af64689a1afcd0edd6cd5a85bc43e323d">SynchronizedBuffer&lt; T &gt;</a>
 </li>
 <li>readBytes()
 : <a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html#a4c5c6275ddee80eb02839356b6185c0b">A2DPStream</a>
@@ -197,16 +201,18 @@ $(function() {
 : <a class="el" href="classaudio__tools_1_1_audio_sync_reader.html#a75e75472f35bebc9344bee7cfc24807f">AudioSyncReader</a>
 </li>
 <li>ResampleStream()
-: <a class="el" href="classaudio__tools_1_1_resample_stream.html#af68d567deb61ebb2452d61b9e1beed8e">ResampleStream</a>
+: <a class="el" href="classaudio__tools_1_1_resample_stream.html#a4086fb1a96a79787cd34d990af19f0a3">ResampleStream</a>
 </li>
 <li>reset()
 : <a class="el" href="classaudio__tools_1_1_audio_f_f_t_base.html#ad20897c5c8bd47f5d4005989bead0e55">AudioFFTBase</a>
 , <a class="el" href="classaudio__tools_1_1_base_buffer.html#a20dcbdfbd0ec77afc802522bb7e379c1">BaseBuffer&lt; T &gt;</a>
+, <a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html#aebfcdbbd0fe4efbff10b180be50ca6bc">BufferRTOS&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_n_buffer.html#ad20897c5c8bd47f5d4005989bead0e55">NBuffer&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_oversampling_d_a_c.html#a7b0e029102ad38f4b814c6523aedb53d">OversamplingDAC</a>
 , <a class="el" href="classaudio__tools_1_1_ring_buffer.html#a7b0e029102ad38f4b814c6523aedb53d">RingBuffer&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_ring_buffer_file.html#aebfcdbbd0fe4efbff10b180be50ca6bc">RingBufferFile&lt; File, T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_single_buffer.html#aebfcdbbd0fe4efbff10b180be50ca6bc">SingleBuffer&lt; T &gt;</a>
+, <a class="el" href="classaudio__tools_1_1_synchronized_buffer.html#aebfcdbbd0fe4efbff10b180be50ca6bc">SynchronizedBuffer&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_variable_speed_ring_buffer180.html#ad20897c5c8bd47f5d4005989bead0e55">VariableSpeedRingBuffer180&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_variable_speed_ring_buffer.html#ad20897c5c8bd47f5d4005989bead0e55">VariableSpeedRingBuffer&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_variable_speed_ring_buffer_simple.html#ad20897c5c8bd47f5d4005989bead0e55">VariableSpeedRingBufferSimple&lt; T &gt;</a>
@@ -218,7 +224,8 @@ $(function() {
 : <a class="el" href="classaudio__tools_1_1_volume_stream.html#ad1514ef02c931e4d01f1ab1cbbf6ab39">VolumeStream</a>
 </li>
 <li>resize()
-: <a class="el" href="classaudio__tools_1_1_decoder_adapter.html#ada388d17b93c54a1a0f6edddbe0953ab">DecoderAdapter</a>
+: <a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html#a514affe27cc623fc5dccf1bf4648eb2a">BufferRTOS&lt; T &gt;</a>
+, <a class="el" href="classaudio__tools_1_1_decoder_adapter.html#ada388d17b93c54a1a0f6edddbe0953ab">DecoderAdapter</a>
 , <a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#ada388d17b93c54a1a0f6edddbe0953ab">EncodedAudioStream</a>
 , <a class="el" href="classaudio__tools_1_1_output_mixer.html#ada388d17b93c54a1a0f6edddbe0953ab">OutputMixer&lt; T &gt;</a>
 , <a class="el" href="classaudio__tools_1_1_stream_copy_t.html#a6038284a43db2e3e343c6f517171e8fe">StreamCopyT&lt; T &gt;</a>

@@ -104,12 +104,18 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">bool</span> empty() {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">return</span> l.empty();</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classaudio__tools_1_1_list.html">List&lt;T&gt;</a> l;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> setAllocator(<a class="code" href="classaudio__tools_1_1_allocator.html">Allocator</a> &amp;allocator){</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            l.setAllocator(allocator);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classaudio__tools_1_1_list.html">List&lt;T&gt;</a> l;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="ttc" id="aclassaudio__tools_1_1_allocator_html"><div class="ttname"><a href="classaudio__tools_1_1_allocator.html">audio_tools::Allocator</a></div><div class="ttdoc">Memory allocateator which uses malloc.</div><div class="ttdef"><b>Definition:</b> Allocator.h:16</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_list_html"><div class="ttname"><a href="classaudio__tools_1_1_list.html">audio_tools::List</a></div><div class="ttdoc">Double linked list.</div><div class="ttdef"><b>Definition:</b> List.h:17</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stack_html"><div class="ttname"><a href="classaudio__tools_1_1_stack.html">audio_tools::Stack</a></div><div class="ttdoc">LIFO Stack which is based on a List.</div><div class="ttdef"><b>Definition:</b> Stack.h:14</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
