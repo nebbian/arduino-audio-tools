@@ -963,6 +963,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_lock.html">Lock</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple RIA locking class for the ESP32 using _lock_t.  <a href="classaudio__tools_1_1_lock.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_lock_guard.html">LockGuard</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII implementaion using a <a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a>: Only a few microcontrollers provide lock guards, so I decided to roll my own solution where we can just use a dummy <a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a> implementation that does nothing for the cases where this is not needed.  <a href="classaudio__tools_1_1_lock_guard.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_logarithmic_volume_control.html">LogarithmicVolumeControl</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parametric Logarithmic volume control. Using the formula pow(b,input) * a - a, where b is b = pow(((1/ym)-1), 2) and a is a = 1.0 / (b - 1.0). The parameter ym is determining the steepness. See <a href="https://electronics.stackexchange.com/questions/304692/formula-for-logarithmic-audio-taper-pot">https://electronics.stackexchange.com/questions/304692/formula-for-logarithmic-audio-taper-pot</a>.  <a href="classaudio__tools_1_1_logarithmic_volume_control.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1051,6 +1054,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_musical_notes.html">MusicalNotes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determination of the frequency of a music note.  <a href="classaudio__tools_1_1_musical_notes.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mutex.html">Mutex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a> implemntation using FreeRTOS.  <a href="classaudio__tools_1_1_mutex.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mutex_base.html">MutexBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty <a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a> implementation which does nothing.  <a href="classaudio__tools_1_1_mutex_base.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_nano___b_l_e__freq__info.html">Nano_BLE_freq_info</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping Frequency constants to available frequencies.  <a href="structaudio__tools_1_1_nano___b_l_e__freq__info.html#details">More...</a><br /></td></tr>
@@ -1412,6 +1421,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_synthesizer_key.html">SynthesizerKey</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arduino GPIO pin to note assossiation.  <a href="structaudio__tools_1_1_synthesizer_key.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_task.html">Task</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_test_generator.html">TestGenerator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a test signal which is easy to check because the values are incremented or decremented by 1.  <a href="classaudio__tools_1_1_test_generator.html#details">More...</a><br /></td></tr>
@@ -2287,9 +2298,9 @@ Variables</h2></td></tr>
 <tr class="memitem:af2de154bf5687cf263c1f1683aa9a4be"><td class="memItemLeft" align="right" valign="top"><a id="af2de154bf5687cf263c1f1683aa9a4be"></a>
 static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>_desc_str</b> [32]</td></tr>
 <tr class="separator:af2de154bf5687cf263c1f1683aa9a4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d7e986ee927e59b783a61b36032db34"><td class="memItemLeft" align="right" valign="top"><a id="a6d7e986ee927e59b783a61b36032db34"></a>
-static SynchronizedBufferRTOS&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_buffer</b> {A2DP_BUFFER_SIZE * A2DP_BUFFER_COUNT, A2DP_BUFFER_SIZE, portMAX_DELAY, portMAX_DELAY}</td></tr>
-<tr class="separator:a6d7e986ee927e59b783a61b36032db34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a142a50ac852c3b35cdb5a39b10d7a53b"><td class="memItemLeft" align="right" valign="top"><a id="a142a50ac852c3b35cdb5a39b10d7a53b"></a>
+static BufferRTOS&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_buffer</b> {A2DP_BUFFER_SIZE * A2DP_BUFFER_COUNT, A2DP_BUFFER_SIZE, portMAX_DELAY, portMAX_DELAY}</td></tr>
+<tr class="separator:a142a50ac852c3b35cdb5a39b10d7a53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae49dcee0fc374b24fca8634e3f50a8a6"><td class="memItemLeft" align="right" valign="top"><a id="ae49dcee0fc374b24fca8634e3f50a8a6"></a>
 static <a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html">A2DPStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>A2DPStream_self</b> =nullptr</td></tr>
 <tr class="separator:ae49dcee0fc374b24fca8634e3f50a8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
