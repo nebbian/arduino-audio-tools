@@ -102,9 +102,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ab4a68ecd51392bc22bb36af9b6da82"><td class="memItemLeft" align="right" valign="top"><a id="a9ab4a68ecd51392bc22bb36af9b6da82"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BinaryContainerDecoder</b> (<a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> *decoder)</td></tr>
 <tr class="separator:a9ab4a68ecd51392bc22bb36af9b6da82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21cf68e9b1cc36389fd9b10c2cf8b221"><td class="memItemLeft" align="right" valign="top"><a id="a21cf68e9b1cc36389fd9b10c2cf8b221"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addErrorHandler</b> (void(*error_handler)(<a class="el" href="namespaceaudio__tools.html#acb4c9518c39bac13fb1a2cfd9185540a">BinaryContainerEncoderError</a> error, <a class="el" href="classaudio__tools_1_1_binary_container_decoder.html">BinaryContainerDecoder</a> *source))</td></tr>
-<tr class="separator:a21cf68e9b1cc36389fd9b10c2cf8b221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1856fdb8a26006ab41cdd2e4a1b7dd"><td class="memItemLeft" align="right" valign="top"><a id="a5e1856fdb8a26006ab41cdd2e4a1b7dd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addErrorHandler</b> (void(*error_handler)(<a class="el" href="namespaceaudio__tools.html#acb4c9518c39bac13fb1a2cfd9185540a">BinaryContainerEncoderError</a> error, <a class="el" href="classaudio__tools_1_1_binary_container_decoder.html">BinaryContainerDecoder</a> *source, void *ref))</td></tr>
+<tr class="separator:a5e1856fdb8a26006ab41cdd2e4a1b7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a727a24459787e1eeeb7a37ba888394a6"><td class="memItemLeft" align="right" valign="top"><a id="a727a24459787e1eeeb7a37ba888394a6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a727a24459787e1eeeb7a37ba888394a6">addNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a727a24459787e1eeeb7a37ba888394a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds target to be notified about audio changes. <br /></td></tr>
@@ -137,11 +137,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:accee684614189e73bdc9f1b2f7abf919"><td class="mdescLeft">&#160;</td><td class="mdescRight">for most decoders this is not needed <br /></td></tr>
 <tr class="separator:accee684614189e73bdc9f1b2f7abf919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2da5d36b628961e240ed1d95e539832d"><td class="memItemLeft" align="right" valign="top"><a id="a2da5d36b628961e240ed1d95e539832d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setIgnoreWriteErrors</b> (bool flag)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_binary_container_decoder.html#a2da5d36b628961e240ed1d95e539832d">setIgnoreWriteErrors</a> (bool flag)</td></tr>
+<tr class="memdesc:a2da5d36b628961e240ed1d95e539832d"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set to true we do not expect a retry to write the missing data but continue just with the next. (Default is true);. <br /></td></tr>
 <tr class="separator:a2da5d36b628961e240ed1d95e539832d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67317648b99abee852c9f20e8acf84c2"><td class="memItemLeft" align="right" valign="top"><a id="a67317648b99abee852c9f20e8acf84c2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setMetaCallback</b> (void(*callback)(uint8_t *, int))</td></tr>
-<tr class="separator:a67317648b99abee852c9f20e8acf84c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aba6fc41d4f9399b997aa724732eb08"><td class="memItemLeft" align="right" valign="top"><a id="a9aba6fc41d4f9399b997aa724732eb08"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMetaCallback</b> (void(*callback)(uint8_t *, int, void *))</td></tr>
+<tr class="separator:a9aba6fc41d4f9399b997aa724732eb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e0825fad7a777d93e43602670010c7"><td class="memItemLeft" align="right" valign="top"><a id="a64e0825fad7a777d93e43602670010c7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
@@ -158,6 +159,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_binary_container_decoder.html#a46f2c85361f5459bb6a58dc28dc3ee9a">setOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;outStream)</td></tr>
 <tr class="memdesc:a46f2c85361f5459bb6a58dc28dc3ee9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines where the decoded result is written to. <br /></td></tr>
 <tr class="separator:a46f2c85361f5459bb6a58dc28dc3ee9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d57924ad8bf6c8765005de08b3a214"><td class="memItemLeft" align="right" valign="top"><a id="a99d57924ad8bf6c8765005de08b3a214"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_binary_container_decoder.html#a99d57924ad8bf6c8765005de08b3a214">setReference</a> (void *ref)</td></tr>
+<tr class="memdesc:a99d57924ad8bf6c8765005de08b3a214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide additional information for callback. <br /></td></tr>
+<tr class="separator:a99d57924ad8bf6c8765005de08b3a214"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2685d88d9d964c749bce462858634b6e"><td class="memItemLeft" align="right" valign="top"><a id="a2685d88d9d964c749bce462858634b6e"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const void *data, size_t len)</td></tr>
 <tr class="separator:a2685d88d9d964c749bce462858634b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,9 +206,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aaf0eef2d94f5e586b3d7cd5935560e29"><td class="memItemLeft" align="right" valign="top"><a id="aaf0eef2d94f5e586b3d7cd5935560e29"></a>
 <a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {0}</td></tr>
 <tr class="separator:aaf0eef2d94f5e586b3d7cd5935560e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a170b790c614b78994bd01620de98d6"><td class="memItemLeft" align="right" valign="top"><a id="a8a170b790c614b78994bd01620de98d6"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>error_handler</b> )(<a class="el" href="namespaceaudio__tools.html#acb4c9518c39bac13fb1a2cfd9185540a">BinaryContainerEncoderError</a> error, <a class="el" href="classaudio__tools_1_1_binary_container_decoder.html">BinaryContainerDecoder</a> *source) = nullptr</td></tr>
-<tr class="separator:a8a170b790c614b78994bd01620de98d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09adb16362b1673d01622568a8971778"><td class="memItemLeft" align="right" valign="top"><a id="a09adb16362b1673d01622568a8971778"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><b>error_handler</b> )(<a class="el" href="namespaceaudio__tools.html#acb4c9518c39bac13fb1a2cfd9185540a">BinaryContainerEncoderError</a> error, <a class="el" href="classaudio__tools_1_1_binary_container_decoder.html">BinaryContainerDecoder</a> *source, void *ref) = nullptr</td></tr>
+<tr class="separator:a09adb16362b1673d01622568a8971778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f7a4e8186c41d50ae590c7e28d1ae8c"><td class="memItemLeft" align="right" valign="top"><a id="a4f7a4e8186c41d50ae590c7e28d1ae8c"></a>
 <a class="el" href="structaudio__tools_1_1_common_header.html">CommonHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>header</b></td></tr>
 <tr class="separator:a4f7a4e8186c41d50ae590c7e28d1ae8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,9 +224,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ignore_write_errors</
 <tr class="memitem:a4c54361cc737ba2d4ea42efe398c924a"><td class="memItemLeft" align="right" valign="top"><a id="a4c54361cc737ba2d4ea42efe398c924a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_first</b> = true</td></tr>
 <tr class="separator:a4c54361cc737ba2d4ea42efe398c924a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ec4907295ed8244033f5925440f9525"><td class="memItemLeft" align="right" valign="top"><a id="a5ec4907295ed8244033f5925440f9525"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>meta_callback</b> )(uint8_t *, int) = nullptr</td></tr>
-<tr class="separator:a5ec4907295ed8244033f5925440f9525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75fd1936c059c400450cd22daecc38f8"><td class="memItemLeft" align="right" valign="top"><a id="a75fd1936c059c400450cd22daecc38f8"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><b>meta_callback</b> )(uint8_t *data, int len, void *ref) = nullptr</td></tr>
+<tr class="separator:a75fd1936c059c400450cd22daecc38f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memItemLeft" align="right" valign="top"><a id="ad35c4e2ef458c36e8d36676958cc9cd3"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notify_vector</b></td></tr>
 <tr class="separator:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,6 +239,9 @@ void(*&#160;</td><td class="memItemRight" valign="bottom"><b>meta_callback</b> )
 <tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>
 <tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58508818260a10b97c074d9443a7203"><td class="memItemLeft" align="right" valign="top"><a id="ae58508818260a10b97c074d9443a7203"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b> = nullptr</td></tr>
+<tr class="separator:ae58508818260a10b97c074d9443a7203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Decodes the provided data from the DAT and CFG segments. </p>
