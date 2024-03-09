@@ -2241,14 +2241,14 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a1d8000e66a6b1df22bc01638f587b32c"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a1d8000e66a6b1df22bc01638f587b32c">readSamples</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *p_stream, T *data, int samples)</td></tr>
 <tr class="memdesc:a1d8000e66a6b1df22bc01638f587b32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">guaranteed to return the requested data <br /></td></tr>
 <tr class="separator:a1d8000e66a6b1df22bc01638f587b32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af68d88c17f0bce43f0551198d0dcbd04"><td class="memItemLeft" align="right" valign="top"><a id="af68d88c17f0bce43f0551198d0dcbd04"></a>
-INLINE_VAR size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#af68d88c17f0bce43f0551198d0dcbd04">strnlength</a> (const char *s, size_t n)</td></tr>
-<tr class="memdesc:af68d88c17f0bce43f0551198d0dcbd04"><td class="mdescLeft">&#160;</td><td class="mdescRight">unfortunatly strnlen or strnlen_s is not available in all implementations <br /></td></tr>
-<tr class="separator:af68d88c17f0bce43f0551198d0dcbd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae06c56511c8bb5a3a7649c4821660886"><td class="memItemLeft" align="right" valign="top">
-INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__metadata.html#gae06c56511c8bb5a3a7649c4821660886">toStr</a> (<a class="el" href="group__metadata.html#ga6760f423085f8a63374b1e2db102a6d1">MetaDataType</a> t)</td></tr>
-<tr class="memdesc:gae06c56511c8bb5a3a7649c4821660886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the MetaDataType to a string. <br /></td></tr>
-<tr class="separator:gae06c56511c8bb5a3a7649c4821660886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21d69d9ea879f2a5d9091367871bb28c"><td class="memItemLeft" align="right" valign="top"><a id="a21d69d9ea879f2a5d9091367871bb28c"></a>
+static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a21d69d9ea879f2a5d9091367871bb28c">strnlength</a> (const char *s, size_t n)</td></tr>
+<tr class="memdesc:a21d69d9ea879f2a5d9091367871bb28c"><td class="mdescLeft">&#160;</td><td class="mdescRight">unfortunatly strnlen or strnlen_s is not available in all implementations <br /></td></tr>
+<tr class="separator:a21d69d9ea879f2a5d9091367871bb28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga459d5f111b3b44c5e42d2cf4ecfd43a8"><td class="memItemLeft" align="right" valign="top">
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__metadata.html#ga459d5f111b3b44c5e42d2cf4ecfd43a8">toStr</a> (<a class="el" href="group__metadata.html#ga6760f423085f8a63374b1e2db102a6d1">MetaDataType</a> t)</td></tr>
+<tr class="memdesc:ga459d5f111b3b44c5e42d2cf4ecfd43a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the MetaDataType to a string. <br /></td></tr>
+<tr class="separator:ga459d5f111b3b44c5e42d2cf4ecfd43a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ff92c5c7eb806b0173a13a0afa3c91d"><td class="memItemLeft" align="right" valign="top"><a id="a7ff92c5c7eb806b0173a13a0afa3c91d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>tud_audio_get_req_entity_cb</b> (uint8_t rhport, tusb_control_request_t const *p_request)</td></tr>
 <tr class="separator:a7ff92c5c7eb806b0173a13a0afa3c91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2388,8 +2388,7 @@ static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>CONTEN
 <tr class="memitem:adc98271f559be812adce21827e4700c1"><td class="memItemLeft" align="right" valign="top"><a id="adc98271f559be812adce21827e4700c1"></a>
 static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>CONTENT_TYPE</b> = &quot;Content-Type&quot;</td></tr>
 <tr class="separator:adc98271f559be812adce21827e4700c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0999f3356fc08985f208753065d2afa8"><td class="memItemLeft" align="right" valign="top"><a id="a0999f3356fc08985f208753065d2afa8"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_AGENT</b> = &quot;Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)&quot;</td></tr>
+<tr class="memitem:a0999f3356fc08985f208753065d2afa8"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_AGENT</b></td></tr>
 <tr class="separator:a0999f3356fc08985f208753065d2afa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c81a6f0b03132731d7358736559cb15"><td class="memItemLeft" align="right" valign="top"><a id="a8c81a6f0b03132731d7358736559cb15"></a>
 static <a class="el" href="classaudio__tools_1_1_allocator_ext.html">AllocatorExt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DefaultAllocator</b></td></tr>
@@ -2406,32 +2405,35 @@ tflite::ErrorReporter *&#160;</td><td class="memItemRight" valign="bottom"><b>er
 <tr class="memitem:a1657e5bc9760514c39cc563553f0b762"><td class="memItemLeft" align="right" valign="top"><a id="a1657e5bc9760514c39cc563553f0b762"></a>
 <a class="el" href="classaudio__tools_1_1_e_s_p_now_stream.html">ESPNowStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ESPNowStreamSelf</b> = nullptr</td></tr>
 <tr class="separator:a1657e5bc9760514c39cc563553f0b762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c126f5da5083180105203584ff7de4e"><td class="memItemLeft" align="right" valign="top">INLINE_VAR const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__freq__info.html">Nano_BLE_freq_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>freq_table</b> []</td></tr>
-<tr class="separator:a1c126f5da5083180105203584ff7de4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56761b0ae50923be178b4ada8d5b7081"><td class="memItemLeft" align="right" valign="top"><a id="a56761b0ae50923be178b4ada8d5b7081"></a>
-INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>genres</b> [] = { &quot;Classic Rock&quot;, &quot;Country&quot;, &quot;Dance&quot;, &quot;Disco&quot;, &quot;Funk&quot;, &quot;Grunge&quot;, &quot;Hip-Hop&quot;, &quot;Jazz&quot;, &quot;Metal&quot;, &quot;New Age&quot;, &quot;Oldies&quot;, &quot;Other&quot;, &quot;Pop&quot;, &quot;R&amp;B&quot;, &quot;Rap&quot;, &quot;Reggae&quot;, &quot;Rock&quot;, &quot;Techno&quot;, &quot;Industrial&quot;, &quot;Alternative&quot;, &quot;Ska&quot;, &quot;Death Metal&quot;, &quot;Pranks&quot;, &quot;Soundtrack&quot;, &quot;Euro-Techno&quot;, &quot;Ambient&quot;, &quot;Trip-Hop&quot;, &quot;Vocal&quot;, &quot;Jazz+Funk&quot;, &quot;Fusion&quot;, &quot;Trance&quot;, &quot;Classical&quot;, &quot;Instrumental&quot;, &quot;Acid&quot;, &quot;House&quot;, &quot;Game&quot;, &quot;Sound Clip&quot;, &quot;Gospel&quot;, &quot;Noise&quot;, &quot;Alternative Rock&quot;, &quot;Bass&quot;, &quot;Soul&quot;, &quot;Punk&quot;, &quot;Space&quot;, &quot;Meditative&quot;, &quot;Instrumental Pop&quot;, &quot;Instrumental Rock&quot;, &quot;Ethnic&quot;, &quot;Gothic&quot;, &quot;Darkwave&quot;, &quot;Techno-Insdustiral&quot;, &quot;Electronic&quot;, &quot;Pop-Folk&quot;, &quot;Eurodance&quot;, &quot;Dream&quot;, &quot;Southern Rock&quot;, &quot;Comedy&quot;, &quot;Cult&quot;, &quot;Gangsta&quot;, &quot;Top 40&quot;, &quot;Christian Rap&quot;, &quot;Pop/Funk&quot;, &quot;Jungle&quot;, &quot;Native US&quot;, &quot;Cabaret&quot;, &quot;New Wave&quot;, &quot;Psychadelic&quot;, &quot;Rave&quot;, &quot;Showtunes&quot;, &quot;Trailer&quot;, &quot;Lo-Fi&quot;, &quot;Tribal&quot;, &quot;Acid Punk&quot;, &quot;Acid Jazz&quot;, &quot;Polka&quot;, &quot;Retro&quot;, &quot;Musical&quot;, &quot;Rock &amp; Roll&quot;, &quot;Hard Rock&quot;, &quot;Folk&quot;, &quot;Folk-Rock&quot;, &quot;National Folk&quot;, &quot;Swing&quot;, &quot;Fast Fusion&quot;, &quot;Bebob&quot;, &quot;Latin&quot;, &quot;Revival&quot;, &quot;Celtic&quot;, &quot;Bluegrass&quot;, &quot;Avantgarde&quot;, &quot;Gothic Rock&quot;, &quot;Progressive Rock&quot;, &quot;Psychedelic Rock&quot;, &quot;Symphonic Rock&quot;, &quot;Slow Rock&quot;, &quot;Big Band&quot;, &quot;Chorus&quot;, &quot;Easy Listening&quot;, &quot;Acoustic&quot;,&quot;Humour&quot;, &quot;Speech&quot;, &quot;Chanson&quot;, &quot;Opera&quot;, &quot;Chamber Music&quot;, &quot;Sonata&quot;, &quot;Symphony&quot;, &quot;Booty Bass&quot;, &quot;Primus&quot;, &quot;Porn Groove&quot;, &quot;Satire&quot;, &quot;Slow Jam&quot;, &quot;Club&quot;, &quot;Tango&quot;, &quot;Samba&quot;, &quot;Folklore&quot;, &quot;Ballad&quot;, &quot;Power Ballad&quot;, &quot;Rhytmic Soul&quot;, &quot;Freestyle&quot;, &quot;Duet&quot;, &quot;Punk Rock&quot;, &quot;Drum Solo&quot;, &quot;Acapella&quot;, &quot;Euro-House&quot;, &quot;Dance Hall&quot;, &quot;Goa&quot;, &quot;Drum &amp; Bass&quot;, &quot;Club-House&quot;, &quot;Hardcore&quot;, &quot;Terror&quot;, &quot;Indie&quot;, &quot;BritPop&quot;, &quot;Negerpunk&quot;, &quot;Polsk Punk&quot;, &quot;Beat&quot;, &quot;Christian Gangsta&quot;, &quot;Heavy Metal&quot;, &quot;Black Metal&quot;, &quot;Crossover&quot;, &quot;Contemporary C&quot;, &quot;Christian Rock&quot;, &quot;Merengue&quot;, &quot;Salsa&quot;, &quot;Thrash Metal&quot;, &quot;Anime&quot;, &quot;JPop&quot;, &quot;SynthPop&quot; }</td></tr>
-<tr class="separator:a56761b0ae50923be178b4ada8d5b7081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e62d1f5b8b395a84e20b61ab2bd79ac"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__freq__info.html">Nano_BLE_freq_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>freq_table</b> []</td></tr>
+<tr class="separator:a0e62d1f5b8b395a84e20b61ab2bd79ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c8c26908307dcc9ed5243051454e9ed"><td class="memItemLeft" align="right" valign="top"><a id="a1c8c26908307dcc9ed5243051454e9ed"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>genres</b> [] = { &quot;Classic Rock&quot;, &quot;Country&quot;, &quot;Dance&quot;, &quot;Disco&quot;, &quot;Funk&quot;, &quot;Grunge&quot;, &quot;Hip-Hop&quot;, &quot;Jazz&quot;, &quot;Metal&quot;, &quot;New Age&quot;, &quot;Oldies&quot;, &quot;Other&quot;, &quot;Pop&quot;, &quot;R&amp;B&quot;, &quot;Rap&quot;, &quot;Reggae&quot;, &quot;Rock&quot;, &quot;Techno&quot;, &quot;Industrial&quot;, &quot;Alternative&quot;, &quot;Ska&quot;, &quot;Death Metal&quot;, &quot;Pranks&quot;, &quot;Soundtrack&quot;, &quot;Euro-Techno&quot;, &quot;Ambient&quot;, &quot;Trip-Hop&quot;, &quot;Vocal&quot;, &quot;Jazz+Funk&quot;, &quot;Fusion&quot;, &quot;Trance&quot;, &quot;Classical&quot;, &quot;Instrumental&quot;, &quot;Acid&quot;, &quot;House&quot;, &quot;Game&quot;, &quot;Sound Clip&quot;, &quot;Gospel&quot;, &quot;Noise&quot;, &quot;Alternative Rock&quot;, &quot;Bass&quot;, &quot;Soul&quot;, &quot;Punk&quot;, &quot;Space&quot;, &quot;Meditative&quot;, &quot;Instrumental Pop&quot;, &quot;Instrumental Rock&quot;, &quot;Ethnic&quot;, &quot;Gothic&quot;, &quot;Darkwave&quot;, &quot;Techno-Insdustiral&quot;, &quot;Electronic&quot;, &quot;Pop-Folk&quot;, &quot;Eurodance&quot;, &quot;Dream&quot;, &quot;Southern Rock&quot;, &quot;Comedy&quot;, &quot;Cult&quot;, &quot;Gangsta&quot;, &quot;Top 40&quot;, &quot;Christian Rap&quot;, &quot;Pop/Funk&quot;, &quot;Jungle&quot;, &quot;Native US&quot;, &quot;Cabaret&quot;, &quot;New Wave&quot;, &quot;Psychadelic&quot;, &quot;Rave&quot;, &quot;Showtunes&quot;, &quot;Trailer&quot;, &quot;Lo-Fi&quot;, &quot;Tribal&quot;, &quot;Acid Punk&quot;, &quot;Acid Jazz&quot;, &quot;Polka&quot;, &quot;Retro&quot;, &quot;Musical&quot;, &quot;Rock &amp; Roll&quot;, &quot;Hard Rock&quot;, &quot;Folk&quot;, &quot;Folk-Rock&quot;, &quot;National Folk&quot;, &quot;Swing&quot;, &quot;Fast Fusion&quot;, &quot;Bebob&quot;, &quot;Latin&quot;, &quot;Revival&quot;, &quot;Celtic&quot;, &quot;Bluegrass&quot;, &quot;Avantgarde&quot;, &quot;Gothic Rock&quot;, &quot;Progressive Rock&quot;, &quot;Psychedelic Rock&quot;, &quot;Symphonic Rock&quot;, &quot;Slow Rock&quot;, &quot;Big Band&quot;, &quot;Chorus&quot;, &quot;Easy Listening&quot;, &quot;Acoustic&quot;,&quot;Humour&quot;, &quot;Speech&quot;, &quot;Chanson&quot;, &quot;Opera&quot;, &quot;Chamber Music&quot;, &quot;Sonata&quot;, &quot;Symphony&quot;, &quot;Booty Bass&quot;, &quot;Primus&quot;, &quot;Porn Groove&quot;, &quot;Satire&quot;, &quot;Slow Jam&quot;, &quot;Club&quot;, &quot;Tango&quot;, &quot;Samba&quot;, &quot;Folklore&quot;, &quot;Ballad&quot;, &quot;Power Ballad&quot;, &quot;Rhytmic Soul&quot;, &quot;Freestyle&quot;, &quot;Duet&quot;, &quot;Punk Rock&quot;, &quot;Drum Solo&quot;, &quot;Acapella&quot;, &quot;Euro-House&quot;, &quot;Dance Hall&quot;, &quot;Goa&quot;, &quot;Drum &amp; Bass&quot;, &quot;Club-House&quot;, &quot;Hardcore&quot;, &quot;Terror&quot;, &quot;Indie&quot;, &quot;BritPop&quot;, &quot;Negerpunk&quot;, &quot;Polsk Punk&quot;, &quot;Beat&quot;, &quot;Christian Gangsta&quot;, &quot;Heavy Metal&quot;, &quot;Black Metal&quot;, &quot;Crossover&quot;, &quot;Contemporary C&quot;, &quot;Christian Rock&quot;, &quot;Merengue&quot;, &quot;Salsa&quot;, &quot;Thrash Metal&quot;, &quot;Anime&quot;, &quot;JPop&quot;, &quot;SynthPop&quot; }</td></tr>
+<tr class="separator:a1c8c26908307dcc9ed5243051454e9ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeabc8ffa878940218d758caf93ef1ef"><td class="memItemLeft" align="right" valign="top"><a id="aeeabc8ffa878940218d758caf93ef1ef"></a>
 static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>HOST_C</b> = &quot;Host&quot;</td></tr>
 <tr class="separator:aeeabc8ffa878940218d758caf93ef1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adac5ce6c19e6f67dbd4b3cc83a89ba06"><td class="memItemLeft" align="right" valign="top"><a id="adac5ce6c19e6f67dbd4b3cc83a89ba06"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_buffer_size</b> = 0</td></tr>
 <tr class="separator:adac5ce6c19e6f67dbd4b3cc83a89ba06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba6ba92067daa4deab6667b0ba41d8e4"><td class="memItemLeft" align="right" valign="top"><a id="aba6ba92067daa4deab6667b0ba41d8e4"></a>
-INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_formats</b> [] = {&quot;I2S_STD_FORMAT&quot;,&quot;I2S_LSB_FORMAT&quot;,&quot;I2S_MSB_FORMAT&quot;,&quot;I2S_PHILIPS_FORMAT&quot;,&quot;I2S_RIGHT_JUSTIFIED_FORMAT&quot;,&quot;I2S_LEFT_JUSTIFIED_FORMAT&quot;,&quot;I2S_PCM&quot;}</td></tr>
-<tr class="separator:aba6ba92067daa4deab6667b0ba41d8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a50d3a91bcc25150bf1ed64e8f7aef1"><td class="memItemLeft" align="right" valign="top"><a id="a6a50d3a91bcc25150bf1ed64e8f7aef1"></a>
-INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_signal_types</b> [] = {&quot;Digital&quot;,&quot;Analog&quot;,&quot;PDM&quot;,&quot;TDM&quot;}</td></tr>
-<tr class="separator:a6a50d3a91bcc25150bf1ed64e8f7aef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd6aeb555d82c03684d3309929c547e"><td class="memItemLeft" align="right" valign="top"><a id="aabd6aeb555d82c03684d3309929c547e"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_formats</b> [] = {&quot;I2S_STD_FORMAT&quot;,&quot;I2S_LSB_FORMAT&quot;,&quot;I2S_MSB_FORMAT&quot;,&quot;I2S_PHILIPS_FORMAT&quot;,&quot;I2S_RIGHT_JUSTIFIED_FORMAT&quot;,&quot;I2S_LEFT_JUSTIFIED_FORMAT&quot;,&quot;I2S_PCM&quot;}</td></tr>
+<tr class="separator:aabd6aeb555d82c03684d3309929c547e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ef43fd7e2a9b882d4f75129b1d6321"><td class="memItemLeft" align="right" valign="top"><a id="a13ef43fd7e2a9b882d4f75129b1d6321"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_signal_types</b> [] = {&quot;Digital&quot;,&quot;Analog&quot;,&quot;PDM&quot;,&quot;TDM&quot;}</td></tr>
+<tr class="separator:a13ef43fd7e2a9b882d4f75129b1d6321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ef43fd7e2a9b882d4f75129b1d6321"><td class="memItemLeft" align="right" valign="top"><a id="a13ef43fd7e2a9b882d4f75129b1d6321"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_signal_types</b> [] = {&quot;Digital&quot;,&quot;Analog&quot;,&quot;PDM&quot;,&quot;TDM&quot;}</td></tr>
+<tr class="separator:a13ef43fd7e2a9b882d4f75129b1d6321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2159d8be72a8dd0966b5931fef29d11"><td class="memItemLeft" align="right" valign="top"><a id="ac2159d8be72a8dd0966b5931fef29d11"></a>
 static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>i2s_underflow_count</b> = 0</td></tr>
 <tr class="separator:ac2159d8be72a8dd0966b5931fef29d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5bd66f7ba08dad7aa9bb00de8967a04"><td class="memItemLeft" align="right" valign="top"><a id="ac5bd66f7ba08dad7aa9bb00de8967a04"></a>
-INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>id3_v2_tags</b> [] = {&quot;TALB&quot;, &quot;TOPE&quot;, &quot;TPE1&quot;, &quot;TIT2&quot;, &quot;TCON&quot;}</td></tr>
-<tr class="separator:ac5bd66f7ba08dad7aa9bb00de8967a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76b7d771886c80aa9cfc216f6909f756"><td class="memItemLeft" align="right" valign="top"><a id="a76b7d771886c80aa9cfc216f6909f756"></a>
-INLINE_VAR const int&#160;</td><td class="memItemRight" valign="bottom"><b>ID3FrameSize</b> = 11</td></tr>
-<tr class="separator:a76b7d771886c80aa9cfc216f6909f756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a883e99f930ef6592accebecd399fea51"><td class="memItemLeft" align="right" valign="top"><a id="a883e99f930ef6592accebecd399fea51"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>id3_v2_tags</b> [] = {&quot;TALB&quot;, &quot;TOPE&quot;, &quot;TPE1&quot;, &quot;TIT2&quot;, &quot;TCON&quot;}</td></tr>
+<tr class="separator:a883e99f930ef6592accebecd399fea51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16731e7c23c99008d6a72df893c43d6c"><td class="memItemLeft" align="right" valign="top"><a id="a16731e7c23c99008d6a72df893c43d6c"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>ID3FrameSize</b> = 11</td></tr>
+<tr class="separator:a16731e7c23c99008d6a72df893c43d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1da84f39fdeea9f10fa9813ebb0d0006"><td class="memItemLeft" align="right" valign="top"><a id="a1da84f39fdeea9f10fa9813ebb0d0006"></a>
 static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>IDENTITY</b> = &quot;identity&quot;</td></tr>
 <tr class="separator:a1da84f39fdeea9f10fa9813ebb0d0006"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2449,11 +2451,10 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_a2dp_active
 <tr class="memitem:ab138c7bdee5f06eebb7fb5c997fac350"><td class="memItemLeft" align="right" valign="top"><a id="ab138c7bdee5f06eebb7fb5c997fac350"></a>
 static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>LOCATION</b> = &quot;Location&quot;</td></tr>
 <tr class="separator:ab138c7bdee5f06eebb7fb5c997fac350"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a25ce747510def3f18a02afe5062b6c"><td class="memItemLeft" align="right" valign="top"><a id="a4a25ce747510def3f18a02afe5062b6c"></a>
-INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>MetaDataTypeStr</b> [] = {&quot;Title&quot;, &quot;Artist&quot;, &quot;Album&quot;, &quot;Genre&quot;,&quot;Name&quot;, &quot;Description&quot;}</td></tr>
-<tr class="separator:a4a25ce747510def3f18a02afe5062b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a2f45daf28b4f61184f1674183d95a9"><td class="memItemLeft" align="right" valign="top"><a id="a3a2f45daf28b4f61184f1674183d95a9"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>methods</b> [] = {&quot;?&quot;,&quot;GET&quot;,&quot;HEAD&quot;,&quot;POST&quot;,&quot;PUT&quot;,&quot;DELETE&quot;,&quot;TRACE&quot;,&quot;OPTIONS&quot;,&quot;CONNECT&quot;,&quot;PATCH&quot;,nullptr}</td></tr>
+<tr class="memitem:afc24da36fe561f8ba8359b1096b3d7dc"><td class="memItemLeft" align="right" valign="top"><a id="afc24da36fe561f8ba8359b1096b3d7dc"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>MetaDataTypeStr</b> [] = {&quot;Title&quot;, &quot;Artist&quot;, &quot;Album&quot;, &quot;Genre&quot;,&quot;Name&quot;, &quot;Description&quot;}</td></tr>
+<tr class="separator:afc24da36fe561f8ba8359b1096b3d7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a2f45daf28b4f61184f1674183d95a9"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>methods</b> []</td></tr>
 <tr class="separator:a3a2f45daf28b4f61184f1674183d95a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3961afb9c2a414e91d5687346be60285"><td class="memItemLeft" align="right" valign="top"><a id="a3961afb9c2a414e91d5687346be60285"></a>
 static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#a3961afb9c2a414e91d5687346be60285">mime_pcm</a> = &quot;audio/pcm&quot;</td></tr>
@@ -2495,12 +2496,12 @@ static <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</
 <tr class="memitem:aacc13d3b89aaa87d30536028eebb33f7"><td class="memItemLeft" align="right" valign="top"><a id="aacc13d3b89aaa87d30536028eebb33f7"></a>
 static <a class="el" href="classaudio__tools_1_1_audio_kit_stream.html">AudioKitStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pt_AudioKitStream</b> = nullptr</td></tr>
 <tr class="separator:aacc13d3b89aaa87d30536028eebb33f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30ba9db01f9c2f61498a2107b0eba834"><td class="memItemLeft" align="right" valign="top">INLINE_VAR const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__ratio__info.html">Nano_BLE_ratio_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ratio_table</b> []</td></tr>
-<tr class="separator:a30ba9db01f9c2f61498a2107b0eba834"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad79aae4ad20c15c6daa69209dc3d0535"><td class="memItemLeft" align="right" valign="top"><a id="ad79aae4ad20c15c6daa69209dc3d0535"></a>
-INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#ad79aae4ad20c15c6daa69209dc3d0535">RxTxModeNames</a> [] ={&quot;UNDEFINED_MODE&quot;,&quot;TX_MODE&quot;,&quot;RX_MODE&quot;,&quot;RXTX_MODE&quot; }</td></tr>
-<tr class="memdesc:ad79aae4ad20c15c6daa69209dc3d0535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text string (description) for RxTxMode. <br /></td></tr>
-<tr class="separator:ad79aae4ad20c15c6daa69209dc3d0535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be359affc53c73bd1dac887fa5c9b95"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__ratio__info.html">Nano_BLE_ratio_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ratio_table</b> []</td></tr>
+<tr class="separator:a9be359affc53c73bd1dac887fa5c9b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaae0b7e00d518ef0cb903f6c65a20ce"><td class="memItemLeft" align="right" valign="top"><a id="acaae0b7e00d518ef0cb903f6c65a20ce"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#acaae0b7e00d518ef0cb903f6c65a20ce">RxTxModeNames</a> [] ={&quot;UNDEFINED_MODE&quot;,&quot;TX_MODE&quot;,&quot;RX_MODE&quot;,&quot;RXTX_MODE&quot; }</td></tr>
+<tr class="memdesc:acaae0b7e00d518ef0cb903f6c65a20ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text string (description) for RxTxMode. <br /></td></tr>
+<tr class="separator:acaae0b7e00d518ef0cb903f6c65a20ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01578e270341fa8d190293be912e6af4"><td class="memItemLeft" align="right" valign="top"><a id="a01578e270341fa8d190293be912e6af4"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>sampFreq</b></td></tr>
 <tr class="separator:a01578e270341fa8d190293be912e6af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2564,9 +2565,9 @@ static <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_s_
 <tr class="memitem:a1aab9fccb0eea490c24d94140cd3301e"><td class="memItemLeft" align="right" valign="top"><a id="a1aab9fccb0eea490c24d94140cd3301e"></a>
 static <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.html">TimerAlarmRepeatingDriverAVR</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>timerAlarmRepeatingRef</b> = nullptr</td></tr>
 <tr class="separator:a1aab9fccb0eea490c24d94140cd3301e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47ac539297a01c43d2ab537bb7092928"><td class="memItemLeft" align="right" valign="top"><a id="a47ac539297a01c43d2ab537bb7092928"></a>
-INLINE_VAR const char *&#160;</td><td class="memItemRight" valign="bottom"><b>TimeUnitStr</b> [] {&quot;MS&quot;,&quot;US&quot;,&quot;HZ&quot;}</td></tr>
-<tr class="separator:a47ac539297a01c43d2ab537bb7092928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5ddcb8fe02c3735fc501db30d76c35"><td class="memItemLeft" align="right" valign="top"><a id="aab5ddcb8fe02c3735fc501db30d76c35"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>TimeUnitStr</b> [] {&quot;MS&quot;,&quot;US&quot;,&quot;HZ&quot;}</td></tr>
+<tr class="separator:aab5ddcb8fe02c3735fc501db30d76c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23d5065b09970e19cb7d7c4766a4c770"><td class="memItemLeft" align="right" valign="top"><a id="a23d5065b09970e19cb7d7c4766a4c770"></a>
 static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>TRANSFER_ENCODING</b> = &quot;Transfer-Encoding&quot;</td></tr>
 <tr class="separator:a23d5065b09970e19cb7d7c4766a4c770"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2791,6 +2792,30 @@ Norman Ritz </dd></dl>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a0999f3356fc08985f208753065d2afa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0999f3356fc08985f208753065d2afa8">&#9670;&nbsp;</a></span>DEFAULT_AGENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* DEFAULT_AGENT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    <span class="stringliteral">&quot;Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)&quot;</span></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a31b42d3930e60a3d64e4880015ab4212"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31b42d3930e60a3d64e4880015ab4212">&#9670;&nbsp;</a></span>desc_configuration</h2>
 
@@ -2880,16 +2905,24 @@ Norman Ritz </dd></dl>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a1c126f5da5083180105203584ff7de4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c126f5da5083180105203584ff7de4e">&#9670;&nbsp;</a></span>freq_table</h2>
+<a id="a0e62d1f5b8b395a84e20b61ab2bd79ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e62d1f5b8b395a84e20b61ab2bd79ac">&#9670;&nbsp;</a></span>freq_table</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">INLINE_VAR const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__freq__info.html">Nano_BLE_freq_info</a> freq_table[]</td>
+          <td class="memname">const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__freq__info.html">Nano_BLE_freq_info</a> freq_table[]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">  { I2S_CONFIG_MCKFREQ_MCKFREQ_32MDIV8, 32.0 / 8 },</div>
@@ -2952,16 +2985,49 @@ Norman Ritz </dd></dl>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a30ba9db01f9c2f61498a2107b0eba834"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30ba9db01f9c2f61498a2107b0eba834">&#9670;&nbsp;</a></span>ratio_table</h2>
+<a id="a3a2f45daf28b4f61184f1674183d95a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a2f45daf28b4f61184f1674183d95a9">&#9670;&nbsp;</a></span>methods</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">INLINE_VAR const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__ratio__info.html">Nano_BLE_ratio_info</a> ratio_table[]</td>
+          <td class="memname">const char* methods[]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {<span class="stringliteral">&quot;?&quot;</span>,       <span class="stringliteral">&quot;GET&quot;</span>,    <span class="stringliteral">&quot;HEAD&quot;</span>,  <span class="stringliteral">&quot;POST&quot;</span>,</div>
+<div class="line">                                <span class="stringliteral">&quot;PUT&quot;</span>,     <span class="stringliteral">&quot;DELETE&quot;</span>, <span class="stringliteral">&quot;TRACE&quot;</span>, <span class="stringliteral">&quot;OPTIONS&quot;</span>,</div>
+<div class="line">                                <span class="stringliteral">&quot;CONNECT&quot;</span>, <span class="stringliteral">&quot;PATCH&quot;</span>,  <span class="keyword">nullptr</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9be359affc53c73bd1dac887fa5c9b95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be359affc53c73bd1dac887fa5c9b95">&#9670;&nbsp;</a></span>ratio_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__ratio__info.html">Nano_BLE_ratio_info</a> ratio_table[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">  { I2S_CONFIG_RATIO_RATIO_32X, 32.0  },</div>

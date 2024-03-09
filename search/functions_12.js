@@ -229,6 +229,6 @@ var searchData=
   ['str_2959',['Str',['../classaudio__tools_1_1_str.html#acf867645eea1a4877e39e0bbdbc0aa8e',1,'audio_tools::Str::Str(const char *chars)'],['../classaudio__tools_1_1_str.html#afb02830eb9ec22ce762cd969ed132501',1,'audio_tools::Str::Str(char chars[], int maxlen, int len=0)']]],
   ['streamatom_2960',['streamAtom',['../classaudio__tools_1_1_container_m_p4.html#ae81130b914ec03661b95be1c406a37dc',1,'audio_tools::ContainerMP4']]],
   ['streamheader_2961',['streamHeader',['../classaudio__tools_1_1_a_v_i_decoder.html#af2d2d9fa75b7f5d48b2cf38ce5c48f65',1,'audio_tools::AVIDecoder']]],
-  ['strnlength_2962',['strnlength',['../namespaceaudio__tools.html#af68d88c17f0bce43f0551198d0dcbd04',1,'audio_tools']]],
+  ['strnlength_2962',['strnlength',['../namespaceaudio__tools.html#a21d69d9ea879f2a5d9091367871bb28c',1,'audio_tools']]],
   ['substring_2963',['substring',['../classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed',1,'audio_tools::Str::substring(Str &amp;from, int start, int end)'],['../classaudio__tools_1_1_str.html#a3f6497cf6cccccd073dd6cf73f9273f3',1,'audio_tools::Str::substring(const char *from, int start, int end)']]]
 ];
