@@ -344,42 +344,44 @@ $(function() {
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      this-&gt;bufferLen = newSize;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      <span class="keywordflow">if</span> (oldData != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">if</span> (copy &amp;&amp; this-&gt;len &gt; 0) {</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;          memcpy((<span class="keywordtype">void</span> *)p_data, (<span class="keywordtype">void</span> *)oldData, this-&gt;len * <span class="keyword">sizeof</span>(T));</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">if</span> (shrink) {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;          cleanup(oldData, newSize, oldBufferLen);</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        }</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        deleteArray(oldData, oldBufferLen);  <span class="comment">// delete [] oldData;</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      }</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  }</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  T *newArray(<span class="keywordtype">int</span> newSize) {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    T *data;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">#if USE_ALLOCATOR</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    data = p_allocator-&gt;createArray&lt;T&gt;(newSize);  <span class="comment">// new T[newSize+1];</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    data = <span class="keyword">new</span> T[newSize];</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">return</span> data;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  }</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordtype">void</span> deleteArray(T *oldData, <span class="keywordtype">int</span> oldBufferLen) {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor">#ifdef USE_ALLOCATOR</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    p_allocator-&gt;removeArray(oldData, oldBufferLen);  <span class="comment">// delete [] oldData;</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keyword">delete</span>[] oldData;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  }</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  <span class="keywordtype">void</span> cleanup(T *data, <span class="keywordtype">int</span> from, <span class="keywordtype">int</span> to) {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = from; j &lt; to; j++) {</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      data[j].~T();</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  }</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;};</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j &gt; len; j++){</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            p_data[j] = oldData[j];</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;          }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">if</span> (shrink) {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;          cleanup(oldData, newSize, oldBufferLen);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        deleteArray(oldData, oldBufferLen);  <span class="comment">// delete [] oldData;</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  T *newArray(<span class="keywordtype">int</span> newSize) {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    T *data;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor">#if USE_ALLOCATOR</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    data = p_allocator-&gt;createArray&lt;T&gt;(newSize);  <span class="comment">// new T[newSize+1];</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    data = <span class="keyword">new</span> T[newSize];</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <span class="keywordtype">void</span> deleteArray(T *oldData, <span class="keywordtype">int</span> oldBufferLen) {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor">#if USE_ALLOCATOR</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    p_allocator-&gt;removeArray(oldData, oldBufferLen);  <span class="comment">// delete [] oldData;</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keyword">delete</span>[] oldData;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keywordtype">void</span> cleanup(T *data, <span class="keywordtype">int</span> from, <span class="keywordtype">int</span> to) {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = from; j &lt; to; j++) {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      data[j].~T();</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;};</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_allocator_html"><div class="ttname"><a href="classaudio__tools_1_1_allocator.html">audio_tools::Allocator</a></div><div class="ttdoc">Memory allocateator which uses malloc.</div><div class="ttdef"><b>Definition:</b> Allocator.h:16</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vector_1_1iterator_html"><div class="ttname"><a href="classaudio__tools_1_1_vector_1_1iterator.html">audio_tools::Vector::iterator</a></div><div class="ttdoc">Iterator for the Vector class.</div><div class="ttdef"><b>Definition:</b> Vector.h:29</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html"><div class="ttname"><a href="classaudio__tools_1_1_vector.html">audio_tools::Vector</a></div><div class="ttdoc">Vector implementation which provides the most important methods as defined by std::vector....</div><div class="ttdef"><b>Definition:</b> Vector.h:21</div></div>
