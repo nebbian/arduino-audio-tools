@@ -265,6 +265,12 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>frame</b> [2]</td>
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22b7b177ba00572f196abbe63fa5cc60"><td class="memItemLeft" align="right" valign="top"><a id="a22b7b177ba00572f196abbe63fa5cc60"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>input_max</b> = -32768</td></tr>
+<tr class="separator:a22b7b177ba00572f196abbe63fa5cc60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051eca3d94294838909af6640e42dc5c"><td class="memItemLeft" align="right" valign="top"><a id="a051eca3d94294838909af6640e42dc5c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>input_min</b> = 32767</td></tr>
+<tr class="separator:a051eca3d94294838909af6640e42dc5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f278ad0aa8aeea1752b19582d61043a"><td class="memItemLeft" align="right" valign="top"><a id="a3f278ad0aa8aeea1752b19582d61043a"></a>
 <a class="el" href="classaudio__tools_1_1_mozzi_generator.html">MozziGenerator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>input_ptr</b> = nullptr</td></tr>
 <tr class="separator:a3f278ad0aa8aeea1752b19582d61043a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -312,7 +318,7 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>frame</b> [2]</td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gets the next audio value either from the assigned Input <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> or the buffer that was filled by <a class="el" href="classaudio__tools_1_1_mozzi_stream.html#a3cbbc44914dcf7ef131df01fff9e6e70" title="Write data to buffer so that we can access them by calling getAudioInput()">write()</a> </p>
+<p>Gets the next audio value either from the assigned Input <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> or the buffer that was filled by <a class="el" href="classaudio__tools_1_1_mozzi_stream.html#a3cbbc44914dcf7ef131df01fff9e6e70" title="Write data to buffer so that we can access them by calling getAudioInput()">write()</a>. The data range is defined in <a class="el" href="structaudio__tools_1_1_mozzi_config.html" title="Mozzi Configuration for input or output stream.">MozziConfig</a> </p>
 
 </div>
 </div>
