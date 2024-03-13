@@ -75,10 +75,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>We use the output functionality of Mozzi to output audio data. We expect the data as array of int16_t with one or two channels. Though we support the setting of a sample rate, we recommend to use the default sample rate from Mozzi which is available with the AUDIO_RATE define.  
+<p><a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> that provides audio information that was generated using the Mozzi API using the updateControl() and updateAudio() methods.  
  <a href="classaudio__tools_1_1_mozzi_stream.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_audio_mozzi_8h_source.html">AudioMozzi.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_mozzi_stream_8h_source.html">MozziStream.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MozziStream:</div>
 <div class="dyncontent">
@@ -86,10 +86,15 @@ Inheritance diagram for MozziStream:</div>
   <img src="classaudio__tools_1_1_mozzi_stream.png" usemap="#MozziStream_map" alt=""/>
   <map id="MozziStream_map" name="MozziStream_map">
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="120,112,230,136"/>
+<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="480,112,590,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,110,80"/>
 <area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="120,56,230,80"/>
 <area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="240,56,350,80"/>
+<area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="360,56,470,80"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="480,56,590,80"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="600,56,710,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,110,24"/>
+<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="360,0,470,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -99,9 +104,12 @@ Public Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a727a24459787e1eeeb7a37ba888394a6">addNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a727a24459787e1eeeb7a37ba888394a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds target to be notified about audio changes. <br /></td></tr>
 <tr class="separator:a727a24459787e1eeeb7a37ba888394a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
-virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
-<tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memItemLeft" align="right" valign="top"><a id="a78cb84ad6d022a3d5f1b4267c4150b82"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
+<tr class="separator:a78cb84ad6d022a3d5f1b4267c4150b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42bf74e7630837e3dd42e90bedaaf360"><td class="memItemLeft" align="right" valign="top"><a id="a42bf74e7630837e3dd42e90bedaaf360"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>audioRate</b> ()</td></tr>
+<tr class="separator:a42bf74e7630837e3dd42e90bedaaf360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a512cfced3ab951dde7a9a78f1274fe63"><td class="memItemLeft" align="right" valign="top"><a id="a512cfced3ab951dde7a9a78f1274fe63"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> ()</td></tr>
 <tr class="separator:a512cfced3ab951dde7a9a78f1274fe63"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,9 +118,15 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memdesc:a473a08fbb41a997860a55213bc367d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">unsupported operations <br /></td></tr>
 <tr class="separator:a473a08fbb41a997860a55213bc367d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top"><a id="a601fb7cf1fc15db50c71a826f084f934"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
+<tr class="separator:a601fb7cf1fc15db50c71a826f084f934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top"><a id="a601fb7cf1fc15db50c71a826f084f934"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mozzi_stream.html#a601fb7cf1fc15db50c71a826f084f934">begin</a> ()</td></tr>
 <tr class="memdesc:a601fb7cf1fc15db50c71a826f084f934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts Mozzi with its default parameters. <br /></td></tr>
 <tr class="separator:a601fb7cf1fc15db50c71a826f084f934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a552cc3b5c1a7ceadb2d03e609826f395"><td class="memItemLeft" align="right" valign="top"><a id="a552cc3b5c1a7ceadb2d03e609826f395"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_mozzi_config.html">MozziConfig</a> cfg)</td></tr>
+<tr class="separator:a552cc3b5c1a7ceadb2d03e609826f395"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a552cc3b5c1a7ceadb2d03e609826f395"><td class="memItemLeft" align="right" valign="top"><a id="a552cc3b5c1a7ceadb2d03e609826f395"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_mozzi_config.html">MozziConfig</a> cfg)</td></tr>
 <tr class="separator:a552cc3b5c1a7ceadb2d03e609826f395"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,12 +137,20 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a7e2f6b42de84394af64254917cced1e3"><td class="memItemLeft" align="right" valign="top"><a id="a7e2f6b42de84394af64254917cced1e3"></a>
 <a class="el" href="structaudio__tools_1_1_mozzi_config.html">MozziConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
 <tr class="separator:a7e2f6b42de84394af64254917cced1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e2f6b42de84394af64254917cced1e3"><td class="memItemLeft" align="right" valign="top"><a id="a7e2f6b42de84394af64254917cced1e3"></a>
+<a class="el" href="structaudio__tools_1_1_mozzi_config.html">MozziConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
+<tr class="separator:a7e2f6b42de84394af64254917cced1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf81d3fdaf258088d7692fa70cece087"><td class="memItemLeft" align="right" valign="top"><a id="aaf81d3fdaf258088d7692fa70cece087"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
+<tr class="separator:aaf81d3fdaf258088d7692fa70cece087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf81d3fdaf258088d7692fa70cece087"><td class="memItemLeft" align="right" valign="top"><a id="aaf81d3fdaf258088d7692fa70cece087"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:aaf81d3fdaf258088d7692fa70cece087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memItemLeft" align="right" valign="top"><a id="ad3aed50bc3b4459454ccb8c64f5ced5a"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()</td></tr>
 <tr class="separator:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f15eb8d6694020d170ebcbedb645de7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mozzi_stream.html#a3f15eb8d6694020d170ebcbedb645de7">getAudioInput</a> ()</td></tr>
+<tr class="separator:a3f15eb8d6694020d170ebcbedb645de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,9 +163,9 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> ()</t
 <tr class="memitem:a1e505c15cb6743a60271a6ffec98de60"><td class="memItemLeft" align="right" valign="top"><a id="a1e505c15cb6743a60271a6ffec98de60"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (char *buffer, size_t length)</td></tr>
 <tr class="separator:a1e505c15cb6743a60271a6ffec98de60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ca0929fe29faa64b2b39af2b5527013"><td class="memItemLeft" align="right" valign="top"><a id="a6ca0929fe29faa64b2b39af2b5527013"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *buffer, size_t length)</td></tr>
-<tr class="separator:a6ca0929fe29faa64b2b39af2b5527013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad48f2b7825f9527fea897459d7fe20cc"><td class="memItemLeft" align="right" valign="top"><a id="ad48f2b7825f9527fea897459d7fe20cc"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *data, size_t byteCount)</td></tr>
+<tr class="separator:ad48f2b7825f9527fea897459d7fe20cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e26f40121eda38b0042dcba026ab82"><td class="memItemLeft" align="right" valign="top"><a id="a36e26f40121eda38b0042dcba026ab82"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#a36e26f40121eda38b0042dcba026ab82">readSilence</a> (uint8_t *buffer, size_t length)</td></tr>
 <tr class="memdesc:a36e26f40121eda38b0042dcba026ab82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source to generate silence: just sets the buffer to 0. <br /></td></tr>
@@ -152,16 +174,26 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#aa5b1cdb06807ff2dc37acbaff63410b9">removeNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a target in order not to be notified about audio changes. <br /></td></tr>
 <tr class="separator:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memItemLeft" align="right" valign="top"><a id="aacd5a76de8d22c3909128c3539e5a6f7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) override</td></tr>
-<tr class="separator:aacd5a76de8d22c3909128c3539e5a6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e283a9495aaf265739336829d45e215"><td class="memItemLeft" align="right" valign="top"><a id="a5e283a9495aaf265739336829d45e215"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="separator:a5e283a9495aaf265739336829d45e215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd4b58d7abfd621af34dc2224f9b3f0f"><td class="memItemLeft" align="right" valign="top"><a id="afd4b58d7abfd621af34dc2224f9b3f0f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setInput</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;in)</td></tr>
+<tr class="separator:afd4b58d7abfd621af34dc2224f9b3f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e0825fad7a777d93e43602670010c7"><td class="memItemLeft" align="right" valign="top"><a id="a64e0825fad7a777d93e43602670010c7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
 <tr class="separator:a64e0825fad7a777d93e43602670010c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1504025b71cf7ae19a9311701b1012"><td class="memItemLeft" align="right" valign="top"><a id="a4a1504025b71cf7ae19a9311701b1012"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setVolume</b> (int16_t vol)</td></tr>
+<tr class="separator:a4a1504025b71cf7ae19a9311701b1012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ea68b231c423a554ea84d14f88e271e"><td class="memItemLeft" align="right" valign="top"><a id="a2ea68b231c423a554ea84d14f88e271e"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t size)</td></tr>
 <tr class="separator:a2ea68b231c423a554ea84d14f88e271e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cbbc44914dcf7ef131df01fff9e6e70"><td class="memItemLeft" align="right" valign="top"><a id="a3cbbc44914dcf7ef131df01fff9e6e70"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mozzi_stream.html#a3cbbc44914dcf7ef131df01fff9e6e70">write</a> (const uint8_t *data, size_t byteCount)</td></tr>
+<tr class="memdesc:a3cbbc44914dcf7ef131df01fff9e6e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to buffer so that we can access them by calling <a class="el" href="classaudio__tools_1_1_mozzi_stream.html#a3f15eb8d6694020d170ebcbedb645de7">getAudioInput()</a> <br /></td></tr>
+<tr class="separator:a3cbbc44914dcf7ef131df01fff9e6e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab951bb19f06d4e5151474659cfdfd807"><td class="memItemLeft" align="right" valign="top"><a id="ab951bb19f06d4e5151474659cfdfd807"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mozzi_stream.html#ab951bb19f06d4e5151474659cfdfd807">write</a> (uint8_t c)</td></tr>
 <tr class="memdesc:ab951bb19f06d4e5151474659cfdfd807"><td class="mdescLeft">&#160;</td><td class="mdescRight">write an individual byte - if the frame is complete we pass it to Mozzi <br /></td></tr>
@@ -173,12 +205,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a1e14317de046ce019f80c8e9a32b3a01"><td class="memItemLeft" align="right" valign="top"><a id="a1e14317de046ce019f80c8e9a32b3a01"></a>
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>avg</b> (int16_t *values)</td></tr>
+<tr class="separator:a1e14317de046ce019f80c8e9a32b3a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c33a04426f36f7209536901dcd58544"><td class="memItemLeft" align="right" valign="top"><a id="a4c33a04426f36f7209536901dcd58544"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="separator:a4c33a04426f36f7209536901dcd58544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab13931cec0e4ed095a9cc734422a19f"><td class="memItemLeft" align="right" valign="top"><a id="aab13931cec0e4ed095a9cc734422a19f"></a>
 <a class="el" href="classaudio__tools_1_1_mozzi_generator.html">MozziGenerator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_input_ptr</b> ()</td></tr>
 <tr class="separator:aab13931cec0e4ed095a9cc734422a19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd22c6a19b7f668ef5821501d509b86c"><td class="memItemLeft" align="right" valign="top"><a id="abd22c6a19b7f668ef5821501d509b86c"></a>
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>nextSample</b> ()</td></tr>
+<tr class="separator:abd22c6a19b7f668ef5821501d509b86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,15 +235,30 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aa66a35e5edf58ce00047afcd1d4f455e"><td class="memItemLeft" align="right" valign="top"><a id="aa66a35e5edf58ce00047afcd1d4f455e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td></tr>
 <tr class="separator:aa66a35e5edf58ce00047afcd1d4f455e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memItemLeft" align="right" valign="top"><a id="a03c996f9fcf0e10baeb3e700be0c409a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</td></tr>
+<tr class="separator:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfda46b2efac52165f9c88041f555530"><td class="memItemLeft" align="right" valign="top"><a id="adfda46b2efac52165f9c88041f555530"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {0}</td></tr>
+<tr class="separator:adfda46b2efac52165f9c88041f555530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada4187191103b8fe79a4488dea10e8e2"><td class="memItemLeft" align="right" valign="top"><a id="ada4187191103b8fe79a4488dea10e8e2"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> [64]</td></tr>
 <tr class="separator:ada4187191103b8fe79a4488dea10e8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a37d41b7b076eced766d7418450477d"><td class="memItemLeft" align="right" valign="top"><a id="a8a37d41b7b076eced766d7418450477d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_pos</b></td></tr>
 <tr class="separator:a8a37d41b7b076eced766d7418450477d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7920548d0477e0a0b7b43f66bdb0535"><td class="memItemLeft" align="right" valign="top"><a id="ac7920548d0477e0a0b7b43f66bdb0535"></a>
+<a class="el" href="structaudio__tools_1_1_mozzi_config.html">MozziConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cfg</b></td></tr>
+<tr class="separator:ac7920548d0477e0a0b7b43f66bdb0535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa509a47c346b19e63a4111131a0c4735"><td class="memItemLeft" align="right" valign="top"><a id="aa509a47c346b19e63a4111131a0c4735"></a>
 <a class="el" href="structaudio__tools_1_1_mozzi_config.html">MozziConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>config</b></td></tr>
 <tr class="separator:aa509a47c346b19e63a4111131a0c4735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b89d3fe903f87c5fb6975dac9a2f242"><td class="memItemLeft" align="right" valign="top"><a id="a1b89d3fe903f87c5fb6975dac9a2f242"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>control_counter</b></td></tr>
+<tr class="separator:a1b89d3fe903f87c5fb6975dac9a2f242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc5339313e3d94dab0d6215e7c63b80"><td class="memItemLeft" align="right" valign="top"><a id="a4bc5339313e3d94dab0d6215e7c63b80"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>control_counter_max</b></td></tr>
+<tr class="separator:a4bc5339313e3d94dab0d6215e7c63b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b8151180d2fd990dfb1d5453507eff8"><td class="memItemLeft" align="right" valign="top"><a id="a3b8151180d2fd990dfb1d5453507eff8"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>frame</b> [2]</td></tr>
 <tr class="separator:a3b8151180d2fd990dfb1d5453507eff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,6 +274,9 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>frame</b> [2]</td>
 <tr class="memitem:a142ad21fb1aa4cad44cd4040cfae9497"><td class="memItemLeft" align="right" valign="top"><a id="a142ad21fb1aa4cad44cd4040cfae9497"></a>
 <a class="el" href="classaudio__tools_1_1_number_reader.html">NumberReader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>numberReader</b></td></tr>
 <tr class="separator:a142ad21fb1aa4cad44cd4040cfae9497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e02b47a002ab8008bd050a7d385450"><td class="memItemLeft" align="right" valign="top"><a id="a28e02b47a002ab8008bd050a7d385450"></a>
+<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_input</b> = nullptr</td></tr>
+<tr class="separator:a28e02b47a002ab8008bd050a7d385450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
 <tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,8 +285,39 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>frame</b> [2]</td>
 <tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>We use the output functionality of Mozzi to output audio data. We expect the data as array of int16_t with one or two channels. Though we support the setting of a sample rate, we recommend to use the default sample rate from Mozzi which is available with the AUDIO_RATE define. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p><a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> that provides audio information that was generated using the Mozzi API using the updateControl() and updateAudio() methods. </p>
+<p>We use the output functionality of Mozzi to output audio data. We expect the data as array of int16_t with one or two channels. Though we support the setting of a sample rate, we recommend to use the default sample rate from Mozzi which is available with the AUDIO_RATE define.</p>
+<dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3f15eb8d6694020d170ebcbedb645de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f15eb8d6694020d170ebcbedb645de7">&#9670;&nbsp;</a></span>getAudioInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getAudioInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the next audio value either from the assigned Input <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> or the buffer that was filled by <a class="el" href="classaudio__tools_1_1_mozzi_stream.html#a3cbbc44914dcf7ef131df01fff9e6e70" title="Write data to buffer so that we can access them by calling getAudioInput()">write()</a> </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>src/AudioLibs/<a class="el" href="_mozzi_stream_8h_source.html">MozziStream.h</a></li>
 <li>src/Sandbox/Obsolete/<a class="el" href="_audio_mozzi_8h_source.html">AudioMozzi.h</a></li>
 </ul>
 </div><!-- contents -->

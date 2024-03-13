@@ -85,6 +85,7 @@ Inheritance diagram for MozziConfig:</div>
   <img src="structaudio__tools_1_1_mozzi_config.png" usemap="#MozziConfig_map" alt=""/>
   <map id="MozziConfig_map" name="MozziConfig_map">
 <area href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S." alt="AudioInfo" shape="rect" coords="0,0,82,24"/>
+<area href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S." alt="AudioInfo" shape="rect" coords="92,0,174,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -124,8 +125,17 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struc
 <tr class="memdesc:a178795099d0608972755dfef8d8367e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of channels: 2=stereo, 1=mono. <br /></td></tr>
 <tr class="separator:a178795099d0608972755dfef8d8367e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21285a2b82bdb883a011985ba8a434db"><td class="memItemLeft" align="right" valign="top"><a id="a21285a2b82bdb883a011985ba8a434db"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>control_rate</b> =CONTROL_RATE</td></tr>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>control_rate</b> = CONTROL_RATE</td></tr>
 <tr class="separator:a21285a2b82bdb883a011985ba8a434db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c8fc4c4980d616a651589003290a62"><td class="memItemLeft" align="right" valign="top"><a id="ac6c8fc4c4980d616a651589003290a62"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>input_range_from</b> = 0</td></tr>
+<tr class="separator:ac6c8fc4c4980d616a651589003290a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c46c81f1012196942a04c3906eede4d"><td class="memItemLeft" align="right" valign="top"><a id="a9c46c81f1012196942a04c3906eede4d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>input_range_to</b> = 1023</td></tr>
+<tr class="separator:a9c46c81f1012196942a04c3906eede4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0603e0f593237821d404f481057701"><td class="memItemLeft" align="right" valign="top"><a id="aef0603e0f593237821d404f481057701"></a>
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>output_volume</b> = 10</td></tr>
+<tr class="separator:aef0603e0f593237821d404f481057701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527325650d66abd9626499785b3bafd2"><td class="memItemLeft" align="right" valign="top"><a id="a527325650d66abd9626499785b3bafd2"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = DEFAULT_SAMPLE_RATE</td></tr>
 <tr class="memdesc:a527325650d66abd9626499785b3bafd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample Rate: e.g 44100. <br /></td></tr>
@@ -139,7 +149,8 @@ void(*&#160;</td><td class="memItemRight" valign="bottom"><b>updateControl</b> )
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Mozzi Configuration for input or output stream. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><hr/>The documentation for this struct was generated from the following files:<ul>
+<li>src/AudioLibs/<a class="el" href="_mozzi_stream_8h_source.html">MozziStream.h</a></li>
 <li>src/Sandbox/Obsolete/<a class="el" href="_audio_mozzi_8h_source.html">AudioMozzi.h</a></li>
 </ul>
 </div><!-- contents -->
