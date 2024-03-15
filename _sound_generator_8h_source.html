@@ -688,39 +688,43 @@ $(function() {
 <div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;  <span class="keywordtype">void</span> clear() { vector.clear(); }</div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160; </div>
 <div class="line"><a name="l00761"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_generator_mixer.html#adc79c89fc1d63b418c9f074b63f3d651">  761</a></span>&#160;  T <a class="code" href="classaudio__tools_1_1_generator_mixer.html#adc79c89fc1d63b418c9f074b63f3d651">readSample</a>() {</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    <span class="keywordtype">float</span> result = 0.0f;</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;generator : vector) {</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;      T sample = generator.<a class="code" href="classaudio__tools_1_1_sound_generator.html#a1ff01a896ef633c0bdf60dbf1448c2db">readSample</a>();</div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;      result += sample;</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    }</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;    <span class="keywordflow">return</span> result / vector.size();</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;  }</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160; </div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;  <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;SoundGenerator&lt;T&gt;</a> *&gt; vector;</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;  <span class="keywordtype">int</span> actualChannel = 0;</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;};</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160; </div>
-<div class="line"><a name="l00783"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_test_generator.html">  783</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_test_generator.html">TestGenerator</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_sound_generator.html">SoundGenerator</a>&lt;T&gt; {</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;  <a class="code" href="classaudio__tools_1_1_test_generator.html">TestGenerator</a>(T max = 1000, T inc = 1) { this-&gt;max = max; }</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160; </div>
-<div class="line"><a name="l00787"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_test_generator.html#a913c911a6aff6d8c9b3deb24469ea336">  787</a></span>&#160;  T <a class="code" href="classaudio__tools_1_1_test_generator.html#a913c911a6aff6d8c9b3deb24469ea336">readSample</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    value += inc;</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    <span class="keywordflow">if</span> (abs(value) &gt;= max) {</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;      inc = -inc;</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;      value += (inc * 2);</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    }</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;  }</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160; </div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;  T max;</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;  T value = 0;</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;  T inc = 1;</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;};</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160; </div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    <span class="keywordtype">float</span> total = 0.0f;</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;    <span class="keywordtype">float</span> count = 0.0f;</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;generator : vector) {</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;      <span class="keywordflow">if</span> (generator.<a class="code" href="classaudio__tools_1_1_sound_generator.html#a62eb104f87ff88c21fa01af29dbf0ee2">isActive</a>()){</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        T sample = generator.<a class="code" href="classaudio__tools_1_1_sound_generator.html#a1ff01a896ef633c0bdf60dbf1448c2db">readSample</a>();</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;        total += sample;</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        count += 1.0f;</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;      }</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;    }</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    <span class="keywordflow">return</span> count &gt; 0.0f ? total / count : 0;</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;  }</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160; </div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;  <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;SoundGenerator&lt;T&gt;</a> *&gt; vector;</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;  <span class="keywordtype">int</span> actualChannel = 0;</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;};</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160; </div>
+<div class="line"><a name="l00787"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_test_generator.html">  787</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code" href="classaudio__tools_1_1_test_generator.html">TestGenerator</a> : <span class="keyword">public</span> <a class="code" href="classaudio__tools_1_1_sound_generator.html">SoundGenerator</a>&lt;T&gt; {</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;  <a class="code" href="classaudio__tools_1_1_test_generator.html">TestGenerator</a>(T max = 1000, T inc = 1) { this-&gt;max = max; }</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160; </div>
+<div class="line"><a name="l00791"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_test_generator.html#a913c911a6aff6d8c9b3deb24469ea336">  791</a></span>&#160;  T <a class="code" href="classaudio__tools_1_1_test_generator.html#a913c911a6aff6d8c9b3deb24469ea336">readSample</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    value += inc;</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    <span class="keywordflow">if</span> (abs(value) &gt;= max) {</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;      inc = -inc;</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;      value += (inc * 2);</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    }</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;    <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;  }</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160; </div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;  T max;</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;  T value = 0;</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;  T inc = 1;</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;};</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160; </div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_a163c69bc2b88421988d60f4efddb1f3f"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#a163c69bc2b88421988d60f4efddb1f3f">audio_tools::BaseBuffer::readArray</a></div><div class="ttdeci">virtual int readArray(T data[], int len)</div><div class="ttdoc">reads multiple values</div><div class="ttdef"><b>Definition:</b> Buffers.h:40</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html_a2b6c561aac2af64aafac1946b6e46393"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html#a2b6c561aac2af64aafac1946b6e46393">audio_tools::BaseBuffer::writeArray</a></div><div class="ttdeci">virtual int writeArray(const T data[], int len)</div><div class="ttdoc">Fills the buffer data.</div><div class="ttdef"><b>Definition:</b> Buffers.h:64</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_fast_sine_generator_html"><div class="ttname"><a href="classaudio__tools_1_1_fast_sine_generator.html">audio_tools::FastSineGenerator</a></div><div class="ttdoc">Sine wave which is based on a fast approximation function.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:260</div></div>
@@ -738,7 +742,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_generator_from_stream_html_ab134c748b5b151ba54a2d835de040341"><div class="ttname"><a href="classaudio__tools_1_1_generator_from_stream.html#ab134c748b5b151ba54a2d835de040341">audio_tools::GeneratorFromStream::setStream</a></div><div class="ttdeci">void setStream(Stream &amp;input)</div><div class="ttdoc">(Re-)Assigns a stream to the Adapter class</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:409</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_generator_from_stream_html_adbab94c4cc5993e1478137422a8d6ce5"><div class="ttname"><a href="classaudio__tools_1_1_generator_from_stream.html#adbab94c4cc5993e1478137422a8d6ce5">audio_tools::GeneratorFromStream::GeneratorFromStream</a></div><div class="ttdeci">GeneratorFromStream(Stream &amp;input, int channels=1, float volume=1.0)</div><div class="ttdoc">Constructs a new Generator from a Stream object that can be used e.g. as input for AudioEffectss.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:401</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_generator_from_stream_html_adc79c89fc1d63b418c9f074b63f3d651"><div class="ttname"><a href="classaudio__tools_1_1_generator_from_stream.html#adc79c89fc1d63b418c9f074b63f3d651">audio_tools::GeneratorFromStream::readSample</a></div><div class="ttdeci">T readSample()</div><div class="ttdoc">Provides a single sample from the stream.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:417</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_generator_mixer_html"><div class="ttname"><a href="classaudio__tools_1_1_generator_mixer.html">audio_tools::GeneratorMixer</a></div><div class="ttdoc">Mixer which combines multiple sound generators into one output.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:752</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_generator_mixer_html"><div class="ttname"><a href="classaudio__tools_1_1_generator_mixer.html">audio_tools::GeneratorMixer</a></div><div class="ttdoc">Generator which combines (mixes) multiple sound generators into one output.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:752</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_generator_mixer_html_adc79c89fc1d63b418c9f074b63f3d651"><div class="ttname"><a href="classaudio__tools_1_1_generator_mixer.html#adc79c89fc1d63b418c9f074b63f3d651">audio_tools::GeneratorMixer::readSample</a></div><div class="ttdeci">T readSample()</div><div class="ttdoc">Provides a single sample.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:761</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_number_converter_html_aa83040da5c51151a9bd3286ecfcfe413"><div class="ttname"><a href="classaudio__tools_1_1_number_converter.html#aa83040da5c51151a9bd3286ecfcfe413">audio_tools::NumberConverter::maxValue</a></div><div class="ttdeci">static int64_t maxValue(int value_bits_per_sample)</div><div class="ttdoc">provides the biggest number for the indicated number of bits</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:286</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_pink_noise_generator_html"><div class="ttname"><a href="classaudio__tools_1_1_pink_noise_generator.html">audio_tools::PinkNoiseGenerator</a></div><div class="ttdoc">Generates pink noise.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:316</div></div>
@@ -761,8 +765,8 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_square_wave_generator_html"><div class="ttname"><a href="classaudio__tools_1_1_square_wave_generator.html">audio_tools::SquareWaveGenerator</a></div><div class="ttdoc">Generates a square wave sound.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:234</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_square_wave_generator_html_a408eeda85d9e14954a97f2c80e130320"><div class="ttname"><a href="classaudio__tools_1_1_square_wave_generator.html#a408eeda85d9e14954a97f2c80e130320">audio_tools::SquareWaveGenerator::readSample</a></div><div class="ttdeci">virtual T readSample()</div><div class="ttdoc">Provides a single sample.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:241</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_stream_html"><div class="ttname"><a href="classaudio__tools_1_1_stream.html">audio_tools::Stream</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:125</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_test_generator_html"><div class="ttname"><a href="classaudio__tools_1_1_test_generator.html">audio_tools::TestGenerator</a></div><div class="ttdoc">Generates a test signal which is easy to check because the values are incremented or decremented by 1...</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:783</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_test_generator_html_a913c911a6aff6d8c9b3deb24469ea336"><div class="ttname"><a href="classaudio__tools_1_1_test_generator.html#a913c911a6aff6d8c9b3deb24469ea336">audio_tools::TestGenerator::readSample</a></div><div class="ttdeci">T readSample() override</div><div class="ttdoc">Provides a single sample.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:787</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_test_generator_html"><div class="ttname"><a href="classaudio__tools_1_1_test_generator.html">audio_tools::TestGenerator</a></div><div class="ttdoc">Generates a test signal which is easy to check because the values are incremented or decremented by 1...</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:787</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_test_generator_html_a913c911a6aff6d8c9b3deb24469ea336"><div class="ttname"><a href="classaudio__tools_1_1_test_generator.html#a913c911a6aff6d8c9b3deb24469ea336">audio_tools::TestGenerator::readSample</a></div><div class="ttdeci">T readSample() override</div><div class="ttdoc">Provides a single sample.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:791</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html"><div class="ttname"><a href="classaudio__tools_1_1_vector.html">audio_tools::Vector</a></div><div class="ttdoc">Vector implementation which provides the most important methods as defined by std::vector....</div><div class="ttdef"><b>Definition:</b> Vector.h:21</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_white_noise_generator_html"><div class="ttname"><a href="classaudio__tools_1_1_white_noise_generator.html">audio_tools::WhiteNoiseGenerator</a></div><div class="ttdoc">Generates a random noise sound with the help of rand() function.</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:295</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_white_noise_generator_html_a517af52e1104e303bef973f6f138aeae"><div class="ttname"><a href="classaudio__tools_1_1_white_noise_generator.html#a517af52e1104e303bef973f6f138aeae">audio_tools::WhiteNoiseGenerator::WhiteNoiseGenerator</a></div><div class="ttdeci">WhiteNoiseGenerator(T amplitude=32767)</div><div class="ttdoc">the scale defines the max value which is generated</div><div class="ttdef"><b>Definition:</b> SoundGenerator.h:298</div></div>
