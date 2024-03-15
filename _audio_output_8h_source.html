@@ -717,19 +717,13 @@ $(function() {
 <div class="line"><a name="l00728"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_channels_select_output_1_1_channel_selection_output_def.html">  728</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structaudio__tools_1_1_channels_select_output_1_1_channel_selection_output_def.html">ChannelSelectionOutputDef</a> {</div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *p_out = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;int&gt;</a> channels;</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    <span class="keywordtype">bool</span> hasChannel(<span class="keywordtype">int</span> channel){</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch : channels){</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        <span class="keywordflow">if</span> (channel == ch) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;      }</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    }</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;  };</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;  <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;ChannelSelectionOutputDef&gt;</a> out_channels;</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;};</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160; </div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160; </div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160; </div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;  };</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;  <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;ChannelSelectionOutputDef&gt;</a> out_channels;</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;};</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160; </div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160; </div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160; </div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_source_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_source.html">audio_tools::AudioInfoSource</a></div><div class="ttdoc">Supports the subscription to audio change notifications.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:136</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_support_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_support.html">audio_tools::AudioInfoSupport</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:117</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_output_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_output.html">audio_tools::AudioOutput</a></div><div class="ttdoc">Abstract Audio Ouptut class.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:22</div></div>
