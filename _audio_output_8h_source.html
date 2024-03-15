@@ -697,12 +697,12 @@ $(function() {
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;    <span class="keywordtype">int</span> result_size = sample_count / cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
 <div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    T *data = (T *)buffer;</div>
 <div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160; </div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; sample_count; i++) {</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;      <span class="keywordtype">int</span> actual_channel = i % cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;      T sample = data[i];</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;out : out_channels){</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;        <span class="keywordflow">if</span> (out.hasChannel(actual_channel)){</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;          <span class="comment">// write sample result </span></div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; sample_count; i += cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>) {</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;      T* frame = data + i;</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;out : out_channels){</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;ch : out.channels){</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;          assert(ch &lt; cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>);</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;          T sample = frame[ch];</div>
 <div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;          <span class="keywordtype">size_t</span> written = out.p_out-&gt;write((uint8_t *)sample, <span class="keyword">sizeof</span>(T));</div>
 <div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;          <span class="keywordflow">if</span> (written!=result_size * <span class="keyword">sizeof</span>(T)){</div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;            LOGW(<span class="stringliteral">&quot;Could not write all samples&quot;</span>);</div>
