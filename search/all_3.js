@@ -17,7 +17,7 @@ var searchData=
   ['channelreducer_226',['ChannelReducer',['../classaudio__tools_1_1_channel_reducer.html',1,'audio_tools']]],
   ['channelreducert_227',['ChannelReducerT',['../classaudio__tools_1_1_channel_reducer_t.html',1,'audio_tools']]],
   ['channels_228',['channels',['../structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3',1,'audio_tools::AudioInfo']]],
-  ['channelselectionoutputdef_229',['ChannelSelectionOutputDef',['../structaudio__tools_1_1_channel_split_output_1_1_channel_selection_output_def.html',1,'ChannelSplitOutput&lt; T &gt;::ChannelSelectionOutputDef'],['../structaudio__tools_1_1_channels_select_output_1_1_channel_selection_output_def.html',1,'ChannelsSelectOutput&lt; T &gt;::ChannelSelectionOutputDef']]],
+  ['channelselectionoutputdef_229',['ChannelSelectionOutputDef',['../structaudio__tools_1_1_channel_split_output_1_1_channel_selection_output_def.html',1,'ChannelSplitOutput::ChannelSelectionOutputDef'],['../structaudio__tools_1_1_channels_select_output_1_1_channel_selection_output_def.html',1,'ChannelsSelectOutput::ChannelSelectionOutputDef']]],
   ['channelsplitoutput_230',['ChannelSplitOutput',['../classaudio__tools_1_1_channel_split_output.html',1,'audio_tools']]],
   ['channelsselectoutput_231',['ChannelsSelectOutput',['../classaudio__tools_1_1_channels_select_output.html',1,'audio_tools']]],
   ['chartdata_232',['chartData',['../classaudio__tools_1_1_chart_t.html#aa971fc3eaeed0371b77e42d85eee47ae',1,'audio_tools::ChartT']]],
