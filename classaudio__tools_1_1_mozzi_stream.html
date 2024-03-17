@@ -86,6 +86,7 @@ Inheritance diagram for MozziStream:</div>
   <img src="classaudio__tools_1_1_mozzi_stream.png" usemap="#MozziStream_map" alt=""/>
   <map id="MozziStream_map" name="MozziStream_map">
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="120,112,230,136"/>
+<area href="classaudio__tools_1_1_volume_support.html" title="Supports the setting and getting of the volume." alt="VolumeSupport" shape="rect" coords="240,112,350,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,110,80"/>
 <area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="120,56,230,80"/>
 <area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="240,56,350,80"/>
@@ -160,10 +161,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setInput</b> (<a clas
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
 <tr class="separator:a64e0825fad7a777d93e43602670010c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab04c11673138d0f5b099f2a2f932097f"><td class="memItemLeft" align="right" valign="top"><a id="ab04c11673138d0f5b099f2a2f932097f"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>setVolume</b> (float volume)</td></tr>
+<tr class="separator:ab04c11673138d0f5b099f2a2f932097f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a1504025b71cf7ae19a9311701b1012"><td class="memItemLeft" align="right" valign="top"><a id="a4a1504025b71cf7ae19a9311701b1012"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mozzi_stream.html#a4a1504025b71cf7ae19a9311701b1012">setVolume</a> (int16_t vol)</td></tr>
 <tr class="memdesc:a4a1504025b71cf7ae19a9311701b1012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the multiplication factor to scale the Mozzi value range to int16_t. <br /></td></tr>
 <tr class="separator:a4a1504025b71cf7ae19a9311701b1012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893871d008fd5516565045bb55e60dd8"><td class="memItemLeft" align="right" valign="top"><a id="a893871d008fd5516565045bb55e60dd8"></a>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>volume</b> ()</td></tr>
+<tr class="separator:a893871d008fd5516565045bb55e60dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cbbc44914dcf7ef131df01fff9e6e70"><td class="memItemLeft" align="right" valign="top"><a id="a3cbbc44914dcf7ef131df01fff9e6e70"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mozzi_stream.html#a3cbbc44914dcf7ef131df01fff9e6e70">write</a> (const uint8_t *data, size_t byteCount)</td></tr>
 <tr class="memdesc:a3cbbc44914dcf7ef131df01fff9e6e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to buffer so that we can access them by calling <a class="el" href="classaudio__tools_1_1_mozzi_stream.html#a3f15eb8d6694020d170ebcbedb645de7">getAudioInput()</a> <br /></td></tr>
@@ -238,6 +245,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>input_min</b> = 32767<
 <tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
 <tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e460a46f786cbf5771335ce4c4148f1"><td class="memItemLeft" align="right" valign="top"><a id="a0e460a46f786cbf5771335ce4c4148f1"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>volume_value</b> = 1.0f</td></tr>
+<tr class="separator:a0e460a46f786cbf5771335ce4c4148f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> that provides audio information that was generated using the Mozzi API using the updateControl() and updateAudio() methods. </p>

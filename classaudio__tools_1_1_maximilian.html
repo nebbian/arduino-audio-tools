@@ -78,6 +78,15 @@ $(function() {
  <a href="classaudio__tools_1_1_maximilian.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_maximilian_d_s_p_8h_source.html">MaximilianDSP.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Maximilian:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classaudio__tools_1_1_maximilian.png" usemap="#Maximilian_map" alt=""/>
+  <map id="Maximilian_map" name="Maximilian_map">
+<area href="classaudio__tools_1_1_volume_support.html" title="Supports the setting and getting of the volume." alt="VolumeSupport" shape="rect" coords="0,0,98,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -92,10 +101,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_maximilian.html#aaa6c087511a52e64fc9ad92820c7c0a8">copy</a> ()</td></tr>
 <tr class="memdesc:aaa6c087511a52e64fc9ad92820c7c0a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the audio data from maximilian to the audio sink, Call this method from the Arduino Loop. <br /></td></tr>
 <tr class="separator:aaa6c087511a52e64fc9ad92820c7c0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12c2fba1888a04d3e954c1eda3a56c34"><td class="memItemLeft" align="right" valign="top"><a id="a12c2fba1888a04d3e954c1eda3a56c34"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_maximilian.html#a12c2fba1888a04d3e954c1eda3a56c34">setVolume</a> (float f)</td></tr>
-<tr class="memdesc:a12c2fba1888a04d3e954c1eda3a56c34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the volume. The values are between 0.0 and 1.0. <br /></td></tr>
-<tr class="separator:a12c2fba1888a04d3e954c1eda3a56c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc84079fab657fa03b21504d2f895677"><td class="memItemLeft" align="right" valign="top"><a id="adc84079fab657fa03b21504d2f895677"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_maximilian.html#adc84079fab657fa03b21504d2f895677">setVolume</a> (float f) override</td></tr>
+<tr class="memdesc:adc84079fab657fa03b21504d2f895677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the volume. The values are between 0.0 and 1.0. <br /></td></tr>
+<tr class="separator:adc84079fab657fa03b21504d2f895677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893871d008fd5516565045bb55e60dd8"><td class="memItemLeft" align="right" valign="top"><a id="a893871d008fd5516565045bb55e60dd8"></a>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>volume</b> ()</td></tr>
+<tr class="separator:a893871d008fd5516565045bb55e60dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -114,9 +126,9 @@ uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>p_buffer</b> =nu
 <tr class="memitem:afe4fe29b47c474ede9acd21eae1e1618"><td class="memItemLeft" align="right" valign="top"><a id="afe4fe29b47c474ede9acd21eae1e1618"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_sink</b> =nullptr</td></tr>
 <tr class="separator:afe4fe29b47c474ede9acd21eae1e1618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a016abda2855c77dcc1630f9d2f9f8d18"><td class="memItemLeft" align="right" valign="top"><a id="a016abda2855c77dcc1630f9d2f9f8d18"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>volume</b> =1.0</td></tr>
-<tr class="separator:a016abda2855c77dcc1630f9d2f9f8d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e460a46f786cbf5771335ce4c4148f1"><td class="memItemLeft" align="right" valign="top"><a id="a0e460a46f786cbf5771335ce4c4148f1"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>volume_value</b> = 1.0f</td></tr>
+<tr class="separator:a0e460a46f786cbf5771335ce4c4148f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>AudioTools integration with <a class="el" href="classaudio__tools_1_1_maximilian.html" title="AudioTools integration with Maximilian.">Maximilian</a>. </p>

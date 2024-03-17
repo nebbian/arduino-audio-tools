@@ -86,11 +86,12 @@ Inheritance diagram for I2SCodecStream:</div>
   <img src="classaudio__tools_1_1_i2_s_codec_stream.png" usemap="#I2SCodecStream_map" alt=""/>
   <map id="I2SCodecStream_map" name="I2SCodecStream_map">
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="128,112,246,136"/>
+<area href="classaudio__tools_1_1_volume_support.html" title="Supports the setting and getting of the volume." alt="VolumeSupport" shape="rect" coords="256,112,374,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,118,80"/>
 <area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="128,56,246,80"/>
 <area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="256,56,374,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,118,24"/>
-<area href="classaudio__tools_1_1_audio_board_stream.html" title="New functionality which replaces the AudioKitStream that is based on the legacy AudioKit library...." alt="AudioBoardStream" shape="rect" coords="128,224,246,248"/>
+<area href="classaudio__tools_1_1_audio_board_stream.html" title="New functionality which replaces the AudioKitStream that is based on the legacy AudioKit library...." alt="AudioBoardStream" shape="rect" coords="192,224,310,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -216,10 +217,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_codec_stream.html#ac515c630cf8bddf7e5238601cb60393f">setPAPower</a> (bool active)</td></tr>
 <tr class="memdesc:ac515c630cf8bddf7e5238601cb60393f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the output of the PA Power Pin. <br /></td></tr>
 <tr class="separator:ac515c630cf8bddf7e5238601cb60393f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3076da1d31412e3f1ed8677494df700"><td class="memItemLeft" align="right" valign="top"><a id="ae3076da1d31412e3f1ed8677494df700"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_codec_stream.html#ae3076da1d31412e3f1ed8677494df700">setVolume</a> (float vol)</td></tr>
-<tr class="memdesc:ae3076da1d31412e3f1ed8677494df700"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the volume (range 0.0 - 1.0) <br /></td></tr>
-<tr class="separator:ae3076da1d31412e3f1ed8677494df700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad593a1d6f339d68d255deca6ed148a43"><td class="memItemLeft" align="right" valign="top"><a id="ad593a1d6f339d68d255deca6ed148a43"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_codec_stream.html#ad593a1d6f339d68d255deca6ed148a43">setVolume</a> (float vol) override</td></tr>
+<tr class="memdesc:ad593a1d6f339d68d255deca6ed148a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the volume (range 0.0 - 1.0) <br /></td></tr>
+<tr class="separator:ad593a1d6f339d68d255deca6ed148a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75896c16336462449610b256c8313b4c"><td class="memItemLeft" align="right" valign="top"><a id="a75896c16336462449610b256c8313b4c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_codec_stream.html#a75896c16336462449610b256c8313b4c">volume</a> () override</td></tr>
+<tr class="memdesc:a75896c16336462449610b256c8313b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the actual volume (0.0 - 1.0) <br /></td></tr>
+<tr class="separator:a75896c16336462449610b256c8313b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ea68b231c423a554ea84d14f88e271e"><td class="memItemLeft" align="right" valign="top"><a id="a2ea68b231c423a554ea84d14f88e271e"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_codec_stream.html#a2ea68b231c423a554ea84d14f88e271e">write</a> (const uint8_t *buffer, size_t size)</td></tr>
 <tr class="memdesc:a2ea68b231c423a554ea84d14f88e271e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the audio data to I2S. <br /></td></tr>
@@ -295,9 +300,9 @@ AudioBoard *&#160;</td><td class="memItemRight" valign="bottom"><b>p_board</b> =
 <tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
 <tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a016abda2855c77dcc1630f9d2f9f8d18"><td class="memItemLeft" align="right" valign="top"><a id="a016abda2855c77dcc1630f9d2f9f8d18"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>volume</b> = -1.0f</td></tr>
-<tr class="separator:a016abda2855c77dcc1630f9d2f9f8d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e460a46f786cbf5771335ce4c4148f1"><td class="memItemLeft" align="right" valign="top"><a id="a0e460a46f786cbf5771335ce4c4148f1"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>volume_value</b> = 1.0f</td></tr>
+<tr class="separator:a0e460a46f786cbf5771335ce4c4148f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>I2S <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> which also sets up a codec chip and i2s. </p>
