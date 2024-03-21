@@ -92,7 +92,7 @@ Inheritance diagram for GeneratorFromStream&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adbab94c4cc5993e1478137422a8d6ce5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_generator_from_stream.html#adbab94c4cc5993e1478137422a8d6ce5">GeneratorFromStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;input, int channels=1, float volume=1.0)</td></tr>
+<tr class="memitem:adbab94c4cc5993e1478137422a8d6ce5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_generator_from_stream.html#adbab94c4cc5993e1478137422a8d6ce5">GeneratorFromStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;input, int channels=1, float <a class="el" href="classaudio__tools_1_1_volume_support.html#a893871d008fd5516565045bb55e60dd8">volume</a>=1.0)</td></tr>
 <tr class="memdesc:adbab94c4cc5993e1478137422a8d6ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new Generator from a <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> object that can be used e.g. as input for AudioEffectss.  <a href="classaudio__tools_1_1_generator_from_stream.html#adbab94c4cc5993e1478137422a8d6ce5">More...</a><br /></td></tr>
 <tr class="separator:adbab94c4cc5993e1478137422a8d6ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada56eff2516fb0a4f5091ce06805411a"><td class="memItemLeft" align="right" valign="top"><a id="ada56eff2516fb0a4f5091ce06805411a"></a>
@@ -135,10 +135,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ab134c748b5b151ba54a2d835de040341"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re-)Assigns a stream to the Adapter class <br /></td></tr>
 <tr class="separator:ab134c748b5b151ba54a2d835de040341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab04c11673138d0f5b099f2a2f932097f"><td class="memItemLeft" align="right" valign="top"><a id="ab04c11673138d0f5b099f2a2f932097f"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>setVolume</b> (float volume)</td></tr>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_support.html#ab04c11673138d0f5b099f2a2f932097f">setVolume</a> (float <a class="el" href="classaudio__tools_1_1_volume_support.html#a893871d008fd5516565045bb55e60dd8">volume</a>)</td></tr>
+<tr class="memdesc:ab04c11673138d0f5b099f2a2f932097f"><td class="mdescLeft">&#160;</td><td class="mdescRight">define the actual volume in the range of 0.0f to 1.0f <br /></td></tr>
 <tr class="separator:ab04c11673138d0f5b099f2a2f932097f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a893871d008fd5516565045bb55e60dd8"><td class="memItemLeft" align="right" valign="top"><a id="a893871d008fd5516565045bb55e60dd8"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>volume</b> ()</td></tr>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_volume_support.html#a893871d008fd5516565045bb55e60dd8">volume</a> ()</td></tr>
+<tr class="memdesc:a893871d008fd5516565045bb55e60dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the actual volume in the range of 0.0f to 1.0f <br /></td></tr>
 <tr class="separator:a893871d008fd5516565045bb55e60dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
