@@ -103,6 +103,14 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_memory_stream.html#ace288acea516ab062c21da9789bd8de0">MemoryStream</a> (int buffer_size=512, <a class="el" href="group__basic.html#ga462bfa9dfea81692463ecb192183dd01">MemoryType</a> memoryType=RAM)</td></tr>
 <tr class="memdesc:ace288acea516ab062c21da9789bd8de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for alloction in RAM. <br /></td></tr>
 <tr class="separator:ace288acea516ab062c21da9789bd8de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a472a9413ee9ea5a3202ed3101fcc8431"><td class="memItemLeft" align="right" valign="top"><a id="a472a9413ee9ea5a3202ed3101fcc8431"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_memory_stream.html#a472a9413ee9ea5a3202ed3101fcc8431">MemoryStream</a> (<a class="el" href="classaudio__tools_1_1_memory_stream.html">MemoryStream</a> &amp;&amp;source)</td></tr>
+<tr class="memdesc:a472a9413ee9ea5a3202ed3101fcc8431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move Constructor. <br /></td></tr>
+<tr class="separator:a472a9413ee9ea5a3202ed3101fcc8431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fbd9124883cf6291bd921096b491286"><td class="memItemLeft" align="right" valign="top"><a id="a6fbd9124883cf6291bd921096b491286"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_memory_stream.html#a6fbd9124883cf6291bd921096b491286">MemoryStream</a> (<a class="el" href="classaudio__tools_1_1_memory_stream.html">MemoryStream</a> &amp;source)</td></tr>
+<tr class="memdesc:a6fbd9124883cf6291bd921096b491286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy Constructor. <br /></td></tr>
+<tr class="separator:a6fbd9124883cf6291bd921096b491286"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a727a24459787e1eeeb7a37ba888394a6"><td class="memItemLeft" align="right" valign="top"><a id="a727a24459787e1eeeb7a37ba888394a6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a727a24459787e1eeeb7a37ba888394a6">addNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a727a24459787e1eeeb7a37ba888394a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds target to be notified about audio changes. <br /></td></tr>
@@ -117,7 +125,8 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> 
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> () override</td></tr>
 <tr class="separator:a6ff0d6d1b0f3f9b652c9d5298ed0863c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acba365cc28eb702040c382646cfb0a7a"><td class="memItemLeft" align="right" valign="top"><a id="acba365cc28eb702040c382646cfb0a7a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () override</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_memory_stream.html#acba365cc28eb702040c382646cfb0a7a">begin</a> () override</td></tr>
+<tr class="memdesc:acba365cc28eb702040c382646cfb0a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">resets the read pointer <br /></td></tr>
 <tr class="separator:acba365cc28eb702040c382646cfb0a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fcf92f2c5e39da0f593c093ea16d440"><td class="memItemLeft" align="right" valign="top"><a id="a0fcf92f2c5e39da0f593c093ea16d440"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_memory_stream.html#a0fcf92f2c5e39da0f593c093ea16d440">clear</a> (bool reset=false)</td></tr>
@@ -139,6 +148,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () 
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c800ae48b9537be99025189129a75ef"><td class="memItemLeft" align="right" valign="top"><a id="a4c800ae48b9537be99025189129a75ef"></a>
+<a class="el" href="classaudio__tools_1_1_memory_stream.html">MemoryStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_memory_stream.html#a4c800ae48b9537be99025189129a75ef">operator=</a> (<a class="el" href="classaudio__tools_1_1_memory_stream.html">MemoryStream</a> &amp;other)</td></tr>
+<tr class="memdesc:a4c800ae48b9537be99025189129a75ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy assignement operator <br /></td></tr>
+<tr class="separator:a4c800ae48b9537be99025189129a75ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bb6daa18ee5d207a6f2e1899eaadcf3"><td class="memItemLeft" align="right" valign="top"><a id="a9bb6daa18ee5d207a6f2e1899eaadcf3"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>peek</b> () override</td></tr>
 <tr class="separator:a9bb6daa18ee5d207a6f2e1899eaadcf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,6 +211,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4c33a04426f36f7209536901dcd58544"><td class="memItemLeft" align="right" valign="top"><a id="a4c33a04426f36f7209536901dcd58544"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="separator:a4c33a04426f36f7209536901dcd58544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add912196b993445088bfaf8952856415"><td class="memItemLeft" align="right" valign="top"><a id="add912196b993445088bfaf8952856415"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>copy</b> (<a class="el" href="classaudio__tools_1_1_memory_stream.html">MemoryStream</a> &amp;source)</td></tr>
+<tr class="separator:add912196b993445088bfaf8952856415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa259d4488c24137733184bbceb275198"><td class="memItemLeft" align="right" valign="top"><a id="aa259d4488c24137733184bbceb275198"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>memoryCanChange</b> ()</td></tr>
 <tr class="separator:aa259d4488c24137733184bbceb275198"><td class="memSeparator" colspan="2">&#160;</td></tr>
