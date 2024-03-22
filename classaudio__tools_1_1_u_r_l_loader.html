@@ -122,9 +122,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memItemLeft" align="right" valign="top"><a id="a03c996f9fcf0e10baeb3e700be0c409a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</td></tr>
 <tr class="separator:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73e809d724d25cd0c28533ee9b7a598f"><td class="memItemLeft" align="right" valign="top"><a id="a73e809d724d25cd0c28533ee9b7a598f"></a>
-<a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {DEFAULT_BUFFER_SIZE, 50}</td></tr>
-<tr class="separator:a73e809d724d25cd0c28533ee9b7a598f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71d52bd0291e25d46b1e5b417b707d3"><td class="memItemLeft" align="right" valign="top"><a id="ab71d52bd0291e25d46b1e5b417b707d3"></a>
+<a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html">BufferRTOS</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {0}</td></tr>
+<tr class="separator:ab71d52bd0291e25d46b1e5b417b707d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1604207c5fe93cc8e5d75e1e1ef1ee46"><td class="memItemLeft" align="right" valign="top"><a id="a1604207c5fe93cc8e5d75e1e1ef1ee46"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_count</b> = 10</td></tr>
 <tr class="separator:a1604207c5fe93cc8e5d75e1e1ef1ee46"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +134,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_size</b> = DEFA
 <tr class="memitem:a175cbae8b6ce6214bd538d7ceaea1981"><td class="memItemLeft" align="right" valign="top"><a id="a175cbae8b6ce6214bd538d7ceaea1981"></a>
 <a class="el" href="classaudio__tools_1_1_u_r_l_stream.html">URLStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> = nullptr</td></tr>
 <tr class="separator:a175cbae8b6ce6214bd538d7ceaea1981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bcc572b9d73774627be66dd46aa61a8"><td class="memItemLeft" align="right" valign="top"><a id="a8bcc572b9d73774627be66dd46aa61a8"></a>
+<a class="el" href="classaudio__tools_1_1_task.html">Task</a>&#160;</td><td class="memItemRight" valign="bottom"><b>task</b> {&quot;Refill&quot;,1024*5,1,1}</td></tr>
+<tr class="separator:a8bcc572b9d73774627be66dd46aa61a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4af21a2eefcf121fafa52de68d4267e"><td class="memItemLeft" align="right" valign="top"><a id="ac4af21a2eefcf121fafa52de68d4267e"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>url_to_play</b> = nullptr</td></tr>
 <tr class="separator:ac4af21a2eefcf121fafa52de68d4267e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,7 +172,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>url_to_play</
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/AudioHttp/<a class="el" href="_h_l_s_stream_8h_source.html">HLSStream.h</a></li>
+<li>src/AudioLibs/<a class="el" href="_h_l_s_stream_8h_source.html">HLSStream.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

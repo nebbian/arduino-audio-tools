@@ -82,9 +82,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a803e1db59ce7b20ba3f1d0bbe3e57404"><td class="memItemLeft" align="right" valign="top"><a id="a803e1db59ce7b20ba3f1d0bbe3e57404"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Task</b> (const char *name, int stackSize, int priority=1, int core=-1)</td></tr>
 <tr class="separator:a803e1db59ce7b20ba3f1d0bbe3e57404"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1905e77a160dda66d930aa0544d361a"><td class="memItemLeft" align="right" valign="top"><a id="ab1905e77a160dda66d930aa0544d361a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (void(*process)())</td></tr>
-<tr class="separator:ab1905e77a160dda66d930aa0544d361a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1d9b45dd981a313a51ec91aca72a853"><td class="memItemLeft" align="right" valign="top"><a id="ac1d9b45dd981a313a51ec91aca72a853"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (std::function&lt; void()&gt; process)</td></tr>
+<tr class="separator:ac1d9b45dd981a313a51ec91aca72a853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf81d3fdaf258088d7692fa70cece087"><td class="memItemLeft" align="right" valign="top"><a id="aaf81d3fdaf258088d7692fa70cece087"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_task.html#aaf81d3fdaf258088d7692fa70cece087">end</a> ()</td></tr>
 <tr class="memdesc:aaf81d3fdaf258088d7692fa70cece087"><td class="mdescLeft">&#160;</td><td class="mdescRight">suspends the task <br /></td></tr>
@@ -107,9 +107,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>task_loop</b> 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ab38ed01939fd2fbdd85108f8cad621fc"><td class="memItemLeft" align="right" valign="top"><a id="ab38ed01939fd2fbdd85108f8cad621fc"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>loop_code</b> )() = nop</td></tr>
-<tr class="separator:ab38ed01939fd2fbdd85108f8cad621fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab153441a2052f80aafe00768ea80aee0"><td class="memItemLeft" align="right" valign="top"><a id="ab153441a2052f80aafe00768ea80aee0"></a>
+std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>loop_code</b> = nop</td></tr>
+<tr class="separator:ab153441a2052f80aafe00768ea80aee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01ba122aba7d048809e2330ee6cbe218"><td class="memItemLeft" align="right" valign="top"><a id="a01ba122aba7d048809e2330ee6cbe218"></a>
 TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>xHandle</b> = nullptr</td></tr>
 <tr class="separator:a01ba122aba7d048809e2330ee6cbe218"><td class="memSeparator" colspan="2">&#160;</td></tr>
