@@ -705,7 +705,7 @@ $(function() {
 <div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;      TRACED();</div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;      <span class="keywordflow">if</span> (is_new_command) {</div>
 <div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        <span class="keywordtype">char</span> buffer[80];</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        sprintf(buffer, <span class="stringliteral">&quot;Result: %s, score: %d, is_new: %s&quot;</span>, found_command,</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        snprintf(buffer, 80, <span class="stringliteral">&quot;Result: %s, score: %d, is_new: %s&quot;</span>, found_command,</div>
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;                score, is_new_command ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        Serial.println(buffer);</div>
 <div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;      }</div>

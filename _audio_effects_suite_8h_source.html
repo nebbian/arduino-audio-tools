@@ -426,14 +426,14 @@ $(function() {
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="keywordflow">return</span> interpTable;</div>
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;  }</div>
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160; </div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;  <span class="keywordtype">void</span> printInterpTable() {</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; interpResolution; j++) {</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; interpOrder; i++) {</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        printf(<span class="stringliteral">&quot;index %d: %.2f \t&quot;</span>, i, <a class="code" href="namespaceaudio__tools.html#a6a8099d013ab0669c1f915584b0ed32e">interpolationTable</a>[i][j]);</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;      }</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;      printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    }</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;  }</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;  <span class="comment">// void printInterpTable() {</span></div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;  <span class="comment">//   for (int j = 0; j &lt; interpResolution; j++) {</span></div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;  <span class="comment">//     for (int i = 0; i &lt; interpOrder; i++) {</span></div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;  <span class="comment">//       printf(&quot;index %d: %.2f \t&quot;, i, interpolationTable[i][j]);</span></div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;  <span class="comment">//     }</span></div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;  <span class="comment">//     printf(&quot;\n&quot;);</span></div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;  <span class="comment">//   }</span></div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;  <span class="comment">// }</span></div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160; </div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00518"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_delay_effect_base.html#aaea0c98ac40750185850bee967b63a86">  518</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_delay_effect_base.html#aaea0c98ac40750185850bee967b63a86">setDelayBuffer</a>(<span class="keywordtype">int</span> bufferSizeSamples) {</div>
@@ -549,21 +549,21 @@ $(function() {
 <div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160; </div>
 <div class="line"><a name="l00680"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_filter_effect_base.html#a7853ad48a9c41a7e1a9fd1294426b3e7">  680</a></span>&#160;  effectsuite_t <a class="code" href="classaudio__tools_1_1_filter_effect_base.html#a7853ad48a9c41a7e1a9fd1294426b3e7">envelope</a>(effectsuite_t sample) { <span class="keywordflow">return</span> <a class="code" href="classaudio__tools_1_1_filter_effect_base.html#a60c520f32c579caeda6231fbdf98d7c1">applyFilter</a>(<a class="code" href="classaudio__tools_1_1_filter_effect_base.html#ad5431041e3be93b789a5fbea3ceeaec6">rms</a>(sample)); }</div>
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160; </div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;  <span class="keywordtype">void</span> printBuffers() {</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    printf(<span class="stringliteral">&quot;FIRb\t\tIIRb\n&quot;</span>);</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classaudio__tools_1_1_filter_effect_base.html#a9d09c73fcc694ca39d4563a3d9b4f925">filterOrder</a>; i++) {</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;      printf(<span class="stringliteral">&quot;%.4e\t%.4e\n&quot;</span>, <a class="code" href="classaudio__tools_1_1_filter_effect_base.html#a71e949448a14b350c539b2e97e358e24">firBuffer</a>[i], <a class="code" href="classaudio__tools_1_1_filter_effect_base.html#a36d5aa51a18cec371e662a4bd00ad73f">iirBuffer</a>[i]);</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    }</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;  }</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;  <span class="comment">// void printBuffers() {</span></div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;  <span class="comment">//   printf(&quot;FIRb\t\tIIRb\n&quot;);</span></div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;  <span class="comment">//   for (int i = 0; i &lt; filterOrder; i++) {</span></div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;  <span class="comment">//     printf(&quot;%.4e\t%.4e\n&quot;, firBuffer[i], iirBuffer[i]);</span></div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;  <span class="comment">//   }</span></div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;  <span class="comment">//   printf(&quot;\n&quot;);</span></div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;  <span class="comment">// }</span></div>
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160; </div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;  <span class="keywordtype">void</span> printCoefs() {</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    printf(<span class="stringliteral">&quot;FIR\t\tIIR\n&quot;</span>);</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classaudio__tools_1_1_filter_effect_base.html#a9d09c73fcc694ca39d4563a3d9b4f925">filterOrder</a>; i++) {</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;      printf(<span class="stringliteral">&quot;%.4e\t%.4e\n&quot;</span>, <a class="code" href="classaudio__tools_1_1_filter_effect_base.html#a1b4b4166a56b76601a607fc863d8d05c">firCoefficients</a>[i], <a class="code" href="classaudio__tools_1_1_filter_effect_base.html#aa555d7f6c45fdc476c00ac7b3615c3cc">iirCoefficients</a>[i]);</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    }</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;  }</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;  <span class="comment">// void printCoefs() {</span></div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;  <span class="comment">//   printf(&quot;FIR\t\tIIR\n&quot;);</span></div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;  <span class="comment">//   for (int i = 0; i &lt; filterOrder; i++) {</span></div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;  <span class="comment">//     printf(&quot;%.4e\t%.4e\n&quot;, firCoefficients[i], iirCoefficients[i]);</span></div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;  <span class="comment">//   }</span></div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;  <span class="comment">//   printf(&quot;\n&quot;);</span></div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;  <span class="comment">// }</span></div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160; </div>
 <div class="line"><a name="l00709"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_filter_effect_base.html#a88f9bbb7d004b7f920601cc211c93ef0">  709</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_filter_effect_base.html#a88f9bbb7d004b7f920601cc211c93ef0">setChebyICoefficients</a>(effectsuite_t cutFreq, <span class="keywordtype">bool</span> shelfType, effectsuite_t ripple) {</div>
 <div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <span class="comment">// NOTE: coefficient buffers must be cleared as are additive in the</span></div>

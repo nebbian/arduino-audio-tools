@@ -142,14 +142,14 @@ $(function() {
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> print(<span class="keywordtype">int</span> number) NOARD_OVR {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">char</span> buffer[80];</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">int</span> len = sprintf(buffer, <span class="stringliteral">&quot;%d&quot;</span>, number);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">int</span> len = snprintf(buffer,80, <span class="stringliteral">&quot;%d&quot;</span>, number);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        print(buffer);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> len;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> println(<span class="keywordtype">int</span> number){</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">char</span> buffer[80];</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">int</span> len = sprintf(buffer, <span class="stringliteral">&quot;%d\n&quot;</span>, number);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">int</span> len = snprintf(buffer,80, <span class="stringliteral">&quot;%d\n&quot;</span>, number);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        print(buffer);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> len;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>

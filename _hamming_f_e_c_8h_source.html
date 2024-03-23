@@ -284,7 +284,7 @@ $(function() {
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                </div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                <span class="comment">// Check for multiple errors //</span></div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                <span class="keywordflow">if</span> (!(onCount &amp; 1 ^ getBit(input[b], 0))) { <span class="comment">// last bit of onCount (total parity) XOR first bit of block_t (parity bit)</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                    printf(<span class="stringliteral">&quot;\nMore than one error detected. Aborting.\n&quot;</span>);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                    LOGE(<span class="stringliteral">&quot;\nMore than one error detected. Aborting.\n&quot;</span>);</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                }</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                </div>

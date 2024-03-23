@@ -1108,9 +1108,9 @@ $(function() {
 <div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;    <span class="keywordtype">void</span> printResult() {</div>
 <div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;        <span class="keywordtype">char</span> msg[70];</div>
 <div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;        <span class="keywordflow">if</span> (frame_size==0){</div>
-<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;          sprintf(msg, <span class="stringliteral">&quot;==&gt; Bytes per second: %d&quot;</span>, bytes_per_second);</div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;          snprintf(msg, 70, <span class="stringliteral">&quot;==&gt; Bytes per second: %d&quot;</span>, bytes_per_second);</div>
 <div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;          sprintf(msg, <span class="stringliteral">&quot;==&gt; Samples per second: %d&quot;</span>, bytes_per_second/frame_size);</div>
+<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;          snprintf(msg, 70, <span class="stringliteral">&quot;==&gt; Samples per second: %d&quot;</span>, bytes_per_second/frame_size);</div>
 <div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;        }</div>
 <div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;        <span class="keywordflow">if</span> (p_logout!=<span class="keyword">nullptr</span>){</div>
 <div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;          p_logout-&gt;println(msg);</div>
