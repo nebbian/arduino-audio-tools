@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: URLLoader Class Reference</title>
+<title>arduino-audio-tools: URLLoaderHLS Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_u_r_l_loader.html">URLLoader</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_u_r_l_loader_h_l_s.html">URLLoaderHLS</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,51 +69,57 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classaudio__tools_1_1_u_r_l_loader-members.html">List of all members</a>  </div>
+<a href="classaudio__tools_1_1_u_r_l_loader_h_l_s-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">URLLoader Class Reference</div>  </div>
+<div class="title">URLLoaderHLS Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for URLLoaderHLS:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classaudio__tools_1_1_u_r_l_loader_h_l_s.png" usemap="#URLLoaderHLS_map" alt=""/>
+  <map id="URLLoaderHLS_map" name="URLLoaderHLS_map">
+<area href="classaudio__tools_1_1_u_r_l_loader_h_l_s_base.html" title="Abstract API for URLLoaderHLS." alt="URLLoaderHLSBase" shape="rect" coords="0,0,127,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afd61cbf36ed796f5c784761aae45d97a"><td class="memItemLeft" align="right" valign="top"><a id="afd61cbf36ed796f5c784761aae45d97a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>URLLoader</b> (<a class="el" href="classaudio__tools_1_1_u_r_l_stream.html">URLStream</a> &amp;stream)</td></tr>
-<tr class="separator:afd61cbf36ed796f5c784761aae45d97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c61bc6325af0c09c4be5f0ed835327c"><td class="memItemLeft" align="right" valign="top"><a id="a9c61bc6325af0c09c4be5f0ed835327c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_loader.html#a9c61bc6325af0c09c4be5f0ed835327c">addUrl</a> (const char *url)</td></tr>
-<tr class="memdesc:a9c61bc6325af0c09c4be5f0ed835327c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the next url to be played in sequence. <br /></td></tr>
-<tr class="separator:a9c61bc6325af0c09c4be5f0ed835327c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4549a76725f2e4c013e4d57018366109"><td class="memItemLeft" align="right" valign="top"><a id="a4549a76725f2e4c013e4d57018366109"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_loader.html#a4549a76725f2e4c013e4d57018366109">available</a> ()</td></tr>
-<tr class="memdesc:a4549a76725f2e4c013e4d57018366109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available bytes of the audio stream. <br /></td></tr>
-<tr class="separator:a4549a76725f2e4c013e4d57018366109"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top"><a id="a601fb7cf1fc15db50c71a826f084f934"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
-<tr class="separator:a601fb7cf1fc15db50c71a826f084f934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19aa4b0b3faf0b7cc89456c74a7b013a"><td class="memItemLeft" align="right" valign="top"><a id="a19aa4b0b3faf0b7cc89456c74a7b013a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_loader_h_l_s.html#a19aa4b0b3faf0b7cc89456c74a7b013a">addUrl</a> (const char *url) override</td></tr>
+<tr class="memdesc:a19aa4b0b3faf0b7cc89456c74a7b013a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the next url to be played in sequence. <br /></td></tr>
+<tr class="separator:a19aa4b0b3faf0b7cc89456c74a7b013a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="memItemLeft" align="right" valign="top"><a id="a692e2b18b3c2452e38e3f558ad87e9a5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_loader_h_l_s.html#a692e2b18b3c2452e38e3f558ad87e9a5">available</a> () override</td></tr>
+<tr class="memdesc:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available bytes of the audio stream. <br /></td></tr>
+<tr class="separator:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba365cc28eb702040c382646cfb0a7a"><td class="memItemLeft" align="right" valign="top"><a id="acba365cc28eb702040c382646cfb0a7a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () override</td></tr>
+<tr class="separator:acba365cc28eb702040c382646cfb0a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00493e01037c52bf0c68e4fc6d526cd4"><td class="memItemLeft" align="right" valign="top"><a id="a00493e01037c52bf0c68e4fc6d526cd4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>contentLength</b> ()</td></tr>
 <tr class="separator:a00493e01037c52bf0c68e4fc6d526cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90bfaf533d2e31333a61152b1681d40e"><td class="memItemLeft" align="right" valign="top"><a id="a90bfaf533d2e31333a61152b1681d40e"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>contentType</b> ()</td></tr>
 <tr class="separator:a90bfaf533d2e31333a61152b1681d40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf81d3fdaf258088d7692fa70cece087"><td class="memItemLeft" align="right" valign="top"><a id="aaf81d3fdaf258088d7692fa70cece087"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
-<tr class="separator:aaf81d3fdaf258088d7692fa70cece087"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8920918d9e0a1390082b2e660c954c8b"><td class="memItemLeft" align="right" valign="top"><a id="a8920918d9e0a1390082b2e660c954c8b"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_loader.html#a8920918d9e0a1390082b2e660c954c8b">readBytes</a> (uint8_t *data, size_t len)</td></tr>
-<tr class="memdesc:a8920918d9e0a1390082b2e660c954c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides data from the audio stream. <br /></td></tr>
-<tr class="separator:a8920918d9e0a1390082b2e660c954c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3e1ca0ca7001b983aaf0d2a60d2efe8"><td class="memItemLeft" align="right" valign="top"><a id="ad3e1ca0ca7001b983aaf0d2a60d2efe8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBuffer</b> (int size, int count)</td></tr>
-<tr class="separator:ad3e1ca0ca7001b983aaf0d2a60d2efe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2315b128f5a1599b1b4cdb016792a728"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_loader.html#a2315b128f5a1599b1b4cdb016792a728">urlCount</a> ()</td></tr>
-<tr class="separator:a2315b128f5a1599b1b4cdb016792a728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memItemLeft" align="right" valign="top"><a id="a64e9fa75beda50a9e8400ee0d4e61984"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</td></tr>
+<tr class="separator:a64e9fa75beda50a9e8400ee0d4e61984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5c6275ddee80eb02839356b6185c0b"><td class="memItemLeft" align="right" valign="top"><a id="a4c5c6275ddee80eb02839356b6185c0b"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_loader_h_l_s.html#a4c5c6275ddee80eb02839356b6185c0b">readBytes</a> (uint8_t *data, size_t len) override</td></tr>
+<tr class="memdesc:a4c5c6275ddee80eb02839356b6185c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides data from the audio stream. <br /></td></tr>
+<tr class="separator:a4c5c6275ddee80eb02839356b6185c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4bff4d62f687115c1d94da50edfce4"><td class="memItemLeft" align="right" valign="top"><a id="aef4bff4d62f687115c1d94da50edfce4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setBuffer</b> (int size, int count) override</td></tr>
+<tr class="separator:aef4bff4d62f687115c1d94da50edfce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274ce5790ba1b31b5ff8dda685d9bf29"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_loader_h_l_s.html#a274ce5790ba1b31b5ff8dda685d9bf29">urlCount</a> () override</td></tr>
+<tr class="separator:a274ce5790ba1b31b5ff8dda685d9bf29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a034016f1f7bf5783f75913f7730c9693"><td class="memItemLeft" align="right" valign="top"><a id="a034016f1f7bf5783f75913f7730c9693"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_loader.html#a034016f1f7bf5783f75913f7730c9693">bufferRefill</a> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_loader_h_l_s.html#a034016f1f7bf5783f75913f7730c9693">bufferRefill</a> ()</td></tr>
 <tr class="memdesc:a034016f1f7bf5783f75913f7730c9693"><td class="mdescLeft">&#160;</td><td class="mdescRight">try to keep the buffer filled <br /></td></tr>
 <tr class="separator:a034016f1f7bf5783f75913f7730c9693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -122,9 +128,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memItemLeft" align="right" valign="top"><a id="a03c996f9fcf0e10baeb3e700be0c409a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</td></tr>
 <tr class="separator:a03c996f9fcf0e10baeb3e700be0c409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73e809d724d25cd0c28533ee9b7a598f"><td class="memItemLeft" align="right" valign="top"><a id="a73e809d724d25cd0c28533ee9b7a598f"></a>
-<a class="el" href="classaudio__tools_1_1_n_buffer.html">NBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {0, 0}</td></tr>
-<tr class="separator:a73e809d724d25cd0c28533ee9b7a598f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfda46b2efac52165f9c88041f555530"><td class="memItemLeft" align="right" valign="top"><a id="adfda46b2efac52165f9c88041f555530"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {0}</td></tr>
+<tr class="separator:adfda46b2efac52165f9c88041f555530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1604207c5fe93cc8e5d75e1e1ef1ee46"><td class="memItemLeft" align="right" valign="top"><a id="a1604207c5fe93cc8e5d75e1e1ef1ee46"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_count</b> = 10</td></tr>
 <tr class="separator:a1604207c5fe93cc8e5d75e1e1ef1ee46"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,7 +141,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_size</b> = DEFA
 <a class="el" href="classaudio__tools_1_1_u_r_l_stream.html">URLStream</a>&#160;</td><td class="memItemRight" valign="bottom"><b>default_stream</b></td></tr>
 <tr class="separator:a36732cfabd946296f33e31a6fc8bc5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a175cbae8b6ce6214bd538d7ceaea1981"><td class="memItemLeft" align="right" valign="top"><a id="a175cbae8b6ce6214bd538d7ceaea1981"></a>
-<a class="el" href="classaudio__tools_1_1_u_r_l_stream.html">URLStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> = nullptr</td></tr>
+<a class="el" href="classaudio__tools_1_1_u_r_l_stream.html">URLStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> = &amp;default_stream</td></tr>
 <tr class="separator:a175cbae8b6ce6214bd538d7ceaea1981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4af21a2eefcf121fafa52de68d4267e"><td class="memItemLeft" align="right" valign="top"><a id="ac4af21a2eefcf121fafa52de68d4267e"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>url_to_play</b> = nullptr</td></tr>
@@ -145,8 +151,8 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>url_to_play</
 <tr class="separator:ad18460efbde6d364b775c30c91c827ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2315b128f5a1599b1b4cdb016792a728"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2315b128f5a1599b1b4cdb016792a728">&#9670;&nbsp;</a></span>urlCount()</h2>
+<a id="a274ce5790ba1b31b5ff8dda685d9bf29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a274ce5790ba1b31b5ff8dda685d9bf29">&#9670;&nbsp;</a></span>urlCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,11 +169,13 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>url_to_play</
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Provides the number of open urls which can be played. Refills them, when min limit is reached. </p>
+
+<p>Implements <a class="el" href="classaudio__tools_1_1_u_r_l_loader_h_l_s_base.html">URLLoaderHLSBase</a>.</p>
 
 </div>
 </div>

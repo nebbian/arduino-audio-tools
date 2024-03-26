@@ -124,8 +124,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a128c19eda4c8e6c68f0cd129cee47b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20369e35080b82ef26cd2ca6d90f533a"><td class="memItemLeft" align="right" valign="top"><a id="a20369e35080b82ef26cd2ca6d90f533a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_h_l_s_parser.html#a20369e35080b82ef26cd2ca6d90f533a">setUrlCount</a> (int count)</td></tr>
-<tr class="memdesc:a20369e35080b82ef26cd2ca6d90f533a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the number of urls that are preloaded in the <a class="el" href="classaudio__tools_1_1_u_r_l_loader.html">URLLoader</a>. <br /></td></tr>
+<tr class="memdesc:a20369e35080b82ef26cd2ca6d90f533a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the number of urls that are preloaded in the <a class="el" href="classaudio__tools_1_1_u_r_l_loader_h_l_s.html">URLLoaderHLS</a>. <br /></td></tr>
 <tr class="separator:a20369e35080b82ef26cd2ca6d90f533a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a4e9020f4d930b78721d5c861cced0"><td class="memItemLeft" align="right" valign="top"><a id="a74a4e9020f4d930b78721d5c861cced0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUrlLoader</b> (<a class="el" href="classaudio__tools_1_1_u_r_l_loader_h_l_s_base.html">URLLoaderHLSBase</a> &amp;loader)</td></tr>
+<tr class="separator:a74a4e9020f4d930b78721d5c861cced0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -165,6 +168,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>bandwidth</b> = 0</td>
 <tr class="memitem:a26693f5daeab2d1738e2644de233b003"><td class="memItemLeft" align="right" valign="top"><a id="a26693f5daeab2d1738e2644de233b003"></a>
 CustomLogLevel&#160;</td><td class="memItemRight" valign="bottom"><b>custom_log_level</b></td></tr>
 <tr class="separator:a26693f5daeab2d1738e2644de233b003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3befe740885aaafcc5bf3bec6a6002e"><td class="memItemLeft" align="right" valign="top"><a id="ae3befe740885aaafcc5bf3bec6a6002e"></a>
+<a class="el" href="classaudio__tools_1_1_u_r_l_loader_h_l_s.html">URLLoaderHLS</a>&#160;</td><td class="memItemRight" valign="bottom"><b>default_url_loader</b></td></tr>
+<tr class="separator:ae3befe740885aaafcc5bf3bec6a6002e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07edcb7c090edeaf9d595a1ea87ce51e"><td class="memItemLeft" align="right" valign="top"><a id="a07edcb7c090edeaf9d595a1ea87ce51e"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>index_url_str</b> = nullptr</td></tr>
 <tr class="separator:a07edcb7c090edeaf9d595a1ea87ce51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,6 +183,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>media_sequence</b> = 0
 <tr class="memitem:aff230c832e93da85a08b0928c9596fba"><td class="memItemLeft" align="right" valign="top"><a id="aff230c832e93da85a08b0928c9596fba"></a>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>next_sement_load_time</b> = 0</td></tr>
 <tr class="separator:aff230c832e93da85a08b0928c9596fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdfc96cd9f1d8ac70070e01975dcffcb"><td class="memItemLeft" align="right" valign="top"><a id="acdfc96cd9f1d8ac70070e01975dcffcb"></a>
+<a class="el" href="classaudio__tools_1_1_u_r_l_loader_h_l_s_base.html">URLLoaderHLSBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_url_loader</b> = &amp;default_url_loader</td></tr>
+<tr class="separator:acdfc96cd9f1d8ac70070e01975dcffcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fd0ca7bfa3e9a7651bf513a557ec649"><td class="memItemLeft" align="right" valign="top"><a id="a0fd0ca7bfa3e9a7651bf513a557ec649"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>parse_segments_active</b> = false</td></tr>
 <tr class="separator:a0fd0ca7bfa3e9a7651bf513a557ec649"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,9 +207,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>url_count</b> = 5</td>
 <tr class="memitem:a6e871baa78454587c2f3d61ef880e89e"><td class="memItemLeft" align="right" valign="top"><a id="a6e871baa78454587c2f3d61ef880e89e"></a>
 <a class="el" href="classaudio__tools_1_1_u_r_l_history.html">URLHistory</a>&#160;</td><td class="memItemRight" valign="bottom"><b>url_history</b></td></tr>
 <tr class="separator:a6e871baa78454587c2f3d61ef880e89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2660a14049ef7ef5d128dd743c09053"><td class="memItemLeft" align="right" valign="top"><a id="aa2660a14049ef7ef5d128dd743c09053"></a>
-<a class="el" href="classaudio__tools_1_1_u_r_l_loader.html">URLLoader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>url_loader</b></td></tr>
-<tr class="separator:aa2660a14049ef7ef5d128dd743c09053"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfb6ef763fd80fb6b412a1e26958475d"><td class="memItemLeft" align="right" valign="top"><a id="adfb6ef763fd80fb6b412a1e26958475d"></a>
 <a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a>&#160;</td><td class="memItemRight" valign="bottom"><b>url_str</b></td></tr>
 <tr class="separator:adfb6ef763fd80fb6b412a1e26958475d"><td class="memSeparator" colspan="2">&#160;</td></tr>
