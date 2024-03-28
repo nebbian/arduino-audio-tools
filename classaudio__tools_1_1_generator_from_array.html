@@ -93,7 +93,7 @@ Inheritance diagram for GeneratorFromArray&lt; T &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f6f7efed214cfdc8a1e2eb40475e706"><td class="memTemplParams" colspan="2">template&lt;size_t arrayLen&gt; </td></tr>
 <tr class="memitem:a8f6f7efed214cfdc8a1e2eb40475e706"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_generator_from_array.html#a8f6f7efed214cfdc8a1e2eb40475e706">GeneratorFromArray</a> (T(&amp;array)[arrayLen], int repeat=0, bool setInactiveAtEnd=true, size_t startIndex=0)</td></tr>
-<tr class="memdesc:a8f6f7efed214cfdc8a1e2eb40475e706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Generator From Array object.  <a href="classaudio__tools_1_1_generator_from_array.html#a8f6f7efed214cfdc8a1e2eb40475e706">More...</a><br /></td></tr>
+<tr class="memdesc:a8f6f7efed214cfdc8a1e2eb40475e706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Generator from an array.  <a href="classaudio__tools_1_1_generator_from_array.html#a8f6f7efed214cfdc8a1e2eb40475e706">More...</a><br /></td></tr>
 <tr class="separator:a8f6f7efed214cfdc8a1e2eb40475e706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada56eff2516fb0a4f5091ce06805411a"><td class="memItemLeft" align="right" valign="top"><a id="ada56eff2516fb0a4f5091ce06805411a"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
@@ -193,7 +193,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>repeat_counter</b> = 0
 int&#160;</td><td class="memItemRight" valign="bottom"><b>sound_index</b> = 0</td></tr>
 <tr class="separator:affb55b0f4f8813827c5aa042774ce529"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8ae9d1a393ed8d0b6e93d3da01bcac"><td class="memItemLeft" align="right" valign="top"><a id="a7b8ae9d1a393ed8d0b6e93d3da01bcac"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><b>table</b></td></tr>
+T *&#160;</td><td class="memItemRight" valign="bottom"><b>table</b> = nullptr</td></tr>
 <tr class="separator:a7b8ae9d1a393ed8d0b6e93d3da01bcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48e6e350606698e72412c961e1fa9ec7"><td class="memItemLeft" align="right" valign="top"><a id="a48e6e350606698e72412c961e1fa9ec7"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>table_length</b> = 0</td></tr>
@@ -259,7 +259,7 @@ class audio_tools::GeneratorFromArray&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a new Generator From Array object. </p>
+<p>Construct a new Generator from an array. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">array</td><td>array of audio data of the the type defined as class template parameter </td></tr>
