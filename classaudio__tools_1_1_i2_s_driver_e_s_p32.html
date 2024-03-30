@@ -91,9 +91,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html#a86aa7db83a28e2662e01c57a36681cb0">availableForWrite</a> ()</td></tr>
 <tr class="memdesc:a86aa7db83a28e2662e01c57a36681cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">We limit the write size to the buffer size. <br /></td></tr>
 <tr class="separator:a86aa7db83a28e2662e01c57a36681cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top"><a id="a601fb7cf1fc15db50c71a826f084f934"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html#a601fb7cf1fc15db50c71a826f084f934">begin</a> ()</td></tr>
-<tr class="memdesc:a601fb7cf1fc15db50c71a826f084f934"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the DAC with the current config - if not started yet. If I2S has been started there is no action and we return true <br /></td></tr>
+<tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html#a601fb7cf1fc15db50c71a826f084f934">begin</a> ()</td></tr>
 <tr class="separator:a601fb7cf1fc15db50c71a826f084f934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ccef4367a45861f8a995bd8cee4fce3"><td class="memItemLeft" align="right" valign="top"><a id="a2ccef4367a45861f8a995bd8cee4fce3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html#a2ccef4367a45861f8a995bd8cee4fce3">begin</a> (<a class="el" href="classaudio__tools_1_1_i2_s_config_e_s_p32.html">I2SConfigESP32</a> cfg)</td></tr>
@@ -118,6 +116,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:aecdbea3a6aff480653df559eb8097559"><td class="memItemLeft" align="right" valign="top"><a id="aecdbea3a6aff480653df559eb8097559"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (void *dest, size_t size_bytes)</td></tr>
 <tr class="separator:aecdbea3a6aff480653df559eb8097559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61750044646f6643180bf5073ed9a32d"><td class="memItemLeft" align="right" valign="top"><a id="a61750044646f6643180bf5073ed9a32d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32.html#a61750044646f6643180bf5073ed9a32d">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
+<tr class="memdesc:a61750044646f6643180bf5073ed9a32d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Potentially updates the sample rate (if supported) <br /></td></tr>
+<tr class="separator:a61750044646f6643180bf5073ed9a32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44eae9de9900595d04eb4f40eba61eb4"><td class="memItemLeft" align="right" valign="top"><a id="a44eae9de9900595d04eb4f40eba61eb4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setWaitTimeReadMs</b> (TickType_t ms)</td></tr>
 <tr class="separator:a44eae9de9900595d04eb4f40eba61eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,7 +191,34 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AudioKitStream</b></
 <div class="textblock"><p>Basic I2S API - for the ESP32. If we receive 1 channel, we expand the result to 2 channels. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a601fb7cf1fc15db50c71a826f084f934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a601fb7cf1fc15db50c71a826f084f934">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>starts the DAC with the current config - if not started yet. If I2S has been started there is no action and we return true </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioI2S/<a class="el" href="_i2_s_e_s_p32_8h_source.html">I2SESP32.h</a></li>
 </ul>
 </div><!-- contents -->
