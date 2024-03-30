@@ -100,9 +100,6 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac842e3a749440cbf6105b8ac73706016"><td class="memItemLeft" align="right" valign="top"><a id="ac842e3a749440cbf6105b8ac73706016"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getByteFactor</b> ()</td></tr>
-<tr class="separator:ac842e3a749440cbf6105b8ac73706016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eb925b04b41ee08d4eda13dfdb0f967"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_transformation_reader.html#a5eb925b04b41ee08d4eda13dfdb0f967">restoreOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out)</td></tr>
 <tr class="memdesc:a5eb925b04b41ee08d4eda13dfdb0f967"><td class="mdescLeft">&#160;</td><td class="mdescRight">restores the original output in the converter class  <a href="classaudio__tools_1_1_transformation_reader.html#a5eb925b04b41ee08d4eda13dfdb0f967">More...</a><br /></td></tr>
 <tr class="separator:a5eb925b04b41ee08d4eda13dfdb0f967"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,9 +114,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</t
 <tr class="memitem:afa0dac30433855379ff3ac93383d7ef2"><td class="memItemLeft" align="right" valign="top"><a id="afa0dac30433855379ff3ac93383d7ef2"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {0}</td></tr>
 <tr class="separator:afa0dac30433855379ff3ac93383d7ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61f3f81b0305417e31494e31cf5abc67"><td class="memItemLeft" align="right" valign="top"><a id="a61f3f81b0305417e31494e31cf5abc67"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>byte_factor</b> = 0.0f</td></tr>
-<tr class="separator:a61f3f81b0305417e31494e31cf5abc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c87619d514c8c9627dc94e5e278a530"><td class="memItemLeft" align="right" valign="top"><a id="a7c87619d514c8c9627dc94e5e278a530"></a>
 <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> = nullptr</td></tr>
 <tr class="separator:a7c87619d514c8c9627dc94e5e278a530"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,8 +176,8 @@ class audio_tools::TransformationReader&lt; T &gt;</h3>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">transform</td><td>The original transformer stream </td></tr>
-    <tr><td class="paramname">byteFactor</td><td>The factor of how much more data we need to read to get the requested converted bytes </td></tr>
     <tr><td class="paramname">source</td><td>The data source of the data to be converted </td></tr>
+    <tr><td class="paramname">byteFactor</td><td>The factor of how much more data we need to read to get the requested converted bytes </td></tr>
   </table>
   </dd>
 </dl>

@@ -148,6 +148,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</t
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a04f2540d940cc37b5c2538ed8e5b54be">flush</a> () override</td></tr>
 <tr class="memdesc:a04f2540d940cc37b5c2538ed8e5b54be"><td class="mdescLeft">&#160;</td><td class="mdescRight">When buffering is active, writes the buffered audio to the output. <br /></td></tr>
 <tr class="separator:a04f2540d940cc37b5c2538ed8e5b54be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac842e3a749440cbf6105b8ac73706016"><td class="memItemLeft" align="right" valign="top"><a id="ac842e3a749440cbf6105b8ac73706016"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getByteFactor</b> ()</td></tr>
+<tr class="separator:ac842e3a749440cbf6105b8ac73706016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bde85b9ba6c66a2f140effc20a8d1dc"><td class="memItemLeft" align="right" valign="top"><a id="a1bde85b9ba6c66a2f140effc20a8d1dc"></a>
 virtual <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPrint</b> ()</td></tr>
 <tr class="separator:a1bde85b9ba6c66a2f140effc20a8d1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,9 +204,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b>
 <tr class="memitem:a646af4ceb37088b4a2a19e1716969e94"><td class="memItemLeft" align="right" valign="top"><a id="a646af4ceb37088b4a2a19e1716969e94"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream)</td></tr>
 <tr class="separator:a646af4ceb37088b4a2a19e1716969e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec13de98d983457ab0c6986aa40abc8a"><td class="memItemLeft" align="right" valign="top"><a id="aec13de98d983457ab0c6986aa40abc8a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setupReader</b> ()</td></tr>
-<tr class="separator:aec13de98d983457ab0c6986aa40abc8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd4e4dcc170845adbc56cc319b8524c9"><td class="memItemLeft" align="right" valign="top"><a id="abd4e4dcc170845adbc56cc319b8524c9"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t bytes) override</td></tr>
 <tr class="separator:abd4e4dcc170845adbc56cc319b8524c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,10 +246,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad51c00fbbc5e5e771b6b4a4da3e7075c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setupLastSamples</b> (T *data, int frame)</td></tr>
 <tr class="separator:ad51c00fbbc5e5e771b6b4a4da3e7075c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec13de98d983457ab0c6986aa40abc8a"><td class="memItemLeft" align="right" valign="top"><a id="aec13de98d983457ab0c6986aa40abc8a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setupReader</b> ()</td></tr>
+<tr class="separator:aec13de98d983457ab0c6986aa40abc8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0284c414da66b48385a66b676b2e2356"><td class="memTemplParams" colspan="2"><a id="a0284c414da66b48385a66b676b2e2356"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a0284c414da66b48385a66b676b2e2356"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_resample_stream.html#a0284c414da66b48385a66b676b2e2356">write</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *p_out, const uint8_t *buffer, size_t bytes, size_t &amp;written)</td></tr>
-<tr class="memdesc:a0284c414da66b48385a66b676b2e2356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the buffer to p_print after resampling. <br /></td></tr>
+<tr class="memdesc:a0284c414da66b48385a66b676b2e2356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the buffer to defined output after resampling. <br /></td></tr>
 <tr class="separator:a0284c414da66b48385a66b676b2e2356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -260,9 +263,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td>
 <tr class="memitem:aeff5997abcf0c88c9434923e2ffd032b"><td class="memItemLeft" align="right" valign="top"><a id="aeff5997abcf0c88c9434923e2ffd032b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>bytes_per_frame</b> = 0</td></tr>
 <tr class="separator:aeff5997abcf0c88c9434923e2ffd032b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a323c112c11500270be91b7cb353826bd"><td class="memItemLeft" align="right" valign="top"><a id="a323c112c11500270be91b7cb353826bd"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>factor</b></td></tr>
-<tr class="separator:a323c112c11500270be91b7cb353826bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a791caab74bc4e8b8d9bb4b9667744eb2"><td class="memItemLeft" align="right" valign="top"><a id="a791caab74bc4e8b8d9bb4b9667744eb2"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>idx</b> = 0</td></tr>
 <tr class="separator:a791caab74bc4e8b8d9bb4b9667744eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,7 +285,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_first</b> = true</
 <a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>out_buffer</b> {0}</td></tr>
 <tr class="separator:a9eb9b7b5340c1747eb4e5e4218175946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memItemLeft" align="right" valign="top"><a id="aa42c30e02e51ec7cc38ea4ab215e0db4"></a>
-<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_out</b> =nullptr</td></tr>
+<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_out</b> = nullptr</td></tr>
 <tr class="separator:aa42c30e02e51ec7cc38ea4ab215e0db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>

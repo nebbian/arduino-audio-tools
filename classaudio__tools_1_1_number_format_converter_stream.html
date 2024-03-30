@@ -140,6 +140,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</t
 <tr class="memitem:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memItemLeft" align="right" valign="top"><a id="af654b48544c195ab99fe27e7bc3ed5fe"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
 <tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac842e3a749440cbf6105b8ac73706016"><td class="memItemLeft" align="right" valign="top"><a id="ac842e3a749440cbf6105b8ac73706016"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getByteFactor</b> ()</td></tr>
+<tr class="separator:ac842e3a749440cbf6105b8ac73706016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bde85b9ba6c66a2f140effc20a8d1dc"><td class="memItemLeft" align="right" valign="top"><a id="a1bde85b9ba6c66a2f140effc20a8d1dc"></a>
 virtual <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPrint</b> ()</td></tr>
 <tr class="separator:a1bde85b9ba6c66a2f140effc20a8d1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,9 +185,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b>
 <tr class="memitem:a646af4ceb37088b4a2a19e1716969e94"><td class="memItemLeft" align="right" valign="top"><a id="a646af4ceb37088b4a2a19e1716969e94"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream)</td></tr>
 <tr class="separator:a646af4ceb37088b4a2a19e1716969e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec13de98d983457ab0c6986aa40abc8a"><td class="memItemLeft" align="right" valign="top"><a id="aec13de98d983457ab0c6986aa40abc8a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setupReader</b> ()</td></tr>
-<tr class="separator:aec13de98d983457ab0c6986aa40abc8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b41bc0f0b5647b24fd650b38717bc6a"><td class="memItemLeft" align="right" valign="top"><a id="a7b41bc0f0b5647b24fd650b38717bc6a"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *data, size_t size) override</td></tr>
 <tr class="separator:a7b41bc0f0b5647b24fd650b38717bc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,6 +214,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyAudioChange</b>
 <tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
 <tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec13de98d983457ab0c6986aa40abc8a"><td class="memItemLeft" align="right" valign="top"><a id="aec13de98d983457ab0c6986aa40abc8a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setupReader</b> ()</td></tr>
+<tr class="separator:aec13de98d983457ab0c6986aa40abc8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36dcb1238a339743f5aa054f85801455"><td class="memItemLeft" align="right" valign="top"><a id="a36dcb1238a339743f5aa054f85801455"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setupStream</b> ()</td></tr>
 <tr class="separator:a36dcb1238a339743f5aa054f85801455"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,9 +229,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td>
 <tr class="memitem:a2b552364a1de2f68b29a7fb4f0075f15"><td class="memItemLeft" align="right" valign="top"><a id="a2b552364a1de2f68b29a7fb4f0075f15"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>converter</b> = nullptr</td></tr>
 <tr class="separator:a2b552364a1de2f68b29a7fb4f0075f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a323c112c11500270be91b7cb353826bd"><td class="memItemLeft" align="right" valign="top"><a id="a323c112c11500270be91b7cb353826bd"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>factor</b></td></tr>
-<tr class="separator:a323c112c11500270be91b7cb353826bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a9c1ce9ef61ac6513181b3a803a4e52"><td class="memItemLeft" align="right" valign="top"><a id="a8a9c1ce9ef61ac6513181b3a803a4e52"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>from_bit_per_samples</b> = 0</td></tr>
 <tr class="separator:a8a9c1ce9ef61ac6513181b3a803a4e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
