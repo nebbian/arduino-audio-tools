@@ -420,8 +420,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_buffered_stream.html">BufferedStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Arduino <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> supports operations on single characters. This is usually not the best way to push audio information, but we will support it anyway - by using a buffer. On reads: if the buffer is empty it gets refilled.  <a href="classaudio__tools_1_1_buffered_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_buffered_task_stream.html">BufferedTaskStream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A FreeRTOS task is filling the buffer from the indicated stream. Only to be used on the ESP32.  <a href="classaudio__tools_1_1_buffered_task_stream.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_buffered_window.html">BufferedWindow</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffered window function, so that we do not need to re-calculate the values.  <a href="classaudio__tools_1_1_buffered_window.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html">BufferRTOS</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer implementation which is using a FreeRTOS StreamBuffer. The default allocator uses psram is available.  <a href="classaudio__tools_1_1_buffer_r_t_o_s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_cached_volume_control.html">CachedVolumeControl</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">In order to optimize the processing time we cache the last input &amp; factor and recalculate the new factor only if the input has changed.  <a href="classaudio__tools_1_1_cached_volume_control.html#details">More...</a><br /></td></tr>
@@ -860,6 +866,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i_c_y_stream.html">ICYStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Icecast/Shoutcast Audio <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> which splits the data into metadata and audio data. The Audio data is provided via the regular stream functions. The metadata is handled with the help of the <a class="el" href="classaudio__tools_1_1_meta_data_i_c_y.html" title="Icecast/Shoutcast Metadata Handling. Metadata class which splits the data into audio and metadata....">MetaDataICY</a> state machine and provided via a callback method.  <a href="classaudio__tools_1_1_i_c_y_stream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i_c_y_stream_buffered.html">ICYStreamBuffered</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_i_c_y_stream.html" title="Icecast/Shoutcast Audio Stream which splits the data into metadata and audio data....">ICYStream</a> implementation for the ESP32 based on a FreeRTOS task This is a Icecast/Shoutcast Audio <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> which splits the data into metadata and audio data. The Audio data is provided via the regular stream functions. The metadata is handled with the help of the <a class="el" href="classaudio__tools_1_1_meta_data_i_c_y.html" title="Icecast/Shoutcast Metadata Handling. Metadata class which splits the data into audio and metadata....">MetaDataICY</a> state machine and provided via a callback method.  <a href="classaudio__tools_1_1_i_c_y_stream_buffered.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i_c_y_url_setup.html">ICYUrlSetup</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve icy-metaint from <a class="el" href="classaudio__tools_1_1_http_request.html" title="Simple API to process get, put, post, del http requests I tried to use Arduino HttpClient,...">HttpRequest</a> and execute metadata callbacks.  <a href="classaudio__tools_1_1_i_c_y_url_setup.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -935,6 +944,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_lock.html">Lock</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple RIA locking class for the ESP32 using _lock_t.  <a href="classaudio__tools_1_1_lock.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_lock_guard.html">LockGuard</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII implementaion using a <a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a>: Only a few microcontrollers provide lock guards, so I decided to roll my own solution where we can just use a dummy <a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a> implementation that does nothing for the cases where this is not needed.  <a href="classaudio__tools_1_1_lock_guard.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_logarithmic_volume_control.html">LogarithmicVolumeControl</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parametric Logarithmic volume control. Using the formula pow(b,input) * a - a, where b is b = pow(((1/ym)-1), 2) and a is a = 1.0 / (b - 1.0). The parameter ym is determining the steepness. See <a href="https://electronics.stackexchange.com/questions/304692/formula-for-logarithmic-audio-taper-pot">https://electronics.stackexchange.com/questions/304692/formula-for-logarithmic-audio-taper-pot</a>.  <a href="classaudio__tools_1_1_logarithmic_volume_control.html#details">More...</a><br /></td></tr>
@@ -1020,6 +1032,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_musical_notes.html">MusicalNotes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determination of the frequency of a music note.  <a href="classaudio__tools_1_1_musical_notes.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mutex.html">Mutex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a> implemntation using FreeRTOS.  <a href="classaudio__tools_1_1_mutex.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mutex_base.html">MutexBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty <a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a> implementation which does nothing.  <a href="classaudio__tools_1_1_mutex_base.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_nano___b_l_e__freq__info.html">Nano_BLE_freq_info</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping Frequency constants to available frequencies.  <a href="structaudio__tools_1_1_nano___b_l_e__freq__info.html#details">More...</a><br /></td></tr>
@@ -1158,6 +1176,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue_lock_free.html">QueueLockFree</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_lock.html" title="A simple RIA locking class for the ESP32 using _lock_t.">Lock</a> Free <a class="el" href="classaudio__tools_1_1_queue.html" title="FIFO Queue which is based on a List.">Queue</a>.  <a href="classaudio__tools_1_1_queue_lock_free.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue_r_t_o_s.html">QueueRTOS</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FIFO <a class="el" href="classaudio__tools_1_1_queue.html" title="FIFO Queue which is based on a List.">Queue</a> whch is based on the FreeRTOS queue API. The default allocator will allocate the memory from psram if available.  <a href="classaudio__tools_1_1_queue_r_t_o_s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue_stream.html">QueueStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with...">AudioStream</a> class which stores the data in a temporary queue buffer. The queue can be consumed e.g. by a callback function by calling readBytes();.  <a href="classaudio__tools_1_1_queue_stream.html#details">More...</a><br /></td></tr>
@@ -1358,11 +1379,20 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_str.html" title="A simple wrapper to provide string functions on char*. If the underlying char* is a const we do not a...">Str</a> which keeps the data on the heap. We grow the allocated memory only if the copy source is not fitting.  <a href="classaudio__tools_1_1_str_ext.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_synchronized_buffer.html">SynchronizedBuffer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper class that can turn any Buffer into a thread save implementation.  <a href="classaudio__tools_1_1_synchronized_buffer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_synchronized_n_buffer.html">SynchronizedNBuffer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_n_buffer.html" title="A lock free N buffer. If count=2 we create a DoubleBuffer, if count=3 a TripleBuffer etc.">NBuffer</a> which uses some RTOS queues to manage the available and filled buffers.  <a href="classaudio__tools_1_1_synchronized_n_buffer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_synthesizer.html">Synthesizer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple <a class="el" href="classaudio__tools_1_1_synthesizer.html" title="A simple Synthesizer which can generate sound having multiple keys pressed. The main purpose of this ...">Synthesizer</a> which can generate sound having multiple keys pressed. The main purpose of this class is managing the synthezizer channels.  <a href="classaudio__tools_1_1_synthesizer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__tools_1_1_synthesizer_key.html">SynthesizerKey</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arduino GPIO pin to note assossiation.  <a href="structaudio__tools_1_1_synthesizer_key.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_task.html">Task</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FreeRTOS task.  <a href="classaudio__tools_1_1_task.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_test_generator.html">TestGenerator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a test signal which is easy to check because the values are incremented or decremented by 1.  <a href="classaudio__tools_1_1_test_generator.html#details">More...</a><br /></td></tr>
@@ -1462,6 +1492,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html">URLStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the content of a URL as <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a>. We use the WiFi.h API.  <a href="classaudio__tools_1_1_u_r_l_stream.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_u_r_l_stream_buffered.html">URLStreamBuffered</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_u_r_l_stream.html" title="Represents the content of a URL as Stream. We use the WiFi.h API.">URLStream</a> implementation for the ESP32 based on a separate FreeRTOS task.  <a href="classaudio__tools_1_1_u_r_l_stream_buffered.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_variable_speed_ring_buffer.html">VariableSpeedRingBuffer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimized Buffer implementation for Pitch Shift. We try to interpolate the samples and restore the phase when the read pointer and write pointer overtake each other.  <a href="classaudio__tools_1_1_variable_speed_ring_buffer.html#details">More...</a><br /></td></tr>
@@ -1656,6 +1689,10 @@ typedef sdfat::SdSpiConfig&#160;</td><td class="memItemRight" valign="bottom"><b
 <tr class="memitem:a4faf021140b432b9c282f7cd72026390"><td class="memItemLeft" align="right" valign="top"><a id="a4faf021140b432b9c282f7cd72026390"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>SPDIFStream</b> = <a class="el" href="classaudio__tools_1_1_s_p_d_i_f_output.html">SPDIFOutput</a></td></tr>
 <tr class="separator:a4faf021140b432b9c282f7cd72026390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73d6ed323f5db62aed8229aba3bb7e3"><td class="memTemplParams" colspan="2"><a id="ab73d6ed323f5db62aed8229aba3bb7e3"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ab73d6ed323f5db62aed8229aba3bb7e3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SynchronizedBufferRTOS</b> = <a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html">BufferRTOS</a>&lt; T &gt;</td></tr>
+<tr class="separator:ab73d6ed323f5db62aed8229aba3bb7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26cc1d7714553c807f4592a48647bb2"><td class="memItemLeft" align="right" valign="top"><a id="ad26cc1d7714553c807f4592a48647bb2"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaudio__tools.html#ad26cc1d7714553c807f4592a48647bb2">TimerAlarmRepeatingDriver</a> = <a class="el" href="classaudio__tools_1_1_timer_alarm_repeating_driver_a_v_r.html">TimerAlarmRepeatingDriverAVR</a></td></tr>
 <tr class="memdesc:ad26cc1d7714553c807f4592a48647bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">use TimerAlarmRepeating! <br /></td></tr>
@@ -2085,7 +2122,7 @@ template&lt;typename T &gt; </td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a142a50ac852c3b35cdb5a39b10d7a53b"><td class="memItemLeft" align="right" valign="top"><a id="a142a50ac852c3b35cdb5a39b10d7a53b"></a>
-static BufferRTOS&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_buffer</b> {A2DP_BUFFER_SIZE * A2DP_BUFFER_COUNT, A2DP_BUFFER_SIZE, portMAX_DELAY, portMAX_DELAY}</td></tr>
+static <a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html">BufferRTOS</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>a2dp_buffer</b> {A2DP_BUFFER_SIZE * A2DP_BUFFER_COUNT, A2DP_BUFFER_SIZE, portMAX_DELAY, portMAX_DELAY}</td></tr>
 <tr class="separator:a142a50ac852c3b35cdb5a39b10d7a53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae49dcee0fc374b24fca8634e3f50a8a6"><td class="memItemLeft" align="right" valign="top"><a id="ae49dcee0fc374b24fca8634e3f50a8a6"></a>
 static <a class="el" href="classaudio__tools_1_1_a2_d_p_stream.html">A2DPStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>A2DPStream_self</b> =nullptr</td></tr>
@@ -2150,6 +2187,9 @@ tflite::ErrorReporter *&#160;</td><td class="memItemRight" valign="bottom"><b>er
 <tr class="memitem:a1657e5bc9760514c39cc563553f0b762"><td class="memItemLeft" align="right" valign="top"><a id="a1657e5bc9760514c39cc563553f0b762"></a>
 <a class="el" href="classaudio__tools_1_1_e_s_p_now_stream.html">ESPNowStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ESPNowStreamSelf</b> = nullptr</td></tr>
 <tr class="separator:a1657e5bc9760514c39cc563553f0b762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1d4d6d66ce6f6d24adee538c25961b5"><td class="memItemLeft" align="right" valign="top"><a id="ab1d4d6d66ce6f6d24adee538c25961b5"></a>
+static <a class="el" href="classaudio__tools_1_1_mutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fft_mux</b></td></tr>
+<tr class="separator:ab1d4d6d66ce6f6d24adee538c25961b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e62d1f5b8b395a84e20b61ab2bd79ac"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structaudio__tools_1_1_nano___b_l_e__freq__info.html">Nano_BLE_freq_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>freq_table</b> []</td></tr>
 <tr class="separator:a0e62d1f5b8b395a84e20b61ab2bd79ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c8c26908307dcc9ed5243051454e9ed"><td class="memItemLeft" align="right" valign="top"><a id="a1c8c26908307dcc9ed5243051454e9ed"></a>

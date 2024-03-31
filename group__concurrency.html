@@ -73,11 +73,35 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_buffer_r_t_o_s.html">BufferRTOS&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer implementation which is using a FreeRTOS StreamBuffer. The default allocator uses psram is available.  <a href="classaudio__tools_1_1_buffer_r_t_o_s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_lock.html">Lock</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple RIA locking class for the ESP32 using _lock_t.  <a href="classaudio__tools_1_1_lock.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_lock_guard.html">LockGuard</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII implementaion using a <a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a>: Only a few microcontrollers provide lock guards, so I decided to roll my own solution where we can just use a dummy <a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a> implementation that does nothing for the cases where this is not needed.  <a href="classaudio__tools_1_1_lock_guard.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mutex.html">Mutex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a> implemntation using FreeRTOS.  <a href="classaudio__tools_1_1_mutex.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_mutex_base.html">MutexBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty <a class="el" href="classaudio__tools_1_1_mutex.html" title="Mutex implemntation using FreeRTOS.">Mutex</a> implementation which does nothing.  <a href="classaudio__tools_1_1_mutex_base.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue_lock_free.html">QueueLockFree&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_lock.html" title="A simple RIA locking class for the ESP32 using _lock_t.">Lock</a> Free <a class="el" href="classaudio__tools_1_1_queue.html" title="FIFO Queue which is based on a List.">Queue</a>.  <a href="classaudio__tools_1_1_queue_lock_free.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_queue_r_t_o_s.html">QueueRTOS&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FIFO <a class="el" href="classaudio__tools_1_1_queue.html" title="FIFO Queue which is based on a List.">Queue</a> whch is based on the FreeRTOS queue API. The default allocator will allocate the memory from psram if available.  <a href="classaudio__tools_1_1_queue_r_t_o_s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_synchronized_buffer.html">SynchronizedBuffer&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper class that can turn any Buffer into a thread save implementation.  <a href="classaudio__tools_1_1_synchronized_buffer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_synchronized_n_buffer.html">SynchronizedNBuffer&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classaudio__tools_1_1_n_buffer.html" title="A lock free N buffer. If count=2 we create a DoubleBuffer, if count=3 a TripleBuffer etc.">NBuffer</a> which uses some RTOS queues to manage the available and filled buffers.  <a href="classaudio__tools_1_1_synchronized_n_buffer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_task.html">Task</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FreeRTOS task.  <a href="classaudio__tools_1_1_task.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
