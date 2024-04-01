@@ -382,7 +382,7 @@ $(function() {
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordtype">size_t</span> frame_size = <span class="keyword">sizeof</span>(frame);</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="comment">// process all samples</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">while</span> (idx &lt; frames) {</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">while</span> (idx &lt; frames - 1) {</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; info.channels; ch++) {</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        T result = getValue&lt;T&gt;(data, idx, ch);</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        frame[ch] = result;</div>
@@ -412,18 +412,18 @@ $(function() {
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    setupLastSamples&lt;T&gt;(data, frames - 1);</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    idx -= frames;</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="comment">// returns requested bytes to avoid rewriting of processed bytes</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">return</span> bytes;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">return</span> frames * info.channels * <span class="keyword">sizeof</span>(T);</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  }</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00402"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_resample_stream.html#af670780acc7db5511153adf62a68a362">  402</a></span>&#160;  T <a class="code" href="classaudio__tools_1_1_resample_stream.html#af670780acc7db5511153adf62a68a362">getValue</a>(T *data, <span class="keywordtype">float</span> frame_idx, <span class="keywordtype">int</span> channel) {</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="comment">// interpolate value</span></div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordtype">int</span> frame_idx1 = frame_idx;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordtype">int</span> frame_idx1 = frame_idx + 1;</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordtype">int</span> frame_idx0 = frame_idx1 - 1;</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    T val0 = lookup&lt;T&gt;(data, frame_idx0, channel);</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    T val1 = lookup&lt;T&gt;(data, frame_idx1, channel);</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordtype">float</span> result = <a class="code" href="namespaceaudio__tools.html#a2320e2f14f2ac363a4eb3fafd8c5afa7">mapFloat</a>(frame_idx, frame_idx1, frame_idx0, val0, val1);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordtype">float</span> result = <a class="code" href="namespaceaudio__tools.html#a2320e2f14f2ac363a4eb3fafd8c5afa7">mapFloat</a>(frame_idx, frame_idx1, frame_idx0, val1, val0);</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)round(result);</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  }</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
