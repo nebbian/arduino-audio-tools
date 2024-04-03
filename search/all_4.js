@@ -29,7 +29,7 @@ var searchData=
   ['del_333',['del',['../classaudio__tools_1_1_http_request.html#af8cd2e3982f338b00a0ec7e4b6733728',1,'audio_tools::HttpRequest']]],
   ['delay_334',['Delay',['../classaudio__tools_1_1_delay.html',1,'audio_tools']]],
   ['delay_335',['delay',['../namespaceaudio__tools.html#a7f2dfce1046bdd2a2b753643726c2346',1,'audio_tools']]],
-  ['delay_336',['Delay',['../classaudio__tools_1_1_delay.html#a08a40da972e55ecd4498328ba78b4eaf',1,'audio_tools::Delay']]],
+  ['delay_336',['Delay',['../classaudio__tools_1_1_delay.html#a4518a810a798d6e2cd1e9638733b98b8',1,'audio_tools::Delay']]],
   ['delaybuffer_337',['delayBuffer',['../classaudio__tools_1_1_delay_effect_base.html#ab5acc4a7b1ce6abce4bbdbf24bbe2f6c',1,'audio_tools::DelayEffectBase']]],
   ['delayeffectbase_338',['DelayEffectBase',['../classaudio__tools_1_1_delay_effect_base.html',1,'DelayEffectBase'],['../classaudio__tools_1_1_delay_effect_base.html#ade1e18b102a83c30f8b850bd3f17df9d',1,'audio_tools::DelayEffectBase::DelayEffectBase()']]],
   ['delayincrement_339',['delayIncrement',['../classaudio__tools_1_1_simple_delay.html#a2139f41832ac5fbbdc9fee046998c127',1,'audio_tools::SimpleDelay']]],
