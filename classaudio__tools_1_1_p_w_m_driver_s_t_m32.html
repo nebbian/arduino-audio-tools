@@ -114,6 +114,11 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>framesPerSecond</
 <tr class="memitem:a7b61d626c5acc93c15defa4e1a16bfb4"><td class="memItemLeft" align="right" valign="top"><a id="a7b61d626c5acc93c15defa4e1a16bfb4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isTimerStarted</b> ()</td></tr>
 <tr class="separator:a7b61d626c5acc93c15defa4e1a16bfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51d2a8fe7dc25e44e9ab70cc56115634"><td class="memItemLeft" align="right" valign="top"><a id="a51d2a8fe7dc25e44e9ab70cc56115634"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#a51d2a8fe7dc25e44e9ab70cc56115634">setBuffer</a> (<a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; uint8_t &gt; *buffer)</td></tr>
+<tr class="memdesc:a51d2a8fe7dc25e44e9ab70cc56115634"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can assign your own custom buffer impelementation: must be allocated on the heap and will be cleaned up by this class <br  />
+ <br /></td></tr>
+<tr class="separator:a51d2a8fe7dc25e44e9ab70cc56115634"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a565686a76d896687f9d055c963f215b8"><td class="memItemLeft" align="right" valign="top"><a id="a565686a76d896687f9d055c963f215b8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_s_t_m32.html#a565686a76d896687f9d055c963f215b8">setPWMTimer</a> (HardwareTimer &amp;t)</td></tr>
 <tr class="memdesc:a565686a76d896687f9d055c963f215b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the timer which is used to generate the PWM signal. <br /></td></tr>
@@ -134,6 +139,9 @@ Protected Member Functions</h2></td></tr>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#ab384cb1f6477fbea20479be533e2c9ec">decimation</a> ()</td></tr>
 <tr class="memdesc:ab384cb1f6477fbea20479be533e2c9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decimation factor to reduce the sample rate. <br /></td></tr>
 <tr class="separator:ab384cb1f6477fbea20479be533e2c9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc35c9143ba8ca7f8aca7d74f42982b1"><td class="memItemLeft" align="right" valign="top"><a id="acc35c9143ba8ca7f8aca7d74f42982b1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteBuffer</b> ()</td></tr>
+<tr class="separator:acc35c9143ba8ca7f8aca7d74f42982b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13eb726740a261b50f38fb0301812631"><td class="memItemLeft" align="right" valign="top"><a id="a13eb726740a261b50f38fb0301812631"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#a13eb726740a261b50f38fb0301812631">effectiveOutputSampleRate</a> ()</td></tr>
 <tr class="memdesc:a13eb726740a261b50f38fb0301812631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the effective sample rate. <br /></td></tr>
