@@ -23,7 +23,7 @@ var searchData=
   ['eqstate_384',['EQSTATE',['../structaudio__tools_1_1_equilizer3_bands_1_1_e_q_s_t_a_t_e.html',1,'audio_tools::Equilizer3Bands']]],
   ['equals_385',['equals',['../classaudio__tools_1_1_str.html#a121dcd3a7cd975ef3aae9fe71ae7fa3c',1,'audio_tools::Str::equals()'],['../structaudio__tools_1_1_audio_info.html#a13af68cdfaa4c55e22a600f1a0e75e14',1,'audio_tools::AudioInfo::equals(AudioInfo alt)']]],
   ['equalsexsamplerate_386',['equalsExSampleRate',['../structaudio__tools_1_1_audio_info.html#a7df9e0539cd3b887e16794a425cc0b1d',1,'audio_tools::AudioInfo']]],
-  ['equalsignorecase_387',['equalsIgnoreCase',['../classaudio__tools_1_1_str.html#a4e7ea003fddd17648db4b62572e93b8d',1,'audio_tools::Str']]],
+  ['equalsignorecase_387',['equalsIgnoreCase',['../classaudio__tools_1_1_str.html#a3c4aa3bd42775b444d80f6f57cc3eeae',1,'audio_tools::Str']]],
   ['equilizer_388',['Equilizer',['../group__equilizer.html',1,'']]],
   ['equilizer3bands_389',['Equilizer3Bands',['../classaudio__tools_1_1_equilizer3_bands.html',1,'audio_tools']]],
   ['error_390',['error',['../classaudio__tools_1_1_delay_effect_base.html#a7a3172cc98e93d8eadfb9ab30373799e',1,'audio_tools::DelayEffectBase']]],

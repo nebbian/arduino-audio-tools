@@ -381,60 +381,66 @@ $(function() {
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            p_allocator = &amp;allocator;</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        }</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        Node first; <span class="comment">// empty dummy first node which which is always before the first data node </span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        Node last; <span class="comment">// empty dummy last node which which is always after the last data node </span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordtype">size_t</span> record_count=0;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        Allocator *p_allocator = &amp;DefaultAllocator;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        Node* createNode() {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="preprocessor">#if USE_ALLOCATOR</span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            Node *node = (Node*) p_allocator-&gt;<a class="code" href="classaudio__tools_1_1_allocator.html#a61444acca87cb94cc35f366fa09bcc46">allocate</a>(<span class="keyword">sizeof</span>(Node));<span class="comment">// new Node();</span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            Node *node = <span class="keyword">new</span> Node();</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="keywordflow">return</span> node;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordtype">void</span> deleteNode(Node* p_delete){</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">#if USE_ALLOCATOR</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            p_allocator-&gt;free(p_delete); <span class="comment">//delete p_delete;</span></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <span class="keyword">delete</span> p_delete;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        }</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordtype">void</span> link(){</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            first.next = &amp;last;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            last.prior = &amp;first;</div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_list.html#a94c484819f66b605343298653d4b1d07">  324</a></span>&#160;        T&amp; <a class="code" href="classaudio__tools_1_1_list.html#a94c484819f66b605343298653d4b1d07">back</a>() {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="keywordflow">return</span> *rbegin();</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        Node first; <span class="comment">// empty dummy first node which which is always before the first data node </span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        Node last; <span class="comment">// empty dummy last node which which is always after the last data node </span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordtype">size_t</span> record_count=0;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <a class="code" href="classaudio__tools_1_1_allocator.html">Allocator</a> *p_allocator = &amp;DefaultAllocator;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        Node* createNode() {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="preprocessor">#if USE_ALLOCATOR</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            Node *node = (Node*) p_allocator-&gt;<a class="code" href="classaudio__tools_1_1_allocator.html#a61444acca87cb94cc35f366fa09bcc46">allocate</a>(<span class="keyword">sizeof</span>(Node));<span class="comment">// new Node();</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            Node *node = <span class="keyword">new</span> Node();</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        }</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordtype">void</span> deleteNode(Node* p_delete){</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="preprocessor">#if USE_ALLOCATOR</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            p_allocator-&gt;<a class="code" href="classaudio__tools_1_1_allocator.html#a9c3e4072854fea7a8be289d17c6390fc">free</a>(p_delete); <span class="comment">//delete p_delete;</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keyword">delete</span> p_delete;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        }</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        Node* lastDataNode(){</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            <span class="keywordflow">return</span> last.prior;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        Node* firstDataNode(){</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="keywordflow">return</span> first.next;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        }</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordtype">void</span> validate() {</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            assert(first.next!=<span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            assert(last.prior!=<span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <span class="keywordflow">if</span> (empty()){</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                assert(first.next = &amp;last);</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                assert(last.prior = &amp;first);</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            }</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        }</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;};</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;}</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordtype">void</span> link(){</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            first.next = &amp;last;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            last.prior = &amp;first;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        }</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        Node* lastDataNode(){</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            <span class="keywordflow">return</span> last.prior;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        Node* firstDataNode(){</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="keywordflow">return</span> first.next;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="keywordtype">void</span> validate() {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            assert(first.next!=<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            assert(last.prior!=<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            <span class="keywordflow">if</span> (empty()){</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                assert(first.next = &amp;last);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                assert(last.prior = &amp;first);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;};</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;}</div>
 <div class="ttc" id="aclassaudio__tools_1_1_allocator_html"><div class="ttname"><a href="classaudio__tools_1_1_allocator.html">audio_tools::Allocator</a></div><div class="ttdoc">Memory allocateator which uses malloc.</div><div class="ttdef"><b>Definition:</b> Allocator.h:22</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_allocator_html_a61444acca87cb94cc35f366fa09bcc46"><div class="ttname"><a href="classaudio__tools_1_1_allocator.html#a61444acca87cb94cc35f366fa09bcc46">audio_tools::Allocator::allocate</a></div><div class="ttdeci">virtual void * allocate(size_t size)</div><div class="ttdoc">Allocates memory.</div><div class="ttdef"><b>Definition:</b> Allocator.h:62</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_allocator_html_a9c3e4072854fea7a8be289d17c6390fc"><div class="ttname"><a href="classaudio__tools_1_1_allocator.html#a9c3e4072854fea7a8be289d17c6390fc">audio_tools::Allocator::free</a></div><div class="ttdeci">virtual void free(void *memory)</div><div class="ttdoc">frees memory</div><div class="ttdef"><b>Definition:</b> Allocator.h:74</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_list_1_1_iterator_html"><div class="ttname"><a href="classaudio__tools_1_1_list_1_1_iterator.html">audio_tools::List::Iterator</a></div><div class="ttdef"><b>Definition:</b> List.h:26</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_list_html"><div class="ttname"><a href="classaudio__tools_1_1_list.html">audio_tools::List</a></div><div class="ttdoc">Double linked list.</div><div class="ttdef"><b>Definition:</b> List.h:18</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_list_html_a0c550a11ee3af45d1b60d03af0738ba9"><div class="ttname"><a href="classaudio__tools_1_1_list.html#a0c550a11ee3af45d1b60d03af0738ba9">audio_tools::List::List</a></div><div class="ttdeci">List(Allocator &amp;allocator=DefaultAllocator)</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> List.h:103</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_list_html_a94c484819f66b605343298653d4b1d07"><div class="ttname"><a href="classaudio__tools_1_1_list.html#a94c484819f66b605343298653d4b1d07">audio_tools::List::back</a></div><div class="ttdeci">T &amp; back()</div><div class="ttdoc">Provides the last element.</div><div class="ttdef"><b>Definition:</b> List.h:324</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_list_html_acd79405491ac84e17f821734d0e74022"><div class="ttname"><a href="classaudio__tools_1_1_list.html#acd79405491ac84e17f821734d0e74022">audio_tools::List::List</a></div><div class="ttdeci">List(List &amp;ref)=default</div><div class="ttdoc">copy constructor</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_list_html_adaac7ba81a77ef31f25f5cc9536e0aff"><div class="ttname"><a href="classaudio__tools_1_1_list.html#adaac7ba81a77ef31f25f5cc9536e0aff">audio_tools::List::List</a></div><div class="ttdeci">List(const T(&amp;a)[N], Allocator &amp;allocator=DefaultAllocator)</div><div class="ttdoc">Constructor using array.</div><div class="ttdef"><b>Definition:</b> List.h:112</div></div>
 <div class="ttc" id="aclassstd_1_1initializer__list_html"><div class="ttname"><a href="classstd_1_1initializer__list.html">std::initializer_list</a></div><div class="ttdoc">Custom initializer_list if not provided by the compiler.</div><div class="ttdef"><b>Definition:</b> InitializerList.h:14</div></div>

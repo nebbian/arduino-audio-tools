@@ -11,7 +11,7 @@ var searchData=
   ['envelopefilter_2356',['EnvelopeFilter',['../classaudio__tools_1_1_envelope_filter.html#a9d9070a81ff12576f6b4aa853e7c5dd2',1,'audio_tools::EnvelopeFilter']]],
   ['equals_2357',['equals',['../classaudio__tools_1_1_str.html#a121dcd3a7cd975ef3aae9fe71ae7fa3c',1,'audio_tools::Str::equals()'],['../structaudio__tools_1_1_audio_info.html#a13af68cdfaa4c55e22a600f1a0e75e14',1,'audio_tools::AudioInfo::equals(AudioInfo alt)']]],
   ['equalsexsamplerate_2358',['equalsExSampleRate',['../structaudio__tools_1_1_audio_info.html#a7df9e0539cd3b887e16794a425cc0b1d',1,'audio_tools::AudioInfo']]],
-  ['equalsignorecase_2359',['equalsIgnoreCase',['../classaudio__tools_1_1_str.html#a4e7ea003fddd17648db4b62572e93b8d',1,'audio_tools::Str']]],
+  ['equalsignorecase_2359',['equalsIgnoreCase',['../classaudio__tools_1_1_str.html#a3c4aa3bd42775b444d80f6f57cc3eeae',1,'audio_tools::Str']]],
   ['error_5fcallback_2360',['error_callback',['../classaudio__tools_1_1_f_l_a_c_decoder.html#ae0a385215d06bca05d1212caa0d0fa23',1,'audio_tools::FLACDecoder']]],
   ['evaluate_2361',['evaluate',['../classaudio__tools_1_1_tf_lite_micro_speech_recognize_commands.html#a181badeaa9a17a4c8e58d54bf6f6e105',1,'audio_tools::TfLiteMicroSpeechRecognizeCommands']]],
   ['executecallback_2362',['executeCallback',['../classaudio__tools_1_1_i_c_y_url_setup.html#aa338f5db0a886ca8ebd39680c5566246',1,'audio_tools::ICYUrlSetup']]],
