@@ -290,15 +290,14 @@ var searchData=
   ['streamheader_1297',['streamHeader',['../classaudio__tools_1_1_a_v_i_decoder.html#af2d2d9fa75b7f5d48b2cf38ce5c48f65',1,'audio_tools::AVIDecoder']]],
   ['streamingdecoder_1298',['StreamingDecoder',['../classaudio__tools_1_1_streaming_decoder.html',1,'audio_tools']]],
   ['streamingdecoderadapter_1299',['StreamingDecoderAdapter',['../classaudio__tools_1_1_streaming_decoder_adapter.html',1,'audio_tools']]],
-  ['strext_1300',['StrExt',['../classaudio__tools_1_1_str_ext.html',1,'StrExt'],['../classaudio__tools_1_1_str_ext.html#a7dd6f865b8ea29561f3fd8f3230ea39c',1,'audio_tools::StrExt::StrExt(StrExt &amp;source)'],['../classaudio__tools_1_1_str_ext.html#a8ffe03cbb62e66c42a3b813c951ab5d9',1,'audio_tools::StrExt::StrExt(StrExt &amp;&amp;obj)']]],
+  ['strext_1300',['StrExt',['../classaudio__tools_1_1_str_ext.html',1,'StrExt'],['../classaudio__tools_1_1_str_ext.html#a8ffe03cbb62e66c42a3b813c951ab5d9',1,'audio_tools::StrExt::StrExt(StrExt &amp;&amp;obj)'],['../classaudio__tools_1_1_str_ext.html#a7dd6f865b8ea29561f3fd8f3230ea39c',1,'audio_tools::StrExt::StrExt(StrExt &amp;source)'],['../classaudio__tools_1_1_str_ext.html#ace461c2a091410d79bf681e9a0a2505b',1,'audio_tools::StrExt::StrExt(Str &amp;source)']]],
   ['strings_1301',['Strings',['../group__string.html',1,'']]],
   ['strnlength_1302',['strnlength',['../namespaceaudio__tools.html#a21d69d9ea879f2a5d9091367871bb28c',1,'audio_tools']]],
   ['substring_1303',['substring',['../classaudio__tools_1_1_str.html#ad991390740b09c31bf7226bddbaccbed',1,'audio_tools::Str::substring(Str &amp;from, int start, int end)'],['../classaudio__tools_1_1_str.html#a3f6497cf6cccccd073dd6cf73f9273f3',1,'audio_tools::Str::substring(const char *from, int start, int end)']]],
-  ['swap_1304',['swap',['../classaudio__tools_1_1_str_ext.html#ac4ecba2dc83cbb88e9e7c8d62f76eb6b',1,'audio_tools::StrExt']]],
-  ['swing_1305',['swing',['../classaudio__tools_1_1_simple_chorus.html#a97f5a92ad2c16f85ca305be30ba8477b',1,'audio_tools::SimpleChorus']]],
-  ['synchronizedbuffer_1306',['SynchronizedBuffer',['../classaudio__tools_1_1_synchronized_buffer.html',1,'audio_tools']]],
-  ['synchronizednbuffer_1307',['SynchronizedNBuffer',['../classaudio__tools_1_1_synchronized_n_buffer.html',1,'audio_tools']]],
-  ['synchronizednbuffer_3c_20uint8_5ft_20_3e_1308',['SynchronizedNBuffer&lt; uint8_t &gt;',['../classaudio__tools_1_1_synchronized_n_buffer.html',1,'audio_tools']]],
-  ['synthesizer_1309',['Synthesizer',['../classaudio__tools_1_1_synthesizer.html',1,'audio_tools']]],
-  ['synthesizerkey_1310',['SynthesizerKey',['../structaudio__tools_1_1_synthesizer_key.html',1,'audio_tools']]]
+  ['swing_1304',['swing',['../classaudio__tools_1_1_simple_chorus.html#a97f5a92ad2c16f85ca305be30ba8477b',1,'audio_tools::SimpleChorus']]],
+  ['synchronizedbuffer_1305',['SynchronizedBuffer',['../classaudio__tools_1_1_synchronized_buffer.html',1,'audio_tools']]],
+  ['synchronizednbuffer_1306',['SynchronizedNBuffer',['../classaudio__tools_1_1_synchronized_n_buffer.html',1,'audio_tools']]],
+  ['synchronizednbuffer_3c_20uint8_5ft_20_3e_1307',['SynchronizedNBuffer&lt; uint8_t &gt;',['../classaudio__tools_1_1_synchronized_n_buffer.html',1,'audio_tools']]],
+  ['synthesizer_1308',['Synthesizer',['../classaudio__tools_1_1_synthesizer.html',1,'audio_tools']]],
+  ['synthesizerkey_1309',['SynthesizerKey',['../structaudio__tools_1_1_synthesizer_key.html',1,'audio_tools']]]
 ];

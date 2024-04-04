@@ -100,7 +100,8 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>StrExt</b> (int initialAllocatedLength)</td></tr>
 <tr class="separator:ae18161cd0d8a298ae6a46fe306169ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace461c2a091410d79bf681e9a0a2505b"><td class="memItemLeft" align="right" valign="top"><a id="ace461c2a091410d79bf681e9a0a2505b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>StrExt</b> (<a class="el" href="classaudio__tools_1_1_str.html">Str</a> &amp;source)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_str_ext.html#ace461c2a091410d79bf681e9a0a2505b">StrExt</a> (<a class="el" href="classaudio__tools_1_1_str.html">Str</a> &amp;source)</td></tr>
+<tr class="memdesc:ace461c2a091410d79bf681e9a0a2505b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert <a class="el" href="classaudio__tools_1_1_str.html" title="A simple wrapper to provide string functions on char*. If the underlying char* is a const we do not a...">Str</a> to <a class="el" href="classaudio__tools_1_1_str_ext.html" title="Str which keeps the data on the heap. We grow the allocated memory only if the copy source is not fit...">StrExt</a>. <br /></td></tr>
 <tr class="separator:ace461c2a091410d79bf681e9a0a2505b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ffe03cbb62e66c42a3b813c951ab5d9"><td class="memItemLeft" align="right" valign="top"><a id="a8ffe03cbb62e66c42a3b813c951ab5d9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_str_ext.html#a8ffe03cbb62e66c42a3b813c951ab5d9">StrExt</a> (<a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a> &amp;&amp;obj)</td></tr>
@@ -140,10 +141,10 @@ virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class
 <tr class="memitem:afe3508751beacbe2b673ebe46a6d2539"><td class="memItemLeft" align="right" valign="top"><a id="afe3508751beacbe2b673ebe46a6d2539"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>capacity</b> ()</td></tr>
 <tr class="separator:afe3508751beacbe2b673ebe46a6d2539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae048282c7011eedc2e0492f6421ea73"><td class="memItemLeft" align="right" valign="top"><a id="aae048282c7011eedc2e0492f6421ea73"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_str.html#aae048282c7011eedc2e0492f6421ea73">clear</a> ()</td></tr>
-<tr class="memdesc:aae048282c7011eedc2e0492f6421ea73"><td class="mdescLeft">&#160;</td><td class="mdescRight">clears the string by setting the terminating 0 at the beginning <br /></td></tr>
-<tr class="separator:aae048282c7011eedc2e0492f6421ea73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7cb2065b88d21ac4ad05bc997ecf82"><td class="memItemLeft" align="right" valign="top"><a id="aee7cb2065b88d21ac4ad05bc997ecf82"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_str_ext.html#aee7cb2065b88d21ac4ad05bc997ecf82">clear</a> () override</td></tr>
+<tr class="memdesc:aee7cb2065b88d21ac4ad05bc997ecf82"><td class="mdescLeft">&#160;</td><td class="mdescRight">clears the string by setting the terminating 0 at the beginning <br /></td></tr>
+<tr class="separator:aee7cb2065b88d21ac4ad05bc997ecf82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72c701b627c222f397e4d2e38ab310b5"><td class="memItemLeft" align="right" valign="top"><a id="a72c701b627c222f397e4d2e38ab310b5"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_str.html#a72c701b627c222f397e4d2e38ab310b5">contains</a> (const char *str)</td></tr>
 <tr class="memdesc:a72c701b627c222f397e4d2e38ab310b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if the string contains a substring <br /></td></tr>
@@ -362,8 +363,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classaudio__tools_1_1_str.html">Str</a> &amp;str)</td></tr>
 <tr class="separator:ae1341851209a6de36c906c775bc42b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4ecba2dc83cbb88e9e7c8d62f76eb6b"><td class="memItemLeft" align="right" valign="top"><a id="ac4ecba2dc83cbb88e9e7c8d62f76eb6b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_str_ext.html#ac4ecba2dc83cbb88e9e7c8d62f76eb6b">swap</a> (<a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a> &amp;other)</td></tr>
-<tr class="memdesc:ac4ecba2dc83cbb88e9e7c8d62f76eb6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the content with other. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a> &amp;other)</td></tr>
 <tr class="separator:ac4ecba2dc83cbb88e9e7c8d62f76eb6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a717798b8ae5a730ac320e99a71d72522"><td class="memItemLeft" align="right" valign="top"><a id="a717798b8ae5a730ac320e99a71d72522"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_str.html#a717798b8ae5a730ac320e99a71d72522">toDouble</a> ()</td></tr>
@@ -414,6 +414,9 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>charToInt</b> (char c
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_str_ext.html#a0c23107d9d96131d32a64d230bbedf06">grow</a> (int newMaxLen)</td></tr>
 <tr class="memdesc:a0c23107d9d96131d32a64d230bbedf06"><td class="mdescLeft">&#160;</td><td class="mdescRight">only supported in subclasses <br /></td></tr>
 <tr class="separator:a0c23107d9d96131d32a64d230bbedf06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76e2976d33f2a2c0c6d584ce6c71246"><td class="memItemLeft" align="right" valign="top"><a id="ad76e2976d33f2a2c0c6d584ce6c71246"></a>
+<a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>move</b> (<a class="el" href="classaudio__tools_1_1_str_ext.html">StrExt</a> &amp;other)</td></tr>
+<tr class="separator:ad76e2976d33f2a2c0c6d584ce6c71246"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c2d6434001de56699e182fe6cdfaa3f"><td class="memItemLeft" align="right" valign="top"><a id="a8c2d6434001de56699e182fe6cdfaa3f"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>strToBin</b> (char *pString)</td></tr>
 <tr class="separator:a8c2d6434001de56699e182fe6cdfaa3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
