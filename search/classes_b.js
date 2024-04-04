@@ -14,7 +14,7 @@ var searchData=
   ['linearvolumecontrol_1862',['LinearVolumeControl',['../classaudio__tools_1_1_linear_volume_control.html',1,'audio_tools']]],
   ['list_1863',['List',['../classaudio__tools_1_1_list.html',1,'audio_tools']]],
   ['list_3c_20audio_5ftools_3a_3adynamicmemorystream_3a_3adatanode_20_2a_20_3e_1864',['List&lt; audio_tools::DynamicMemoryStream::DataNode * &gt;',['../classaudio__tools_1_1_list.html',1,'audio_tools']]],
-  ['list_3c_20audio_5ftools_3a_3ahttpheaderline_20_3e_1865',['List&lt; audio_tools::HttpHeaderLine &gt;',['../classaudio__tools_1_1_list.html',1,'audio_tools']]],
+  ['list_3c_20audio_5ftools_3a_3ahttpheaderline_20_2a_20_3e_1865',['List&lt; audio_tools::HttpHeaderLine * &gt;',['../classaudio__tools_1_1_list.html',1,'audio_tools']]],
   ['list_3c_20string_20_3e_1866',['List&lt; String &gt;',['../classaudio__tools_1_1_list.html',1,'audio_tools']]],
   ['lock_1867',['Lock',['../classaudio__tools_1_1_lock.html',1,'audio_tools']]],
   ['lockguard_1868',['LockGuard',['../classaudio__tools_1_1_lock_guard.html',1,'audio_tools']]],
