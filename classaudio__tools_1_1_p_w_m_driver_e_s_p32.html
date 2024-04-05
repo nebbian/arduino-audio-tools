@@ -116,14 +116,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isTimerStarted</b> ()
 <tr class="memitem:af1f87501a17f593eef617aed42aac57a"><td class="memItemLeft" align="right" valign="top"><a id="af1f87501a17f593eef617aed42aac57a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>logPins</b> ()</td></tr>
 <tr class="separator:af1f87501a17f593eef617aed42aac57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd2fecd9cd9705ac26cf1a2c4f8398de"><td class="memItemLeft" align="right" valign="top"><a id="acd2fecd9cd9705ac26cf1a2c4f8398de"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#acd2fecd9cd9705ac26cf1a2c4f8398de">pwmWrite</a> (int channel, int value)</td></tr>
-<tr class="memdesc:acd2fecd9cd9705ac26cf1a2c4f8398de"><td class="mdescLeft">&#160;</td><td class="mdescRight">write a pwm value to the indicated channel. The max value depends on the resolution <br /></td></tr>
+<tr class="memitem:acd2fecd9cd9705ac26cf1a2c4f8398de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#acd2fecd9cd9705ac26cf1a2c4f8398de">pwmWrite</a> (int channel, int value)</td></tr>
 <tr class="separator:acd2fecd9cd9705ac26cf1a2c4f8398de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51d2a8fe7dc25e44e9ab70cc56115634"><td class="memItemLeft" align="right" valign="top"><a id="a51d2a8fe7dc25e44e9ab70cc56115634"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#a51d2a8fe7dc25e44e9ab70cc56115634">setBuffer</a> (<a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; uint8_t &gt; *buffer)</td></tr>
-<tr class="memdesc:a51d2a8fe7dc25e44e9ab70cc56115634"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can assign your own custom buffer impelementation: must be allocated on the heap and will be cleaned up by this class <br  />
- <br /></td></tr>
+<tr class="memitem:a51d2a8fe7dc25e44e9ab70cc56115634"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#a51d2a8fe7dc25e44e9ab70cc56115634">setBuffer</a> (<a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; uint8_t &gt; *buffer)</td></tr>
 <tr class="separator:a51d2a8fe7dc25e44e9ab70cc56115634"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9d89f49874ec6da1534423c364453bf"><td class="memItemLeft" align="right" valign="top"><a id="ab9d89f49874ec6da1534423c364453bf"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#ab9d89f49874ec6da1534423c364453bf">setupPWM</a> ()</td></tr>
@@ -133,9 +128,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#adba588f4c4041836e56c7ffb61a04764">setupTimer</a> ()</td></tr>
 <tr class="memdesc:adba588f4c4041836e56c7ffb61a04764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup ESP32 timer with callback. <br /></td></tr>
 <tr class="separator:adba588f4c4041836e56c7ffb61a04764"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac70c6a1420e03c6e8c938188c8b7dd56"><td class="memItemLeft" align="right" valign="top"><a id="ac70c6a1420e03c6e8c938188c8b7dd56"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#ac70c6a1420e03c6e8c938188c8b7dd56">startTimer</a> ()</td></tr>
-<tr class="memdesc:ac70c6a1420e03c6e8c938188c8b7dd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">when we get the first write -&gt; we activate the timer to start with the output of data <br /></td></tr>
+<tr class="memitem:ac70c6a1420e03c6e8c938188c8b7dd56"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#ac70c6a1420e03c6e8c938188c8b7dd56">startTimer</a> ()</td></tr>
 <tr class="separator:ac70c6a1420e03c6e8c938188c8b7dd56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eeec7b20268d0e62fe9a463132505e9"><td class="memItemLeft" align="right" valign="top"><a id="a2eeec7b20268d0e62fe9a463132505e9"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>underflowsPerSecond</b> ()</td></tr>
@@ -164,9 +157,7 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_p_w_m_driver_e_s_p32.html#a630cb46e9a0636a8f424157ae3c13bf5">frequency</a> (int resolution)</td></tr>
 <tr class="memdesc:a630cb46e9a0636a8f424157ae3c13bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">determiens the PWM frequency based on the requested resolution <br /></td></tr>
 <tr class="separator:a630cb46e9a0636a8f424157ae3c13bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3bab74611c4c6d7e2334036506444ad"><td class="memItemLeft" align="right" valign="top"><a id="ac3bab74611c4c6d7e2334036506444ad"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#ac3bab74611c4c6d7e2334036506444ad">isDecimateActive</a> ()</td></tr>
-<tr class="memdesc:ac3bab74611c4c6d7e2334036506444ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The requested sampling rate is too hight: we only process half of the samples so we can half the sampling rate. <br /></td></tr>
+<tr class="memitem:ac3bab74611c4c6d7e2334036506444ad"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#ac3bab74611c4c6d7e2334036506444ad">isDecimateActive</a> ()</td></tr>
 <tr class="separator:ac3bab74611c4c6d7e2334036506444ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a685bbafe8bb54cde1660bf9300eef7bf"><td class="memItemLeft" align="right" valign="top"><a id="a685bbafe8bb54cde1660bf9300eef7bf"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>maxChannels</b> ()</td></tr>
@@ -245,7 +236,128 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>underflow_per_sec
 <div class="textblock"><p>Audio output to PWM pins for the ESP32. The ESP32 supports up to 16 channels. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac3bab74611c4c6d7e2334036506444ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3bab74611c4c6d7e2334036506444ad">&#9670;&nbsp;</a></span>isDecimateActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool isDecimateActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The requested sampling rate is too hight: we only process half of the samples so we can half the sampling rate </p>
+
+</div>
+</div>
+<a id="acd2fecd9cd9705ac26cf1a2c4f8398de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd2fecd9cd9705ac26cf1a2c4f8398de">&#9670;&nbsp;</a></span>pwmWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void pwmWrite </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>write a pwm value to the indicated channel. The max value depends on the resolution </p>
+
+<p>Implements <a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html">DriverPWMBase</a>.</p>
+
+</div>
+</div>
+<a id="a51d2a8fe7dc25e44e9ab70cc56115634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51d2a8fe7dc25e44e9ab70cc56115634">&#9670;&nbsp;</a></span>setBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; uint8_t &gt; *&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>You can assign your own custom buffer impelementation: must be allocated on the heap and will be cleaned up by this class </p>
+
+</div>
+</div>
+<a id="ac70c6a1420e03c6e8c938188c8b7dd56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70c6a1420e03c6e8c938188c8b7dd56">&#9670;&nbsp;</a></span>startTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void startTimer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>when we get the first write -&gt; we activate the timer to start with the output of data </p>
+
+<p>Implements <a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html">DriverPWMBase</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioPWM/<a class="el" href="_p_w_m_audio_e_s_p32_8h_source.html">PWMAudioESP32.h</a></li>
 </ul>
 </div><!-- contents -->

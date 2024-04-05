@@ -107,9 +107,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="
 <tr class="memitem:a6d10e013fb3a919c136a88a25386f453"><td class="memItemLeft" align="right" valign="top"><a id="a6d10e013fb3a919c136a88a25386f453"></a>
 virtual <a class="el" href="structaudio__tools_1_1_p_w_m_config.html">PWMConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
 <tr class="separator:a6d10e013fb3a919c136a88a25386f453"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa540e86022c1f72380d1014d98f38f43"><td class="memItemLeft" align="right" valign="top"><a id="aa540e86022c1f72380d1014d98f38f43"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()=0</td></tr>
-<tr class="separator:aa540e86022c1f72380d1014d98f38f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
+<tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bb801ba554b9e0d8223732389fa82f1"><td class="memItemLeft" align="right" valign="top"><a id="a0bb801ba554b9e0d8223732389fa82f1"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>framesPerSecond</b> ()</td></tr>
 <tr class="separator:a0bb801ba554b9e0d8223732389fa82f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,10 +125,7 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>maxOutputValue
 <tr class="memitem:a0ac8697a215811097d21a379479c8384"><td class="memItemLeft" align="right" valign="top"><a id="a0ac8697a215811097d21a379479c8384"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>pwmWrite</b> (int channel, int value)=0</td></tr>
 <tr class="separator:a0ac8697a215811097d21a379479c8384"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51d2a8fe7dc25e44e9ab70cc56115634"><td class="memItemLeft" align="right" valign="top"><a id="a51d2a8fe7dc25e44e9ab70cc56115634"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#a51d2a8fe7dc25e44e9ab70cc56115634">setBuffer</a> (<a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; uint8_t &gt; *buffer)</td></tr>
-<tr class="memdesc:a51d2a8fe7dc25e44e9ab70cc56115634"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can assign your own custom buffer impelementation: must be allocated on the heap and will be cleaned up by this class <br  />
- <br /></td></tr>
+<tr class="memitem:a51d2a8fe7dc25e44e9ab70cc56115634"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#a51d2a8fe7dc25e44e9ab70cc56115634">setBuffer</a> (<a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; uint8_t &gt; *buffer)</td></tr>
 <tr class="separator:a51d2a8fe7dc25e44e9ab70cc56115634"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb630c4d7b49e3cf59dc4dcd992d3ba6"><td class="memItemLeft" align="right" valign="top"><a id="acb630c4d7b49e3cf59dc4dcd992d3ba6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setupPWM</b> ()=0</td></tr>
@@ -162,9 +159,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteBuffer</b> ()</
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#a13eb726740a261b50f38fb0301812631">effectiveOutputSampleRate</a> ()</td></tr>
 <tr class="memdesc:a13eb726740a261b50f38fb0301812631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the effective sample rate. <br /></td></tr>
 <tr class="separator:a13eb726740a261b50f38fb0301812631"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3bab74611c4c6d7e2334036506444ad"><td class="memItemLeft" align="right" valign="top"><a id="ac3bab74611c4c6d7e2334036506444ad"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#ac3bab74611c4c6d7e2334036506444ad">isDecimateActive</a> ()</td></tr>
-<tr class="memdesc:ac3bab74611c4c6d7e2334036506444ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The requested sampling rate is too hight: we only process half of the samples so we can half the sampling rate. <br /></td></tr>
+<tr class="memitem:ac3bab74611c4c6d7e2334036506444ad"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#ac3bab74611c4c6d7e2334036506444ad">isDecimateActive</a> ()</td></tr>
 <tr class="separator:ac3bab74611c4c6d7e2334036506444ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72ebbdf23886d86a473efc3220ead4cd"><td class="memItemLeft" align="right" valign="top"><a id="a72ebbdf23886d86a473efc3220ead4cd"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_driver_p_w_m_base.html#a72ebbdf23886d86a473efc3220ead4cd">maxSampleRate</a> ()</td></tr>
@@ -217,7 +212,61 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>underflow_per_sec
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base Class for all PWM drivers. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac3bab74611c4c6d7e2334036506444ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3bab74611c4c6d7e2334036506444ad">&#9670;&nbsp;</a></span>isDecimateActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool isDecimateActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The requested sampling rate is too hight: we only process half of the samples so we can half the sampling rate </p>
+
+</div>
+</div>
+<a id="a51d2a8fe7dc25e44e9ab70cc56115634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51d2a8fe7dc25e44e9ab70cc56115634">&#9670;&nbsp;</a></span>setBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_base_buffer.html">BaseBuffer</a>&lt; uint8_t &gt; *&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>You can assign your own custom buffer impelementation: must be allocated on the heap and will be cleaned up by this class </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioPWM/<a class="el" href="_p_w_m_audio_base_8h_source.html">PWMAudioBase.h</a></li>
 </ul>
 </div><!-- contents -->
