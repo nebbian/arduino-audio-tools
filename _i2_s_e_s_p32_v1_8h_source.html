@@ -430,75 +430,78 @@ $(function() {
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
-<div class="line"><a name="l00381"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#ac9b9ba111bd1c218c4375aeb86cc241f">  381</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#ac9b9ba111bd1c218c4375aeb86cc241f">begin</a>(<a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html">I2SConfigESP32V1</a> cfg, <span class="keywordtype">int</span> txPin, <span class="keywordtype">int</span> rxPin) {</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    cfg.logInfo();</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    this-&gt;cfg = cfg;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordflow">if</span> (cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> &lt;= 0 || cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> &gt; 2) {</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      LOGE(<span class="stringliteral">&quot;invalid channels: %d&quot;</span>, cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>);</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    }</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160; </div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <a class="code" href="structaudio__tools_1_1_i2_s_driver_e_s_p32_v1_1_1_driver_common.html">DriverCommon</a> &amp;driver = getDriver(cfg);</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordflow">if</span> (!newChannels(cfg, driver)) {</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    }</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    is_started = driver.startChannels(cfg, tx_chan, rx_chan, txPin, rxPin);</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordflow">if</span> (!is_started) {</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;      LOGE(<span class="stringliteral">&quot;Channels not started&quot;</span>);</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    }</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordflow">return</span> is_started;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  }</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  <span class="keywordtype">bool</span> newChannels(<a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html">I2SConfigESP32V1</a> &amp;cfg, DriverCommon &amp;driver) {</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    i2s_chan_config_t chan_cfg = driver.getChannelConfig(cfg);</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordflow">switch</span> (cfg.<a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a>) {</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;      <span class="keywordflow">case</span> RX_MODE:</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordflow">if</span> (i2s_new_channel(&amp;chan_cfg, NULL, &amp;rx_chan) != ESP_OK) {</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;          LOGE(<span class="stringliteral">&quot;i2s_channel&quot;</span>);</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        }</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;      <span class="keywordflow">case</span> TX_MODE:</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keywordflow">if</span> (i2s_new_channel(&amp;chan_cfg, &amp;tx_chan, NULL) != ESP_OK) {</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;          LOGE(<span class="stringliteral">&quot;i2s_channel&quot;</span>);</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        }</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;      <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <span class="keywordflow">if</span> (i2s_new_channel(&amp;chan_cfg, &amp;tx_chan, &amp;rx_chan) != ESP_OK) {</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;          LOGE(<span class="stringliteral">&quot;i2s_channel&quot;</span>);</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        }</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    }</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  }</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  DriverCommon &amp;getDriver(I2SConfigESP32V1 &amp;cfg) {</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordflow">switch</span> (cfg.signal_type) {</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;      <span class="keywordflow">case</span> Digital:</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        <span class="keywordflow">return</span> i2s;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;<span class="preprocessor">#ifdef USE_PDM</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      <span class="keywordflow">case</span> Analog:</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;      <span class="keywordflow">case</span> PDM:</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keywordflow">return</span> pdm;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="preprocessor">#ifdef USE_TDM</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;      <span class="keywordflow">case</span> TDM:</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        <span class="keywordflow">return</span> tdm;</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    }</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    LOGE(<span class="stringliteral">&quot;Unsupported singal_type&quot;</span>);</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="keywordflow">return</span> i2s;</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;  }</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;};</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="keyword">using</span> I2SDriver = I2SDriverESP32V1;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00383"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#ac9b9ba111bd1c218c4375aeb86cc241f">  383</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#ac9b9ba111bd1c218c4375aeb86cc241f">begin</a>(<a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html">I2SConfigESP32V1</a> cfg, <span class="keywordtype">int</span> txPin, <span class="keywordtype">int</span> rxPin) {</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    TRACED();</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    cfg.logInfo();</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    this-&gt;cfg = cfg;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordflow">if</span> (cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> &lt;= 0 || cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> &gt; 2) {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      LOGE(<span class="stringliteral">&quot;invalid channels: %d&quot;</span>, cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <a class="code" href="structaudio__tools_1_1_i2_s_driver_e_s_p32_v1_1_1_driver_common.html">DriverCommon</a> &amp;driver = getDriver(cfg);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordflow">if</span> (!newChannels(cfg, driver)) {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    }</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    is_started = driver.startChannels(cfg, tx_chan, rx_chan, txPin, rxPin);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordflow">if</span> (!is_started) {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;      LOGE(<span class="stringliteral">&quot;Channels not started&quot;</span>);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    }</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">return</span> is_started;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  }</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  <span class="keywordtype">bool</span> newChannels(<a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html">I2SConfigESP32V1</a> &amp;cfg, DriverCommon &amp;driver) {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    i2s_chan_config_t chan_cfg = driver.getChannelConfig(cfg);</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">switch</span> (cfg.<a class="code" href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html#a31a454d24fb1f4d74779a0ff668d54cc">rx_tx_mode</a>) {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      <span class="keywordflow">case</span> RX_MODE:</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <span class="keywordflow">if</span> (i2s_new_channel(&amp;chan_cfg, NULL, &amp;rx_chan) != ESP_OK) {</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;          LOGE(<span class="stringliteral">&quot;i2s_channel&quot;</span>);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        }</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;      <span class="keywordflow">case</span> TX_MODE:</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        <span class="keywordflow">if</span> (i2s_new_channel(&amp;chan_cfg, &amp;tx_chan, NULL) != ESP_OK) {</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;          LOGE(<span class="stringliteral">&quot;i2s_channel&quot;</span>);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        }</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;      <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <span class="keywordflow">if</span> (i2s_new_channel(&amp;chan_cfg, &amp;tx_chan, &amp;rx_chan) != ESP_OK) {</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;          LOGE(<span class="stringliteral">&quot;i2s_channel&quot;</span>);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  }</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  DriverCommon &amp;getDriver(I2SConfigESP32V1 &amp;cfg) {</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordflow">switch</span> (cfg.signal_type) {</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      <span class="keywordflow">case</span> Digital:</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="keywordflow">return</span> i2s;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="preprocessor">#ifdef USE_PDM</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;      <span class="keywordflow">case</span> Analog:</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;      <span class="keywordflow">case</span> PDM:</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="keywordflow">return</span> pdm;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="preprocessor">#ifdef USE_TDM</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;      <span class="keywordflow">case</span> TDM:</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        <span class="keywordflow">return</span> tdm;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;      <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    }</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    LOGE(<span class="stringliteral">&quot;Unsupported singal_type&quot;</span>);</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">return</span> i2s;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  }</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;};</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160; </div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="keyword">using</span> I2SDriver = I2SDriverESP32V1;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_e_s_p32_v1_html"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html">audio_tools::I2SConfigESP32V1</a></div><div class="ttdoc">Configuration for ESP32 i2s for IDF &gt; 5.0.</div><div class="ttdef"><b>Definition:</b> I2SConfigESP32V1.h:17</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_config_e_s_p32_v1_html_a31a454d24fb1f4d74779a0ff668d54cc"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html#a31a454d24fb1f4d74779a0ff668d54cc">audio_tools::I2SConfigESP32V1::rx_tx_mode</a></div><div class="ttdeci">RxTxMode rx_tx_mode</div><div class="ttdoc">public settings</div><div class="ttdef"><b>Definition:</b> I2SConfigESP32V1.h:50</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_driver_e_s_p32_v1_html"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html">audio_tools::I2SDriverESP32V1</a></div><div class="ttdoc">Basic I2S API for the ESP32 (using the new API). https://docs.espressif.com/projects/esp-idf/en/v5....</div><div class="ttdef"><b>Definition:</b> I2SESP32V1.h:23</div></div>
@@ -511,7 +514,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_driver_e_s_p32_v1_html_a8a9a8318ecef6053379fb8bf672f686a"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#a8a9a8318ecef6053379fb8bf672f686a">audio_tools::I2SDriverESP32V1::config</a></div><div class="ttdeci">I2SConfigESP32V1 config()</div><div class="ttdoc">provides the actual configuration</div><div class="ttdef"><b>Definition:</b> I2SESP32V1.h:96</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_driver_e_s_p32_v1_html_aaf81d3fdaf258088d7692fa70cece087"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#aaf81d3fdaf258088d7692fa70cece087">audio_tools::I2SDriverESP32V1::end</a></div><div class="ttdeci">void end()</div><div class="ttdoc">stops the I2C and unistalls the driver</div><div class="ttdef"><b>Definition:</b> I2SESP32V1.h:79</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_driver_e_s_p32_v1_html_ab88584f8eaec1d79f5ee7e3ff56a8b5c"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#ab88584f8eaec1d79f5ee7e3ff56a8b5c">audio_tools::I2SDriverESP32V1::begin</a></div><div class="ttdeci">bool begin(RxTxMode mode)</div><div class="ttdoc">starts the DAC with the default config</div><div class="ttdef"><b>Definition:</b> I2SESP32V1.h:47</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_i2_s_driver_e_s_p32_v1_html_ac9b9ba111bd1c218c4375aeb86cc241f"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#ac9b9ba111bd1c218c4375aeb86cc241f">audio_tools::I2SDriverESP32V1::begin</a></div><div class="ttdeci">bool begin(I2SConfigESP32V1 cfg, int txPin, int rxPin)</div><div class="ttdoc">starts I2S</div><div class="ttdef"><b>Definition:</b> I2SESP32V1.h:381</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_i2_s_driver_e_s_p32_v1_html_ac9b9ba111bd1c218c4375aeb86cc241f"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#ac9b9ba111bd1c218c4375aeb86cc241f">audio_tools::I2SDriverESP32V1::begin</a></div><div class="ttdeci">bool begin(I2SConfigESP32V1 cfg, int txPin, int rxPin)</div><div class="ttdoc">-&gt; protected methods from I2SDriverESP32V1</div><div class="ttdef"><b>Definition:</b> I2SESP32V1.h:383</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_i2_s_driver_e_s_p32_v1_html_ae2a2bf0126c0c1fd4baa01f858ffd4d0"><div class="ttname"><a href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#ae2a2bf0126c0c1fd4baa01f858ffd4d0">audio_tools::I2SDriverESP32V1::writeBytes</a></div><div class="ttdeci">size_t writeBytes(const void *src, size_t size_bytes)</div><div class="ttdoc">writes the data to the I2S interface</div><div class="ttdef"><b>Definition:</b> I2SESP32V1.h:99</div></div>
 <div class="ttc" id="agroup__basic_html_ga8cbd91a8bac9b5ab425112be1620eb49"><div class="ttname"><a href="group__basic.html#ga8cbd91a8bac9b5ab425112be1620eb49">audio_tools::RxTxMode</a></div><div class="ttdeci">RxTxMode</div><div class="ttdoc">The Microcontroller is the Audio Source (TX_MODE) or Audio Sink (RX_MODE). RXTX_MODE is Source and Si...</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:24</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>

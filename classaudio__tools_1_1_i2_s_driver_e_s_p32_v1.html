@@ -140,9 +140,8 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac9b9ba111bd1c218c4375aeb86cc241f"><td class="memItemLeft" align="right" valign="top"><a id="ac9b9ba111bd1c218c4375aeb86cc241f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#ac9b9ba111bd1c218c4375aeb86cc241f">begin</a> (<a class="el" href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html">I2SConfigESP32V1</a> cfg, int txPin, int rxPin)</td></tr>
-<tr class="memdesc:ac9b9ba111bd1c218c4375aeb86cc241f"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts I2S <br /></td></tr>
+<tr class="memitem:ac9b9ba111bd1c218c4375aeb86cc241f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#ac9b9ba111bd1c218c4375aeb86cc241f">begin</a> (<a class="el" href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html">I2SConfigESP32V1</a> cfg, int txPin, int rxPin)</td></tr>
+<tr class="memdesc:ac9b9ba111bd1c218c4375aeb86cc241f"><td class="mdescLeft">&#160;</td><td class="mdescRight">-&gt; protected methods from <a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html" title="Basic I2S API for the ESP32 (using the new API). https://docs.espressif.com/projects/esp-idf/en/v5....">I2SDriverESP32V1</a>  <a href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html#ac9b9ba111bd1c218c4375aeb86cc241f">More...</a><br /></td></tr>
 <tr class="separator:ac9b9ba111bd1c218c4375aeb86cc241f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64c1ff8e3745d4716ff8f90c9843bee2"><td class="memItemLeft" align="right" valign="top"><a id="a64c1ff8e3745d4716ff8f90c9843bee2"></a>
 <a class="el" href="structaudio__tools_1_1_i2_s_driver_e_s_p32_v1_1_1_driver_common.html">DriverCommon</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDriver</b> (<a class="el" href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html">I2SConfigESP32V1</a> &amp;cfg)</td></tr>
@@ -184,7 +183,7 @@ i2s_chan_handle_t&#160;</td><td class="memItemRight" valign="bottom"><b>tx_chan<
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a601fb7cf1fc15db50c71a826f084f934"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a601fb7cf1fc15db50c71a826f084f934">&#9670;&nbsp;</a></span>begin()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a601fb7cf1fc15db50c71a826f084f934">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,6 +205,51 @@ i2s_chan_handle_t&#160;</td><td class="memItemRight" valign="bottom"><b>tx_chan<
 </table>
 </div><div class="memdoc">
 <p>starts the DAC with the current config - if not started yet. If I2S has been started there is no action and we return true </p>
+
+</div>
+</div>
+<a id="ac9b9ba111bd1c218c4375aeb86cc241f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9b9ba111bd1c218c4375aeb86cc241f">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool begin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_i2_s_config_e_s_p32_v1.html">I2SConfigESP32V1</a>&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>txPin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rxPin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>-&gt; protected methods from <a class="el" href="classaudio__tools_1_1_i2_s_driver_e_s_p32_v1.html" title="Basic I2S API for the ESP32 (using the new API). https://docs.espressif.com/projects/esp-idf/en/v5....">I2SDriverESP32V1</a> </p>
+<p>starts I2S </p>
 
 </div>
 </div>
