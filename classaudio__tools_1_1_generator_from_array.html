@@ -91,10 +91,10 @@ Inheritance diagram for GeneratorFromArray&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8f6f7efed214cfdc8a1e2eb40475e706"><td class="memTemplParams" colspan="2">template&lt;size_t arrayLen&gt; </td></tr>
-<tr class="memitem:a8f6f7efed214cfdc8a1e2eb40475e706"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_generator_from_array.html#a8f6f7efed214cfdc8a1e2eb40475e706">GeneratorFromArray</a> (T(&amp;array)[arrayLen], int repeat=0, bool setInactiveAtEnd=true, size_t startIndex=0)</td></tr>
-<tr class="memdesc:a8f6f7efed214cfdc8a1e2eb40475e706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Generator from an array.  <a href="classaudio__tools_1_1_generator_from_array.html#a8f6f7efed214cfdc8a1e2eb40475e706">More...</a><br /></td></tr>
-<tr class="separator:a8f6f7efed214cfdc8a1e2eb40475e706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9050040a685c64f949e68eaa72761d3b"><td class="memTemplParams" colspan="2">template&lt;size_t arrayLen&gt; </td></tr>
+<tr class="memitem:a9050040a685c64f949e68eaa72761d3b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_generator_from_array.html#a9050040a685c64f949e68eaa72761d3b">GeneratorFromArray</a> (T(&amp;array)[arrayLen], int repeat=0, bool setInactiveAtEnd=false, size_t startIndex=0)</td></tr>
+<tr class="memdesc:a9050040a685c64f949e68eaa72761d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Generator from an array.  <a href="classaudio__tools_1_1_generator_from_array.html#a9050040a685c64f949e68eaa72761d3b">More...</a><br /></td></tr>
+<tr class="separator:a9050040a685c64f949e68eaa72761d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada56eff2516fb0a4f5091ce06805411a"><td class="memItemLeft" align="right" valign="top"><a id="ada56eff2516fb0a4f5091ce06805411a"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> ()</td></tr>
 <tr class="separator:ada56eff2516fb0a4f5091ce06805411a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,8 +213,8 @@ class audio_tools::GeneratorFromArray&lt; T &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8f6f7efed214cfdc8a1e2eb40475e706"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f6f7efed214cfdc8a1e2eb40475e706">&#9670;&nbsp;</a></span>GeneratorFromArray()</h2>
+<a id="a9050040a685c64f949e68eaa72761d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9050040a685c64f949e68eaa72761d3b">&#9670;&nbsp;</a></span>GeneratorFromArray()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,7 +238,7 @@ class audio_tools::GeneratorFromArray&lt; T &gt;</h3>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>setInactiveAtEnd</em> = <code>true</code>, </td>
+          <td class="paramname"><em>setInactiveAtEnd</em> = <code>false</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -268,8 +268,8 @@ class audio_tools::GeneratorFromArray&lt; T &gt;</h3>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">repeat</td><td>number of repetions the array should be played (default 1), set to 0 for endless repeat. </td></tr>
-    <tr><td class="paramname">setInactiveAtEnd</td><td>defines if the generator is set inactive when the array has played fully. Default is true. </td></tr>
+    <tr><td class="paramname">repeat</td><td>number of repetions the array should be played, set to 0 for endless repeat. (default 0) </td></tr>
+    <tr><td class="paramname">setInactiveAtEnd</td><td>defines if the generator is set inactive when the array has played fully. Default is false. </td></tr>
     <tr><td class="paramname">startIndex</td><td>defines if the phase. Default is 0. </td></tr>
   </table>
   </dd>
