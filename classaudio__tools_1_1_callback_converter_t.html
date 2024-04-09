@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: ConverterSwitchLeftAndRight&lt; T &gt; Class Template Reference</title>
+<title>arduino-audio-tools: CallbackConverterT&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,62 +61,37 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_converter_switch_left_and_right.html">ConverterSwitchLeftAndRight</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_callback_converter_t.html">CallbackConverterT</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classaudio__tools_1_1_converter_switch_left_and_right-members.html">List of all members</a>  </div>
+<a href="classaudio__tools_1_1_callback_converter_t-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ConverterSwitchLeftAndRight&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__tools.html">Tools</a> &raquo; <a class="el" href="group__convert.html">Converters</a></div></div>  </div>
+<div class="title">CallbackConverterT&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Switches the left and right channel.  
- <a href="classaudio__tools_1_1_converter_switch_left_and_right.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="_base_converter_8h_source.html">BaseConverter.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for ConverterSwitchLeftAndRight&lt; T &gt;:</div>
+Inheritance diagram for CallbackConverterT&lt; T &gt;:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_converter_switch_left_and_right.png" usemap="#ConverterSwitchLeftAndRight_3C_20T_20_3E_map" alt=""/>
-  <map id="ConverterSwitchLeftAndRight_3C_20T_20_3E_map" name="ConverterSwitchLeftAndRight_3C_20T_20_3E_map">
-<area href="classaudio__tools_1_1_base_converter.html" title="Abstract Base class for Converters A converter is processing the data in the indicated array." alt="BaseConverter" shape="rect" coords="0,0,209,24"/>
+  <img src="classaudio__tools_1_1_callback_converter_t.png" usemap="#CallbackConverterT_3C_20T_20_3E_map" alt=""/>
+  <map id="CallbackConverterT_3C_20T_20_3E_map" name="CallbackConverterT_3C_20T_20_3E_map">
+<area href="classaudio__tools_1_1_base_converter.html" title="Abstract Base class for Converters A converter is processing the data in the indicated array." alt="BaseConverter" shape="rect" coords="0,0,156,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a5021739969d5b892c2d07378be8084eb"><td class="memItemLeft" align="right" valign="top"><a id="a5021739969d5b892c2d07378be8084eb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ConverterSwitchLeftAndRight</b> (int channels=2)</td></tr>
-<tr class="separator:a5021739969d5b892c2d07378be8084eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f4c8055ead16b3b58fc334b9f78cf96"><td class="memItemLeft" align="right" valign="top"><a id="a7f4c8055ead16b3b58fc334b9f78cf96"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>convert</b> (uint8_t *src, size_t byte_count)</td></tr>
-<tr class="separator:a7f4c8055ead16b3b58fc334b9f78cf96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a3087f0101e10ee6942a254667cd7de97"><td class="memItemLeft" align="right" valign="top"><a id="a3087f0101e10ee6942a254667cd7de97"></a>
+T(*&#160;</td><td class="memItemRight" valign="bottom"><b>callback</b> )(T in, int channel)</td></tr>
+<tr class="separator:a3087f0101e10ee6942a254667cd7de97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a178795099d0608972755dfef8d8367e3"><td class="memItemLeft" align="right" valign="top"><a id="a178795099d0608972755dfef8d8367e3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b> = 2</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>channels</b></td></tr>
 <tr class="separator:a178795099d0608972755dfef8d8367e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-class audio_tools::ConverterSwitchLeftAndRight&lt; T &gt;</h3>
-
-<p>Switches the left and right channel. </p>
-<dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>GPLv3</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioTools/<a class="el" href="_base_converter_8h_source.html">BaseConverter.h</a></li>
 </ul>
 </div><!-- contents -->
