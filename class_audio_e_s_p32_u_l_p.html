@@ -63,6 +63,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_audio_e_s_p32_u_l_p-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AudioESP32ULP Class Reference<div class="ingroups"><a class="el" href="group__main.html">Arduino Audio Tools</a> &raquo; <a class="el" href="group__io.html">IO</a></div></div>  </div>
@@ -92,9 +94,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a80e4660b5bd60cf09803f81e3e443644"><td class="memItemLeft" align="right" valign="top"><a id="a80e4660b5bd60cf09803f81e3e443644"></a>
 AudioInfo&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
 <tr class="separator:a80e4660b5bd60cf09803f81e3e443644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af545ab12986d2fe462f1013c3bafb5f3"><td class="memItemLeft" align="right" valign="top"><a id="af545ab12986d2fe462f1013c3bafb5f3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
-<tr class="separator:af545ab12986d2fe462f1013c3bafb5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf81d3fdaf258088d7692fa70cece087"><td class="memItemLeft" align="right" valign="top"><a id="aaf81d3fdaf258088d7692fa70cece087"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
+<tr class="separator:aaf81d3fdaf258088d7692fa70cece087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab8df60a25adfbed44d0ca569eb2f306"><td class="memItemLeft" align="right" valign="top"><a id="aab8df60a25adfbed44d0ca569eb2f306"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_audio_e_s_p32_u_l_p.html#aab8df60a25adfbed44d0ca569eb2f306">setMinWriteBytes</a> (int bytes)</td></tr>
 <tr class="memdesc:aab8df60a25adfbed44d0ca569eb2f306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the limit for the availableForWrite to report the data. <br /></td></tr>
@@ -106,13 +108,100 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:afd7270e10d851383ff7b53c1241f6ba1"><td class="memItemLeft" align="right" valign="top"><a id="afd7270e10d851383ff7b53c1241f6ba1"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *data, size_t len)</td></tr>
 <tr class="separator:afd7270e10d851383ff7b53c1241f6ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a5ae55b899178d2c78b21ffcff1ea391c"><td class="memItemLeft" align="right" valign="top"><a id="a5ae55b899178d2c78b21ffcff1ea391c"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>create_I_BXI</b> (uint32_t imm_pc)</td></tr>
+<tr class="separator:a5ae55b899178d2c78b21ffcff1ea391c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a512a135bfd9db22782e3da5bb4a970c7"><td class="memItemLeft" align="right" valign="top"><a id="a512a135bfd9db22782e3da5bb4a970c7"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>create_I_WR_REG</b> (uint32_t reg, uint32_t low_bit, uint32_t high_bit, uint32_t val)</td></tr>
+<tr class="separator:a512a135bfd9db22782e3da5bb4a970c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af34785948af72a85d60ef0a2cae5cf22"><td class="memItemLeft" align="right" valign="top"><a id="af34785948af72a85d60ef0a2cae5cf22"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> ()</td></tr>
+<tr class="separator:af34785948af72a85d60ef0a2cae5cf22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc301c33143bf6e46d92634b83fa18e2"><td class="memItemLeft" align="right" valign="top"><a id="afc301c33143bf6e46d92634b83fa18e2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>writeFrame</b> (int16_t sample[2])</td></tr>
+<tr class="separator:afc301c33143bf6e46d92634b83fa18e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a47c4466eec51c0c199d1d99b3a5bb79a"><td class="memItemLeft" align="right" valign="top"><a id="a47c4466eec51c0c199d1d99b3a5bb79a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>activeDACs</b> = 3</td></tr>
+<tr class="separator:a47c4466eec51c0c199d1d99b3a5bb79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675f3fd58fb11ed2a5c7d6391f9cef02"><td class="memItemLeft" align="right" valign="top"><a id="a675f3fd58fb11ed2a5c7d6391f9cef02"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>bufferedOddSample</b> = 128</td></tr>
+<tr class="separator:a675f3fd58fb11ed2a5c7d6391f9cef02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22db5ddff6c14fd4a1aededc377f29d4"><td class="memItemLeft" align="right" valign="top"><a id="a22db5ddff6c14fd4a1aededc377f29d4"></a>
+const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bufferStart</b> = indexAddress + 1</td></tr>
+<tr class="separator:a22db5ddff6c14fd4a1aededc377f29d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87cd9873763f0450fe3c664960e4a8f7"><td class="memItemLeft" align="right" valign="top"><a id="a87cd9873763f0450fe3c664960e4a8f7"></a>
+const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>dacTableStart1</b> = 2048 - 512</td></tr>
+<tr class="separator:a87cd9873763f0450fe3c664960e4a8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba724bc36920980cb6aca30d65137e2"><td class="memItemLeft" align="right" valign="top"><a id="adba724bc36920980cb6aca30d65137e2"></a>
+const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>dacTableStart2</b> = dacTableStart1 - 512</td></tr>
+<tr class="separator:adba724bc36920980cb6aca30d65137e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f88f758a0f634c147bbdc139daa9183"><td class="memItemLeft" align="right" valign="top"><a id="a8f88f758a0f634c147bbdc139daa9183"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>hertz</b></td></tr>
+<tr class="separator:a8f88f758a0f634c147bbdc139daa9183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac867c352f43a5194aa04f83ccaa2b088"><td class="memItemLeft" align="right" valign="top"><a id="ac867c352f43a5194aa04f83ccaa2b088"></a>
+const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>indexAddress</b> = opcodeCount</td></tr>
+<tr class="separator:ac867c352f43a5194aa04f83ccaa2b088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee3c1d33b8bfc632bf9eef345b28eb4"><td class="memItemLeft" align="right" valign="top"><a id="a1ee3c1d33b8bfc632bf9eef345b28eb4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>lastFilledWord</b> = 0</td></tr>
+<tr class="separator:a1ee3c1d33b8bfc632bf9eef345b28eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52786793b9efbdc701ac4d28c393a951"><td class="memItemLeft" align="right" valign="top"><a id="a52786793b9efbdc701ac4d28c393a951"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>min_write_bytes</b> = 128</td></tr>
+<tr class="separator:a52786793b9efbdc701ac4d28c393a951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac45f54ceee97dce9b9611ebe08b89163"><td class="memItemLeft" align="right" valign="top"><a id="ac45f54ceee97dce9b9611ebe08b89163"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>opcodeCount</b> = 20</td></tr>
+<tr class="separator:ac45f54ceee97dce9b9611ebe08b89163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39183d7a167c051b00cb35c7783f5475"><td class="memItemLeft" align="right" valign="top"><a id="a39183d7a167c051b00cb35c7783f5475"></a>
+UlpDac&#160;</td><td class="memItemRight" valign="bottom"><b>selected_mono_dac</b> = ULP_DAC1</td></tr>
+<tr class="separator:a39183d7a167c051b00cb35c7783f5475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee35b480497ce4c5335937cdab74be89"><td class="memItemLeft" align="right" valign="top"><a id="aee35b480497ce4c5335937cdab74be89"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>stereoOutput</b> = true</td></tr>
+<tr class="separator:aee35b480497ce4c5335937cdab74be89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43abe558230d74e97ae4ad0702edb3f9"><td class="memItemLeft" align="right" valign="top"><a id="a43abe558230d74e97ae4ad0702edb3f9"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>totalSamples</b> = totalSampleWords * 2</td></tr>
+<tr class="separator:a43abe558230d74e97ae4ad0702edb3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c84bd164efbade236a68c24b951295"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>totalSampleWords</b></td></tr>
+<tr class="separator:a01c84bd164efbade236a68c24b951295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6bf477ae73cbfbae0c753428dae6385"><td class="memItemLeft" align="right" valign="top"><a id="ae6bf477ae73cbfbae0c753428dae6385"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>waitingOddSample</b> = true</td></tr>
+<tr class="separator:ae6bf477ae73cbfbae0c753428dae6385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Outputs to ESP32 DAC through the ULP (Ultra&gt; Low Power coprocessor), freeing I2S for other uses. Connect left channel on pin 25 Connect right channel on pin 26. </p>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-03-26 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>(C) 2020 Martin Laclaustra, based on bitluni's code </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a01c84bd164efbade236a68c24b951295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01c84bd164efbade236a68c24b951295">&#9670;&nbsp;</a></span>totalSampleWords</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t totalSampleWords</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">      2048 - 512 - 512 - (opcodeCount + 1)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioLibs/<a class="el" href="_audio_e_s_p32_u_l_p_8h_source.html">AudioESP32ULP.h</a></li>
 </ul>
 </div><!-- contents -->
