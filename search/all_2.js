@@ -19,7 +19,7 @@ var searchData=
   ['biquaddf2_186',['BiQuadDF2',['../classaudio__tools_1_1_bi_quad_d_f2.html',1,'audio_tools']]],
   ['bitmapinfoheader_187',['BitmapInfoHeader',['../structaudio__tools_1_1_bitmap_info_header.html',1,'audio_tools']]],
   ['bitrate_188',['bitrate',['../structaudio__tools_1_1_opus_encoder_settings.html#ab5d8e1788d02d0e52941a0778776e289',1,'audio_tools::OpusEncoderSettings']]],
-  ['bits_5fper_5fsample_189',['bits_per_sample',['../structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697',1,'audio_tools::AudioInfo']]],
+  ['bits_5fper_5fsample_189',['bits_per_sample',['../structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f',1,'audio_tools::AudioInfo']]],
   ['blackman_190',['Blackman',['../classaudio__tools_1_1_blackman.html',1,'audio_tools']]],
   ['blackmanharris_191',['BlackmanHarris',['../classaudio__tools_1_1_blackman_harris.html',1,'audio_tools']]],
   ['blackmannuttall_192',['BlackmanNuttall',['../classaudio__tools_1_1_blackman_nuttall.html',1,'audio_tools']]],

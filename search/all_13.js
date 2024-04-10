@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sample_5frate_1013',['sample_rate',['../structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2',1,'audio_tools::AudioInfo']]],
+  ['sample_5frate_1013',['sample_rate',['../structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95',1,'audio_tools::AudioInfo']]],
   ['sample_5frate_5fcallback_1014',['sample_rate_callback',['../classaudio__tools_1_1_a2_d_p_stream.html#a73af513be01f5d51e180082bc55d0d5f',1,'audio_tools::A2DPStream']]],
   ['samplerate_1015',['sampleRate',['../classaudio__tools_1_1_modulation_base_class.html#ad16762d495115c2606417076f062c39d',1,'audio_tools::ModulationBaseClass']]],
   ['samples_1016',['samples',['../classaudio__tools_1_1_window_function.html#a296d0d8ff81677d81815bd49551fdaad',1,'audio_tools::WindowFunction']]],

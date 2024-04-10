@@ -95,20 +95,20 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;             uint16_t inputByteCount = DEFAULT_BYTE_COUNT) {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    this-&gt;dt_us = dt_us;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    this-&gt;input_byte_count = inputByteCount;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = 32000;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = 16;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = 1;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a> = 32000;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a> = 16;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a> = 1;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> begin() {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    TRACEI();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// Return the number of PCM samples in a frame</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    num_frames = lc3_frame_samples(dt_us, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    dec_size = lc3_decoder_size(dt_us, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    num_frames = lc3_frame_samples(dt_us, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    dec_size = lc3_decoder_size(dt_us, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    LOGI(<span class="stringliteral">&quot;channels: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    LOGI(<span class="stringliteral">&quot;sample_rate: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    LOGI(<span class="stringliteral">&quot;channels: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    LOGI(<span class="stringliteral">&quot;sample_rate: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    LOGI(<span class="stringliteral">&quot;input_byte_count: %d&quot;</span>, input_byte_count);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    LOGI(<span class="stringliteral">&quot;dt_us: %d&quot;</span>, dt_us);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    LOGI(<span class="stringliteral">&quot;num_frames: %d&quot;</span>, num_frames);</div>
@@ -125,7 +125,7 @@ $(function() {
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    lc3_decoder_memory.resize(dec_size);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// setup decoder</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    lc3_decoder = lc3_setup_decoder(dt_us, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>, 0,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    lc3_decoder = lc3_setup_decoder(dt_us, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>, 0,</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                    (<span class="keywordtype">void</span> *)lc3_decoder_memory.data());</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    notifyAudioChange(info);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
@@ -195,13 +195,13 @@ $(function() {
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">if</span> (!LC3_CHECK_SR_HZ(info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>)) {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      LOGE(<span class="stringliteral">&quot;sample_rate: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">if</span> (!LC3_CHECK_SR_HZ(info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>)) {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      LOGE(<span class="stringliteral">&quot;sample_rate: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>);</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">if</span> (info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>!=1){</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      LOGE(<span class="stringliteral">&quot;channels: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">if</span> (info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>!=1){</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      LOGE(<span class="stringliteral">&quot;channels: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>);</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">if</span> (num_frames == -1) {</div>
@@ -214,7 +214,7 @@ $(function() {
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">switch</span> (info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">switch</span> (info.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a>) {</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      <span class="keywordflow">case</span> 16:</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        pcm_format = LC3_PCM_FORMAT_S16;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">break</span>;</div>
@@ -222,7 +222,7 @@ $(function() {
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        pcm_format = LC3_PCM_FORMAT_S24;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        LOGE(<span class="stringliteral">&quot;Bits per sample not supported: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        LOGE(<span class="stringliteral">&quot;Bits per sample not supported: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a>);</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -234,20 +234,20 @@ $(function() {
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <a class="code" href="classaudio__tools_1_1_l_c3_encoder.html">LC3Encoder</a>(<span class="keywordtype">int</span> dt_us = LC3_DEFAULT_DT_US,</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;             uint16_t outputByteCount = DEFAULT_BYTE_COUNT) {</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    this-&gt;dt_us = dt_us;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = 32000;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = 16;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = 1;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a> = 32000;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a> = 16;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a> = 1;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    output_byte_count = outputByteCount;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  }</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordtype">bool</span> begin() {</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    TRACEI();</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">unsigned</span> enc_size = lc3_encoder_size(dt_us, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    num_frames = lc3_frame_samples(dt_us, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">unsigned</span> enc_size = lc3_encoder_size(dt_us, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    num_frames = lc3_frame_samples(dt_us, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>);</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    LOGI(<span class="stringliteral">&quot;sample_rate: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    LOGI(<span class="stringliteral">&quot;channels: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    LOGI(<span class="stringliteral">&quot;sample_rate: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    LOGI(<span class="stringliteral">&quot;channels: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>);</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    LOGI(<span class="stringliteral">&quot;dt_us: %d&quot;</span>, dt_us);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    LOGI(<span class="stringliteral">&quot;output_byte_count: %d&quot;</span>, output_byte_count);</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    LOGI(<span class="stringliteral">&quot;enc_size: %d&quot;</span>, enc_size);</div>
@@ -263,7 +263,7 @@ $(function() {
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    output_buffer.resize(output_byte_count);</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="comment">// setup encoder</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    lc3_encoder = lc3_setup_encoder(dt_us, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>, 0,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    lc3_encoder = lc3_setup_encoder(dt_us, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>, 0,</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                                    lc3_encoder_memory.data());</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    input_pos = 0;</div>
@@ -332,13 +332,13 @@ $(function() {
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    }</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">if</span> (!LC3_CHECK_SR_HZ(info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>)) {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      LOGE(<span class="stringliteral">&quot;sample_rate: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a>);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">if</span> (!LC3_CHECK_SR_HZ(info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>)) {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      LOGE(<span class="stringliteral">&quot;sample_rate: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>);</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    }</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">if</span> (info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>!=1){</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      LOGE(<span class="stringliteral">&quot;channels: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">if</span> (info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>!=1){</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      LOGE(<span class="stringliteral">&quot;channels: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>);</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">if</span> (num_frames == -1) {</div>
@@ -346,7 +346,7 @@ $(function() {
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">switch</span> (info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>) {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">switch</span> (info.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a>) {</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      <span class="keywordflow">case</span> 16:</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        pcm_format = LC3_PCM_FORMAT_S16;</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">break</span>;</div>
@@ -354,7 +354,7 @@ $(function() {
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        pcm_format = LC3_PCM_FORMAT_S24;</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        LOGE(<span class="stringliteral">&quot;Bits per sample not supported: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a>);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        LOGE(<span class="stringliteral">&quot;Bits per sample not supported: %d&quot;</span>, info.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a>);</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    }</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -370,10 +370,10 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_l_c3_encoder_html_ae25cee0d848eeb729a79fd46347a70da"><div class="ttname"><a href="classaudio__tools_1_1_l_c3_encoder.html#ae25cee0d848eeb729a79fd46347a70da">audio_tools::LC3Encoder::mime</a></div><div class="ttdeci">virtual const char * mime()</div><div class="ttdoc">Provides the mime type of the encoded result.</div><div class="ttdef"><b>Definition:</b> CodecLC3.h:233</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_print_html"><div class="ttname"><a href="classaudio__tools_1_1_print.html">audio_tools::Print</a></div><div class="ttdef"><b>Definition:</b> NoArduino.h:58</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:53</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:55</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:51</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:50</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a0e86c53dfa0ad5dc0d2ecd0304fabc95"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">sample_rate_t sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:53</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a1ac7822956f57069d76da865d6b33c55"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">uint16_t channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:55</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_aa65c89fa8336bfdc4f8d916d9d415a9f"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">uint8_t bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:57</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -17,7 +17,7 @@ var searchData=
   ['channelformatconverterstreamt_223',['ChannelFormatConverterStreamT',['../classaudio__tools_1_1_channel_format_converter_stream_t.html',1,'audio_tools']]],
   ['channelreducer_224',['ChannelReducer',['../classaudio__tools_1_1_channel_reducer.html',1,'audio_tools']]],
   ['channelreducert_225',['ChannelReducerT',['../classaudio__tools_1_1_channel_reducer_t.html',1,'audio_tools']]],
-  ['channels_226',['channels',['../structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3',1,'audio_tools::AudioInfo']]],
+  ['channels_226',['channels',['../structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55',1,'audio_tools::AudioInfo']]],
   ['channelselectionoutputdef_227',['ChannelSelectionOutputDef',['../structaudio__tools_1_1_channel_split_output_1_1_channel_selection_output_def.html',1,'ChannelSplitOutput::ChannelSelectionOutputDef'],['../structaudio__tools_1_1_channels_select_output_1_1_channel_selection_output_def.html',1,'ChannelsSelectOutput::ChannelSelectionOutputDef']]],
   ['channelsplitoutput_228',['ChannelSplitOutput',['../classaudio__tools_1_1_channel_split_output.html',1,'audio_tools']]],
   ['channelsselectoutput_229',['ChannelsSelectOutput',['../classaudio__tools_1_1_channels_select_output.html',1,'audio_tools']]],

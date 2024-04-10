@@ -81,9 +81,9 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_pitch_shift_info.html">   15</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structaudio__tools_1_1_pitch_shift_info.html">PitchShiftInfo</a> : <span class="keyword">public</span> <a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="structaudio__tools_1_1_pitch_shift_info.html">PitchShiftInfo</a>() {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a> = 2;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">sample_rate</a> = 44100;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = 16;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a> = 2;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a> = 44100;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a> = 16;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">float</span> pitch_shift = 1.4f;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">int</span> buffer_size = 1000;</div>
@@ -422,7 +422,7 @@ $(function() {
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  <a class="code" href="structaudio__tools_1_1_pitch_shift_info.html">PitchShiftInfo</a> defaultConfig() {</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <a class="code" href="structaudio__tools_1_1_pitch_shift_info.html">PitchShiftInfo</a> result;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    result.<a class="code" href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">bits_per_sample</a> = <span class="keyword">sizeof</span>(T) * 8;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    result.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a> = <span class="keyword">sizeof</span>(T) * 8;</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  }</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
@@ -443,7 +443,7 @@ $(function() {
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;      <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordtype">size_t</span> result = 0;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keywordtype">int</span> channels = cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keywordtype">int</span> channels = cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>;</div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    T *p_in = (T *)data;</div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordtype">int</span> sample_count = len / <span class="keyword">sizeof</span>(T);</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
@@ -453,7 +453,7 @@ $(function() {
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        value += p_in[j + ch];</div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;      }</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      <span class="comment">// calculate avg sample value</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      value /= cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">channels</a>;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      value /= cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>;</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160; </div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;      <span class="comment">// output values</span></div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;      T out_value = pitchShift(value);</div>
@@ -525,10 +525,10 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_variable_speed_ring_buffer_simple_html_aac0ab007845c29d8d4c9b96a3cbbe2c9"><div class="ttname"><a href="classaudio__tools_1_1_variable_speed_ring_buffer_simple.html#aac0ab007845c29d8d4c9b96a3cbbe2c9">audio_tools::VariableSpeedRingBufferSimple::isFull</a></div><div class="ttdeci">virtual bool isFull()</div><div class="ttdoc">checks if the buffer is full</div><div class="ttdef"><b>Definition:</b> PitchShift.h:86</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_variable_speed_ring_buffer_simple_html_ad20897c5c8bd47f5d4005989bead0e55"><div class="ttname"><a href="classaudio__tools_1_1_variable_speed_ring_buffer_simple.html#ad20897c5c8bd47f5d4005989bead0e55">audio_tools::VariableSpeedRingBufferSimple::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset pointer positions and clear buffer.</div><div class="ttdef"><b>Definition:</b> PitchShift.h:80</div></div>
 <div class="ttc" id="anamespaceaudio__tools_html"><div class="ttname"><a href="namespaceaudio__tools.html">audio_tools</a></div><div class="ttdoc">Generic Implementation of sound input and output for desktop environments using portaudio.</div><div class="ttdef"><b>Definition:</b> AnalogAudio.h:10</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:48</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a178795099d0608972755dfef8d8367e3"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a178795099d0608972755dfef8d8367e3">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:53</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a2ae049b225e845689c9bfab94ebbc697"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a2ae049b225e845689c9bfab94ebbc697">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">int bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:55</div></div>
-<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a527325650d66abd9626499785b3bafd2"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a527325650d66abd9626499785b3bafd2">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">int sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:51</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html">audio_tools::AudioInfo</a></div><div class="ttdoc">Basic Audio information which drives e.g. I2S.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:50</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a0e86c53dfa0ad5dc0d2ecd0304fabc95"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">audio_tools::AudioInfo::sample_rate</a></div><div class="ttdeci">sample_rate_t sample_rate</div><div class="ttdoc">Sample Rate: e.g 44100.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:53</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_a1ac7822956f57069d76da865d6b33c55"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">audio_tools::AudioInfo::channels</a></div><div class="ttdeci">uint16_t channels</div><div class="ttdoc">Number of channels: 2=stereo, 1=mono.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:55</div></div>
+<div class="ttc" id="astructaudio__tools_1_1_audio_info_html_aa65c89fa8336bfdc4f8d916d9d415a9f"><div class="ttname"><a href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">audio_tools::AudioInfo::bits_per_sample</a></div><div class="ttdeci">uint8_t bits_per_sample</div><div class="ttdoc">Number of bits per sample (int16_t = 16 bits)</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:57</div></div>
 <div class="ttc" id="astructaudio__tools_1_1_pitch_shift_info_html"><div class="ttname"><a href="structaudio__tools_1_1_pitch_shift_info.html">audio_tools::PitchShiftInfo</a></div><div class="ttdoc">Configuration for PitchShiftOutput: set the pitch_shift to define the shift.</div><div class="ttdef"><b>Definition:</b> PitchShift.h:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
