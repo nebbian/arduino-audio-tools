@@ -9,7 +9,7 @@ var searchData=
   ['fec_407',['FEC',['../group__fec.html',1,'']]],
   ['fft_408',['FFT',['../group__fft.html',1,'']]],
   ['fft_5fgroup_5fbin_409',['fft_group_bin',['../classaudio__tools_1_1_f_f_t_display.html#a73b01b39dadcefeedf5dba96e198404d',1,'audio_tools::FFTDisplay']]],
-  ['fft_5fmax_5fmagnitude_410',['fft_max_magnitude',['../classaudio__tools_1_1_f_f_t_display.html#ad497bbb193dd1bdd692ca56937aa41df',1,'audio_tools::FFTDisplay']]],
+  ['fft_5fmax_5fmagnitude_410',['fft_max_magnitude',['../classaudio__tools_1_1_f_f_t_display.html#a01a169196c82d6c03354eef6caf2085a',1,'audio_tools::FFTDisplay']]],
   ['fft_5fstart_5fbin_411',['fft_start_bin',['../classaudio__tools_1_1_f_f_t_display.html#a9bb26f83cc9e2a5a64ed305d9bb3a4fb',1,'audio_tools::FFTDisplay']]],
   ['fftcallback_412',['fftCallback',['../classaudio__tools_1_1_f_f_t_display.html#a7bdc13b501930dd228e4469fddfe7cdf',1,'audio_tools::FFTDisplay']]],
   ['fftdisplay_413',['FFTDisplay',['../classaudio__tools_1_1_f_f_t_display.html',1,'audio_tools']]],

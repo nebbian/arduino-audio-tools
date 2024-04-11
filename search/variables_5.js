@@ -1,7 +1,7 @@
 var searchData=
 [
   ['fft_5fgroup_5fbin_3028',['fft_group_bin',['../classaudio__tools_1_1_f_f_t_display.html#a73b01b39dadcefeedf5dba96e198404d',1,'audio_tools::FFTDisplay']]],
-  ['fft_5fmax_5fmagnitude_3029',['fft_max_magnitude',['../classaudio__tools_1_1_f_f_t_display.html#ad497bbb193dd1bdd692ca56937aa41df',1,'audio_tools::FFTDisplay']]],
+  ['fft_5fmax_5fmagnitude_3029',['fft_max_magnitude',['../classaudio__tools_1_1_f_f_t_display.html#a01a169196c82d6c03354eef6caf2085a',1,'audio_tools::FFTDisplay']]],
   ['fft_5fstart_5fbin_3030',['fft_start_bin',['../classaudio__tools_1_1_f_f_t_display.html#a9bb26f83cc9e2a5a64ed305d9bb3a4fb',1,'audio_tools::FFTDisplay']]],
   ['filterorder_3031',['filterOrder',['../classaudio__tools_1_1_filter_effect_base.html#a9d09c73fcc694ca39d4563a3d9b4f925',1,'audio_tools::FilterEffectBase']]],
   ['firbuffer_3032',['firBuffer',['../classaudio__tools_1_1_filter_effect_base.html#a71e949448a14b350c539b2e97e358e24',1,'audio_tools::FilterEffectBase']]],
