@@ -66,7 +66,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -76,24 +75,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classaudio__tools_1_1_converter_stream.html" title="Both the data of the read or write operations will be converted with the help of the indicated conver...">ConverterStream</a> Helper class which implements the converting readBytes with the help of write.  
+<p><a class="el" href="classaudio__tools_1_1_converter_stream.html" title="Both the data of the read or write operations will be converted with the help of the indicated conver...">ConverterStream</a> Helper class which implements the readBytes with the help of write.  
  <a href="classaudio__tools_1_1_transformation_reader.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_resample_stream_8h_source.html">ResampleStream.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_transformation_reader_1_1_adapter_print_to_array.html">AdapterPrintToArray</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a86aa7db83a28e2662e01c57a36681cb0"><td class="memItemLeft" align="right" valign="top"><a id="a86aa7db83a28e2662e01c57a36681cb0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> ()</td></tr>
-<tr class="separator:a86aa7db83a28e2662e01c57a36681cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a122055b2ed7a47728ee984d173696ba3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_transformation_reader.html#a122055b2ed7a47728ee984d173696ba3">begin</a> (T *transform, <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *source)</td></tr>
-<tr class="memdesc:a122055b2ed7a47728ee984d173696ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">setup of the <a class="el" href="classaudio__tools_1_1_transformation_reader.html" title="ConverterStream Helper class which implements the converting readBytes with the help of write.">TransformationReader</a> class  <a href="classaudio__tools_1_1_transformation_reader.html#a122055b2ed7a47728ee984d173696ba3">More...</a><br /></td></tr>
+<tr class="memdesc:a122055b2ed7a47728ee984d173696ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">setup of the <a class="el" href="classaudio__tools_1_1_transformation_reader.html" title="ConverterStream Helper class which implements the readBytes with the help of write.">TransformationReader</a> class  <a href="classaudio__tools_1_1_transformation_reader.html#a122055b2ed7a47728ee984d173696ba3">More...</a><br /></td></tr>
 <tr class="separator:a122055b2ed7a47728ee984d173696ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf81d3fdaf258088d7692fa70cece087"><td class="memItemLeft" align="right" valign="top"><a id="aaf81d3fdaf258088d7692fa70cece087"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
+<tr class="separator:aaf81d3fdaf258088d7692fa70cece087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad48f2b7825f9527fea897459d7fe20cc"><td class="memItemLeft" align="right" valign="top"><a id="ad48f2b7825f9527fea897459d7fe20cc"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *data, size_t byteCount)</td></tr>
 <tr class="separator:ad48f2b7825f9527fea897459d7fe20cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,8 +97,11 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5eb925b04b41ee08d4eda13dfdb0f967"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_transformation_reader.html#a5eb925b04b41ee08d4eda13dfdb0f967">restoreOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> *out)</td></tr>
 <tr class="memdesc:a5eb925b04b41ee08d4eda13dfdb0f967"><td class="mdescLeft">&#160;</td><td class="mdescRight">restores the original output in the converter class  <a href="classaudio__tools_1_1_transformation_reader.html#a5eb925b04b41ee08d4eda13dfdb0f967">More...</a><br /></td></tr>
 <tr class="separator:a5eb925b04b41ee08d4eda13dfdb0f967"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49ead13a1391cddd44b4a85f63a01a67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_transformation_reader.html#a49ead13a1391cddd44b4a85f63a01a67">setupOutput</a> (uint8_t *data, size_t byteCount)</td></tr>
-<tr class="separator:a49ead13a1391cddd44b4a85f63a01a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b9c7f103c5f3e24e711ec49a66d8a0d"><td class="memItemLeft" align="right" valign="top"><a id="a4b9c7f103c5f3e24e711ec49a66d8a0d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setupBuffer</b> (int reqSize)</td></tr>
+<tr class="separator:a4b9c7f103c5f3e24e711ec49a66d8a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe28e04dfb095f0b1ff15389330b1161"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_transformation_reader.html#abe28e04dfb095f0b1ff15389330b1161">setupOutput</a> ()</td></tr>
+<tr class="separator:abe28e04dfb095f0b1ff15389330b1161"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -120,15 +117,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</t
 <tr class="memitem:a44af0a678b199033df4e07d5414e7491"><td class="memItemLeft" align="right" valign="top"><a id="a44af0a678b199033df4e07d5414e7491"></a>
 T *&#160;</td><td class="memItemRight" valign="bottom"><b>p_transform</b> = nullptr</td></tr>
 <tr class="separator:a44af0a678b199033df4e07d5414e7491"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e548a535db2167481c5adb7ef922aa3"><td class="memItemLeft" align="right" valign="top"><a id="a9e548a535db2167481c5adb7ef922aa3"></a>
-<a class="el" href="classaudio__tools_1_1_transformation_reader_1_1_adapter_print_to_array.html">audio_tools::TransformationReader::AdapterPrintToArray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>print_to_array</b></td></tr>
-<tr class="separator:a9e548a535db2167481c5adb7ef922aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c3cbf42722e607c725415c0b0e3aa3a"><td class="memItemLeft" align="right" valign="top"><a id="a8c3cbf42722e607c725415c0b0e3aa3a"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>rb</b> {0}</td></tr>
+<tr class="separator:a8c3cbf42722e607c725415c0b0e3aa3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08c84560695a8d7845912c700c431ea4"><td class="memItemLeft" align="right" valign="top"><a id="a08c84560695a8d7845912c700c431ea4"></a>
+<a class="el" href="classaudio__tools_1_1_queue_stream.html">QueueStream</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>result_queue</b> {rb}</td></tr>
+<tr class="separator:a08c84560695a8d7845912c700c431ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br />
 class audio_tools::TransformationReader&lt; T &gt;</h3>
 
-<p><a class="el" href="classaudio__tools_1_1_converter_stream.html" title="Both the data of the read or write operations will be converted with the help of the indicated conver...">ConverterStream</a> Helper class which implements the converting readBytes with the help of write. </p>
+<p><a class="el" href="classaudio__tools_1_1_converter_stream.html" title="Both the data of the read or write operations will be converted with the help of the indicated conver...">ConverterStream</a> Helper class which implements the readBytes with the help of write. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -172,7 +172,7 @@ class audio_tools::TransformationReader&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>setup of the <a class="el" href="classaudio__tools_1_1_transformation_reader.html" title="ConverterStream Helper class which implements the converting readBytes with the help of write.">TransformationReader</a> class </p>
+<p>setup of the <a class="el" href="classaudio__tools_1_1_transformation_reader.html" title="ConverterStream Helper class which implements the readBytes with the help of write.">TransformationReader</a> class </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">transform</td><td>The original transformer stream </td></tr>
@@ -217,8 +217,8 @@ class audio_tools::TransformationReader&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a49ead13a1391cddd44b4a85f63a01a67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49ead13a1391cddd44b4a85f63a01a67">&#9670;&nbsp;</a></span>setupOutput()</h2>
+<a id="abe28e04dfb095f0b1ff15389330b1161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe28e04dfb095f0b1ff15389330b1161">&#9670;&nbsp;</a></span>setupOutput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,19 +229,8 @@ class audio_tools::TransformationReader&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classaudio__tools_1_1_print.html">Print</a>* setupOutput </td>
           <td>(</td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>byteCount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -253,7 +242,6 @@ class audio_tools::TransformationReader&lt; T &gt;</h3>
 <p>Makes sure that the data is written to the array </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td></td></tr>
-    <tr><td class="paramname">byteCount</td><td></td></tr>
   </table>
   </dd>
 </dl>
