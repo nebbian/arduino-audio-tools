@@ -105,17 +105,17 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// we read 1024 bytes</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// we read half the necessary bytes</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (buffer.size() == 0) {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordtype">int</span> size = (0.5 / p_transform-&gt;getByteFactor() * byteCount);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      size = size / 4 * 4;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      LOGD(<span class="stringliteral">&quot;read size: %d&quot;</span>, size);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      buffer.resize(size);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (rb.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#aa2c7fffd280ddcd6500a065785df0950">size</a>() == 0) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="comment">// make sure that the ring buffer is big enough</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordtype">float</span> byte_factor = p_transform-&gt;getByteFactor();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="comment">// process full samples/frames</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      size = size / 4 * 4;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      LOGD(<span class="stringliteral">&quot;read size: %d&quot;</span>, size);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      buffer.resize(size);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (rb.<a class="code" href="classaudio__tools_1_1_ring_buffer.html#aa2c7fffd280ddcd6500a065785df0950">size</a>() == 0) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="comment">// make sure that the ring buffer is big enough</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordtype">int</span> rb_size = byteCount * 3; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      rb.resize(rb_size);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      LOGD(<span class="stringliteral">&quot;buffer size: %d&quot;</span>, rb_size);</div>
