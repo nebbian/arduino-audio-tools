@@ -549,8 +549,8 @@ $(function() {
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160; </div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160; </div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;<span class="comment">// The Pico W has WIFI support</span></div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;<span class="preprocessor">#if defined(ARDUINO_ARCH_RP2040) &amp;&amp; LWIP_IPV4==1</span></div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;<span class="comment">// The Pico W has WIFI support: but platformio is messing up, so we support NO_WIFI</span></div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;<span class="preprocessor">#if defined(ARDUINO_ARCH_RP2040) &amp;&amp; LWIP_IPV4==1 &amp;&amp;!defined(NO_WIFI)</span></div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;<span class="preprocessor">#  include &lt;WiFi.h&gt;</span></div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;<span class="preprocessor">#  define USE_WIFI</span></div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;<span class="preprocessor">#  define USE_WIFI_CLIENT_SECURE</span></div>
