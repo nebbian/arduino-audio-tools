@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arduino-audio-tools: AudioOutputAdapter Class Reference</title>
+<title>arduino-audio-tools: TransformationReader&lt; T &gt;::AdapterPrintToArray Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_audio_output_adapter.html">AudioOutputAdapter</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceaudio__tools.html">audio_tools</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_transformation_reader.html">TransformationReader</a></li><li class="navelem"><a class="el" href="classaudio__tools_1_1_transformation_reader_1_1_adapter_print_to_array.html">AdapterPrintToArray</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,30 +69,22 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classaudio__tools_1_1_audio_output_adapter-members.html">List of all members</a>  </div>
+<a href="classaudio__tools_1_1_transformation_reader_1_1_adapter_print_to_array-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">AudioOutputAdapter Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">TransformationReader&lt; T &gt;::AdapterPrintToArray Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Base class for Output Adpapters.  
- <a href="classaudio__tools_1_1_audio_output_adapter.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="_audio_i_o_8h_source.html">AudioIO.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for AudioOutputAdapter:</div>
+Inheritance diagram for TransformationReader&lt; T &gt;::AdapterPrintToArray:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classaudio__tools_1_1_audio_output_adapter.png" usemap="#AudioOutputAdapter_map" alt=""/>
-  <map id="AudioOutputAdapter_map" name="AudioOutputAdapter_map">
-<area href="classaudio__tools_1_1_audio_output.html" title="Abstract Audio Ouptut class." alt="AudioOutput" shape="rect" coords="334,56,547,80"/>
-<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="111,0,324,24"/>
-<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="334,0,547,24"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="557,0,770,24"/>
-<area href="classaudio__tools_1_1_adapter_audio_stream_to_audio_output.html" title="Wrapper which converts a AudioStream to a AudioOutput." alt="AdapterAudioStreamToAudioOutput" shape="rect" coords="0,168,213,192"/>
-<area href="classaudio__tools_1_1_adapter_print_to_audio_output.html" title="Wrapper which converts a Print to a AudioOutput." alt="AdapterPrintToAudioOutput" shape="rect" coords="223,168,436,192"/>
-<area href="classaudio__tools_1_1_audio_writer_to_audio_output.html" title="Adapter class which lets an AudioWriter behave like a Print." alt="AudioWriterToAudioOutput" shape="rect" coords="446,168,659,192"/>
-<area href="classaudio__tools_1_1_transformation_reader_1_1_adapter_print_to_array.html" alt="TransformationReader&lt; T &gt;::AdapterPrintToArray" shape="rect" coords="669,168,882,192"/>
+  <img src="classaudio__tools_1_1_transformation_reader_1_1_adapter_print_to_array.png" usemap="#TransformationReader_3C_20T_20_3E::AdapterPrintToArray_map" alt=""/>
+  <map id="TransformationReader_3C_20T_20_3E::AdapterPrintToArray_map" name="TransformationReader_3C_20T_20_3E::AdapterPrintToArray_map">
+<area href="classaudio__tools_1_1_audio_output_adapter.html" title="Base class for Output Adpapters." alt="AudioOutputAdapter" shape="rect" coords="140,112,270,136"/>
+<area href="classaudio__tools_1_1_audio_output.html" title="Abstract Audio Ouptut class." alt="AudioOutput" shape="rect" coords="140,56,270,80"/>
+<area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,130,24"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="140,0,270,24"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="280,0,410,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -105,15 +97,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
 virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
 <tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ff0d6d1b0f3f9b652c9d5298ed0863c"><td class="memItemLeft" align="right" valign="top"><a id="a6ff0d6d1b0f3f9b652c9d5298ed0863c"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> () override</td></tr>
-<tr class="separator:a6ff0d6d1b0f3f9b652c9d5298ed0863c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b51853b7bf1bc90d9efa9f3b8d4fea"><td class="memItemLeft" align="right" valign="top"><a id="a87b51853b7bf1bc90d9efa9f3b8d4fea"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> () override</td></tr>
+<tr class="separator:a87b51853b7bf1bc90d9efa9f3b8d4fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memItemLeft" align="right" valign="top"><a id="a419d5bfacb0a1e5bf46b5fbd8d94f446"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="separator:a419d5bfacb0a1e5bf46b5fbd8d94f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b93f1b0470af2142bc8e48d31acaaa8"><td class="memItemLeft" align="right" valign="top"><a id="a5b93f1b0470af2142bc8e48d31acaaa8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (uint8_t *array, size_t data_len)</td></tr>
+<tr class="separator:a5b93f1b0470af2142bc8e48d31acaaa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affd15675a5e391c34cccefa7181354bb"><td class="memItemLeft" align="right" valign="top"><a id="affd15675a5e391c34cccefa7181354bb"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#affd15675a5e391c34cccefa7181354bb">clearNotifyAudioChange</a> ()</td></tr>
 <tr class="memdesc:affd15675a5e391c34cccefa7181354bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes all change notify subscriptions. <br /></td></tr>
@@ -142,9 +137,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAudioInfo<
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
 <tr class="separator:a64e0825fad7a777d93e43602670010c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dc19ad83d7464f1a4c104d76ba37aa7"><td class="memItemLeft" align="right" valign="top"><a id="a2dc19ad83d7464f1a4c104d76ba37aa7"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *buffer, size_t size) override=0</td></tr>
-<tr class="separator:a2dc19ad83d7464f1a4c104d76ba37aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c1fedd5cee3493b72251b368700cc4"><td class="memItemLeft" align="right" valign="top"><a id="a73c1fedd5cee3493b72251b368700cc4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>totalBytesWritten</b> ()</td></tr>
+<tr class="separator:a73c1fedd5cee3493b72251b368700cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e293b22ef45b613c794a10ec74551e4"><td class="memItemLeft" align="right" valign="top"><a id="a9e293b22ef45b613c794a10ec74551e4"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *data, size_t byteCount) override</td></tr>
+<tr class="separator:a9e293b22ef45b613c794a10ec74551e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
 <tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,9 +169,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td>
 <tr class="memitem:a407c3efba665d276a38229f905bef352"><td class="memItemLeft" align="right" valign="top"><a id="a407c3efba665d276a38229f905bef352"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false</td></tr>
 <tr class="separator:a407c3efba665d276a38229f905bef352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956cb5a3c4322e6d67c2f2b21077716c"><td class="memItemLeft" align="right" valign="top"><a id="a956cb5a3c4322e6d67c2f2b21077716c"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_len</b></td></tr>
+<tr class="separator:a956cb5a3c4322e6d67c2f2b21077716c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memItemLeft" align="right" valign="top"><a id="ad35c4e2ef458c36e8d36676958cc9cd3"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notify_vector</b></td></tr>
 <tr class="separator:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8304c4af5da6e830b86d7199dc9a22e6"><td class="memItemLeft" align="right" valign="top"><a id="a8304c4af5da6e830b86d7199dc9a22e6"></a>
+uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>p_data</b></td></tr>
+<tr class="separator:a8304c4af5da6e830b86d7199dc9a22e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5438a597ee291f523ae04a9fe355924f"><td class="memItemLeft" align="right" valign="top"><a id="a5438a597ee291f523ae04a9fe355924f"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pos</b> = 0</td></tr>
+<tr class="separator:a5438a597ee291f523ae04a9fe355924f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01124ad53939abba13387b01cbf6b1c0"><td class="memItemLeft" align="right" valign="top"><a id="a01124ad53939abba13387b01cbf6b1c0"></a>
 <a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp</b> {MAX_SINGLE_CHARS}</td></tr>
 <tr class="separator:a01124ad53939abba13387b01cbf6b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,9 +188,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false
 int&#160;</td><td class="memItemRight" valign="bottom"><b>tmpPos</b> = 0</td></tr>
 <tr class="separator:a5c8bfed099f70e8b41e7ddcd5578fedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for Output Adpapters. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad89418aeb557f65a8f1a0aed755633b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad89418aeb557f65a8f1a0aed755633b1">&#9670;&nbsp;</a></span>writeSilence()</h2>
 
@@ -217,7 +222,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>tmpPos</b> = 0</td></t
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/AudioTools/<a class="el" href="_audio_i_o_8h_source.html">AudioIO.h</a></li>
+<li>src/AudioTools/<a class="el" href="_resample_stream_8h_source.html">ResampleStream.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
