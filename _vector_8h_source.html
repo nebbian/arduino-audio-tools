@@ -417,13 +417,13 @@ $(function() {
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  }</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="keywordtype">void</span> printHex(uint8_t *data, <span class="keywordtype">int</span> len){</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0;j&lt;len;j++){</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;      Serial.print(data[j],HEX);</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;      Serial.print(<span class="stringliteral">&quot; &quot;</span>);</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    }</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    Serial.println();</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="comment">// void printHex(uint8_t *data, int len){</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  <span class="comment">//   for (int j=0;j&lt;len;j++){</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  <span class="comment">//     Serial.print(data[j],HEX);</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  <span class="comment">//     Serial.print(&quot; &quot;);</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  <span class="comment">//   }</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  <span class="comment">//   Serial.println();</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  <span class="comment">// }</span></div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  <span class="keywordtype">void</span> cleanup(T *data, <span class="keywordtype">int</span> from, <span class="keywordtype">int</span> to) {</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = from; j &lt; to; j++) {</div>

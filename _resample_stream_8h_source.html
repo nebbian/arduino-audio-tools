@@ -423,7 +423,7 @@ $(function() {
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    idx -= frames;</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordflow">if</span> (bytes != (written * step_size)) {</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      LOGD(<span class="stringliteral">&quot;write: %d vs %d&quot;</span>, bytes, written);</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      LOGD(<span class="stringliteral">&quot;write: %d vs %d&quot;</span>, (<span class="keywordtype">int</span>) bytes, (<span class="keywordtype">int</span>) written);</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    }</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="comment">// returns requested bytes to avoid rewriting of processed bytes</span></div>
