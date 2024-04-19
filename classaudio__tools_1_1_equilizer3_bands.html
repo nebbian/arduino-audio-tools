@@ -86,6 +86,7 @@ Inheritance diagram for Equilizer3Bands:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_equilizer3_bands.png" usemap="#Equilizer3Bands_map" alt=""/>
   <map id="Equilizer3Bands_map" name="Equilizer3Bands_map">
+<area href="classaudio__tools_1_1_modifying_stream.html" title="Object can be put into a pipleline." alt="ModifyingStream" shape="rect" coords="120,168,230,192"/>
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="120,112,230,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,110,80"/>
 <area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="120,56,230,80"/>
@@ -178,6 +179,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a909f118906f9cf7024baae224dcd90a7"><td class="memItemLeft" align="right" valign="top"><a id="a909f118906f9cf7024baae224dcd90a7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyActive</b> (bool flag)</td></tr>
 <tr class="separator:a909f118906f9cf7024baae224dcd90a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ff4cf361d54457ed8586e8c14aa922"><td class="memItemLeft" align="right" valign="top"><a id="a05ff4cf361d54457ed8586e8c14aa922"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_equilizer3_bands.html#a05ff4cf361d54457ed8586e8c14aa922">setOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out) override</td></tr>
+<tr class="memdesc:a05ff4cf361d54457ed8586e8c14aa922"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/Changes the output target. <br /></td></tr>
+<tr class="separator:a05ff4cf361d54457ed8586e8c14aa922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3b6de56b862417b2d77962d06db58c"><td class="memItemLeft" align="right" valign="top"><a id="adb3b6de56b862417b2d77962d06db58c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_equilizer3_bands.html#adb3b6de56b862417b2d77962d06db58c">setStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;io) override</td></tr>
+<tr class="memdesc:adb3b6de56b862417b2d77962d06db58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/Changes the input &amp; output. <br /></td></tr>
+<tr class="separator:adb3b6de56b862417b2d77962d06db58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7597ef706dd1aa590903ce9e095db20a"><td class="memItemLeft" align="right" valign="top"><a id="a7597ef706dd1aa590903ce9e095db20a"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *data, size_t len) override</td></tr>
 <tr class="separator:a7597ef706dd1aa590903ce9e095db20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,13 +215,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> 
 <tr class="memitem:a50e57001857e732018eab102d83b5935"><td class="memItemLeft" align="right" valign="top"><a id="a50e57001857e732018eab102d83b5935"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>sample</b> (<a class="el" href="structaudio__tools_1_1_equilizer3_bands_1_1_e_q_s_t_a_t_e.html">EQSTATE</a> &amp;es, float sample)</td></tr>
 <tr class="separator:a50e57001857e732018eab102d83b5935"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c24d548b7a3b674cfa9064f1a53e0da"><td class="memItemLeft" align="right" valign="top"><a id="a0c24d548b7a3b674cfa9064f1a53e0da"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_equilizer3_bands.html#a0c24d548b7a3b674cfa9064f1a53e0da">toFloat</a> (int16_t v)</td></tr>
-<tr class="memdesc:a0c24d548b7a3b674cfa9064f1a53e0da"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert float in the range -1 to 1 to a int16 and clip the values that are out of range <br /></td></tr>
+<tr class="memitem:a0c24d548b7a3b674cfa9064f1a53e0da"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_equilizer3_bands.html#a0c24d548b7a3b674cfa9064f1a53e0da">toFloat</a> (int16_t v)</td></tr>
 <tr class="separator:a0c24d548b7a3b674cfa9064f1a53e0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac41d06b78a8885fef9b8cfbe436f73b8"><td class="memItemLeft" align="right" valign="top"><a id="ac41d06b78a8885fef9b8cfbe436f73b8"></a>
-int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_equilizer3_bands.html#ac41d06b78a8885fef9b8cfbe436f73b8">toInt16</a> (float v)</td></tr>
-<tr class="memdesc:ac41d06b78a8885fef9b8cfbe436f73b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert float in the range -1 to 1 to a int16 and clip the values that are out of range <br /></td></tr>
+<tr class="memitem:ac41d06b78a8885fef9b8cfbe436f73b8"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_equilizer3_bands.html#ac41d06b78a8885fef9b8cfbe436f73b8">toInt16</a> (float v)</td></tr>
 <tr class="separator:ac41d06b78a8885fef9b8cfbe436f73b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -230,20 +235,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_notify_active</b> = true</td></tr>
 <tr class="separator:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01df9fb910562dc0b171154b451abc65"><td class="memItemLeft" align="right" valign="top"><a id="a01df9fb910562dc0b171154b451abc65"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>max_state_count</b> =0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>max_state_count</b> = 0</td></tr>
 <tr class="separator:a01df9fb910562dc0b171154b451abc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memItemLeft" align="right" valign="top"><a id="ad35c4e2ef458c36e8d36676958cc9cd3"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notify_vector</b></td></tr>
 <tr class="separator:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a613b59e7020ee57f859cbd72b5fb6454"><td class="memItemLeft" align="right" valign="top"><a id="a613b59e7020ee57f859cbd72b5fb6454"></a>
-<a class="el" href="structaudio__tools_1_1_config_equilizer3_bands.html">ConfigEquilizer3Bands</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_cfg</b> =&amp;cfg</td></tr>
+<a class="el" href="structaudio__tools_1_1_config_equilizer3_bands.html">ConfigEquilizer3Bands</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_cfg</b> = &amp;cfg</td></tr>
 <tr class="separator:a613b59e7020ee57f859cbd72b5fb6454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acff61551225044492c2adb2014f1e5e3"><td class="memItemLeft" align="right" valign="top"><a id="acff61551225044492c2adb2014f1e5e3"></a>
-<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_in</b> =nullptr</td></tr>
-<tr class="separator:acff61551225044492c2adb2014f1e5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af71b3cef5b7b551f7a7a7860b83499c1"><td class="memItemLeft" align="right" valign="top"><a id="af71b3cef5b7b551f7a7a7860b83499c1"></a>
-<a class="el" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_out</b> =nullptr</td></tr>
-<tr class="separator:af71b3cef5b7b551f7a7a7860b83499c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdad90adc3ba71f7b1e16444c23b5502"><td class="memItemLeft" align="right" valign="top"><a id="acdad90adc3ba71f7b1e16444c23b5502"></a>
 <a class="el" href="classaudio__tools_1_1_print.html">Print</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_print</b> = nullptr</td></tr>
 <tr class="separator:acdad90adc3ba71f7b1e16444c23b5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -251,7 +250,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>max_state_count</b> =0
 <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> = nullptr</td></tr>
 <tr class="separator:a7c87619d514c8c9627dc94e5e278a530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a43d530bb56f991af1abad83498a211"><td class="memItemLeft" align="right" valign="top"><a id="a6a43d530bb56f991af1abad83498a211"></a>
-struct <a class="el" href="structaudio__tools_1_1_equilizer3_bands_1_1_e_q_s_t_a_t_e.html">audio_tools::Equilizer3Bands::EQSTATE</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>state</b> =nullptr</td></tr>
+struct <a class="el" href="structaudio__tools_1_1_equilizer3_bands_1_1_e_q_s_t_a_t_e.html">audio_tools::Equilizer3Bands::EQSTATE</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>state</b> = nullptr</td></tr>
 <tr class="separator:a6a43d530bb56f991af1abad83498a211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
 <a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
@@ -266,7 +265,62 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>vsa</b> = (1.0
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>3 Band Equilizer inspired from <a href="https://www.musicdsp.org/en/latest/Filters/236-3-band-equaliser.html">https://www.musicdsp.org/en/latest/Filters/236-3-band-equaliser.html</a> </p>
 <dl class="section author"><dt>Author</dt><dd>pschatzmann </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0c24d548b7a3b674cfa9064f1a53e0da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c24d548b7a3b674cfa9064f1a53e0da">&#9670;&nbsp;</a></span>toFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float toFloat </td>
+          <td>(</td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>convert float in the range -1 to 1 to a int16 and clip the values that are out of range </p>
+
+</div>
+</div>
+<a id="ac41d06b78a8885fef9b8cfbe436f73b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac41d06b78a8885fef9b8cfbe436f73b8">&#9670;&nbsp;</a></span>toInt16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t toInt16 </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>convert float in the range -1 to 1 to a int16 and clip the values that are out of range </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioFilter/<a class="el" href="_equilizer_8h_source.html">Equilizer.h</a></li>
 </ul>
 </div><!-- contents -->
