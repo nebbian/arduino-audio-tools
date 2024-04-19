@@ -85,6 +85,7 @@ Inheritance diagram for Throttle:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_throttle.png" usemap="#Throttle_map" alt=""/>
   <map id="Throttle_map" name="Throttle_map">
+<area href="classaudio__tools_1_1_modifying_stream.html" title="Object can be put into a pipleline." alt="ModifyingStream" shape="rect" coords="120,168,230,192"/>
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="120,112,230,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,110,80"/>
 <area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="120,56,230,80"/>
@@ -98,9 +99,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a287f0ff07e57c2522c68ed5dd534cbba"><td class="memItemLeft" align="right" valign="top"><a id="a287f0ff07e57c2522c68ed5dd534cbba"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Throttle</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
 <tr class="separator:a287f0ff07e57c2522c68ed5dd534cbba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a945617caa91099feb617a7cf4192ec36"><td class="memItemLeft" align="right" valign="top"><a id="a945617caa91099feb617a7cf4192ec36"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Throttle</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;out)</td></tr>
-<tr class="separator:a945617caa91099feb617a7cf4192ec36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41044d38e381377054d16b3b2dc269f4"><td class="memItemLeft" align="right" valign="top"><a id="a41044d38e381377054d16b3b2dc269f4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Throttle</b> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;io)</td></tr>
+<tr class="separator:a41044d38e381377054d16b3b2dc269f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a727a24459787e1eeeb7a37ba888394a6"><td class="memItemLeft" align="right" valign="top"><a id="a727a24459787e1eeeb7a37ba888394a6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a727a24459787e1eeeb7a37ba888394a6">addNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a727a24459787e1eeeb7a37ba888394a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds target to be notified about audio changes. <br /></td></tr>
@@ -180,6 +181,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a909f118906f9cf7024baae224dcd90a7"><td class="memItemLeft" align="right" valign="top"><a id="a909f118906f9cf7024baae224dcd90a7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyActive</b> (bool flag)</td></tr>
 <tr class="separator:a909f118906f9cf7024baae224dcd90a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ff4cf361d54457ed8586e8c14aa922"><td class="memItemLeft" align="right" valign="top"><a id="a05ff4cf361d54457ed8586e8c14aa922"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_throttle.html#a05ff4cf361d54457ed8586e8c14aa922">setOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out) override</td></tr>
+<tr class="memdesc:a05ff4cf361d54457ed8586e8c14aa922"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/Changes the output target. <br /></td></tr>
+<tr class="separator:a05ff4cf361d54457ed8586e8c14aa922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3b6de56b862417b2d77962d06db58c"><td class="memItemLeft" align="right" valign="top"><a id="adb3b6de56b862417b2d77962d06db58c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_throttle.html#adb3b6de56b862417b2d77962d06db58c">setStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;io) override</td></tr>
+<tr class="memdesc:adb3b6de56b862417b2d77962d06db58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/Changes the input &amp; output. <br /></td></tr>
+<tr class="separator:adb3b6de56b862417b2d77962d06db58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac74cc668605399b3efa5cee287891850"><td class="memItemLeft" align="right" valign="top"><a id="ac74cc668605399b3efa5cee287891850"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>startDelay</b> ()</td></tr>
 <tr class="separator:ac74cc668605399b3efa5cee287891850"><td class="memSeparator" colspan="2">&#160;</td></tr>
