@@ -85,6 +85,7 @@ Inheritance diagram for TimedStream:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_timed_stream.png" usemap="#TimedStream_map" alt=""/>
   <map id="TimedStream_map" name="TimedStream_map">
+<area href="classaudio__tools_1_1_modifying_stream.html" title="Object can be put into a pipleline." alt="ModifyingStream" shape="rect" coords="120,168,230,192"/>
 <area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="120,112,230,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,110,80"/>
 <area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="120,56,230,80"/>
@@ -106,8 +107,13 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a727a24459787e1eeeb7a37ba888394a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds target to be notified about audio changes. <br /></td></tr>
 <tr class="separator:a727a24459787e1eeeb7a37ba888394a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aececda97cff151859a8695d30896dd20"><td class="memItemLeft" align="right" valign="top"><a id="aececda97cff151859a8695d30896dd20"></a>
-virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
+virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#aececda97cff151859a8695d30896dd20">audioInfo</a> () override</td></tr>
+<tr class="memdesc:aececda97cff151859a8695d30896dd20"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the actual input <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> <br /></td></tr>
 <tr class="separator:aececda97cff151859a8695d30896dd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c77cb3dbe910c765ea439d103bdcbb9"><td class="memItemLeft" align="right" valign="top"><a id="a1c77cb3dbe910c765ea439d103bdcbb9"></a>
+virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_support.html#a1c77cb3dbe910c765ea439d103bdcbb9">audioInfoOut</a> ()</td></tr>
+<tr class="memdesc:a1c77cb3dbe910c765ea439d103bdcbb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the actual output <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a>: this is usually the same as <a class="el" href="classaudio__tools_1_1_audio_info_support.html#ae0d5f156b0564368220fa8d328db3880" title="provides the actual input AudioInfo">audioInfo()</a> unless we use a transforming stream <br /></td></tr>
+<tr class="separator:a1c77cb3dbe910c765ea439d103bdcbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="memItemLeft" align="right" valign="top"><a id="a692e2b18b3c2452e38e3f558ad87e9a5"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timed_stream.html#a692e2b18b3c2452e38e3f558ad87e9a5">available</a> () override</td></tr>
 <tr class="memdesc:a692e2b18b3c2452e38e3f558ad87e9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the available bytes until the end time has reached. <br /></td></tr>
@@ -139,6 +145,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () 
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timed_stream.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">isActive</a> ()</td></tr>
 <tr class="memdesc:aa1f512ab0fcc05612f8e3d6a4664ce9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if we are not past the end time;. <br /></td></tr>
 <tr class="separator:aa1f512ab0fcc05612f8e3d6a4664ce9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="memItemLeft" align="right" valign="top"><a id="a475bc9908ea8a1d67e5cc1c1f67a71b2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNotifyActive</b> ()</td></tr>
+<tr class="separator:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8438e3403946accc1986a05b89ee7b03"><td class="memItemLeft" align="right" valign="top"><a id="a8438e3403946accc1986a05b89ee7b03"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timed_stream.html#a8438e3403946accc1986a05b89ee7b03">isPlaying</a> ()</td></tr>
 <tr class="memdesc:a8438e3403946accc1986a05b89ee7b03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if we are in a valid time range and are still playing sound. <br /></td></tr>
@@ -168,6 +177,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a28382b4bfa331ab5ed0dc3c0805efe73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a247a086bf3ecff7aabdfd767bfbbc6c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timed_stream.html#a247a086bf3ecff7aabdfd767bfbbc6c1">setEndSec</a> (uint32_t endSeconds)</td></tr>
 <tr class="separator:a247a086bf3ecff7aabdfd767bfbbc6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909f118906f9cf7024baae224dcd90a7"><td class="memItemLeft" align="right" valign="top"><a id="a909f118906f9cf7024baae224dcd90a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyActive</b> (bool flag)</td></tr>
+<tr class="separator:a909f118906f9cf7024baae224dcd90a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e0825fad7a777d93e43602670010c7"><td class="memItemLeft" align="right" valign="top"><a id="a64e0825fad7a777d93e43602670010c7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
@@ -175,6 +187,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a4a43f59fb715e89f0cba1af22e894835"><td class="memItemLeft" align="right" valign="top"><a id="a4a43f59fb715e89f0cba1af22e894835"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setOutput</b> (<a class="el" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> &amp;out)</td></tr>
 <tr class="separator:a4a43f59fb715e89f0cba1af22e894835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1220e7e3542f5a84c21fe2f7cef194c"><td class="memItemLeft" align="right" valign="top"><a id="ae1220e7e3542f5a84c21fe2f7cef194c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timed_stream.html#ae1220e7e3542f5a84c21fe2f7cef194c">setOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
+<tr class="memdesc:ae1220e7e3542f5a84c21fe2f7cef194c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/Changes the output target. <br /></td></tr>
+<tr class="separator:ae1220e7e3542f5a84c21fe2f7cef194c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81838aa5c18050f46bd16dac9083a960"><td class="memItemLeft" align="right" valign="top"><a id="a81838aa5c18050f46bd16dac9083a960"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timed_stream.html#a81838aa5c18050f46bd16dac9083a960">setStartMs</a> (uint32_t ms)</td></tr>
 <tr class="memdesc:a81838aa5c18050f46bd16dac9083a960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the start time in milliseconds. <br /></td></tr>
@@ -187,6 +203,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b> (<a cla
 <tr class="memitem:a5d05266dc1a666b50700eaffc598ba19"><td class="memItemLeft" align="right" valign="top"><a id="a5d05266dc1a666b50700eaffc598ba19"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setStream</b> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;stream)</td></tr>
 <tr class="separator:a5d05266dc1a666b50700eaffc598ba19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ea3110016f67d3dcb9793fcae72288f"><td class="memItemLeft" align="right" valign="top"><a id="a4ea3110016f67d3dcb9793fcae72288f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timed_stream.html#a4ea3110016f67d3dcb9793fcae72288f">setStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;stream)</td></tr>
+<tr class="memdesc:a4ea3110016f67d3dcb9793fcae72288f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/Changes the input &amp; output. <br /></td></tr>
+<tr class="separator:a4ea3110016f67d3dcb9793fcae72288f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af39b27e52134485635e8d670c47ab365"><td class="memItemLeft" align="right" valign="top"><a id="af39b27e52134485635e8d670c47ab365"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_timed_stream.html#af39b27e52134485635e8d670c47ab365">write</a> (const uint8_t *buffer, size_t length) override</td></tr>
 <tr class="memdesc:af39b27e52134485635e8d670c47ab365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays only data for the indiated start and end time. <br /></td></tr>
@@ -204,9 +224,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aa48ae02f9f8085b922ecceb2f889d5fe"><td class="memItemLeft" align="right" valign="top"><a id="aa48ae02f9f8085b922ecceb2f889d5fe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>calculateByteLimits</b> ()</td></tr>
 <tr class="separator:aa48ae02f9f8085b922ecceb2f889d5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c33a04426f36f7209536901dcd58544"><td class="memItemLeft" align="right" valign="top"><a id="a4c33a04426f36f7209536901dcd58544"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
-<tr class="separator:a4c33a04426f36f7209536901dcd58544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc00b141650b11fe19d4c7055d96a075"><td class="memItemLeft" align="right" valign="top"><a id="afc00b141650b11fe19d4c7055d96a075"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>not_supported</b> (int out, const char *msg=&quot;&quot;)</td></tr>
 <tr class="separator:afc00b141650b11fe19d4c7055d96a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -237,6 +254,9 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>end_ms</b> = UINT
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memItemLeft" align="right" valign="top"><a id="aeaba7fcedcb403536c79ee7f04de17fc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_notify_active</b> = true</td></tr>
+<tr class="separator:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memItemLeft" align="right" valign="top"><a id="ad35c4e2ef458c36e8d36676958cc9cd3"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notify_vector</b></td></tr>
 <tr class="separator:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>

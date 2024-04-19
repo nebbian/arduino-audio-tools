@@ -118,6 +118,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_streaming_decoder.html#aa540e86022c1f72380d1014d98f38f43">end</a> ()=0</td></tr>
 <tr class="memdesc:aa540e86022c1f72380d1014d98f38f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the reserved memory. <br /></td></tr>
 <tr class="separator:aa540e86022c1f72380d1014d98f38f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="memItemLeft" align="right" valign="top"><a id="a475bc9908ea8a1d67e5cc1c1f67a71b2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNotifyActive</b> ()</td></tr>
+<tr class="separator:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac496133545cba767b45c6ce8df3587e7"><td class="memItemLeft" align="right" valign="top"><a id="ac496133545cba767b45c6ce8df3587e7"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_streaming_decoder.html#ac496133545cba767b45c6ce8df3587e7">operator bool</a> ()=0</td></tr>
 <tr class="memdesc:ac496133545cba767b45c6ce8df3587e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if the class is active <br /></td></tr>
@@ -132,6 +135,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_streaming_decoder.html#a84c553df74063b3decb07d4995deafd7">setInputStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;inStream)</td></tr>
 <tr class="memdesc:a84c553df74063b3decb07d4995deafd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: same as setInput. <br /></td></tr>
 <tr class="separator:a84c553df74063b3decb07d4995deafd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909f118906f9cf7024baae224dcd90a7"><td class="memItemLeft" align="right" valign="top"><a id="a909f118906f9cf7024baae224dcd90a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyActive</b> (bool flag)</td></tr>
+<tr class="separator:a909f118906f9cf7024baae224dcd90a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e0825fad7a777d93e43602670010c7"><td class="memItemLeft" align="right" valign="top"><a id="a64e0825fad7a777d93e43602670010c7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
@@ -151,9 +157,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4c33a04426f36f7209536901dcd58544"><td class="memItemLeft" align="right" valign="top"><a id="a4c33a04426f36f7209536901dcd58544"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
-<tr class="separator:a4c33a04426f36f7209536901dcd58544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memItemLeft" align="right" valign="top"><a id="a6a9a665a387a8c4fbf7fed14bbbfc093"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyAudioChange</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="separator:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,6 +166,9 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memItemLeft" align="right" valign="top"><a id="aeaba7fcedcb403536c79ee7f04de17fc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_notify_active</b> = true</td></tr>
+<tr class="separator:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memItemLeft" align="right" valign="top"><a id="ad35c4e2ef458c36e8d36676958cc9cd3"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; <a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notify_vector</b></td></tr>
 <tr class="separator:ad35c4e2ef458c36e8d36676958cc9cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>

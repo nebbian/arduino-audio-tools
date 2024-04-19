@@ -107,12 +107,17 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a727a24459787e1eeeb7a37ba888394a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds target to be notified about audio changes. <br /></td></tr>
 <tr class="separator:a727a24459787e1eeeb7a37ba888394a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed4bf0d5ce93f27242be485943d0b37d"><td class="memItemLeft" align="right" valign="top"><a id="aed4bf0d5ce93f27242be485943d0b37d"></a>
-<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_m_a_d.html#aed4bf0d5ce93f27242be485943d0b37d">audioInfo</a> () override</td></tr>
+<tr class="memdesc:aed4bf0d5ce93f27242be485943d0b37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the actual input <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> <br /></td></tr>
 <tr class="separator:aed4bf0d5ce93f27242be485943d0b37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee542fc531c6d47ab1b36ffa8e8fc721"><td class="memItemLeft" align="right" valign="top"><a id="aee542fc531c6d47ab1b36ffa8e8fc721"></a>
 libmad::MadAudioInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_m_a_d.html#aee542fc531c6d47ab1b36ffa8e8fc721">audioInfoEx</a> ()</td></tr>
 <tr class="memdesc:aee542fc531c6d47ab1b36ffa8e8fc721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the last valid audio information. <br /></td></tr>
 <tr class="separator:aee542fc531c6d47ab1b36ffa8e8fc721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c77cb3dbe910c765ea439d103bdcbb9"><td class="memItemLeft" align="right" valign="top"><a id="a1c77cb3dbe910c765ea439d103bdcbb9"></a>
+virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_support.html#a1c77cb3dbe910c765ea439d103bdcbb9">audioInfoOut</a> ()</td></tr>
+<tr class="memdesc:a1c77cb3dbe910c765ea439d103bdcbb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the actual output <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a>: this is usually the same as <a class="el" href="classaudio__tools_1_1_audio_info_support.html#ae0d5f156b0564368220fa8d328db3880" title="provides the actual input AudioInfo">audioInfo()</a> unless we use a transforming stream <br /></td></tr>
+<tr class="separator:a1c77cb3dbe910c765ea439d103bdcbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a601fb7cf1fc15db50c71a826f084f934"><td class="memItemLeft" align="right" valign="top"><a id="a601fb7cf1fc15db50c71a826f084f934"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_m_a_d.html#a601fb7cf1fc15db50c71a826f084f934">begin</a> ()</td></tr>
 <tr class="memdesc:a601fb7cf1fc15db50c71a826f084f934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the processing. <br /></td></tr>
@@ -131,6 +136,9 @@ libmad::MP3DecoderMAD *&#160;</td><td class="memItemRight" valign="bottom"><b>dr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_m_a_d.html#aaf81d3fdaf258088d7692fa70cece087">end</a> ()</td></tr>
 <tr class="memdesc:aaf81d3fdaf258088d7692fa70cece087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the reserved memory. <br /></td></tr>
 <tr class="separator:aaf81d3fdaf258088d7692fa70cece087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="memItemLeft" align="right" valign="top"><a id="a475bc9908ea8a1d67e5cc1c1f67a71b2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNotifyActive</b> ()</td></tr>
+<tr class="separator:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b485ba5b9d96f94384f4a3840f84314"><td class="memItemLeft" align="right" valign="top"><a id="a2b485ba5b9d96f94384f4a3840f84314"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_decoder.html#a2b485ba5b9d96f94384f4a3840f84314">isResultPCM</a> ()</td></tr>
 <tr class="memdesc:a2b485ba5b9d96f94384f4a3840f84314"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the decoding result is PCM data. <br /></td></tr>
@@ -155,6 +163,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_m_p3_decoder_m_a_d.html#a4eec588e512fb89ed7137ceb50e5c3f9">setInfoCallback</a> (libmad::MP3InfoCallback cb)</td></tr>
 <tr class="memdesc:a4eec588e512fb89ed7137ceb50e5c3f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the callback which receives the Info changes. <br /></td></tr>
 <tr class="separator:a4eec588e512fb89ed7137ceb50e5c3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909f118906f9cf7024baae224dcd90a7"><td class="memItemLeft" align="right" valign="top"><a id="a909f118906f9cf7024baae224dcd90a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyActive</b> (bool flag)</td></tr>
+<tr class="separator:a909f118906f9cf7024baae224dcd90a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e0825fad7a777d93e43602670010c7"><td class="memItemLeft" align="right" valign="top"><a id="a64e0825fad7a777d93e43602670010c7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
@@ -195,9 +206,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4c33a04426f36f7209536901dcd58544"><td class="memItemLeft" align="right" valign="top"><a id="a4c33a04426f36f7209536901dcd58544"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
-<tr class="separator:a4c33a04426f36f7209536901dcd58544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memItemLeft" align="right" valign="top"><a id="a6a9a665a387a8c4fbf7fed14bbbfc093"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyAudioChange</b> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info)</td></tr>
 <tr class="separator:a6a9a665a387a8c4fbf7fed14bbbfc093"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,6 +218,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memItemLeft" align="right" valign="top"><a id="aeaba7fcedcb403536c79ee7f04de17fc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_notify_active</b> = true</td></tr>
+<tr class="separator:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa33fdbf4c173649be8659b6ce2239674"><td class="memItemLeft" align="right" valign="top"><a id="aa33fdbf4c173649be8659b6ce2239674"></a>
 libmad::MP3DecoderMAD *&#160;</td><td class="memItemRight" valign="bottom"><b>mad</b></td></tr>
 <tr class="separator:aa33fdbf4c173649be8659b6ce2239674"><td class="memSeparator" colspan="2">&#160;</td></tr>

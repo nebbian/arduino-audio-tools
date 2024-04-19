@@ -78,7 +78,7 @@ $(function() {
 <p><a class="el" href="classaudio__tools_1_1_converter_stream.html" title="Both the data of the read or write operations will be converted with the help of the indicated conver...">ConverterStream</a> Helper class which implements the readBytes with the help of write.  
  <a href="classaudio__tools_1_1_transformation_reader.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_resample_stream_8h_source.html">ResampleStream.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_audio_i_o_8h_source.html">AudioIO.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -91,6 +91,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="memitem:ad48f2b7825f9527fea897459d7fe20cc"><td class="memItemLeft" align="right" valign="top"><a id="ad48f2b7825f9527fea897459d7fe20cc"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *data, size_t byteCount)</td></tr>
 <tr class="separator:ad48f2b7825f9527fea897459d7fe20cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc7b7d813545c12a036625bbacf5f7c"><td class="memItemLeft" align="right" valign="top"><a id="addc7b7d813545c12a036625bbacf5f7c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setByteCountFactor</b> (int f)</td></tr>
+<tr class="separator:addc7b7d813545c12a036625bbacf5f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -108,6 +111,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</t
 <tr class="memitem:afa0dac30433855379ff3ac93383d7ef2"><td class="memItemLeft" align="right" valign="top"><a id="afa0dac30433855379ff3ac93383d7ef2"></a>
 <a class="el" href="classaudio__tools_1_1_vector.html">Vector</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b> {0}</td></tr>
 <tr class="separator:afa0dac30433855379ff3ac93383d7ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50bcd6ba28e9a01e5e7f4fb6dfd655dc"><td class="memItemLeft" align="right" valign="top"><a id="a50bcd6ba28e9a01e5e7f4fb6dfd655dc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>byte_count_factor</b> = 3</td></tr>
+<tr class="separator:a50bcd6ba28e9a01e5e7f4fb6dfd655dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c87619d514c8c9627dc94e5e278a530"><td class="memItemLeft" align="right" valign="top"><a id="a7c87619d514c8c9627dc94e5e278a530"></a>
 <a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_stream</b> = nullptr</td></tr>
 <tr class="separator:a7c87619d514c8c9627dc94e5e278a530"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,7 +253,7 @@ class audio_tools::TransformationReader&lt; T &gt;</h3>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/AudioTools/<a class="el" href="_resample_stream_8h_source.html">ResampleStream.h</a></li>
+<li>src/AudioTools/<a class="el" href="_audio_i_o_8h_source.html">AudioIO.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

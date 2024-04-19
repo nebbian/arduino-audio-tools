@@ -348,91 +348,96 @@ $(function() {
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  }</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <span class="keywordtype">void</span> swap(T &amp;other) {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="comment">// save values</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordtype">int</span> temp_blen = bufferLen;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordtype">int</span> temp_len = len;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    T *temp_data = p_data;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="comment">// swap from other</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    bufferLen = other.bufferLen;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    len = other.len;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    p_data = other.p_data;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="comment">// set other</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    other.bufferLen = temp_blen;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    other.len = temp_len;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    other.p_data = temp_data;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  }</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordtype">void</span> reset() {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    clear();</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    shrink_to_fit();</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    deleteArray(p_data, size());  <span class="comment">// delete [] this-&gt;p_data;</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    p_data = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  }</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  <span class="keywordtype">int</span> bufferLen = 0;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="keywordtype">int</span> len = 0;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  T *p_data = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  Allocator *p_allocator = &amp;DefaultAllocator;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  <span class="keywordtype">void</span> resize_internal(<span class="keywordtype">int</span> newSize, <span class="keywordtype">bool</span> copy, <span class="keywordtype">bool</span> shrink = <span class="keyword">false</span>) {</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">if</span> (newSize &lt;= 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">if</span> (newSize &gt; bufferLen || this-&gt;p_data == <span class="keyword">nullptr</span> || shrink) {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      T *oldData = p_data;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      <span class="keywordtype">int</span> oldBufferLen = this-&gt;bufferLen;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;      p_data = newArray(newSize);  <span class="comment">// new T[newSize+1];</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;      assert(p_data != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;      this-&gt;bufferLen = newSize;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;      <span class="keywordflow">if</span> (oldData != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keywordflow">if</span> (copy &amp;&amp; this-&gt;len &gt; 0) {</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;          <span class="comment">// save existing data</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;          memmove(p_data, oldData, len * <span class="keyword">sizeof</span>(T));</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;          <span class="comment">// clear to prevent double release</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;          memset(oldData, 0, len * <span class="keyword">sizeof</span>(T));</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        }</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">if</span> (shrink) {</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;          cleanup(oldData, newSize, oldBufferLen);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        }</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        deleteArray(oldData, oldBufferLen);  <span class="comment">// delete [] oldData;</span></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      }</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    }</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  }</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  T *newArray(<span class="keywordtype">int</span> newSize) {</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    T *data;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="preprocessor">#if USE_ALLOCATOR</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    data = p_allocator-&gt;createArray&lt;T&gt;(newSize);  <span class="comment">// new T[newSize+1];</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    data = <span class="keyword">new</span> T[newSize];</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">return</span> data;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  }</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  <span class="keywordtype">void</span> deleteArray(T *oldData, <span class="keywordtype">int</span> oldBufferLen) {</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">#if USE_ALLOCATOR</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    p_allocator-&gt;removeArray(oldData, oldBufferLen);  <span class="comment">// delete [] oldData;</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keyword">delete</span>[] oldData;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  }</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="comment">// void printHex(uint8_t *data, int len){</span></div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  <span class="comment">//   for (int j=0;j&lt;len;j++){</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  <span class="comment">//     Serial.print(data[j],HEX);</span></div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  <span class="comment">//     Serial.print(&quot; &quot;);</span></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  <span class="comment">//   }</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  <span class="comment">//   Serial.println();</span></div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  <span class="comment">// }</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  <span class="keywordtype">void</span> cleanup(T *data, <span class="keywordtype">int</span> from, <span class="keywordtype">int</span> to) {</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = from; j &lt; to; j++) {</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      data[j].~T();</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    }</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  }</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;};</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <span class="keywordtype">bool</span> contains(T obj){</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">return</span> indexOf(obj) &gt;= 0;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  <span class="keywordtype">void</span> swap(T &amp;other) {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="comment">// save values</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordtype">int</span> temp_blen = bufferLen;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordtype">int</span> temp_len = len;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    T *temp_data = p_data;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="comment">// swap from other</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    bufferLen = other.bufferLen;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    len = other.len;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    p_data = other.p_data;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="comment">// set other</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    other.bufferLen = temp_blen;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    other.len = temp_len;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    other.p_data = temp_data;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keywordtype">void</span> reset() {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    clear();</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    shrink_to_fit();</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    deleteArray(p_data, size());  <span class="comment">// delete [] this-&gt;p_data;</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    p_data = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  <span class="keywordtype">int</span> bufferLen = 0;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <span class="keywordtype">int</span> len = 0;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  T *p_data = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  Allocator *p_allocator = &amp;DefaultAllocator;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <span class="keywordtype">void</span> resize_internal(<span class="keywordtype">int</span> newSize, <span class="keywordtype">bool</span> copy, <span class="keywordtype">bool</span> shrink = <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">if</span> (newSize &lt;= 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">if</span> (newSize &gt; bufferLen || this-&gt;p_data == <span class="keyword">nullptr</span> || shrink) {</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;      T *oldData = p_data;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;      <span class="keywordtype">int</span> oldBufferLen = this-&gt;bufferLen;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      p_data = newArray(newSize);  <span class="comment">// new T[newSize+1];</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;      assert(p_data != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;      this-&gt;bufferLen = newSize;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      <span class="keywordflow">if</span> (oldData != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordflow">if</span> (copy &amp;&amp; this-&gt;len &gt; 0) {</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;          <span class="comment">// save existing data</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;          memmove(p_data, oldData, len * <span class="keyword">sizeof</span>(T));</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;          <span class="comment">// clear to prevent double release</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;          memset(oldData, 0, len * <span class="keyword">sizeof</span>(T));</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordflow">if</span> (shrink) {</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;          cleanup(oldData, newSize, oldBufferLen);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        }</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        deleteArray(oldData, oldBufferLen);  <span class="comment">// delete [] oldData;</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    }</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  T *newArray(<span class="keywordtype">int</span> newSize) {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    T *data;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">#if USE_ALLOCATOR</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    data = p_allocator-&gt;createArray&lt;T&gt;(newSize);  <span class="comment">// new T[newSize+1];</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    data = <span class="keyword">new</span> T[newSize];</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  <span class="keywordtype">void</span> deleteArray(T *oldData, <span class="keywordtype">int</span> oldBufferLen) {</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="preprocessor">#if USE_ALLOCATOR</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    p_allocator-&gt;removeArray(oldData, oldBufferLen);  <span class="comment">// delete [] oldData;</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keyword">delete</span>[] oldData;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  <span class="comment">// void printHex(uint8_t *data, int len){</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  <span class="comment">//   for (int j=0;j&lt;len;j++){</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="comment">//     Serial.print(data[j],HEX);</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  <span class="comment">//     Serial.print(&quot; &quot;);</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  <span class="comment">//   }</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  <span class="comment">//   Serial.println();</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  <span class="comment">// }</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  <span class="keywordtype">void</span> cleanup(T *data, <span class="keywordtype">int</span> from, <span class="keywordtype">int</span> to) {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = from; j &lt; to; j++) {</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;      data[j].~T();</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  }</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;};</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_allocator_html"><div class="ttname"><a href="classaudio__tools_1_1_allocator.html">audio_tools::Allocator</a></div><div class="ttdoc">Memory allocateator which uses malloc.</div><div class="ttdef"><b>Definition:</b> Allocator.h:22</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vector_1_1iterator_html"><div class="ttname"><a href="classaudio__tools_1_1_vector_1_1iterator.html">audio_tools::Vector::iterator</a></div><div class="ttdoc">Iterator for the Vector class.</div><div class="ttdef"><b>Definition:</b> Vector.h:29</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_vector_html"><div class="ttname"><a href="classaudio__tools_1_1_vector.html">audio_tools::Vector</a></div><div class="ttdoc">Vector implementation which provides the most important methods as defined by std::vector....</div><div class="ttdef"><b>Definition:</b> Vector.h:21</div></div>

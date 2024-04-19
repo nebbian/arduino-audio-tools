@@ -112,13 +112,13 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_p_w_m_audio_output.html#ab90844720b1d1eb48de817b0a49f3b30">   49</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classaudio__tools_1_1_p_w_m_audio_output.html#ab90844720b1d1eb48de817b0a49f3b30">begin</a>(<a class="code" href="structaudio__tools_1_1_p_w_m_config.html">PWMConfig</a> config) {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    TRACED();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    this-&gt;audio_config = config;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    AudioOutput::setAudioInfo(audio_config);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classaudio__tools_1_1_audio_output.html#acbaca7240bc555603b0da5b7ca11ce10">AudioOutput::setAudioInfo</a>(audio_config);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> pwm.begin(audio_config);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">bool</span> begin() {</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    TRACED();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    AudioOutput::setAudioInfo(audio_config);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classaudio__tools_1_1_audio_output.html#acbaca7240bc555603b0da5b7ca11ce10">AudioOutput::setAudioInfo</a>(audio_config);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> pwm.begin(audio_config);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
@@ -152,6 +152,7 @@ $(function() {
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_output_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_output.html">audio_tools::AudioOutput</a></div><div class="ttdoc">Abstract Audio Ouptut class.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:22</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_audio_output_html_acbaca7240bc555603b0da5b7ca11ce10"><div class="ttname"><a href="classaudio__tools_1_1_audio_output.html#acbaca7240bc555603b0da5b7ca11ce10">audio_tools::AudioOutput::setAudioInfo</a></div><div class="ttdeci">virtual void setAudioInfo(AudioInfo newInfo) override</div><div class="ttdoc">Defines the input AudioInfo.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:46</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_base_buffer_html"><div class="ttname"><a href="classaudio__tools_1_1_base_buffer.html">audio_tools::BaseBuffer&lt; uint8_t &gt;</a></div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_driver_p_w_m_base_html_a51d2a8fe7dc25e44e9ab70cc56115634"><div class="ttname"><a href="classaudio__tools_1_1_driver_p_w_m_base.html#a51d2a8fe7dc25e44e9ab70cc56115634">audio_tools::DriverPWMBase::setBuffer</a></div><div class="ttdeci">void setBuffer(BaseBuffer&lt; uint8_t &gt; *buffer)</div><div class="ttdef"><b>Definition:</b> PWMAudioBase.h:224</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_p_w_m_audio_output_html"><div class="ttname"><a href="classaudio__tools_1_1_p_w_m_audio_output.html">audio_tools::PWMAudioOutput</a></div><div class="ttdoc">Common functionality for PWM output. Please use the PWMAudioOutput typedef instead which references t...</div><div class="ttdef"><b>Definition:</b> AudioPWM.h:21</div></div>

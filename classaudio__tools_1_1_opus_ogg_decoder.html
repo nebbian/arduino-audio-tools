@@ -103,8 +103,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a1bf0444507e89c3e82e8f1825bf21ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds target to be notified about audio changes. <br /></td></tr>
 <tr class="separator:a1bf0444507e89c3e82e8f1825bf21ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed4bf0d5ce93f27242be485943d0b37d"><td class="memItemLeft" align="right" valign="top"><a id="aed4bf0d5ce93f27242be485943d0b37d"></a>
-<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audioInfo</b> () override</td></tr>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_ogg_container_decoder.html#aed4bf0d5ce93f27242be485943d0b37d">audioInfo</a> () override</td></tr>
+<tr class="memdesc:aed4bf0d5ce93f27242be485943d0b37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the actual input <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> <br /></td></tr>
 <tr class="separator:aed4bf0d5ce93f27242be485943d0b37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c77cb3dbe910c765ea439d103bdcbb9"><td class="memItemLeft" align="right" valign="top"><a id="a1c77cb3dbe910c765ea439d103bdcbb9"></a>
+virtual <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_support.html#a1c77cb3dbe910c765ea439d103bdcbb9">audioInfoOut</a> ()</td></tr>
+<tr class="memdesc:a1c77cb3dbe910c765ea439d103bdcbb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides the actual output <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a>: this is usually the same as <a class="el" href="classaudio__tools_1_1_audio_info_support.html#ae0d5f156b0564368220fa8d328db3880" title="provides the actual input AudioInfo">audioInfo()</a> unless we use a transforming stream <br /></td></tr>
+<tr class="separator:a1c77cb3dbe910c765ea439d103bdcbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acba365cc28eb702040c382646cfb0a7a"><td class="memItemLeft" align="right" valign="top"><a id="acba365cc28eb702040c382646cfb0a7a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () override</td></tr>
 <tr class="separator:acba365cc28eb702040c382646cfb0a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,6 +133,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () override</
 <tr class="memitem:adac116554b543b7c4228c018a85882f5"><td class="memItemLeft" align="right" valign="top"><a id="adac116554b543b7c4228c018a85882f5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()</td></tr>
 <tr class="separator:adac116554b543b7c4228c018a85882f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="memItemLeft" align="right" valign="top"><a id="a475bc9908ea8a1d67e5cc1c1f67a71b2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNotifyActive</b> ()</td></tr>
+<tr class="separator:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e20121f14644633fa87e762dccff25f"><td class="memItemLeft" align="right" valign="top"><a id="a5e20121f14644633fa87e762dccff25f"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () override</td></tr>
 <tr class="separator:a5e20121f14644633fa87e762dccff25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +150,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:ad27811d90a3546482f8bb603b45942c0"><td class="memItemLeft" align="right" valign="top"><a id="ad27811d90a3546482f8bb603b45942c0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setDecoder</b> (<a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> *decoder)</td></tr>
 <tr class="separator:ad27811d90a3546482f8bb603b45942c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909f118906f9cf7024baae224dcd90a7"><td class="memItemLeft" align="right" valign="top"><a id="a909f118906f9cf7024baae224dcd90a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyActive</b> (bool flag)</td></tr>
+<tr class="separator:a909f118906f9cf7024baae224dcd90a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e0825fad7a777d93e43602670010c7"><td class="memItemLeft" align="right" valign="top"><a id="a64e0825fad7a777d93e43602670010c7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
@@ -174,9 +185,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:af51e59b467a9e56aca2d4e2df6a5bf33"><td class="memItemLeft" align="right" valign="top"><a id="af51e59b467a9e56aca2d4e2df6a5bf33"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>beginOfSegment</b> (ogg_packet *op) override</td></tr>
 <tr class="separator:af51e59b467a9e56aca2d4e2df6a5bf33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c33a04426f36f7209536901dcd58544"><td class="memItemLeft" align="right" valign="top"><a id="a4c33a04426f36f7209536901dcd58544"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
-<tr class="separator:a4c33a04426f36f7209536901dcd58544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a777f889de86e2b59cbb1691f6ec3bd74"><td class="memItemLeft" align="right" valign="top"><a id="a777f889de86e2b59cbb1691f6ec3bd74"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>endOfSegment</b> (ogg_packet *op)</td></tr>
 <tr class="separator:a777f889de86e2b59cbb1691f6ec3bd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,6 +224,9 @@ OpusOggHeader&#160;</td><td class="memItemRight" valign="bottom"><b>header</b></
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memItemLeft" align="right" valign="top"><a id="aeaba7fcedcb403536c79ee7f04de17fc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_notify_active</b> = true</td></tr>
+<tr class="separator:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01cdff9fb397966eed50aae3e8f64d81"><td class="memItemLeft" align="right" valign="top"><a id="a01cdff9fb397966eed50aae3e8f64d81"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_open</b> = false</td></tr>
 <tr class="separator:a01cdff9fb397966eed50aae3e8f64d81"><td class="memSeparator" colspan="2">&#160;</td></tr>

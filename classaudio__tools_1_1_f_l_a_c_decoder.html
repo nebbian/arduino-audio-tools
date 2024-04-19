@@ -124,6 +124,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#adac116554b543b7c4228c018a85882f5">flush</a> ()</td></tr>
 <tr class="memdesc:adac116554b543b7c4228c018a85882f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process all data in the buffer. <br /></td></tr>
 <tr class="separator:adac116554b543b7c4228c018a85882f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="memItemLeft" align="right" valign="top"><a id="a475bc9908ea8a1d67e5cc1c1f67a71b2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNotifyActive</b> ()</td></tr>
+<tr class="separator:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a9b3baad8c612d81b96e46f84d7e97580">operator bool</a> ()</td></tr>
 <tr class="memdesc:a9b3baad8c612d81b96e46f84d7e97580"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if the class is active <br /></td></tr>
@@ -138,6 +141,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_streaming_decoder.html#a84c553df74063b3decb07d4995deafd7">setInputStream</a> (<a class="el" href="classaudio__tools_1_1_stream.html">Stream</a> &amp;inStream)</td></tr>
 <tr class="memdesc:a84c553df74063b3decb07d4995deafd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: same as setInput. <br /></td></tr>
 <tr class="separator:a84c553df74063b3decb07d4995deafd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909f118906f9cf7024baae224dcd90a7"><td class="memItemLeft" align="right" valign="top"><a id="a909f118906f9cf7024baae224dcd90a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyActive</b> (bool flag)</td></tr>
+<tr class="separator:a909f118906f9cf7024baae224dcd90a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e0825fad7a777d93e43602670010c7"><td class="memItemLeft" align="right" valign="top"><a id="a64e0825fad7a777d93e43602670010c7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a64e0825fad7a777d93e43602670010c7">setNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:a64e0825fad7a777d93e43602670010c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete: Use addNotifyAudioChange. <br /></td></tr>
@@ -163,9 +169,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeout</b> (uint6
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4c33a04426f36f7209536901dcd58544"><td class="memItemLeft" align="right" valign="top"><a id="a4c33a04426f36f7209536901dcd58544"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
-<tr class="separator:a4c33a04426f36f7209536901dcd58544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e42c1296c0e33ef618623e8ce26d5ed"><td class="memItemLeft" align="right" valign="top"><a id="a5e42c1296c0e33ef618623e8ce26d5ed"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_f_l_a_c_decoder.html#a5e42c1296c0e33ef618623e8ce26d5ed">isEof</a> (int bytes)</td></tr>
 <tr class="memdesc:a5e42c1296c0e33ef618623e8ce26d5ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">We return eof when we were subsequently getting 0 bytes for the timeout period. <br /></td></tr>
@@ -210,6 +213,9 @@ FLAC__StreamDecoderInitStatus&#160;</td><td class="memItemRight" valign="bottom"
 <tr class="memitem:a407c3efba665d276a38229f905bef352"><td class="memItemLeft" align="right" valign="top"><a id="a407c3efba665d276a38229f905bef352"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = false</td></tr>
 <tr class="separator:a407c3efba665d276a38229f905bef352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memItemLeft" align="right" valign="top"><a id="aeaba7fcedcb403536c79ee7f04de17fc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_notify_active</b> = true</td></tr>
+<tr class="separator:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e8890faca1eae1a85fbbf98e9e38d40"><td class="memItemLeft" align="right" valign="top"><a id="a9e8890faca1eae1a85fbbf98e9e38d40"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_ogg</b> = false</td></tr>
 <tr class="separator:a9e8890faca1eae1a85fbbf98e9e38d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
