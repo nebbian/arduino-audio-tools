@@ -1368,21 +1368,21 @@ $(function() {
 <div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;  }</div>
 <div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160; </div>
 <div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;  <span class="keywordtype">bool</span> begin(ThrottleConfig cfg) {</div>
-<div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;    LOGI(<span class="stringliteral">&quot;begin sample_rate: %d, channels: %d, bits: %d&quot;</span>, info.sample_rate, info.channels, info.bits_per_sample);</div>
+<div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;    LOGI(<span class="stringliteral">&quot;begin sample_rate: %d, channels: %d, bits: %d&quot;</span>, (<span class="keywordtype">int</span>) info.sample_rate,(<span class="keywordtype">int</span>) info.channels, (<span class="keywordtype">int</span>)info.bits_per_sample);</div>
 <div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;    this-&gt;info = cfg;</div>
 <div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160;    this-&gt;cfg = cfg;</div>
 <div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;    <span class="keywordflow">return</span> begin();</div>
 <div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;  }</div>
 <div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160; </div>
 <div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;  <span class="keywordtype">bool</span> begin(AudioInfo info) {</div>
-<div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160;    LOGI(<span class="stringliteral">&quot;begin sample_rate: %d, channels: %d, bits: %d&quot;</span>, info.sample_rate, info.channels, info.bits_per_sample);</div>
+<div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160;    LOGI(<span class="stringliteral">&quot;begin sample_rate: %d, channels: %d, bits: %d&quot;</span>, (<span class="keywordtype">int</span>)info.sample_rate, (<span class="keywordtype">int</span>) info.channels, (<span class="keywordtype">int</span>)info.bits_per_sample);</div>
 <div class="line"><a name="l01483"></a><span class="lineno"> 1483</span>&#160;    this-&gt;info = info;</div>
-<div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;    this-&gt;cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a029ace15f5ede8def0a6ab5c97a81b25">copyFrom</a>(info);</div>
+<div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;    this-&gt;cfg.copyFrom(info);</div>
 <div class="line"><a name="l01485"></a><span class="lineno"> 1485</span>&#160;    <span class="keywordflow">return</span> begin();</div>
 <div class="line"><a name="l01486"></a><span class="lineno"> 1486</span>&#160;  }</div>
 <div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160; </div>
 <div class="line"><a name="l01488"></a><span class="lineno"> 1488</span>&#160;  <span class="keywordtype">bool</span> begin(){ </div>
-<div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;    frame_size = cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a> / 8 * cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>;</div>
+<div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;    frame_size = cfg.bits_per_sample / 8 * cfg.channels;</div>
 <div class="line"><a name="l01490"></a><span class="lineno"> 1490</span>&#160;    startDelay();</div>
 <div class="line"><a name="l01491"></a><span class="lineno"> 1491</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l01492"></a><span class="lineno"> 1492</span>&#160;  }</div>
@@ -1441,7 +1441,7 @@ $(function() {
 <div class="line"><a name="l01545"></a><span class="lineno"> 1545</span>&#160;  }</div>
 <div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160; </div>
 <div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160;  <span class="keyword">inline</span> int64_t getDelayUs(uint64_t frames){</div>
-<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;    <span class="keywordflow">return</span> (frames * 1000000) / cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>;</div>
+<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;    <span class="keywordflow">return</span> (frames * 1000000) / cfg.sample_rate;</div>
 <div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160;  }</div>
 <div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160; </div>
 <div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;  <span class="keyword">inline</span> int64_t getDelayMs(uint64_t frames){</div>
@@ -2027,13 +2027,13 @@ $(function() {
 <div class="line"><a name="l02219"></a><span class="lineno"> 2219</span>&#160; </div>
 <div class="line"><a name="l02221"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_timer_callback_audio_stream.html#a87feead15897a49c7dccb043ac9fcddc"> 2221</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classaudio__tools_1_1_timer_callback_audio_stream.html#a87feead15897a49c7dccb043ac9fcddc">setAudioInfo</a>(<a class="code" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> info) {</div>
 <div class="line"><a name="l02222"></a><span class="lineno"> 2222</span>&#160;    TRACED();</div>
-<div class="line"><a name="l02223"></a><span class="lineno"> 2223</span>&#160;    <span class="keywordflow">if</span> (cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a> != info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a> || cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a> != info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a> ||</div>
-<div class="line"><a name="l02224"></a><span class="lineno"> 2224</span>&#160;        cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a> != info.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a>) {</div>
+<div class="line"><a name="l02223"></a><span class="lineno"> 2223</span>&#160;    <span class="keywordflow">if</span> (cfg.sample_rate != info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a> || cfg.channels != info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a> ||</div>
+<div class="line"><a name="l02224"></a><span class="lineno"> 2224</span>&#160;        cfg.bits_per_sample != info.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a>) {</div>
 <div class="line"><a name="l02225"></a><span class="lineno"> 2225</span>&#160;      <span class="keywordtype">bool</span> do_restart = active;</div>
 <div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;      <span class="keywordflow">if</span> (do_restart) <a class="code" href="classaudio__tools_1_1_timer_callback_audio_stream.html#aaf81d3fdaf258088d7692fa70cece087">end</a>();</div>
-<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;      cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a> = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>;</div>
-<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;      cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a> = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>;</div>
-<div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;      cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a> = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a>;</div>
+<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;      cfg.sample_rate = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>;</div>
+<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;      cfg.channels = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>;</div>
+<div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;      cfg.bits_per_sample = info.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a>;</div>
 <div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;      <span class="keywordflow">if</span> (do_restart) <a class="code" href="classaudio__tools_1_1_timer_callback_audio_stream.html#a601fb7cf1fc15db50c71a826f084f934">begin</a>(cfg);</div>
 <div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;    }</div>
 <div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;  }</div>
@@ -2047,7 +2047,7 @@ $(function() {
 <div class="line"><a name="l02241"></a><span class="lineno"> 2241</span>&#160;    this-&gt;cfg = config;</div>
 <div class="line"><a name="l02242"></a><span class="lineno"> 2242</span>&#160;    this-&gt;frameCallback = config.callback;</div>
 <div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160;    <span class="keywordflow">if</span> (cfg.use_timer) {</div>
-<div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;      frameSize = cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#aa65c89fa8336bfdc4f8d916d9d415a9f">bits_per_sample</a> * cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a> / 8;</div>
+<div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;      frameSize = cfg.bits_per_sample * cfg.channels / 8;</div>
 <div class="line"><a name="l02245"></a><span class="lineno"> 2245</span>&#160;      frame = <span class="keyword">new</span> uint8_t[frameSize];</div>
 <div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160;      buffer = <span class="keyword">new</span> <a class="code" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer&lt;uint8_t&gt;</a>(cfg.buffer_size);</div>
 <div class="line"><a name="l02247"></a><span class="lineno"> 2247</span>&#160;      timer = <span class="keyword">new</span> <a class="code" href="classaudio__tools_1_1_timer_alarm_repeating.html">TimerAlarmRepeating</a>();</div>
@@ -2055,8 +2055,8 @@ $(function() {
 <div class="line"><a name="l02249"></a><span class="lineno"> 2249</span>&#160;      <span class="keywordflow">if</span> (cfg.timer_id&gt;=0){</div>
 <div class="line"><a name="l02250"></a><span class="lineno"> 2250</span>&#160;        timer-&gt;setTimer(cfg.timer_id);</div>
 <div class="line"><a name="l02251"></a><span class="lineno"> 2251</span>&#160;      }</div>
-<div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160;      time = <a class="code" href="classaudio__tools_1_1_audio_time.html#ac75be917519dc82b0025e9187218394d">AudioTime::toTimeUs</a>(cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>);</div>
-<div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160;      LOGI(<span class="stringliteral">&quot;sample_rate: %u -&gt; time: %u milliseconds&quot;</span>,  (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a0e86c53dfa0ad5dc0d2ecd0304fabc95">sample_rate</a>,  (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)time);</div>
+<div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160;      time = <a class="code" href="classaudio__tools_1_1_audio_time.html#ac75be917519dc82b0025e9187218394d">AudioTime::toTimeUs</a>(cfg.sample_rate);</div>
+<div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160;      LOGI(<span class="stringliteral">&quot;sample_rate: %u -&gt; time: %u milliseconds&quot;</span>,  (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)cfg.sample_rate,  (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)time);</div>
 <div class="line"><a name="l02254"></a><span class="lineno"> 2254</span>&#160;      timer-&gt;setCallbackParameter(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;      timer-&gt;begin(timerCallback, time, TimeUnit::US);</div>
 <div class="line"><a name="l02256"></a><span class="lineno"> 2256</span>&#160;    }</div>
