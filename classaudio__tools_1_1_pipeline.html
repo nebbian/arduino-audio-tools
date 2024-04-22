@@ -149,16 +149,25 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () 
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_pipeline.html#a570a83d01dcd387a8811544a3d64f766">hasComponents</a> ()</td></tr>
 <tr class="memdesc:a570a83d01dcd387a8811544a3d64f766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if we have at least 1 component. <br /></td></tr>
 <tr class="separator:a570a83d01dcd387a8811544a3d64f766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f512ab0fcc05612f8e3d6a4664ce9a"><td class="memItemLeft" align="right" valign="top"><a id="aa1f512ab0fcc05612f8e3d6a4664ce9a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_pipeline.html#aa1f512ab0fcc05612f8e3d6a4664ce9a">isActive</a> ()</td></tr>
+<tr class="memdesc:aa1f512ab0fcc05612f8e3d6a4664ce9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the pipeline is active. <br /></td></tr>
+<tr class="separator:aa1f512ab0fcc05612f8e3d6a4664ce9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="memItemLeft" align="right" valign="top"><a id="a475bc9908ea8a1d67e5cc1c1f67a71b2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a475bc9908ea8a1d67e5cc1c1f67a71b2">isNotifyActive</a> ()</td></tr>
 <tr class="memdesc:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the automatic <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> update is active. <br /></td></tr>
 <tr class="separator:a475bc9908ea8a1d67e5cc1c1f67a71b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ddb86384bb077f44e09738d7e8a70e"><td class="memItemLeft" align="right" valign="top"><a id="a10ddb86384bb077f44e09738d7e8a70e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_pipeline.html#a10ddb86384bb077f44e09738d7e8a70e">isOK</a> ()</td></tr>
+<tr class="memdesc:a10ddb86384bb077f44e09738d7e8a70e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if pipeline is correctly set up. <br /></td></tr>
+<tr class="separator:a10ddb86384bb077f44e09738d7e8a70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58d02cff3d3859324b7eb6c09dcd4ff5"><td class="memItemLeft" align="right" valign="top"><a id="a58d02cff3d3859324b7eb6c09dcd4ff5"></a>
 <a class="el" href="classaudio__tools_1_1_modifying_stream.html">ModifyingStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_pipeline.html#a58d02cff3d3859324b7eb6c09dcd4ff5">last</a> ()</td></tr>
 <tr class="memdesc:a58d02cff3d3859324b7eb6c09dcd4ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the last component. <br /></td></tr>
 <tr class="separator:a58d02cff3d3859324b7eb6c09dcd4ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_pipeline.html#a9b3baad8c612d81b96e46f84d7e97580">operator bool</a> ()</td></tr>
+<tr class="memdesc:a9b3baad8c612d81b96e46f84d7e97580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if pipeline is correctly set up and is active. <br /></td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a095e05973ce76113c2f37c36ec7d6f9b"><td class="memItemLeft" align="right" valign="top"><a id="a095e05973ce76113c2f37c36ec7d6f9b"></a>
 <a class="el" href="classaudio__tools_1_1_modifying_stream.html">ModifyingStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_pipeline.html#a095e05973ce76113c2f37c36ec7d6f9b">operator[]</a> (int idx)</td></tr>
@@ -175,6 +184,10 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#aa5b1cdb06807ff2dc37acbaff63410b9">removeNotifyAudioChange</a> (<a class="el" href="classaudio__tools_1_1_audio_info_support.html">AudioInfoSupport</a> &amp;bi)</td></tr>
 <tr class="memdesc:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a target in order not to be notified about audio changes. <br /></td></tr>
 <tr class="separator:aa5b1cdb06807ff2dc37acbaff63410b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d4dd65be4e0a27eff3aac48dadd381"><td class="memItemLeft" align="right" valign="top"><a id="ac4d4dd65be4e0a27eff3aac48dadd381"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_pipeline.html#ac4d4dd65be4e0a27eff3aac48dadd381">setActive</a> (bool flag)</td></tr>
+<tr class="memdesc:ac4d4dd65be4e0a27eff3aac48dadd381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates/deactivates the pipeline (default is active) <br /></td></tr>
+<tr class="separator:ac4d4dd65be4e0a27eff3aac48dadd381"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28865e64c1f2cedf61165b522d0ca2c7"><td class="memItemLeft" align="right" valign="top"><a id="a28865e64c1f2cedf61165b522d0ca2c7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_pipeline.html#a28865e64c1f2cedf61165b522d0ca2c7">setAudioInfo</a> (<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a> newInfo) override</td></tr>
 <tr class="memdesc:a28865e64c1f2cedf61165b522d0ca2c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> for the first node. <br /></td></tr>
@@ -252,6 +265,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_output</b> = fals
 <tr class="memitem:a47385aa19435f5fca9d3083a748258c5"><td class="memItemLeft" align="right" valign="top"><a id="a47385aa19435f5fca9d3083a748258c5"></a>
 <a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="separator:a47385aa19435f5fca9d3083a748258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407c3efba665d276a38229f905bef352"><td class="memItemLeft" align="right" valign="top"><a id="a407c3efba665d276a38229f905bef352"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_active</b> = true</td></tr>
+<tr class="separator:a407c3efba665d276a38229f905bef352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memItemLeft" align="right" valign="top"><a id="aeaba7fcedcb403536c79ee7f04de17fc"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_notify_active</b> = true</td></tr>
 <tr class="separator:aeaba7fcedcb403536c79ee7f04de17fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
