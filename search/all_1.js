@@ -107,7 +107,7 @@ var searchData=
   ['audioencoder_105',['AudioEncoder',['../classaudio__tools_1_1_audio_encoder.html',1,'audio_tools']]],
   ['audioencoderext_106',['AudioEncoderExt',['../classaudio__tools_1_1_audio_encoder_ext.html',1,'audio_tools']]],
   ['audioesp32fft_107',['AudioESP32FFT',['../classaudio__tools_1_1_audio_e_s_p32_f_f_t.html',1,'audio_tools']]],
-  ['audioesp32ulp_108',['AudioESP32ULP',['../class_audio_e_s_p32_u_l_p.html',1,'']]],
+  ['audioesp32ulp_108',['AudioESP32ULP',['../classaudio__tools_1_1_audio_e_s_p32_u_l_p.html',1,'audio_tools']]],
   ['audioesp32ulp_2eh_109',['AudioESP32ULP.h',['../_audio_e_s_p32_u_l_p_8h.html',1,'']]],
   ['audioespressiffft_110',['AudioEspressifFFT',['../classaudio__tools_1_1_audio_espressif_f_f_t.html',1,'audio_tools']]],
   ['audiofftbase_111',['AudioFFTBase',['../classaudio__tools_1_1_audio_f_f_t_base.html',1,'AudioFFTBase'],['../classaudio__tools_1_1_audio_f_f_t_base.html#a737190d3d351f65b5184f7c8047a2fb7',1,'audio_tools::AudioFFTBase::AudioFFTBase()']]],

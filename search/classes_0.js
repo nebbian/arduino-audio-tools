@@ -60,7 +60,7 @@ var searchData=
   ['audioencoder_1606',['AudioEncoder',['../classaudio__tools_1_1_audio_encoder.html',1,'audio_tools']]],
   ['audioencoderext_1607',['AudioEncoderExt',['../classaudio__tools_1_1_audio_encoder_ext.html',1,'audio_tools']]],
   ['audioesp32fft_1608',['AudioESP32FFT',['../classaudio__tools_1_1_audio_e_s_p32_f_f_t.html',1,'audio_tools']]],
-  ['audioesp32ulp_1609',['AudioESP32ULP',['../class_audio_e_s_p32_u_l_p.html',1,'']]],
+  ['audioesp32ulp_1609',['AudioESP32ULP',['../classaudio__tools_1_1_audio_e_s_p32_u_l_p.html',1,'audio_tools']]],
   ['audioespressiffft_1610',['AudioEspressifFFT',['../classaudio__tools_1_1_audio_espressif_f_f_t.html',1,'audio_tools']]],
   ['audiofftbase_1611',['AudioFFTBase',['../classaudio__tools_1_1_audio_f_f_t_base.html',1,'audio_tools']]],
   ['audiofftconfig_1612',['AudioFFTConfig',['../structaudio__tools_1_1_audio_f_f_t_config.html',1,'audio_tools']]],
