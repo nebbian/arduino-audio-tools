@@ -175,6 +175,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_abstract_u_r_l_stream.html#a012ee07a9c3a44ef974560a4d89092e9">setPassword</a> (const char *password)=0</td></tr>
 <tr class="memdesc:a012ee07a9c3a44ef974560a4d89092e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the password that will be used for logging in (when calling begin) <br /></td></tr>
 <tr class="separator:a012ee07a9c3a44ef974560a4d89092e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53bba6676d1d890f252297a5ebfc63bd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_abstract_u_r_l_stream.html#a53bba6676d1d890f252297a5ebfc63bd">setPowerSave</a> (bool ps)=0</td></tr>
+<tr class="separator:a53bba6676d1d890f252297a5ebfc63bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76cf8ad142c2ec8bfa363295d2ad9ce7"><td class="memItemLeft" align="right" valign="top"><a id="a76cf8ad142c2ec8bfa363295d2ad9ce7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_abstract_u_r_l_stream.html#a76cf8ad142c2ec8bfa363295d2ad9ce7">setSSID</a> (const char *ssid)=0</td></tr>
 <tr class="memdesc:a76cf8ad142c2ec8bfa363295d2ad9ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the ssid that will be used for logging in (when calling begin) <br /></td></tr>
@@ -227,7 +229,37 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_notify_active</b> 
 <div class="textblock"><p>Abstract Base class for all <a class="el" href="classaudio__tools_1_1_u_r_l_stream.html" title="Represents the content of a URL as Stream. We use the WiFi.h API.">URLStream</a> implementations. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a53bba6676d1d890f252297a5ebfc63bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53bba6676d1d890f252297a5ebfc63bd">&#9670;&nbsp;</a></span>setPowerSave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setPowerSave </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ps</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>if set to true, it activates the power save mode which comes at the cost of performance! - By default this is deactivated. ESP32 Only! </p>
+
+<p>Implemented in <a class="el" href="classaudio__tools_1_1_u_r_l_stream.html#a6fab9a37a748ff9345c0f229b1504ef8">URLStream</a>, and <a class="el" href="classaudio__tools_1_1_i_c_y_stream.html#a7db482c963c59b5a6356ba981d1236db">ICYStream</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/AudioHttp/<a class="el" href="_abstract_u_r_l_stream_8h_source.html">AbstractURLStream.h</a></li>
 </ul>
 </div><!-- contents -->
