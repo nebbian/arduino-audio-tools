@@ -789,9 +789,9 @@ $(function() {
 <div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00820"></a><span class="lineno"><a class="line" href="structaudio__tools_1_1_channels_select_output_1_1_channel_selection_output_def.html">  820</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structaudio__tools_1_1_channels_select_output_1_1_channel_selection_output_def.html">ChannelSelectionOutputDef</a> {</div>
 <div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    <a class="code" href="classaudio__tools_1_1_print.html">Print</a> *p_out = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;    <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;uint16_t&gt;</a> channels;</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;    <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;uint16_t&gt;</a> channels{0};</div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;  };</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;  <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;ChannelSelectionOutputDef&gt;</a> out_channels;</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;  <a class="code" href="classaudio__tools_1_1_vector.html">Vector&lt;ChannelSelectionOutputDef&gt;</a> out_channels{0};</div>
 <div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160; </div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;  <span class="keywordtype">size_t</span> writeT(<span class="keyword">const</span> uint8_t *buffer, <span class="keywordtype">size_t</span> size) {</div>
@@ -804,31 +804,34 @@ $(function() {
 <div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; sample_count; i += cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>) {</div>
 <div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;      T *frame = data + i;</div>
 <div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;out : out_channels) {</div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;ch : out.channels) {</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;          <span class="comment">// make sure we have a valid channel</span></div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;          <span class="keywordtype">int</span> channel = (ch &lt; cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>) ? ch : cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a> - 1;</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;          T sample = frame[channel];</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;          <span class="keywordtype">size_t</span> written = out.p_out-&gt;write((uint8_t *)&amp;sample, <span class="keyword">sizeof</span>(T));</div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;          <span class="keywordflow">if</span> (written != result_size * <span class="keyword">sizeof</span>(T)) {</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            LOGW(<span class="stringliteral">&quot;Could not write all samples&quot;</span>);</div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;          }</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;        }</div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;      }</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;    }</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;    <span class="keywordflow">return</span> size;</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;  }</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160; </div>
-<div class="line"><a name="l00852"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_channels_select_output.html#a625ae3f6fbfc5be389b955001438f9f0">  852</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_channels_select_output.html#a625ae3f6fbfc5be389b955001438f9f0">getChannels</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a>*out, <span class="keywordtype">int</span> defaultChannels){</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; channels_select : out_channels){</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;      <span class="keywordflow">if</span> (channels_select.p_out == out) <span class="keywordflow">return</span> channels_select.channels.size();</div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;    }</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;    <span class="keywordflow">return</span> defaultChannels;</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;  }</div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160; </div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;};</div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160; </div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;        T out_frame[out.channels.size()];</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        <span class="keywordtype">int</span> ch_out = 0;</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;ch : out.channels) {</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;          <span class="comment">// make sure we have a valid channel</span></div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;          <span class="keywordtype">int</span> channel = (ch &lt; cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a>) ? ch : cfg.<a class="code" href="structaudio__tools_1_1_audio_info.html#a1ac7822956f57069d76da865d6b33c55">channels</a> - 1;</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;          out_frame[ch_out++] = frame[channel];</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;        }</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;        <span class="comment">// write full frame </span></div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;        <span class="keywordtype">size_t</span> written = out.p_out-&gt;write((uint8_t *)&amp;out_frame, <span class="keyword">sizeof</span>(out_frame));</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;        <span class="keywordflow">if</span> (written !=  <span class="keyword">sizeof</span>(out_frame)) {</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;          LOGW(<span class="stringliteral">&quot;Could not write all samples&quot;</span>);</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;        }</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;      }</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;    }</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;    <span class="keywordflow">return</span> size;</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;  }</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160; </div>
+<div class="line"><a name="l00855"></a><span class="lineno"><a class="line" href="classaudio__tools_1_1_channels_select_output.html#a625ae3f6fbfc5be389b955001438f9f0">  855</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classaudio__tools_1_1_channels_select_output.html#a625ae3f6fbfc5be389b955001438f9f0">getChannels</a>(<a class="code" href="classaudio__tools_1_1_print.html">Print</a>*out, <span class="keywordtype">int</span> defaultChannels){</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; channels_select : out_channels){</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;      <span class="keywordflow">if</span> (channels_select.p_out == out) <span class="keywordflow">return</span> channels_select.channels.size();</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    }</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;    <span class="keywordflow">return</span> defaultChannels;</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;  }</div>
 <div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160; </div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;};</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160; </div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160; </div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;} <span class="comment">// namespace audio_tools</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_source_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_source.html">audio_tools::AudioInfoSource</a></div><div class="ttdoc">Supports the subscription to audio change notifications.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:155</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_support_html"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_support.html">audio_tools::AudioInfoSupport</a></div><div class="ttdoc">Supports changes to the sampling rate, bits and channels.</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:136</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_audio_info_support_html_a1c77cb3dbe910c765ea439d103bdcbb9"><div class="ttname"><a href="classaudio__tools_1_1_audio_info_support.html#a1c77cb3dbe910c765ea439d103bdcbb9">audio_tools::AudioInfoSupport::audioInfoOut</a></div><div class="ttdeci">virtual AudioInfo audioInfoOut()</div><div class="ttdoc">provides the actual output AudioInfo: this is usually the same as audioInfo() unless we use a transfo...</div><div class="ttdef"><b>Definition:</b> AudioTypes.h:143</div></div>
@@ -843,7 +846,7 @@ $(function() {
 <div class="ttc" id="aclassaudio__tools_1_1_channels_select_output_html"><div class="ttname"><a href="classaudio__tools_1_1_channels_select_output.html">audio_tools::ChannelsSelectOutput</a></div><div class="ttdoc">Flexible functionality to extract one or more channels from a multichannel signal....</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:737</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_channels_select_output_html_a16dfa74a49621850d058cfac8ba28ad3"><div class="ttname"><a href="classaudio__tools_1_1_channels_select_output.html#a16dfa74a49621850d058cfac8ba28ad3">audio_tools::ChannelsSelectOutput::addOutput</a></div><div class="ttdeci">void addOutput(Print &amp;out, uint16_t left, uint16_t right)</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:786</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_channels_select_output_html_a1ff815f1574c959da86ab02d7e1f6587"><div class="ttname"><a href="classaudio__tools_1_1_channels_select_output.html#a1ff815f1574c959da86ab02d7e1f6587">audio_tools::ChannelsSelectOutput::addOutput</a></div><div class="ttdeci">void addOutput(Print &amp;out, uint16_t channel)</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:775</div></div>
-<div class="ttc" id="aclassaudio__tools_1_1_channels_select_output_html_a625ae3f6fbfc5be389b955001438f9f0"><div class="ttname"><a href="classaudio__tools_1_1_channels_select_output.html#a625ae3f6fbfc5be389b955001438f9f0">audio_tools::ChannelsSelectOutput::getChannels</a></div><div class="ttdeci">int getChannels(Print *out, int defaultChannels)</div><div class="ttdoc">Determine number of channels for destination.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:852</div></div>
+<div class="ttc" id="aclassaudio__tools_1_1_channels_select_output_html_a625ae3f6fbfc5be389b955001438f9f0"><div class="ttname"><a href="classaudio__tools_1_1_channels_select_output.html#a625ae3f6fbfc5be389b955001438f9f0">audio_tools::ChannelsSelectOutput::getChannels</a></div><div class="ttdeci">int getChannels(Print *out, int defaultChannels)</div><div class="ttdoc">Determine number of channels for destination.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:855</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_channels_select_output_html_afcd21128a375bb3cd2fa0f24b989ae23"><div class="ttname"><a href="classaudio__tools_1_1_channels_select_output.html#afcd21128a375bb3cd2fa0f24b989ae23">audio_tools::ChannelsSelectOutput::addOutput</a></div><div class="ttdeci">void addOutput(Print &amp;out, Vector&lt; uint16_t &gt; &amp;channels)</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:766</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_csv_output_html"><div class="ttname"><a href="classaudio__tools_1_1_csv_output.html">audio_tools::CsvOutput</a></div><div class="ttdoc">Stream Wrapper which can be used to print the values as readable ASCII to the screen to be analyzed i...</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:112</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_csv_output_html_a016bb39af201e717c1975551b7ecc1b3"><div class="ttname"><a href="classaudio__tools_1_1_csv_output.html#a016bb39af201e717c1975551b7ecc1b3">audio_tools::CsvOutput::write</a></div><div class="ttdeci">virtual size_t write(const uint8_t *data, size_t len) override</div><div class="ttdoc">Writes the data - formatted as CSV - to the output stream.</div><div class="ttdef"><b>Definition:</b> AudioOutput.h:171</div></div>
