@@ -114,6 +114,11 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_multi_output.html#a6ca907f2c2ed6a51623840e05ae29902">MultiOutput</a> (<a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;out1, <a class="el" href="classaudio__tools_1_1_audio_stream.html">AudioStream</a> &amp;out2)</td></tr>
 <tr class="memdesc:a6ca907f2c2ed6a51623840e05ae29902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a <a class="el" href="classaudio__tools_1_1_multi_output.html" title="Replicates the output to multiple destinations.">MultiOutput</a> with 2 final outputs. <br /></td></tr>
 <tr class="separator:a6ca907f2c2ed6a51623840e05ae29902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cfcf55f612ed5cd9dd3697cf1c6bca0"><td class="memItemLeft" align="right" valign="top"><a id="a2cfcf55f612ed5cd9dd3697cf1c6bca0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MultiOutput</b> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out)</td></tr>
+<tr class="separator:a2cfcf55f612ed5cd9dd3697cf1c6bca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1ad87a3e4969f809535c3ffa8fe768"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_multi_output.html#aeb1ad87a3e4969f809535c3ffa8fe768">MultiOutput</a> (<a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out1, <a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;out2)</td></tr>
+<tr class="separator:aeb1ad87a3e4969f809535c3ffa8fe768"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19b249b67fdac8e965087eab883b26ab"><td class="memItemLeft" align="right" valign="top"><a id="a19b249b67fdac8e965087eab883b26ab"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_multi_output.html#a19b249b67fdac8e965087eab883b26ab">add</a> (<a class="el" href="classaudio__tools_1_1_audio_output.html">AudioOutput</a> &amp;out)</td></tr>
 <tr class="memdesc:a19b249b67fdac8e965087eab883b26ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an additional <a class="el" href="classaudio__tools_1_1_audio_output.html" title="Abstract Audio Ouptut class.">AudioOutput</a> output. <br /></td></tr>
@@ -229,7 +234,45 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>tmpPos</b> = 0</td></t
 <div class="textblock"><p>Replicates the output to multiple destinations. </p>
 <dl class="section author"><dt>Author</dt><dd>Phil Schatzmann </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GPLv3 </dd></dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aeb1ad87a3e4969f809535c3ffa8fe768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb1ad87a3e4969f809535c3ffa8fe768">&#9670;&nbsp;</a></span>MultiOutput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classaudio__tools_1_1_multi_output.html">MultiOutput</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;&#160;</td>
+          <td class="paramname"><em>out1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classaudio__tools_1_1_print.html">Print</a> &amp;&#160;</td>
+          <td class="paramname"><em>out2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Defines a <a class="el" href="classaudio__tools_1_1_multi_output.html" title="Replicates the output to multiple destinations.">MultiOutput</a> with 2 final outputs: Warning no support for <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> notifications. It is recommended to use individual add calls. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad89418aeb557f65a8f1a0aed755633b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad89418aeb557f65a8f1a0aed755633b1">&#9670;&nbsp;</a></span>writeSilence()</h2>
 
