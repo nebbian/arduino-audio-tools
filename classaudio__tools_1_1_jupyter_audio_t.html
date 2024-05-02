@@ -85,10 +85,11 @@ Inheritance diagram for JupyterAudioT&lt; T &gt;:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_jupyter_audio_t.png" usemap="#JupyterAudioT_3C_20T_20_3E_map" alt=""/>
   <map id="JupyterAudioT_3C_20T_20_3E_map" name="JupyterAudioT_3C_20T_20_3E_map">
-<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="136,112,262,136"/>
+<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="136,168,262,192"/>
+<area href="classaudio__tools_1_1_base_stream.html" title="Base class for all Streams. It relies on write(const uint8_t *buffer, size_t size) and readBytes(uint..." alt="BaseStream" shape="rect" coords="0,112,126,136"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="136,112,262,136"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="272,112,398,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,126,80"/>
-<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="136,56,262,80"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="272,56,398,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,126,24"/>
   </map>
 </div></div>
@@ -157,9 +158,9 @@ const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>na
 <tr class="memitem:a1ddf618350b26bee15ebd4106923a52e"><td class="memItemLeft" align="right" valign="top"><a id="a1ddf618350b26bee15ebd4106923a52e"></a>
 const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>path</b> () const</td></tr>
 <tr class="separator:a1ddf618350b26bee15ebd4106923a52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ca0929fe29faa64b2b39af2b5527013"><td class="memItemLeft" align="right" valign="top"><a id="a6ca0929fe29faa64b2b39af2b5527013"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *buffer, size_t length)</td></tr>
-<tr class="separator:a6ca0929fe29faa64b2b39af2b5527013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43061a6ac2343137b176333cb989ba48"><td class="memItemLeft" align="right" valign="top"><a id="a43061a6ac2343137b176333cb989ba48"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *buffer, size_t length) override</td></tr>
+<tr class="separator:a43061a6ac2343137b176333cb989ba48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e26f40121eda38b0042dcba026ab82"><td class="memItemLeft" align="right" valign="top"><a id="a36e26f40121eda38b0042dcba026ab82"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#a36e26f40121eda38b0042dcba026ab82">readSilence</a> (uint8_t *buffer, size_t length)</td></tr>
 <tr class="memdesc:a36e26f40121eda38b0042dcba026ab82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source to generate silence: just sets the buffer to 0. <br /></td></tr>

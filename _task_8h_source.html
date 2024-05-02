@@ -139,28 +139,30 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> ref;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">int</span> getCoreID() {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> xPortGetCoreID();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  TaskHandle_t xHandle = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  std::function&lt;void()&gt; loop_code = nop;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">void</span> *ref;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> nop() { <a class="code" href="namespaceaudio__tools.html#a7f2dfce1046bdd2a2b753643726c2346">delay</a>(100); }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#ifdef ESP32</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">int</span> getCoreID() {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> xPortGetCoreID();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  TaskHandle_t xHandle = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  std::function&lt;void()&gt; loop_code = nop;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordtype">void</span> *ref;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> task_loop(<span class="keywordtype">void</span>* arg) {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="classaudio__tools_1_1_task.html#a803e1db59ce7b20ba3f1d0bbe3e57404">Task</a>* <span class="keyword">self</span> = (<a class="code" href="classaudio__tools_1_1_task.html#a803e1db59ce7b20ba3f1d0bbe3e57404">Task</a>*)arg;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keyword">self</span>-&gt;loop_code();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> nop() { <a class="code" href="namespaceaudio__tools.html#a7f2dfce1046bdd2a2b753643726c2346">delay</a>(100); }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> task_loop(<span class="keywordtype">void</span>* arg) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classaudio__tools_1_1_task.html#a803e1db59ce7b20ba3f1d0bbe3e57404">Task</a>* <span class="keyword">self</span> = (<a class="code" href="classaudio__tools_1_1_task.html#a803e1db59ce7b20ba3f1d0bbe3e57404">Task</a>*)arg;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keyword">self</span>-&gt;loop_code();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}  <span class="comment">// namespace audio_tools</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassaudio__tools_1_1_task_html"><div class="ttname"><a href="classaudio__tools_1_1_task.html">audio_tools::Task</a></div><div class="ttdoc">FreeRTOS task.</div><div class="ttdef"><b>Definition:</b> Task.h:19</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_task_html_a0924715b76f5f0305eda62e802cfcf2b"><div class="ttname"><a href="classaudio__tools_1_1_task.html#a0924715b76f5f0305eda62e802cfcf2b">audio_tools::Task::create</a></div><div class="ttdeci">bool create(const char *name, int stackSize, int priority=1, int core=-1)</div><div class="ttdoc">If you used the empty constructor, you need to call create!</div><div class="ttdef"><b>Definition:</b> Task.h:30</div></div>
 <div class="ttc" id="aclassaudio__tools_1_1_task_html_a1fcb45e5d2428352eb36b487d1d4eea3"><div class="ttname"><a href="classaudio__tools_1_1_task.html#a1fcb45e5d2428352eb36b487d1d4eea3">audio_tools::Task::remove</a></div><div class="ttdeci">void remove()</div><div class="ttdoc">deletes the FreeRTOS task</div><div class="ttdef"><b>Definition:</b> Task.h:47</div></div>

@@ -85,6 +85,7 @@ Inheritance diagram for HammingFEC&lt; bytecount, block_t &gt;:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_hamming_f_e_c.png" usemap="#HammingFEC_3C_20bytecount_2C_20block_5Ft_20_3E_map" alt=""/>
   <map id="HammingFEC_3C_20bytecount_2C_20block_5Ft_20_3E_map" name="HammingFEC_3C_20bytecount_2C_20block_5Ft_20_3E_map">
+<area href="classaudio__tools_1_1_base_stream.html" title="Base class for all Streams. It relies on write(const uint8_t *buffer, size_t size) and readBytes(uint..." alt="BaseStream" shape="rect" coords="0,112,216,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,216,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,216,24"/>
   </map>
@@ -104,30 +105,27 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>available</b> () overr
 <tr class="memitem:a87b51853b7bf1bc90d9efa9f3b8d4fea"><td class="memItemLeft" align="right" valign="top"><a id="a87b51853b7bf1bc90d9efa9f3b8d4fea"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>availableForWrite</b> () override</td></tr>
 <tr class="separator:a87b51853b7bf1bc90d9efa9f3b8d4fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memItemLeft" align="right" valign="top"><a id="ad3aed50bc3b4459454ccb8c64f5ced5a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()</td></tr>
-<tr class="separator:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50f45551c10ca30a0bc7f447e70188b1"><td class="memItemLeft" align="right" valign="top"><a id="a50f45551c10ca30a0bc7f447e70188b1"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
+<tr class="separator:a50f45551c10ca30a0bc7f447e70188b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc34417a19a7b70626d19c41072d72a5"><td class="memItemLeft" align="right" valign="top"><a id="adc34417a19a7b70626d19c41072d72a5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
+<tr class="separator:adc34417a19a7b70626d19c41072d72a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memItemLeft" align="right" valign="top"><a id="af654b48544c195ab99fe27e7bc3ed5fe"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> () override</td></tr>
+<tr class="separator:af654b48544c195ab99fe27e7bc3ed5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5064eb1b12f6c5d12940259c4312b81b"><td class="memItemLeft" align="right" valign="top"><a id="a5064eb1b12f6c5d12940259c4312b81b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_hamming_f_e_c.html#a5064eb1b12f6c5d12940259c4312b81b">peek</a> () override</td></tr>
-<tr class="memdesc:a5064eb1b12f6c5d12940259c4312b81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be avoided. <br /></td></tr>
-<tr class="separator:a5064eb1b12f6c5d12940259c4312b81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0852e3297f3743332e629b9924c9375"><td class="memItemLeft" align="right" valign="top"><a id="ad0852e3297f3743332e629b9924c9375"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_hamming_f_e_c.html#ad0852e3297f3743332e629b9924c9375">read</a> () override</td></tr>
-<tr class="memdesc:ad0852e3297f3743332e629b9924c9375"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be avoided. <br /></td></tr>
-<tr class="separator:ad0852e3297f3743332e629b9924c9375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c5c6275ddee80eb02839356b6185c0b"><td class="memItemLeft" align="right" valign="top"><a id="a4c5c6275ddee80eb02839356b6185c0b"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *data, size_t len) override</td></tr>
 <tr class="separator:a4c5c6275ddee80eb02839356b6185c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7597ef706dd1aa590903ce9e095db20a"><td class="memItemLeft" align="right" valign="top"><a id="a7597ef706dd1aa590903ce9e095db20a"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const uint8_t *data, size_t len) override</td></tr>
 <tr class="separator:a7597ef706dd1aa590903ce9e095db20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e40195a444e7f20508961cfeacc9b04"><td class="memItemLeft" align="right" valign="top"><a id="a1e40195a444e7f20508961cfeacc9b04"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_hamming_f_e_c.html#a1e40195a444e7f20508961cfeacc9b04">write</a> (uint8_t c) override</td></tr>
-<tr class="memdesc:a1e40195a444e7f20508961cfeacc9b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be avoided. <br /></td></tr>
-<tr class="separator:a1e40195a444e7f20508961cfeacc9b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffba128cba62b029746648f6946945c"><td class="memItemLeft" align="right" valign="top"><a id="adffba128cba62b029746648f6946945c"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t ch) override</td></tr>
+<tr class="separator:adffba128cba62b029746648f6946945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -161,6 +159,9 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>modifyCharBit</b> 
 <tr class="memitem:a5e9e562cb3f19598c5c73147a21a62f0"><td class="memItemLeft" align="right" valign="top"><a id="a5e9e562cb3f19598c5c73147a21a62f0"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>multipleXor</b> (int *indicies, int len)</td></tr>
 <tr class="separator:a5e9e562cb3f19598c5c73147a21a62f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5caf99a24686511722c4c9f94c4ec52e"><td class="memItemLeft" align="right" valign="top"><a id="a5caf99a24686511722c4c9f94c4ec52e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refillReadBuffer</b> ()</td></tr>
+<tr class="separator:a5caf99a24686511722c4c9f94c4ec52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab73c3523a0b326d979c2e6ea54affda4"><td class="memItemLeft" align="right" valign="top"><a id="ab73c3523a0b326d979c2e6ea54affda4"></a>
 block_t&#160;</td><td class="memItemRight" valign="bottom"><b>toggleBit</b> (block_t b, int i)</td></tr>
 <tr class="separator:ab73c3523a0b326d979c2e6ea54affda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,6 +183,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_timeout</b> = 10</td>
 <tr class="memitem:afe8c5ab1c7374aa227f393efbcffc265"><td class="memItemLeft" align="right" valign="top"><a id="afe8c5ab1c7374aa227f393efbcffc265"></a>
 <a class="el" href="classaudio__tools_1_1_single_buffer.html">SingleBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>raw</b> {bytecount}</td></tr>
 <tr class="separator:afe8c5ab1c7374aa227f393efbcffc265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf64bd29ec689f2d7574efbb63f440bb"><td class="memItemLeft" align="right" valign="top"><a id="adf64bd29ec689f2d7574efbb63f440bb"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_in</b> {0}</td></tr>
+<tr class="separator:adf64bd29ec689f2d7574efbb63f440bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add363d597c7d8108a5350406105d158d"><td class="memItemLeft" align="right" valign="top"><a id="add363d597c7d8108a5350406105d158d"></a>
+<a class="el" href="classaudio__tools_1_1_ring_buffer.html">RingBuffer</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tmp_out</b> {0}</td></tr>
+<tr class="separator:add363d597c7d8108a5350406105d158d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;int bytecount, class block_t&gt;<br />

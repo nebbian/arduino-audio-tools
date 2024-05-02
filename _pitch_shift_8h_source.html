@@ -457,7 +457,7 @@ $(function() {
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160; </div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;      <span class="comment">// output values</span></div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;      T out_value = pitchShift(value);</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;      LOGD(<span class="stringliteral">&quot;PitchShiftOutput %d -&gt; %d&quot;</span>, value, out_value);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;      LOGD(<span class="stringliteral">&quot;PitchShiftOutput %f -&gt; %d&quot;</span>, value, (<span class="keywordtype">int</span>) out_value);</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;      T out_array[channels];</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; channels; ch++) {</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        out_array[ch] = out_value;</div>

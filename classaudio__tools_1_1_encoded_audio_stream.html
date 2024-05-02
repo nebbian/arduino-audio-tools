@@ -85,12 +85,13 @@ Inheritance diagram for EncodedAudioStream:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_encoded_audio_stream.png" usemap="#EncodedAudioStream_map" alt=""/>
   <map id="EncodedAudioStream_map" name="EncodedAudioStream_map">
-<area href="classaudio__tools_1_1_reformat_base_stream.html" title="Base class for chained converting streams." alt="ReformatBaseStream" shape="rect" coords="144,224,278,248"/>
-<area href="classaudio__tools_1_1_modifying_stream.html" title="Abstract class: Objects can be put into a pipleline." alt="ModifyingStream" shape="rect" coords="144,168,278,192"/>
-<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="144,112,278,136"/>
+<area href="classaudio__tools_1_1_reformat_base_stream.html" title="Base class for chained converting streams." alt="ReformatBaseStream" shape="rect" coords="144,280,278,304"/>
+<area href="classaudio__tools_1_1_modifying_stream.html" title="Abstract class: Objects can be put into a pipleline." alt="ModifyingStream" shape="rect" coords="144,224,278,248"/>
+<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="144,168,278,192"/>
+<area href="classaudio__tools_1_1_base_stream.html" title="Base class for all Streams. It relies on write(const uint8_t *buffer, size_t size) and readBytes(uint..." alt="BaseStream" shape="rect" coords="0,112,134,136"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="144,112,278,136"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="288,112,422,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="0,56,134,80"/>
-<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="144,56,278,80"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="288,56,422,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="0,0,134,24"/>
   </map>
 </div></div>
@@ -150,6 +151,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <a class="el" href="classaudio__tools_1_1_audio_decoder.html">AudioDecoder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#a11f7ddac5cfa81a408fd32a35875db47">decoder</a> ()</td></tr>
 <tr class="memdesc:a11f7ddac5cfa81a408fd32a35875db47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the initialized decoder. <br /></td></tr>
 <tr class="separator:a11f7ddac5cfa81a408fd32a35875db47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e4660b5bd60cf09803f81e3e443644"><td class="memItemLeft" align="right" valign="top"><a id="a80e4660b5bd60cf09803f81e3e443644"></a>
+<a class="el" href="structaudio__tools_1_1_audio_info.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultConfig</b> ()</td></tr>
+<tr class="separator:a80e4660b5bd60cf09803f81e3e443644"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1772c3a009a751e5eceb43fedb0c6c43"><td class="memItemLeft" align="right" valign="top"><a id="a1772c3a009a751e5eceb43fedb0c6c43"></a>
 <a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#a1772c3a009a751e5eceb43fedb0c6c43">encoder</a> ()</td></tr>
 <tr class="memdesc:a1772c3a009a751e5eceb43fedb0c6c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the initialized encoder. <br /></td></tr>
@@ -203,6 +207,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setDecoder</b> (<a cl
 <tr class="memitem:a55b5ec76948d05d4e2c78e93bc9ebdcb"><td class="memItemLeft" align="right" valign="top"><a id="a55b5ec76948d05d4e2c78e93bc9ebdcb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setEncoder</b> (<a class="el" href="classaudio__tools_1_1_audio_encoder.html">AudioEncoder</a> *<a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#a1772c3a009a751e5eceb43fedb0c6c43">encoder</a>)</td></tr>
 <tr class="separator:a55b5ec76948d05d4e2c78e93bc9ebdcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128c19eda4c8e6c68f0cd129cee47b4c"><td class="memItemLeft" align="right" valign="top"><a id="a128c19eda4c8e6c68f0cd129cee47b4c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_encoded_audio_stream.html#a128c19eda4c8e6c68f0cd129cee47b4c">setLogLevel</a> (AudioLogger::LogLevel level)</td></tr>
+<tr class="memdesc:a128c19eda4c8e6c68f0cd129cee47b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the class specific custom log level. <br /></td></tr>
+<tr class="separator:a128c19eda4c8e6c68f0cd129cee47b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a909f118906f9cf7024baae224dcd90a7"><td class="memItemLeft" align="right" valign="top"><a id="a909f118906f9cf7024baae224dcd90a7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_info_source.html#a909f118906f9cf7024baae224dcd90a7">setNotifyActive</a> (bool flag)</td></tr>
 <tr class="memdesc:a909f118906f9cf7024baae224dcd90a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deactivate/Reactivate automatic <a class="el" href="structaudio__tools_1_1_audio_info.html" title="Basic Audio information which drives e.g. I2S.">AudioInfo</a> updates: (default is active) <br /></td></tr>

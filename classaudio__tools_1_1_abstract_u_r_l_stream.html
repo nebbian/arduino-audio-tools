@@ -85,15 +85,16 @@ Inheritance diagram for AbstractURLStream:</div>
  <div class="center">
   <img src="classaudio__tools_1_1_abstract_u_r_l_stream.png" usemap="#AbstractURLStream_map" alt=""/>
   <map id="AbstractURLStream_map" name="AbstractURLStream_map">
-<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="199,112,322,136"/>
+<area href="classaudio__tools_1_1_audio_stream.html" title="Base class for all Audio Streams. It support the boolean operator to test if the object is ready with..." alt="AudioStream" shape="rect" coords="199,168,322,192"/>
+<area href="classaudio__tools_1_1_base_stream.html" title="Base class for all Streams. It relies on write(const uint8_t *buffer, size_t size) and readBytes(uint..." alt="BaseStream" shape="rect" coords="66,112,189,136"/>
+<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="199,112,322,136"/>
+<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="332,112,455,136"/>
 <area href="classaudio__tools_1_1_stream.html" alt="Stream" shape="rect" coords="66,56,189,80"/>
-<area href="classaudio__tools_1_1_audio_info_support.html" title="Supports changes to the sampling rate, bits and channels." alt="AudioInfoSupport" shape="rect" coords="199,56,322,80"/>
-<area href="classaudio__tools_1_1_audio_info_source.html" title="Supports the subscription to audio change notifications." alt="AudioInfoSource" shape="rect" coords="332,56,455,80"/>
 <area href="classaudio__tools_1_1_print.html" alt="Print" shape="rect" coords="66,0,189,24"/>
-<area href="classaudio__tools_1_1_i_c_y_stream.html" title="Icecast/Shoutcast Audio Stream which splits the data into metadata and audio data...." alt="ICYStream" shape="rect" coords="0,224,123,248"/>
-<area href="classaudio__tools_1_1_i_c_y_stream_buffered.html" title="ICYStream implementation for the ESP32 based on a FreeRTOS task This is a Icecast/Shoutcast Audio Str..." alt="ICYStreamBuffered" shape="rect" coords="133,224,256,248"/>
-<area href="classaudio__tools_1_1_u_r_l_stream.html" title="Represents the content of a URL as Stream. We use the WiFi.h API." alt="URLStream" shape="rect" coords="266,224,389,248"/>
-<area href="classaudio__tools_1_1_u_r_l_stream_buffered.html" title="URLStream implementation for the ESP32 based on a separate FreeRTOS task." alt="URLStreamBuffered" shape="rect" coords="399,224,522,248"/>
+<area href="classaudio__tools_1_1_i_c_y_stream.html" title="Icecast/Shoutcast Audio Stream which splits the data into metadata and audio data...." alt="ICYStream" shape="rect" coords="0,280,123,304"/>
+<area href="classaudio__tools_1_1_i_c_y_stream_buffered.html" title="ICYStream implementation for the ESP32 based on a FreeRTOS task This is a Icecast/Shoutcast Audio Str..." alt="ICYStreamBuffered" shape="rect" coords="133,280,256,304"/>
+<area href="classaudio__tools_1_1_u_r_l_stream.html" title="Represents the content of a URL as Stream. We use the WiFi.h API." alt="URLStream" shape="rect" coords="266,280,389,304"/>
+<area href="classaudio__tools_1_1_u_r_l_stream_buffered.html" title="URLStream implementation for the ESP32 based on a separate FreeRTOS task." alt="URLStreamBuffered" shape="rect" coords="399,280,522,304"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -145,9 +146,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a9b3baad8c612d81b96e46f84d7e97580"><td class="memItemLeft" align="right" valign="top"><a id="a9b3baad8c612d81b96e46f84d7e97580"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> ()</td></tr>
 <tr class="separator:a9b3baad8c612d81b96e46f84d7e97580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ca0929fe29faa64b2b39af2b5527013"><td class="memItemLeft" align="right" valign="top"><a id="a6ca0929fe29faa64b2b39af2b5527013"></a>
-virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *buffer, size_t length)</td></tr>
-<tr class="separator:a6ca0929fe29faa64b2b39af2b5527013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43061a6ac2343137b176333cb989ba48"><td class="memItemLeft" align="right" valign="top"><a id="a43061a6ac2343137b176333cb989ba48"></a>
+virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBytes</b> (uint8_t *buffer, size_t length) override</td></tr>
+<tr class="separator:a43061a6ac2343137b176333cb989ba48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e26f40121eda38b0042dcba026ab82"><td class="memItemLeft" align="right" valign="top"><a id="a36e26f40121eda38b0042dcba026ab82"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio__tools_1_1_audio_stream.html#a36e26f40121eda38b0042dcba026ab82">readSilence</a> (uint8_t *buffer, size_t length)</td></tr>
 <tr class="memdesc:a36e26f40121eda38b0042dcba026ab82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source to generate silence: just sets the buffer to 0. <br /></td></tr>
