@@ -77,13 +77,13 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>std {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> _Ep&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classstd_1_1initializer__list.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classstd_1_1initializer__list.html">initializer_list</a>{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span>initializer_list{</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">const</span> _Ep* __begin_;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">size_t</span>    __size_;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">inline</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    constexpr</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classstd_1_1initializer__list.html">initializer_list</a>(<span class="keyword">const</span> _Ep* __b, <span class="keywordtype">size_t</span> __s) noexcept</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    initializer_list(<span class="keyword">const</span> _Ep* __b, <span class="keywordtype">size_t</span> __s) noexcept</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        : __begin_(__b),</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;          __size_(__s)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {}</div>
@@ -99,26 +99,26 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">inline</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    constexpr</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classstd_1_1initializer__list.html">initializer_list</a>() noexcept : __begin_(<span class="keyword">nullptr</span>), __size_(0) {}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    initializer_list() noexcept : __begin_(<span class="keywordtype">nullptr</span>), __size_(0) {}</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">inline</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    constexpr</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">size_t</span>    size()  <span class="keyword">const</span> noexcept {<span class="keywordflow">return</span> __size_;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">size_t</span>    size()  const noexcept {<span class="keywordflow">return</span> __size_;}</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">inline</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    constexpr</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">const</span> _Ep* begin() <span class="keyword">const</span> noexcept {<span class="keywordflow">return</span> __begin_;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">const</span> _Ep* begin() const noexcept {<span class="keywordflow">return</span> __begin_;}</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">inline</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    constexpr</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">const</span> _Ep* end()   <span class="keyword">const</span> noexcept {<span class="keywordflow">return</span> __begin_ + __size_;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">const</span> _Ep* end()   const noexcept {<span class="keywordflow">return</span> __begin_ + __size_;}</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> _Ep&gt;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">inline</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;constexpr</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">const</span> _Ep*</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;begin(<a class="code" href="classstd_1_1initializer__list.html">initializer_list&lt;_Ep&gt;</a> __il) noexcept{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;begin(initializer_list&lt;_Ep&gt; __il) noexcept{</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> __il.begin();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
@@ -133,7 +133,6 @@ $(function() {
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassstd_1_1initializer__list_html"><div class="ttname"><a href="classstd_1_1initializer__list.html">std::initializer_list</a></div><div class="ttdoc">Custom initializer_list if not provided by the compiler.</div><div class="ttdef"><b>Definition:</b> InitializerList.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
