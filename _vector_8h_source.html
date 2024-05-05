@@ -337,7 +337,7 @@ $(function() {
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      <span class="comment">// make sure that we have a valid object at the end</span></div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      <span class="comment">//p_data[len - 1] = T();</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      <span class="keyword">new</span> (p_data[len - 1]) T();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      <span class="keyword">new</span> (&amp;(p_data[len - 1])) T();</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      len--;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  }</div>
